@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<script>
+  // Salva a rota atual e redireciona para o root do SPA
+  // O index.html vai restaurar a rota via history.replaceState
+  sessionStorage.setItem('spaRedirect', window.location.pathname + window.location.search + window.location.hash);
+  window.location.replace('/certificacoes-microsoft/');
+</script>
+</html>
