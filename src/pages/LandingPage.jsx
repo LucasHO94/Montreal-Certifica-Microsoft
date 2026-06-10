@@ -162,12 +162,6 @@ export default function LandingPage() {
                 </div>
               )}
 
-              {(!import.meta.env.VITE_SUPABASE_URL || import.meta.env.VITE_SUPABASE_URL.includes('YOUR_AZ900_PROJECT_ID')) && (
-                <div className="mb-6 p-4 bg-blue-50 border border-blue-100 text-blue-800 text-xs font-medium rounded-xl leading-relaxed text-left">
-                    💡 <strong>Modo Demo Local Ativo:</strong> Nenhuma chave real do Supabase foi configurada no <code>.env</code>. Para testar o simulador completo com todos os recursos <strong>Premium</strong> liberados, digite <strong>qualquer e-mail e senha</strong> e clique em Entrar!
-                </div>
-              )}
-
               <form onSubmit={handleAuth} className="space-y-5">
                 {/* Aviso de domínios autorizados (apenas no signup) */}
                 {isSignUp && (
