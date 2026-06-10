@@ -7,6 +7,7 @@ import { supabase } from '../lib/supabase';
 import { LogOut } from 'lucide-react';
 import CertCard from './CertCard';
 import LanguageSwitcher from './LanguageSwitcher';
+import montrealLogo from '../assets/montreal-logo.png';
 
 export default function CertHub({ session }) {
   const navigate = useNavigate();
@@ -28,29 +29,28 @@ export default function CertHub({ session }) {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-sm">
+    <div className="min-h-screen bg-[#080A1F]">
+      <header className="bg-[#080A1F] border-b border-[#1A2444] sticky top-0 z-30">
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center text-white font-black text-xs shadow-lg">
-              MS
+            <img src={montrealLogo} alt="Montreal" className="w-9 h-9 rounded-lg object-cover" />
+            <div className="leading-tight hidden sm:block">
+              <span className="font-black tracking-widest text-white text-sm block">MONTREAL</span>
+              <span className="text-[10px] font-bold text-cyan-400 uppercase tracking-[0.2em]">Certificações Microsoft</span>
             </div>
-            <span className="font-black tracking-tight text-slate-800 hidden sm:block text-lg">
-              {t('hub_brand', 'Certificações Microsoft')}
-            </span>
           </div>
           <div className="flex items-center gap-3">
             <LanguageSwitcher />
             <button
               onClick={() => navigate('/profile')}
-              className="w-10 h-10 bg-slate-900 text-white rounded-xl flex items-center justify-center font-black text-lg shadow-md hover:scale-105 transition-transform"
+              className="w-10 h-10 bg-[#1A2444] text-white rounded-xl flex items-center justify-center font-black text-lg shadow-md hover:scale-105 transition-transform border border-cyan-500/20"
               title={t('menu_profile', 'Meu Perfil')}
             >
               {userInitial}
             </button>
             <button
               onClick={handleLogout}
-              className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-xl text-slate-500 hover:bg-slate-100 font-bold text-sm transition-colors"
+              className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-xl text-slate-400 hover:text-white hover:bg-white/5 font-bold text-sm transition-colors"
             >
               <LogOut size={16} /> {t('menu_logout', 'Sair')}
             </button>
@@ -60,15 +60,18 @@ export default function CertHub({ session }) {
 
       <main className="max-w-7xl mx-auto px-4 py-12">
         <div className="mb-10 text-center">
-          <h1 className="text-3xl md:text-5xl font-black text-slate-800 tracking-tight mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-black tracking-widest uppercase mb-6">
+            Plataforma Corporativa Montreal
+          </div>
+          <h1 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4">
             {t('cert_hub_title', 'Escolha sua Certificação Microsoft')}
           </h1>
-          <p className="text-slate-500 font-medium max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="text-slate-400 font-medium max-w-2xl mx-auto text-lg leading-relaxed">
             {t('cert_hub_subtitle', 'Selecione uma certificação para começar a estudar. Cada simulado é independente — você pode alternar a qualquer momento.')}
           </p>
         </div>
 
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {CERTS_LIST.map(cert => (
             <CertCard key={cert.id} cert={cert} onClick={handleSelect} t={t} />
           ))}

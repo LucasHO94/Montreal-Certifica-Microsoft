@@ -146,7 +146,7 @@ const mockAuth = {
       id: user.id,
       email,
       nickname,
-      ms_is_premium: true // Premium status enabled by default for perfect local testing
+      montreal_is_premium: true // Premium status enabled by default for perfect local testing
     }));
 
     authListeners.forEach(cb => cb('SIGNED_IN', session));
@@ -166,7 +166,7 @@ const mockAuth = {
       id: user.id,
       email,
       nickname: user.user_metadata.nickname,
-      ms_is_premium: true
+      montreal_is_premium: true
     }));
 
     authListeners.forEach(cb => cb('SIGNED_IN', session));
@@ -195,7 +195,7 @@ const mockFunctions = {
     if (functionName === 'create-checkout-session') {
       // Simulate upgrading to Premium
       const profile = JSON.parse(localStorage.getItem('sb-mock-profile') || '{}');
-      profile.ms_is_premium = true;
+      profile.montreal_is_premium = true;
       localStorage.setItem('sb-mock-profile', JSON.stringify(profile));
       alert("Simulação de Checkout Premium realizada com sucesso!");
       window.location.reload();

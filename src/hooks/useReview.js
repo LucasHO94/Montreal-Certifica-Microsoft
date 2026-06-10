@@ -10,7 +10,7 @@ export function useReview(session, certId) {
     setLoading(true);
     try {
       const { data, error } = await supabase
-        .from('ms_review_queue')
+        .from('montreal_review_queue')
         .select('*')
         .eq('user_id', session.user.id)
         .eq('cert_id', certId)
@@ -33,7 +33,7 @@ export function useReview(session, certId) {
     const nextDate = new Date();
     nextDate.setDate(nextDate.getDate() + (isCorrect ? 3 : 1));
     try {
-      await supabase.from('ms_review_queue').upsert({
+      await supabase.from('montreal_review_queue').upsert({
         user_id: session.user.id,
         cert_id: certId,
         question_id: questionId,
@@ -50,7 +50,7 @@ export function useReview(session, certId) {
     if (!session?.user?.id || !certId) return;
     const next = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString();
     try {
-      await supabase.from('ms_review_queue').upsert({
+      await supabase.from('montreal_review_queue').upsert({
         user_id: session.user.id,
         cert_id: certId,
         question_id: questionId,

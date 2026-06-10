@@ -10,7 +10,7 @@ export function useStreak(session, certId) {
     const run = async () => {
       try {
         const { data, error } = await supabase
-          .from('ms_simulator_history')
+          .from('montreal_simulator_history')
           .select('created_at')
           .eq('user_id', session.user.id)
           .eq('cert_id', certId)

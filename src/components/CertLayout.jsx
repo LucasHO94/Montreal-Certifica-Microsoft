@@ -12,6 +12,7 @@ import { isAdminEmail } from '../lib/auth';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useReview } from '../hooks/useReview';
 import { useStreak } from '../hooks/useStreak';
+import montrealLogo from '../assets/montreal-logo.png';
 
 export default function CertLayout({ session }) {
   const navigate = useNavigate();
@@ -55,32 +56,33 @@ export default function CertLayout({ session }) {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans text-slate-800">
 
-      {/* NAVBAR DESKTOP */}
-      <nav className="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
+      {/* NAVBAR DESKTOP — Montreal Dark */}
+      <nav className="bg-[#080A1F] border-b border-[#1A2444] sticky top-0 z-40 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
 
           <div className="flex items-center gap-6">
-            {/* Logo cert */}
-            <div className="flex items-center gap-2 cursor-pointer group" onClick={() => navigate(`${base}/dashboard`)}>
-              <div className={`w-9 h-9 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform bg-gradient-to-br ${cert.gradient}`}>
-                <span className="text-white text-[10px] font-black">{cert.name.replace('-', '')}</span>
-              </div>
+            {/* Logo Montreal + cert */}
+            <div className="flex items-center gap-3 cursor-pointer group" onClick={() => navigate(`${base}/dashboard`)}>
+              <img src={montrealLogo} alt="Montreal" className="w-8 h-8 rounded-lg object-cover group-hover:scale-105 transition-transform" />
               <div className="hidden sm:block leading-tight">
-                <span className="font-black text-sm text-slate-800 block">{cert.name}</span>
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{cert.shortDescription}</span>
+                <span className="font-black text-xs text-white tracking-widest block">MONTREAL</span>
+                <span className={`text-[10px] font-bold uppercase tracking-widest`} style={accentStyle}>{cert.name}</span>
               </div>
             </div>
 
+            {/* Separador */}
+            <div className="hidden md:block w-px h-6 bg-white/10"></div>
+
             {/* Links desktop */}
-            <div className="hidden md:flex gap-1 bg-slate-50 p-1 rounded-xl border border-slate-100">
+            <div className="hidden md:flex gap-1 bg-white/5 p-1 rounded-xl border border-white/10">
               {navLinks.map(link => (
                 <button
                   key={link.path}
                   onClick={() => navigate(link.path)}
                   className={`px-4 py-2 text-sm font-bold rounded-lg flex items-center gap-2 transition-all relative ${
                     location.pathname === link.path
-                      ? 'bg-white shadow-sm'
-                      : 'text-slate-500 hover:text-slate-800 hover:bg-slate-100'
+                      ? 'bg-white/10 text-white shadow-sm'
+                      : 'text-slate-400 hover:text-white hover:bg-white/5'
                   }`}
                   style={location.pathname === link.path ? accentStyle : undefined}
                 >
@@ -99,13 +101,13 @@ export default function CertLayout({ session }) {
           <div className="flex items-center gap-2 relative">
             <button
               onClick={() => navigate('/hub')}
-              className="hidden md:flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-black uppercase tracking-widest text-slate-500 hover:text-slate-800 hover:bg-slate-100 transition-colors border border-slate-200"
+              className="hidden md:flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-black uppercase tracking-widest text-slate-400 hover:text-cyan-400 hover:bg-white/5 transition-colors border border-white/10"
             >
               <RefreshCw size={13} /> {t('switch_cert', 'Trocar Cert.')}
             </button>
 
             {streak > 0 && (
-              <div className="hidden sm:flex items-center gap-1 px-3 py-1.5 bg-orange-50 border border-orange-200 rounded-xl">
+              <div className="hidden sm:flex items-center gap-1 px-3 py-1.5 bg-orange-500/10 border border-orange-500/20 rounded-xl">
                 <Flame size={14} className="text-orange-500" fill="currentColor" />
                 <span className="text-xs font-black text-orange-700">{streak}</span>
               </div>
@@ -115,7 +117,7 @@ export default function CertLayout({ session }) {
 
             <button
               onClick={() => setMenuAberto(!menuAberto)}
-              className="w-10 h-10 bg-slate-900 text-white rounded-xl flex items-center justify-center font-black text-lg hover:scale-105 transition-transform shadow-md"
+              className="w-10 h-10 bg-[#1A2444] text-white rounded-xl flex items-center justify-center font-black text-lg hover:scale-105 transition-transform shadow-md border border-cyan-500/20"
             >
               {userInitial}
             </button>
@@ -123,22 +125,22 @@ export default function CertLayout({ session }) {
             {menuAberto && (
               <>
                 <div className="fixed inset-0 z-40" onClick={() => setMenuAberto(false)} />
-                <div className="absolute top-14 right-0 w-56 bg-white border border-slate-200 rounded-2xl shadow-2xl py-2 z-50">
-                  <div className="px-4 py-3 border-b border-slate-100 mb-2">
-                    <p className="text-xs text-slate-400 uppercase font-black tracking-wider">{t('connected_account', 'Conta')}</p>
-                    <p className="font-bold text-slate-800 truncate text-sm">{userEmail}</p>
+                <div className="absolute top-14 right-0 w-56 bg-[#0D1229] border border-[#1A2444] rounded-2xl shadow-2xl py-2 z-50">
+                  <div className="px-4 py-3 border-b border-white/10 mb-2">
+                    <p className="text-xs text-slate-500 uppercase font-black tracking-wider">{t('connected_account', 'Conta')}</p>
+                    <p className="font-bold text-white truncate text-sm">{userEmail}</p>
                   </div>
-                  <button onClick={() => { navigate('/hub'); setMenuAberto(false); }} className="w-full text-left px-5 py-2.5 font-bold text-sm text-slate-600 hover:bg-slate-50 flex items-center gap-3">
+                  <button onClick={() => { navigate('/hub'); setMenuAberto(false); }} className="w-full text-left px-5 py-2.5 font-bold text-sm text-slate-300 hover:bg-white/5 hover:text-cyan-400 flex items-center gap-3 transition-colors">
                     <RefreshCw size={16} /> {t('switch_cert', 'Trocar Certificação')}
                   </button>
-                  <button onClick={() => { navigate('/profile'); setMenuAberto(false); }} className="w-full text-left px-5 py-2.5 font-bold text-sm text-slate-600 hover:bg-slate-50 flex items-center gap-3">
+                  <button onClick={() => { navigate('/profile'); setMenuAberto(false); }} className="w-full text-left px-5 py-2.5 font-bold text-sm text-slate-300 hover:bg-white/5 hover:text-white flex items-center gap-3 transition-colors">
                     <User size={16} /> {t('menu_profile', 'Meu Perfil')}
                   </button>
-                  <button onClick={() => { navigate('/settings'); setMenuAberto(false); }} className="w-full text-left px-5 py-2.5 font-bold text-sm text-slate-600 hover:bg-slate-50 flex items-center gap-3">
+                  <button onClick={() => { navigate('/settings'); setMenuAberto(false); }} className="w-full text-left px-5 py-2.5 font-bold text-sm text-slate-300 hover:bg-white/5 hover:text-white flex items-center gap-3 transition-colors">
                     <Settings size={16} /> {t('menu_settings', 'Configurações')}
                   </button>
-                  <div className="h-px bg-slate-100 my-2" />
-                  <button onClick={handleLogout} className="w-full text-left px-5 py-2.5 font-bold text-sm text-red-500 hover:bg-red-50 flex items-center gap-3">
+                  <div className="h-px bg-white/10 my-2" />
+                  <button onClick={handleLogout} className="w-full text-left px-5 py-2.5 font-bold text-sm text-red-400 hover:bg-red-500/10 flex items-center gap-3 transition-colors">
                     <LogOut size={16} /> {t('menu_logout', 'Sair')}
                   </button>
                 </div>
@@ -148,8 +150,8 @@ export default function CertLayout({ session }) {
         </div>
       </nav>
 
-      {/* TAB-BAR MOBILE */}
-      <div className="md:hidden fixed bottom-0 w-full bg-white border-t border-slate-200 z-40 px-2 py-2 flex justify-around">
+      {/* TAB-BAR MOBILE — Montreal Dark */}
+      <div className="md:hidden fixed bottom-0 w-full bg-[#080A1F] border-t border-[#1A2444] z-40 px-2 py-2 flex justify-around">
         {navLinks.slice(0, 4).map(link => (
           <button
             key={link.path}

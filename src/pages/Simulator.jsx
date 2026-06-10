@@ -6,7 +6,7 @@ import { getCert } from '../data/certifications';
 import { LanguageContext } from '../contexts/LanguageContext';
 import { supabase } from '../lib/supabase';
 import { isAdminEmail } from '../lib/auth';
-import { useIsMsPremium } from '../hooks/useIsMsPremium';
+import { useIsMontrealPremium } from '../hooks/useIsMontrealPremium';
 import { generateCertificate } from '../utils/certificate';
 import { useReview } from '../hooks/useReview';
 
@@ -36,7 +36,7 @@ export default function Simulator({ session }) {
 
   const userEmail = session?.user?.email || '';
   const isAdmin = isAdminEmail(session?.user?.email);
-  const isPremium = useIsMsPremium(session, profile);
+  const isPremium = useIsMontrealPremium(session, profile);
   const { addToQueue } = useReview(session, certId);
 
   // Guarda de Rota (Segurança por URL)
@@ -94,7 +94,7 @@ export default function Simulator({ session }) {
       // Progresso salvo (modo estudo livre sem timer)
       if (type === 'free' || (!type && !timeLeft)) {
         const { data: progressData } = await supabase
-          .from('ms_study_progress')
+          .from('montreal_study_progress')
           .select('*')
           .eq('user_id', session.user.id)
           .eq('cert_id', certId)
@@ -233,7 +233,7 @@ export default function Simulator({ session }) {
           };
 
           const { error } = await supabase
-            .from('ms_study_progress')
+            .from('montreal_study_progress')
             .upsert({
               user_id: session.user.id,
               cert_id: certId,
@@ -252,7 +252,7 @@ export default function Simulator({ session }) {
     if (!window.confirm(t('alert_reset_progress_confirm'))) return;
     
     const { error } = await supabase
-      .from('ms_study_progress')
+      .from('montreal_study_progress')
       .delete()
       .eq('user_id', session.user.id)
       .eq('cert_id', certId);
@@ -291,7 +291,7 @@ export default function Simulator({ session }) {
     // Salvamento em Nuvem (Supabase)
     const salvarResultado = async () => {
         const { error } = await supabase
-            .from('ms_simulator_history')
+            .from('montreal_simulator_history')
             .insert({
                 user_id: session.user.id,
                 cert_id: certId,

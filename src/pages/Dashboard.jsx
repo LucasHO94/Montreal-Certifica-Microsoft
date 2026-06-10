@@ -3,7 +3,7 @@ import { useNavigate, useSearchParams, useParams } from 'react-router-dom';
 import { BookOpen, Target, Flame, Trophy, Play, LogOut, Check, CheckCircle, X, Medal, Star, Award, TrendingUp, Settings, User, PieChart, AlertCircle, Shield, Clock, Sun, Users, ChevronRight, Mail, Zap } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { isAdminEmail } from '../lib/auth';
-import { useIsMsPremium } from '../hooks/useIsMsPremium';
+import { useIsMontrealPremium } from '../hooks/useIsMontrealPremium';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 import { generateCertificate } from '../utils/certificate';
 import SupportModal from '../components/SupportModal';
@@ -83,7 +83,7 @@ export default function Dashboard({ session }) {
     setLoadingHistory(true);
     try {
       const { data, error } = await supabase
-        .from('ms_simulator_history')
+        .from('montreal_simulator_history')
         .select('*')
         .eq('user_id', session.user.id)
         .eq('cert_id', certId)
@@ -187,7 +187,7 @@ export default function Dashboard({ session }) {
         if (pError) throw pError;
 
         const { data: historyData, error: hError } = await supabase
-            .from('ms_simulator_history')
+            .from('montreal_simulator_history')
             .select('user_id, correct_answers, score');
         
         if (hError) throw hError;
@@ -238,7 +238,7 @@ export default function Dashboard({ session }) {
           id: session.user.id,
           email: session.user.email,
           nickname: session.user.user_metadata?.nickname || `Aluno_${Math.floor(Math.random() * 9000) + 1000}`,
-          ms_is_premium: false
+          montreal_is_premium: false
         });
       }
     };
@@ -256,7 +256,7 @@ export default function Dashboard({ session }) {
 
   const userEmail = session?.user?.email || 'Aluno';
   const isAdmin = isAdminEmail(session?.user?.email);
-  const isPremium = useIsMsPremium(session, profile);
+  const isPremium = useIsMontrealPremium(session, profile);
   const userInitial = userEmail.charAt(0).toUpperCase();
 
   const handleStripeCheckout = async (planType) => {
