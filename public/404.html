@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset="utf-8"></head>
-<script>
-  // Salva a rota atual e redireciona para o root do SPA
-  // O index.html vai restaurar a rota via history.replaceState
-  sessionStorage.setItem('spaRedirect', window.location.pathname + window.location.search + window.location.hash);
-  window.location.replace('/certificacoes-microsoft/');
-</script>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecionando...</title>
+  <script>
+    // SPA Redirect para Cloudflare Pages
+    const path = location.pathname;
+    const isFile = /\.\w+$/.test(path);
+
+    if (!isFile) {
+      sessionStorage.setItem('redirect', path);
+      window.location.href = '/index.html';
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecionando...</p>
+</body>
 </html>
