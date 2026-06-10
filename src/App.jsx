@@ -61,7 +61,7 @@ export default function App() {
   return (
     <LanguageProvider>
       <CertProvider>
-        <BrowserRouter basename="/certificacoes-microsoft">
+        <BrowserRouter>
           <Suspense fallback={<Loading />}>
             <Routes>
               <Route
