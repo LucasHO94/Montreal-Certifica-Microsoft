@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
-import { CheckCircle2, XCircle, ChevronRight, ChevronLeft, Menu, X, RotateCcw, AlertCircle, Lightbulb, BookOpen, Target, Clock, Trophy, Pause, Play, Check, ArrowLeft, ListChecks } from 'lucide-react';
+import { CheckCircle2, XCircle, ChevronRight, ChevronLeft, Menu, X, RotateCcw, AlertCircle, Lightbulb, BookOpen, Target, Clock, Trophy, Pause, Play, Check, ArrowLeft, ListChecks, Compass } from 'lucide-react';
 import { getQuestions, sampleQuestionsWeighted } from '../data/questions';
 import { getCert } from '../data/certifications';
 import { LanguageContext } from '../contexts/LanguageContext';
@@ -23,6 +23,7 @@ export default function Simulator({ session }) {
   const [searchParams] = useSearchParams();
   const mode = searchParams.get('mode') || 'tutorial'; // 'tutorial' ou 'exam'
   const [showExplanation, setShowExplanation] = useState(false);
+  const [isAnswerLocked, setIsAnswerLocked] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [loading, setLoading] = useState(true);
   const [timeLeft, setTimeLeft] = useState(null); 
@@ -68,27 +69,31 @@ export default function Simulator({ session }) {
       const domainFilter = searchParams.get('domain');
       const modeParam = searchParams.get('mode') || 'tutorial';
 
+      // 2 minutos (120 segundos) por questão como padrão
+      const TIME_PER_QUESTION = 120;
+
       if (type === 'exam') {
-        // Prova Real: usa pesos por domínio da cert
-        selectedQuestions = sampleQuestionsWeighted(certId, certConfig.questionCount, certConfig.domains, language);
-        setTimeLeft(certConfig.examTimeSeconds);
+        // Prova Real: 50 questões, 100 minutos (2 min/questão), auto-finaliza ao vencer tempo
+        selectedQuestions = sampleQuestionsWeighted(certId, 50, certConfig.domains, language);
+        setTimeLeft(100 * 60); // 6000 segundos (100 minutos)
       } else if (type === 'topic' && domainFilter) {
-        // Micro-simulado por domínio
-        selectedQuestions = shuffleArray(sourceQuestions.filter(q => q.domain === domainFilter)).slice(0, 20);
-        setTimeLeft(null);
+        // Micro-simulado por tópico: 40 questões, 80 minutos (2 min/questão)
+        const topicQuestions = shuffleArray(sourceQuestions.filter(q => q.domain === domainFilter)).slice(0, 40);
+        selectedQuestions = topicQuestions;
+        setTimeLeft(topicQuestions.length * TIME_PER_QUESTION);
       } else if (type === 'flashcard') {
-        // Flashcards: todas ou filtradas por domínio
+        // Flashcards: sem tempo limite
         selectedQuestions = domainFilter
           ? shuffleArray(sourceQuestions.filter(q => q.domain === domainFilter))
-          : shuffleArray(sourceQuestions).slice(0, 20);
+          : shuffleArray(sourceQuestions).slice(0, 30);
         setTimeLeft(null);
       } else {
-        // Simulado livre (free) — filtra por dificuldade se veio no mode
+        // Simulado por dificuldade (iniciante/intermediário/avançado): 50 questões, 100 minutos
         const diffMap = { iniciante: 'iniciante', intermediario: 'intermediario', avancado: 'avancado', beginner: 'iniciante', intermediate: 'intermediario', advanced: 'avancado' };
         const diff = diffMap[modeParam];
         const filtered = diff ? sourceQuestions.filter(q => q.difficulty === diff) : sourceQuestions;
-        selectedQuestions = shuffleArray(filtered).slice(0, 20);
-        setTimeLeft(null);
+        selectedQuestions = shuffleArray(filtered).slice(0, 50);
+        setTimeLeft(50 * TIME_PER_QUESTION); // 100 minutos
       }
 
       // Progresso salvo (modo estudo livre sem timer)
@@ -115,12 +120,16 @@ export default function Simulator({ session }) {
   useEffect(() => {
     if (timeLeft === null || simuladorFinalizado || isPaused) return;
 
-    if (timeExpired && type === 'avancado') return; // Para no avancado
+    // Para no avançado/exam quando tempo expira (auto-finaliza)
+    if (timeExpired && (type === 'avancado' || type === 'exam')) return;
 
     const timerInterval = setInterval(() => {
       setTimeLeft(prev => {
-        if (timeExpired) return prev + 1; // Contagem crescente
-        if (prev <= 1) return 0; // Segura no 0 pro useEffect disparar o alerta
+        if (timeExpired) {
+          // Após expirar: contagem negativa permitida (exceto exam/avançado que auto-finaliza)
+          return prev - 1;
+        }
+        if (prev <= 1) return 0;
         return prev - 1;
       });
     }, 1000);
@@ -137,12 +146,14 @@ export default function Simulator({ session }) {
 
   const handleTimeExpiration = () => {
     setTimeExpired(true);
-    if (type === 'avancado') {
-      // Auto submit no avancado
-      finalizarSimulado();
-      alert(t('alert_time_expired'));
+    if (type === 'exam' || type === 'avancado') {
+      // Auto-finaliza na Prova Real e Avançado quando tempo expira
+      setTimeout(() => {
+        finalizarSimulado();
+        alert(t('alert_time_expired'));
+      }, 500);
     } else {
-      // Iniciante e Intermediario apenas muda cor do relogio
+      // Iniciante, Intermediário e Tópicos: apenas contagem negativa em vermelho
       alert(t('alert_time_ideal_over'));
     }
   };
@@ -165,15 +176,17 @@ export default function Simulator({ session }) {
     if (answeredData) {
       setSelectedOption(answeredData.selectedOption);
       // No modo Prova Real (exam), NUNCA mostramos a explicação durante o teste
-      setShowExplanation(mode === 'exam' ? false : true);
+      setShowExplanation(mode === 'exam' || type === 'exam' ? false : true);
+      setIsAnswerLocked(true);
     } else {
       setSelectedOption(null);
       setShowExplanation(false);
+      setIsAnswerLocked(false);
     }
   }, [currentQuestionIndex, progress, currentQuestion, isPremium, type, mode]);
 
   const handleOptionSelect = (index) => {
-    if ((showExplanation && mode === 'tutorial') || paywallReached || simuladorFinalizado || timeExpired || isPaused) return;
+    if (isAnswerLocked || (showExplanation && mode === 'tutorial') || paywallReached || simuladorFinalizado || timeExpired || isPaused) return;
     setSelectedOption(index);
   };
 
@@ -210,8 +223,11 @@ export default function Simulator({ session }) {
       }
     }));
 
+    // Bloqueia trocar resposta após confirmar
+    setIsAnswerLocked(true);
+
     // No modo Prova Real, avançamos direto sem mostrar a explicação
-    if (mode === 'exam') {
+    if (mode === 'exam' || type === 'exam') {
         if (currentQuestionIndex < questions.length - 1) {
             setCurrentQuestionIndex(prev => prev + 1);
         } else {
