@@ -1,9 +1,15 @@
 import loadAz900 from './az900/index.js';
 import loadPl200 from './pl200/index.js';
+import loadAb900 from './ab900/index.js';
+import loadAi900 from './ai900/index.js';
+import loadMs700 from './ms700/index.js';
 
 const LOADERS = {
   az900: loadAz900,
   pl200: loadPl200,
+  ab900: loadAb900,
+  ai900: loadAi900,
+  ms700: loadMs700,
 };
 
 const CACHE = new Map();

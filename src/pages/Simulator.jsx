@@ -586,7 +586,7 @@ export default function Simulator({ session }) {
                                                             <p className="text-sm text-amber-900/80 leading-relaxed no-copy">{q.explanation.puloDoGato}</p>
                                                         </div>
                                                     )}
-                                                    {q.explanation?.cascasDeBanana && (
+                                                    {q.explanation?.cascasDeBanana?.length > 0 && (
                                                         <div className="bg-red-50/50 p-4 rounded-xl border border-red-100">
                                                             <p className="text-xs font-black text-red-800 uppercase mb-2">{t('pitfalls_title')}</p>
                                                             <div className="space-y-2">
@@ -812,7 +812,7 @@ export default function Simulator({ session }) {
                                     )}
 
                                     {/* Cascas de Banana (Por que as outras estão erradas?) */}
-                                    {currentQuestion.explanation?.cascasDeBanana && (
+                                    {currentQuestion.explanation?.cascasDeBanana?.length > 0 && (
                                     <div className="bg-red-50/50 p-6 rounded-2xl border border-red-100">
                                         <h4 className="font-black text-red-900 flex items-center gap-2 mb-3">
                                             <AlertCircle size={20} className="text-red-600" /> {t('pitfalls_title')}

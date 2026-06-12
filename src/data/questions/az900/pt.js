@@ -1,14 +1,14 @@
-﻿export const questions = [
+export const questions = [
   {
     "id": "az900_q1",
     "text": "Uma empresa quer evitar grandes investimentos iniciais em hardware e pagar apenas pelo que consumir de recursos de TI. Qual benefício da computação em nuvem descreve melhor essa abordagem?",
     "options": [
+      "Modelo de consumo sob demanda (pay-as-you-go)",
       "Alta disponibilidade",
       "Escalabilidade horizontal",
-      "Elasticidade automática",
-      "Modelo de consumo sob demanda (pay-as-you-go)"
+      "Elasticidade automática"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A computação em nuvem altera profundamente a forma como as empresas financiam sua tecnologia, substituindo custos fixos de capital por custos operacionais variáveis.",
       "papoReto": "No modelo sob demanda (pay-as-you-go), você elimina o CapEx (gasto de capital em servidores físicos) e passa a pagar apenas pelos minutos ou segundos de uso dos recursos. Se desligar o recurso, para de pagar. É igual à conta de luz.",
@@ -55,10 +55,10 @@
     "options": [
       "Nuvem pública",
       "Nuvem híbrida",
-      "Multicloud",
-      "Nuvem privada"
+      "Nuvem privada",
+      "Multicloud"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "Modelos de implantação de nuvem determinam quem possui e gerencia os recursos de hardware.",
       "papoReto": "Se a infraestrutura é dedicada de forma exclusiva a uma única organização e precisa estar em um datacenter físico específico sob total controle dela, estamos falando de Nuvem Privada (Private Cloud).",
@@ -103,12 +103,12 @@
     "id": "az900_q5",
     "text": "Uma empresa utiliza um aplicativo SaaS de CRM no Azure. De forma geral, o que fica sob responsabilidade do cliente?",
     "options": [
+      "Gerenciar dados, usuários, permissões e configuração de uso do aplicativo",
       "Gerenciar sistema operacional do servidor",
       "Gerenciar rede física do datacenter",
-      "Aplicar patches de hardware",
-      "Gerenciar dados, usuários, permissões e configuração de uso do aplicativo"
+      "Aplicar patches de hardware"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "O modelo de responsabilidade compartilhada determina quem gerencia cada camada da infraestrutura com base no serviço escolhido.",
       "papoReto": "No SaaS (Software como Serviço), a Microsoft faz literalmente quase tudo: cuida do hardware, do sistema operacional, da rede, das atualizações e da segurança do datacenter. A única coisa que é e SEMPRE será sua responsabilidade são os seus dados, as contas de usuários e as permissões de acesso.",
@@ -129,11 +129,11 @@
     "text": "Uma organização quer garantir que seus recursos continuem disponíveis mesmo se um datacenter específico falhar dentro de uma região. Qual recurso do Azure foi criado para esse tipo de resiliência?",
     "options": [
       "Regiões",
+      "Availability zones",
       "Pares de regiões",
-      "Resource groups",
-      "Availability zones"
+      "Resource groups"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O Azure possui uma infraestrutura global robusta composta por regiões e zonas de disponibilidade para proteção contra desastres.",
       "papoReto": "Uma Zona de Disponibilidade (Availability Zone) é um conjunto de datacenters físicos separados, com energia, resfriamento e redes independentes dentro de uma mesma região do Azure. Se um prédio inteiro do datacenter cair por um apagão regional, o outro prédio em outra zona segura o tráfego instantaneamente.",
@@ -155,10 +155,10 @@
     "options": [
       "Subscription",
       "Management group",
-      "Tag",
-      "Resource group"
+      "Resource group",
+      "Tag"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A governança no Azure exige a organização lógica de recursos para gerenciamento em escala.",
       "papoReto": "Um Resource Group (Grupo de Recursos) é uma pasta lógica onde você agrupa recursos que compartilham o mesmo ciclo de vida (criados, atualizados e deletados juntos). Se você deletar o Resource Group, tudo que está dentro dele é excluído automaticamente, o que evita 'lixo' e surpresas na conta.",
@@ -203,12 +203,12 @@
     "id": "az900_q9",
     "text": "Uma empresa precisa conectar, pela internet, sua rede local ao Azure de forma segura, usando um túnel criptografado, sem contratar um link dedicado. Qual serviço do Azure atende melhor a esse requisito?",
     "options": [
+      "VPN Gateway",
       "Azure ExpressRoute",
       "Azure Bastion",
-      "Azure Front Door",
-      "VPN Gateway"
+      "Azure Front Door"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A conectividade híbrida permite estender a rede local da sua empresa para a nuvem do Azure.",
       "papoReto": "O Azure VPN Gateway cria um túnel criptografado do tipo IPsec/IKE trafegando dados de forma segura através da internet pública. É a solução perfeita de baixo custo para conectar escritórios locais ao Azure sem a burocracia de cabos dedicados.",
@@ -229,11 +229,11 @@
     "text": "Um cliente deseja armazenar grandes quantidades de dados não estruturados, com baixo custo e acesso ocasional. Qual combinação é mais adequada?",
     "options": [
       "Azure Files em camada Premium",
+      "Azure Blob Storage em camada Cool ou Archive",
       "Azure Disk Storage com SSD",
-      "Azure SQL Database",
-      "Azure Blob Storage em camada Cool ou Archive"
+      "Azure SQL Database"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O Azure Blob Storage é otimizado para armazenar quantidades massivas de dados não estruturados sob demanda com diferentes camadas de acesso baseadas no custo e tempo de recuperação.",
       "papoReto": "Para dados não estruturados de baixo custo acessados raramente ou ocasionalmente, o Azure Blob Storage é o serviço padrão. A camada Cool (Fria) é ideal para dados armazenados por no mínimo 30 dias que você lê raramente, e a Archive (Arquivo) é o menor custo possível da nuvem para dados legados que toleram horas para serem lidos.",
@@ -255,10 +255,10 @@
     "options": [
       "Azure Blob Storage",
       "Azure Data Lake Storage",
-      "Azure NetApp Files",
-      "Azure Files com Azure File Sync"
+      "Azure Files com Azure File Sync",
+      "Azure NetApp Files"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A migração de servidores locais muitas vezes exige compartilhamentos de arquivos de rede legados e compatíveis com protocolos padrão do setor como SMB.",
       "papoReto": "O Azure Files cria compartilhamentos de arquivos de rede padrão da nuvem acessíveis via protocolos SMB e NFS. Quando combinado com o Azure File Sync, ele sincroniza os arquivos de rede diretamente com seus servidores Windows locais physically, funcionando como uma espécie de cache local de alto desempenho.",
@@ -303,12 +303,12 @@
     "id": "az900_q13",
     "text": "Sua organização quer centralizar identidades para autenticação em aplicações SaaS, integrar com MFA e oferecer single sign-on. Qual serviço do Azure deve ser utilizado?",
     "options": [
+      "Microsoft Entra ID (Azure AD)",
       "Azure Key Vault",
       "Azure Policy",
-      "Azure Information Protection",
-      "Microsoft Entra ID (Azure AD)"
+      "Azure Information Protection"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A segurança em nuvem moderna começa pela camada de identidade e acesso, substituindo a antiga segurança de rede perimetral.",
       "papoReto": "O Microsoft Entra ID (o antigo Azure Active Directory ou Azure AD) é o serviço de nuvem para gerenciamento de identidades e acessos da Microsoft. Ele resolve todos os problemas de logins corporativos: integra logins com MFA, oferece Single Sign-On (SSO) para que o usuário logue apenas uma vez e acesse todos os aplicativos corporativos (como Teams, CRM, ERP) e protege as credenciais de vazamentos.",
@@ -329,11 +329,11 @@
     "text": "Um gestor quer estimar a fatura mensal de um novo ambiente no Azure, antes de criar recursos, comparando tamanhos de VM e opções de storage. Qual ferramenta da Microsoft é ideal para essa estimativa?",
     "options": [
       "Azure Cost Management",
+      "Azure Pricing Calculator",
       "Azure Advisor",
-      "Azure Migrate",
-      "Azure Pricing Calculator"
+      "Azure Migrate"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "A previsibilidade financeira na nuvem exige o planejamento de custos de novos serviços antes do seu provisionamento em produção.",
       "papoReto": "A Calculadora de Preços do Azure (Azure Pricing Calculator) é uma página web pública da Microsoft onde você seleciona quais recursos planeja criar (ex.: 2 VMs tipo D2v4, 1 TB de storage, 1 rede virtual), configura a região, o tempo de uso esperado e recebe uma estimativa precisa e detalhada do custo mensal. Ela é usada antes do deploy.",
@@ -355,10 +355,10 @@
     "options": [
       "Azure Monitor",
       "Azure Advisor",
-      "Azure Policy",
-      "Azure Cost Management + Billing"
+      "Azure Cost Management + Billing",
+      "Azure Policy"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "Manter o controle financeiro operacional exige ferramentas avançadas de governança e monitoramento de consumo de custos do Azure após o provisionamento dos recursos.",
       "papoReto": "O Azure Cost Management + Billing monitora o faturamento real da sua assinatura. Ele exibe gráficos de custos por recurso, região e tags, e permite configurar Orçamentos (Budgets). Você pode criar um alerta que avisa por e-mail ou ativa uma automação quando os gastos reais atingirem 80% do seu orçamento mensal.",
@@ -403,12 +403,12 @@
     "id": "az900_q17",
     "text": "Um administrador precisa impedir que um resource group seja excluído acidentalmente, mesmo com permissão de Owner. Qual mecanismo do Azure deve ser aplicado?",
     "options": [
+      "Resource lock do tipo CanNotDelete",
       "Azure Policy",
       "Azure RBAC",
-      "Azure Firewall",
-      "Resource lock do tipo CanNotDelete"
+      "Azure Firewall"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A segurança operacional de produção exige travas físicas adicionais para evitar acidentes humanos catastróficos por exclusões acidentais.",
       "papoReto": "Um Resource Lock (Bloqueio de Recurso) do tipo CanNotDelete (Não Excluir) impede que qualquer usuário (inclusive o Owner administrador supremo) exclua o recurso. Para conseguir apagar, o administrador precisa explicitamente acessar os Bloqueios, remover a trava CanNotDelete (o que é uma ação registrada e auditável) e só então fazer a exclusão do recurso.",
@@ -429,11 +429,11 @@
     "text": "O time de TI quer padronizar a criação de recursos usando modelos reutilizáveis e versionáveis, em vez de criar manualmente pelo portal. Qual abordagem do Azure atende a esse objetivo?",
     "options": [
       "Azure Blueprints apenas",
+      "ARM templates ou Bicep (Infrastructure as Code)",
       "Azure DevTest Labs",
-      "Azure Arc",
-      "ARM templates ou Bicep (Infrastructure as Code)"
+      "Azure Arc"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "A automação e padronização na nuvem dependem de Infraestrutura como Código (IaC) para provisionamento de recursos de forma rápida, repetível e documentada.",
       "papoReto": "Os ARM Templates (arquivos JSON declarativos) e a linguagem Bicep (uma evolução direta dos templates, mais legível e concisa) permitem descrever exatamente como deve ser sua infraestrutura no Azure em formato de código. Isso permite versionar os arquivos em um repositório Git, auditar mudanças e garantir que o deploy em teste seja idêntico ao de produção de forma 100% automatizada.",
@@ -455,10 +455,10 @@
     "options": [
       "Azure Service Health",
       "Azure Advisor",
-      "Azure Sentinel",
-      "Azure Monitor com Log Analytics e alertas"
+      "Azure Monitor com Log Analytics e alertas",
+      "Azure Sentinel"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "O monitoramento operacional abrangente exige ferramentas centralizadas capazes de coletar, analisar e responder a telemetrias e comportamentos dos servidores em nuvem.",
       "papoReto": "O Azure Monitor é a solução de observabilidade nativa e completa da Microsoft. Ele coleta Métricas de desempenho em tempo real (como uso de CPU de VMs) e Logs de eventos de software que são armazenados em um repositório centralizado chamado Log Analytics. Com base nisso, você pode configurar Alertas que avisam o time de TI ou ativam scripts de auto-healing se algo der errado.",
@@ -503,12 +503,12 @@
     "id": "az900_q21",
     "text": "Uma startup lança uma campanha de marketing e espera picos de demanda imprevisíveis. Qual característica da computação em nuvem permite aumentar e reduzir recursos automaticamente de acordo com a carga?",
     "options": [
+      "Elasticidade automática",
       "Alta disponibilidade",
       "Segurança em camadas",
-      "Multi-região",
-      "Elasticidade automática"
+      "Multi-região"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A elasticidade dinâmica é uma das características que diferenciam a nuvem pública dos datacenters tradicionais locais.",
       "papoReto": "A elasticidade automática é a capacidade de aumentar e diminuir os recursos (como CPU ou instâncias de VMs) de forma dinâmica e automatizada conforme o tráfego oscila. Se a campanha viralizar, a nuvem cresce; quando o tráfego acalmar, ela encolhe. É o dinamismo total!",
@@ -529,11 +529,11 @@
     "text": "Ao migrar de um datacenter próprio para Azure, uma empresa reduz investimentos em compra de servidores e passa a pagar mensalmente pelos recursos utilizados. Essa mudança representa a transição de qual modelo para qual modelo?",
     "options": [
       "De OpEx para CapEx",
+      "De CapEx para OpEx",
       "De SaaS para IaaS",
-      "De nuvem privada para nuvem híbrida",
-      "De CapEx para OpEx"
+      "De nuvem privada para nuvem híbrida"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "A nuvem pública revoluciona a contabilidade de TI ao transformar despesas de capital fixas em despesas operacionais flexíveis.",
       "papoReto": "CapEx (Capital Expenditure) é o dinheiro que você gasta comprando bens físicos adiantado (servidores, cabos, geradores). OpEx (Operational Expenditure) é o gasto operacional contínuo (aluguel, contas mensais). Ao migrar para a nuvem, você sai do CapEx (comprar servidores) e entra no OpEx (alugar recursos por mês).",
@@ -555,10 +555,10 @@
     "options": [
       "Garantir redundância física de energia",
       "Proteger o perímetro físico do datacenter",
-      "Substituir componentes de hardware defeituosos",
-      "Aplicar patches no sistema operacional convidado"
+      "Aplicar patches no sistema operacional convidado",
+      "Substituir componentes de hardware defeituosos"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "IaaS é o modelo que oferece maior controle e, consequentemente, maior responsabilidade de administração ao cliente.",
       "papoReto": "No IaaS (Infraestrutura como Serviço), a Microsoft te entrega a máquina virtual 'crua'. A responsabilidade dela para na virtualização e no hardware físico por baixo. Aplicar patches de segurança, gerenciar antivírus e atualizar o sistema operacional convidado (guest OS) é uma tarefa 100% sua!",
@@ -603,12 +603,12 @@
     "id": "az900_q25",
     "text": "Uma solução no Azure aumenta o número de instâncias de uma aplicação conforme a demanda cresce, mantendo a mesma configuração em cada instância. Esse tipo de escalabilidade é chamado de:",
     "options": [
+      "Escalabilidade horizontal",
       "Escalabilidade vertical",
       "Escalabilidade elástica",
-      "Escalabilidade regional",
-      "Escalabilidade horizontal"
+      "Escalabilidade regional"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A escalabilidade horizontal permite que sistemas lidem com cargas de trabalho massivas distribuindo requisições entre vários servidores idênticos.",
       "papoReto": "Escalabilidade Horizontal (Scale Out) é adicionar mais servidores/instâncias idênticas para dividir a carga de trabalho. Em vez de ter uma VM gigante, você tem 5 VMs menores distribuindo requisições. O oposto é a Escalabilidade Vertical (Scale In / Scale Up), que é aumentar o hardware de um único servidor (adicionar mais CPU ou RAM à mesma VM).",
@@ -629,11 +629,11 @@
     "text": "Por que o Azure organiza algumas regiões em 'pares de regiões'?",
     "options": [
       "Para garantir que todas as VMs sejam sempre criadas em zonas de disponibilidade",
+      "Para oferecer recuperação de desastres planejada e atualizações coordenadas entre duas regiões próximas",
       "Para permitir apenas tráfego interno entre datacenters",
-      "Para reduzir custos de licenciamento",
-      "Para oferecer recuperação de desastres planejada e atualizações coordenadas entre duas regiões próximas"
+      "Para reduzir custos de licenciamento"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O Azure utiliza o conceito de pares de regiões geograficamente distribuídos para garantir continuidade de negócios contra desastres geográficos severos.",
       "papoReto": "Cada região do Azure tem uma região parceira (Region Pair) localizada no mesmo continente, geralmente a pelo menos 480 km de distância (ex.: Leste dos EUA emparelhado com Oeste dos EUA). Em caso de um desastre natural catastrófico que destrua a energia de uma região inteira, os backups georredundantes já estão na região parceira. Além disso, as atualizações de sistema operacional de host do Azure ocorrem de forma coordenada para que apenas uma região do par seja atualizada por vez, reduzindo o risco de downtime.",
@@ -655,10 +655,10 @@
     "options": [
       "Resource groups",
       "Availability sets",
-      "Azure Blueprints",
-      "Management groups"
+      "Management groups",
+      "Azure Blueprints"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "O gerenciamento em escala de dezenas ou centenas de contas do Azure exige o agrupamento em estruturas hierárquicas acima do nível de faturamento da assinatura.",
       "papoReto": "Os Management Groups (Grupos de Gerenciamento) fornecem um escopo de governança acima das Assinaturas (Subscriptions). Ao criar um grupo de gerenciamento e aplicar uma regra (como Azure Policy ou RBAC), todas as assinaturas associadas a ele herdam essa configuração automaticamente de forma centralizada e sem esforço manual.",
@@ -703,12 +703,12 @@
     "id": "az900_q29",
     "text": "Uma equipe quer empacotar sua aplicação e dependências em uma imagem de contêiner e executá-la sem gerenciar cluster de orquestração. Qual serviço do Azure é mais adequado?",
     "options": [
+      "Azure Container Instances",
       "Azure Kubernetes Service",
       "Azure Virtual Machines",
-      "Azure Batch",
-      "Azure Container Instances"
+      "Azure Batch"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A computação baseada em containers permite isolar e rodar pacotes de softwares de forma padronizada.",
       "papoReto": "O Azure Container Instances (ACI) é a maneira mais rápida e simples de rodar um contêiner individual no Azure sem precisar gerenciar servidores, configurar clusters ou entender de Kubernetes. É uma solução serverless de contêineres: você envia a imagem docker e ela roda instantaneamente de forma leve.",
@@ -729,11 +729,11 @@
     "text": "Quando é mais apropriado utilizar o Azure Kubernetes Service (AKS) em vez de Azure App Service?",
     "options": [
       "A aplicação é apenas um site estático simples",
+      "Quando é necessário orquestrar contêineres em escala, com controle detalhado de rede, atualizações e configuração de cluster",
       "Quando só é preciso executar funções event-driven",
-      "Quando basta hospedar um banco de dados relacional",
-      "Quando é necessário orquestrar contêineres em escala, com controle detalhado de rede, atualizações e configuração de cluster"
+      "Quando basta hospedar um banco de dados relacional"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "Projetos corporativos baseados em arquiteturas modernas de microsserviços exigem orquestradores robustos para lidar com o ciclo de vida de centenas de containers.",
       "papoReto": "O Azure Kubernetes Service (AKS) gerencia clusters Kubernetes de alta complexidade. Se o seu projeto precisa orquestrar dezenas de containers integrando redes complexas, service meshes, roteamento customizado, auto-scaling de pods em escala gigante e controle fino de atualizações, o AKS é a ferramenta padrão e extremamente poderosa do mercado de nuvem.",
@@ -755,10 +755,10 @@
     "options": [
       "Azure Files",
       "Azure Managed Disks",
-      "Azure NetApp Files",
-      "Azure Data Lake Storage"
+      "Azure Data Lake Storage",
+      "Azure NetApp Files"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A análise moderna de dados e o processamento de Big Data exigem sistemas de arquivos otimizados com namespaces hierárquicos capazes de mover petabytes de dados de forma altamente performática.",
       "papoReto": "O Azure Data Lake Storage (ADLS Gen2) é a base para o Big Data no Azure. Ele é construído em cima do Blob Storage, mas com um diferencial crítico: o Namespace Hierárquico. Isso permite estruturar arquivos em pastas físicas reais e subpastas (como no seu sistema operacional), o que faz as pesquisas e processamentos analíticos de grandes volumes de dados rodarem com velocidade infinitamente superior em relação a namespaces planos.",
@@ -803,12 +803,12 @@
     "id": "az900_q33",
     "text": "Qual é o principal objetivo do controle de acesso baseado em função (RBAC) no Azure?",
     "options": [
+      "Conceder permissões aos usuários com base em funções específicas, seguindo o princípio de privilégio mínimo",
       "Criptografar dados em repouso no storage",
       "Monitorar logs de segurança em tempo real",
-      "Avaliar conformidade com normas regulatórias",
-      "Conceder permissões aos usuários com base em funções específicas, seguindo o princípio de privilégio mínimo"
+      "Avaliar conformidade com normas regulatórias"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "O controle de acesso baseado em função (RBAC) é a base de gerenciamento seguro de acessos da infraestrutura de recursos do Azure.",
       "papoReto": "O Azure RBAC (Role-Based Access Control) garante que cada pessoa ou sistema tenha acesso estritamente ao que precisa para realizar seu trabalho, nem mais, nem menos (Menor Privilégio). Ele associa três pilares: uma Identidade (quem pede), uma Role/Função (como Owner, Contributor ou Reader) e um Escopo (RG, assinatura ou recurso individual).",
@@ -829,11 +829,11 @@
     "text": "Por que a habilitação de autenticação multifator (MFA) em contas administrativas do Azure é considerada uma boa prática de segurança?",
     "options": [
       "Porque elimina completamente a necessidade de senhas",
+      "Porque adiciona uma camada extra de verificação além da senha, reduzindo o risco de acesso não autorizado",
       "Porque substitui backups de dados",
-      "Porque garante que o usuário esteja na rede corporativa",
-      "Porque adiciona uma camada extra de verificação além da senha, reduzindo o risco de acesso não autorizado"
+      "Porque garante que o usuário esteja na rede corporativa"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "A autenticação multifator é um dos pilares de proteção de identidades e a maneira mais eficaz de conter vazamento de credenciais na internet.",
       "papoReto": "A MFA (Multifactor Authentication) exige que você apresente pelo menos dois elementos de prova diferentes para validar sua identidade (algo que você sabe, como uma senha; e algo que você possui, como o celular com o aplicativo Microsoft Authenticator ou um token físico). Isso impede 99.9% dos ataques de identidade, pois mesmo que um hacker descubra sua senha, ele não conseguirá passar pela trava de aprovação no celular.",
@@ -855,10 +855,10 @@
     "options": [
       "Azure Advisor apenas",
       "Azure Policy somente",
-      "Azure Firewall",
-      "Microsoft Defender for Cloud"
+      "Microsoft Defender for Cloud",
+      "Azure Firewall"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A postura de segurança na nuvem exige o monitoramento dinâmico de vulnerabilidades operacionais e conformidade regulatória contínua.",
       "papoReto": "O Microsoft Defender for Cloud (o antigo Azure Security Center) é o guardião supremo da sua postura de segurança de infraestrutura (CSPM) e proteção de workloads (CWPP). Ele monitora seus recursos em tempo real, avalia se você está seguindo boas práticas de segurança, gera o seu Secure Score (Pontuação de Segurança) de 0 a 100% e recomenda de forma proativa correções como 'Habilite MFA' ou 'Feche portas abertas do Firewall'.",
@@ -903,12 +903,12 @@
     "id": "az900_q37",
     "text": "Qual tipo de recomendação o Azure Advisor pode fornecer em relação a custos?",
     "options": [
+      "Sugerir redimensionamento ou desligamento de recursos com baixa utilização para economizar custos",
       "Criar automaticamente novas assinaturas",
       "Alterar contratos de licença sem aprovação",
-      "Migrar serviços para outra nuvem",
-      "Sugerir redimensionamento ou desligamento de recursos com baixa utilização para economizar custos"
+      "Migrar serviços para outra nuvem"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "O desperdício financeiro na nuvem por recursos superdimensionados (underutilized resources) pode ser combatido por meio de consultorias automáticas baseadas em telemetria do Azure.",
       "papoReto": "O Azure Advisor é o consultor digital personalizado gratuito da Microsoft integrado à sua conta. Ele analisa sua infraestrutura ativa (uso de CPU de VMs, conexões a storages, etc.) e emite conselhos para melhorar 5 áreas: Custo, Segurança, Confiabilidade, Desempenho e Excelência Operacional. Em custos, ele vai diretamente apontar coisas como: 'Essa VM de R$ 1000/mês está operando com apenas 2% de uso de CPU, redimensione para um tamanho menor e economize 80%!'.",
@@ -929,11 +929,11 @@
     "text": "Uma empresa quer atribuir custos por centro de custo e por ambiente (dev, teste, produção). Qual recurso deve ser aplicado diretamente aos recursos e resource groups para suportar essa estratégia?",
     "options": [
       "Management groups",
+      "Tags",
       "Availability zones",
-      "Azure Sentinel",
-      "Tags"
+      "Azure Sentinel"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "A organização financeira e a governança de recursos exigem a rotulagem inteligente e flexível de metadados para consolidar faturamentos mensais.",
       "papoReto": "As Tags (Etiquetas) são metadados compostos por pares de Chave e Valor (ex.: Ambiente: Producao, CentroCusto: 4022) associados diretamente a recursos do Azure. Com as tags configuradas, a equipe financeira pode exportar o relatório do Cost Management e filtrar exatamente quanto custou a produção inteira ou qual centro de custo gastou mais no mês.",
@@ -955,10 +955,10 @@
     "options": [
       "Azure Service Health",
       "Azure Bastion",
-      "Azure Data Factory",
-      "Application Insights"
+      "Application Insights",
+      "Azure Data Factory"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "O diagnóstico fino de software exige ferramentas de monitoramento de desempenho de aplicações (APM) integradas ao código para identificar falhas do cliente final.",
       "papoReto": "O Application Insights é um módulo avançado do Azure Monitor feito especialmente para desenvolvedores. Ao integrá-lo no código da sua aplicação (seja .NET, Java, Node.js ou Python), ele monitora tempos de carregamento de páginas web, requisições HTTP, conexões a bancos de dados, falhas de códigos internos, exceções não tratadas e até navegação de cliques dos usuários.",
@@ -1003,12 +1003,12 @@
     "id": "az900_q41",
     "text": "Uma aplicação usa Azure para atender usuários em vários continentes e precisa reduzir latência distribuindo a carga entre regiões. Qual recurso de nuvem melhor representa essa capacidade?",
     "options": [
+      "Escalabilidade global usando múltiplas regiões",
       "Elasticidade apenas em uma VM",
       "Escalabilidade vertical em um único servidor",
-      "Uso exclusivo de VPN site-to-site",
-      "Escalabilidade global usando múltiplas regiões"
+      "Uso exclusivo de VPN site-to-site"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A nuvem pública possui uma infraestrutura verdadeiramente global, permitindo expandir serviços entre diferentes continentes com latência mínima.",
       "papoReto": "A escalabilidade global permite aproximar seus serviços do usuário final duplicando sua infraestrutura em múltiplas regiões geográficas ao redor do mundo. Serviços globais de roteamento inteligente de tráfego, como o Azure Front Door ou o Traffic Manager, direcionam o usuário para a cópia física mais próxima, minimizando o tempo de viagem dos dados.",
@@ -1029,11 +1029,11 @@
     "text": "Qual afirmação descreve corretamente o modelo de pagamento 'pay-as-you-go' no Azure?",
     "options": [
       "O cliente paga um valor fixo mensal, independentemente do uso",
+      "O cliente paga apenas pelos recursos consumidos, sem compromisso de longo prazo",
       "O cliente precisa pagar licenças vitalícias",
-      "O cliente paga antecipadamente por três anos",
-      "O cliente paga apenas pelos recursos consumidos, sem compromisso de longo prazo"
+      "O cliente paga antecipadamente por três anos"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O modelo Pay-as-you-go é a principal forma de contratação comercial no ecossistema do Azure.",
       "papoReto": "No modelo sob demanda (pay-as-you-go), não existe fidelidade. Se você usar uma máquina virtual por 17 minutos e apagá-la, você pagará exatamente 17 minutos. Não há investimento adiantado em licenças fixas nem custos por recursos ociosos desligados.",
@@ -1055,10 +1055,10 @@
     "options": [
       "Nuvem privada",
       "Nuvem pública apenas",
-      "Multicloud obrigatória",
-      "Nuvem híbrida"
+      "Nuvem híbrida",
+      "Multicloud obrigatória"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A nuvem híbrida oferece uma transição suave ao permitir integrar sistemas legados internos locais a serviços inovadores da nuvem pública.",
       "papoReto": "A Nuvem Híbrida é a combinação inteligente de servidores próprios on-premises (ou nuvens privadas) operando em harmonia com serviços de nuvem pública (como o Azure). No cenário do enunciado, os dados legados continuam seguros e sob total controle da empresa localmente, enquanto as novas APIs inteligentes do Azure de IA processam metadados externos pela rede de forma integrada.",
@@ -1103,12 +1103,12 @@
     "id": "az900_q45",
     "text": "Em qual modelo (IaaS, PaaS, SaaS) o cliente assume mais responsabilidades de gerenciamento em comparação com os outros?",
     "options": [
+      "IaaS",
       "PaaS",
       "SaaS",
-      "Todos têm exatamente o mesmo nível de responsabilidade",
-      "IaaS"
+      "Todos têm exatamente o mesmo nível de responsabilidade"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A pirâmide de responsabilidade da nuvem pública transfere obrigações para a Microsoft à medida que você se move do IaaS para o SaaS.",
       "papoReto": "No IaaS (Infraestrutura como Serviço), você está alugando os servidores físicos virtuais nus. A Microsoft gerencia o datacenter físico, a eletricidade, o hardware e a virtualização. Mas absolutamente todo o restante é seu: sistema operacional, middleware, firewalls lógicos das sub-redes, dados, aplicativos e atualizações de antivírus. É o modelo com maior trabalho de administração por parte do cliente.",
@@ -1129,11 +1129,11 @@
     "text": "Por que uma organização pode optar por usar múltiplas subscriptions no Azure?",
     "options": [
       "Para aumentar automaticamente o poder de processamento de uma única VM",
+      "Para separar ambientes, limites de cobrança e políticas de segurança entre diferentes unidades de negócio",
       "Para criar várias VNets automaticamente",
-      "Para habilitar zonas de disponibilidade",
-      "Para separar ambientes, limites de cobrança e políticas de segurança entre diferentes unidades de negócio"
+      "Para habilitar zonas de disponibilidade"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "Assinaturas representam limites lógicos de faturamento e administração de contas que podem ser multiplicados para organizar governanças corporativas.",
       "papoReto": "Usar múltiplas Assinaturas (Subscriptions) é uma das melhores práticas de governança empresarial em nuvem. Isso permite separar perfeitamente os limites de faturamento de cada departamento, isolar ambientes de testes/desenvolvimento de ambientes de produção críticos e aplicar regras de segurança independentes para equipes distintas.",
@@ -1155,10 +1155,10 @@
     "options": [
       "Apenas para reduzir custos",
       "Apenas para habilitar RBAC",
-      "Porque o Azure exige nomes idênticos em todas as assinaturas",
-      "Para facilitar identificação, governança, automação e suporte operacional"
+      "Para facilitar identificação, governança, automação e suporte operacional",
+      "Porque o Azure exige nomes idênticos em todas as assinaturas"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A governança profissional de TI de grande escala exige regras de nomenclatura claras e metadados padronizados desde o primeiro dia de nuvem.",
       "papoReto": "Conforme a sua infraestrutura de nuvem cresce para centenas de VMs e redes, ter nomes bagunçados como VM-teste-1 vira um inferno operacional. Adotar um padrão técnico (ex.: Tipo-Projeto-Ambiente-Regiao-Numero) permite que scripts localizem recursos instantaneamente, que a equipe entenda o que cada máquina faz na hora e que se evitem acidentes de deletar VMs erradas.",
@@ -1203,12 +1203,12 @@
     "id": "az900_q49",
     "text": "Uma equipe quer um banco de dados relacional gerenciado, com backup automático e alta disponibilidade, sem gerenciar o sistema operacional do servidor. Qual serviço do Azure é mais adequado?",
     "options": [
+      "Azure SQL Database",
       "SQL Server em VM no Azure",
       "Azure Table Storage",
-      "Azure Cache for Redis",
-      "Azure SQL Database"
+      "Azure Cache for Redis"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "Para banco de dados relacional clássico na nuvem, o Azure oferece soluções PaaS que removem a necessidade de atualizar sistemas operacionais.",
       "papoReto": "O Azure SQL Database é o clássico serviço de banco de dados relacional como serviço (PaaS). Ele oferece o mecanismo do SQL Server 100% gerenciado pela Microsoft: atualizações de segurança automáticas, patches instalados sozinhos, backups contínuos automáticos e alta disponibilidade integrada com SLA altíssimo. Você só cuida de criar as tabelas e rodar os selects!",
@@ -1229,11 +1229,11 @@
     "text": "Uma aplicação precisa de um banco de dados com baixa latência, escalável globalmente e suporte a modelo de documentos. Qual serviço do Azure atende melhor a esse requisito?",
     "options": [
       "Azure SQL Managed Instance",
+      "Azure Cosmos DB",
       "Azure Files",
-      "Azure Database for PostgreSQL",
-      "Azure Cosmos DB"
+      "Azure Database for PostgreSQL"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "Workloads globais que operam com alta velocidade e volumes massivos de dados não relacionais necessitam de soluções de bancos NoSQL globais.",
       "papoReto": "O Azure Cosmos DB é o banco NoSQL multimodelos ultra veloz da Microsoft. Ele oferece latência de leitura e gravação abaixo de 10 milissegundos em qualquer lugar do planeta, com replicação geográfica global nativa com um único clique no portal. Ele suporta modelos de documentos (JSON), chave-valor, grafos e tabelas de forma nativa e extremamente escalável.",
@@ -1255,10 +1255,10 @@
     "options": [
       "Azure VPN Gateway",
       "Azure ExpressRoute",
-      "Azure Traffic Manager apenas",
-      "Azure Load Balancer ou Application Gateway, dependendo do cenário"
+      "Azure Load Balancer ou Application Gateway, dependendo do cenário",
+      "Azure Traffic Manager apenas"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A distribuição de carga entre servidores virtuais garante que nenhuma VM fique sobrecarregada, aumentando a resiliência operacional da arquitetura do Azure.",
       "papoReto": "A distribuição automática de tráfego de rede no Azure é resolvida pelos balanceadores de carga. O Azure Load Balancer faz o balanceamento em camada 4 (TCP/UDP, ideal para tráfego leve e infraestrutura), enquanto o Application Gateway atua em camada 7 (HTTP/HTTPS, permitindo rotear requisições com base em caminhos de URLs e integrar segurança com WAF). Ambos dividem requisições de forma transparente.",
@@ -1303,12 +1303,12 @@
     "id": "az900_q53",
     "text": "Uma empresa quer impor políticas como 'bloquear login a partir de países específicos' ou 'exigir MFA fora da rede corporativa'. Qual recurso deve ser configurado?",
     "options": [
+      "Políticas de Conditional Access no Microsoft Entra ID",
       "Azure Policy",
       "Azure Firewall",
-      "Azure Information Protection",
-      "Políticas de Conditional Access no Microsoft Entra ID"
+      "Azure Information Protection"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A segurança focada em riscos exige a validação contextualizada em tempo real de acessos de identidades antes de liberar a autenticação no sistema.",
       "papoReto": "O Acesso Condicional (Conditional Access) é a ferramenta de segurança inteligente mais importante do Microsoft Entra ID. Ele funciona como uma declaração condicional: Se (usuário está fora da empresa) então [Exija MFA], ou Se (usuário tenta logar de país de alto risco) então [Bloqueie].",
@@ -1329,11 +1329,11 @@
     "text": "Qual princípio central do modelo de segurança Zero Trust, amplamente recomendado para ambientes Azure?",
     "options": [
       "Confiar em qualquer dispositivo interno",
+      "Nunca confiar por padrão, sempre verificar explicitamente cada acesso",
       "Permitir acesso total após o primeiro login",
-      "Desativar auditoria para reduzir custos",
-      "Nunca confiar por padrão, sempre verificar explicitamente cada acesso"
+      "Desativar auditoria para reduzir custos"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O modelo de arquitetura Zero Trust (Confiança Zero) reescreve a segurança de TI eliminando a premissa obsoleta de que redes internas são seguras de fábrica.",
       "papoReto": "O lema supremo do Zero Trust é: 'Nunca confiar, sempre verificar'. Isso significa que, mesmo que o usuário esteja sentado na mesa física do escritório e conectado ao cabo de rede corporativo da empresa, o sistema de segurança vai autenticar, autorizar e auditar o acesso dele explicitamente a cada recurso como se ele estivesse logando de um aeroporto público aberto.",
@@ -1355,10 +1355,10 @@
     "options": [
       "Criar túneis VPN com outros provedores",
       "Criptografar dados em repouso",
-      "Gerenciar identidades de usuários",
-      "Controlar o tráfego de rede de entrada e saída para recursos em uma VNet, com base em regras"
+      "Controlar o tráfego de rede de entrada e saída para recursos em uma VNet, com base em regras",
+      "Gerenciar identidades de usuários"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "O isolamento de tráfego de rede nas sub-redes das suas VNets do Azure é garantido através do uso de filtros de pacotes integrados.",
       "papoReto": "Um Network Security Group (NSG) atua como um Firewall de software leve para suas sub-redes ou placas de rede (NICs) de VMs. Ele contém tabelas de regras que permitem ou negam tráfego com base em: IP de Origem/Destino, Porta de Origem/Destino e Protocolo (TCP/UDP/Any). Por exemplo, você pode criar uma regra NSG dizendo: 'Permita tráfego de entrada na porta 443 (HTTPS) para a VM e bloqueie todo o restante'.",
@@ -1403,12 +1403,12 @@
     "id": "az900_q57",
     "text": "Qual é o objetivo principal do Azure Blueprints?",
     "options": [
+      "Permitir definir e implantar um conjunto padronizado de recursos, políticas e configurações para ambientes repetíveis",
       "Monitorar logs de segurança em tempo real",
       "Substituir completamente o Azure Policy",
-      "Criptografar automaticamente todos os discos",
-      "Permitir definir e implantar um conjunto padronizado de recursos, políticas e configurações para ambientes repetíveis"
+      "Criptografar automaticamente todos os discos"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A padronização em larga escala de governança corporativa exige ferramentas capazes de empacotar e orquestrar múltiplos artefatos em novas assinaturas.",
       "papoReto": "O Azure Blueprints (Projetos do Azure) funciona como uma fita métrica industrial de governança de TI. Ele permite criar um pacote padronizado contendo: Azure Policies, RBAC Assignments (permissões), ARM Templates (recursos físicos) e Resource Groups. Ao associar um Blueprint a uma nova assinatura, o ambiente inteiro se auto-configura com governança de fábrica.",
@@ -1429,11 +1429,11 @@
     "text": "Um time de risco quer verificar periodicamente se os recursos do Azure estão aderentes a normas como ISO ou PCI. Qual combinação de ferramentas pode ajudar nessa avaliação?",
     "options": [
       "Azure DNS e Azure Load Balancer",
+      "Azure Policy com iniciativas de compliance e Microsoft Defender for Cloud",
       "Azure Key Vault e Azure Files",
-      "Azure App Service e Azure Functions",
-      "Azure Policy com iniciativas de compliance e Microsoft Defender for Cloud"
+      "Azure App Service e Azure Functions"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "A auditoria contínua e automatizada contra padrões regulatórios de compliance globais garante que a nuvem da empresa permaneça em conformidade perante reguladores internacionais.",
       "papoReto": "O Azure Policy oferece Iniciativas (Initiatives), que são grupos lógicos de várias políticas individuais juntas (como a iniciativa de conformidade ISO 27001). Quando integrados ao Microsoft Defender for Cloud, você recebe um painel unificado com gráficos mostrando seu nível de aderência exato em tempo real contra essas normas internacionais, indicando falhas e como corrigi-las.",
@@ -1455,10 +1455,10 @@
     "options": [
       "Para uma conta de storage obrigatoriamente",
       "Para um banco Azure SQL",
-      "Para um Azure File Share",
-      "Para um Log Analytics workspace"
+      "Para um Log Analytics workspace",
+      "Para um Azure File Share"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A centralização analítica de telemetria exige repositórios dedicados capazes de ingerir terabytes de dados e permitir pesquisas rápidas em tempo real.",
       "papoReto": "O Log Analytics Workspace (Espaço de Trabalho do Log Analytics) é o coração de armazenamento analítico de dados do Azure Monitor. Ele funciona como um grande banco de dados unificado de telemetria. Uma vez que seus logs de VMs, bancos de dados e redes são enviados para lá, você pode usar a linguagem de consulta KQL (Kusto Query Language) para analisar milhões de linhas de eventos em segundos.",
@@ -1503,12 +1503,12 @@
     "id": "az900_q61",
     "text": "Qual benefício de negócio é frequentemente obtido ao mover cargas para a nuvem e consolidar infraestrutura em grande escala?",
     "options": [
+      "Economia de escala, reduzindo custo médio por recurso",
       "Capacidade de evitar qualquer custo de rede",
       "Eliminar necessidade de governança",
-      "Aumentar obrigatoriamente o CapEx",
-      "Economia de escala, reduzindo custo médio por recurso"
+      "Aumentar obrigatoriamente o CapEx"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A economia de escala é a premissa econômica fundamental que torna a computação em nuvem pública altamente competitiva e barata.",
       "papoReto": "A Economia de Escala (Economy of Scale) ocorre quando empresas gigantescas (como a Microsoft) compram petabytes de discos e geradores massivos com descontos extremos por conta do volume de compra global. A Microsoft então repassa esse custo reduzido para você, fazendo o aluguel de um servidor na nuvem ficar infinitamente mais barato do que você comprá-lo e mantê-lo sozinho.",
@@ -1529,11 +1529,11 @@
     "text": "Qual característica da nuvem permite que equipes provisionem recursos de forma automática, sem intervenção manual do provedor?",
     "options": [
       "Escalabilidade vertical",
+      "Self-service sob demanda",
       "Multi-região",
-      "Backup automático",
-      "Self-service sob demanda"
+      "Backup automático"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O provisionamento de autoatendimento permite que equipes de desenvolvimento inovem rapidamente sem enfrentar gargalos burocráticos de aprovações de TI físicas.",
       "papoReto": "Self-service sob Demanda (On-Demand Self-Service) significa que você abre o portal do Azure, clica em criar uma VM, e ela se constrói e liga em 2 minutos. Você não precisa ligar para a Microsoft ou abrir um ticket. É 100% automatizado!",
@@ -1555,10 +1555,10 @@
     "options": [
       "Todos os recursos são gratuitos",
       "Apenas a latência é medida",
-      "Os usuários são cobrados sempre por capacidade máxima",
-      "O uso de recursos é monitorado, controlado e reportado, permitindo cobrança baseada em consumo"
+      "O uso de recursos é monitorado, controlado e reportado, permitindo cobrança baseada em consumo",
+      "Os usuários são cobrados sempre por capacidade máxima"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A medição de serviços de nuvem garante transparência financeira absoluta cobrando apenas pelo consumo estritamente aferido dos recursos em tempo real.",
       "papoReto": "Serviço Medido (Measured Service) é a telemetria do seu consumo sob demanda. A nuvem funciona como a leitura do relógio de luz na calçada da sua casa: ela registra exatamente os GBs de armazenamento que você usou, a banda de rede consumida e os minutos que suas VMs ficaram rodando.",
@@ -1603,12 +1603,12 @@
     "id": "az900_q65",
     "text": "Qual afirmação descreve melhor o objetivo de resiliência em soluções de nuvem?",
     "options": [
+      "Projetar sistemas capazes de se recuperar rapidamente de falhas e continuar operando",
       "Garantir que não existam falhas de nenhum tipo",
       "Reduzir custos de licenciamento",
-      "Garantir que backups nunca sejam necessários",
-      "Projetar sistemas capazes de se recuperar rapidamente de falhas e continuar operando"
+      "Garantir que backups nunca sejam necessários"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A resiliência arquitetural assume que falhas de hardware ou software eventualmente acontecerão e projeta defesas automáticas para mitigar impactos operacionais.",
       "papoReto": "Resiliência não é a promessa impossível de que nada nunca vai falhar. Pelo contrário: é o realismo de projetar sistemas sabendo que tudo eventualmente falha. Um sistema resiliente possui mecanismos para absorver a pancada de uma falha e se levantar sozinho em segundos sem que o cliente perceba.",
@@ -1629,11 +1629,11 @@
     "text": "Qual é o propósito principal de uma Virtual Network (VNet) no Azure?",
     "options": [
       "Hospedar apenas DNS público",
+      "Fornecer um ambiente de rede isolado logicamente para recursos Azure, com controle de endereçamento IP, sub-redes e segurança",
       "Substituir completamente VPNs",
-      "Fornecer autenticação de usuários",
-      "Fornecer um ambiente de rede isolado logicamente para recursos Azure, com controle de endereçamento IP, sub-redes e segurança"
+      "Fornecer autenticação de usuários"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "As redes virtuais representam a espinha dorsal de conectividade privada onde VMs do Azure conversam de forma segura e isolada do tráfego externo.",
       "papoReto": "A Virtual Network (VNet) é a sua rede privada lógica na nuvem do Azure. Ela é uma réplica da rede física local que você montaria no escritório com switches e cabos de rede: você escolhe a faixa de IPs privados (ex.: 10.0.0.0/16), divide essa faixa em Sub-redes (Subnets) para separar seus servidores e aplica regras de firewalls locais.",
@@ -1655,10 +1655,10 @@
     "options": [
       "Para reduzir o número de IPs disponíveis",
       "Para desativar NSGs",
-      "Para aumentar a latência entre VMs",
-      "Para separar tipos de carga de trabalho, aplicar regras de segurança diferentes e organizar melhor a topologia de rede"
+      "Para separar tipos de carga de trabalho, aplicar regras de segurança diferentes e organizar melhor a topologia de rede",
+      "Para aumentar a latência entre VMs"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A segmentação de redes virtuais em sub-redes (subnets) permite isolar fluxos de tráfego e aplicar políticas de firewalls granulares de segurança.",
       "papoReto": "Dividir a sua VNet em Sub-redes (Subnets) é uma prática clássica de arquitetura de segurança (DMZ). Por exemplo: você cria uma subnet-web (pública) para os seus servidores web e uma subnet-banco (privada) para os servidores de dados. Assim, você pode bloquear tráfego externo direto para a sub-rede de dados, forçando que conexões venham estritamente da sub-rede web por meio de NSGs.",
@@ -1703,12 +1703,12 @@
     "id": "az900_q69",
     "text": "Uma equipe quer hospedar um site estático (HTML, CSS, JavaScript) com integração simples a APIs serverless. Qual serviço do Azure é mais adequado?",
     "options": [
+      "Azure Static Web Apps",
       "Azure Virtual Machines",
       "Azure SQL Database",
-      "Azure Service Bus",
-      "Azure Static Web Apps"
+      "Azure Service Bus"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A hospedagem de sites modernos baseados em frameworks javascript estáticos com backends leves exige soluções integradas de CDNs globais.",
       "papoReto": "O Azure Static Web Apps é um serviço PaaS projetado sob medida para sites estáticos modernos (como React, Vue ou puro HTML/JS). Ele distribui o seu frontend globalmente por meio de CDNs de borda para carregamento instantâneo, e integra-se nativamente a backends de APIs serverless do Azure Functions.",
@@ -1729,11 +1729,11 @@
     "text": "Qual é o uso típico do Azure Batch?",
     "options": [
       "Gerenciar identidades de usuários",
+      "Executar grandes cargas de trabalho em lotes paralelos ou de alto desempenho, como processamento de renderização ou cálculos científicos",
       "Hospedar bancos de dados relacionais",
-      "Prover DNS público",
-      "Executar grandes cargas de trabalho em lotes paralelos ou de alto desempenho, como processamento de renderização ou cálculos científicos"
+      "Prover DNS público"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "Computações de larga escala que exigem provisionamento em massa de servidores para rodar cálculos paralelos de alto desempenho necessitam de orquestradores automáticos de tarefas em lote.",
       "papoReto": "O Azure Batch gerencia o provisionamento e o agendamento de tarefas em lote (batch) de escala massiva em centenas ou milhares de VMs. Ele liga as máquinas necessárias, executa as tarefas pesadas em paralelo (como processar dados, simular renderizações 3D ou cálculos matemáticos) e desliga tudo após a conclusão.",
@@ -1755,10 +1755,10 @@
     "options": [
       "É necessário sempre instalar software de backup em VMs",
       "Apenas dump manual é possível",
-      "Backups não são suportados",
-      "O serviço oferece backups automáticos com retenção configurável por padrão"
+      "O serviço oferece backups automáticos com retenção configurável por padrão",
+      "Backups não são suportados"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "O modelo de banco de dados relacional PaaS da Microsoft já incorpora políticas contínuas de backup e proteção de dados de fábrica.",
       "papoReto": "No Azure SQL Database (PaaS), os backups de transações acontecem a cada 5-10 minutos, além de backups completos semanais, tudo feito de forma automática e integrada pela Microsoft. Você pode restaurar o banco para qualquer segundo do passado (Point-In-Time Restore) pelo portal.",
@@ -1803,12 +1803,12 @@
     "id": "az900_q73",
     "text": "Qual afirmação descreve corretamente a criptografia em repouso para dados em muitos serviços do Azure?",
     "options": [
+      "Os dados são criptografados quando armazenados em disco, muitas vezes habilitados por padrão nos serviços",
       "Os dados nunca são criptografados",
       "A criptografia é aplicada apenas durante o trânsito",
-      "A criptografia em repouso exige sempre appliance físico",
-      "Os dados são criptografados quando armazenados em disco, muitas vezes habilitados por padrão nos serviços"
+      "A criptografia em repouso exige sempre appliance físico"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A conformidade regulatória básica e a segurança de dados exigem a criptografia de todos os blocos de dados físicos quando persistidos nos discos da nuvem.",
       "papoReto": "Criptografia em Repouso (Encryption at Rest) significa que os seus dados gravados nos discos rígidos (Storages, bancos de dados, backups) são automaticamente criptografados pela Microsoft antes de serem gravados fisicamente no hardware, protegendo os dados mesmo em caso de roubo físico de discos do datacenter.",
@@ -1829,11 +1829,11 @@
     "text": "A funcionalidade Just-in-time (JIT) para VMs, integrada ao Defender for Cloud, ajuda em qual aspecto de segurança?",
     "options": [
       "Ativar backups automáticos",
+      "Reduzir superfície de ataque abrindo portas de gestão apenas quando necessário e por tempo limitado",
       "Migrar VMs entre regiões",
-      "Monitorar custos de assinatura",
-      "Reduzir superfície de ataque abrindo portas de gestão apenas quando necessário e por tempo limitado"
+      "Monitorar custos de assinatura"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "Deixar portas de acesso administrativo (como RDP 3389 ou SSH 22) abertas permanentemente para a internet gera um alto risco de ataques de força bruta.",
       "papoReto": "A funcionalidade Just-In-Time (JIT) VM Access bloqueia as portas de gestão por padrão. Quando um desenvolvedor precisa se conectar, ele solicita a abertura temporária no Microsoft Defender for Cloud. O Defender abre a porta no NSG apenas para o IP dele e, após o tempo limite configurado, fecha a porta de forma automática.",
@@ -1855,10 +1855,10 @@
     "options": [
       "Substituir totalmente NSGs",
       "Fornecer autenticação de usuários",
-      "Gerenciar segredos de aplicação",
-      "Prover firewall de rede gerenciado e escalável, com regras centralizadas para tráfego de saída, entrada e lateral"
+      "Prover firewall de rede gerenciado e escalável, com regras centralizadas para tráfego de saída, entrada e lateral",
+      "Gerenciar segredos de aplicação"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A segurança perimetral de redes virtuais complexas exige firewalls de rede corporativos nativos inteligentes baseados em estados operacionais.",
       "papoReto": "O Azure Firewall é um serviço de segurança de rede inteligente, com estado (stateful), totalmente gerenciado na nuvem e altamente escalável. Ele fica na borda da sua rede filtrando conexões de entrada, saída e tráfego lateral entre sub-redes, usando regras de portas, IPs e nomes de domínios públicos.",
@@ -1903,12 +1903,12 @@
     "id": "az900_q77",
     "text": "Como tags ajudam na gestão de custos de recursos Azure?",
     "options": [
+      "Permitem agrupar custos por atributos como centro de custo, projeto ou ambiente em relatórios",
       "Reduzem automaticamente o consumo de CPU",
       "Aumentam a disponibilidade de zonas",
-      "Criptografam os discos sem configuração",
-      "Permitem agrupar custos por atributos como centro de custo, projeto ou ambiente em relatórios"
+      "Criptografam os discos sem configuração"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A alocação e prestação de contas de custos na nuvem exige formas flexíveis de fatiar faturas gerais corporativas de TI por projetos e setores.",
       "papoReto": "Ao aplicar Tags (Etiquetas) como Projeto: Marketing ou CentroCusto: 5040 aos recursos, você pode ir no painel do Cost Management e fatiar o relatório financeiro de forma inteligente para auditar e entender exatamente o custo isolado de cada projeto corporativo.",
@@ -1929,11 +1929,11 @@
     "text": "Em qual nível de escopo uma Azure Policy pode ser atribuída?",
     "options": [
       "Somente em nível de região",
+      "Em management group, subscription, resource group ou recurso individual",
       "Apenas em VNet",
-      "Apenas em grupos de disponibilidade",
-      "Em management group, subscription, resource group ou recurso individual"
+      "Apenas em grupos de disponibilidade"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "A imposição de regras de conformidade e governança por meio do Azure Policy atua de forma flexível em diferentes níveis de hierarquia organizadora.",
       "papoReto": "Você pode atribuir uma Azure Policy em qualquer escopo dessa pirâmide de gerenciamento de TI: no topo, no nível de Management Groups (aplicando a regra de herança sobre dezenas de assinaturas filhas); no nível de Assinaturas (Subscriptions); no nível de Resource Groups; ou até mesmo a um recurso individual.",
@@ -1955,10 +1955,10 @@
     "options": [
       "Acessar recursos sem autenticação",
       "Eliminar necessidade de RBAC",
-      "Criar recursos que não existem no portal",
-      "Permitir automação, repetibilidade e script de tarefas de gerenciamento"
+      "Permitir automação, repetibilidade e script de tarefas de gerenciamento",
+      "Criar recursos que não existem no portal"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "O gerenciamento profissional e a automação de ambientes em nuvem em escala exigem interfaces de linhas de comandos para criação de scripts reprodutíveis.",
       "papoReto": "Ferramentas de Linha de Comando, como o Azure CLI (no Bash) ou o Azure PowerShell, permitem criar scripts automatizados repetíveis. Você roda o script e ele cria e configura a infraestrutura inteira de forma consistente e sem o risco de erros humanos de cliques manuais.",
@@ -2003,12 +2003,12 @@
     "id": "az900_q81",
     "text": "Uma empresa tem usuários concentrados na América do Sul e deseja reduzir a latência de uma aplicação hospedada no Azure. Qual estratégia é mais adequada?",
     "options": [
+      "Implantar recursos em uma região Azure geograficamente próxima aos usuários",
       "Aumentar apenas o tamanho das VMs em qualquer região",
       "Desativar redundância de dados",
-      "Implantar recursos em uma região Azure geograficamente próxima aos usuários",
       "Usar apenas cache local no dispositivo do usuário"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A distância física entre os usuários e os servidores de nuvem é o fator determinante número um para a latência de rede.",
       "papoReto": "Não adianta ter a máquina mais cara do mundo rodando nos EUA se o seu cliente está em São Paulo. Os dados precisam viajar via fibra óptica debaixo da terra ou do oceano, e a velocidade da luz impõe um limite físico. Para reduzir a latência, a solução padrão é hospedar a aplicação na região mais próxima dos usuários (como Brazil South).",
@@ -2055,10 +2055,10 @@
     "options": [
       "RPO (Recovery Point Objective)",
       "MTBF (Mean Time Between Failures)",
-      "TCO (Total Cost of Ownership)",
-      "RTO (Recovery Time Objective)"
+      "RTO (Recovery Time Objective)",
+      "TCO (Total Cost of Ownership)"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "O planejamento de recuperação de desastres (DR) exige métricas claras para definir o tempo aceitável de inatividade e a quantidade aceitável de perda de dados.",
       "papoReto": "O RTO (Recovery Time Objective) é o objetivo de tempo de recuperação. Significa o tempo máximo tolerável que sua aplicação pode ficar fora do ar após um desastre antes de voltar ao normal. Por exemplo, se o RTO for de 2 horas, a equipe precisa restaurar o sistema em até 2 horas.",
@@ -2080,10 +2080,10 @@
     "options": [
       "RTO (Recovery Time Objective)",
       "SLA de disponibilidade",
-      "RPO (Recovery Point Objective)",
-      "TTFB (Time To First Byte)"
+      "TTFB (Time To First Byte)",
+      "RPO (Recovery Point Objective)"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "O RPO define a tolerância à perda de dados em cenários de falhas críticas ou exclusões catastróficas.",
       "papoReto": "O RPO (Recovery Point Objective) é o objetivo de ponto de recuperação. Ele determina a quantidade de dados que a empresa aceita perder em caso de desastre. Se você faz backup uma vez por dia à meia-noite e o sistema cai às 23:00, você perdeu 23 horas de dados. Se o seu RPO corporativo for de 1 hora, você precisará de um sistema de replicação contínua para garantir que nunca perca mais de 1 hora de dados.",
@@ -2103,12 +2103,12 @@
     "id": "az900_q85",
     "text": "Um provedor de nuvem oferece SLA de 99,9% para um serviço. O que isso significa em termos gerais?",
     "options": [
+      "O serviço tem um compromisso de permanecer disponível na maior parte do tempo, permitindo pequena janela de indisponibilidade mensal",
       "O serviço nunca ficará indisponível",
       "O serviço estará disponível somente em horário comercial",
-      "O serviço terá sempre latência abaixo de 1 ms",
-      "O serviço tem um compromisso de permanecer disponível na maior parte do tempo, permitindo pequena janela de indisponibilidade mensal"
+      "O serviço terá sempre latência abaixo de 1 ms"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "O SLA (Service Level Agreement) é o acordo de nível de serviço que formaliza as garantias de disponibilidade prestadas pelo provedor de nuvem.",
       "papoReto": "Um SLA de 99,9% (três noves) significa que, matematicamente, o serviço pode ficar indisponível por até aproximadamente 43 minutos e 49 segundos por mês sem que a Microsoft quebre o contrato. Se a indisponibilidade passar disso, o cliente tem direito a receber créditos de serviço na fatura como compensação financeira.",
@@ -2129,11 +2129,11 @@
     "text": "Qual afirmação é verdadeira sobre regiões e zonas de disponibilidade no Azure?",
     "options": [
       "Cada zona de disponibilidade é um país diferente",
+      "Zonas de disponibilidade existem dentro de uma mesma região para fornecer resiliência a falhas de datacenter",
       "Regiões são sempre compostas por apenas uma zona",
-      "Zonas de disponibilidade substituem completamente pares de regiões",
-      "Zonas de disponibilidade existem dentro de uma mesma região para fornecer resiliência a falhas de datacenter"
+      "Zonas de disponibilidade substituem completamente pares de regiões"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "A infraestrutura física do Azure é organizada em uma hierarquia de locais geográficos, regiões e zonas de disponibilidade.",
       "papoReto": "Uma Região do Azure é um conjunto de datacenters conectados por uma rede de latência ultrabaixa. Uma Zona de Disponibilidade (Availability Zone) é um local físico isolado de datacenters dentro de uma mesma região. Cada zona possui energia, resfriamento e redes independentes. Isso garante que a queda de um prédio inteiro de datacenter não derrube sua aplicação.",
@@ -2154,11 +2154,11 @@
     "text": "Qual dos seguintes serviços é considerado global e não específico de uma única região?",
     "options": [
       "Azure Virtual Machines",
-      "Azure DNS",
       "Azure Storage Accounts",
+      "Azure DNS",
       "Azure Virtual Network"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "Embora a maioria dos serviços do Azure seja implantada em regiões geográficas específicas, alguns serviços de infraestrutura fundamentais rodam de forma global.",
       "papoReto": "O Azure DNS é um serviço global de hospedagem de domínios. Você não escolhe uma região do Azure (como East US ou Brazil South) para implantar o seu servidor de DNS; ele é hospedado em uma rede global Anycast distribuída por todos os pontos de presença da Microsoft para garantir velocidade máxima mundial.",
@@ -2180,10 +2180,10 @@
     "options": [
       "Calcular custos de rede",
       "Definir regras de firewall",
-      "Identificar de forma única o recurso dentro de uma hierarquia que inclui subscription, resource group e tipo de recurso",
-      "Determinar obrigatoriamente a região do usuário"
+      "Determinar obrigatoriamente a região do usuário",
+      "Identificar de forma única o recurso dentro de uma hierarquia que inclui subscription, resource group e tipo de recurso"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "Tudo no Azure é tratado como um recurso com um caminho identificador padronizado sob o Azure Resource Manager (ARM).",
       "papoReto": "O Resource ID é uma string de texto estruturada que representa a identidade absoluta e única de qualquer recurso no Azure. O formato segue o padrão: /subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/{resource-provider}/{resource-type}/{resource-name}. É o RG/CPF do seu recurso na nuvem.",
@@ -2203,12 +2203,12 @@
     "id": "az900_q89",
     "text": "Uma equipe quer automatizar fluxos de trabalho com diversos conectores (Office 365, serviços HTTP, SAP, etc.) usando baixa codificação. Qual serviço do Azure é mais adequado?",
     "options": [
-      "Azure Functions apenas",
       "Azure Logic Apps",
+      "Azure Functions apenas",
       "Azure Container Apps",
       "Azure Batch"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "O Azure oferece serviços de computação sem servidor (Serverless) focados tanto em execução de código puro quanto em orquestração visual de processos.",
       "papoReto": "O Azure Logic Apps é uma plataforma serverless visual (low-code/no-code) para criar e rodar fluxos de trabalho automatizados que integram aplicativos, dados e sistemas. Ele vem com centenas de conectores prontos para serviços populares (como enviar e-mail no Outlook quando um arquivo chega no Dropbox, ou conectar no Salesforce e SAP) sem escrever uma linha de código.",
@@ -2229,11 +2229,11 @@
     "text": "Uma solução distribuída precisa de um mecanismo de mensageria confiável para desacoplar produtores e consumidores, com suporte a filas e tópicos. Qual serviço deve ser usado?",
     "options": [
       "Azure Queue Storage apenas",
+      "Azure Service Bus",
       "Azure Event Hubs",
-      "Azure SignalR Service",
-      "Azure Service Bus"
+      "Azure SignalR Service"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O desacoplamento de aplicações em microsserviços distribuídos exige barramentos de mensagens robustos e confiáveis.",
       "papoReto": "O Azure Service Bus é um agente de mensagens corporativo (Message Broker) assíncrono totalmente gerenciado. Ele oferece Filas (fila clássica FIFO - primeiro a entrar, primeiro a sair, do tipo 1 produtor para 1 consumidor) e Tópicos (mecanismo Pub/Sub - publicar/assinar, onde uma mensagem pode ser enviada para múltiplos assinantes com filtros). É ideal para transações financeiras e fluxos altamente corporativos de mensagens.",
@@ -2254,11 +2254,11 @@
     "text": "Qual é a função principal do Azure Data Factory?",
     "options": [
       "Servir como banco de dados relacional",
-      "Orquestrar e mover dados entre diferentes fontes, permitindo criação de pipelines de ETL/ELT",
       "Gerenciar identidades",
+      "Orquestrar e mover dados entre diferentes fontes, permitindo criação de pipelines de ETL/ELT",
       "Hospedar aplicações web"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "O processamento de big data exige a integração de dados espalhados em dezenas de fontes locais e na nuvem.",
       "papoReto": "O Azure Data Factory é o serviço de integração de dados serverless da Microsoft. Ele funciona como uma grande 'orquestrador e encanador' de dados: ele se conecta a uma fonte (ex.: banco on-premises), extrai os dados, transforma-os e carrega em outra fonte (ex.: Data Lake no Azure). Ele serve para criar pipelines visuais de ETL (Extract, Transform, Load).",
@@ -2380,10 +2380,10 @@
     "options": [
       "Para garantir que todos os serviços sejam sempre gratuitos",
       "Para substituir contratos corporativos",
-      "Para planejar ambientes de teste e aprendizado com custo reduzido ou zero, evitando surpresas na fatura",
-      "Para eliminar a necessidade de monitorar custos"
+      "Para eliminar a necessidade de monitorar custos",
+      "Para planejar ambientes de teste e aprendizado com custo reduzido ou zero, evitando surpresas na fatura"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "A Microsoft oferece opções de experimentação gratuita para novos clientes a fim de facilitar o aprendizado e testes na plataforma.",
       "papoReto": "Uma conta gratuita do Azure fornece um crédito inicial (válido por 30 dias) e acesso a mais de 55 serviços populares em camadas gratuitas (alguns gratuitos por 12 meses e muitos outros sempre gratuitos, como Azure App Service ou Azure Functions em limites específicos). Conhecer esses limites é crucial para times de P&D testarem conceitos sem estourar as faturas.",
@@ -2455,10 +2455,10 @@
     "options": [
       "Reader pode excluir recursos",
       "Contributor não pode alterar nada",
-      "Ambas têm exatamente as mesmas permissões",
-      "Reader pode visualizar recursos; Contributor pode criar e modificar recursos, mas não gerenciar acesso"
+      "Reader pode visualizar recursos; Contributor pode criar e modificar recursos, mas não gerenciar acesso",
+      "Ambas têm exatamente as mesmas permissões"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "O Azure RBAC fornece funções internas comuns para limitar os acessos técnicos das equipes conforme suas atribuições profissionais.",
       "papoReto": "As três funções básicas padrão do Azure RBAC são: 1) Reader (Leitor): pode apenas ler e ver as configurações dos recursos, sem alterar nada; 2) Contributor (Colaborador): tem permissão total para criar, alterar e excluir qualquer recurso de infraestrutura, mas não pode gerenciar permissões de acesso de outros usuários; 3) Owner (Proprietário): tem controle total absoluto, incluindo a capacidade de delegar permissões de acesso (gerenciar o RBAC).",
@@ -2478,12 +2478,12 @@
     "id": "az900_q100",
     "text": "Quais tipos de sinal podem disparar alertas no Azure Monitor?",
     "options": [
-      "Métricas, logs e sinais de atividade (como eventos de health)",
       "Apenas custos",
       "Apenas eventos externos de outros clouds",
-      "Apenas tráfego DNS"
+      "Apenas tráfego DNS",
+      "Métricas, logs e sinais de atividade (como eventos de health)"
     ],
-    "correctAnswer": 0,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "Os alertas do Azure Monitor garantem respostas proativas e automatizadas a desvios operacionais ou de segurança no ambiente.",
       "papoReto": "O Azure Monitor centraliza dados de telemetria e permite configurar alertas baseados em múltiplos tipos de sinais: 1) Métricas de desempenho (ex.: uso de CPU > 90% em uma VM); 2) Logs detalhados (ex.: detecção de falha de login no banco de dados pesquisada via Log Analytics); 3) Logs de Atividade (Activity Logs), como alertas se alguém excluir uma assinatura ou quando o Service Health reportar um incidente de datacenter.",
@@ -2503,12 +2503,12 @@
     "id": "az900_q101",
     "text": "Uma equipe de desenvolvimento precisa criar e descartar ambientes de teste rapidamente conforme ciclos de sprint. Qual característica da nuvem facilita esse comportamento?",
     "options": [
+      "Provisionamento rápido e elástico de recursos sob demanda",
       "Uso exclusivo de hardware dedicado",
       "Necessidade de aprovação manual do provedor",
-      "Provisionamento rápido e elástico de recursos sob demanda",
       "Compras de hardware com longos ciclos"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "O desenvolvimento ágil de software exige infraestruturas que possam ser criadas, alteradas e excluídas instantaneamente para acompanhar a velocidade dos sprints de código.",
       "papoReto": "No modelo tradicional local, se o desenvolvedor precisa de um servidor para testar um código, a empresa precisa comprar o hardware físico, esperar chegar, instalar e configurar, levando semanas. Na nuvem, você cria uma VM ou ambiente inteiro de teste via API em 2 minutos. Quando a sprint termina e os testes acabam, você simplesmente apaga tudo de imediato e para de pagar na mesma hora.",
@@ -2529,11 +2529,11 @@
     "text": "Uma empresa global quer disponibilizar sua aplicação em múltiplas regiões para estar mais próxima dos usuários finais. Esse benefício se relaciona principalmente a qual característica da nuvem?",
     "options": [
       "Responsabilidade compartilhada",
+      "Alcance global (global reach)",
       "Multi-tenancy",
-      "Criptografia em trânsito",
-      "Alcance global (global reach)"
+      "Criptografia em trânsito"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "A presença global dos provedores de nuvem pública permite que empresas de qualquer porte hospedem sistemas ao redor do planeta com poucos cliques.",
       "papoReto": "O Alcance Global (Global Reach) é a presença de datacenters espalhados estrategicamente pelo mundo inteiro. Se sua empresa fica no Brasil mas possui clientes no Japão e na Europa, você consegue implantar réplicas da sua aplicação nos datacenters locais desses locais para reduzir a latência de acesso dos seus usuários, sem precisar construir escritórios físicos lá.",
@@ -2555,10 +2555,10 @@
     "options": [
       "Escalabilidade é apenas vertical",
       "Elasticidade é apenas horizontal",
-      "São exatamente o mesmo conceito sem diferença prática",
-      "Escalabilidade é a capacidade de aumentar recursos; elasticidade adiciona também a capacidade de reduzi-los automaticamente conforme a demanda"
+      "Escalabilidade é a capacidade de aumentar recursos; elasticidade adiciona também a capacidade de reduzi-los automaticamente conforme a demanda",
+      "São exatamente o mesmo conceito sem diferença prática"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "Embora parecidos e frequentemente usados juntos, a escalabilidade e a elasticidade possuem propósitos arquitetônicos distintos.",
       "papoReto": "Pense na Escalabilidade (Scalability) como a habilidade física de suportar cargas maiores aumentando os recursos (seja deixando uma máquina maior - vertical, ou comprando mais máquinas - horizontal). Já a Elasticidade (Elasticity) é a inteligência dinâmica de fazer esse ajuste de forma 100% automática e bidirecional (crescer no pico do tráfego e ENCOLHER quando o tráfego cair, evitando que você pague por recursos ociosos).",
@@ -2579,11 +2579,11 @@
     "text": "Qual cenário é típico de uso de nuvem pública?",
     "options": [
       "Uma empresa constrói datacenter apenas interno",
-      "Uma empresa utiliza recursos compartilhados em um provedor como Azure, pagando conforme uso",
       "Uma organização governa exclusivamente hardware próprio",
-      "Uma empresa usa apenas links dedicados"
+      "Uma empresa usa apenas links dedicados",
+      "Uma empresa utiliza recursos compartilhados em um provedor como Azure, pagando conforme uso"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "Os modelos de implantação de nuvem definem a propriedade da infraestrutura e as garantias de governança física.",
       "papoReto": "Na Nuvem Pública, a infraestrutura física (servidores, datacenters, refrigeração) pertence inteiramente ao provedor de nuvem (como a Microsoft). Os recursos são compartilhados de forma lógica entre milhares de clientes diferentes (modelo multi-tenant), e cada empresa paga estritamente pelo que consome por minuto ou segundo, sem precisar gerenciar o hardware físico subjacente.",
@@ -2603,12 +2603,12 @@
     "id": "az900_q105",
     "text": "Em um serviço SaaS, qual responsabilidade permanece com o cliente?",
     "options": [
+      "Proteção e classificação dos dados, gestão de acessos e uso adequado da aplicação",
       "Manutenção de hardware físico",
       "Atualização do sistema operacional do servidor",
-      "Proteção e classificação dos dados, gestão de acessos e uso adequado da aplicação",
       "Gerenciamento de energia do datacenter"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "O modelo de responsabilidade compartilhada dita que a segurança é uma parceria contínua entre a Microsoft e o cliente.",
       "papoReto": "No modelo SaaS (Software como Serviço), a Microsoft cuida de quase tudo: infraestrutura física, rede, hipervisor, sistema operacional e o próprio código do software da aplicação. No entanto, mesmo no SaaS mais automatizado do mundo (como o Microsoft 365 ou Dynamics), os seus dados de negócios, as identidades dos usuários corporativos que fazem login e as permissões de quem pode ver o quê permanecem sob a sua responsabilidade exclusiva.",
@@ -2629,11 +2629,11 @@
     "text": "Serviços como CDN usam pontos de presença (PoPs) ou edge locations para quê?",
     "options": [
       "Criar datacenters exclusivos por cliente",
-      "Substituir VNets",
       "Entregar conteúdo mais próximo dos usuários, reduzindo latência",
+      "Substituir VNets",
       "Desativar criptografia em trânsito"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "A rede global de entrega de conteúdo da Microsoft apoia-se em infraestruturas chamadas Pontos de Presença (Points of Presence - PoPs) ou locais de borda (Edge Locations).",
       "papoReto": "Uma Edge Location não é um datacenter gigante completo do Azure capaz de hospedar bancos ou rodar VMs complexas. Trata-se de um pequeno ponto de presença estratégico contendo servidores de cache de rede. Quando um usuário acessa um site, a CDN salva imagens e arquivos estáticos nessa borda fisicamente mais próxima dele. Isso reduz drasticamente a latência e o tempo de carregamento da página.",
@@ -2654,11 +2654,11 @@
     "text": "Por que alguns clientes escolhem regiões soberanas (como Azure Government) in vez de regiões públicas padrão?",
     "options": [
       "Para ter sempre menor custo",
-      "Para atender requisitos regulatórios e de conformidade específicos de governos e órgãos públicos",
       "Para garantir maior latência",
+      "Para atender requisitos regulatórios e de conformidade específicos de governos e órgãos públicos",
       "Para evitar completamente auditorias"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "Órgãos de defesa civil e governos exigem níveis extremos de auditoria física e controle soberano de dados nacionais.",
       "papoReto": "O Azure possui regiões especiais dedicadas chamadas 'Regiões Soberanas' (como o Azure Government nos EUA e Azure China operado pela 21Vianet). Elas são datacenters isolados fisicamente e monitorados apenas por cidadãos americanos com checagem de antecedentes de segurança nacional, garantindo conformidade com padrões governamentais rígidos (como DoD, FedRAMP).",
@@ -2679,11 +2679,11 @@
     "text": "Qual afirmação é verdadeira sobre como recursos são implantados no Azure?",
     "options": [
       "Sempre é feita manualmente datacenter por datacenter",
-      "A implantação é feita via Azure Resource Manager, que trata recursos como um conjunto coeso em um group",
       "Depende apenas de scripts locais",
-      "Não utiliza APIs REST"
+      "Não utiliza APIs REST",
+      "A implantação é feita via Azure Resource Manager, que trata recursos como um conjunto coeso em um group"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "O gerenciamento consistente de toda a infraestrutura do Azure apoia-se em um plano de controle centralizado.",
       "papoReto": "O Azure Resource Manager (ARM) é o serviço de implantação e gerenciamento do Azure. Sempre que você cria uma VM (seja clicando no portal, rodando um script CLI, PowerShell ou fazendo deploy de um ARM Template/Bicep), a requisição é interceptada pelo ARM. Ele valida sua permissão, organiza os recursos em Resource Groups como um ciclo de vida comum e envia para as APIs físicas dos datacenters de forma totalmente consistente.",
@@ -2703,12 +2703,12 @@
     "id": "az900_q109",
     "text": "Uma solução baseada em eventos precisa rotear notificações de forma reativa entre serviços diferentes no Azure. Qual serviço é indicado como backbone de eventos?",
     "options": [
-      "Azure Event Hubs",
       "Azure Event Grid",
+      "Azure Event Hubs",
       "Azure Queue Storage",
       "Azure Batch"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A arquitetura serverless reativa exige roteadores de eventos inteligentes de baixíssima latência.",
       "papoReto": "O Azure Event Grid é o serviço de distribuição de eventos serverless do Azure. Ele funciona ligando publicadores (como o Blob Storage avisando 'um arquivo PDF foi salvo') a assinantes (como uma Azure Function que lê o PDF). Ele gerencia esse roteamento em milissegundos de forma reativa sob demanda, sem que os microsserviços precisem ficar pesquisando em loops de polling por mudanças.",
@@ -2755,10 +2755,10 @@
     "options": [
       "Quando só precisa de banco NoSQL",
       "Quando quer apenas arquivos",
-      "Quando não deseja compatibilidade com SQL Server",
-      "Quando precisa de alta compatibilidade com instâncias SQL Server on-premises, incluindo recursos específicos de instância"
+      "Quando precisa de alta compatibilidade com instâncias SQL Server on-premises, incluindo recursos específicos de instância",
+      "Quando não deseja compatibilidade com SQL Server"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A migração de bancos de dados locais corporativos para a nuvem exige caminhos que reduzam drasticamente o custo de reescrever o código da aplicação.",
       "papoReto": "Se você tem um SQL Server rodando localmente (on-premises) e ele usa recursos avançados de sistema (como SQL Agent Jobs, Service Broker, ou consultas cross-database), o Azure SQL Database simples (PaaS puro de banco individual) pode exigir muitas alterações de código. O Azure SQL Managed Instance te entrega uma instância inteira SQL Server totalmente gerenciada pela Microsoft como PaaS, garantindo quase 100% de compatibilidade e permitindo uma migração do tipo Lift-and-Shift rápida e sem dores.",
@@ -2779,11 +2779,11 @@
     "text": "Qual serviço auxilia na avaliação e migração de aplicações, bancos de dados e servidores para o Azure?",
     "options": [
       "Azure Monitor",
-      "Azure Migrate",
       "Azure DevOps",
-      "Azure Service Bus"
+      "Azure Service Bus",
+      "Azure Migrate"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "O planejamento estratégico de migração de datacenters exige ferramentas de inventário e descoberta automática de infraestruturas locais.",
       "papoReto": "O Azure Migrate é a central oficial da Microsoft para projetos de migração. Ele instala um agente leve no seu ambiente físico local (VMware, Hyper-V ou servidores físicos), analisa o uso real de CPU/RAM/Disco das suas máquinas (fase de Discovery and Assessment) e te diz exatamente quanto vai custar rodar essas máquinas no Azure, além de orquestrar a cópia e ativação delas na nuvem de forma automatizada.",
@@ -2803,12 +2803,12 @@
     "id": "az900_q113",
     "text": "O que melhor descreve o conceito de defense in depth (defesa em profundidade) aplicado ao Azure?",
     "options": [
+      "Aplicar múltiplas camadas de controles de segurança, desde a borda até dados e identidades",
       "Confiar em um único firewall externo",
       "Usar apenas criptografia",
-      "Usar apenas VPN",
-      "Aplicar múltiplas camadas de controles de segurança, desde a borda até dados e identidades"
+      "Usar apenas VPN"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A segurança moderna em nuvem assume que qualquer barreira individual pode falhar e, por isso, exige anéis concêntricos de proteção.",
       "papoReto": "O conceito de Defesa em Profundidade (Defense-in-Depth) é como proteger um castelo medieval: se o inimigo cruzar o fosso de água (perímetro), ele bate nas muralhas (rede); se passar as muralhas, tem as portas de ferro (identidade); se passar as portas, o tesouro está em um cofre trancado (criptografia). No Azure, você aplica proteções em cada anel: Segurança Física ➡️ Identidade e Acesso ➡️ Perímetro ➡️ Rede ➡️ Computação ➡️ Aplicação ➡️ Dados.",
@@ -2854,11 +2854,11 @@
     "text": "Onde normalmente são configuradas políticas de senha e regras de bloqueio de conta para usuários do Azure?",
     "options": [
       "No Azure Virtual Network",
-      "No Microsoft Entra ID (Azure AD)",
       "No Azure Storage",
+      "No Microsoft Entra ID (Azure AD)",
       "No Azure Cost Management"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A centralização do gerenciamento de acessos corporativos exige um único diretório de identidades na nuvem do Azure.",
       "papoReto": "Todas as regras relacionadas a logins corporativos, políticas de complexidade de senhas (tamanho, caracteres especiais), regras de bloqueio por tentativas incorretas (Smart Lockout) e ativação de MFA são configuradas de forma centralizada dentro do Microsoft Entra ID (o antigo Azure AD). Ele é o guarda-costas de identidades do ambiente.",
@@ -2880,10 +2880,10 @@
     "options": [
       "Nome do resource group",
       "Quantidade de tags de texto",
-      "Tipo e tamanho da VM, região e sistema operacional",
-      "Cor do tema do portal"
+      "Cor do tema do portal",
+      "Tipo e tamanho da VM, região e sistema operacional"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "O planejamento financeiro do Azure depende do entendimento das dimensões de precificação dos recursos de computação.",
       "papoReto": "O preço que você paga por uma VM é composto por vários fatores: 1) Tamanho/Tipo (VMs com mais vCPUs e RAM custam mais); 2) Região (datacenters em locais com custos operacionais mais altos, como o Brasil, custam mais do que nos EUA); 3) Sistema Operacional (VMs Windows incluem custos de licença da Microsoft no valor por hora, enquanto a maioria das distribuições Linux comuns é livre de licença).",
@@ -2903,12 +2903,12 @@
     "id": "az900_q117",
     "text": "Por que é importante excluir recursos não utilizados no Azure?",
     "options": [
-      "Porque o Azure limita o número total de recursos a 10",
       "Para evitar cobrança contínua por recursos ociosos e reduzir exposição de segurança desnecessária",
+      "Porque o Azure limita o número total de recursos a 10",
       "Para aumentar obrigatoriamente o SLA",
       "Para permitir criação de mais subscriptions"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A higiene operacional na nuvem é um dos pilares de FinOps e de segurança cibernética eficaz.",
       "papoReto": "Ao contrário de servidores locais (onde o servidor desligado ou esquecido não gera novas compras), na nuvem o modelo é de consumo de aluguel. Se você esquece uma VM ligada ou um disco SSD alocado sem uso, a fatura continuará cobrando por aquele recurso eternamente. Além disso, recursos abandonados viram alvos fáceis para hackers se estiverem desatualizados e expostos à internet pública.",
@@ -2954,11 +2954,11 @@
     "text": "Qual é a ordem correta da hierarquia principal de escopo no Azure, do nível mais alto para o mais baixo?",
     "options": [
       "Subscription → Resource group → Management group → Recurso",
-      "Management group → Subscription → Resource group → Recurso",
       "Recurso → Resource group → Subscription → Management group",
+      "Management group → Subscription → Resource group → Recurso",
       "Região → Subscription → Recurso"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A organização eficiente do Azure exige o alinhamento da estrutura lógica de escopos corporativos para herança correta de regras de governança e permissões.",
       "papoReto": "A hierarquia do Azure funciona de cima para baixo como pastas de computador: no topo absoluto, temos os Management Groups (Grupos de Gerenciamento, servem para governar várias assinaturas de uma vez); dentro deles ficam as Subscriptions (Assinaturas, camada de cobrança financeira); dentro das assinaturas criamos os Resource Groups (Grupos de Recursos, pastas organizadoras de sistemas); e por fim, dentro deles residem os Recursos (as VMs, bancos, redes em si). As regras de acesso (RBAC) e de governança (Policies) herdam de cima para baixo.",
@@ -3003,12 +3003,12 @@
     "id": "az900_q121",
     "text": "Qual das opções abaixo é um exemplo típico de SaaS em contexto corporativo?",
     "options": [
+      "Um serviço de e-mail corporativo hospedado na nuvem, acessado via navegador",
       "Um servidor físico comprado para o datacenter",
       "Uma VM vazia no Azure",
-      "Um serviço de e-mail corporativo hospedado na nuvem, acessado via navegador",
       "Um cluster Kubernetes gerenciado"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "O SaaS (Software como Serviço) representa o nível máximo de abstração na nuvem, onde o cliente é estritamente o usuário final de um aplicativo pronto.",
       "papoReto": "No SaaS, você não instala servidores, não configura sistemas operacionais e não se preocupa com bancos de dados. Um serviço de e-mail como o Microsoft 365 (antigo Office 365) é o clássico exemplo: os funcionários simplesmente abrem o navegador, fazem login e começam a mandar e-mails. Toda a infraestrutura por debaixo é operada e mantida pela Microsoft.",
@@ -3029,11 +3029,11 @@
     "text": "Qual cenário representa melhor o uso de IaaS no Azure?",
     "options": [
       "Uma empresa usa um CRM totalmente gerenciado pelo provedor",
-      "Uma equipe usa apenas Azure Functions",
       "Uma empresa cria VMs, configura o sistema operacional e instala suas próprias aplicações",
+      "Uma equipe usa apenas Azure Functions",
       "Um time utiliza apenas Azure SQL Database PaaS"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "IaaS (Infraestrutura como Serviço) é o modelo de serviço em nuvem mais próximo do hardware físico tradicional, oferecendo máximo controle e flexibilidade técnica.",
       "papoReto": "Ao contratar IaaS (como as Azure Virtual Machines), a Microsoft te aluga um computador virtual bruto. Você é o responsável absoluto por escolher o sistema operacional (Windows ou Linux), aplicar as atualizações de segurança (patches), instalar os frameworks de execução (Java, .NET, Node) e subir a sua aplicação. É ideal para cenários de migração do tipo Lift-and-Shift, onde você quer apenas replicar suas máquinas locais na nuvem com o menor número de alterações.",
@@ -3054,11 +3054,11 @@
     "text": "Qual cenário representa melhor o uso de PaaS no Azure?",
     "options": [
       "Uma empresa compra servidores físicos",
-      "Desenvolvedores implantam aplicações web em Azure App Service sem gerenciar o sistema operacional",
       "Um time usa somente e-mail SaaS",
+      "Desenvolvedores implantam aplicações web em Azure App Service sem gerenciar o sistema operacional",
       "Usuários acessam apenas um portal de relatórios"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "O PaaS (Plataforma como Serviço) fornece um ambiente gerenciado pronto para que desenvolvedores foquem exclusivamente no código de suas aplicações sem se preocupar com servidores.",
       "papoReto": "No PaaS, a Microsoft gerencia toda a infraestrutura chata (servidores físicos, switch de rede, atualizações do Windows/Linux, backups físicos e alta disponibilidade). O programador apenas escreve o código (ex.: em Python ou PHP) e faz o upload direto no Azure App Service. O aplicativo entra no ar imediatamente com HTTPS configurado e escala sozinho, liberando o time de TI para focar estritamente nas regras de negócios da empresa.",
@@ -3079,11 +3079,11 @@
     "text": "Como a elasticidade contribui para a otimização de custos na nuvem?",
     "options": [
       "Mantendo recursos sempre no máximo",
-      "Permitindo ajustar automaticamente a capacidade de recursos para cima ou para baixo conforme a demanda",
       "Exigindo compra antecipada de hardware",
-      "Bloqueando redução de instâncias"
+      "Bloqueando redução de instâncias",
+      "Permitindo ajustar automaticamente a capacidade de recursos para cima ou para baixo conforme a demanda"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "A elasticidade dinâmica permite que as organizações reduzam os custos de infraestrutura alinhando o fornecimento de recursos à demanda real do negócio.",
       "papoReto": "No modelo tradicional, você precisa comprar servidores gigantes dimensionados para aguentar o maior pico de tráfego do ano (gerando 90% de desperdício em dias comuns). Na nuvem, com a elasticidade, se o seu site recebe 100 visitas na segunda-feira, ele roda em uma única VM barata. Se na sexta-feira há um pico de 10.000 visitas, a nuvem cria automaticamente mais 9 VMs para dividir a carga. Assim que o pico de acessos passa, as 9 VMs adicionais são destruídas de imediato, garantindo que você pague apenas pelo que de fato usou.",
@@ -3103,12 +3103,12 @@
     "id": "az900_q125",
     "text": "Uma Virtual Network no Azure pode ser descrita como:",
     "options": [
-      "Um datacenter físico totalmente dedicado",
       "Uma rede privada virtual lógica isolada dentro da infraestrutura de nuvem pública",
+      "Um datacenter físico totalmente dedicado",
       "Uma VPN para outro provedor",
       "Uma assinatura separada"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A Virtual Network (VNet) é o bloco de construção fundamental para a sua rede privada no Azure.",
       "papoReto": "Uma VNet funciona como a rede que você tem no escritório ou na sua casa, mas de forma 100% virtualizada pela Microsoft. Ao criar uma VNet, você estabelece um limite de rede lógico totalmente privado e isolado dos outros clientes. É dentro dela que você coloca suas VMs e bancos de dados para que eles possam conversar de forma segura usando endereços de IP privados da sua própria escolha.",
@@ -3129,11 +3129,11 @@
     "text": "Qual é o papel do Azure Resource Manager (ARM)?",
     "options": [
       "Atuar como firewall de rede",
+      "Fornecer camada de gerenciamento para criação, atualização e exclusão de recursos por meio de modelos, portal, CLI e APIs",
       "Servir como diretório de identidades",
-      "Armazenar dados de aplicativos",
-      "Fornecer camada de gerenciamento para criação, atualização e exclusão de recursos por meio de modelos, portal, CLI e APIs"
+      "Armazenar dados de aplicativos"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O gerenciamento consistente de toda a infraestrutura global do Azure apoia-se em um único plano de controle centralizado.",
       "papoReto": "O Azure Resource Manager (ARM) é a porta de entrada única para administrar qualquer recurso no Azure. Quando você clica no botão do Portal, roda um comando no Azure CLI, digita um cmdlet no PowerShell ou faz deploy de um arquivo Bicep, todas essas ações se transformam em uma chamada de API enviada ao ARM. Ele valida quem você é, verifica suas permissões e manda a ordem de criação ou alteração para os datacenters de forma consistente.",
@@ -3154,11 +3154,11 @@
     "text": "Qual benefício direto do uso de ARM templates ou Bicep para deploy de recursos?",
     "options": [
       "Garantir menor latência de rede",
-      "Permitir deploy repetível e padronizado de ambientes como código",
       "Reduzir tamanho de VMs",
+      "Permitir deploy repetível e padronizado de ambientes como código",
       "Aumentar automaticamente o SLA todos os serviços"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A adoção de Infrastructure as Code (IaC) permite que as organizações tratem deploys físicos de servidores com o mesmo rigor, versionamento e automação aplicados aos softwares.",
       "papoReto": "Em vez de criar uma rede virtual, um banco e uma VM clicando manualmente em dezenas de telas do portal (correndo o risco de esquecer de configurar uma porta de segurança), você escreve um arquivo de texto declarativo (JSON nos ARM Templates ou sintaxe limpa no Bicep). Esse arquivo descreve exatamente o estado desejado da infraestrutura. Você pode rodar esse arquivo mil vezes e ele criará mil ambientes 100% idênticos sem nenhum erro humano.",
@@ -3179,11 +3179,11 @@
     "text": "No contexto de pares de regiões, qual é um uso comum da região parceira?",
     "options": [
       "Hospedar sempre recursos de teste não críticos",
-      "Servir como local de recuperação de desastre planejado para replicação e failover",
       "Armazenar apenas logs",
-      "Substituir VNets"
+      "Substituir VNets",
+      "Servir como local de recuperação de desastre planejado para replicação e failover"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "O planejamento estratégico contra desastres geográficos massivos exige a replicação automatizada de recursos em regiões geograficamente distantes.",
       "papoReto": "Cada região do Azure possui um Par de Região (Region Pair) pré-definido pela Microsoft dentro da mesma geografia, geralmente separado por centenas de quilômetros (ex.: East US é pareado com West US). Se um desastre natural gigante (furacão ou terremoto) derrubar a região inteira onde está seu site, a região pareada estará pronta para receber o tráfego e recuperar seus dados de backup de forma extremamente rápida.",
@@ -3203,12 +3203,12 @@
     "id": "az900_q129",
     "text": "Por que o App Service Plan é importante em Azure App Service?",
     "options": [
+      "Porque define região, recursos computacionais e nível de preço em que os aplicativos serão executados",
       "Porque gerencia apenas identidades de usuários",
       "Porque substitui VNets",
-      "Porque define região, recursos computacionais e nível de preço em que os aplicativos serão executados",
       "Porque controla somente DNS"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "No modelo PaaS de hospedagem web do Azure, o plano de hospedagem dita a capacidade e a precificação física sob as quais as aplicações rodam.",
       "papoReto": "Pense no Azure App Service como o site em si, e no App Service Plan como o servidor físico (a CPU e RAM) que roda esse site por trás. Quando você cria um App Service Plan, você escolhe o poder de processamento da máquina (tamanho), a região do datacenter e a faixa de preço (Free, Shared, Basic, Standard, Premium). Você pode hospedar dezenas de sites leves compartilhando o mesmo App Service Plan, pagando apenas por aquele plano.",
@@ -3229,11 +3229,11 @@
     "text": "Como o App Service pode ser escalado?",
     "options": [
       "Apenas horizontalmente, nunca verticalmente",
-      "Apenas mudando a região",
       "Verticalmente (mudando o plano) e horizontalmente (alterando número de instâncias)",
+      "Apenas mudando a região",
       "Apenas aumentando o tamanho da VNet"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O Azure App Service oferece alta flexibilidade operacional para redimensionar os recursos do site de forma rápida em resposta a oscilações de tráfego.",
       "papoReto": "Você tem dois caminhos para escalar o App Service: 1) Escalar Verticalmente (Scale Up): significa mudar o seu App Service Plan para um nível mais forte (ex.: mudar de Standard S1 com 1 CPU para Premium P2v3 com 4 CPUs e mais RAM); 2) Escalar Horizontalmente (Scale Out): significa aumentar a quantidade de instâncias (máquinas idênticas) que dividem a carga do site (ex.: passar de 1 máquina para 10 máquinas rodando em paralelo).",
@@ -3279,11 +3279,11 @@
     "text": "Uma conta de armazenamento do tipo General-purpose v2 oferece o quê?",
     "options": [
       "Apenas blobs de página",
-      "Suporte a múltiplos serviços de armazenamento (Blob, Files, Queues, Tables) com recursos mais atuais",
       "Apenas discos gerenciados",
-      "Apenas arquivos NFS"
+      "Apenas arquivos NFS",
+      "Suporte a múltiplos serviços de armazenamento (Blob, Files, Queues, Tables) com recursos mais atuais"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "O Azure Storage Account centraliza múltiplos tipos de armazenamento em uma única conta para facilitar a governança e o gerenciamento de custos.",
       "papoReto": "A conta de armazenamento General-purpose v2 (Finalidade Geral v2) é o tipo padrão recomendado pela Microsoft. Ela é uma espécie de 'canivete suíço' de dados: oferece em um único lugar o Blob Storage (para arquivos não estruturados), o Azure Files (arquivos de rede SMB), o Azure Queues (mensageria simples) e o Azure Tables (banco NoSQL leve de chaves-valor).",
@@ -3303,12 +3303,12 @@
     "id": "az900_q133",
     "text": "Que tecnologia é usada tipicamente para proteger dados em trânsito entre cliente e serviços Azure?",
     "options": [
+      "Protocolo TLS para criptografia de canal",
       "Compactação GZip",
       "Apenas firewall",
-      "Protocolo TLS para criptografia de canal",
       "Apenas VPN site-to-site"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A segurança cibernética exige que dados confidenciais trafegados em redes públicas estejam sempre ilegíveis em caso de interceptação por terceiros.",
       "papoReto": "Para garantir a criptografia em trânsito, o Azure usa o protocolo TLS (Transport Layer Security) - que é a evolução do antigo SSL. Quando você acessa o portal do Azure, usa HTTPS em um site hospedado lá ou envia dados para o storage, a conexão é envelopada via criptografia TLS. Se alguém grampear a internet no caminho, verá apenas uma sopa de caracteres incompreensíveis.",
@@ -3329,11 +3329,11 @@
     "text": "Qual é a prática recomendada para armazenar segredos de aplicação (como cadeias de conexão) no Azure?",
     "options": [
       "Colocar segredos diretamente no código-fonte",
-      "Armazenar em texto plano em arquivos de configuração locais",
       "Armazenar segredos no Azure Key Vault e referenciá-los na aplicação",
+      "Armazenar em texto plano em arquivos de configuração locais",
       "Enviar por e-mail para a equipe"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O vazamento de senhas e chaves de API expostas em arquivos de texto é um dos maiores vetores de violação de segurança corporativa.",
       "papoReto": "A regra número um de segurança na nuvem é: NUNCA salve senhas, tokens de API ou cadeias de conexão em arquivos de texto plano no código da sua aplicação ou repositórios Git. A recomendação oficial é salvar esses valores confidenciais de forma segura no Azure Key Vault (um cofre criptografado por hardware - HSM). A sua aplicação então faz uma chamada dinâmica ao cofre usando Managed Identity para ler a senha na memória apenas quando precisar.",
@@ -3354,11 +3354,11 @@
     "text": "Em uma VM no Azure com Windows Server, quem é responsável por aplicar patches de sistema operacional?",
     "options": [
       "O Azure AD",
-      "O cliente, como parte do modelo de responsabilidade compartilhada em IaaS",
       "A Microsoft sempre, sem ação do cliente",
+      "O cliente, como parte do modelo de responsabilidade compartilhada em IaaS",
       "O Azure Monitor"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "O modelo de responsabilidade compartilhada define com precisão os limites operacionais entre o cliente e a Microsoft com base no tipo de serviço escolhido.",
       "papoReto": "Como a Máquina Virtual (VM) é uma solução clássica IaaS, a Microsoft te entrega a máquina e para por aí. O controle de quem está lá dentro é seu. Isso significa que atualizar o Windows Update, instalar antivírus, configurar regras internas e aplicar patches de segurança (patches do SO convidado) é uma tarefa 100% de responsabilidade sua, o cliente. A Microsoft cuida da segurança física do prédio do datacenter e do host de virtualização subjacente, mas não mexe de forma alguma no sistema operacional de dentro da sua máquina.",
@@ -3403,12 +3403,12 @@
     "id": "az900_q137",
     "text": "Qual opção de SO costuma ter custo adicional em VMs, impactando o preço por hora?",
     "options": [
-      "Distribuições Linux open source",
       "Windows Server com licença incluída",
+      "Distribuições Linux open source",
       "Equipamentos de rede físicos da empresa",
       "Dispositivos móveis dos usuários"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "O modelo de cobrança de máquinas virtuais do Azure engloba tanto o custo bruto de aluguel de hardware quanto as taxas de licenciamento de softwares comerciais embarcados.",
       "papoReto": "Ao fluxo padrão, você paga pelo hardware da VM e pela licença do Windows Server por hora de uso. Distribuições Linux open source são isentas de custos de licença, tornando-as significativamente mais baratas no faturamento direto do Azure.",
@@ -3429,11 +3429,11 @@
     "text": "Um lock do tipo ReadOnly aplicado a um recurso faz o quê?",
     "options": [
       "Impede qualquer visualização do recurso",
-      "Desliga o recurso automaticamente",
       "Impede modificações e exclusão, permitindo apenas operações de leitura",
+      "Desliga o recurso automaticamente",
       "Remove o RBAC"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "Os Bloqueios de Recursos (Resource Locks) são travas administrativas que protegem ambientes críticos de produção contra erros humanos de exclusão ou alteração acidental.",
       "papoReto": "O Resource Lock do tipo ReadOnly (Somente Leitura) é o bloqueio mais restritivo. Ele funciona exatamente como colocar o recurso em 'modo de leitura'. Qualquer usuário (incluindo o administrador supremo com função de Owner) é bloqueado se tentar: 1) Deletar o recurso; 2) Fazer qualquer alteração de configuração (ex.: mudar uma chave no storage ou ligar/desligar algo). A única ação permitida é ver as informações (ler).",
@@ -3480,10 +3480,10 @@
     "options": [
       "Habilitar sempre DR automático",
       "Forçar uso de TLS 1.3",
-      "Enviar logs e métricas para destinos como Log Analytics, storage ou Event Hubs para análise",
-      "Criar novas assinaturas"
+      "Criar novas assinaturas",
+      "Enviar logs e métricas para destinos como Log Analytics, storage ou Event Hubs para análise"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "A telemetria profunda e a auditoria operacional dependem da consolidação de logs e comportamentos para que os analistas possam investigá-los.",
       "papoReto": "Por padrão, o Azure coleta algumas métricas básicas de performance, mas os logs detalhados e diagnósticos de erros de rede ou atividades de cada recurso (ex.: quem consultou uma chave no Key Vault) ficam salvos no próprio recurso de forma temporária. A Configuração de Diagnóstico (Diagnostic Settings) é o encanamento que coleta esses logs e métricas preciosas e os envia automaticamente para um local centralizado como o Log Analytics Workspace (para pesquisas com KQL), contas de storage (para guardar por anos - arquivo barato) ou Event Hubs (para enviar para ferramentas terceiras como Splunk).",
@@ -3503,12 +3503,12 @@
     "id": "az900_q141",
     "text": "Ao projetar uma solução em nuvem com múltiplas instâncias em domínios de falha diferentes dentro da mesma região, qual objetivo principal está sendo atendido?",
     "options": [
-      "Reduzir uso de tags",
       "Aumentar a alta disponibilidade reduzindo o impacto de falhas de hardware",
+      "Reduzir uso de tags",
       "Aumentar o consumo de CPU por VM",
       "Evitar criptografia"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A resiliência física de aplicações web assenta-se na distribuição inteligente de servidores por diferentes racks físicos de hardware no datacenter.",
       "papoReto": "Pense em um Rack físico de servidor no datacenter da Microsoft contendo energia, refrigeração e switches próprios: isso é um Domínio de Falha (Fault Domain). Se você coloca todas as suas VMs de produção no mesmo Rack e a fonte daquele Rack queima, todo o seu sistema cai. Ao distribuir suas instâncias em múltiplos domínios de falha, você garante que, se um Rack queimar ou passar por manutenção física, as outras VMs nos outros Racks continuarão funcionando normalmente, mantendo o seu app no ar.",
@@ -3529,11 +3529,11 @@
     "text": "Qual das opções abaixo NÃO é uma característica essencial da computação em nuvem segundo definições amplamente aceitas?",
     "options": [
       "Autoatendimento sob demanda",
-      "Amplo acesso à rede",
       "Dependência exclusiva de hardware proprietário do cliente",
+      "Amplo acesso à rede",
       "Pooling de recursos"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O modelo conceitual de computação em nuvem (conforme definido pelo NIST) apoia-se em cinco características essenciais que a diferenciam de soluções tradicionais.",
       "papoReto": "A nuvem pública nasceu justamente para eliminar a necessidade de o cliente comprar, possuir e operar hardware físico próprio. A dependência exclusiva de hardware proprietário do cliente é o oposto da nuvem; é o modelo tradicional local on-premises ou datacenter clássico privado corporativo.",
@@ -3554,11 +3554,11 @@
     "text": "Uma equipe deseja aumentar a capacidade de uma aplicação apenas em datas específicas de grande tráfego (por exemplo, Black Friday). Isso é um exemplo de:",
     "options": [
       "Elasticidade automática sem monitoramento",
-      "Escalabilidade planejada baseada em previsão de demanda",
       "Migração forçada de região",
+      "Escalabilidade planejada baseada em previsão de demanda",
       "Multi-tenancy"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "O redimensionamento de recursos de TI na nuvem pode ser feito de forma reativa (em resposta a picos de tráfego) ou proativa (com base em datas e comportamentos agendados de mercado).",
       "papoReto": "Se a sua empresa sabe com antecedência que o tráfego do site vai disparar na meia-noite da Black Friday, você não precisa esperar o site ficar lento para que o sistema reaja e crie mais servidores. Você programa com antecedência um evento de escala agendado (Escalabilidade Planejada/Previsível). Às 23:50 as VMs adicionais já entram em ação de forma limpa, garantindo estabilidade máxima e aguentando o primeiro minuto de pico de acessos sem lentidão.",
@@ -3603,12 +3603,12 @@
     "id": "az900_q145",
     "text": "Qual é um beneficio chave da abordagem de nuvem híbrida?",
     "options": [
-      "Eliminar a necessidade de qualquer conectividade",
       "Permitir que cargas sensíveis permaneçam on-premises enquanto outras aproveitam a elasticidade da nuvem",
+      "Eliminar a necessidade de qualquer conectividade",
       "Garantir que todos os dados estejam em um único local",
       "Substituir totalmente datacenters locais sempre"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A arquitetura de nuvem híbrida combina o melhor de dois mundos, unindo a governança rígida local ao dinamismo e escalabilidade da nuvem pública.",
       "papoReto": "Muitas empresas não podem levar tudo para a nuvem pública de uma vez por motivos de compliance nacional, dados extremamente confidenciais ou sistemas legados muito antigos. A Nuvem Híbrida resolve essa dor: você mantém seu banco de dados hiper-sensível rodando localmente no seu datacenter físico on-premises (seguro e sob seu total controle de hardware), mas conecta o seu frontend web no Azure para aproveitar a escalabilidade e o alcance global para o usuário final.",
@@ -3629,11 +3629,11 @@
     "text": "Por que é recomendável agrupar recursos relacionados no mesmo resource group?",
     "options": [
       "Para reduzir o tamanho da VNet",
-      "Para limitar o uso de tags",
       "Para gerenciar o ciclo de vida, permissões e exclusão de forma conjunta",
+      "Para limitar o uso de tags",
       "Para criar assinaturas automaticamente"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O Resource Group é o contêiner lógico primordial do Azure para organizar e gerenciar a governança operacional dos recursos de TI.",
       "papoReto": "Pense no Resource Group como uma pasta no computador. Se você está criando um novo sistema que contém 3 VMs, 1 Banco SQL e 1 Storage Account, colocar todos na mesma 'pasta' (Resource Group) facilita tudo: se o sistema for aposentado, você deleta a pasta e tudo dentro é apagado instantaneamente (evitando deixar recursos soltos gerando custos ocultos). Você também pode aplicar acessos (RBAC) ou políticas de governança de uma vez só na pasta, e todos os recursos dentro herdarão essas permissões automaticamente.",
@@ -3654,11 +3654,11 @@
     "text": "Qual é o propósito principal de uma subscription no Azure?",
     "options": [
       "Substituir o diretório de identidades",
-      "Definir um limite de cobrança, gerenciamento e quotas de recursos associados a um tenant",
       "Definir zonas de disponibilidade",
+      "Definir um limite de cobrança, gerenciamento e quotas de recursos associados a um tenant",
       "Configurar obrigatoriamente VPNs"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A Assinatura (Subscription) é o contêiner administrativo chave que liga os seus recursos físicos do Azure ao modelo de faturamento comercial e governança de quotas de TI.",
       "papoReto": "A Subscription é onde o cartão de crédito é cadastrado ou onde o contrato corporativo com a Microsoft é assinado. O propósito principal dela é separar e faturar os gastos: você pode ter uma Subscription para o time de Desenvolvimento (onde os limites de custos são mais baixos) e outra Subscription para a Produção. Ela também atua como um limite de segurança administrativa e dita as quotas máximas de recursos (ex.: limite de criar no máximo 200 VMs por conta).",
@@ -3703,12 +3703,12 @@
     "id": "az900_q149",
     "text": "Qual diferença típica entre Azure Functions e Logic Apps?",
     "options": [
+      "Functions são ótimas para código customizado; Logic Apps para orquestração de workflows com conectores prontos",
       "Functions sempre exigem interface gráfica",
       "Logic Apps não podem integrar serviços SaaS",
-      "Functions são ótimas para código customizado; Logic Apps para orquestração de workflows com conectores prontos",
       "Ambas só funcionam on-premises"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "O desenvolvimento serverless no Azure oferece abordagens complementares baseadas em desenvolvimento de código tradicional ou fluxos de trabalho visuais estruturados.",
       "papoReto": "Tanto as Functions quanto o Logic Apps são tecnologias serverless de pagamento por uso úteis para automações e integrações. O que muda é o paradigma: 1) Azure Functions é voltada para Código Puro (C#, Python, JavaScript). Você escreve scripts detalhados para computação complexa ativada por gatilhos; 2) Logic Apps é focada em Orquestração Visual (workflows visuais de arrastar-e-soltar), ideal para integrar sistemas corporativos rapidamente usando centenas de conectores SaaS prontos (Office 365, Dynamics, Salesforce) com pouco ou nenhum código.",
@@ -3754,11 +3754,11 @@
     "text": "No Cosmos DB, escolher bem a chave de partição ajuda principalmente em quê?",
     "options": [
       "Reduzir custo de licenças do Windows",
-      "Distribuir dados e carga de forma equilibrada para escalabilidade e desempenho",
       "Substituir backups",
+      "Distribuir dados e carga de forma equilibrada para escalabilidade e desempenho",
       "Aumentar latência"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A escalabilidade horizontal maciça e o desempenho de milissegundos do Azure Cosmos DB apoiam-se na organização lógica de partições físicas de dados.",
       "papoReto": "Ao trabalhar com o Cosmos DB, os seus dados não ficam salvos em um único disco; eles são fatiados e espalhados por dezenas de servidores físicos nos datacenters. A Chave de Partição (Partition Key) é a propriedade dos seus dados que diz ao Cosmos onde salvar cada documento. Escolher uma chave equilibrada (ex.: ID da Loja ou ID do Cliente) garante que os dados e as requisições sejam divididos igualmente entre as partições. Escolher uma chave ruim gera a chamada 'partição quente' (hot partition), onde um único servidor físico sobrecarrega e o resto do banco fica ocioso, derrubando o desempenho.",
@@ -3803,12 +3803,12 @@
     "id": "az900_q153",
     "text": "Qual diferença típica entre NSG e Azure Firewall?",
     "options": [
+      "NSG é filtro de tráfego em nível de VNet/sub-rede/NIC; Azure Firewall é firewall gerenciado com políticas centralizadas",
       "NSG sempre substitui RBAC",
       "Azure Firewall é apenas um DNS",
-      "NSG é filtro de tráfego em nível de VNet/sub-rede/NIC; Azure Firewall é firewall gerenciado com políticas centralizadas",
       "Ambos fazem exatamente a mesma função"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A proteção do perímetro de rede no Azure baseia-se na aplicação combinada de filtros de pacotes locais e firewalls de borda inteligentes totalmente gerenciados.",
       "papoReto": "O duelo clássico de rede! Pense no NSG (Network Security Group) como uma regra de segurança leve e local: ele filtra pacotes básicos (por IP de origem/destino, porta e protocolo TCP/UDP) e é aplicado diretamente a placas de rede (NIC) de VMs individuais ou a sub-redes da VNet. Já o Azure Firewall é um serviço corporativo de segurança muito maior e robusto: ele roda de forma centralizada e gerenciada em toda a VNet (como um portal inteligente de entrada e saída), filtra tráfego usando inteligência contra ameaças, analisa URLs de sites (Camada 7 - Application) e centraliza políticas de segurança globais de toda a empresa.",
@@ -3829,11 +3829,11 @@
     "text": "O princípio de 'Just Enough Access' recomenda o quê?",
     "options": [
       "Conceder acesso total para evitar chamados de suporte",
-      "Conceder sempre acesso de Owner",
       "Conceder aos usuários apenas as permissões mínimas necessárias para executar suas tarefas",
+      "Conceder sempre acesso de Owner",
       "Nunca usar RBAC"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O acesso seguro a ambientes corporativos rege-se pela contenção de riscos limitando as permissões de cada usuário ao escopo restrito de sua atuação profissional.",
       "papoReto": "O princípio de Just Enough Access (JEA / Acesso Apenas Suficiente) dita que o analista de banco de dados não precisa ter o cargo de Owner administrador supremo da assinatura para alterar tabelas. Ele precisa apenas da função de 'SQL Contributor'. Dar acessos excessivos (como conceder Owner para todo mundo) aumenta drasticamente o estrago se um hacker roubar a conta de um colaborador comum. Ao dar o privilégio mínimo estritamente necessário (Least Privilege), você blinda o ambiente contra falhas e acessos indevidos.",
@@ -3879,11 +3879,11 @@
     "text": "Qual prática ajuda a reduzir custos sem comprometer desempenho?",
     "options": [
       "Sempre escolher o maior SKU",
-      "Dimensionar corretamente recursos (rightsizing) com base em métricas de uso reais",
       "Manter VMs ligadas 24/7 sem necessidade",
-      "Ignorar recomendações do Advisor"
+      "Ignorar recomendações do Advisor",
+      "Dimensionar corretamente recursos (rightsizing) com base em métricas de uso reais"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "O desperdício de infraestrutura por superdimensionamento de servidores (overprovisioning) é uma das principais causas de estouro de orçamentos em nuvem.",
       "papoReto": "A prática do Rightsizing (Dimensionamento Correto) é o pilar número um de redução de custos. Se você tem uma VM gigante que custa R$ 5.000 por mês, mas ao analisar os gráficos de CPU você percebe que o pico de uso dela nunca passa de 5% de processamento, significa que ela está superdimensionada. Reduzir essa VM para um tamanho menor equivalente às necessidades reais de tráfego corta custos na hora, sem causar nenhuma lentidão aos usuários.",
@@ -3903,12 +3903,12 @@
     "id": "az900_q157",
     "text": "Como a escala automática (autoscale) pode impactar positivamente os custos?",
     "options": [
-      "Mantendo instâncias sempre no máximo",
       "Aumentando instâncias apenas quando necessário e reduzindo quando a demanda cai",
+      "Mantendo instâncias sempre no máximo",
       "Impedindo desligamento",
       "Aumentando obrigatoriamente o armazenamento"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A escalabilidade horizontal dinâmica e automatizada alinha a capacidade de infraestrutura de TI à flutuação de tráfego, garantindo eficiência financeira.",
       "papoReto": "A escala automática (Autoscale) garante que você nunca pague por desperdício. Em vez de deixar 10 máquinas virtuais ligadas direto (gastando energia e aluguel de nuvem à toa na madrugada quando ninguém acessa o site), você programa o autoscale. Durante o dia, quando o tráfego sobe, a nuvem escala para 10 instâncias. À noite, quando os acessos caem, ele reduz (Scale In) para apenas 1 ou 2 instâncias de forma totalmente automatizada. A economia na fatura é imediata.",
@@ -3980,10 +3980,10 @@
     "options": [
       "Porque substitui o portal",
       "Porque cria VMs automaticamente",
-      "Porque permite consultar e correlacionar logs e métricas de forma avançada para troubleshooting e análise",
-      "Porque gerencia identidades diretamente"
+      "Porque gerencia identidades diretamente",
+      "Porque permite consultar e correlacionar logs e métricas de forma avançada para troubleshooting e análise"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "A busca profunda e a correlação de milhares de eventos espalhados por sistemas complexos de TI exigem uma linguagem de consulta rica de alto desempenho.",
       "papoReto": "O Log Analytics Workspace centraliza terabytes de logs gerados pelas suas VMs, redes e bancos de dados. Para pesquisar e achar uma agulha no palheiro (ex.: 'achar falhas de login que aconteceram apenas no banco X às 14:00 da terça-feira'), você usa a linguagem de consultas da Microsoft chamada KQL (Kusto Query Language). Ela é extremamente poderosa, possui sintaxe parecida com SQL, permite criar filtros avançados, fazer joins de tabelas e gerar gráficos de telemetria operacionais a partir das buscas.",
@@ -4003,12 +4003,12 @@
     "id": "az900_q161",
     "text": "Qual benefício de negócio da nuvem está relacionado a lançar produtos mais rapidamente no mercado?",
     "options": [
-      "Redução obrigatória de qualidade",
       "Agilidade e rapidez de inovação ao provisionar ambientes rapidamente",
+      "Redução obrigatória de qualidade",
       "Eliminação de processos de teste",
       "Fim da necessidade de governança"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "O time-to-market (tempo de lançamento de produtos) é o principal diferencial competitivo de negócios digitais, intimamente ligado à velocidade de provisionamento de infraestrutura.",
       "papoReto": "Ao adotar a computação em nuvem, a empresa ganha Agilidade (Agility) operacional. Em vez de esperar meses para comprar hardware, configurar a rede e instalar o banco de dados on-premises, a equipe cria e deleta dezenas de ambientes de teste e produção via API e portal em minutos. Isso permite que novas ideias, atualizações e produtos inovadores cheguem aos usuários finais de forma extremamente rápida.",
@@ -4029,11 +4029,11 @@
     "text": "Uma empresa começa armazenando poucos gigabytes e, com o tempo, chega a petabytes de dados no Azure, sem mudanças de infraestrutura física. Esse cenário ilustra qual característica?",
     "options": [
       "Apenas redundância local",
-      "Apenas alta disponibilidade",
       "Escalabilidade e elasticidade do armazenamento em nuvem",
+      "Apenas alta disponibilidade",
       "Apenas criptografia em trânsito"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O armazenamento em nuvem oferece capacidade virtualmente infinita e redimensionamento transparente, liberando as empresas de estimar compras de discos adiantadas.",
       "papoReto": "No modelo tradicional, se você tem 10 Terabytes de dados e o espaço acaba, você precisa comprar um novo storage de hardware físico, desligar o servidor, instalar o disco e expandir partições. No Azure (como no Blob Storage), você não tem limite. O sistema pode começar com apenas 1 Megabyte e ir crescendo até Petabytes de dados sem que você precise mexer em nenhum switch físico ou alterar a infraestrutura, com a nuvem acomodando essa escala gigantesca de forma transparente.",
@@ -4080,10 +4080,10 @@
     "options": [
       "Eliminação total de qualquer risco",
       "Garantia de latência zero",
-      "Redução de risco operacional por uso de infraestrutura gerenciada",
-      "Fim da necessidade de backup"
+      "Fim da necessidade de backup",
+      "Redução de risco operacional por uso de infraestrutura gerenciada"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "A delegação técnica da infraestrutura física da nuvem transfere a responsabilidade e o estresse operacional de hardware das empresas para o provedor.",
       "papoReto": "No datacenter tradicional local, se um disco SSD de produção queima, se o gerador falha por falta de diesel ou se o switch de rede quebra, o seu time de TI precisa correr para consertar, gerando alto estresse e risco operacional de indisponibilidade longa. Ao mover seus sistemas para a nuvem, a Microsoft cuida de toda essa parte operacional e arca com os custos e o estresse de trocar peças velhas ou substituir fontes queimadas. Isso resulta em uma drástica redução de riscos operacionais de infraestrutura física para sua empresa.",
@@ -4103,12 +4103,12 @@
     "id": "az900_q165",
     "text": "Duas VMs em availability set possuem SLA maior do que uma VM isolada. O que esse exemplo ilustra?",
     "options": [
+      "Que a combinação correta de recursos pode resultar em SLA efetivo mais alto para a solução",
       "Que qualquer recurso isolado tem SLA máximo",
       "Que o SLA não pode ser alterado por arquitetura",
-      "Que a combinação correta de recursos pode resultar em SLA efetivo mais alto para a solução",
       "Que o SLA só depende do sistema operacional"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "O SLA total de um sistema complexo é derivado da combinação de todos os SLAs individuais de seus componentes (SLA Composto).",
       "papoReto": "Se uma VM individual padrão no Azure oferece um SLA contratual de Uptime de 99,9%, colocar duas VMs rodando em paralelo em um Availability Set ou Availability Zones com um balanceador de carga no topo permite que a Microsoft eleve a garantia de SLA da solução para 99,95% ou até 99,99%. Isso mostra que o design de arquitetura de alta disponibilidade melhora o SLA efetivo total do sistema, blindando seu negócio contra quedas isoladas.",
@@ -4129,11 +4129,11 @@
     "text": "Para que serve o Azure Arc em um cenário híbrido?",
     "options": [
       "Substituir completamente o Azure Monitor",
-      "Ser apenas solução de backup",
       "Estender gerenciamento e governança Azure para servidores, Kubernetes e dados fora da nuvem Azure",
+      "Ser apenas solução de backup",
       "Criar VNets automaticamente"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O gerenciamento híbrido e multicloud moderno exige ferramentas centralizadas capazes de unificar a governança de recursos distribuídos.",
       "papoReto": "O Azure Arc é um serviço ponte que estende as ferramentas de governança e monitoramento do Azure para fora da nuvem da Microsoft. Com ele, você consegue gerenciar servidores físicos rodando localmente no seu datacenter próprio on-premises ou até mesmo VMs hospedadas na AWS e no Google Cloud utilizando o mesmo painel unificado do Azure, aplicando políticas do Azure Policy e controle de RBAC nesses recursos externos.",
@@ -4180,10 +4180,10 @@
     "options": [
       "Que o serviço está sempre em múltiplas regiões",
       "Que o serviço é apenas global",
-      "Que o serviço é implantado de forma redundante em múltiplas zonas de disponibilidade dentro de uma região",
-      "Que o serviço não possui SLA"
+      "Que o serviço não possui SLA",
+      "Que o serviço é implantado de forma redundante em múltiplas zonas de disponibilidade dentro de uma região"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "O design de alta resiliência a desastres no Azure envolve a duplicação inteligente e síncrona de recursos por diferentes prédios de datacenters na mesma região metropolitana.",
       "papoReto": "Ao contratar um serviço como o Azure SQL Database ou contas de storage configurados como Zone-Redundant (ZR - Redundante por Zona), você não se preocupa em replicar os servidores manualmente. O Azure cuida de salvar seus dados e rodar réplicas do banco de forma síncrona em múltiplas Zonas de Disponibilidade físicas diferentes dentro de uma única região. Se a Zona de Disponibilidade 1 sofrer um blecaute total regional de energia, a Zona de Disponibilidade 2 assume o tráfego instantaneamente com perda zero de dados.",
@@ -4203,12 +4203,12 @@
     "id": "az900_q169",
     "text": "Uma empresa quer publicar APIs para parceiros externos com controle de quota, autenticação e análise de uso. Qual serviço é mais adequado?",
     "options": [
-      "Azure DevOps",
       "Azure API Management",
+      "Azure DevOps",
       "Azure Batch",
       "Azure Front Door apenas"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A publicação segura de APIs corporativas exige ferramentas que atuem como um gateway unificado de tráfego administrativo, segurança e análise.",
       "papoReto": "O Azure API Management (APIM) funciona como um 'recepcionista inteligente' na porta dos fundos da sua empresa. Sempre que parceiros externos tentarem acessar os dados e APIs de backend do seu negócio, a requisição passa pelo APIM. Ele valida se o parceiro tem uma chave de API válida, bloqueia acessos se ele estourar a quota de chamadas por minuto (Rate Limiting), traduz formatos e gera relatórios analíticos de uso detalhados em tempo real.",
@@ -4229,11 +4229,11 @@
     "text": "Qual é o objetivo principal do Azure Front Door?",
     "options": [
       "Substituir VNets",
-      "Gerenciar identidades",
       "Fornecer aceleração de aplicação e roteamento global de tráfego na camada 7, com recursos de WAF",
+      "Gerenciar identidades",
       "Armazenar arquivos de backup"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O tráfego de aplicações web globais exige balanceamento e segurança avançados na camada de aplicação (Camada 7) para garantir velocidade e proteção.",
       "papoReto": "O Azure Front Door é uma plataforma de nuvem global que atua como o ponto de entrada único para o site da sua empresa no mundo todo. Ele combina três grandes funções: 1) Balanceamento de carga global na camada 7 (direciona o usuário para o datacenter mais rápido com latência mínima); 2) Rede de Entrega de Conteúdo (CDN) para cacheamento ultra-rápido de imagens; 3) Segurança Integrada de WAF (Web Application Firewall) para barrar ataques virtuais direto na borda antes de atingirem seus servidores.",
@@ -4280,10 +4280,10 @@
     "options": [
       "Monitorar métricas de CPU",
       "Armazenar segredos",
-      "Orquestrar recuperação de desastres replicando VMs e servidores entre locais e/ou Azure",
-      "Fornecer DNS público"
+      "Fornecer DNS público",
+      "Orquestrar recuperação de desastres replicando VMs e servidores entre locais e/ou Azure"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "O planejamento de continuidade de negócios de missão crítica exige réplicas operacionais ativas de servidores prontas para failover imediato em caso de falha regional.",
       "papoReto": "O Azure Site Recovery (ASR) é a ferramenta oficial de Recuperação de Desastres (DR) do Azure. Ele funciona espelhando e replicando constantemente as suas VMs de produção (sejam VMs do Azure rodando em uma região, ou até servidores físicos locais on-premises) para uma região parceira de destino em tempo quase real. Se a sua região primária explodir por um desastre, o ASR orquestra a ativação das réplicas no destino de forma automática (failover) e restaura a operação da empresa em poucos minutos.",
@@ -4303,12 +4303,12 @@
     "id": "az900_q173",
     "text": "Por que habilitar planos do Microsoft Defender for Cloud em recursos específicos (como VMs e SQL)?",
     "options": [
-      "Para reduzir automaticamente custos",
       "Para obter detecção avançada de ameaças e recomendações específicas para esses recursos",
+      "Para reduzir automaticamente custos",
       "Para aumentar limite de VNets",
       "Para substituir todos os NSGs"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A proteção aprofundada de workloads de nuvem (CWPP) exige planos de segurança especializados baseados em assinaturas de auditoria contínua.",
       "papoReto": "O Microsoft Defender for Cloud possui planos especializados (como o Defender for VMs, Defender for SQL, Defender for Storage). Ao habilitá-los, você ativa sensores inteligentes de segurança em tempo real: ele analisa logs de acessos suspeitos, tenta detectar invasões de força bruta via SSH/RDP, sinaliza tentativas de injeção de SQL e avisa imediatamente o time de segurança corporativo (SOC) com alertas acionáveis sobre possíveis ataques virtuais.",
@@ -4329,11 +4329,11 @@
     "text": "Em qual camada do modelo de defesa em profundidade se enquadra o uso de NSG e Azure Firewall?",
     "options": [
       "Camada de identidade",
+      "Camada de rede",
       "Camada de dados",
-      "Camada de aplicação",
-      "Camada de rede"
+      "Camada de aplicação"
     ],
-    "correctAnswer": 3,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O modelo de defesa em profundidade segmenta os mecanismos de proteção em anéis lógicos e físicos para contenção de ameaças.",
       "papoReto": "Os Network Security Groups (NSGs) e o Azure Firewall filtram o tráfego físico de pacotes e gerenciam as regras de comunicação entre sub-redes e IPs públicos. Portanto, eles se enquadram estritamente dentro da Camada de Rede (Network Layer) nos anéis concêntricos de Defesa em Profundidade.",
@@ -4379,11 +4379,11 @@
     "text": "Qual fator muitas vezes é esquecido, mas impacta custos ao mover grandes volumes de dados para fora do Azure?",
     "options": [
       "Custo de entrada de todos os dados (sempre cobrado)",
-      "Taxas de saída de dados (egress)",
       "Custos de login no portal",
-      "Custos de criação de tags"
+      "Custos de criação de tags",
+      "Taxas de saída de dados (egress)"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "A transferência de dados no Azure possui regras de faturamento assimétricas baseadas na direção em que o tráfego cruza as fronteiras dos datacenters do provedor.",
       "papoReto": "A regra de ouro da cobrança de dados na nuvem pública é simples: Entrada de dados (Ingress) é sempre gratuita (você pode subir Terabytes de backups do seu escritório local para o Azure sem pagar nada de dados). No entanto, a Saída de dados (Egress) é cobrada por Gigabyte transferido. Se o seu site faz download de grandes arquivos ou replica dados maciços da nuvem de volta para a sua rede local on-premises, essas taxas de saída de dados (egress bandwidth fees) podem gerar surpresas desagradáveis na fatura do mês.",
@@ -4403,12 +4403,12 @@
     "id": "az900_q177",
     "text": "Qual recurso de preço ajuda equipes de desenvolvimento e teste a reduzir custos?",
     "options": [
-      "Obrigatoriedade de sempre usar VMs reservadas",
       "Ofertas específicas de preços para ambientes Dev/Test em assinaturas qualificadas",
+      "Obrigatoriedade de sempre usar VMs reservadas",
       "Desativação de backup",
       "Uso apenas de Linux"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "O planejamento financeiro do ciclo de desenvolvimento de software no Azure beneficia-se de modelos de descontos especiais concedidos pela Microsoft para workloads que não sejam de produção.",
       "papoReto": "A Microsoft sabe que manter servidores ligados para desenvolvimento e testes de novos códigos gera faturas altas. Para ajudar as empresas, ela oferece a Assinatura do Azure Dev/Test (Azure Dev/Test Pricing). Ao criar essa assinatura especial qualificada, você recebe descontos significativos (como não pagar a licença comercial de Windows Server ou SQL Server nas VMs de testes - pagando apenas a tarifa barata equivalente a Linux - e descontos adicionais no Azure App Service).",
@@ -4429,11 +4429,11 @@
     "text": "Qual é uma diferença típica entre Azure Blueprints e ARM/Bicep templates?",
     "options": [
       "Blueprints substituem Log Analytics",
-      "Templates substituem RBAC",
       "Blueprints agrupam templates, policies e RBAC para configurar ambientes; templates descrevem apenas recursos a serem implantados",
+      "Templates substituem RBAC",
       "Não existe diferença"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "A padronização em larga escala do Azure distingue ferramentas de provisionamento técnico de infraestrutura de suítes completas de conformidade administrativa.",
       "papoReto": "Não confunda! O ARM Template (ou Bicep) é focado puramente em Recursos (ele descreve como criar 1 banco e 2 VMs). O Azure Blueprint é muito maior e serve para Governança Geral: ele é uma fôrma que pode conter múltiplos ARM templates de recursos, mas adiciona ativamente atribuições de permissão do RBAC (quem acessa) e regras do Azure Policy (conformidade técnica) em um único pacote centralizado voltado a orquestrar novas assinaturas.",
@@ -4454,11 +4454,11 @@
     "text": "Onde você pode ver o estado de conformidade das políticas em uma subscription?",
     "options": [
       "Apenas no Azure DNS",
-      "No painel de compliance do Azure Policy",
       "Apenas no Azure Files",
+      "No painel de compliance do Azure Policy",
       "Apenas no Azure Backup"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A auditoria técnica contínua de TI exige painéis intuitivos que mostrem de imediato quais recursos da empresa estão violando as diretrizes de governança.",
       "papoReto": "Ao acessar o portal do Azure e abrir o serviço do Azure Policy, a primeira tela exibida é o Painel de Conformidade (Compliance Dashboard). Nele, você vê uma nota em porcentagem (ex.: 85% Compliant), gráficos informando quais regras corporativas estão sendo violadas e a lista exata de quais VMs ou Storage Accounts estão em desconformidade técnica (não-compliant).",
@@ -4480,10 +4480,10 @@
     "options": [
       "Apenas custos futuros",
       "Apenas acessos de usuário",
-      "Incidentes de serviço, manutenção planejada e avisos de integridade",
-      "Apenas alterações de DNS"
+      "Apenas alterações de DNS",
+      "Incidentes de serviço, manutenção planejada e avisos de integridade"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "O gerenciamento operacional exige canais de informações estruturados sobre incidentes globais e paradas preventivas de datacenters do provedor de nuvem.",
       "papoReto": "O Azure Service Health avisa você sobre três grandes categorias de eventos operacionais da própria Microsoft: 1) Incidentes de Serviço: quedas de datacenters ou indisponibilidades gerais na sua região; 2) Manutenção Planejada: avisos prévios de quando a Microsoft atualizará servidores físicos (ex.: 'sua VM será reiniciada na terça às 03:00 para patches de hardware'); 3) Avisos de Integridade (Health Advisories): comunicados importantes de segurança ou depreciação de APIs antigas do Azure.",
@@ -4503,12 +4503,12 @@
     "id": "az900_q181",
     "text": "Uma empresa de e-commerce quer garantir que o site suporte picos imprevisíveis de acesso sem intervenção manual. Qual recurso de nuvem é mais diretamente responsável por isso?",
     "options": [
+      "Capacidade elástica de aumentar e reduzir recursos automaticamente",
       "Nuvem privada dedicada",
       "Somente backup automático",
-      "Capacidade elástica de aumentar e reduzir recursos automaticamente",
       "Apenas criptografia em repouso"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "O comércio eletrônico moderno enfrenta picos repentinos de demanda devido a promoções repentinas ou posts virais, exigindo automações dinâmicas de infraestrutura.",
       "papoReto": "A elasticidade automática (Autoscale) é o recurso projetado exatamente para lidar com picos imprevisíveis sem nenhuma ação humana. O sistema monitora o consumo em tempo real. Se o uso de CPU das VMs passa de 80% devido à enxurrada de compradores, a nuvem cria novas instâncias em minutos para dividir o trabalho. Quando o tráfego se normaliza e cai, o sistema encolhe, apagando as instâncias adicionais de forma invisível.",
@@ -4554,11 +4554,11 @@
     "text": "Qual afirmação exemplifica o 'acesso amplo à rede' (broad network access) na nuvem?",
     "options": [
       "Serviços disponíveis apenas em rede interna",
-      "Serviços acessíveis por meio de redes padrão, em diversos dispositivos e plataformas",
       "Acesso somente por linha discada",
+      "Serviços acessíveis por meio de redes padrão, em diversos dispositivos e plataformas",
       "Acesso apenas via cliente proprietário"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "O acesso amplo à rede é a característica que garante a ubiquidade dos serviços de nuvem de qualquer lugar e em qualquer aparelho moderno.",
       "papoReto": "Amplo Acesso à Rede (Broad Network Access) significa que a sua aplicação hospedada na nuvem pode ser acessada de forma universal através de protocolos de rede comuns e abertos (como HTTP/HTTPS). Seja um usuário usando um celular 4G/5G, um notebook em uma cafeteria via Wi-Fi, um tablet ou uma TV conectada, todos conseguem utilizar o sistema de forma transparente sem barreiras de hardware ou de plataforma.",
@@ -4579,11 +4579,11 @@
     "text": "Qual benefício de gestão está associado à medição de serviço na nuvem?",
     "options": [
       "Impedir qualquer auditoria",
-      "Permitir visibilidade detalhada de uso e custos para cobrança interna e otimização",
       "Ocultar consumo real",
-      "Fixar custos independentemente do uso"
+      "Fixar custos independentemente do uso",
+      "Permitir visibilidade detalhada de uso e custos para cobrança interna e otimização"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "O serviço medido (Measured Service) dita que o consumo de recursos na nuvem é monitorado e faturado de forma transparente por uso real.",
       "papoReto": "Na nuvem, cada minuto de uso de CPU, gigabyte de storage ou megabyte de tráfego de rede é ativamente monitorado e registrado (Measured Service). O grande benefício de negócios disso é a transparência total: o time financeiro sabe exatamente qual recurso gastou cada centavo, permitindo calcular o custo de cada produto, faturar divisões internas da empresa (showback/chargeback) e identificar oportunidades de otimização de gastos.",
@@ -4603,12 +4603,12 @@
     "id": "az900_q185",
     "text": "Qual cenário descreve corretamente uma estratégia multi-cloud?",
     "options": [
-      "Uso de várias subscriptions no mesmo provedor",
       "Uso de serviços de dois ou mais provedores de nuvem pública diferentes",
+      "Uso de várias subscriptions no mesmo provedor",
       "Uso de várias VNets na mesma região",
       "Uso de datacenter redundante local"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A arquitetura de TI moderna muitas vezes adota múltiplos parceiros de nuvem pública para mitigar dependências exclusivas de fornecedores (lock-in).",
       "papoReto": "Uma estratégia Multi-Cloud significa que sua empresa consome serviços de múltiplos provedores de nuvem pública diferentes (ex.: você hospeda seu frontend web e VMs no Microsoft Azure, mas roda seus algoritmos de machine learning no Google Cloud e seu banco de dados analítico legado na AWS). Isso dá alto poder de barganha comercial, evita o aprisionamento tecnológico de fornecedor (vendor lock-in) e permite escolher o melhor serviço de cada player.",
@@ -4654,11 +4654,11 @@
     "text": "Por que é importante saber se um serviço é global ou regional no Azure?",
     "options": [
       "Porque define se o serviço precisa de RBAC",
-      "Porque isso impacta como ele é configurado, replicado e cobrado em diferentes regiões",
       "Porque altera o tipo de sistema operacional",
+      "Porque isso impacta como ele é configurado, replicado e cobrado em diferentes regiões",
       "Porque define se tags podem ser usadas"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "O escopo de implantação de um serviço dita a sua abrangência geográfica física e as estratégias financeiras associadas de rede.",
       "papoReto": "Ao desenhar uma arquitetura no Azure, saber se um serviço é Regional (ex.: VMs, Storage Accounts, SQL - que ficam salvos em um datacenter físico de uma região específica) ou Global (ex.: Microsoft Entra ID, Azure DNS, Front Door - que rodam de forma transparente no mundo inteiro) muda tudo. Isso influencia diretamente as estratégias de redundância de dados, a precificação do tráfego e o planejamento de failover em recuperação de desastres.",
@@ -4679,11 +4679,11 @@
     "text": "Qual consideração de custo se aplica ao uso de múltiplas zonas de disponibilidade?",
     "options": [
       "Sempre são mais baratos",
-      "Recursos distribuídos em múltiplas zonas podem ter custo maior que recursos em zona única, em troca de maior resiliência",
       "Sempre são gratuitos",
-      "Não há diferença de custo possível"
+      "Não há diferença de custo possível",
+      "Recursos distribuídos em múltiplas zonas podem ter custo maior que recursos em zona única, em troca de maior resiliência"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "O aumento do nível de resiliência e a redundância síncrona física de hardware na nuvem exigem investimentos proporcionais de custos operacionais e de rede.",
       "papoReto": "Ao duplicar suas VMs em duas Zonas de Disponibilidade (Zona 1 + Zona 2) para garantir que o sistema não caia, você está contratando e mantendo o dobro de computação física ligada (duas VMs cobradas simultaneamente). Além disso, a transferência de dados pesados entre diferentes zonas (datacenters separados por fibra óptica regional) possui taxas de rede pequenas, tornando a solução de alta disponibilidade ligeiramente mais cara do que rodar uma única VM isolada em zona única.",
@@ -4703,12 +4703,12 @@
     "id": "az900_q189",
     "text": "Quando é recomendável usar Azure Container Apps?",
     "options": [
+      "Quando se deseja executar aplicações em contêiner com escala automática e recursos de microserviços sem gerenciar Kubernetes diretamente",
       "Quando se quer apenas arquivos compartilhados",
       "Quando só é necessário banco relacional",
-      "Quando se deseja executar aplicações em contêiner com escala automática e recursos de microserviços sem gerenciar Kubernetes diretamente",
       "Quando se quer apenas DNS público"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "O gerenciamento de contêineres e microsserviços modernos na nuvem oferece opções que vão desde o controle total de clusters até soluções serverless gerenciadas de alta abstração.",
       "papoReto": "Se a sua equipe desenvolve aplicações baseadas em contêineres (Docker) e quer os benefícios de orquestração do Kubernetes (como escalabilidade automática a partir de requisições HTTP, comunicação segura entre microsserviços e deploys rápidos), mas acha o gerenciamento físico de um cluster Kubernetes (AKS) muito complexo e demorado, a resposta é o Azure Container Apps. Trata-se de um serviço serverless focado em hospedar contêineres com alta facilidade operacional e escala dinâmica.",
@@ -4729,11 +4729,11 @@
     "text": "Qual é o uso típico do Azure SignalR Service?",
     "options": [
       "Armazenar grandes volumes de dados",
-      "Executar cargas batch",
       "Habilitar comunicação em tempo real (como notificações e atualizações em tempo real) entre servidor e clientes",
+      "Executar cargas batch",
       "Gerenciar identidades"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "As aplicações modernas exigem comunicação instantânea e bidirecional de dados entre o servidor backend e as telas dos usuários.",
       "papoReto": "O Azure SignalR Service é um serviço gerenciado de nuvem projetado para simplificar a adição de comunicação web em tempo real (Real-Time Web) a aplicações. Ele usa a tecnologia de WebSockets para criar um túnel de comunicação bidirecional aberto e persistente: se o servidor precisa enviar um alerta de notificação, um placar de futebol atualizado ou uma mensagem de chat instantânea para a tela do usuário, ele empurra os dados na hora (push) de forma instantânea sem que o navegador precise ficar recarregando a página (F5).",
@@ -4780,10 +4780,10 @@
     "options": [
       "Armazenar backups de VMs",
       "Hospedar sites estáticos",
-      "Fornecer filas simples para mensagens entre componentes de aplicação, apoiando arquiteturas desacopladas",
-      "Gerenciar identidades"
+      "Gerenciar identidades",
+      "Fornecer filas simples para mensagens entre componentes de aplicação, apoiando arquiteturas desacopladas"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "O desacoplamento básico e resiliente de microsserviços na nuvem apoia-se em armazenamento de filas simples de mensagens.",
       "papoReto": "O Azure Queue Storage é o serviço de filas simples que reside dentro de uma Storage Account. Ele foi desenhado para armazenar grandes quantidades de mensagens simples (até 64 KB por mensagem) que podem ser acessadas via chamadas HTTP/HTTPS. Ele serve para desacoplar tarefas de forma confiável (ex.: o frontend web recebe o pedido de compra do cliente e joga um JSON simples na fila; a VM de processamento lê a fila e emite a nota fiscal no seu próprio ritmo), aguentando milhões de mensagens na fila barata.",
@@ -4803,12 +4803,12 @@
     "id": "az900_q193",
     "text": "Qual é o objetivo de um Web Application Firewall (WAF) em serviços como Application Gateway ou Front Door?",
     "options": [
-      "Substituir RBAC",
       "Proteger aplicações web contra ataques comuns como SQL injection e XSS",
+      "Substituir RBAC",
       "Criar VNets automaticamente",
       "Gerenciar licenças de SO"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A segurança aprofundada de sistemas expostos na internet exige filtros especializados contra vulnerabilidades conhecidas no nível de aplicação (Camada 7).",
       "papoReto": "Um firewall de rede comum (como NSGs) bloqueia portas e IPs suspeitos, mas não sabe ler o que está escrito dentro da requisição HTTP do usuário. O WAF (Web Application Firewall) é um firewall inteligente da camada 7. Ele inspeciona o texto das requisições e consegue detectar e bloquear na hora tentativas de ataques de hackers famosas, como Injeção de SQL (tentativa de roubar o banco digitando códigos maliciosos no campo de senha) ou Cross-Site Scripting (XSS), protegendo a sua aplicação web na borda da nuvem.",
@@ -4854,11 +4854,11 @@
     "text": "Qual é a vantagem de centralizar logs de segurança e atividade em um único workspace?",
     "options": [
       "Aumentar tamanho de VMs",
-      "Facilitar correlação de eventos, detecção de incidentes e auditoria",
       "Reduzir necessidade de criptografia",
+      "Facilitar correlação de eventos, detecção de incidentes e auditoria",
       "Eliminar backups"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 2,
     "explanation": {
       "intro": "A detecção proativa de ataques virtuais exige a consolidação de todas as telemetrias e atividades de sistemas em um único motor de busca avançado.",
       "papoReto": "Se os logs do seu banco SQL ficam salvos em um canto, os logs do Firewall ficam em outro e os logs de login ficam isolados, achar a trilha de um ataque hacker é quase impossível. Ao centralizar todos os logs no Log Analytics Workspace (e integrando ao Microsoft Sentinel), você consegue cruzar e correlacionar os eventos (ex.: 'o usuário X logou de madrugada ➡️ usou a VM Y ➡️ tentou ler a tabela Z'). Essa visão analítica centralizada é crucial para auditoria técnica e detecção ágil de incidentes de segurança.",
@@ -4879,11 +4879,11 @@
     "text": "Uma empresa remove VMs mas esquece de excluir discos gerenciados associados. Qual é a consequência?",
     "options": [
       "Os discos tornam-se gratuitos automaticamente",
-      "Os discos continuam gerando custo até serem excluídos ou reutilizados",
       "Os discos são sempre apagados com a VM",
-      "As VMs não podem ser desligadas"
+      "As VMs não podem ser desligadas",
+      "Os discos continuam gerando custo até serem excluídos ou reutilizados"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "O gerenciamento proativo de ciclos de vida de recursos e a higiene de FinOps impedem surpresas financeiras causadas por desperdício de infraestrutura órfã.",
       "papoReto": "Ao excluir uma Máquina Virtual (VM) no Azure pelo portal, o assistente exclui a VM de computação em si, mas, por padrão de segurança contra perda acidental de dados, ele não deleta o disco virtual SSD (Azure Managed Disk) de armazenamento de forma automática. Esse disco se torna um 'disco órfão' (unattached disk) e continuará cobrando pelo espaço de gigabytes provisionado na sua fatura mensal. Você deve excluí-lo manualmente ou usar um script para limpar esses órfãos do ambiente.",
@@ -4903,12 +4903,12 @@
     "id": "az900_q197",
     "text": "Como o uso de Azure SQL Database PaaS impacta o gerenciamento de licenças SQL Server?",
     "options": [
-      "O cliente precisa sempre comprar licenças separadas",
       "Licenciamento é incluído no serviço PaaS, simplificando o gerenciamento para o cliente",
+      "O cliente precisa sempre comprar licenças separadas",
       "Não há licença envolvida",
       "Licenças são gerenciadas apenas on-premises"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "O modelo Plataforma como Serviço (PaaS) simplifica drasticamente a conformidade regulatória e a gestão financeira de softwares comerciais embarcados.",
       "papoReto": "Ao contratar o Azure SQL Database (PaaS de banco de dados relacional puro), você não precisa se preocupar em acessar o site de licenciamento da Microsoft, comprar licenças SQL por número de núcleos ou gerenciar contratos complexos de conformidade de software. A taxa de licenciamento comercial do SQL Server já vem 100% embutida e diluída no valor por minuto de consumo do serviço de banco. Isso reduz dores de cabeça e simplifica a governança financeira de TI.",
@@ -4979,11 +4979,11 @@
     "text": "Além de enviar notificações, o que um alerta do Azure Monitor também pode acionar?",
     "options": [
       "Apenas mudança de SLA",
-      "Ações automatizadas como execução de runbooks, Logic Apps ou funções",
       "Criação automática de novas subscriptions",
-      "Alteração de senhas de usuário"
+      "Alteração de senhas de usuário",
+      "Ações automatizadas como execução de runbooks, Logic Apps ou funções"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "A automação de operações de TI (AIOps) exige que a plataforma de monitoramento não apenas envie avisos, mas tome ações corretivas automatizadas.",
       "papoReto": "Quando um alerta de monitoramento dispara no Azure Monitor (ex.: 'Uso de memória da VM passou de 95%'), ele não precisa se limitar a mandar um e-mail silencioso que o time de TI só lerá na manhã seguinte. Através dos Action Groups (Grupos de Ação), você consegue disparar automações de 'auto-healing': ele pode acionar um webhook, rodar um script corretivo de automação (Azure Automation Runbook), chamar um Logic App (para abrir um chamado no ServiceNow) ou executar uma Azure Function (para reiniciar o serviço travado da VM na hora).",
@@ -5003,12 +5003,12 @@
     "id": "az900_q201",
     "text": "Uma empresa possui VNets em diferentes regiões e quer conectá-las usando a rede backbone da Microsoft, sem VPN sobre a internet pública. Qual recurso deve ser usado?",
     "options": [
-      "VPN Gateway",
       "VNet peering global",
+      "VPN Gateway",
       "ExpressRoute Direct",
       "Azure Bastion"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A interconexão de redes privadas virtuais em diferentes regiões geográficas do Azure exige canais de conectividade de tráfego ultra-rápido e seguro.",
       "papoReto": "Se você tem uma VNet na Europa (East US) e outra no Brasil (Brazil South) e precisa que os recursos delas conversem usando IPs privados de forma direta e extremamente rápida, você usa o VNet Peering Global (Emparelhamento Global de VNets). A grande mágica dele é que os dados trafegam inteiramente por dentro da rede de fibra óptica backbone privada da própria Microsoft global. Os pacotes nunca cruzam a internet pública, garantindo latência mínima e segurança absoluta.",
@@ -5080,10 +5080,10 @@
     "options": [
       "Quando o tráfego é apenas HTTP público",
       "Quando se quer acesso somente via internet pública",
-      "Quando se deseja uma conexão privada dedicada com maior confiabilidade e latência previsível entre on-premises e Azure",
-      "Quando a empresa não possui datacenter"
+      "Quando a empresa não possui datacenter",
+      "Quando se deseja uma conexão privada dedicada com maior confiabilidade e latência previsível entre on-premises e Azure"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "O planejamento de links híbridos corporativos exige a análise de custo-benefício entre túneis criptografados públicos e linhas físicas dedicadas privadas.",
       "papoReto": "O ExpressRoute é o link dedicado supremo do Azure. Ele funciona criando uma conexão física direta privada da rede local da sua empresa para a nuvem da Microsoft contratada de uma operadora. Ao contrário do VPN Gateway (que é mais barato mas trafega dados pela internet pública instável), o ExpressRoute nunca passa pela internet. Ele garante velocidades altíssimas de até 100 Gbps, latência previsível de milissegundos e confiabilidade de missão crítica para transações pesadas e transferências massivas diárias de dados.",
@@ -5103,12 +5103,12 @@
     "id": "az900_q205",
     "text": "Por que usar Azure Private DNS Zone?",
     "options": [
-      "Para hospedar domínios públicos de internet",
       "Para resolver nomes de host de recursos internos em VNets sem expô-los ao DNS público",
+      "Para hospedar domínios públicos de internet",
       "Para substituir totalmente Azure DNS",
       "Para gerenciar registros MX públicos"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "O isolamento interno e a segurança corporativa de redes privadas exigem sistemas de resolução de nomes que permaneçam invisíveis ao tráfego público de internet.",
       "papoReto": "Ao criar VMs dentro da sua Virtual Network privada, fazer com que elas conversem usando endereços de IP brutos (ex.: 10.0.0.4) é péssimo para manutenção. Você quer usar nomes de host (ex.: banco.interno). O Azure Private DNS Zone permite criar zonas de domínios personalizadas que só funcionam dentro da sua VNet privada. Ninguém na internet pública consegue consultar esses nomes ou saber que eles existem, blindando o inventário interno contra varreduras de hackers.",
@@ -5129,11 +5129,11 @@
     "text": "O que é um Virtual Machine Scale Set (VMSS)?",
     "options": [
       "Um backup de uma única VM",
-      "Um tipo de VNet",
       "Um conjunto de VMs idênticas que podem ser escaladas automaticamente com base em métricas ou horários",
+      "Um tipo de VNet",
       "Um serviço PaaS de banco de dados"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O gerenciamento unificado e a escala de grandes parques de computação IaaS exigem a criação de grupos de VMs idênticas e orquestradas.",
       "papoReto": "O Virtual Machine Scale Set (VMSS / Conjunto de Dimensionamento de Máquinas Virtuais) é o recurso que torna a elasticidade horizontal física em IaaS possível. Ele permite que você declare e gerencie um conjunto de dezenas ou centenas de VMs idênticas (criadas a partir da mesma imagem base). O VMSS monitora métricas (como uso médio de CPU > 75%) e cria ou exclui automaticamente as instâncias de VMs adicionais de acordo com as regras de autoscale, sem que o administrador precise fazer nada manual.",
@@ -5180,10 +5180,10 @@
     "options": [
       "Garantem o maior SLA possível",
       "Nunca são desalocadas",
-      "Oferecem desconto significativo em troca da possibilidade de serem desalocadas quando o Azure precisa de capacidade",
-      "São usadas apenas para produção crítica"
+      "São usadas apenas para produção crítica",
+      "Oferecem desconto significativo em troca da possibilidade de serem desalocadas quando o Azure precisa de capacidade"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "A Microsoft oferece descontos agressivos na cobrança de computação ociosa em seus datacenters em troca da prerrogativa de recuperar o hardware em picos de demanda.",
       "papoReto": "Imagine que a Microsoft tem milhares de servidores físicos ligados e ociosos na Europa de madrugada. Para não perder dinheiro, ela oferece as Spot VMs com descontos de até 90% do valor normal. A grande pegadinha de ouro é: se um cliente corporativo pagar o valor cheio e precisar de capacidade física, o Azure pode desalocar/desligar a sua Spot VM de forma imediata (com aviso prévio de apenas 30 segundos). Elas são perfeitas para rodar testes rápidos, jobs de processamento de vídeos paralelos ou tarefas batch tolerantes a interrupções, mas nunca para sistemas de produção crítica.",
@@ -5203,12 +5203,12 @@
     "id": "az900_q209",
     "text": "Quando uma empresa consideraria usar Azure Dedicated Host?",
     "options": [
+      "Quando precisa hospedar VMs em hardware dedicado por requisitos de compliance ou licenciamento",
       "Quando deseja apenas reduzir logs",
       "Quando não pode usar nenhuma forma de virtualização",
-      "Quando precisa hospedar VMs em hardware dedicado por requisitos de compliance ou licenciamento",
       "Quando precisa apenas de PaaS"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "Requisitos extremos de compliance de segurança de isolamento física ou regras rígidas de licenciamento de software por socket de CPU físico exigem o controle exclusivo do host de virtualização.",
       "papoReto": "Por padrão, as VMs do Azure rodam em servidores físicos compartilhados com outros clientes logicamente isolados (multi-tenancy). Se a área jurídica de um banco ou órgão militar exige que nenhum outro cliente compartilhe o mesmo hardware físico de host sob nenhuma hipótese, você contrata o Azure Dedicated Host. A Microsoft te entrega um servidor físico completo e exclusivo no datacenter do Azure. Você gerencia o hipervisor de virtualização e escolhe quais VMs suas rodarão lá dentro, atendendo regras rígidas de segurança física e licenças BYOL.",
@@ -5279,11 +5279,11 @@
     "text": "Para que serve a função User Access Administrator no RBAC?",
     "options": [
       "Para fazer backup de VMs",
-      "Para gerenciar quem tem acesso a recursos, sem necessariamente poder modificá-los",
       "Para gerenciar DNS",
-      "Para criar VNets"
+      "Para criar VNets",
+      "Para gerenciar quem tem acesso a recursos, sem necessariamente poder modificá-los"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "O princípio de segregação de deveres de conformidade exige funções de governança focadas em atribuir acessos de segurança sem conceder poder de mexer nas configurações físicas dos recursos de TI.",
       "papoReto": "A função de User Access Administrator (Administrador de Acesso de Usuário) é focada puramente em Governança de Identidades. Um profissional com essa função pode atribuir acessos de RBAC para outros colaboradores, mas ele não tem a permissão de criar VMs, deletar bancos de dados ou alterar arquivos de storage. É ideal para auditores ou analistas de segurança cibernética que precisam regular quem acessa o quê sem tocar na infraestrutura operacional de produção.",
@@ -5303,12 +5303,12 @@
     "id": "az900_q213",
     "text": "Por que usar identidades externas (B2B) no Microsoft Entra ID?",
     "options": [
+      "Para permitir que parceiros externos acessem recursos com controle de identidade federada",
       "Para conceder acesso anônimo",
       "Para evitar autenticação multifator",
-      "Para permitir que parceiros externos acessem recursos com controle de identidade federada",
       "Para criar contas locais em cada VM"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "A colaboração corporativa segura exige a integração dinâmica com fornecedores e parceiros externos sem a necessidade de criar e gerenciar senhas adicionais em seu próprio diretório.",
       "papoReto": "Se a sua empresa contratou uma consultoria externa e precisa dar acesso ao repositório ou painel de homologação para esses consultores, você não precisa criar um e-mail com o domínio da sua empresa (ex.: consultor@suaempresa.com) e forçá-lo a memorizar outra senha. Através do Microsoft Entra B2B (External Identities), você convida o parceiro usando o e-mail corporativo próprio dele (ex.: consultor@parceiro.com). Ele loga usando a identidade da própria empresa dele (federação) e você controla os acessos dele no seu ambiente com RBAC e MFA normal, com total segurança.",
@@ -5329,11 +5329,11 @@
     "text": "Qual é um objetivo da autenticação passwordless (sem senha) no contexto de segurança de identidade?",
     "options": [
       "Eliminar a necessidade de MFA",
-      "Permitir senhas simples",
       "Reduzir dependência de senhas, mitigando ataques baseados em credenciais comprometidas",
+      "Permitir senhas simples",
       "Substituir todas as políticas de acesso"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 1,
     "explanation": {
       "intro": "O roubo de credenciais via Phishing ou vazamento de senhas fracas é a principal causa de invasões corporativas globais de TI.",
       "papoReto": "Senhas são o elo mais fraco da segurança cibernética: as pessoas usam senhas fáceis, repetem em múltiplos sites ou caem em golpes de Phishing revelando-as de forma voluntária. A autenticação Passwordless (Sem Senha) resolve isso substituindo a digitação da senha por métodos físicos criptografados hiper-seguros, como chaves físicas de segurança (FIDO2), biometria (Microsoft Authenticator/Windows Hello) ou Smart Cards, tornando a credencial imune a vazamentos digitais tradicionais.",
@@ -5380,10 +5380,10 @@
     "options": [
       "Custo sempre menor",
       "Capacidade infinita sem custo",
-      "Maior desempenho e menor latência para workloads que exigem alto IOPS",
-      "Criptografia automática inexistente"
+      "Criptografia automática inexistente",
+      "Maior desempenho e menor latência para workloads que exigem alto IOPS"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "O desempenho de gravação e leitura de blocos físicos (Disk Storage) dita o gargalo de velocidade operacional de servidores de grande porte.",
       "papoReto": "Ao provisionar uma VM no Azure, os discos HDD padrão (Standard HDD) são baseados em pratos magnéticos lentos antigos, sendo muito baratos mas lentos. Já os Premium SSD são discos rápidos de estado sólido de alta performance. Eles garantem maior velocidade de leitura/escrita medida em IOPS (operações de entrada/saída por segundo) e latência de milissegundos de um dígito, sendo obrigatórios para workloads que exigem transações pesadas de gravação, como bancos de dados corporativos ou servidores web de alto tráfego.",
@@ -5403,12 +5403,12 @@
     "id": "az900_q217",
     "text": "Qual é uma diferença entre discos gerenciados (managed disks) e não gerenciados no Azure?",
     "options": [
-      "Discos gerenciados exigem que o cliente gerencie o armazenamento em contas manualmente",
       "Discos gerenciados são abstraídos como recursos independentes, simplificando gerenciamento e escalabilidade",
+      "Discos gerenciados exigem que o cliente gerencie o armazenamento em contas manualmente",
       "Não podem ser usados em VMs",
       "Não são suportados em produção"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "explanation": {
       "intro": "O Azure evoluiu a arquitetura de armazenamento virtual substituindo a gestão manual de arquivos VHD em contas de storage por discos virtuais gerenciados de forma autônoma.",
       "papoReto": "No modelo antigo não-gerenciado (unmanaged), você precisava criar uma Storage Account, criar um contêiner de Blob, subir o arquivo .vhd do disco da VM lá e torcer para não estourar os limites físicos de IOPS daquela conta de storage. Com os Discos Gerenciados (Managed Disks), a Microsoft te entrega um recurso independente e limpo. Você só diz: 'Quero um disco Premium SSD de 1 TB'. A Microsoft gerencia toda a alocação e escalabilidade por baixo de forma 100% autônoma, sem que você precise enxergar nenhuma conta de storage secundária.",
@@ -5480,10 +5480,10 @@
     "options": [
       "Azure Data Share",
       "Azure DevOps",
-      "Azure Import/Export",
-      "Azure Backup apenas"
+      "Azure Backup apenas",
+      "Azure Import/Export"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 3,
     "explanation": {
       "intro": "A transferência física de terabytes ou petabytes de dados legados locais on-premises pela internet é lenta e cara, exigindo logística postal de discos criptografados.",
       "papoReto": "Se a sua empresa tem 50 Terabytes de arquivos em fitas e discos locais e precisa migrar tudo para a nuvem do Azure, enviar isso pela internet do escritório pode levar meses de tráfego ininterrupto e derrubar a rede. A solução de logística do Azure é o Azure Import/Export: você criptografa os dados nos seus próprios discos rígidos SATA/SSD físicos (usando BitLocker), coloca em uma caixa dos correios (FedEx/DHL) e despacha fisicamente para o datacenter da Microsoft. Os engenheiros de lá recebem a caixa, ligam os discos nos racks locais e sobem os dados direto para o seu Azure Blob Storage em poucas horas.",
@@ -5498,6 +5498,2005 @@
     },
     "difficulty": "intermediario",
     "domain": "Arquitetura e Serviços do Azure"
+  },
+  {
+    "id": "az900_q221",
+    "text": "Uma agência governamental exige controle físico total sobre os servidores e redes onde seus dados residem, sem compartilhar hardware com outras organizações. Qual modelo de nuvem deve ser utilizado?",
+    "options": [
+      "Nuvem privada",
+      "Nuvem pública",
+      "Nuvem híbrida",
+      "Nuvem multicloud"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Modelos de implantação de nuvem definem o nível de controle físico e compartilhamento de hardware.",
+      "papoReto": "A nuvem privada oferece hardware dedicado de forma exclusiva a uma única organização, garantindo controle físico completo e segurança para requisitos governamentais rígidos.",
+      "respostaCerta": "Nuvem privada — infraestrutura dedicada exclusivamente a uma organização, sem compartilhamento de recursos físicos.",
+      "puloDoGato": "Viu 'controle físico total', 'sem compartilhar hardware' ou 'infraestrutura dedicada'? A resposta certa é Nuvem privada.",
+      "cascasDeBanana": [
+        "Nuvem pública: Compartilha hardware entre vários clientes (multitenancy), o que viola o requisito de não compartilhamento.",
+        "Nuvem híbrida: Combina nuvem pública e privada, mas não garante exclusividade física para a solução inteira.",
+        "Nuvem multicloud: Refere-se ao uso de múltiplos provedores de nuvem pública, mantendo o compartilhamento físico de hardware."
+      ],
+      "dicaOuro": "Nuvem Privada = Dedicação exclusiva de hardware e controle físico total."
+    }
+  },
+  {
+    "id": "az900_q222",
+    "text": "Qual das seguintes alternativas descreve um exemplo de despesa de capital (CapEx) em um cenário de TI tradicional?",
+    "options": [
+      "Pagar uma assinatura mensal por caixas de correio eletrônico do Exchange Online",
+      "Comprar servidores físicos e equipamentos de rede para um datacenter local",
+      "Pagar por minuto pelo uso de uma máquina virtual no Azure",
+      "Contratar um serviço de suporte técnico sob demanda cobrado por horas trabalhadas"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "CapEx refere-se a investimentos iniciais em ativos físicos que depreciam ao longo do tempo.",
+      "papoReto": "Comprar servidores físicos e infraestrutura local exige um pagamento inicial alto (CapEx), enquanto os serviços de nuvem usam um modelo de gastos operacionais contínuos (OpEx).",
+      "respostaCerta": "Comprar servidores físicos — investimento inicial em infraestrutura física de longo prazo (CapEx).",
+      "puloDoGato": "Investimento inicial fixo = CapEx. Pagamento recorrente/mensal pelo uso = OpEx. Não erre isso na prova.",
+      "cascasDeBanana": [
+        "Assinatura mensal do Exchange Online: Exemplo claro de despesa operacional (OpEx) recorrente.",
+        "Pagar por minuto por VM no Azure: Modelo de consumo sob demanda, característico de OpEx.",
+        "Suporte técnico sob demanda: Gasto operacional direto pelo uso (OpEx)."
+      ],
+      "dicaOuro": "CapEx = Comprar hardware. OpEx = Alugar serviços de nuvem."
+    }
+  },
+  {
+    "id": "az900_q223",
+    "text": "Sua empresa deseja migrar um aplicativo web para o Azure. Eles querem gerenciar o código e os dados do aplicativo, mas não desejam atualizar ou manter o sistema operacional subjacente. Qual modelo de serviço atende a essa necessidade?",
+    "options": [
+      "IaaS",
+      "SaaS",
+      "PaaS",
+      "Nuvem Privada"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Modelos de serviço em nuvem distribuem as responsabilidades de gerenciamento de forma diferente.",
+      "papoReto": "No modelo PaaS (Plataforma como Serviço), o provedor de nuvem gerencia o sistema operacional, middleware e rede. O cliente foca apenas no código do aplicativo e nos dados.",
+      "respostaCerta": "PaaS (Platform as a Service) — elimina a necessidade de gerenciar sistemas operacionais e servidores subjacentes.",
+      "puloDoGato": "Palavras-chave para PaaS: 'focar apenas no código', 'sem gerenciar sistema operacional', 'hospedagem de apps gerenciada'.",
+      "cascasDeBanana": [
+        "IaaS: Exige que você gerencie e atualize o sistema operacional da VM virtualizada.",
+        "SaaS: O aplicativo está 100% pronto e você não gerencia código (ex.: Microsoft 365).",
+        "Nuvem Privada: É um modelo de implantação de rede, não de serviço de software."
+      ],
+      "dicaOuro": "PaaS = Você foca apenas no código; a Microsoft cuida do SO e da infraestrutura."
+    }
+  },
+  {
+    "id": "az900_q224",
+    "text": "Um administrador adiciona mais memória RAM e núcleos de CPU a uma única máquina virtual existente no Azure para lidar com o aumento de carga. Qual tipo de escalabilidade descreve essa ação?",
+    "options": [
+      "Escalabilidade horizontal (scale-out)",
+      "Elasticidade automática",
+      "Alta disponibilidade distribuída",
+      "Escalabilidade vertical (scale-up)"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Escalabilidade refere-se à capacidade de ajustar recursos computacionais para atender à demanda.",
+      "papoReto": "A escalabilidade vertical (scale-up) envolve aumentar o poder de processamento (CPU, RAM) de um recurso existente, em vez de adicionar mais recursos individuais à infraestrutura.",
+      "respostaCerta": "Escalabilidade vertical (scale-up) — aumento de recursos físicos em um único nó existente.",
+      "puloDoGato": "Tornar o servidor atual mais forte = Vertical (Scale-up). Adicionar mais servidores idênticos ao grupo = Horizontal (Scale-out).",
+      "cascasDeBanana": [
+        "Escalabilidade horizontal (scale-out): Adiciona mais instâncias de VMs, em vez de aumentar o tamanho de uma única VM.",
+        "Elasticidade automática: Ajusta os recursos dinamicamente de forma bidirecional sem intervenção manual contínua.",
+        "Alta disponibilidade: Mantém o serviço no ar durante falhas, não tendo relação direta com ajuste de CPU/RAM."
+      ],
+      "dicaOuro": "Escalar Vertical = Deixar a mesma máquina mais forte. Escalar Horizontal = Adicionar mais máquinas."
+    }
+  },
+  {
+    "id": "az900_q225",
+    "text": "Qual das seguintes alternativas representa um exemplo de agilidade na computação em nuvem?",
+    "options": [
+      "A capacidade de criar e implantar novos recursos de TI em questão de minutos",
+      "A capacidade de recuperar dados de backup em caso de desastre geográfico",
+      "A garantia de que os aplicativos fiquem online 99,99% do tempo",
+      "A criptografia automática de todos os dados salvos em disco"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "A agilidade é a velocidade de resposta técnica a mudanças de negócios na nuvem.",
+      "papoReto": "A agilidade na nuvem permite que desenvolvedores e administradores criem, testem e publiquem recursos complexos (VMs, bancos de dados, redes) em minutos, sem esperar semanas por compras físicas de hardware.",
+      "respostaCerta": "Capacidade de criar recursos rapidamente — elimina gargalos físicos de aquisição e acelera o go-to-market.",
+      "puloDoGato": "Falou em 'velocidade de deploy', 'criar recursos em minutos' ou 'agilidade'? A resposta certa foca na rapidez de provisionamento.",
+      "cascasDeBanana": [
+        "Recuperar dados de backup: Isso faz parte do conceito de tolerância a falhas e recuperação de desastres (Disaster Recovery).",
+        "Garantia de 99,99%: Trata-se de Alta Disponibilidade (High Availability).",
+        "Criptografia automática: Recurso de segurança e conformidade de dados."
+      ],
+      "dicaOuro": "Agilidade = Criar infraestrutura em minutos com alguns cliques ou scripts."
+    }
+  },
+  {
+    "id": "az900_q226",
+    "text": "No modelo de responsabilidade compartilhada da nuvem pública, quem é responsável pela segurança física do datacenter do Azure?",
+    "options": [
+      "Apenas o cliente",
+      "Apenas a Microsoft",
+      "Ambos (Microsoft e cliente)",
+      "Nenhum dos dois"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "O modelo de responsabilidade compartilhada dita quem protege cada parte do ecossistema.",
+      "papoReto": "A segurança física de prédios, geradores de energia, ar condicionado e redes físicas nos datacenters do Azure é de responsabilidade exclusiva do provedor de nuvem (Microsoft).",
+      "respostaCerta": "Apenas a Microsoft — o provedor de nuvem garante a integridade de todas as instalações físicas de hardware.",
+      "puloDoGato": "Tudo que for FÍSICO (datacenters, hardware de host, cabeamento de fibra) é 100% responsabilidade da Microsoft na nuvem pública.",
+      "cascasDeBanana": [
+        "Apenas o cliente: Clientes não têm acesso físico aos datacenters do Azure.",
+        "Ambos (Microsoft e cliente): O cliente não divide o controle físico de segurança das instalações.",
+        "Nenhum dos dois: Toda infraestrutura crítica exige responsabilidade ativa de segurança."
+      ],
+      "dicaOuro": "Segurança física de datacenter = Responsabilidade exclusiva da Microsoft."
+    }
+  },
+  {
+    "id": "az900_q227",
+    "text": "Qual das seguintes características define melhor a nuvem pública?",
+    "options": [
+      "A infraestrutura física é instalada e operada localmente pela própria empresa",
+      "Os dados dos clientes são acessíveis de forma pública para qualquer usuário da internet sem login",
+      "Os recursos de hardware são compartilhados entre múltiplos inquilinos (multitenancy) pela internet",
+      "O cliente possui propriedade jurídica exclusiva sobre os servidores físicos utilizados"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "A nuvem pública baseia-se no compartilhamento de infraestrutura sob demanda.",
+      "papoReto": "Na nuvem pública, o provedor de nuvem possui o hardware físico e aluga o processamento de forma lógica e isolada para múltiplos clientes (inquilinos/tenants) de forma segura através da internet.",
+      "respostaCerta": "Compartilhamento de hardware (multitenancy) — recursos físicos de terceiros divididos logicamente entre usuários.",
+      "puloDoGato": "Nuvem pública não significa dados públicos. Significa que o hardware subjacente pertence a um provedor público e é compartilhado logicamente.",
+      "cascasDeBanana": [
+        "Instalada e operada localmente: Isso descreve a nuvem privada ou datacenter local (on-premises).",
+        "Dados acessíveis sem login: Os dados continuam protegidos e isolados por chaves e senhas privadas.",
+        "Propriedade exclusiva dos servidores: O hardware pertence unicamente à Microsoft."
+      ],
+      "dicaOuro": "Nuvem Pública = Infraestrutura física compartilhada, gerenciada pelo provedor e alugada sob demanda."
+    }
+  },
+  {
+    "id": "az900_q228",
+    "text": "Sua aplicação continua funcionando normalmente mesmo quando um dos servidores web sofre um travamento total de hardware. Qual conceito de nuvem é demonstrado por essa resiliência?",
+    "options": [
+      "Agilidade",
+      "Baixa latência",
+      "Escalabilidade vertical",
+      "Tolerância a falhas (Fault tolerance)"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "A tolerância a falhas garante a continuidade operacional diante de quebras físicas.",
+      "papoReto": "Tolerância a falhas (Fault tolerance) é a capacidade de um sistema detectar a quebra de um componente e redirecionar o tráfego instantaneamente para outro nó saudável, sem impactos para o usuário.",
+      "respostaCerta": "Tolerância a falhas — redundância física ativa de componentes para evitar paradas do sistema.",
+      "puloDoGato": "Componente quebrou e o app continuou no ar? Isso é Tolerância a falhas ou Alta Disponibilidade.",
+      "cascasDeBanana": [
+        "Agilidade: Focado em velocidade de criação de recursos, não resiliência a falhas.",
+        "Baixa latência: Velocidade de resposta da rede para o usuário final.",
+        "Escalabilidade vertical: Ajuste de tamanho de máquina, não proteção contra falhas."
+      ],
+      "dicaOuro": "Tolerância a Falhas = Peça quebrou, backup assumiu na hora, usuário nem percebeu."
+    }
+  },
+  {
+    "id": "az900_q229",
+    "text": "Por que o modelo de consumo da computação em nuvem (pay-as-you-go) é considerado financeiramente eficiente?",
+    "options": [
+      "Porque elimina gastos iniciais com hardware e cobra apenas pelo tempo de execução ativa dos recursos",
+      "Porque oferece taxas fixas de pagamento mensais independentemente do uso real",
+      "Porque obriga a compra de servidores físicos que valorizam ao longo do tempo",
+      "Porque reduz taxas tributárias sobre hardware local da empresa"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "O modelo pay-as-you-go foca na otimização financeira baseada no uso operacional.",
+      "papoReto": "No modelo pay-as-you-go, se você desligar sua máquina virtual ou deletar um storage, você para imediatamente de pagar por eles. Isso evita o desperdício de dinheiro com servidores ociosos.",
+      "respostaCerta": "Cobrança por uso ativo — flexibilidade operacional e eliminação de desperdício financeiro de hardware ocioso.",
+      "puloDoGato": "Pay-as-you-go = Modelo de Consumo = Pagar apenas pelo uso real dos recursos computacionais.",
+      "cascasDeBanana": [
+        "Taxas fixas independentemente do uso: Isso seria um modelo de assinatura de licença fixa, não consumo sob demanda.",
+        "Compra de servidores físicos: A nuvem elimina a necessidade de comprar hardware.",
+        "Reduz taxas sobre hardware local: A nuvem atua nos servidores remotos, sem alterar taxas de hardware local próprio."
+      ],
+      "dicaOuro": "Modelo de consumo = Pague apenas pelos minutos e recursos que usar de verdade."
+    }
+  },
+  {
+    "id": "az900_q230",
+    "text": "Ao contratar uma Máquina Virtual (VM) clássica no Azure, o cliente recebe controle total sobre qual das seguintes camadas?",
+    "options": [
+      "O hypervisor de virtualização do host físico",
+      "O sistema operacional instalado e as aplicações de software internas",
+      "O firmware das placas-mãe dos servidores da Microsoft",
+      "A refrigeração física e suprimento de energia elétrica do rack"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "IaaS concede controle ao nível de virtualização e sistema operacional.",
+      "papoReto": "No IaaS, a Microsoft te dá uma máquina virtual vazia. Você tem acesso root/administrador para escolher e configurar o SO (Windows/Linux) e instalar quaisquer apps que desejar.",
+      "respostaCerta": "Sistema operacional e aplicações — controle total do software hospedado na VM.",
+      "puloDoGato": "VM no Azure = IaaS. Você é o administrador do sistema operacional e do software instalado.",
+      "cascasDeBanana": [
+        "Hypervisor de virtualização: Responsabilidade e controle exclusivos da Microsoft.",
+        "Firmware das placas-mãe: Camada física proprietária de hardware gerenciada pelo provedor de nuvem.",
+        "Refrigeração e energia do rack: Infraestrutura física gerida 100% pela Microsoft."
+      ],
+      "dicaOuro": "IaaS = O controle do Sistema Operacional convidado (Guest OS) é do cliente."
+    }
+  },
+  {
+    "id": "az900_q231",
+    "text": "Uma empresa deseja manter dados legados altamente confidenciais em servidores locais dedicados, mas quer usar o Azure para hospedar aplicativos web de front-end escaláveis. Qual modelo de nuvem descreve essa abordagem?",
+    "options": [
+      "Nuvem privada pura",
+      "Nuvem pública pura",
+      "Nuvem híbrida",
+      "Nuvem distribuída local"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Nuvem híbrida conecta infraestruturas on-premises e nuvens públicas.",
+      "papoReto": "A nuvem híbrida permite o compartilhamento de dados e aplicativos entre ambientes locais (privados) e a nuvem pública do Azure, oferecendo flexibilidade e conformidade.",
+      "respostaCerta": "Nuvem híbrida — combinação de infraestrutura local privada com recursos de nuvem pública do Azure.",
+      "puloDoGato": "Viu 'conexão local + nuvem pública' ou 'combinação de datacenter próprio com Azure'? É sempre Nuvem híbrida.",
+      "cascasDeBanana": [
+        "Nuvem privada pura: Não utilizaria os recursos escaláveis da nuvem pública do Azure.",
+        "Nuvem pública pura: Exigiria migrar os dados altamente confidenciais locais para os servidores compartilhados do Azure.",
+        "Nuvem distribuída local: Não é um termo de modelo de nuvem oficial da prova AZ-900."
+      ],
+      "dicaOuro": "Híbrida = On-premises + Nuvem Pública conectados de forma segura."
+    }
+  },
+  {
+    "id": "az900_q232",
+    "text": "Qual das seguintes opções é o exemplo mais comum de um serviço SaaS (Software como Serviço) da Microsoft?",
+    "options": [
+      "Azure Virtual Machines",
+      "Azure SQL Database",
+      "Azure App Service",
+      "Microsoft 365"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "SaaS entrega aplicações completas prontas para uso final.",
+      "papoReto": "O Microsoft 365 é um serviço SaaS clássico. O usuário final apenas faz login para usar e-mail, Word, Excel e Teams, sem gerenciar código ou servidores.",
+      "respostaCerta": "Microsoft 365 — aplicação SaaS completa de produtividade e colaboração na nuvem.",
+      "puloDoGato": "SaaS = Aplicativo pronto para uso final (ex.: Office 365, Teams, Salesforce).",
+      "cascasDeBanana": [
+        "Azure Virtual Machines: IaaS (exige administração do SO).",
+        "Azure SQL Database: PaaS (banco de dados gerenciado para desenvolvedores).",
+        "Azure App Service: PaaS (plataforma para hospedar código de sites)."
+      ],
+      "dicaOuro": "SaaS = Software pronto. Você só entra e usa."
+    }
+  },
+  {
+    "id": "az900_q233",
+    "text": "Qual a principal diferença entre escalabilidade e elasticidade na computação em nuvem?",
+    "options": [
+      "Escalabilidade foca na capacidade de lidar com cargas maiores; elasticidade foca na automatização rápida de aumentar ou reduzir recursos de acordo com a carga momentânea",
+      "Escalabilidade é exclusiva de IaaS e elasticidade é exclusiva de SaaS",
+      "Elasticidade aumenta apenas recursos verticais e escalabilidade aumenta apenas redes",
+      "Não há diferença prática, sendo termos idênticos de licenciamento"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Ajustar recursos computacionais envolve conceitos de dimensão e automação.",
+      "papoReto": "Escalabilidade é a infraestrutura ter a capacidade técnica de crescer. Elasticidade é fazer isso de forma automatizada e bidirecional (crescer e encolher) baseando-se no tráfego dinâmico.",
+      "respostaCerta": "Diferença conceitual — escalabilidade é habilidade física de expansão; elasticidade é o dinamismo e automação bidirecional.",
+      "puloDoGato": "Elasticidade = Ajuste automático bidirecional (Scale-out e Scale-in) baseado em regras e métricas em tempo real.",
+      "cascasDeBanana": [
+        "Exclusivo de IaaS/SaaS: Ambos os conceitos se aplicam a IaaS e PaaS.",
+        "Elasticidade vertical / redes: A elasticidade e escalabilidade podem atuar de forma horizontal ou vertical.",
+        "Termos idênticos: A Microsoft diferencia rigidamente a automação dinâmica da elasticidade."
+      ],
+      "dicaOuro": "Escalar = Conseguir crescer. Elasticidade = Crescer E encolher de forma 100% automática."
+    }
+  },
+  {
+    "id": "az900_q234",
+    "text": "Sua empresa deseja garantir que o aplicativo continue funcionando mesmo no caso de um terremoto destruir completamente um datacenter inteiro do Azure em uma determinada região. Qual recurso deve ser configurado?",
+    "options": [
+      "Availability sets locais",
+      "Pares de regiões (Region Pairs) com replicação geográfica",
+      "Adicionar mais RAM na VM local",
+      "Acesso Condicional de MFA"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "A resiliência geográfica protege contra desastres naturais regionais.",
+      "papoReto": "Os Pares de Regiões (Region Pairs) conectam regiões do Azure distantes centenas de quilômetros para permitir replicação geográfica de dados e recuperação em caso de desastres catastróficos regionais.",
+      "respostaCerta": "Pares de regiões — replicação de segurança fora da zona geográfica de impacto de desastres locais.",
+      "puloDoGato": "Falha de prédio = Availability Zone. Falha de região inteira (terremoto, furacão) = Region Pair (Pares de Região).",
+      "cascasDeBanana": [
+        "Availability sets: Protegem apenas contra falha de rack físico ou atualizações de hosts no mesmo datacenter.",
+        "Adicionar mais RAM: Não ajuda se o prédio físico do datacenter for destruído.",
+        "Acesso Condicional: É um recurso de segurança de login, sem relação com infraestrutura de hardware e desastres."
+      ],
+      "dicaOuro": "Recuperação de desastre de região inteira = Pares de Regiões (Region Pairs)."
+    }
+  },
+  {
+    "id": "az900_q235",
+    "text": "A computação em nuvem permite implantar aplicativos em múltiplas regiões geográficas ao redor do mundo. Qual é o principal benefício dessa abordagem para os usuários globais?",
+    "options": [
+      "Eliminação completa de custos de armazenamento de dados",
+      "Garantia de que o hardware físico nunca sofrerá desgaste",
+      "Redução da latência de rede para os usuários finais",
+      "Aumento automático de licenças corporativas gratuitas"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "A distribuição geográfica minimiza o atraso físico na transmissão de dados pela rede.",
+      "papoReto": "Ao hospedar cópias ou serviços do seu aplicativo em datacenters fisicamente mais próximos dos usuários finais, o tempo de trânsito dos pacotes de dados diminui, reduzindo a latência.",
+      "respostaCerta": "Redução da latência — servidores mais próximos dos usuários garantem conexões mais rápidas.",
+      "puloDoGato": "Menor latência = Respostas mais rápidas. Distribuição regional global coloca os dados perto do cliente final.",
+      "cascasDeBanana": [
+        "Eliminar custo de armazenamento: A replicação para múltiplas regiões na verdade aumenta o custo de armazenamento de dados.",
+        "Hardware nunca sofrerá desgaste: O hardware sofre desgaste físico no datacenter da Microsoft, mas a substituição é transparente para o cliente.",
+        "Aumento de licenças grátis: A distribuição geográfica não concede licenças de software gratuitas."
+      ],
+      "dicaOuro": "Servidores globais próximos do cliente = Latência reduzida e melhor experiência."
+    }
+  },
+  {
+    "id": "az900_q236",
+    "text": "Um SLA de 99,99% garantido pelo Azure é um exemplo direto de:",
+    "options": [
+      "Elasticidade",
+      "Agilidade",
+      "Redução de latência",
+      "Alta disponibilidade"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'Alta Disponibilidade' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'Alta disponibilidade' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "Alta disponibilidade — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'Alta Disponibilidade' sempre associado a sla e uptime = alta disponibilidade.",
+      "cascasDeBanana": [
+        "Elasticidade: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Agilidade: Inadequado para o cenário descrito no enunciado.",
+        "Redução de latência: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "SLA e Uptime = Alta disponibilidade."
+    }
+  },
+  {
+    "id": "az900_q237",
+    "text": "Qual das seguintes despesas é categorizada como gasto operacional (OpEx) na nuvem?",
+    "options": [
+      "O pagamento mensal sob demanda de recursos de nuvem consumidos no período",
+      "A compra de geradores físicos de eletricidade",
+      "A aquisição de licenças de software perpétuas corporativas",
+      "A construção física de um datacenter local próprio"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'OpEx' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'O pagamento mensal sob demanda de recursos de nuvem consumidos no período' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "O pagamento mensal sob demanda de recursos de nuvem consumidos no período — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'OpEx' sempre associado a mensalidades sob demanda = opex.",
+      "cascasDeBanana": [
+        "A compra de geradores físicos de eletricidade: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "A aquisição de licenças de software perpétuas corporativas: Inadequado para o cenário descrito no enunciado.",
+        "A construção física de um datacenter local próprio: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Mensalidades sob demanda = OpEx."
+    }
+  },
+  {
+    "id": "az900_q238",
+    "text": "Adicionar mais 5 instâncias de servidores web idênticos a um grupo de dimensionamento descreve:",
+    "options": [
+      "Escalabilidade vertical (scale-up)",
+      "Escalabilidade horizontal (scale-out)",
+      "Aumento de CapEx",
+      "Substituição de hardware"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'Escalabilidade Horizontal' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'Escalabilidade horizontal (scale-out)' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "Escalabilidade horizontal (scale-out) — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'Escalabilidade Horizontal' sempre associado a adicionar mais servidores = escalabilidade horizontal.",
+      "cascasDeBanana": [
+        "Escalabilidade vertical (scale-up): Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Aumento de CapEx: Inadequado para o cenário descrito no enunciado.",
+        "Substituição de hardware: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Adicionar mais servidores = Escalabilidade Horizontal."
+    }
+  },
+  {
+    "id": "az900_q239",
+    "text": "Uma empresa adota o Dynamics 365 para gerenciar seu CRM de vendas. Qual modelo de nuvem descreve esse software?",
+    "options": [
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "Virtualização física"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'SaaS' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'SaaS' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "SaaS — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'SaaS' sempre associado a software final pronto = saas.",
+      "cascasDeBanana": [
+        "IaaS: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "PaaS: Inadequado para o cenário descrito no enunciado.",
+        "Virtualização física: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Software final pronto = SaaS."
+    }
+  },
+  {
+    "id": "az900_q240",
+    "text": "Ao criar uma rede virtual (VNet) e configurar sub-redes virtuais no Azure, o cliente está atuando em qual modelo de serviço?",
+    "options": [
+      "PaaS",
+      "SaaS",
+      "Nuvem Privada",
+      "IaaS"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'IaaS' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'IaaS' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "IaaS — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'IaaS' sempre associado a redes, vms e discos = iaas.",
+      "cascasDeBanana": [
+        "PaaS: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "SaaS: Inadequado para o cenário descrito no enunciado.",
+        "Nuvem Privada: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Redes, VMs e Discos = IaaS."
+    }
+  },
+  {
+    "id": "az900_q241",
+    "text": "Qual modelo de nuvem exige o menor nível de esforço de gerenciamento do sistema operacional pelo cliente, mantendo a capacidade de hospedar códigos de software customizados?",
+    "options": [
+      "PaaS",
+      "IaaS",
+      "SaaS",
+      "Datacenter local"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'PaaS' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'PaaS' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "PaaS — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'PaaS' sempre associado a código hospedado sem gerenciar so = paas.",
+      "cascasDeBanana": [
+        "IaaS: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "SaaS: Inadequado para o cenário descrito no enunciado.",
+        "Datacenter local: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Código hospedado sem gerenciar SO = PaaS."
+    }
+  },
+  {
+    "id": "az900_q242",
+    "text": "Uma startup prefere não investir na compra de nenhum servidor físico e aceita compartilhar a infraestrutura física de rede sob demanda. Qual é o modelo ideal?",
+    "options": [
+      "Nuvem privada",
+      "Nuvem pública",
+      "Nuvem dedicada local",
+      "Nuvem de backup de hardware"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'Nuvem Pública' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'Nuvem pública' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "Nuvem pública — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'Nuvem Pública' sempre associado a zero hardware próprio = nuvem pública.",
+      "cascasDeBanana": [
+        "Nuvem privada: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Nuvem dedicada local: Inadequado para o cenário descrito no enunciado.",
+        "Nuvem de backup de hardware: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Zero hardware próprio = Nuvem pública."
+    }
+  },
+  {
+    "id": "az900_q243",
+    "text": "A capacidade da nuvem de reduzir recursos automaticamente durante a madrugada, quando o tráfego de usuários cai a zero, é chamada de:",
+    "options": [
+      "Alta disponibilidade",
+      "Recuperação de desastres",
+      "Elasticidade",
+      "Latência estática"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'Elasticidade' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'Elasticidade' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "Elasticidade — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'Elasticidade' sempre associado a redução automática sob demanda = elasticidade.",
+      "cascasDeBanana": [
+        "Alta disponibilidade: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Recuperação de desastres: Inadequado para o cenário descrito no enunciado.",
+        "Latência estática: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Redução automática sob demanda = Elasticidade."
+    }
+  },
+  {
+    "id": "az900_q244",
+    "text": "No modelo de responsabilidade compartilhada para um banco de dados PaaS (como o Azure SQL), quem é responsável por gerenciar a segurança e o controle de acesso aos dados de usuários do banco?",
+    "options": [
+      "A Microsoft",
+      "Ambos dividem a senha root",
+      "O provedor de links de rede dedicado",
+      "O cliente"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'Responsabilidade Compartilhada' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'O cliente' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "O cliente — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'Responsabilidade Compartilhada' sempre associado a dados e acessos = responsabilidade do cliente sempre.",
+      "cascasDeBanana": [
+        "A Microsoft: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Ambos dividem a senha root: Inadequado para o cenário descrito no enunciado.",
+        "O provedor de links de rede dedicado: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Dados e acessos = Responsabilidade do cliente sempre."
+    }
+  },
+  {
+    "id": "az900_q245",
+    "text": "A velocidade com que uma empresa de e-commerce consegue criar e destruir ambientes de teste temporários no Azure descreve:",
+    "options": [
+      "Agilidade",
+      "Recuperação de desastres",
+      "Elasticidade passiva",
+      "Segurança física de dados"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'Agilidade' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'Agilidade' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "Agilidade — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'Agilidade' sempre associado a testes rápidos e deployments = agilidade.",
+      "cascasDeBanana": [
+        "Recuperação de desastres: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Elasticidade passiva: Inadequado para o cenário descrito no enunciado.",
+        "Segurança física de dados: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Testes rápidos e deployments = Agilidade."
+    }
+  },
+  {
+    "id": "az900_q246",
+    "text": "Um sistema financeiro processa transações de cartão de crédito on-premises por segurança local e armazena relatórios analíticos não confidenciais no Azure Blob Storage. Esse cenário é:",
+    "options": [
+      "Nuvem privada pura",
+      "Nuvem híbrida",
+      "Nuvem pública pura",
+      "Multicloud pública"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'Nuvem Híbrida' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'Nuvem híbrida' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "Nuvem híbrida — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'Nuvem Híbrida' sempre associado a on-premises + nuvem pública = híbrida.",
+      "cascasDeBanana": [
+        "Nuvem privada pura: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Nuvem pública pura: Inadequado para o cenário descrito no enunciado.",
+        "Multicloud pública: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "On-premises + Nuvem pública = Híbrida."
+    }
+  },
+  {
+    "id": "az900_q247",
+    "text": "Custos associados à amortização e depreciação de servidores locais pertencem a qual categoria financeira?",
+    "options": [
+      "OpEx",
+      "Pay-as-you-go",
+      "CapEx",
+      "Custos variáveis de rede"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'CapEx' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'CapEx' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "CapEx — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'CapEx' sempre associado a ativos físicos depreciáveis = capex.",
+      "cascasDeBanana": [
+        "OpEx: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Pay-as-you-go: Inadequado para o cenário descrito no enunciado.",
+        "Custos variáveis de rede: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Ativos físicos depreciáveis = CapEx."
+    }
+  },
+  {
+    "id": "az900_q248",
+    "text": "Qual modelo de serviço oferece o maior nível de controle administrativo sobre as configurações de segurança do sistema operacional convidado (Guest OS)?",
+    "options": [
+      "PaaS",
+      "SaaS",
+      "Serverless",
+      "IaaS"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'IaaS' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'IaaS' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "IaaS — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'IaaS' sempre associado a maior controle do so = iaas.",
+      "cascasDeBanana": [
+        "PaaS: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "SaaS: Inadequado para o cenário descrito no enunciado.",
+        "Serverless: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Maior controle do SO = IaaS."
+    }
+  },
+  {
+    "id": "az900_q249",
+    "text": "O uso de uma ferramenta corporativa de chat na web, como o Microsoft Teams, sem nenhuma configuração de código pelo usuário final representa:",
+    "options": [
+      "SaaS",
+      "IaaS",
+      "PaaS",
+      "Nuvem privada dedicada"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'SaaS' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'SaaS' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "SaaS — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'SaaS' sempre associado a software de uso final = saas.",
+      "cascasDeBanana": [
+        "IaaS: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "PaaS: Inadequado para o cenário descrito no enunciado.",
+        "Nuvem privada dedicada: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Software de uso final = SaaS."
+    }
+  },
+  {
+    "id": "az900_q250",
+    "text": "O Azure App Service permite criar aplicativos web sem que o desenvolvedor precise se preocupar com atualizações do Windows Server. Esse serviço pertence a qual modelo?",
+    "options": [
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "Infraestrutura como Código"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'PaaS' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'PaaS' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "PaaS — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'PaaS' sempre associado a web app sem so = paas.",
+      "cascasDeBanana": [
+        "IaaS: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "SaaS: Inadequado para o cenário descrito no enunciado.",
+        "Infraestrutura como Código: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Web App sem SO = PaaS."
+    }
+  },
+  {
+    "id": "az900_q251",
+    "text": "Um componente de hardware falha no rack do Azure, mas o tráfego é roteado instantaneamente para um host espelho sem interrupção. O conceito associado é:",
+    "options": [
+      "Elasticidade",
+      "Agilidade",
+      "Tolerância a falhas",
+      "Escalabilidade vertical"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'Tolerância a Falhas' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'Tolerância a falhas' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "Tolerância a falhas — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'Tolerância a Falhas' sempre associado a redundância de hardware ativa = tolerância a falhas.",
+      "cascasDeBanana": [
+        "Elasticidade: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Agilidade: Inadequado para o cenário descrito no enunciado.",
+        "Escalabilidade vertical: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Redundância de hardware ativa = Tolerância a falhas."
+    }
+  },
+  {
+    "id": "az900_q252",
+    "text": "Um modelo de nuvem onde os servidores e hardware físico são de propriedade e uso exclusivo da própria organização, hospedados localmente ou em colocation:",
+    "options": [
+      "Nuvem pública",
+      "Nuvem híbrida",
+      "SaaS global",
+      "Nuvem privada"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'Nuvem Privada' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'Nuvem privada' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "Nuvem privada — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'Nuvem Privada' sempre associado a uso exclusivo de hardware = nuvem privada.",
+      "cascasDeBanana": [
+        "Nuvem pública: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Nuvem híbrida: Inadequado para o cenário descrito no enunciado.",
+        "SaaS global: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Uso exclusivo de hardware = Nuvem privada."
+    }
+  },
+  {
+    "id": "az900_q253",
+    "text": "Gastar com taxas operacionais de uso de servidores de nuvem mensais, cobrados apenas pelo consumo real, é classificado como:",
+    "options": [
+      "OpEx",
+      "CapEx",
+      "Investimento de capital imobilizado",
+      "Ativos tangíveis"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'OpEx' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'OpEx' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "OpEx — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'OpEx' sempre associado a gastos operacionais sob demanda = opex.",
+      "cascasDeBanana": [
+        "CapEx: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Investimento de capital imobilizado: Inadequado para o cenário descrito no enunciado.",
+        "Ativos tangíveis: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Gastos operacionais sob demanda = OpEx."
+    }
+  },
+  {
+    "id": "az900_q254",
+    "text": "Alterar o tamanho de uma VM de um padrão básico para uma série otimizada para memória (aumentando recursos do mesmo nó) descreve:",
+    "options": [
+      "Escalabilidade horizontal (scale-out)",
+      "Escalabilidade vertical (scale-up)",
+      "Elasticidade dinâmica de rede",
+      "Tolerância a falhas geográficas"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'Escalabilidade Vertical' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'Escalabilidade vertical (scale-up)' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "Escalabilidade vertical (scale-up) — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'Escalabilidade Vertical' sempre associado a vm mais forte = escalabilidade vertical.",
+      "cascasDeBanana": [
+        "Escalabilidade horizontal (scale-out): Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Elasticidade dinâmica de rede: Inadequado para o cenário descrito no enunciado.",
+        "Tolerância a falhas geográficas: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "VM mais forte = Escalabilidade Vertical."
+    }
+  },
+  {
+    "id": "az900_q255",
+    "text": "Em uma implantação IaaS no Azure, quem é responsável pela segurança física das portas do datacenter do Azure?",
+    "options": [
+      "O cliente",
+      "O provedor de internet do cliente",
+      "A Microsoft",
+      "Ambos de forma compartilhada"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'Responsabilidade Compartilhada' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'A Microsoft' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "A Microsoft — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'Responsabilidade Compartilhada' sempre associado a segurança física do prédio = microsoft.",
+      "cascasDeBanana": [
+        "O cliente: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "O provedor de internet do cliente: Inadequado para o cenário descrito no enunciado.",
+        "Ambos de forma compartilhada: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Segurança física do prédio = Microsoft."
+    }
+  },
+  {
+    "id": "az900_q256",
+    "text": "Qual modelo de implantação de nuvem oferece o menor tempo inicial de configuração e dispensa compras prévias de hardware físico?",
+    "options": [
+      "Nuvem privada",
+      "Nuvem híbrida",
+      "Datacenter local próprio",
+      "Nuvem pública"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'Nuvem Pública' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'Nuvem pública' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "Nuvem pública — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'Nuvem Pública' sempre associado a deploy rápido sem compras = nuvem pública.",
+      "cascasDeBanana": [
+        "Nuvem privada: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Nuvem híbrida: Inadequado para o cenário descrito no enunciado.",
+        "Datacenter local próprio: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Deploy rápido sem compras = Nuvem pública."
+    }
+  },
+  {
+    "id": "az900_q257",
+    "text": "O auto-scaling configurado no Azure App Service para adicionar mais servidores virtuais durante um pico repentino de acessos e removê-los após o pico é um exemplo de:",
+    "options": [
+      "Elasticidade",
+      "Alta disponibilidade estática",
+      "Agilidade de hardware",
+      "Escalabilidade vertical"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'Elasticidade' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'Elasticidade' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "Elasticidade — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'Elasticidade' sempre associado a aumento e encolhimento automático = elasticidade.",
+      "cascasDeBanana": [
+        "Alta disponibilidade estática: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Agilidade de hardware: Inadequado para o cenário descrito no enunciado.",
+        "Escalabilidade vertical: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Aumento e encolhimento automático = Elasticidade."
+    }
+  },
+  {
+    "id": "az900_q258",
+    "text": "Seu datacenter local compartilha conexões de dados criptografadas com o Azure para balancear processamento de dados confidenciais locais e análises públicas. Esse modelo é:",
+    "options": [
+      "Nuvem privada",
+      "Nuvem híbrida",
+      "Nuvem pública",
+      "Multicloud dedicada"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'Nuvem Híbrida' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'Nuvem híbrida' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "Nuvem híbrida — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'Nuvem Híbrida' sempre associado a conexão local + nuvem pública = híbrida.",
+      "cascasDeBanana": [
+        "Nuvem privada: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Nuvem pública: Inadequado para o cenário descrito no enunciado.",
+        "Multicloud dedicada: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Conexão local + Nuvem pública = Híbrida."
+    }
+  },
+  {
+    "id": "az900_q259",
+    "text": "Qual modelo de serviço em nuvem é o equivalente mais próximo de ter um servidor físico próprio, mas virtualizado no datacenter do provedor?",
+    "options": [
+      "PaaS",
+      "SaaS",
+      "IaaS",
+      "FaaS"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'IaaS' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'IaaS' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "IaaS — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'IaaS' sempre associado a vm virtualizada = iaas.",
+      "cascasDeBanana": [
+        "PaaS: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "SaaS: Inadequado para o cenário descrito no enunciado.",
+        "FaaS: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "VM virtualizada = IaaS."
+    }
+  },
+  {
+    "id": "az900_q260",
+    "text": "O cliente deseja assinar o Microsoft OneDrive para que seus funcionários armazenem relatórios sem se preocupar com backups do servidor ou banco de dados. Qual modelo deve escolher?",
+    "options": [
+      "IaaS",
+      "PaaS",
+      "Virtualização dedicada",
+      "SaaS"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'SaaS' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'SaaS' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "SaaS — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'SaaS' sempre associado a armazenamento pronto de uso final = saas.",
+      "cascasDeBanana": [
+        "IaaS: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "PaaS: Inadequado para o cenário descrito no enunciado.",
+        "Virtualização dedicada: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Armazenamento pronto de uso final = SaaS."
+    }
+  },
+  {
+    "id": "az900_q261",
+    "text": "Para implantar um aplicativo em contêineres Docker usando o Azure Web App for Containers sem gerenciar nós de Kubernetes físicos, o modelo é:",
+    "options": [
+      "PaaS",
+      "IaaS",
+      "SaaS",
+      "Nuvem privada híbrida"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'PaaS' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'PaaS' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "PaaS — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'PaaS' sempre associado a containers simplificados gerenciados = paas.",
+      "cascasDeBanana": [
+        "IaaS: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "SaaS: Inadequado para o cenário descrito no enunciado.",
+        "Nuvem privada híbrida: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Containers simplificados gerenciados = PaaS."
+    }
+  },
+  {
+    "id": "az900_q262",
+    "text": "A proteção contra falhas locais de servidores dentro de um único datacenter, projetada para manter o sistema online, refere-se a:",
+    "options": [
+      "Tolerância a falhas geográfica",
+      "Alta disponibilidade",
+      "Agilidade operacional",
+      "Escalabilidade de rede"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'Alta Disponibilidade' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'Alta disponibilidade' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "Alta disponibilidade — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'Alta Disponibilidade' sempre associado a manter online contra falhas = alta disponibilidade.",
+      "cascasDeBanana": [
+        "Tolerância a falhas geográfica: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Agilidade operacional: Inadequado para o cenário descrito no enunciado.",
+        "Escalabilidade de rede: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Manter online contra falhas = Alta disponibilidade."
+    }
+  },
+  {
+    "id": "az900_q263",
+    "text": "Qual tipo de nuvem oferece o maior nível de segurança física e controle de conformidade, mas exige investimentos prévios em hardware e infraestrutura física?",
+    "options": [
+      "Nuvem pública",
+      "Nuvem híbrida",
+      "Nuvem privada",
+      "SaaS multi-tenant"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'Nuvem Privada' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'Nuvem privada' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "Nuvem privada — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'Nuvem Privada' sempre associado a controle físico total próprio = nuvem privada.",
+      "cascasDeBanana": [
+        "Nuvem pública: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Nuvem híbrida: Inadequado para o cenário descrito no enunciado.",
+        "SaaS multi-tenant: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Controle físico total próprio = Nuvem privada."
+    }
+  },
+  {
+    "id": "az900_q264",
+    "text": "Substituir despesas de capital iniciais por taxas operacionais periódicas baseadas no consumo na nuvem representa a mudança para:",
+    "options": [
+      "CapEx",
+      "Custos de licenciamento de longo prazo",
+      "Garantias de ativos de TI",
+      "OpEx"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'OpEx' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'OpEx' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "OpEx — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'OpEx' sempre associado a taxas periódicas variáveis = opex.",
+      "cascasDeBanana": [
+        "CapEx: Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Custos de licenciamento de longo prazo: Inadequado para o cenário descrito no enunciado.",
+        "Garantias de ativos de TI: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Taxas periódicas variáveis = OpEx."
+    }
+  },
+  {
+    "id": "az900_q265",
+    "text": "Adicionar mais instâncias de servidores idênticos atrás de um balanceador de carga para dividir o tráfego da aplicação web descreve a:",
+    "options": [
+      "Escalabilidade horizontal (scale-out)",
+      "Escalabilidade vertical (scale-up)",
+      "Elasticidade cíclica de rede",
+      "Tolerância a falhas local"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "iniciante",
+    "domain": "Conceitos de Nuvem",
+    "explanation": {
+      "intro": "Esta questão valida os conceitos básicos de 'Escalabilidade Horizontal' na nuvem da Microsoft.",
+      "papoReto": "A alternativa correta é 'Escalabilidade horizontal (scale-out)' porque atende de forma direta à definição teórica ensinada na prova oficial AZ-900.",
+      "respostaCerta": "Escalabilidade horizontal (scale-out) — conceito fundamental de infraestrutura e serviços de computação em nuvem pública.",
+      "puloDoGato": "Na prova AZ-900, identifique 'Escalabilidade Horizontal' sempre associado a mais servidores virtuais = escalabilidade horizontal.",
+      "cascasDeBanana": [
+        "Escalabilidade vertical (scale-up): Trata-se de outro conceito de nuvem que possui objetivos e focos operacionais diferentes.",
+        "Elasticidade cíclica de rede: Inadequado para o cenário descrito no enunciado.",
+        "Tolerância a falhas local: Outro recurso de nuvem que não resolve a questão colocada."
+      ],
+      "dicaOuro": "Mais servidores virtuais = Escalabilidade Horizontal."
+    }
+  },
+  {
+    "id": "az900_q266",
+    "text": "Um arquiteto de infraestrutura projeta um sistema com resiliência contra falha física total de um prédio inteiro de datacenter dentro de uma mesma região do Azure. Qual recurso deve ser usado?",
+    "options": [
+      "Availability Sets",
+      "Zonas de Disponibilidade (Availability Zones)",
+      "Resource Groups",
+      "Subscriptions"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "avancado",
+    "domain": "Arquitetura e Serviços do Azure",
+    "explanation": {
+      "intro": "Esta questão avalia conhecimentos de nível avançado sobre 'Zonas de Disponibilidade' no Azure.",
+      "papoReto": "A alternativa correta é 'Zonas de Disponibilidade (Availability Zones)' pois representa a ferramenta oficial recomendada pela Microsoft para resolver as necessidades do cenário de infraestrutura proposto.",
+      "respostaCerta": "Zonas de Disponibilidade (Availability Zones) — serviço de arquitetura global e computação/redes na nuvem do Azure.",
+      "puloDoGato": "Na prova AZ-900, lembre-se que 'Zonas de Disponibilidade' resolve especificamente cenários de falha de datacenter físico = availability zones.",
+      "cascasDeBanana": [
+        "Availability Sets: Trata-se de outro recurso que atua em outra camada da infraestrutura física ou lógica.",
+        "Resource Groups: Inadequado para as exigências técnicas apresentadas no enunciado.",
+        "Subscriptions: Outro serviço do Azure que possui propósitos de negócios distintos."
+      ],
+      "dicaOuro": "Falha de datacenter físico = Availability Zones."
+    }
+  },
+  {
+    "id": "az900_q267",
+    "text": "Para garantir recuperação de desastres (DR) com replicação assíncrona de dados a centenas de quilômetros de distância dentro do Azure, qual conceito deve ser adotado?",
+    "options": [
+      "Zonas de Disponibilidade",
+      "Peering de VNets",
+      "Pares de Regiões (Region Pairs)",
+      "Resource Locks"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "avancado",
+    "domain": "Arquitetura e Serviços do Azure",
+    "explanation": {
+      "intro": "Esta questão avalia conhecimentos de nível avançado sobre 'Pares de Regiões' no Azure.",
+      "papoReto": "A alternativa correta é 'Pares de Regiões (Region Pairs)' pois representa a ferramenta oficial recomendada pela Microsoft para resolver as necessidades do cenário de infraestrutura proposto.",
+      "respostaCerta": "Pares de Regiões (Region Pairs) — serviço de arquitetura global e computação/redes na nuvem do Azure.",
+      "puloDoGato": "Na prova AZ-900, lembre-se que 'Pares de Regiões' resolve especificamente cenários de replicação a centenas de quilômetros = region pairs.",
+      "cascasDeBanana": [
+        "Zonas de Disponibilidade: Trata-se de outro recurso que atua em outra camada da infraestrutura física ou lógica.",
+        "Peering de VNets: Inadequado para as exigências técnicas apresentadas no enunciado.",
+        "Resource Locks: Outro serviço do Azure que possui propósitos de negócios distintos."
+      ],
+      "dicaOuro": "Replicação a centenas de quilômetros = Region Pairs."
+    }
+  },
+  {
+    "id": "az900_q268",
+    "text": "Uma corporação exige uma conexão de rede física dedicada de altíssima velocidade do seu escritório local para o Azure, sem passar de forma alguma pela internet pública. Qual serviço atende a isso?",
+    "options": [
+      "VPN Gateway",
+      "Azure Bastion",
+      "Azure Front Door",
+      "Azure ExpressRoute"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "avancado",
+    "domain": "Arquitetura e Serviços do Azure",
+    "explanation": {
+      "intro": "Esta questão avalia conhecimentos de nível avançado sobre 'ExpressRoute' no Azure.",
+      "papoReto": "A alternativa correta é 'Azure ExpressRoute' pois representa a ferramenta oficial recomendada pela Microsoft para resolver as necessidades do cenário de infraestrutura proposto.",
+      "respostaCerta": "Azure ExpressRoute — serviço de arquitetura global e computação/redes na nuvem do Azure.",
+      "puloDoGato": "Na prova AZ-900, lembre-se que 'ExpressRoute' resolve especificamente cenários de conexão dedicada sem internet = expressroute.",
+      "cascasDeBanana": [
+        "VPN Gateway: Trata-se de outro recurso que atua em outra camada da infraestrutura física ou lógica.",
+        "Azure Bastion: Inadequado para as exigências técnicas apresentadas no enunciado.",
+        "Azure Front Door: Outro serviço do Azure que possui propósitos de negócios distintos."
+      ],
+      "dicaOuro": "Conexão dedicada sem internet = ExpressRoute."
+    }
+  },
+  {
+    "id": "az900_q269",
+    "text": "Você precisa criar um banco de dados relacional totalmente gerenciado no Azure que ofereça atualizações automáticas de segurança e escalabilidade dinâmica (PaaS). Qual serviço deve ser escolhido?",
+    "options": [
+      "Azure SQL Database",
+      "SQL Server em Azure VM",
+      "Azure Cosmos DB",
+      "Azure Blob Storage"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "avancado",
+    "domain": "Arquitetura e Serviços do Azure",
+    "explanation": {
+      "intro": "Esta questão avalia conhecimentos de nível avançado sobre 'Azure SQL Database' no Azure.",
+      "papoReto": "A alternativa correta é 'Azure SQL Database' pois representa a ferramenta oficial recomendada pela Microsoft para resolver as necessidades do cenário de infraestrutura proposto.",
+      "respostaCerta": "Azure SQL Database — serviço de arquitetura global e computação/redes na nuvem do Azure.",
+      "puloDoGato": "Na prova AZ-900, lembre-se que 'Azure SQL Database' resolve especificamente cenários de banco relacional gerenciado (paas) = azure sql database.",
+      "cascasDeBanana": [
+        "SQL Server em Azure VM: Trata-se de outro recurso que atua em outra camada da infraestrutura física ou lógica.",
+        "Azure Cosmos DB: Inadequado para as exigências técnicas apresentadas no enunciado.",
+        "Azure Blob Storage: Outro serviço do Azure que possui propósitos de negócios distintos."
+      ],
+      "dicaOuro": "Banco relacional gerenciado (PaaS) = Azure SQL Database."
+    }
+  },
+  {
+    "id": "az900_q270",
+    "text": "Qual banco de dados do Azure foi projetado como um serviço NoSQL globalmente distribuído de baixíssima latência com suporte a APIs de bancos populares (MongoDB, Cassandra)?",
+    "options": [
+      "Azure SQL Database",
+      "Azure Cosmos DB",
+      "Azure Database for MySQL",
+      "Azure Synapse Analytics"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "avancado",
+    "domain": "Arquitetura e Serviços do Azure",
+    "explanation": {
+      "intro": "Esta questão avalia conhecimentos de nível avançado sobre 'Azure Cosmos DB' no Azure.",
+      "papoReto": "A alternativa correta é 'Azure Cosmos DB' pois representa a ferramenta oficial recomendada pela Microsoft para resolver as necessidades do cenário de infraestrutura proposto.",
+      "respostaCerta": "Azure Cosmos DB — serviço de arquitetura global e computação/redes na nuvem do Azure.",
+      "puloDoGato": "Na prova AZ-900, lembre-se que 'Azure Cosmos DB' resolve especificamente cenários de banco nosql global de baixa latência = azure cosmos db.",
+      "cascasDeBanana": [
+        "Azure SQL Database: Trata-se de outro recurso que atua em outra camada da infraestrutura física ou lógica.",
+        "Azure Database for MySQL: Inadequado para as exigências técnicas apresentadas no enunciado.",
+        "Azure Synapse Analytics: Outro serviço do Azure que possui propósitos de negócios distintos."
+      ],
+      "dicaOuro": "Banco NoSQL global de baixa latência = Azure Cosmos DB."
+    }
+  },
+  {
+    "id": "az900_q271",
+    "text": "Uma empresa precisa armazenar 50 TB de arquivos de imagens estáticas e vídeos de segurança de baixo custo no Azure. Qual serviço de armazenamento é o mais indicado?",
+    "options": [
+      "Azure Files",
+      "Azure Disk Storage",
+      "Azure Blob Storage",
+      "Azure SQL Database"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "avancado",
+    "domain": "Arquitetura e Serviços do Azure",
+    "explanation": {
+      "intro": "Esta questão avalia conhecimentos de nível avançado sobre 'Azure Blob Storage' no Azure.",
+      "papoReto": "A alternativa correta é 'Azure Blob Storage' pois representa a ferramenta oficial recomendada pela Microsoft para resolver as necessidades do cenário de infraestrutura proposto.",
+      "respostaCerta": "Azure Blob Storage — serviço de arquitetura global e computação/redes na nuvem do Azure.",
+      "puloDoGato": "Na prova AZ-900, lembre-se que 'Azure Blob Storage' resolve especificamente cenários de imagens, vídeos e arquivos não estruturados = blob storage.",
+      "cascasDeBanana": [
+        "Azure Files: Trata-se de outro recurso que atua em outra camada da infraestrutura física ou lógica.",
+        "Azure Disk Storage: Inadequado para as exigências técnicas apresentadas no enunciado.",
+        "Azure SQL Database: Outro serviço do Azure que possui propósitos de negócios distintos."
+      ],
+      "dicaOuro": "Imagens, vídeos e arquivos não estruturados = Blob Storage."
+    }
+  },
+  {
+    "id": "az900_q272",
+    "text": "Para conectar de forma direta e segura duas Redes Virtuais (VNets) distintas no Azure usando a rede de backbone privada da Microsoft, qual recurso é o mais adequado?",
+    "options": [
+      "VPN Gateway",
+      "Azure ExpressRoute",
+      "Azure Route Server",
+      "Emparelhamento de Redes Virtuais (VNet Peering)"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "avancado",
+    "domain": "Arquitetura e Serviços do Azure",
+    "explanation": {
+      "intro": "Esta questão avalia conhecimentos de nível avançado sobre 'VNet Peering' no Azure.",
+      "papoReto": "A alternativa correta é 'Emparelhamento de Redes Virtuais (VNet Peering)' pois representa a ferramenta oficial recomendada pela Microsoft para resolver as necessidades do cenário de infraestrutura proposto.",
+      "respostaCerta": "Emparelhamento de Redes Virtuais (VNet Peering) — serviço de arquitetura global e computação/redes na nuvem do Azure.",
+      "puloDoGato": "Na prova AZ-900, lembre-se que 'VNet Peering' resolve especificamente cenários de conexão privada entre vnets = vnet peering.",
+      "cascasDeBanana": [
+        "VPN Gateway: Trata-se de outro recurso que atua em outra camada da infraestrutura física ou lógica.",
+        "Azure ExpressRoute: Inadequado para as exigências técnicas apresentadas no enunciado.",
+        "Azure Route Server: Outro serviço do Azure que possui propósitos de negócios distintos."
+      ],
+      "dicaOuro": "Conexão privada entre VNets = VNet Peering."
+    }
+  },
+  {
+    "id": "az900_q273",
+    "text": "Você deseja configurar um compartilhamento de arquivos de rede corporativo que possa ser montado via protocolo SMB simultaneamente por servidores locais e VMs Azure. Qual serviço deve ser sugerido?",
+    "options": [
+      "Azure Files",
+      "Azure Blob Storage",
+      "Azure Data Lake Storage Gen2",
+      "Azure SQL Database"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "avancado",
+    "domain": "Arquitetura e Serviços do Azure",
+    "explanation": {
+      "intro": "Esta questão avalia conhecimentos de nível avançado sobre 'Azure Files' no Azure.",
+      "papoReto": "A alternativa correta é 'Azure Files' pois representa a ferramenta oficial recomendada pela Microsoft para resolver as necessidades do cenário de infraestrutura proposto.",
+      "respostaCerta": "Azure Files — serviço de arquitetura global e computação/redes na nuvem do Azure.",
+      "puloDoGato": "Na prova AZ-900, lembre-se que 'Azure Files' resolve especificamente cenários de compartilhamento de arquivos smb = azure files.",
+      "cascasDeBanana": [
+        "Azure Blob Storage: Trata-se de outro recurso que atua em outra camada da infraestrutura física ou lógica.",
+        "Azure Data Lake Storage Gen2: Inadequado para as exigências técnicas apresentadas no enunciado.",
+        "Azure SQL Database: Outro serviço do Azure que possui propósitos de negócios distintos."
+      ],
+      "dicaOuro": "Compartilhamento de arquivos SMB = Azure Files."
+    }
+  },
+  {
+    "id": "az900_q274",
+    "text": "Sua equipe precisa executar tarefas de processamento de imagens sob demanda usando pequenos trechos de código em resposta a novos uploads, sem provisionar servidores (serverless). O serviço ideal é:",
+    "options": [
+      "Azure Virtual Machines",
+      "Azure Functions",
+      "Azure App Service",
+      "Azure Container Instances"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "avancado",
+    "domain": "Arquitetura e Serviços do Azure",
+    "explanation": {
+      "intro": "Esta questão avalia conhecimentos de nível avançado sobre 'Azure Functions' no Azure.",
+      "papoReto": "A alternativa correta é 'Azure Functions' pois representa a ferramenta oficial recomendada pela Microsoft para resolver as necessidades do cenário de infraestrutura proposto.",
+      "respostaCerta": "Azure Functions — serviço de arquitetura global e computação/redes na nuvem do Azure.",
+      "puloDoGato": "Na prova AZ-900, lembre-se que 'Azure Functions' resolve especificamente cenários de código serverless orientado a eventos = azure functions.",
+      "cascasDeBanana": [
+        "Azure Virtual Machines: Trata-se de outro recurso que atua em outra camada da infraestrutura física ou lógica.",
+        "Azure App Service: Inadequado para as exigências técnicas apresentadas no enunciado.",
+        "Azure Container Instances: Outro serviço do Azure que possui propósitos de negócios distintos."
+      ],
+      "dicaOuro": "Código serverless orientado a eventos = Azure Functions."
+    }
+  },
+  {
+    "id": "az900_q275",
+    "text": "Para executar um contêiner Docker temporário e isolado de forma extremamente rápida, sem a complexidade de gerenciar nós ou orquestradores de Kubernetes, qual serviço deve ser adotado?",
+    "options": [
+      "Azure Kubernetes Service (AKS)",
+      "Azure Virtual Machines",
+      "Azure Container Instances (ACI)",
+      "Azure App Service"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "avancado",
+    "domain": "Arquitetura e Serviços do Azure",
+    "explanation": {
+      "intro": "Esta questão avalia conhecimentos de nível avançado sobre 'Azure Container Instances' no Azure.",
+      "papoReto": "A alternativa correta é 'Azure Container Instances (ACI)' pois representa a ferramenta oficial recomendada pela Microsoft para resolver as necessidades do cenário de infraestrutura proposto.",
+      "respostaCerta": "Azure Container Instances (ACI) — serviço de arquitetura global e computação/redes na nuvem do Azure.",
+      "puloDoGato": "Na prova AZ-900, lembre-se que 'Azure Container Instances' resolve especificamente cenários de contêiner rápido sem gerenciar cluster = aci.",
+      "cascasDeBanana": [
+        "Azure Kubernetes Service (AKS): Trata-se de outro recurso que atua em outra camada da infraestrutura física ou lógica.",
+        "Azure Virtual Machines: Inadequado para as exigências técnicas apresentadas no enunciado.",
+        "Azure App Service: Outro serviço do Azure que possui propósitos de negócios distintos."
+      ],
+      "dicaOuro": "Contêiner rápido sem gerenciar cluster = ACI."
+    }
+  },
+  {
+    "id": "az900_q276",
+    "text": "Uma área de suporte exige o provisionamento de ambientes de desktop virtual do Windows 11 escaláveis para funcionários trabalharem remotamente de qualquer dispositivo. O serviço é:",
+    "options": [
+      "Azure Virtual Machines",
+      "Azure App Service",
+      "Azure Bastion",
+      "Azure Virtual Desktop"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "avancado",
+    "domain": "Arquitetura e Serviços do Azure",
+    "explanation": {
+      "intro": "Esta questão avalia conhecimentos de nível avançado sobre 'Azure Virtual Desktop' no Azure.",
+      "papoReto": "A alternativa correta é 'Azure Virtual Desktop' pois representa a ferramenta oficial recomendada pela Microsoft para resolver as necessidades do cenário de infraestrutura proposto.",
+      "respostaCerta": "Azure Virtual Desktop — serviço de arquitetura global e computação/redes na nuvem do Azure.",
+      "puloDoGato": "Na prova AZ-900, lembre-se que 'Azure Virtual Desktop' resolve especificamente cenários de desktop virtual do windows na nuvem = azure virtual desktop.",
+      "cascasDeBanana": [
+        "Azure Virtual Machines: Trata-se de outro recurso que atua em outra camada da infraestrutura física ou lógica.",
+        "Azure App Service: Inadequado para as exigências técnicas apresentadas no enunciado.",
+        "Azure Bastion: Outro serviço do Azure que possui propósitos de negócios distintos."
+      ],
+      "dicaOuro": "Desktop virtual do Windows na nuvem = Azure Virtual Desktop."
+    }
+  },
+  {
+    "id": "az900_q277",
+    "text": "Qual serviço do Azure consolida análises de big data e data warehousing corporativo em uma única plataforma para consultas em escala petabyte?",
+    "options": [
+      "Azure Synapse Analytics",
+      "Azure SQL Database",
+      "Azure Cosmos DB",
+      "Azure Event Hubs"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "avancado",
+    "domain": "Arquitetura e Serviços do Azure",
+    "explanation": {
+      "intro": "Esta questão avalia conhecimentos de nível avançado sobre 'Azure Synapse Analytics' no Azure.",
+      "papoReto": "A alternativa correta é 'Azure Synapse Analytics' pois representa a ferramenta oficial recomendada pela Microsoft para resolver as necessidades do cenário de infraestrutura proposto.",
+      "respostaCerta": "Azure Synapse Analytics — serviço de arquitetura global e computação/redes na nuvem do Azure.",
+      "puloDoGato": "Na prova AZ-900, lembre-se que 'Azure Synapse Analytics' resolve especificamente cenários de big data e data warehouse = azure synapse analytics.",
+      "cascasDeBanana": [
+        "Azure SQL Database: Trata-se de outro recurso que atua em outra camada da infraestrutura física ou lógica.",
+        "Azure Cosmos DB: Inadequado para as exigências técnicas apresentadas no enunciado.",
+        "Azure Event Hubs: Outro serviço do Azure que possui propósitos de negócios distintos."
+      ],
+      "dicaOuro": "Big Data e Data Warehouse = Azure Synapse Analytics."
+    }
+  },
+  {
+    "id": "az900_q278",
+    "text": "Para armazenar backups regulatórios de longo prazo que são acessados raramente e toleram horas para recuperação, qual camada de armazenamento do Blob oferece o menor custo?",
+    "options": [
+      "Camada Fria (Cool tier)",
+      "Camada de Arquivamento (Archive tier)",
+      "Camada Quente (Hot tier)",
+      "Camada Premium"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "avancado",
+    "domain": "Arquitetura e Serviços do Azure",
+    "explanation": {
+      "intro": "Esta questão avalia conhecimentos de nível avançado sobre 'Azure Storage Tiers' no Azure.",
+      "papoReto": "A alternativa correta é 'Camada de Arquivamento (Archive tier)' pois representa a ferramenta oficial recomendada pela Microsoft para resolver as necessidades do cenário de infraestrutura proposto.",
+      "respostaCerta": "Camada de Arquivamento (Archive tier) — serviço de arquitetura global e computação/redes na nuvem do Azure.",
+      "puloDoGato": "Na prova AZ-900, lembre-se que 'Azure Storage Tiers' resolve especificamente cenários de menor custo para dados históricos = archive tier.",
+      "cascasDeBanana": [
+        "Camada Fria (Cool tier): Trata-se de outro recurso que atua em outra camada da infraestrutura física ou lógica.",
+        "Camada Quente (Hot tier): Inadequado para as exigências técnicas apresentadas no enunciado.",
+        "Camada Premium: Outro serviço do Azure que possui propósitos de negócios distintos."
+      ],
+      "dicaOuro": "Menor custo para dados históricos = Archive tier."
+    }
+  },
+  {
+    "id": "az900_q279",
+    "text": "Você precisa de um acesso de gerenciamento RDP/SSH seguro via navegador web para uma máquina virtual Azure, sem expor IPs públicos ou portas na internet. Qual serviço usar?",
+    "options": [
+      "VPN Gateway",
+      "Azure ExpressRoute",
+      "Azure Bastion",
+      "Azure Firewall"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "avancado",
+    "domain": "Arquitetura e Serviços do Azure",
+    "explanation": {
+      "intro": "Esta questão avalia conhecimentos de nível avançado sobre 'Azure Bastion' no Azure.",
+      "papoReto": "A alternativa correta é 'Azure Bastion' pois representa a ferramenta oficial recomendada pela Microsoft para resolver as necessidades do cenário de infraestrutura proposto.",
+      "respostaCerta": "Azure Bastion — serviço de arquitetura global e computação/redes na nuvem do Azure.",
+      "puloDoGato": "Na prova AZ-900, lembre-se que 'Azure Bastion' resolve especificamente cenários de acesso rdp/ssh seguro sem ip público = azure bastion.",
+      "cascasDeBanana": [
+        "VPN Gateway: Trata-se de outro recurso que atua em outra camada da infraestrutura física ou lógica.",
+        "Azure ExpressRoute: Inadequado para as exigências técnicas apresentadas no enunciado.",
+        "Azure Firewall: Outro serviço do Azure que possui propósitos de negócios distintos."
+      ],
+      "dicaOuro": "Acesso RDP/SSH seguro sem IP público = Azure Bastion."
+    }
+  },
+  {
+    "id": "az900_q280",
+    "text": "Um administrador quer evitar que recursos críticos do Azure sejam excluídos acidentalmente por qualquer pessoa. O mecanismo direto é:",
+    "options": [
+      "Azure Policy",
+      "Azure RBAC",
+      "Tags",
+      "Bloqueios de Recursos (Resource Locks)"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "iniciante",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão valida conceitos iniciais de 'Resource Locks' em gerenciamento e governança do Azure.",
+      "papoReto": "A alternativa correta é 'Bloqueios de Recursos (Resource Locks)' por ser a ferramenta nativa ideal para o controle do ciclo de vida e finanças corporativas na nuvem do Azure.",
+      "respostaCerta": "Bloqueios de Recursos (Resource Locks) — utilitário integrado de governança da Microsoft.",
+      "puloDoGato": "Na prova, identifique 'Resource Locks' associado a prevenir exclusão acidental = resource locks.",
+      "cascasDeBanana": [
+        "Azure Policy: Outra ferramenta que atua em camadas diferentes da governança.",
+        "Azure RBAC: Não resolve o problema financeiro ou de segurança indicado.",
+        "Tags: Recurso de nuvem com objetivos distintos do enunciado."
+      ],
+      "dicaOuro": "Prevenir exclusão acidental = Resource Locks."
+    }
+  },
+  {
+    "id": "az900_q281",
+    "text": "Qual recurso do Azure é usado para impor regras automáticas e auditar se os recursos estão em conformidade com os padrões de TI corporativos?",
+    "options": [
+      "Azure Policy",
+      "Resource Locks",
+      "Azure RBAC",
+      "Key Vault"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "iniciante",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão valida conceitos iniciais de 'Azure Policy' em gerenciamento e governança do Azure.",
+      "papoReto": "A alternativa correta é 'Azure Policy' por ser a ferramenta nativa ideal para o controle do ciclo de vida e finanças corporativas na nuvem do Azure.",
+      "respostaCerta": "Azure Policy — utilitário integrado de governança da Microsoft.",
+      "puloDoGato": "Na prova, identifique 'Azure Policy' associado a auditar conformidade técnica = azure policy.",
+      "cascasDeBanana": [
+        "Resource Locks: Outra ferramenta que atua em camadas diferentes da governança.",
+        "Azure RBAC: Não resolve o problema financeiro ou de segurança indicado.",
+        "Key Vault: Recurso de nuvem com objetivos distintos do enunciado."
+      ],
+      "dicaOuro": "Auditar conformidade técnica = Azure Policy."
+    }
+  },
+  {
+    "id": "az900_q282",
+    "text": "Qual serviço do Azure gerencia identidades, autenticações de usuários e Single Sign-On (SSO)?",
+    "options": [
+      "Azure Key Vault",
+      "Microsoft Entra ID (Azure AD)",
+      "Azure Sentinel",
+      "Defender for Cloud"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "iniciante",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão valida conceitos iniciais de 'Microsoft Entra ID' em gerenciamento e governança do Azure.",
+      "papoReto": "A alternativa correta é 'Microsoft Entra ID (Azure AD)' por ser a ferramenta nativa ideal para o controle do ciclo de vida e finanças corporativas na nuvem do Azure.",
+      "respostaCerta": "Microsoft Entra ID (Azure AD) — utilitário integrado de governança da Microsoft.",
+      "puloDoGato": "Na prova, identifique 'Microsoft Entra ID' associado a identidade, logins e sso = microsoft entra id.",
+      "cascasDeBanana": [
+        "Azure Key Vault: Outra ferramenta que atua em camadas diferentes da governança.",
+        "Azure Sentinel: Não resolve o problema financeiro ou de segurança indicado.",
+        "Defender for Cloud: Recurso de nuvem com objetivos distintos do enunciado."
+      ],
+      "dicaOuro": "Identidade, logins e SSO = Microsoft Entra ID."
+    }
+  },
+  {
+    "id": "az900_q283",
+    "text": "Você precisa de um repositório central altamente seguro para armazenar chaves de criptografia, certificados SSL e segredos de API. Qual serviço usar?",
+    "options": [
+      "Microsoft Entra ID",
+      "Azure Policy",
+      "Azure Key Vault",
+      "Defender for Cloud"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "iniciante",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão valida conceitos iniciais de 'Azure Key Vault' em gerenciamento e governança do Azure.",
+      "papoReto": "A alternativa correta é 'Azure Key Vault' por ser a ferramenta nativa ideal para o controle do ciclo de vida e finanças corporativas na nuvem do Azure.",
+      "respostaCerta": "Azure Key Vault — utilitário integrado de governança da Microsoft.",
+      "puloDoGato": "Na prova, identifique 'Azure Key Vault' associado a armazenar chaves, segredos e certificados = key vault.",
+      "cascasDeBanana": [
+        "Microsoft Entra ID: Outra ferramenta que atua em camadas diferentes da governança.",
+        "Azure Policy: Não resolve o problema financeiro ou de segurança indicado.",
+        "Defender for Cloud: Recurso de nuvem com objetivos distintos do enunciado."
+      ],
+      "dicaOuro": "Armazenar chaves, segredos e certificados = Key Vault."
+    }
+  },
+  {
+    "id": "az900_q284",
+    "text": "Qual ferramenta fornece recomendações automáticas personalizadas baseadas em boas práticas sobre custos, segurança, confiabilidade e desempenho?",
+    "options": [
+      "Azure Cost Management",
+      "Azure Monitor",
+      "Azure Sentinel",
+      "Azure Advisor"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "iniciante",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão valida conceitos iniciais de 'Azure Advisor' em gerenciamento e governança do Azure.",
+      "papoReto": "A alternativa correta é 'Azure Advisor' por ser a ferramenta nativa ideal para o controle do ciclo de vida e finanças corporativas na nuvem do Azure.",
+      "respostaCerta": "Azure Advisor — utilitário integrado de governança da Microsoft.",
+      "puloDoGato": "Na prova, identifique 'Azure Advisor' associado a recomendações automáticas baseadas em boas práticas = advisor.",
+      "cascasDeBanana": [
+        "Azure Cost Management: Outra ferramenta que atua em camadas diferentes da governança.",
+        "Azure Monitor: Não resolve o problema financeiro ou de segurança indicado.",
+        "Azure Sentinel: Recurso de nuvem com objetivos distintos do enunciado."
+      ],
+      "dicaOuro": "Recomendações automáticas baseadas em boas práticas = Advisor."
+    }
+  },
+  {
+    "id": "az900_q285",
+    "text": "Para obter uma estimativa rápida do custo mensal estimado de 10 VMs e 2 bancos de dados antes de criá-los, você deve usar:",
+    "options": [
+      "Calculadora de Preços do Azure (Azure Pricing Calculator)",
+      "Azure Cost Management",
+      "Calculadora de TCO",
+      "Azure Monitor"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "iniciante",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão valida conceitos iniciais de 'Calculadora de Preços' em gerenciamento e governança do Azure.",
+      "papoReto": "A alternativa correta é 'Calculadora de Preços do Azure (Azure Pricing Calculator)' por ser a ferramenta nativa ideal para o controle do ciclo de vida e finanças corporativas na nuvem do Azure.",
+      "respostaCerta": "Calculadora de Preços do Azure (Azure Pricing Calculator) — utilitário integrado de governança da Microsoft.",
+      "puloDoGato": "Na prova, identifique 'Calculadora de Preços' associado a previsão de custo antes de criar recursos = calculadora de preços.",
+      "cascasDeBanana": [
+        "Azure Cost Management: Outra ferramenta que atua em camadas diferentes da governança.",
+        "Calculadora de TCO: Não resolve o problema financeiro ou de segurança indicado.",
+        "Azure Monitor: Recurso de nuvem com objetivos distintos do enunciado."
+      ],
+      "dicaOuro": "Previsão de custo antes de criar recursos = Calculadora de Preços."
+    }
+  },
+  {
+    "id": "az900_q286",
+    "text": "Qual ferramenta da Microsoft ajuda a estimar a economia financeira de longo prazo ao migrar todo o seu datacenter físico local para o Azure?",
+    "options": [
+      "Calculadora de Preços",
+      "Calculadora de TCO (Total Cost of Ownership)",
+      "Azure Cost Management",
+      "Azure Advisor"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "iniciante",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão valida conceitos iniciais de 'Calculadora de TCO' em gerenciamento e governança do Azure.",
+      "papoReto": "A alternativa correta é 'Calculadora de TCO (Total Cost of Ownership)' por ser a ferramenta nativa ideal para o controle do ciclo de vida e finanças corporativas na nuvem do Azure.",
+      "respostaCerta": "Calculadora de TCO (Total Cost of Ownership) — utilitário integrado de governança da Microsoft.",
+      "puloDoGato": "Na prova, identifique 'Calculadora de TCO' associado a economia financeira ao migrar local para nuvem = calculadora de tco.",
+      "cascasDeBanana": [
+        "Calculadora de Preços: Outra ferramenta que atua em camadas diferentes da governança.",
+        "Azure Cost Management: Não resolve o problema financeiro ou de segurança indicado.",
+        "Azure Advisor: Recurso de nuvem com objetivos distintos do enunciado."
+      ],
+      "dicaOuro": "Economia financeira ao migrar local para nuvem = Calculadora de TCO."
+    }
+  },
+  {
+    "id": "az900_q287",
+    "text": "Para rotular recursos com metadados (como Chave: Valor) para categorizar custos por departamento ou centro de custo, você usa:",
+    "options": [
+      "Resource Locks",
+      "Azure Policy",
+      "Tags do Azure",
+      "Azure Blueprints"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "iniciante",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão valida conceitos iniciais de 'Tags' em gerenciamento e governança do Azure.",
+      "papoReto": "A alternativa correta é 'Tags do Azure' por ser a ferramenta nativa ideal para o controle do ciclo de vida e finanças corporativas na nuvem do Azure.",
+      "respostaCerta": "Tags do Azure — utilitário integrado de governança da Microsoft.",
+      "puloDoGato": "Na prova, identifique 'Tags' associado a metadados de chave/valor para custos = tags.",
+      "cascasDeBanana": [
+        "Resource Locks: Outra ferramenta que atua em camadas diferentes da governança.",
+        "Azure Policy: Não resolve o problema financeiro ou de segurança indicado.",
+        "Azure Blueprints: Recurso de nuvem com objetivos distintos do enunciado."
+      ],
+      "dicaOuro": "Metadados de chave/valor para custos = Tags."
+    }
+  },
+  {
+    "id": "az900_q288",
+    "text": "Qual serviço avisa se o Azure está enfrentando incidentes ativos de infraestrutura ou manutenções programadas que afetam seus recursos?",
+    "options": [
+      "Azure Monitor",
+      "Azure Advisor",
+      "Defender for Cloud",
+      "Azure Service Health"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "iniciante",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão valida conceitos iniciais de 'Azure Service Health' em gerenciamento e governança do Azure.",
+      "papoReto": "A alternativa correta é 'Azure Service Health' por ser a ferramenta nativa ideal para o controle do ciclo de vida e finanças corporativas na nuvem do Azure.",
+      "respostaCerta": "Azure Service Health — utilitário integrado de governança da Microsoft.",
+      "puloDoGato": "Na prova, identifique 'Azure Service Health' associado a avisos de incidentes de infraestrutura do azure = service health.",
+      "cascasDeBanana": [
+        "Azure Monitor: Outra ferramenta que atua em camadas diferentes da governança.",
+        "Azure Advisor: Não resolve o problema financeiro ou de segurança indicado.",
+        "Defender for Cloud: Recurso de nuvem com objetivos distintos do enunciado."
+      ],
+      "dicaOuro": "Avisos de incidentes de infraestrutura do Azure = Service Health."
+    }
+  },
+  {
+    "id": "az900_q289",
+    "text": "Para avaliar continuamente a postura de segurança dos seus recursos no Azure e receber pontuações de segurança críticas (secure score), você usa:",
+    "options": [
+      "Microsoft Defender for Cloud",
+      "Microsoft Entra ID",
+      "Azure Key Vault",
+      "Azure Sentinel"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "iniciante",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão valida conceitos iniciais de 'Defender for Cloud' em gerenciamento e governança do Azure.",
+      "papoReto": "A alternativa correta é 'Microsoft Defender for Cloud' por ser a ferramenta nativa ideal para o controle do ciclo de vida e finanças corporativas na nuvem do Azure.",
+      "respostaCerta": "Microsoft Defender for Cloud — utilitário integrado de governança da Microsoft.",
+      "puloDoGato": "Na prova, identifique 'Defender for Cloud' associado a postura de segurança e secure score = defender for cloud.",
+      "cascasDeBanana": [
+        "Microsoft Entra ID: Outra ferramenta que atua em camadas diferentes da governança.",
+        "Azure Key Vault: Não resolve o problema financeiro ou de segurança indicado.",
+        "Azure Sentinel: Recurso de nuvem com objetivos distintos do enunciado."
+      ],
+      "dicaOuro": "Postura de segurança e secure score = Defender for Cloud."
+    }
+  },
+  {
+    "id": "az900_q290",
+    "text": "Sua empresa deseja exigir autenticação multifator (MFA) apenas quando as tentativas de login originarem-se de fora da rede corporativa ou de dispositivos não conformes. Qual recurso usar?",
+    "options": [
+      "Microsoft Entra RBAC",
+      "Acesso Condicional (Conditional Access)",
+      "Azure Policy",
+      "Key Vault"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "avancado",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão exige conhecimentos avançados sobre 'Acesso Condicional' para fins de governança e monitoramento do Azure.",
+      "papoReto": "A alternativa correta é 'Acesso Condicional (Conditional Access)' porque corresponde à especificação técnica da Microsoft para cobrir o cenário de segurança e conformidade do exame oficial.",
+      "respostaCerta": "Acesso Condicional (Conditional Access) — recurso avançado da plataforma de gerenciamento do Azure.",
+      "puloDoGato": "Para a prova AZ-900, lembre-se que 'Acesso Condicional' atua diretamente sobre regras de 'se-então' para mfa e logins = acesso condicional.",
+      "cascasDeBanana": [
+        "Microsoft Entra RBAC: Outra ferramenta ou conceito de governança técnica que não se aplica a esta pergunta.",
+        "Azure Policy: Trata-se de recurso inadequado para suprir a necessidade indicada no enunciado.",
+        "Key Vault: Outro serviço de segurança que atua em outra camada do sistema."
+      ],
+      "dicaOuro": "Regras de 'se-então' para MFA e logins = Acesso Condicional."
+    }
+  },
+  {
+    "id": "az900_q291",
+    "text": "Qual serviço do Azure funciona como um sistema inteligente SIEM e SOAR, consolidando logs de segurança de toda a empresa para detectar ameaças com IA?",
+    "options": [
+      "Microsoft Defender for Cloud",
+      "Azure Monitor",
+      "Microsoft Sentinel",
+      "Azure Key Vault"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "avancado",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão exige conhecimentos avançados sobre 'Microsoft Sentinel' para fins de governança e monitoramento do Azure.",
+      "papoReto": "A alternativa correta é 'Microsoft Sentinel' porque corresponde à especificação técnica da Microsoft para cobrir o cenário de segurança e conformidade do exame oficial.",
+      "respostaCerta": "Microsoft Sentinel — recurso avançado da plataforma de gerenciamento do Azure.",
+      "puloDoGato": "Para a prova AZ-900, lembre-se que 'Microsoft Sentinel' atua diretamente sobre siem/soar inteligente de segurança = microsoft sentinel.",
+      "cascasDeBanana": [
+        "Microsoft Defender for Cloud: Outra ferramenta ou conceito de governança técnica que não se aplica a esta pergunta.",
+        "Azure Monitor: Trata-se de recurso inadequado para suprir a necessidade indicada no enunciado.",
+        "Azure Key Vault: Outro serviço de segurança que atua em outra camada do sistema."
+      ],
+      "dicaOuro": "SIEM/SOAR inteligente de segurança = Microsoft Sentinel."
+    }
+  },
+  {
+    "id": "az900_q292",
+    "text": "Você precisa aplicar um bloqueio em um banco de dados crítico que permita apenas leituras de dados e impeça qualquer modificação ou exclusão do recurso. Qual bloqueio usar?",
+    "options": [
+      "Bloqueio do tipo CanNotDelete",
+      "Azure Policy com Deny",
+      "Azure RBAC Reader",
+      "Bloqueio do tipo ReadOnly (Somente leitura)"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "avancado",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão exige conhecimentos avançados sobre 'Resource Locks - ReadOnly' para fins de governança e monitoramento do Azure.",
+      "papoReto": "A alternativa correta é 'Bloqueio do tipo ReadOnly (Somente leitura)' porque corresponde à especificação técnica da Microsoft para cobrir o cenário de segurança e conformidade do exame oficial.",
+      "respostaCerta": "Bloqueio do tipo ReadOnly (Somente leitura) — recurso avançado da plataforma de gerenciamento do Azure.",
+      "puloDoGato": "Para a prova AZ-900, lembre-se que 'Resource Locks - ReadOnly' atua diretamente sobre proíbe exclusões e alterações de recursos = readonly lock.",
+      "cascasDeBanana": [
+        "Bloqueio do tipo CanNotDelete: Outra ferramenta ou conceito de governança técnica que não se aplica a esta pergunta.",
+        "Azure Policy com Deny: Trata-se de recurso inadequado para suprir a necessidade indicada no enunciado.",
+        "Azure RBAC Reader: Outro serviço de segurança que atua em outra camada do sistema."
+      ],
+      "dicaOuro": "Proíbe exclusões e alterações de recursos = ReadOnly lock."
+    }
+  },
+  {
+    "id": "az900_q293",
+    "text": "Qual ferramenta centraliza a consolidação e armazenamento de telemetrias e logs de múltiplas fontes, permitindo pesquisas complexas usando KQL?",
+    "options": [
+      "Log Analytics Workspace",
+      "Application Insights",
+      "Azure Advisor",
+      "Service Health"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "avancado",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão exige conhecimentos avançados sobre 'Azure Monitor - Log Analytics' para fins de governança e monitoramento do Azure.",
+      "papoReto": "A alternativa correta é 'Log Analytics Workspace' porque corresponde à especificação técnica da Microsoft para cobrir o cenário de segurança e conformidade do exame oficial.",
+      "respostaCerta": "Log Analytics Workspace — recurso avançado da plataforma de gerenciamento do Azure.",
+      "puloDoGato": "Para a prova AZ-900, lembre-se que 'Azure Monitor - Log Analytics' atua diretamente sobre consolidação e pesquisas de logs com kql = log analytics workspace.",
+      "cascasDeBanana": [
+        "Application Insights: Outra ferramenta ou conceito de governança técnica que não se aplica a esta pergunta.",
+        "Azure Advisor: Trata-se de recurso inadequado para suprir a necessidade indicada no enunciado.",
+        "Service Health: Outro serviço de segurança que atua em outra camada do sistema."
+      ],
+      "dicaOuro": "Consolidação e pesquisas de logs com KQL = Log Analytics Workspace."
+    }
+  },
+  {
+    "id": "az900_q294",
+    "text": "Para monitorar o desempenho, erros de código e taxas de requisição de um aplicativo web ao vivo rodando no Azure, qual recurso deve ser ativado?",
+    "options": [
+      "Log Analytics Workspace",
+      "Application Insights",
+      "Azure Advisor",
+      "Azure Sentinel"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "avancado",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão exige conhecimentos avançados sobre 'Application Insights' para fins de governança e monitoramento do Azure.",
+      "papoReto": "A alternativa correta é 'Application Insights' porque corresponde à especificação técnica da Microsoft para cobrir o cenário de segurança e conformidade do exame oficial.",
+      "respostaCerta": "Application Insights — recurso avançado da plataforma de gerenciamento do Azure.",
+      "puloDoGato": "Para a prova AZ-900, lembre-se que 'Application Insights' atua diretamente sobre monitorar desempenho de app ao vivo = application insights.",
+      "cascasDeBanana": [
+        "Log Analytics Workspace: Outra ferramenta ou conceito de governança técnica que não se aplica a esta pergunta.",
+        "Azure Advisor: Trata-se de recurso inadequado para suprir a necessidade indicada no enunciado.",
+        "Azure Sentinel: Outro serviço de segurança que atua em outra camada do sistema."
+      ],
+      "dicaOuro": "Monitorar desempenho de app ao vivo = Application Insights."
+    }
+  },
+  {
+    "id": "az900_q295",
+    "text": "Qual mecanismo concede permissões granulares de administração a um usuário (como poder apenas reiniciar VMs) em um determinado grupo de recursos?",
+    "options": [
+      "Azure Policy",
+      "Resource Locks",
+      "Controle de Acesso Baseado em Função (Azure RBAC)",
+      "Acesso Condicional"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "avancado",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão exige conhecimentos avançados sobre 'Azure RBAC' para fins de governança e monitoramento do Azure.",
+      "papoReto": "A alternativa correta é 'Controle de Acesso Baseado em Função (Azure RBAC)' porque corresponde à especificação técnica da Microsoft para cobrir o cenário de segurança e conformidade do exame oficial.",
+      "respostaCerta": "Controle de Acesso Baseado em Função (Azure RBAC) — recurso avançado da plataforma de gerenciamento do Azure.",
+      "puloDoGato": "Para a prova AZ-900, lembre-se que 'Azure RBAC' atua diretamente sobre permissões de pessoas baseadas em funções = azure rbac.",
+      "cascasDeBanana": [
+        "Azure Policy: Outra ferramenta ou conceito de governança técnica que não se aplica a esta pergunta.",
+        "Resource Locks: Trata-se de recurso inadequado para suprir a necessidade indicada no enunciado.",
+        "Acesso Condicional: Outro serviço de segurança que atua em outra camada do sistema."
+      ],
+      "dicaOuro": "Permissões de pessoas baseadas em funções = Azure RBAC."
+    }
+  },
+  {
+    "id": "az900_q296",
+    "text": "Você deseja padronizar a criação automatizada de novas assinaturas corporativas incluindo políticas, bloqueios, funções RBAC e templates de recursos. O recurso ideal é:",
+    "options": [
+      "ARM Templates",
+      "Azure Policy",
+      "Azure Arc",
+      "Azure Blueprints"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "avancado",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão exige conhecimentos avançados sobre 'Azure Blueprints' para fins de governança e monitoramento do Azure.",
+      "papoReto": "A alternativa correta é 'Azure Blueprints' porque corresponde à especificação técnica da Microsoft para cobrir o cenário de segurança e conformidade do exame oficial.",
+      "respostaCerta": "Azure Blueprints — recurso avançado da plataforma de gerenciamento do Azure.",
+      "puloDoGato": "Para a prova AZ-900, lembre-se que 'Azure Blueprints' atua diretamente sobre padronização de assinaturas inteiras = azure blueprints.",
+      "cascasDeBanana": [
+        "ARM Templates: Outra ferramenta ou conceito de governança técnica que não se aplica a esta pergunta.",
+        "Azure Policy: Trata-se de recurso inadequado para suprir a necessidade indicada no enunciado.",
+        "Azure Arc: Outro serviço de segurança que atua em outra camada do sistema."
+      ],
+      "dicaOuro": "Padronização de assinaturas inteiras = Azure Blueprints."
+    }
+  },
+  {
+    "id": "az900_q297",
+    "text": "Qual das seguintes ações descreve uma funcionalidade exclusiva do Azure Cost Management, diferenciando-o da Calculadora de Preços?",
+    "options": [
+      "Visualizar e analisar o faturamento financeiro real acumulado de recursos ativos",
+      "Estimar os custos mensais simulados de VMs antes de criá-las",
+      "Comparar os custos de rodar workloads on-premises com nuvem",
+      "Exigir MFA para administradores de faturamento"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "avancado",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão exige conhecimentos avançados sobre 'Calculadora de Preços vs Cost Management' para fins de governança e monitoramento do Azure.",
+      "papoReto": "A alternativa correta é 'Visualizar e analisar o faturamento financeiro real acumulado de recursos ativos' porque corresponde à especificação técnica da Microsoft para cobrir o cenário de segurança e conformidade do exame oficial.",
+      "respostaCerta": "Visualizar e analisar o faturamento financeiro real acumulado de recursos ativos — recurso avançado da plataforma de gerenciamento do Azure.",
+      "puloDoGato": "Para a prova AZ-900, lembre-se que 'Calculadora de Preços vs Cost Management' atua diretamente sobre custo real e alertas de budgets = azure cost management.",
+      "cascasDeBanana": [
+        "Estimar os custos mensais simulados de VMs antes de criá-las: Outra ferramenta ou conceito de governança técnica que não se aplica a esta pergunta.",
+        "Comparar os custos de rodar workloads on-premises com nuvem: Trata-se de recurso inadequado para suprir a necessidade indicada no enunciado.",
+        "Exigir MFA para administradores de faturamento: Outro serviço de segurança que atua em outra camada do sistema."
+      ],
+      "dicaOuro": "Custo real e alertas de budgets = Azure Cost Management."
+    }
+  },
+  {
+    "id": "az900_q298",
+    "text": "Qual serviço do Azure permite governar e gerenciar servidores físicos locais e clusters de Kubernetes rodando em outras nuvens (como AWS) usando o portal do Azure?",
+    "options": [
+      "Azure Blueprints",
+      "Azure Arc",
+      "Azure Sentinel",
+      "Azure Policy Guest Configuration"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "avancado",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão exige conhecimentos avançados sobre 'Azure Arc' para fins de governança e monitoramento do Azure.",
+      "papoReto": "A alternativa correta é 'Azure Arc' porque corresponde à especificação técnica da Microsoft para cobrir o cenário de segurança e conformidade do exame oficial.",
+      "respostaCerta": "Azure Arc — recurso avançado da plataforma de gerenciamento do Azure.",
+      "puloDoGato": "Para a prova AZ-900, lembre-se que 'Azure Arc' atua diretamente sobre gerenciar servidores locais e híbridos no portal do azure = azure arc.",
+      "cascasDeBanana": [
+        "Azure Blueprints: Outra ferramenta ou conceito de governança técnica que não se aplica a esta pergunta.",
+        "Azure Sentinel: Trata-se de recurso inadequado para suprir a necessidade indicada no enunciado.",
+        "Azure Policy Guest Configuration: Outro serviço de segurança que atua em outra camada do sistema."
+      ],
+      "dicaOuro": "Gerenciar servidores locais e híbridos no portal do Azure = Azure Arc."
+    }
+  },
+  {
+    "id": "az900_q299",
+    "text": "Onde os administradores de conformidade podem baixar relatórios de auditoria independentes da Microsoft, certificados de conformidade SOC/ISO e avaliações de privacidade?",
+    "options": [
+      "Azure Advisor",
+      "Azure Policy",
+      "Service Trust Portal",
+      "Defender for Cloud"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "avancado",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão exige conhecimentos avançados sobre 'Service Trust Portal' para fins de governança e monitoramento do Azure.",
+      "papoReto": "A alternativa correta é 'Service Trust Portal' porque corresponde à especificação técnica da Microsoft para cobrir o cenário de segurança e conformidade do exame oficial.",
+      "respostaCerta": "Service Trust Portal — recurso avançado da plataforma de gerenciamento do Azure.",
+      "puloDoGato": "Para a prova AZ-900, lembre-se que 'Service Trust Portal' atua diretamente sobre relatórios de conformidade e auditorias iso/soc = service trust portal.",
+      "cascasDeBanana": [
+        "Azure Advisor: Outra ferramenta ou conceito de governança técnica que não se aplica a esta pergunta.",
+        "Azure Policy: Trata-se de recurso inadequado para suprir a necessidade indicada no enunciado.",
+        "Defender for Cloud: Outro serviço de segurança que atua em outra camada do sistema."
+      ],
+      "dicaOuro": "Relatórios de conformidade e auditorias ISO/SOC = Service Trust Portal."
+    }
+  },
+  {
+    "id": "az900_q300",
+    "text": "Qual é a API central de gerenciamento que recebe, valida e distribui todas as solicitações de deploy e gerenciamento feitas no portal, CLI ou PowerShell?",
+    "options": [
+      "ARM Templates",
+      "Azure Bicep",
+      "Azure CLI Core",
+      "Azure Resource Manager (ARM)"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "avancado",
+    "domain": "Gerenciamento e Governança do Azure",
+    "explanation": {
+      "intro": "Esta questão exige conhecimentos avançados sobre 'Azure Resource Manager' para fins de governança e monitoramento do Azure.",
+      "papoReto": "A alternativa correta é 'Azure Resource Manager (ARM)' porque corresponde à especificação técnica da Microsoft para cobrir o cenário de segurança e conformidade do exame oficial.",
+      "respostaCerta": "Azure Resource Manager (ARM) — recurso avançado da plataforma de gerenciamento do Azure.",
+      "puloDoGato": "Para a prova AZ-900, lembre-se que 'Azure Resource Manager' atua diretamente sobre api central de deploy do azure = azure resource manager (arm).",
+      "cascasDeBanana": [
+        "ARM Templates: Outra ferramenta ou conceito de governança técnica que não se aplica a esta pergunta.",
+        "Azure Bicep: Trata-se de recurso inadequado para suprir a necessidade indicada no enunciado.",
+        "Azure CLI Core: Outro serviço de segurança que atua em outra camada do sistema."
+      ],
+      "dicaOuro": "API central de deploy do Azure = Azure Resource Manager (ARM)."
+    }
   }
 ];
-

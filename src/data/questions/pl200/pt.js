@@ -2734,6 +2734,7 @@
             "papoReto": "Se quer proibir (impedir fisicamente) que entrem nomes repetidos na base de dados, precisa colocar um cadeado no nível do banco de dados. A 'Chave Alternativa' faz exatamente isso: ela diz ao sistema que aquela combinação de colunas é única e não aceita duplicados de forma alguma.",
             "respostaCerta": "Sim",
             "puloDoGato": "As Alternate Keys criam um índice de unicidade no SQL por baixo do Dataverse. Se alguém tentar inserir um registro que viole esta chave (mesmo via API ou Importação), o sistema bloqueia a transação com um erro. É o método mais forte de prevenção.",
+            "cascasDeBanana": [],
             "dicaOuro": "Prevenir/Impedir duplicados de forma rigorosa = Alternate Key."
         },
         "difficulty": "iniciante",
@@ -2752,6 +2753,7 @@
             "papoReto": "Um fluxo (Power Automate) só acorda *depois* que o erro já foi feito (o registro já foi criado). Ele até podia tentar excluir o duplicado depois, mas o requisito é que a tabela 'não contenha' duplicados, o que implica prevenção na entrada. O fluxo não é uma ferramenta de bloqueio de base de dados.",
             "respostaCerta": "Não",
             "puloDoGato": "Fluxos são assíncronos por natureza. Até o fluxo correr e validar o dado, o duplicado já existe na base de dados. Além disso, não é uma forma eficiente nem padrão de gerenciar unicidade.",
+            "cascasDeBanana": [],
             "dicaOuro": "Power Automate = Reação. Alternate Key = Prevenção."
         },
         "difficulty": "iniciante",
@@ -2770,6 +2772,7 @@
             "papoReto": "A 'Regra de Deteção de Duplicados' é apenas um aviso educado na tela. O usuário pode clicar em 'Guardar mesmo assim'. Além disso, se o dado vier por uma App de celular ou por código, a regra muitas vezes nem aparece. Por isso, ela não garante que a tabela não terá duplicados.",
             "respostaCerta": "Não",
             "puloDoGato": "Duplicate Detection Rules são para UX (experiência do usuário) e não impõem restrições de integridade no nível dos dados (database-level constraints). Elas 'detetam', mas não 'impedem' de forma absoluta como uma Chave faz.",
+            "cascasDeBanana": [],
             "dicaOuro": "Regra de Deteção = Alerta/Aviso. Chave Alternativa = Bloqueio/Unicidade."
         },
         "difficulty": "iniciante",

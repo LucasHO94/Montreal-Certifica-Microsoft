@@ -20,6 +20,12 @@ dist-ssr
 *.xls
 scratch/
 
+# Assets de branding originais (já copiados para src/assets/)
+Images/
+
+# Pastas de trabalho locais
+modelos_base_quest/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
