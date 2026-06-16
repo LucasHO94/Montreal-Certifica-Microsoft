@@ -36,3 +36,8 @@ modelos_base_quest/
 *.njsproj
 *.sln
 *.sw?
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
