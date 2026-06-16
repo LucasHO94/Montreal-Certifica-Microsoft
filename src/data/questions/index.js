@@ -3,6 +3,10 @@ import loadPl200 from './pl200/index.js';
 import loadAb900 from './ab900/index.js';
 import loadAi900 from './ai900/index.js';
 import loadMs700 from './ms700/index.js';
+import loadMs721 from './ms721/index.js';
+import loadMo101 from './mo101/index.js';
+import loadMo201 from './mo201/index.js';
+import loadMo500 from './mo500/index.js';
 
 const LOADERS = {
   az900: loadAz900,
@@ -10,6 +14,10 @@ const LOADERS = {
   ab900: loadAb900,
   ai900: loadAi900,
   ms700: loadMs700,
+  ms721: loadMs721,
+  mo101: loadMo101,
+  mo201: loadMo201,
+  mo500: loadMo500,
 };
 
 const CACHE = new Map();
