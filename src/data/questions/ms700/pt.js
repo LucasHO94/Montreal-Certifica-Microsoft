@@ -17,9 +17,9 @@ export const questions = [
       "respostaCerta": "Plataforma unificada de comunicação e colaboração que integra chat, reuniões, chamadas e aplicativos — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Lembre-se: o Teams não armazena arquivos diretamente; ele utiliza o SharePoint Online para canais padrão e o OneDrive for Business para chats privados. No tópico de 'Visão Geral do Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Ferramenta exclusiva de videoconferência para reuniões externas com clientes: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Visão Geral do Teams'.",
-        "Sistema de gerenciamento de e-mails corporativos integrado ao Outlook: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Plataforma de armazenamento de arquivos substituta do SharePoint Online: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Teams + Microsoft 365 = Colaboração integrada suportada por SharePoint, OneDrive e Exchange."
     }
@@ -42,9 +42,9 @@ export const questions = [
       "respostaCerta": "Microsoft 365 Business Basic — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Lembre-se: o Teams não armazena arquivos diretamente; ele utiliza o SharePoint Online para canais padrão e o OneDrive for Business para chats privados. No tópico de 'Licenciamento do Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft 365 Apps for Business (sem Teams incluído por padrão): Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Licenciamento do Teams'.",
-        "Office 2021 Perpetual License: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Windows 365 Cloud PC: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Microsoft 365 Apps for Business=aplicativos Office; Teams NÃO incluído",
+        "Office 2021 Perpetual=licença desktop; cloud services não inclusos",
+        "Windows 365 Cloud PC=serviço desktop virtualizado; não confere Teams"
       ],
       "dicaOuro": "Teams + Microsoft 365 = Colaboração integrada suportada por SharePoint, OneDrive e Exchange."
     }
@@ -67,9 +67,9 @@ export const questions = [
       "respostaCerta": "Acessar o Teams pelo navegador em teams.microsoft.com — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Lembre-se: o Teams não armazena arquivos diretamente; ele utiliza o SharePoint Online para canais padrão e o OneDrive for Business para chats privados. No tópico de 'Clientes do Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Instalar o Teams via Microsoft Store somente: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Clientes do Teams'.",
-        "Usar o aplicativo Teams mobile como único substituto: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Solicitar ao administrador a ativação do Teams Desktop obrigatório: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Microsoft Store=installer desktop; requer instalação de aplicativo",
+        "Teams mobile=cliente separado; funcionalidade reduzida vs web",
+        "Teams Desktop obrigatório=restrição administrativa; não é opção do usuário"
       ],
       "dicaOuro": "Teams + Microsoft 365 = Colaboração integrada suportada por SharePoint, OneDrive e Exchange."
     }
@@ -92,9 +92,9 @@ export const questions = [
       "respostaCerta": "Centro de Administração do Microsoft Teams (Teams Admin Center) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Políticas de Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Portal do Azure Active Directory: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Teams'.",
-        "Centro de Administração do Exchange Online: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Endpoint Manager (Intune): Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure AD Portal=identidades; Teams policies gerenciadas via Teams Admin",
+        "Exchange Admin Center=mailbox policies; Teams policies separadas",
+        "Intune=mobile device management; Teams Admin Center = Teams-specific"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -117,9 +117,9 @@ export const questions = [
       "respostaCerta": "Teams Only — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Coexistência e Interoperabilidade', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Islands Mode: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Coexistência e Interoperabilidade'.",
-        "Skype for Business Only: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Skype for Business with Teams Collaboration: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Islands = coexistência simultânea; Teams Only = exclusivo Teams",
+        "Upgrade = transição gradual Skype→Teams; não é apenas mudança de modo",
+        "Skype for Business with Teams Collaboration = Teams colabs apenas, não chamadas"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -142,9 +142,9 @@ export const questions = [
       "respostaCerta": "As mensagens e chamadas podem chegar em ambos os clientes simultaneamente, dependendo do remetente — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Coexistência e Interoperabilidade', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Todas as chamadas são roteadas exclusivamente pelo Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Coexistência e Interoperabilidade'.",
-        "O Skype for Business é desativado automaticamente após 30 dias: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "O modo Islands bloqueia chamadas externas por padrão: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -167,9 +167,9 @@ export const questions = [
       "respostaCerta": "Microsoft Teams Network Assessment Tool — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Configurações de Rede', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Azure Network Watcher: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Configurações de Rede'.",
-        "Microsoft Defender for Endpoint Network Scanner: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Windows Admin Center Network Monitor: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Network Watcher=monitoramento infra Azure; não Teams pre-deployment",
+        "Microsoft Defender=segurança endpoint; não valida latência/jitter para Teams",
+        "Windows Admin Center=management local; não substitui Teams NAT"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -192,9 +192,9 @@ export const questions = [
       "respostaCerta": "UDP (User Datagram Protocol) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Configurações de Rede', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "TCP (Transmission Control Protocol): Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Configurações de Rede'.",
-        "HTTPS somente: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "SMTP sobre TLS: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "TCP=conexão confiável; media real-time requer low-latency UDP",
+        "HTTPS=control/signaling apenas; não é para streaming áudio/vídeo",
+        "SMTP=protocolo email; não aplicável a media em tempo real"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -217,9 +217,9 @@ export const questions = [
       "respostaCerta": "Página oficial de URLs e intervalos de IP do Microsoft 365 em docs.microsoft.com — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'URLs e Intervalos de IP', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Portal do Azure no menu de diagnóstico de rede: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'URLs e Intervalos de IP'.",
-        "Configurações de proxy do Active Directory local: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Teams Admin Center na aba de relatórios de rede: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Portal Azure=interface management; não contém IPs/URLs Teams oficiais",
+        "AD local=proxy configuração interna; não fonte oficial Microsoft 365",
+        "Teams Admin Center=relatórios de uso; não lista IPs/URLs de conectividade"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -242,9 +242,9 @@ export const questions = [
       "respostaCerta": "50000–50019 — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'QoS (Quality of Service)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "3478–3481: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'QoS (Quality of Service)'.",
-        "443 e 80: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "1024–65535: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "3478-3481=STUN/TURN legado; 50000-50019=Teams media (UDP específico)",
+        "443 e 80=apenas signaling/control, não para mídia real-time",
+        "1024-65535=range genérico; MS recomenda faixa específica 50000-50019"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -267,9 +267,9 @@ export const questions = [
       "respostaCerta": "EF (Expedited Forwarding) — DSCP 46 — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'QoS (Quality of Service)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "AF41 — DSCP 34: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'QoS (Quality of Service)'.",
-        "CS1 — DSCP 8: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "BE (Best Effort) — DSCP 0: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -292,9 +292,9 @@ export const questions = [
       "respostaCerta": "Microsoft Entra ID (Azure Active Directory) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Acesso Externo (Federação) permite chat com domínios externos; Acesso de Convidado (Guest Access) traz o usuário para dentro do seu tenant. No tópico de 'Azure AD e Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Active Directory Domain Services (AD DS) local isolado: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Azure AD e Teams'.",
-        "Microsoft Account (MSA) pessoal exclusivamente: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "LDAP Server on-premises: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "AD DS local=nenhuma integração nativa Teams; requer sincronização Entra",
+        "MSA pessoal=conta consumer; Teams corporativo requer Entra ID",
+        "LDAP on-prem=legacy; Entra ID é identity provider padrão Microsoft 365"
       ],
       "dicaOuro": "Identidade no Teams é governada pelo Microsoft Entra ID (MFA, Acesso Condicional e Guest Access)."
     }
@@ -317,9 +317,9 @@ export const questions = [
       "respostaCerta": "Acesso de convidado (Guest Access) no Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Acesso Externo (Federação) permite chat com domínios externos; Acesso de Convidado (Guest Access) traz o usuário para dentro do seu tenant. No tópico de 'Acesso de Convidado', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Acesso anônimo de reunião: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Acesso de Convidado'.",
-        "Acesso externo (Federation): Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Azure AD B2C: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Acesso anônimo=participação reunião sem identidade; não team membership",
+        "Acesso Externo=chat c/ domínios federados; não membership em teams",
+        "Azure AD B2C=identidades consumer; não integrável nativamente em Teams"
       ],
       "dicaOuro": "Identidade no Teams é governada pelo Microsoft Entra ID (MFA, Acesso Condicional e Guest Access)."
     }
@@ -342,9 +342,9 @@ export const questions = [
       "respostaCerta": "O acesso externo permite comunicação entre domínios federados; o acesso de convidado adiciona usuários externos como membros de equipes específicas — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Acesso Externo (Federação) permite chat com domínios externos; Acesso de Convidado (Guest Access) traz o usuário para dentro do seu tenant. No tópico de 'Acesso Externo', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "O acesso de convidado é mais seguro que o acesso externo por usar MFA obrigatório: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Acesso Externo'.",
-        "Não há diferença funcional; ambos permitem que externos participem de equipes como membros: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "O acesso externo é exclusivo para chamadas PSTN internacionais: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Guest = menos seguro? Ambos usam MFA/Conditional Access da org",
+        "Ambos não permitem membership? Guest = membro do team; Federation = chat only",
+        "Federation = PSTN? Federation = Teams-to-Teams only; PSTN é Direct Routing"
       ],
       "dicaOuro": "Identidade no Teams é governada pelo Microsoft Entra ID (MFA, Acesso Condicional e Guest Access)."
     }
@@ -367,9 +367,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Configurações de toda a organização > Acesso de convidado — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Acesso Externo (Federação) permite chat com domínios externos; Acesso de Convidado (Guest Access) traz o usuário para dentro do seu tenant. No tópico de 'Políticas de Acesso de Convidado', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Portal do Azure > Microsoft Entra ID > Configurações de usuários externos: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Acesso de Convidado'.",
-        "Microsoft 365 Admin Center > Configurações > Segurança e privacidade: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Exchange Admin Center > Configurações de política de caixa de correio: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Acesso anônimo=participação reunião sem identidade; não team membership",
+        "Acesso Externo=chat c/ domínios federados; não membership em teams",
+        "Azure AD B2C=identidades consumer; não integrável nativamente em Teams"
       ],
       "dicaOuro": "Identidade no Teams é governada pelo Microsoft Entra ID (MFA, Acesso Condicional e Guest Access)."
     }
@@ -392,9 +392,9 @@ export const questions = [
       "respostaCerta": "25.000 membros — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Criação de Equipes', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "500 membros: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Criação de Equipes'.",
-        "10.000 membros: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "50.000 membros: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "500 membros=limite de grupos Office 365; equipes Teams é mais alto",
+        "10.000 membros=suportado mas performance degradação; recomendado evitar",
+        "50.000 membros=limite sharepoint; Teams limite é menor 25k"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -417,9 +417,9 @@ export const questions = [
       "respostaCerta": "Canal privado — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Tipos de Canais', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Canal padrão com permissões restritas: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Tipos de Canais'.",
-        "Canal compartilhado com acesso condicional: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Canal geral com moderação ativada: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -442,9 +442,9 @@ export const questions = [
       "respostaCerta": "Colaboração com usuários de outros locatários do Microsoft 365 sem precisar adicioná-los como convidados — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Canais Compartilhados', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Transmissão ao vivo para até 100.000 participantes externos: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Canais Compartilhados'.",
-        "Armazenamento ilimitado de arquivos sem compartilhar cota do SharePoint: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Criação automática de grupos do Microsoft 365 para cada canal compartilhado: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Shared channels=acesso B2B externo; não substituem Teams Federation",
+        "30 canais privados=limite por equipe; shared=limite separado",
+        "Teams Connect=multi-tenant collaboration; requer Entra ID integração"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -467,9 +467,9 @@ export const questions = [
       "respostaCerta": "Restringir a criação de Grupos do Microsoft 365 no Azure AD para os usuários desejados — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Políticas de Equipes', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Desativar o Microsoft Teams globalmente no Teams Admin Center: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Equipes'.",
-        "Remover a licença do Teams dos usuários específicos: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Aplicar uma política de retenção que bloqueia criação de equipes: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -492,9 +492,9 @@ export const questions = [
       "respostaCerta": "O conteúdo fica em modo somente leitura; os membros podem visualizar, mas não editar ou enviar mensagens — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Ciclo de Vida de Equipes', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Todo o conteúdo é excluído permanentemente após 30 dias: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Ciclo de Vida de Equipes'.",
-        "A equipe é movida para a Lixeira e pode ser restaurada em até 90 dias com total funcionalidade: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Os arquivos são movidos automaticamente para o OneDrive do proprietário da equipe: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -517,9 +517,9 @@ export const questions = [
       "respostaCerta": "Política de expiração de Grupos do Microsoft 365 no Azure Active Directory — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Políticas de Expiração', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de retenção de dados no Microsoft Purview: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Expiração'.",
-        "Regra de fluxo de e-mail no Exchange Online: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Script de automação via Power Automate com gatilho de inatividade: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -542,9 +542,9 @@ export const questions = [
       "respostaCerta": "Política de mensagens (Messaging Policy) no Teams Admin Center — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Políticas de Mensagens', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de conformidade de comunicações no Microsoft Purview: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Mensagens'.",
-        "Política de aplicativo de reunião no Teams Admin Center: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configurações de compartilhamento do SharePoint Online: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -567,9 +567,9 @@ export const questions = [
       "respostaCerta": "\"Proprietários podem excluir mensagens enviadas\" e \"Usuários podem excluir mensagens enviadas\" — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Políticas de Mensagens', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Configuração de retenção de mensagens no Microsoft Purview: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Mensagens'.",
-        "Permissão de auditoria de mensagens no Centro de Conformidade: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Política de prevenção de perda de dados (DLP) aplicada ao Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -592,9 +592,9 @@ export const questions = [
       "respostaCerta": "Moderação de canal nas configurações do canal no Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Moderação de Canais', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de reunião para restringir apresentadores: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Moderação de Canais'.",
-        "Política de mensagens com \"somente leitura\" habilitada: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Permissões de convidado desativadas no canal: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -617,9 +617,9 @@ export const questions = [
       "respostaCerta": "Conformidade de Comunicação (Communication Compliance) no Microsoft Purview — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Conformidade de Comunicação', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Defender for Cloud Apps com política de sessão: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Conformidade de Comunicação'.",
-        "Política de DLP aplicada ao Exchange Online: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Azure Sentinel com conector de dados do Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -642,9 +642,9 @@ export const questions = [
       "respostaCerta": "Política de reunião (Meeting Policy) — desativar a opção de gravação para participantes — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Políticas de Reunião', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de acesso condicional bloqueando gravação para contas externas: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Reunião'.",
-        "Configuração de DLP para proteger conteúdo de reuniões: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Política de retenção aplicada ao Microsoft Stream: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -667,9 +667,9 @@ export const questions = [
       "respostaCerta": "Política de reunião — configuração de \"Permitir reação\" ou \"Levantar a mão\" — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Políticas de Reunião', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de mensagens — configuração de reações em chat: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Reunião'.",
-        "Política de aplicativos — permissão de uso do aplicativo Whiteboard: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configurações globais de acessibilidade do Microsoft 365: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -692,9 +692,9 @@ export const questions = [
       "respostaCerta": "Criar uma conta de recurso no Microsoft 365 e atribuir uma licença de sala do Teams (Teams Rooms) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Salas de Conferência (Rooms)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Adicionar o dispositivo diretamente no Teams Admin Center como \"dispositivo gerenciado\": Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Salas de Conferência (Rooms)'.",
-        "Registrar a sala como um convidado externo com conta Microsoft pessoal: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Criar um grupo de distribuição no Exchange Online com o nome da sala: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -717,9 +717,9 @@ export const questions = [
       "respostaCerta": "10.000 participantes — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Eventos ao Vivo', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "1.000 participantes: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Eventos ao Vivo'.",
-        "25.000 participantes: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "50.000 participantes: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -742,9 +742,9 @@ export const questions = [
       "respostaCerta": "Organizador, Produtor e Apresentador — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Eventos ao Vivo', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Administrador, Moderador e Espectador: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Eventos ao Vivo'.",
-        "Host, Co-host e Participante: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Proprietário, Membro e Convidado: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -767,9 +767,9 @@ export const questions = [
       "respostaCerta": "Town Hall (Assembleia) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Town Halls', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Webinar Pro: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Town Halls'.",
-        "Broadcast Meeting: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "All-Hands Session: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -792,9 +792,9 @@ export const questions = [
       "respostaCerta": "Webinars possuem formulário de registro de participantes e controles de apresentação mais avançados — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Webinars', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Webinars suportam mais de 1.000 participantes enquanto reuniões comuns são limitadas a 300: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Webinars'.",
-        "Webinars não permitem chat entre participantes por padrão: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Webinars exigem licença do Microsoft Teams Premium obrigatoriamente em todos os casos: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -817,9 +817,9 @@ export const questions = [
       "respostaCerta": "Plano de Chamada Microsoft (Microsoft Calling Plan) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Planos de Chamada', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Direct Routing com Session Border Controller (SBC): Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Planos de Chamada'.",
-        "Operator Connect sem licença adicional: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Teams Rooms Standard: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "SBC on-premises=Direct Routing; PSTN gateway=método legado",
+        "Números de serviço=recebem apenas; não iniciam chamadas",
+        "Plano de chamada=rotas de voz=conceitos ortogonais, ambos necessários"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -842,9 +842,9 @@ export const questions = [
       "respostaCerta": "Direct Routing com um Session Border Controller (SBC) certificado — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Direct Routing', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Calling Plan com portabilidade numérica: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Direct Routing'.",
-        "Operator Connect configurado pelo Teams Admin Center: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Azure Communication Services integrado diretamente ao Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "SBC on-premises=Direct Routing; PSTN gateway=método legado",
+        "Números de serviço=recebem apenas; não iniciam chamadas",
+        "Plano de chamada=rotas de voz=conceitos ortogonais, ambos necessários"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -867,9 +867,9 @@ export const questions = [
       "respostaCerta": "A configuração é gerenciada diretamente pelo operador de telefonia no Teams Admin Center, sem necessidade de implantar um SBC próprio — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Operator Connect', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "O Operator Connect oferece chamadas internacionais ilimitadas sem custo adicional: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Operator Connect'.",
-        "O Operator Connect não exige licença de Sistema Telefônico (Phone System): Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "O Operator Connect substitui completamente o Azure AD para autenticação de chamadas: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "SBC on-premises=Direct Routing; PSTN gateway=método legado",
+        "Números de serviço=recebem apenas; não iniciam chamadas",
+        "Plano de chamada=rotas de voz=conceitos ortogonais, ambos necessários"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -892,9 +892,9 @@ export const questions = [
       "respostaCerta": "Microsoft Teams Phone (anteriormente Phone System) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Sistema Telefônico', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Teams Essentials: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Sistema Telefônico'.",
-        "Microsoft 365 Audio Conferencing: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Teams Rooms Basic: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -917,9 +917,9 @@ export const questions = [
       "respostaCerta": "Atendedor Automático (Auto Attendant) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Filas de Chamada e Atendedores Automáticos', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Fila de Chamada (Call Queue): Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Filas de Chamada e Atendedores Automáticos'.",
-        "Canal de voz no Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Política de roteamento de voz: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -942,9 +942,9 @@ export const questions = [
       "respostaCerta": "O Atendedor Automático roteia chamadas via menus de opções; a Fila de Chamada distribui chamadas a um grupo de agentes em espera — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Filas de Chamada e Atendedores Automáticos', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "A Fila de Chamada permite criar menus de voz interativos; o Atendedor Automático apenas encaminha para um único destino: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Filas de Chamada e Atendedores Automáticos'.",
-        "Apenas o Atendedor Automático requer licença de Phone System; a Fila de Chamada é gratuita: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "A Fila de Chamada suporta chamadas PSTN externas; o Atendedor Automático é restrito a chamadas internas: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -967,9 +967,9 @@ export const questions = [
       "respostaCerta": "Audioconferência (Audio Conferencing) com número de discagem — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Audioconferência', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Teams Phone com Direct Routing: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Audioconferência'.",
-        "Canal de voz no Teams com moderação ativada: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Política de reunião com acesso anônimo habilitado: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -992,9 +992,9 @@ export const questions = [
       "respostaCerta": "Roteamento baseado em localização (Location-Based Routing — LBR) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Políticas de Voz', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de dial plan com regras de normalização regionais: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Voz'.",
-        "Política de chamada com restrição geográfica no Azure AD: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configuração de gateway de Direct Routing com failover regional: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "SBC on-premises=Direct Routing; PSTN gateway=método legado",
+        "Números de serviço=recebem apenas; não iniciam chamadas",
+        "Plano de chamada=rotas de voz=conceitos ortogonais, ambos necessários"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -1017,9 +1017,9 @@ export const questions = [
       "respostaCerta": "Política de permissão de aplicativos (App Permission Policy) no Teams Admin Center — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Políticas de Aplicativos', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de acesso condicional no Azure AD: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Aplicativos'.",
-        "Política de conformidade de dispositivos no Intune: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configurações de DLP para aplicativos conectados: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -1042,9 +1042,9 @@ export const questions = [
       "respostaCerta": "Política de configuração de aplicativos (App Setup Policy) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Políticas de Aplicativos', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de permissão de aplicativos (App Permission Policy): Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Aplicativos'.",
-        "Política de reunião com aplicativos integrados: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Política de mensagens com aplicativos de bot ativados: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -1067,9 +1067,9 @@ export const questions = [
       "respostaCerta": "Incoming Webhook (Webhook de entrada) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Conectores e Webhooks', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Aplicativo de bot personalizado via Azure Bot Service: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Conectores e Webhooks'.",
-        "Conector do Microsoft Graph API com OAuth: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Power Virtual Agents com gatilho de canal: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -1092,9 +1092,9 @@ export const questions = [
       "respostaCerta": "A integração do Power Apps está disponível nativamente no Teams; o administrador deve garantir que a política de permissão de aplicativos permite aplicativos Microsoft — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Power Platform no Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Instalar o conector do Power Apps via Azure Marketplace separadamente: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Power Platform no Teams'.",
-        "Habilitar o Power Apps no Portal do Azure com licença Premium obrigatória: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Criar um canal dedicado de Power Platform antes de ativar a integração: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -1117,9 +1117,9 @@ export const questions = [
       "respostaCerta": "Política de retenção no Microsoft Purview aplicada ao Microsoft Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Retenção de Dados', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Backup automático de mensagens via Exchange Online Archive: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Retenção de Dados'.",
-        "Política de DLP com regra de retenção de mensagens sensíveis: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configuração de retenção no SharePoint Online para canais do Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -1142,9 +1142,9 @@ export const questions = [
       "respostaCerta": "eDiscovery (Descoberta Eletrônica) no Microsoft Purview — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Descoberta Eletrônica (eDiscovery)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Pesquisa de conteúdo no Teams Admin Center: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Descoberta Eletrônica (eDiscovery)'.",
-        "Relatórios de auditoria no Microsoft 365 Admin Center: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Defender for Cloud Apps com filtro de atividade: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -1167,9 +1167,9 @@ export const questions = [
       "respostaCerta": "Barreiras de Informação (Information Barriers) no Microsoft Purview — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Barreiras de Informação', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de acesso condicional com restrição por grupo no Azure AD: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Barreiras de Informação'.",
-        "Política de DLP bloqueando comunicação entre grupos específicos: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configuração de canal privado restrito por departamento: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -1192,9 +1192,9 @@ export const questions = [
       "respostaCerta": "Microsoft 365 Admin Center > Relatórios > Uso > Microsoft Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Relatórios de Uso', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Teams Admin Center > Análise e relatórios > Relatório de dispositivos: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Relatórios de Uso'.",
-        "Azure AD > Monitoramento > Logs de entrada filtrados por Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Defender > Relatórios de atividade de aplicativos em nuvem: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -1217,9 +1217,9 @@ export const questions = [
       "respostaCerta": "Call Quality Dashboard (CQD) — Painel de Qualidade de Chamadas — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Painel de Qualidade de Chamadas (CQD)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft 365 Network Connectivity Tool: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Painel de Qualidade de Chamadas (CQD)'.",
-        "Azure Monitor com Log Analytics Workspace para Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Relatório de uso de reuniões no Teams Admin Center: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Network Watcher=monitoramento infra Azure; não Teams pre-deployment",
+        "Microsoft Defender=segurança endpoint; não valida latência/jitter para Teams",
+        "Windows Admin Center=management local; não substitui Teams NAT"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -1242,9 +1242,9 @@ export const questions = [
       "respostaCerta": "Análise de Chamada por Usuário (Per-user Call Analytics) no Teams Admin Center — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Análise por Chamada (PSTN)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Call Quality Dashboard (CQD) com filtro por UPN: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Análise por Chamada (PSTN)'.",
-        "Azure Network Watcher com captura de pacotes: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Purview > Auditoria > Filtro por evento de chamada Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -1267,9 +1267,9 @@ export const questions = [
       "respostaCerta": "Política de atualização do Teams (Teams Update Policy) no Teams Admin Center — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Políticas de Atualização do Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Windows Update for Business configurado via Intune: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Atualização do Teams'.",
-        "Política de grupo (GPO) bloqueando atualizações do Microsoft Store: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configuração de canal de atualização do Microsoft 365 Apps no Centro de Administração: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -1292,9 +1292,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Configurações de toda a organização (Org-wide settings) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Configurações de Toda a Organização', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft 365 Admin Center > Configurações > Serviços: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Configurações de Toda a Organização'.",
-        "Portal do Azure > Microsoft Entra ID > Configurações de colaboração externa: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Exchange Admin Center > Configurações de fluxo de e-mail: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Acesso anônimo=participação reunião sem identidade; não team membership",
+        "Acesso Externo=chat c/ domínios federados; não membership em teams",
+        "Azure AD B2C=identidades consumer; não integrável nativamente em Teams"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -1317,9 +1317,9 @@ export const questions = [
       "respostaCerta": "O próprio usuário nas configurações pessoais do Teams; o administrador não controla notificações individuais por política — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Notificações e Feeds', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Apenas o administrador global via Teams Admin Center: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Notificações e Feeds'.",
-        "O proprietário da equipe via configurações avançadas do canal: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "O helpdesk via Microsoft 365 Admin Center na aba de usuários: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -1342,9 +1342,9 @@ export const questions = [
       "respostaCerta": "Na biblioteca de documentos do site SharePoint Online associado à equipe — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Integração com SharePoint e OneDrive', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "No OneDrive for Business do proprietário da equipe: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Integração com SharePoint e OneDrive'.",
-        "No Exchange Online mailbox da equipe: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "No Azure Blob Storage vinculado ao locatário Microsoft 365: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Shared channels=acesso B2B externo; não substituem Teams Federation",
+        "30 canais privados=limite por equipe; shared=limite separado",
+        "Teams Connect=multi-tenant collaboration; requer Entra ID integração"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -1367,9 +1367,9 @@ export const questions = [
       "respostaCerta": "No OneDrive for Business do usuário que enviou o arquivo — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Integração com SharePoint e OneDrive', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Na biblioteca do SharePoint Online da equipe padrão: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Integração com SharePoint e OneDrive'.",
-        "No Exchange Online como anexo de mensagem: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "No Microsoft Stream associado ao canal de chat: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -1392,9 +1392,9 @@ export const questions = [
       "respostaCerta": "Modelos de equipe (Team Templates) no Teams Admin Center — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Modelos de Equipes', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de configuração de aplicativos aplicada a novas equipes: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Modelos de Equipes'.",
-        "Script PowerShell com New-Team e parâmetros predefinidos: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Pacote de provisionamento do Microsoft Endpoint Manager: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -1417,9 +1417,9 @@ export const questions = [
       "respostaCerta": "200 canais padrão por equipe — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Limites e Especificações', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "50 canais padrão por equipe: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Limites e Especificações'.",
-        "500 canais padrão por equipe: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "100 canais padrão por equipe: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -1442,9 +1442,9 @@ export const questions = [
       "respostaCerta": "30 canais privados por equipe — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Limites e Especificações', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "10 canais privados por equipe: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Limites e Especificações'.",
-        "50 canais privados por equipe: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "200 canais privados por equipe: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -1467,9 +1467,9 @@ export const questions = [
       "respostaCerta": "Proprietário (Owner) e Membro (Member) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Funções e Permissões', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Administrador, Moderador e Visitante: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Funções e Permissões'.",
-        "Global Admin e User Admin: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Host, Co-host e Participante: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -1492,9 +1492,9 @@ export const questions = [
       "respostaCerta": "Configurações da equipe > Permissões de membros > desmarcar \"Permitir que membros adicionem e removam aplicativos\" — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Funções e Permissões', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de permissão de aplicativos no Teams Admin Center: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Funções e Permissões'.",
-        "Política de configuração de aplicativos atribuída aos membros: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configurações de canal > Moderação > Desativar guias: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -1517,9 +1517,9 @@ export const questions = [
       "respostaCerta": "Política de reunião — configurar \"Quem pode ignorar o lobby\" para \"Somente organizadores e co-organizadores\" — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Configurações de Reunião', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de acesso condicional bloqueando entrada direta de externos: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Configurações de Reunião'.",
-        "Configurações globais de reunião no Teams Admin Center — desativar acesso anônimo: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Política de conformidade de reuniões no Microsoft Purview: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "AD DS local=nenhuma integração nativa Teams; requer sincronização Entra",
+        "MSA pessoal=conta consumer; Teams corporativo requer Entra ID",
+        "LDAP on-prem=legacy; Entra ID é identity provider padrão Microsoft 365"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -1542,9 +1542,9 @@ export const questions = [
       "respostaCerta": "Na biblioteca de documentos do canal no SharePoint Online da equipe — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Gravação de Reuniões', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "No OneDrive for Business do organizador da reunião: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Gravação de Reuniões'.",
-        "No Microsoft Stream (clássico) com link compartilhado via e-mail: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "No Exchange Online como anexo da reunião no calendário: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -1567,9 +1567,9 @@ export const questions = [
       "respostaCerta": "No OneDrive for Business do organizador da reunião — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Gravação de Reuniões', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Na biblioteca de documentos da equipe padrão no SharePoint Online: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Gravação de Reuniões'.",
-        "No Microsoft Stream com link enviado para participantes: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "No Exchange Online como item de calendário com anexo de vídeo: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -1592,9 +1592,9 @@ export const questions = [
       "respostaCerta": "Transcrição de reunião (Meeting Transcription) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Transcrição e Legendas', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Legendas ao vivo (Live Captions) da reunião: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Transcrição e Legendas'.",
-        "Notas inteligentes do Microsoft Copilot: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Resumo automático do Microsoft Loop: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -1617,9 +1617,9 @@ export const questions = [
       "respostaCerta": "Desativar gravação na política de reunião E aplicar rótulo de sensibilidade que bloqueia gravação via Teams Premium — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Políticas de Reunião Avançadas', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Configurar DLP para detectar e excluir gravações automaticamente após a reunião: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Reunião Avançadas'.",
-        "Aplicar política de acesso condicional bloqueando upload de vídeo no SharePoint: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Desativar o Microsoft Stream no tenant para impedir qualquer gravação: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -1642,9 +1642,9 @@ export const questions = [
       "respostaCerta": "Dial Plan com regras de normalização (normalization rules) no Teams Admin Center — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Dial Plans', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de roteamento de voz com gateway SBC dedicado para o Brasil: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Dial Plans'.",
-        "Configuração de portabilidade numérica no Operator Connect: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Política de chamada com restrição de chamadas internacionais desativada: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -1667,9 +1667,9 @@ export const questions = [
       "respostaCerta": "Política de chamada (Calling Policy) — desativar \"Chamadas internacionais\" para o grupo — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Políticas de Chamada', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de roteamento de voz com regra bloqueando códigos internacionais: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Chamada'.",
-        "Dial Plan com regra de normalização rejeitando prefixo internacional: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configuração de firewall no SBC para bloquear rotas internacionais: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -1692,9 +1692,9 @@ export const questions = [
       "respostaCerta": "Estacionamento de chamada (Call Park) na política de chamada do Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Estacionamento de Chamada', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Transferência consultiva (Consultative Transfer) via Fila de Chamada: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Estacionamento de Chamada'.",
-        "Delegação de chamadas configurada no Atendedor Automático: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Encaminhamento de chamada simultânea (Simultaneous Ring): Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -1717,9 +1717,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Usuários > selecionar o usuário > aba Voz — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Números de Telefone', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft 365 Admin Center > Usuários ativos > Licenças: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Números de Telefone'.",
-        "Portal do Azure > Microsoft Entra ID > Propriedades do usuário: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Exchange Admin Center > Destinatários > Caixas de correio: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "SBC on-premises=Direct Routing; PSTN gateway=método legado",
+        "Números de serviço=recebem apenas; não iniciam chamadas",
+        "Plano de chamada=rotas de voz=conceitos ortogonais, ambos necessários"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -1742,9 +1742,9 @@ export const questions = [
       "respostaCerta": "Teams Phone Mobile (anteriormente conhecido como Mobile Control Point) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Teams Phone Mobile', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Operator Connect Mobile: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Teams Phone Mobile'.",
-        "Microsoft 365 Audio Conferencing com número dedicado: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Direct Routing com SBC configurado para roteamento de celular: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "AD DS local=nenhuma integração nativa Teams; requer sincronização Entra",
+        "MSA pessoal=conta consumer; Teams corporativo requer Entra ID",
+        "LDAP on-prem=legacy; Entra ID é identity provider padrão Microsoft 365"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -1767,9 +1767,9 @@ export const questions = [
       "respostaCerta": "Rótulos de sensibilidade (Sensitivity Labels) aplicados a Grupos do Microsoft 365 via Microsoft Purview — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Rótulos de Sensibilidade', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de DLP com regras de classificação automática no Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Rótulos de Sensibilidade'.",
-        "Política de acesso condicional com controle de sessão no Azure AD: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Barreiras de informação com segmentos baseados em classificação de dados: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Acesso anônimo=participação reunião sem identidade; não team membership",
+        "Acesso Externo=chat c/ domínios federados; não membership em teams",
+        "Azure AD B2C=identidades consumer; não integrável nativamente em Teams"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -1792,9 +1792,9 @@ export const questions = [
       "respostaCerta": "Política de DLP (Data Loss Prevention) no Microsoft Purview aplicada ao Microsoft Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Prevenção de Perda de Dados (DLP)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Conformidade de Comunicação com palavras-chave de cartão de crédito: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Prevenção de Perda de Dados (DLP)'.",
-        "Barreiras de Informação bloqueando compartilhamento financeiro: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Política de retenção com detecção de conteúdo sensível: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -1817,9 +1817,9 @@ export const questions = [
       "respostaCerta": "Política de acesso condicional no Microsoft Entra ID com controle de concessão \"Exigir dispositivo compatível\" — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Acesso Condicional', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de conformidade de dispositivos no Intune aplicada ao Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Acesso Condicional'.",
-        "Política de DLP com restrição de acesso por tipo de dispositivo: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configuração de acesso externo no Teams Admin Center por tipo de dispositivo: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -1842,9 +1842,9 @@ export const questions = [
       "respostaCerta": "Rótulos de sensibilidade com criptografia e proteção de conteúdo via Microsoft Purview Information Protection — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Proteção de Informações', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de DLP com ação de bloqueio de compartilhamento externo: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Proteção de Informações'.",
-        "Política de acesso condicional bloqueando download em dispositivos não gerenciados: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Azure Information Protection Scanner aplicado ao SharePoint Online: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -1867,9 +1867,9 @@ export const questions = [
       "respostaCerta": "Log de auditoria unificado no Microsoft Purview (Compliance Portal) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Auditoria', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Relatório de atividades no Teams Admin Center: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Auditoria'.",
-        "Log de diagnóstico no Azure Monitor com conector do Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Relatório de uso do Teams no Microsoft 365 Admin Center: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -1892,9 +1892,9 @@ export const questions = [
       "respostaCerta": "Restrições de locatário (Tenant Restrictions) via proxy ou configuração de Azure AD — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Bloqueio de Inquilino (Tenant Lock)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de acesso condicional bloqueando autenticação multi-fator externa: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Bloqueio de Inquilino (Tenant Lock)'.",
-        "Barreiras de Informação com segmentos baseados em domínio externo: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configuração de acesso externo no Teams Admin Center desativando todos os domínios: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -1917,9 +1917,9 @@ export const questions = [
       "respostaCerta": "O CQD fornece visão agregada de qualidade em toda a organização; a Análise por Usuário detalha chamadas individuais de um usuário específico — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Call Quality Dashboard (CQD)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "O CQD é usado para chamadas PSTN; a Análise por Usuário é exclusiva para reuniões do Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Call Quality Dashboard (CQD)'.",
-        "A Análise por Usuário requer licença Premium; o CQD está disponível para todos os administradores: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "O CQD monitora em tempo real; a Análise por Usuário apenas exibe dados históricos de 30 dias: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -1942,9 +1942,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Dispositivos — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Relatórios de Dispositivos', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Endpoint Manager (Intune) > Dispositivos > Todos os dispositivos: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Relatórios de Dispositivos'.",
-        "Azure AD > Dispositivos > Todos os dispositivos: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft 365 Admin Center > Integridade > Dispositivos registrados: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -1967,9 +1967,9 @@ export const questions = [
       "respostaCerta": "Relatório de atividade de uso do Teams (Teams Usage Report) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Análise e Relatórios do Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Relatório de integridade de serviço do Microsoft 365: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Análise e Relatórios do Teams'.",
-        "Relatório de conformidade de comunicação do Purview: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Relatório de auditoria de administrador do Teams Admin Center: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -1992,9 +1992,9 @@ export const questions = [
       "respostaCerta": "Microsoft 365 Admin Center > Integridade > Integridade do serviço — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Integridade do Serviço', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Portal do Azure > Monitor > Alertas de serviço Microsoft: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Integridade do Serviço'.",
-        "Teams Admin Center > Análise e relatórios > Integridade: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Site status.office.com verificando manualmente cada serviço: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -2017,9 +2017,9 @@ export const questions = [
       "respostaCerta": "Não é possível por padrão; proprietários de canais privados controlam o acesso — o administrador pode usar eDiscovery no Purview para fins legais — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Políticas de Mensagens Avançadas', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Atribuir a função de \"Leitor de Canal Privado\" no Teams Admin Center ao supervisor: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Mensagens Avançadas'.",
-        "Habilitar acesso de leitura de administrador em canais privados via PowerShell com Set-TeamChannel: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configurar política de conformidade de comunicação com acesso de supervisão a canais privados: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -2042,9 +2042,9 @@ export const questions = [
       "respostaCerta": "Microsoft Loop Components integrados ao chat do Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Loop Components', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Wiki de canal colaborativo no Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Loop Components'.",
-        "Quadro Branco (Whiteboard) compartilhado em reunião: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "OneNote compartilhado como guia (tab) no canal: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -2067,9 +2067,9 @@ export const questions = [
       "respostaCerta": "Mensagem com notificação de prioridade urgente (Priority Notification) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Prioridade de Mensagem', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Mensagem marcada como importante com @menção obrigatória: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Prioridade de Mensagem'.",
-        "E-mail de acompanhamento automático via Power Automate: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Reunião instantânea agendada como alerta de alta prioridade: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -2092,9 +2092,9 @@ export const questions = [
       "respostaCerta": "Resumir pontos discutidos, identificar itens de ação e responder perguntas sobre o conteúdo da reunião em tempo real — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Microsoft Copilot no Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Traduzir automaticamente falas de todos os participantes para o idioma nativo de cada um: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Microsoft Copilot no Teams'.",
-        "Bloquear automaticamente participantes que usam linguagem inapropriada: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Gerar atas formatadas e enviá-las por e-mail sem intervenção humana: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -2117,9 +2117,9 @@ export const questions = [
       "respostaCerta": "Loja de aplicativos do Teams (Teams App Store) acessível dentro do cliente Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Teams Marketplace', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft AppSource exclusivamente via navegador web: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Teams Marketplace'.",
-        "Azure Marketplace com assinatura Premium necessária: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft 365 Admin Center > Aplicativos integrados: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Microsoft Store=installer desktop; requer instalação de aplicativo",
+        "Teams mobile=cliente separado; funcionalidade reduzida vs web",
+        "Teams Desktop obrigatório=restrição administrativa; não é opção do usuário"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -2142,9 +2142,9 @@ export const questions = [
       "respostaCerta": "Fazer upload do aplicativo como aplicativo personalizado (custom app) via Teams Admin Center no catálogo de aplicativos da organização — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Aplicativos Personalizados', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Publicar o aplicativo na Teams App Store com visibilidade restrita por domínio: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Aplicativos Personalizados'.",
-        "Distribuir o arquivo .zip do app via e-mail para que cada usuário instale manualmente: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Hospedar o aplicativo no Azure e compartilhar o link de acesso via SharePoint: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -2167,9 +2167,9 @@ export const questions = [
       "respostaCerta": "Power Automate com conector do Microsoft Teams e gatilho do SharePoint — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Power Automate no Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Logic Apps no Azure com webhook do SharePoint: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Power Automate no Teams'.",
-        "Incoming Webhook configurado diretamente no canal do Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Script do Power Shell agendado via Azure Automation: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -2192,9 +2192,9 @@ export const questions = [
       "respostaCerta": "Microsoft Teams Rooms Pro ou Microsoft Teams Rooms Basic (com limitações) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Salas do Teams (Teams Rooms)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Teams Essentials com add-on de sala: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Salas do Teams (Teams Rooms)'.",
-        "Microsoft 365 Business Standard com licença de dispositivo compartilhado: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Windows 365 Cloud PC com cliente Teams instalado: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -2217,9 +2217,9 @@ export const questions = [
       "respostaCerta": "Dispositivo de tela sensível ao toque instalado na entrada de salas de reunião para exibir disponibilidade e reservar salas diretamente — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Painéis do Teams (Teams Panels)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Monitor externo usado como segunda tela para videoconferências no Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Painéis do Teams (Teams Panels)'.",
-        "Painel administrativo digital exibido em TVs corporativas com notícias da empresa: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Dispositivo de áudio certificado para chamadas PSTN em salas de reunião: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -2242,9 +2242,9 @@ export const questions = [
       "respostaCerta": "Provisionamento remoto via Teams Admin Center usando o código de verificação ou MAC address do dispositivo — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Telefones do Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Configuração manual via interface web do telefone com credenciais do Azure AD: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Telefones do Teams'.",
-        "Implantação via Microsoft Intune com perfil de configuração de dispositivo: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Instalação do cliente Teams Desktop no telefone via USB: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -2267,9 +2267,9 @@ export const questions = [
       "respostaCerta": "Administrador do Teams (Teams Administrator) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Acesso Externo (Federação) permite chat com domínios externos; Acesso de Convidado (Guest Access) traz o usuário para dentro do seu tenant. No tópico de 'Funções Administrativas do Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Administrador Global (Global Administrator): Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Funções Administrativas do Teams'.",
-        "Administrador de Comunicações do Teams (Teams Communications Administrator): Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Administrador de Suporte de Comunicações do Teams (Teams Communications Support Engineer): Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure AD Portal=identidades; Teams policies gerenciadas via Teams Admin",
+        "Exchange Admin Center=mailbox policies; Teams policies separadas",
+        "Intune=mobile device management; Teams Admin Center = Teams-specific"
       ],
       "dicaOuro": "Identidade no Teams é governada pelo Microsoft Entra ID (MFA, Acesso Condicional e Guest Access)."
     }
@@ -2292,9 +2292,9 @@ export const questions = [
       "respostaCerta": "Engenheiro de Suporte de Comunicações do Teams (Teams Communications Support Engineer) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Acesso Externo (Federação) permite chat com domínios externos; Acesso de Convidado (Guest Access) traz o usuário para dentro do seu tenant. No tópico de 'Funções Administrativas do Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Especialista de Suporte de Comunicações do Teams (Teams Communications Support Specialist): Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Funções Administrativas do Teams'.",
-        "Administrador do Teams (Teams Administrator): Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Leitor Global (Global Reader): Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Identidade no Teams é governada pelo Microsoft Entra ID (MFA, Acesso Condicional e Guest Access)."
     }
@@ -2317,9 +2317,9 @@ export const questions = [
       "respostaCerta": "O Engineer vê informações completas de diagnóstico de chamadas incluindo dados de rede; o Specialist vê apenas informações básicas sem dados sensíveis de rede — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Acesso Externo (Federação) permite chat com domínios externos; Acesso de Convidado (Guest Access) traz o usuário para dentro do seu tenant. No tópico de 'Funções Administrativas do Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "O Specialist pode modificar políticas de voz; o Engineer apenas visualiza relatórios: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Funções Administrativas do Teams'.",
-        "O Engineer gerencia dispositivos certificados; o Specialist gerencia políticas de reunião: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Não há diferença funcional; ambos têm acesso idêntico ao Call Analytics: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Identidade no Teams é governada pelo Microsoft Entra ID (MFA, Acesso Condicional e Guest Access)."
     }
@@ -2342,9 +2342,9 @@ export const questions = [
       "respostaCerta": "MicrosoftTeams (instalado via Install-Module MicrosoftTeams) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'PowerShell para Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "MSOnline (módulo legado do Azure AD): Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'PowerShell para Teams'.",
-        "ExchangeOnlineManagement: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "AzureAD módulo combinado com conector Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -2367,9 +2367,9 @@ export const questions = [
       "respostaCerta": "Get-CsTeamsMeetingPolicy — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'PowerShell para Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Get-TeamsPolicy -Type Meeting: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'PowerShell para Teams'.",
-        "Get-MsolServicePrincipal -AppPrincipalId Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Get-CsMeetingConfiguration -Identity Global: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure AD Portal=identidades; Teams policies gerenciadas via Teams Admin",
+        "Exchange Admin Center=mailbox policies; Teams policies separadas",
+        "Intune=mobile device management; Teams Admin Center = Teams-specific"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -2392,9 +2392,9 @@ export const questions = [
       "respostaCerta": "Equipe de Classe (Class Team) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Microsoft Teams para Educação', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Equipe de Projeto Educacional: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Microsoft Teams para Educação'.",
-        "Equipe de Comunidade de Aprendizagem: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Equipe Colaborativa com perfil acadêmico: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -2417,9 +2417,9 @@ export const questions = [
       "respostaCerta": "Shifts (Turnos) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Microsoft Teams para Firstline Workers', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Planner integrado ao Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Microsoft Teams para Firstline Workers'.",
-        "Tasks by Microsoft To Do: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Bookings integrado ao Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -2442,9 +2442,9 @@ export const questions = [
       "respostaCerta": "Política de nomenclatura de Grupos do Microsoft 365 (Group Naming Policy) no Azure Active Directory — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Políticas de Nomenclatura', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Modelo de equipe com nome padronizado no Teams Admin Center: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Nomenclatura'.",
-        "Política de mensagens com restrição de criação por nome no Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Script PowerShell agendado que renomeia equipes fora do padrão: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -2467,9 +2467,9 @@ export const questions = [
       "respostaCerta": "Política de retenção com ação de exclusão após 1 ano aplicada ao Teams no Microsoft Purview, com prioridade sobre outras políticas — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Retenção e Exclusão', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de DLP com ação de exclusão automática para conteúdo com mais de 365 dias: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Retenção e Exclusão'.",
-        "Configuração de retenção no Exchange Online aplicada à caixa de correio do grupo Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Script PowerShell agendado via Azure Automation para exclusão periódica de mensagens: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -2492,9 +2492,9 @@ export const questions = [
       "respostaCerta": "Microsoft Adoption Score no Microsoft 365 Admin Center — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Microsoft Adoption Score', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Call Quality Dashboard (CQD) com relatórios de adoção por departamento: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Microsoft Adoption Score'.",
-        "Microsoft Viva Insights com dados de produtividade individual: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Power BI com conector do Microsoft Graph para dados de uso: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -2517,9 +2517,9 @@ export const questions = [
       "respostaCerta": "Move-CsUser via PowerShell do Skype for Business Server — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Coexistência e Migração', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Set-CsTeamsUpgradePolicy com parâmetro -MigrateToTeams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Coexistência e Migração'.",
-        "Microsoft Teams Migration Tool disponível no Teams Admin Center: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Azure AD Connect com sincronização de atributos de voz: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -2542,9 +2542,9 @@ export const questions = [
       "respostaCerta": "Modo Teams Only com o Meeting Migration Service (MMS) ativado — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Coexistência e Migração', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Modo Islands com política de atualização automática: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Coexistência e Migração'.",
-        "Modo Skype for Business with Teams Collaboration and Meetings: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Modo Hybrid Voice com redirecionamento de reuniões via Exchange: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -2567,9 +2567,9 @@ export const questions = [
       "respostaCerta": "Acesso externo com plataformas de terceiros via Teams Connect (canais compartilhados) ou integrações específicas — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Federação e Interoperabilidade', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Acesso de convidado adicionando usuários Slack como membros externos: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Federação e Interoperabilidade'.",
-        "Federação direta via SIP entre Teams e Slack: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configuração de webhook bidirecional entre Teams e Slack no Azure: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -2592,9 +2592,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Acesso externo > Configurar lista de permissão de domínios específicos e bloquear todos os outros — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Acesso Externo por Domínio', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Azure AD > Configurações de colaboração externa > Lista de permissões por domínio: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Acesso Externo por Domínio'.",
-        "Política de acesso condicional com restrição de domínios externos confiáveis: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Exchange Admin Center > Conectores > Restrição de domínios de entrada: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -2617,9 +2617,9 @@ export const questions = [
       "respostaCerta": "Política de reunião — desativar \"Permitir vídeo IP\" (Allow IP Video) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Políticas de Reunião — Áudio e Vídeo', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de mensagens — desativar compartilhamento de mídia em reuniões: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Reunião — Áudio e Vídeo'.",
-        "Configurações globais de reunião — bloquear dispositivos de câmera externos: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Política de acesso condicional — restringir uso de câmera em dispositivos não gerenciados: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -2642,9 +2642,9 @@ export const questions = [
       "respostaCerta": "Política de reunião — definir \"Modo de compartilhamento de tela\" como \"Aplicativo único\" — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Políticas de Reunião — Compartilhamento', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de reunião — desativar \"Permitir compartilhamento de PowerPoint\": Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Reunião — Compartilhamento'.",
-        "Política de conformidade — bloquear compartilhamento de desktop completo: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configurações de dispositivo no Intune — restringir captura de tela: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -2667,9 +2667,9 @@ export const questions = [
       "respostaCerta": "Salas Simultâneas (Breakout Rooms) disponíveis durante a reunião — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Salas Simultâneas (Breakout Rooms)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Canais privados criados especificamente para a reunião: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Salas Simultâneas (Breakout Rooms)'.",
-        "Múltiplas reuniões paralelas com link de redirecionamento: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Loop com sessões de colaboração separadas: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -2692,9 +2692,9 @@ export const questions = [
       "respostaCerta": "50 salas simultâneas por reunião — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Salas Simultâneas (Breakout Rooms)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "10 salas simultâneas por reunião: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Salas Simultâneas (Breakout Rooms)'.",
-        "25 salas simultâneas por reunião: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "100 salas simultâneas por reunião: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -2717,9 +2717,9 @@ export const questions = [
       "respostaCerta": "Proteção de reunião com marca d'água, rótulos de sensibilidade em reuniões, resumos inteligentes com IA e relatórios avançados de webinar — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Microsoft Teams Premium', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Gravação de reuniões, transcrição automática e salas simultâneas: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Microsoft Teams Premium'.",
-        "Eventos ao vivo, webinars e integração com Microsoft Loop: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Audioconferência PSTN, filas de chamada e atendedores automáticos: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -2742,9 +2742,9 @@ export const questions = [
       "respostaCerta": "Configurar políticas de roteamento de emergência (Emergency Calling Policy) com endereços de rede mapeados por localização — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Emergência e E911', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Configurar o Dial Plan com prefixo 911 roteado para o SBC local de cada escritório: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Emergência e E911'.",
-        "Habilitar E911 no Operator Connect com detecção automática de localização por IP: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Registrar todos os usuários com o endereço da sede para chamadas de emergência centralizadas: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "SBC on-premises=Direct Routing; PSTN gateway=método legado",
+        "Números de serviço=recebem apenas; não iniciam chamadas",
+        "Plano de chamada=rotas de voz=conceitos ortogonais, ambos necessários"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -2767,9 +2767,9 @@ export const questions = [
       "respostaCerta": "Cloud Voicemail (Correio de Voz na Nuvem) integrado ao Exchange Online — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Correio de Voz', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Correio de voz local do servidor Skype for Business On-Premises: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Correio de Voz'.",
-        "Azure Communication Services Voicemail independente: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Caixa postal configurada diretamente no SBC de Direct Routing: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -2792,9 +2792,9 @@ export const questions = [
       "respostaCerta": "Delegação de chamadas (Call Delegation) — configurar a assistente como delegada nas configurações de chamada do executivo — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Delegação de Chamadas', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Compartilhamento de conta de usuário com a assistente via Azure AD: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Delegação de Chamadas'.",
-        "Fila de chamada com a assistente como agente principal do executivo: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Atendedor automático redirecionando chamadas do executivo para a assistente: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -2817,9 +2817,9 @@ export const questions = [
       "respostaCerta": "Toque simultâneo (Simultaneous Ring) nas configurações de chamada do usuário — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Toque Simultâneo e Encaminhamento', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Encaminhamento de chamada imediato para número externo: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Toque Simultâneo e Encaminhamento'.",
-        "Delegação de chamada para dispositivo móvel secundário: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Teams Phone Mobile com número de celular corporativo vinculado: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -2842,9 +2842,9 @@ export const questions = [
       "respostaCerta": "Estar na lista de SBCs certificados pela Microsoft, suportar TLS e SRTP, e ter um certificado público válido — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Session Border Controller (SBC)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Ser um dispositivo físico Cisco ou Audiocodes com firmware atualizado: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Session Border Controller (SBC)'.",
-        "Estar hospedado no Azure com IP estático e porta 443 aberta: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Suportar protocolo H.323 e ter conectividade direta com o Exchange Online: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "SBC on-premises=Direct Routing; PSTN gateway=método legado",
+        "Números de serviço=recebem apenas; não iniciam chamadas",
+        "Plano de chamada=rotas de voz=conceitos ortogonais, ambos necessários"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -2867,9 +2867,9 @@ export const questions = [
       "respostaCerta": "New-CsOnlinePSTNGateway — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Direct Routing — Configuração', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Add-CsDirectRoutingGateway: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Direct Routing — Configuração'.",
-        "Set-CsOnlineVoiceRoute -Gateway: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "New-CsVoicePolicy -DirectRouting: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "SBC on-premises=Direct Routing; PSTN gateway=método legado",
+        "Números de serviço=recebem apenas; não iniciam chamadas",
+        "Plano de chamada=rotas de voz=conceitos ortogonais, ambos necessários"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -2892,9 +2892,9 @@ export const questions = [
       "respostaCerta": "Safe Links (Links Seguros) com proteção habilitada para Microsoft Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Safe Links e Safe Attachments', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Safe Attachments com varredura de arquivos em tempo real no Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Safe Links e Safe Attachments'.",
-        "Microsoft Defender for Cloud Apps com política de sessão para Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Proteção avançada contra phishing no Microsoft Purview: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -2917,9 +2917,9 @@ export const questions = [
       "respostaCerta": "O arquivo é bloqueado e marcado como malicioso; o usuário recebe uma notificação e o arquivo não pode ser baixado — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Safe Attachments no Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "O arquivo é automaticamente excluído e o usuário é suspenso temporariamente: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Safe Attachments no Teams'.",
-        "O arquivo é colocado em quarentena no Exchange Online para análise manual: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "O canal é bloqueado temporariamente até que o administrador libere o arquivo: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -2942,9 +2942,9 @@ export const questions = [
       "respostaCerta": "Privileged Identity Management (PIM) no Microsoft Entra ID com ativação just-in-time de funções administrativas do Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Gerenciamento de Acesso Privilegiado', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Autenticação multifator obrigatória para acesso ao Teams Admin Center: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Gerenciamento de Acesso Privilegiado'.",
-        "Política de acesso condicional exigindo dispositivo gerenciado para administração: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Revisões de acesso periódicas configuradas no Azure AD para funções do Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure AD Portal=identidades; Teams policies gerenciadas via Teams Admin",
+        "Exchange Admin Center=mailbox policies; Teams policies separadas",
+        "Intune=mobile device management; Teams Admin Center = Teams-specific"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -2967,9 +2967,9 @@ export const questions = [
       "respostaCerta": "Azure AD B2B Direct Connect habilitado em ambos os locatários e acesso externo configurado no Teams Admin Center — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Canais Compartilhados — Configuração', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Acesso de convidado habilitado em ambos os locatários com política de convite automático: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Canais Compartilhados — Configuração'.",
-        "Federação SIP configurada entre os dois locatários via Exchange Online: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Parceria de locatário multi-tenant configurada no Microsoft 365 Admin Center: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -2992,9 +2992,9 @@ export const questions = [
       "respostaCerta": "Até 30 dias após a exclusão; restaurada via Microsoft 365 Admin Center ou PowerShell com Restore-AzureADMSDeletedDirectoryObject — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Restauração de Equipes', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Até 14 dias após a exclusão; restaurada via Teams Admin Center apenas: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Restauração de Equipes'.",
-        "Até 90 dias após a exclusão; restaurada via Portal do Azure AD: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Até 7 dias após a exclusão; restaurada via SharePoint Online Admin Center: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -3017,9 +3017,9 @@ export const questions = [
       "respostaCerta": "Todo o conteúdo é restaurado integralmente, incluindo mensagens, arquivos no SharePoint e configurações de canais — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Restauração de Equipes', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Apenas os arquivos são restaurados; mensagens de chat são permanentemente perdidas: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Restauração de Equipes'.",
-        "A equipe é restaurada sem membros; o proprietário precisa adicioná-los novamente manualmente: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Somente os canais padrão são restaurados; canais privados precisam ser recriados manualmente: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -3042,9 +3042,9 @@ export const questions = [
       "respostaCerta": "Configurar permissões de convidado no Azure AD para limitar acesso ao diretório — desativar \"Usuários convidados podem pesquisar usuários, grupos ou recursos\" — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Políticas de Acesso de Convidado — Avançado', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Desativar acesso de convidado globalmente e usar apenas canais compartilhados: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Acesso de Convidado — Avançado'.",
-        "Aplicar política de acesso condicional bloqueando pesquisa de diretório para contas externas: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configurar barreiras de informação entre convidados e membros internos: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Acesso anônimo=participação reunião sem identidade; não team membership",
+        "Acesso Externo=chat c/ domínios federados; não membership em teams",
+        "Azure AD B2C=identidades consumer; não integrável nativamente em Teams"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -3067,9 +3067,9 @@ export const questions = [
       "respostaCerta": "Enquetes (Polls) via Microsoft Forms integrado às reuniões do Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Microsoft Forms no Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Aplicativo Whiteboard com votação colaborativa: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Microsoft Forms no Teams'.",
-        "Canal de feedback com reações de emoji como votação: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Power Apps com formulário de coleta integrado ao Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -3092,9 +3092,9 @@ export const questions = [
       "respostaCerta": "Um aplicativo do Teams que agrega conteúdo da intranet do SharePoint, notícias corporativas e recursos de engajamento de funcionários em um único hub — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Viva Connections no Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Uma plataforma de aprendizado que substitui o LinkedIn Learning integrada ao Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Viva Connections no Teams'.",
-        "Um módulo de bem-estar e saúde mental para funcionários acessível pelo Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Um painel de análise de produtividade individual integrado ao Teams e Outlook: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -3117,9 +3117,9 @@ export const questions = [
       "respostaCerta": "Como um aplicativo instalável no Teams que permite acesso a comunidades e conversas corporativas do Yammer diretamente na interface do Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Viva Engage (Yammer) no Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "O Viva Engage substitui completamente os canais do Teams para comunicação informal: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Viva Engage (Yammer) no Teams'.",
-        "O Viva Engage sincroniza automaticamente todas as mensagens do Teams com o Yammer: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "O Viva Engage é acessível apenas pelo SharePoint, sem integração direta com Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -3142,9 +3142,9 @@ export const questions = [
       "respostaCerta": "Aplicativo Aprovações (Approvals) nativo do Microsoft Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Aprovações no Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Forms com notificação de resposta via Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Aprovações no Teams'.",
-        "Power Automate com fluxo de aprovação integrado ao Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Planner com tarefas marcadas como \"aguardando aprovação\": Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -3167,9 +3167,9 @@ export const questions = [
       "respostaCerta": "Microsoft Planner (ou Tasks by Planner and To Do) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Planner e Tasks no Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Project Online integrado ao canal: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Planner e Tasks no Teams'.",
-        "Azure DevOps Boards adicionado como guia: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Lists com exibição de calendário: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -3192,9 +3192,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Análise e relatórios > Relatório de uso de aplicativos do Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Relatórios de Aplicativos', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft 365 Admin Center > Aplicativos integrados > Estatísticas de uso: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Relatórios de Aplicativos'.",
-        "Microsoft Defender for Cloud Apps > Aplicativos descobertos: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Azure AD > Aplicativos empresariais > Relatório de atividade de login: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -3217,9 +3217,9 @@ export const questions = [
       "respostaCerta": "Regras de alerta (Alert Rules) no Teams Admin Center > Notificações e alertas — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Alertas do Teams Admin Center', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Azure Monitor com alerta baseado em métricas do Microsoft Graph: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Alertas do Teams Admin Center'.",
-        "Microsoft Sentinel com conector de dados do Teams para alertas de qualidade: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Power Automate com gatilho do CQD para envio de notificações: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -3242,9 +3242,9 @@ export const questions = [
       "respostaCerta": "Dispositivo de áudio utilizado, qualidade do microfone e alto-falante, e configurações de supressão de eco do dispositivo — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Diagnóstico de Chamadas', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Latência de rede, jitter e perda de pacotes na rota UDP: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Diagnóstico de Chamadas'.",
-        "Versão do cliente Teams e sistema operacional do dispositivo do usuário: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Taxa de utilização do CPU e memória RAM durante as chamadas: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -3267,9 +3267,9 @@ export const questions = [
       "respostaCerta": "Na caixa de correio do Exchange Online de cada membro do canal privado — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Retenção — Canais Privados', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "No site SharePoint do canal privado, separado do site da equipe principal: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Retenção — Canais Privados'.",
-        "Na caixa de correio do grupo Microsoft 365 associado à equipe: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "No Azure Blob Storage criptografado associado ao tenant: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -3292,9 +3292,9 @@ export const questions = [
       "respostaCerta": "Mensagens de canal do Teams, mensagens de chat privado e mensagens de canais privados e compartilhados — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Políticas de Retenção — Escopo', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Apenas mensagens de canais padrão; chats privados exigem política separada do Exchange: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Retenção — Escopo'.",
-        "Mensagens de canal, arquivos do SharePoint e gravações do Stream em uma única política: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Somente mensagens de chat 1:1; mensagens de canal são cobertas pela política do SharePoint: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -3317,9 +3317,9 @@ export const questions = [
       "respostaCerta": "Bloqueio de Preservação (Preservation Lock) aplicado à política de retenção no Microsoft Purview — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Microsoft Purview — Bloqueio de Preservação', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de retenção com aprovação de múltiplos administradores para alterações: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Microsoft Purview — Bloqueio de Preservação'.",
-        "Chave de criptografia gerenciada pelo cliente (CMK) bloqueando alterações de política: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Azure Policy com negação de modificação em políticas de conformidade do Purview: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure AD Portal=identidades; Teams policies gerenciadas via Teams Admin",
+        "Exchange Admin Center=mailbox policies; Teams policies separadas",
+        "Intune=mobile device management; Teams Admin Center = Teams-specific"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -3342,9 +3342,9 @@ export const questions = [
       "respostaCerta": "Política de acesso condicional com controle de sessão e restrição de aplicativo cliente (browser only) aplicada a usuários convidados — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Acesso Externo (Federação) permite chat com domínios externos; Acesso de Convidado (Guest Access) traz o usuário para dentro do seu tenant. No tópico de 'Acesso Condicional — Teams Específico', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Configuração de acesso de convidado no Teams Admin Center limitando plataformas de acesso: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Acesso Condicional — Teams Específico'.",
-        "Política de conformidade de dispositivos no Intune bloqueando apps não gerenciados para externos: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Azure AD B2B com restrição de plataforma configurada no convite de convidado: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Microsoft Store=installer desktop; requer instalação de aplicativo",
+        "Teams mobile=cliente separado; funcionalidade reduzida vs web",
+        "Teams Desktop obrigatório=restrição administrativa; não é opção do usuário"
       ],
       "dicaOuro": "Identidade no Teams é governada pelo Microsoft Entra ID (MFA, Acesso Condicional e Guest Access)."
     }
@@ -3367,9 +3367,9 @@ export const questions = [
       "respostaCerta": "Otimização de Mídia Local (Local Media Optimization) para Direct Routing — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Bandwidth e Otimização de Mídia', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Azure ExpressRoute com QoS configurado para tráfego do Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Bandwidth e Otimização de Mídia'.",
-        "Microsoft Teams Network Planner com perfil de filial remota: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Split tunneling de VPN configurado para excluir tráfego UDP do Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "AD DS local=nenhuma integração nativa Teams; requer sincronização Entra",
+        "MSA pessoal=conta consumer; Teams corporativo requer Entra ID",
+        "LDAP on-prem=legacy; Entra ID é identity provider padrão Microsoft 365"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -3392,9 +3392,9 @@ export const questions = [
       "respostaCerta": "Habilitar recursos como roteamento baseado em localização (LBR), políticas de emergência por localização e relatórios de rede por site no CQD — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Perfis de Rede no Teams Admin Center', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Configurar QoS automaticamente por sub-rede sem necessidade de switches gerenciados: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Perfis de Rede no Teams Admin Center'.",
-        "Restringir acesso ao Teams apenas para dispositivos conectados às sub-redes cadastradas: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Monitorar largura de banda consumida por localização via Azure Monitor: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -3417,9 +3417,9 @@ export const questions = [
       "respostaCerta": "Ativar moderação de canal e configurar apenas proprietários como moderadores com permissão exclusiva de postagem — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Canais de Anúncio', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Criar um canal privado com acesso somente leitura para membros: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Canais de Anúncio'.",
-        "Usar o canal Geral com permissões de mensagem restrita ao proprietário: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configurar política de mensagens bloqueando postagens de membros não moderadores: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -3442,9 +3442,9 @@ export const questions = [
       "respostaCerta": "Fixar (Pin) a mensagem no canal clicando nas opções da mensagem — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Mensagens Fixadas', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Marcar a mensagem como urgente com notificação de prioridade: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Mensagens Fixadas'.",
-        "Adicionar a mensagem como uma guia (tab) no canal: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Enviar a mensagem como anúncio com banner colorido destacado: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -3467,9 +3467,9 @@ export const questions = [
       "respostaCerta": "@equipe (ou @nome-da-equipe) para notificar todos os membros da equipe — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de '@Menções e Notificações', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "@canal para notificar apenas membros que seguem aquele canal específico: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para '@Menções e Notificações'.",
-        "@todos para notificar todos os usuários do tenant simultaneamente: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "@membros para notificar apenas membros sem função de proprietário: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -3492,9 +3492,9 @@ export const questions = [
       "respostaCerta": "Tags (Marcações) no Teams — criar uma tag \"suporte\" e atribuir os membros relevantes — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Tags no Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Criar um canal privado chamado \"suporte\" com @menção ao canal: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Tags no Teams'.",
-        "Criar um grupo de distribuição no Exchange Online com o apelido \"suporte\": Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configurar um bot de menção personalizado via Power Automate: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -3517,9 +3517,9 @@ export const questions = [
       "respostaCerta": "Proprietários da equipe; o administrador pode alterar essa configuração para permitir que membros também criem tags — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Tags no Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Apenas administradores globais via Teams Admin Center: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Tags no Teams'.",
-        "Qualquer membro da equipe por padrão, sem restrições: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Somente o criador original da equipe, independentemente de configurações: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -3542,9 +3542,9 @@ export const questions = [
       "respostaCerta": "Relatório de presença da reunião (Attendance Report) disponível para download pelo organizador após o término da reunião — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Relatórios de Presença em Reuniões', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Teams Admin Center > Análise e relatórios > Relatório de reuniões com detalhes por usuário: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Relatórios de Presença em Reuniões'.",
-        "Log de auditoria no Microsoft Purview com filtro por evento de reunião: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft 365 Admin Center > Relatórios > Atividade de reuniões do Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -3567,9 +3567,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Reuniões > Configurações de reunião > habilitar \"Participantes anônimos podem ingressar em uma reunião\" — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Configurações Globais de Reunião', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de reunião individual — ativar \"Permitir acesso anônimo\" por grupo de usuários: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Configurações Globais de Reunião'.",
-        "Azure AD > Configurações de colaboração externa > Acesso anônimo a reuniões: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft 365 Admin Center > Configurações > Microsoft Teams > Acesso externo: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -3592,9 +3592,9 @@ export const questions = [
       "respostaCerta": "Solicitação de portabilidade numérica (Number Porting) via Teams Admin Center ou suporte Microsoft — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Portabilidade Numérica', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Aquisição de novos números no Teams Admin Center e desativação dos números antigos na operadora: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Portabilidade Numérica'.",
-        "Configuração de encaminhamento de chamadas da operadora antiga para os novos números do Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Migração de números via Direct Routing com SBC temporário durante a transição: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -3617,9 +3617,9 @@ export const questions = [
       "respostaCerta": "Atribuir uma licença de Audioconferência ao usuário e configurar o número de discagem padrão para o país desejado nas configurações de audioconferência — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Audioconferência — Configurações', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Adquirir um número de serviço local no Teams Admin Center e atribuí-lo à ponte de audioconferência: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Audioconferência — Configurações'.",
-        "Configurar um Atendedor Automático com número local que redireciona para reuniões do Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Implementar Direct Routing com SBC local para fornecer números de discagem regionais: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -3642,9 +3642,9 @@ export const questions = [
       "respostaCerta": "Microsoft Teams Phone (Phone System) + Plano de Chamada (Calling Plan) adequado ao país — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Licenciamento Avançado', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Teams Essentials + Audioconferência com discagem ilimitada: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Licenciamento Avançado'.",
-        "Microsoft 365 E5 com upgrade completo da licença base: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Teams Phone Mobile + Operator Connect sem add-ons adicionais: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "SBC on-premises=Direct Routing; PSTN gateway=método legado",
+        "Números de serviço=recebem apenas; não iniciam chamadas",
+        "Plano de chamada=rotas de voz=conceitos ortogonais, ambos necessários"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -3667,9 +3667,9 @@ export const questions = [
       "respostaCerta": "Microsoft Teams Essentials (ou Teams gratuito para contas Microsoft pessoais/trabalho) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Licenciamento — Usuários Gratuitos', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft 365 Business Basic com período de avaliação de 30 dias: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Licenciamento — Usuários Gratuitos'.",
-        "Office 365 F1 com acesso limitado ao Teams via navegador: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Teams para Educação com licença gratuita para instituições: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -3692,9 +3692,9 @@ export const questions = [
       "respostaCerta": "Linguagem ofensiva, informações confidenciais, conflitos de interesse e violações regulatórias definidas por classificadores treináveis e palavras-chave — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Conformidade de Comunicação — Políticas', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Apenas arquivos maliciosos e links de phishing em mensagens do Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Conformidade de Comunicação — Políticas'.",
-        "Somente mensagens com dados pessoais identificáveis (PII) como CPF e e-mail: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Exclusivamente violações de DLP previamente configuradas no Purview: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -3717,9 +3717,9 @@ export const questions = [
       "respostaCerta": "Microsoft Defender for Cloud Apps com política de sessão e controle de aplicativo de acesso condicional (CAAC) para Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Microsoft Defender for Cloud Apps — Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de DLP no Purview com restrição de download por tipo de dispositivo: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Microsoft Defender for Cloud Apps — Teams'.",
-        "Política de acesso condicional no Entra ID bloqueando download em dispositivos não conformes: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Purview Information Protection com criptografia automática de arquivos baixados: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -3742,9 +3742,9 @@ export const questions = [
       "respostaCerta": "Conectar o Power BI ao Call Quality Dashboard (CQD) via conector do Power BI para Teams ou usar o Microsoft Graph API para extrair dados de uso — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Power BI e Teams Analytics', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Exportar relatórios do Teams Admin Center em CSV e importar manualmente no Power BI mensalmente: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Power BI e Teams Analytics'.",
-        "Usar o Azure Monitor com Log Analytics e criar visualizações no Power BI via conector nativo: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configurar Microsoft Sentinel com conector Teams e criar workbooks personalizados: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -3767,9 +3767,9 @@ export const questions = [
       "respostaCerta": "Reuniões > Políticas de reunião (Meetings > Meeting Policies) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Microsoft Teams Admin Center — Navegação', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Usuários > Políticas atribuídas > Reuniões: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Microsoft Teams Admin Center — Navegação'.",
-        "Configurações de toda a organização > Reuniões globais: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Aplicativos > Políticas de reunião e colaboração: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure AD Portal=identidades; Teams policies gerenciadas via Teams Admin",
+        "Exchange Admin Center=mailbox policies; Teams policies separadas",
+        "Intune=mobile device management; Teams Admin Center = Teams-specific"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -3792,9 +3792,9 @@ export const questions = [
       "respostaCerta": "Pacotes de política (Policy Packages) no Teams Admin Center — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Pacotes de Política', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Modelos de equipe com políticas pré-configuradas: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Pacotes de Política'.",
-        "Grupos de política dinâmica no Azure AD com atribuição automática: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Scripts PowerShell com Grant-CsTeamsPolicy em lote: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure AD Portal=identidades; Teams policies gerenciadas via Teams Admin",
+        "Exchange Admin Center=mailbox policies; Teams policies separadas",
+        "Intune=mobile device management; Teams Admin Center = Teams-specific"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -3817,9 +3817,9 @@ export const questions = [
       "respostaCerta": "Atribuição de política em grupo (Group Policy Assignment) no Teams Admin Center vinculando a política ao grupo do Azure AD — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Atribuição de Política em Grupo', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Exportar lista de usuários em CSV e importar via PowerShell com Grant-CsTeamsMeetingPolicy: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Atribuição de Política em Grupo'.",
-        "Criar um pacote de política e atribuí-lo a cada usuário manualmente: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configurar política global padrão que se aplica automaticamente a todos os usuários: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -3842,9 +3842,9 @@ export const questions = [
       "respostaCerta": "A política do grupo com maior classificação (rank) de prioridade na atribuição em grupo é aplicada; em caso de empate, o grupo com mais membros tem precedência — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Atribuição de Política — Precedência', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "A política atribuída mais recentemente sempre substitui as anteriores: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Atribuição de Política — Precedência'.",
-        "As políticas são mescladas automaticamente com as configurações mais restritivas prevalecendo: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "A política do grupo menor (menos membros) tem sempre precedência sobre grupos maiores: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -3867,9 +3867,9 @@ export const questions = [
       "respostaCerta": "Um Grupo do Microsoft 365 (Microsoft 365 Group) com caixa de correio, site SharePoint e outros recursos associados — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Microsoft 365 Groups e Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Uma Unidade Administrativa no Azure AD com membros sincronizados: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Microsoft 365 Groups e Teams'.",
-        "Uma lista de distribuição no Exchange Online com caixa de correio compartilhada: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Um workspace do Power BI com permissões sincronizadas ao grupo do Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -3892,9 +3892,9 @@ export const questions = [
       "respostaCerta": "Associação dinâmica de grupo (Dynamic Group Membership) no Azure AD vinculada ao Grupo Microsoft 365 da equipe — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Associação Dinâmica de Membros', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de acesso dinâmico configurada no Teams Admin Center: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Associação Dinâmica de Membros'.",
-        "Power Automate com gatilho de mudança de atributo no Azure AD: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Script PowerShell agendado via Azure Automation para sincronização de membros: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -3917,9 +3917,9 @@ export const questions = [
       "respostaCerta": "Política de expiração de Grupos Microsoft 365 com notificação aos proprietários para renovação periódica — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Governança de Equipes', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Relatório de uso do Teams Admin Center com filtro de equipes inativas: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Governança de Equipes'.",
-        "Microsoft Purview eDiscovery para identificar equipes sem atividade recente: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Azure AD Access Reviews aplicado especificamente a grupos sem proprietário: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -3942,9 +3942,9 @@ export const questions = [
       "respostaCerta": "Revisões de acesso (Access Reviews) no Microsoft Entra ID configuradas para Grupos Microsoft 365 associados às equipes sensíveis — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Revisões de Acesso', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de expiração de grupos com renovação obrigatória pelos proprietários: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Revisões de Acesso'.",
-        "Barreiras de informação com revisão trimestral automática de segmentos: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Conformidade de comunicação com alertas de acesso não autorizado em canais sensíveis: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -3967,9 +3967,9 @@ export const questions = [
       "respostaCerta": "A reunião fica visível e acessível a todos os membros do canal, que podem ingressar sem convite individual, e o histórico permanece no canal — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Reuniões de Canal', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Reuniões de canal suportam mais de 1.000 participantes automaticamente: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Reuniões de Canal'.",
-        "A gravação é armazenada no OneDrive do organizador com link automático no canal: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Reuniões de canal não consomem créditos de audioconferência PSTN: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -3992,9 +3992,9 @@ export const questions = [
       "respostaCerta": "Licença Microsoft 365 Copilot atribuída ao usuário e transcrição da reunião habilitada — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Copilot em Reuniões', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Licença Microsoft Teams Premium com gravação automática obrigatória ativada: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Copilot em Reuniões'.",
-        "Licença Microsoft 365 E5 com Microsoft Purview Compliance ativo: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Plano de Audioconferência com discagem habilitada para captura de voz do Copilot: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -4017,9 +4017,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Análise e relatórios > Relatórios de uso > Uso de PSTN e SMS — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Relatórios PSTN', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft 365 Admin Center > Faturamento > Uso de serviços de voz: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Relatórios PSTN'.",
-        "Portal do Azure > Gerenciamento de custos > Filtro por serviço Teams Phone: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Call Quality Dashboard > Relatórios PSTN com filtro por tipo de chamada: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "SBC on-premises=Direct Routing; PSTN gateway=método legado",
+        "Números de serviço=recebem apenas; não iniciam chamadas",
+        "Plano de chamada=rotas de voz=conceitos ortogonais, ambos necessários"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -4042,9 +4042,9 @@ export const questions = [
       "respostaCerta": "Configurar o tempo limite da fila para 180 segundos e definir a ação de estouro/tempo limite como \"Redirecionar para correio de voz\" do grupo designado — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Filas de Chamada — Configuração Avançada', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Criar uma regra de encaminhamento no Exchange Online para redirecionar chamadas perdidas ao correio de voz: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Filas de Chamada — Configuração Avançada'.",
-        "Configurar o Atendedor Automático para interceptar chamadas após 3 minutos de espera na fila: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Habilitar callback automático na fila para que o sistema retorne a chamada ao usuário: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -4067,9 +4067,9 @@ export const questions = [
       "respostaCerta": "Gravação baseada em política de conformidade (Compliance Recording) via parceiro certificado Microsoft integrado ao Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Conformidade de Gravação de Chamadas', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de reunião com gravação automática obrigatória ativada no Teams Admin Center: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Conformidade de Gravação de Chamadas'.",
-        "Microsoft Purview com política de retenção aplicada a gravações do Stream: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Direct Routing com SBC configurado para interceptar e gravar todas as chamadas PSTN: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -4092,9 +4092,9 @@ export const questions = [
       "respostaCerta": "Team.ReadBasic.All e TeamMember.Read.All (permissões de aplicativo no Azure AD) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Microsoft Graph API — Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "User.ReadAll e Group.ReadAll com escopo delegado de administrador: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Microsoft Graph API — Teams'.",
-        "Teams.Read e Members.List com autenticação de usuário padrão: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Directory.ReadWrite.All com consentimento de administrador global obrigatório: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -4117,9 +4117,9 @@ export const questions = [
       "respostaCerta": "Fazer o sideload do bot como aplicativo personalizado no catálogo de aplicativos da organização via Teams Admin Center — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Bots no Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Publicar o bot na Teams App Store com visibilidade restrita por tenant ID: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Bots no Teams'.",
-        "Distribuir o manifesto do bot via e-mail para que cada usuário instale manualmente: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Registrar o bot no Azure AD com permissão restrita ao domínio da organização: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -4142,9 +4142,9 @@ export const questions = [
       "respostaCerta": "Extensões de mensagem (Message Extensions) baseadas em busca — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Extensões de Mensagem', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Incoming Webhook com payload de busca configurado: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Extensões de Mensagem'.",
-        "Aplicativo de guia (Tab App) configurado como painel de pesquisa: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Bot de conversação com comando de busca integrado via Graph API: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -4167,9 +4167,9 @@ export const questions = [
       "respostaCerta": "Cartões Adaptáveis (Adaptive Cards) com ações interativas enviados via bot ou webhook — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Cartões Adaptáveis (Adaptive Cards)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Mensagens de prioridade urgente com botões de resposta rápida: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Cartões Adaptáveis (Adaptive Cards)'.",
-        "Formulários do Microsoft Forms incorporados em mensagens de canal: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Power Apps incorporado como guia com notificação push para o usuário: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -4192,9 +4192,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Dispositivos > selecionar o dispositivo > iniciar atualização de firmware remota — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Gerenciamento de Dispositivos Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Intune > Dispositivos > Ações remotas > Atualizar firmware: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Gerenciamento de Dispositivos Teams'.",
-        "Acessar a interface web do telefone via IP e iniciar atualização manual: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Conectar o telefone via USB ao computador e usar Teams Device Manager: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -4217,9 +4217,9 @@ export const questions = [
       "respostaCerta": "Perfis de configuração de dispositivos (Device Configuration Profiles) no Teams Admin Center aplicados aos telefones IP Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Políticas de Configuração de Dispositivos Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Perfis de configuração de dispositivos no Microsoft Intune aplicados via MDM: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Configuração de Dispositivos Teams'.",
-        "Política de grupo (GPO) distribuída via Active Directory para dispositivos Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Script PowerShell remoto executado via Azure Automation nos dispositivos: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -4242,9 +4242,9 @@ export const questions = [
       "respostaCerta": "Regras de alerta no Teams Admin Center > Notificações e alertas > Dispositivos > configurar alerta de dispositivo offline — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Notificações e Alertas Avançados', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Azure Monitor com métrica de disponibilidade de dispositivo Teams Rooms: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Notificações e Alertas Avançados'.",
-        "Microsoft Sentinel com conector de dispositivos Teams para detecção de inatividade: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Power Automate com gatilho de monitoramento de dispositivo via Graph API: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -4267,9 +4267,9 @@ export const questions = [
       "respostaCerta": "Microsoft Teams Rooms Pro Management (portal de gerenciamento MTR Pro) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Teams Rooms Pro Management', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Intune com perfis de configuração para dispositivos Teams Rooms: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Teams Rooms Pro Management'.",
-        "Microsoft Endpoint Configuration Manager (MECM/SCCM) para dispositivos de sala: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Azure Arc com extensão de gerenciamento para dispositivos Teams certificados: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "AD DS local=nenhuma integração nativa Teams; requer sincronização Entra",
+        "MSA pessoal=conta consumer; Teams corporativo requer Entra ID",
+        "LDAP on-prem=legacy; Entra ID é identity provider padrão Microsoft 365"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -4292,9 +4292,9 @@ export const questions = [
       "respostaCerta": "Configuração de residência de dados no momento da criação do tenant Microsoft 365, selecionando a região EU, com confirmação via Microsoft 365 Data Residency commitments — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Regiões de Dados e Residência', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Azure Policy aplicando restrição geográfica de armazenamento ao tenant Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Regiões de Dados e Residência'.",
-        "Configuração de localização de dados no Teams Admin Center > Configurações de toda a organização: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Política de retenção no Purview com restrição de armazenamento por região geográfica: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -4317,9 +4317,9 @@ export const questions = [
       "respostaCerta": "Microsoft 365 Multi-Geo, que permite armazenar dados em múltiplas regiões geográficas com base na localização preferencial do usuário (PDL) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Multi-Geo no Microsoft 365', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Azure Traffic Manager com roteamento geográfico de dados do Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Multi-Geo no Microsoft 365'.",
-        "Política de residência de dados por grupo no Microsoft Purview: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configuração de tenant regional separado por país com federação entre tenants: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -4342,9 +4342,9 @@ export const questions = [
       "respostaCerta": "OAuth 2.0 com OpenID Connect via Microsoft Entra ID (Azure AD) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Acesso Externo (Federação) permite chat com domínios externos; Acesso de Convidado (Guest Access) traz o usuário para dentro do seu tenant. No tópico de 'Autenticação Moderna', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "NTLM com autenticação integrada do Windows para clientes no domínio: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Autenticação Moderna'.",
-        "SAML 2.0 exclusivamente para autenticação federada com ADFS: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Kerberos com tickets de serviço para recursos internos do Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "AD DS local=nenhuma integração nativa Teams; requer sincronização Entra",
+        "MSA pessoal=conta consumer; Teams corporativo requer Entra ID",
+        "LDAP on-prem=legacy; Entra ID é identity provider padrão Microsoft 365"
       ],
       "dicaOuro": "Identidade no Teams é governada pelo Microsoft Entra ID (MFA, Acesso Condicional e Guest Access)."
     }
@@ -4367,9 +4367,9 @@ export const questions = [
       "respostaCerta": "Política de tempo de vida de token (Token Lifetime Policy) no Microsoft Entra ID ou configuração de frequência de entrada no acesso condicional — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Acesso Externo (Federação) permite chat com domínios externos; Acesso de Convidado (Guest Access) traz o usuário para dentro do seu tenant. No tópico de 'Tokens e Sessões', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de sessão no Teams Admin Center com timeout de inatividade configurável: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Tokens e Sessões'.",
-        "Configuração de bloqueio de tela automático nas políticas de dispositivo do Intune: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Política de senha com expiração de sessão no Microsoft 365 Admin Center: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Identidade no Teams é governada pelo Microsoft Entra ID (MFA, Acesso Condicional e Guest Access)."
     }
@@ -4392,9 +4392,9 @@ export const questions = [
       "respostaCerta": "Reescrever com Copilot (Rewrite with Copilot) disponível na caixa de composição de mensagens do Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Sugestões de Mensagem com IA', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Editor integrado ao Teams para correção gramatical avançada: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Sugestões de Mensagem com IA'.",
-        "Sugestões automáticas do Viva Insights baseadas em padrões de comunicação: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Power Virtual Agents com respostas automáticas configuradas por administrador: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -4417,9 +4417,9 @@ export const questions = [
       "respostaCerta": "Barra de pesquisa do Teams com filtros por pessoa, data e palavra-chave — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Histórico de Chat e Pesquisa', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft 365 Admin Center > Pesquisa de conteúdo de usuário: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Histórico de Chat e Pesquisa'.",
-        "SharePoint Online > Pesquisa de site > filtrar por mensagens do Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "eDiscovery no Purview com busca por palavra-chave e período: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -4442,9 +4442,9 @@ export const questions = [
       "respostaCerta": "Tradução de mensagem inline — clicar em \"...\" na mensagem e selecionar \"Traduzir\" — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Tradução de Mensagens', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Translator adicionado como aplicativo na guia do canal: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Tradução de Mensagens'.",
-        "Extensão do navegador para tradução automática de mensagens web: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configuração de idioma preferencial nas opções de acessibilidade do Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -4467,9 +4467,9 @@ export const questions = [
       "respostaCerta": "Modo Juntos (Together Mode) nas opções de exibição da reunião do Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Modo Juntos (Together Mode)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Plano de fundo personalizado com imagem de grupo carregada pelo organizador: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Modo Juntos (Together Mode)'.",
-        "Modo de grande galeria (Large Gallery) com exibição de até 49 participantes: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Mesh com avatares 3D integrados à reunião do Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -4492,9 +4492,9 @@ export const questions = [
       "respostaCerta": "Interpretação de idiomas (Language Interpretation) em reuniões do Teams — requer Teams Premium para configuração pelo organizador — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Interpretação de Idiomas', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Legendas ao vivo (Live Captions) com tradução automática para todos os idiomas suportados: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Interpretação de Idiomas'.",
-        "Transcrição automática com pós-tradução gerada pelo Copilot após a reunião: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Translator integrado ao Teams com canal de áudio separado por idioma: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -4517,9 +4517,9 @@ export const questions = [
       "respostaCerta": "As chamadas PSTN falham a menos que um Survivable Branch Appliance (SBA) esteja configurado para fornecer continuidade de chamadas localmente — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Survivable Branch Appliance', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "O Teams automaticamente redireciona chamadas para o Calling Plan como fallback: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Survivable Branch Appliance'.",
-        "As chamadas internas do Teams continuam funcionando; apenas chamadas PSTN externas falham: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "O SBC local mantém todas as funcionalidades do Teams automaticamente sem configuração adicional: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "SBC on-premises=Direct Routing; PSTN gateway=método legado",
+        "Números de serviço=recebem apenas; não iniciam chamadas",
+        "Plano de chamada=rotas de voz=conceitos ortogonais, ambos necessários"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -4542,9 +4542,9 @@ export const questions = [
       "respostaCerta": "Em países onde regulamentações de telecomunicações proíbem o bypass de tarifas PSTN locais, exigindo que chamadas usem gateways locais baseados na localização do usuário — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Roteamento de Voz Baseado em Localização — Avançado', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Em qualquer implementação de Direct Routing para garantir qualidade de chamada por proximidade geográfica: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Roteamento de Voz Baseado em Localização — Avançado'.",
-        "Apenas em organizações com mais de 1.000 usuários de voz distribuídos globalmente: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Somente para chamadas de emergência E911 em território americano: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -4567,9 +4567,9 @@ export const questions = [
       "respostaCerta": "Bloqueio de litígio (Litigation Hold) ou Bloqueio de eDiscovery aplicado à caixa de correio e dados do usuário no Microsoft Purview — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Holds e Preservação Legal', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de retenção com prioridade máxima aplicada especificamente ao usuário: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Holds e Preservação Legal'.",
-        "Desativar políticas de exclusão automática para o usuário via Teams Admin Center: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Exportar todas as mensagens do usuário via eDiscovery antes de aplicar qualquer bloqueio: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -4592,9 +4592,9 @@ export const questions = [
       "respostaCerta": "Chave do Cliente (Customer Key) no Microsoft Purview — fornece criptografia de camada de serviço com chaves gerenciadas pelo cliente via Azure Key Vault — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Chaves de Criptografia Gerenciadas pelo Cliente', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Azure Disk Encryption com chaves gerenciadas pelo cliente para armazenamento do Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Chaves de Criptografia Gerenciadas pelo Cliente'.",
-        "Criptografia de ponta a ponta (E2EE) habilitada globalmente para todas as comunicações Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Information Protection com chaves BYOK aplicadas a arquivos do SharePoint do Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -4617,9 +4617,9 @@ export const questions = [
       "respostaCerta": "Com E2EE ativado, recursos como gravação, transcrição, legendas ao vivo e transferência de chamadas são desabilitados durante a chamada — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Criptografia de Ponta a Ponta em Chamadas', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "A E2EE só funciona entre usuários do mesmo tenant; chamadas federadas são automaticamente excluídas: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Criptografia de Ponta a Ponta em Chamadas'.",
-        "A E2EE desativa o vídeo e permite apenas áudio para reduzir superfície de ataque: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "A E2EE requer certificado PKI corporativo instalado em ambos os dispositivos dos participantes: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -4642,9 +4642,9 @@ export const questions = [
       "respostaCerta": "Automatizando a classificação, extração de metadados e processamento de documentos armazenados no SharePoint associado às equipes do Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Teams e Microsoft Syntex', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Criando resumos automáticos de reuniões do Teams usando modelos de processamento de linguagem natural: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Teams e Microsoft Syntex'.",
-        "Substituindo o Microsoft Loop como ferramenta de colaboração de documentos nos canais do Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Integrando diretamente ao chat do Teams para responder per: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -4667,9 +4667,9 @@ export const questions = [
       "respostaCerta": "Microsoft Syntex integrado ao SharePoint Online associado aos canais do Teams, com modelos de processamento de conteúdo aplicados às bibliotecas de documentos — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Teams e Microsoft Syntex', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Purview Information Protection com classificação automática baseada em palavras-chave: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Teams e Microsoft Syntex'.",
-        "Power Automate com conector de IA Builder aplicado a arquivos do Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Azure Cognitive Services com pipeline de OCR conectado ao SharePoint via Logic Apps: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -4692,9 +4692,9 @@ export const questions = [
       "respostaCerta": "Azure Communication Services (ACS) com integração Teams — permite que usuários externos participem de reuniões Teams via SDK sem conta Microsoft 365 — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Teams e Azure Communication Services', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Teams SDK com autenticação anônima habilitada no tenant: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Teams e Azure Communication Services'.",
-        "Direct Routing com SBC customizado expondo endpoints de reunião externos: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Graph API com permissão de participação anônima em reuniões: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -4717,9 +4717,9 @@ export const questions = [
       "respostaCerta": "Criação e exclusão de equipes e canais, adição e remoção de membros, alteração de configurações de equipe, acesso a arquivos e atividades em reuniões — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Logs de Auditoria — Eventos Específicos do Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Apenas eventos de segurança como tentativas de login falhas e acesso negado no Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Logs de Auditoria — Eventos Específicos do Teams'.",
-        "Somente eventos de conformidade como ativação de políticas DLP e retenção: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Exclusivamente eventos administrativos realizados no Teams Admin Center por administradores globais: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -4742,9 +4742,9 @@ export const questions = [
       "respostaCerta": "Microsoft Teams Export APIs (parte do Microsoft Graph) com permissões de aplicativo para exportação em escala — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Exportação de Dados do Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "eDiscovery API do Microsoft Purview com exportação de conteúdo Teams em formato PST: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Exportação de Dados do Teams'.",
-        "SharePoint REST API exportando mensagens armazenadas nas bibliotecas de canal: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Power BI Dataflow conectado ao Microsoft Graph para extração de mensagens: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -4767,9 +4767,9 @@ export const questions = [
       "respostaCerta": "Suplemento do Teams para Outlook (Teams Meeting Add-in) instalado automaticamente com o cliente Teams Desktop — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Integração com Microsoft Outlook', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft 365 Apps com integração de calendário habilitada no Teams Admin Center: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Integração com Microsoft Outlook'.",
-        "Plugin do Outlook para videoconferência disponível na Office Store: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configuração de calendário compartilhado no Exchange Online vinculado ao Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -4792,9 +4792,9 @@ export const questions = [
       "respostaCerta": "Exchange Server 2016 CU3 ou posterior com OAuth configurado entre Exchange On-Premises e Azure AD — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Teams e Exchange — Requisitos de Integração', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Exchange Server 2013 SP1 com atualização de híbrido do Microsoft 365: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Teams e Exchange — Requisitos de Integração'.",
-        "Exchange Online exclusivamente; Exchange On-Premises não é suportado com Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Exchange Server 2019 com conector de calendário MAPI configurado para Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -4817,9 +4817,9 @@ export const questions = [
       "respostaCerta": "Implantação via Microsoft Endpoint Configuration Manager (MECM/SCCM) ou Intune usando o instalador MSI do Teams com parâmetros de instalação silenciosa — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Implantação em Larga Escala', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Distribuição via Microsoft Store for Business com implantação automática por grupo do Azure AD: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Implantação em Larga Escala'.",
-        "Script PowerShell via GPO executando o instalador EXE do Teams em cada logon: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Implantação via Azure Virtual Desktop com imagem dourada contendo Teams pré-instalado: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "AD DS local=nenhuma integração nativa Teams; requer sincronização Entra",
+        "MSA pessoal=conta consumer; Teams corporativo requer Entra ID",
+        "LDAP on-prem=legacy; Entra ID é identity provider padrão Microsoft 365"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -4842,9 +4842,9 @@ export const questions = [
       "respostaCerta": "Pública (qualquer pessoa na organização pode ingressar) e Privada (apenas por convite do proprietário) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Sensibilidade e Privacidade de Equipes', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Interna (apenas membros do domínio) e Externa (inclui convidados automaticamente): Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Sensibilidade e Privacidade de Equipes'.",
-        "Restrita (somente administradores podem adicionar membros) e Aberta (auto-ingresso habilitado): Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Confidencial (com criptografia automática) e Padrão (sem restrições de acesso): Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -4867,9 +4867,9 @@ export const questions = [
       "respostaCerta": "Equipe para toda a organização (Org-wide team) — disponível apenas para organizações com até 10.000 usuários — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Equipes para Toda a Organização', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Equipe pública com associação dinâmica baseada em atributo \"todos os usuários\": Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Equipes para Toda a Organização'.",
-        "Equipe com grupo de associação dinâmica do Azure AD incluindo todos os membros: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Equipe de classe com inscrição automática via School Data Sync: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -4892,9 +4892,9 @@ export const questions = [
       "respostaCerta": "Log de auditoria unificado no Microsoft Purview com filtro de atividades administrativas do Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Relatório de Atividades do Administrador', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Teams Admin Center > Análise e relatórios > Log de atividades do administrador: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Relatório de Atividades do Administrador'.",
-        "Microsoft 365 Admin Center > Relatórios > Atividade de administrador global: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Azure AD > Logs de auditoria filtrados por aplicativo Microsoft Teams Admin: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure AD Portal=identidades; Teams policies gerenciadas via Teams Admin",
+        "Exchange Admin Center=mailbox policies; Teams policies separadas",
+        "Intune=mobile device management; Teams Admin Center = Teams-specific"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -4917,9 +4917,9 @@ export const questions = [
       "respostaCerta": "Créditos de Comunicação (Communication Credits) configurados no Microsoft 365 Admin Center para cobrir chamadas de discagem gratuita (toll-free) e países não incluídos no plano — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Créditos de Comunicação', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Plano de Chamada Internacional adicionado à licença de Audioconferência existente: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Créditos de Comunicação'.",
-        "Direct Routing com SBC internacional para absorver custos de discagem global: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Operator Connect com cobertura global automática sem configuração adicional: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -4942,9 +4942,9 @@ export const questions = [
       "respostaCerta": "Microsoft Teams no ambiente Microsoft 365 Government (GCC High) com datacenters exclusivos em território americano e conformidade FedRAMP High — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Teams para Ambientes Governamentais', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Teams no ambiente comercial padrão com política de residência de dados configurada para EUA: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Teams para Ambientes Governamentais'.",
-        "Microsoft Teams DoD (Department of Defense) exclusivo para forças armadas, não aplicável a agências civis: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Azure Government com Teams implantado em máquinas virtuais IaaS dedicadas: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -4967,9 +4967,9 @@ export const questions = [
       "respostaCerta": "Microsoft Teams Network Planner no Teams Admin Center — calcula requisitos de largura de banda por persona e localização — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Análise de Rede para Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Azure Network Performance Monitor com perfil de carga do Teams configurado: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Análise de Rede para Teams'.",
-        "Microsoft Teams Network Assessment Tool executado em estações representativas: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Call Quality Dashboard com simulação de carga pré-implantação: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -4992,9 +4992,9 @@ export const questions = [
       "respostaCerta": "Microsoft Teams documentation hub em docs.microsoft.com/microsoftteams com guias de arquitetura, posters de solução e práticas recomendadas para cada pilar — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Revisão Geral de Arquitetura', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Learn com trilha de aprendizado MS-700 contendo apenas questões de exame: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Revisão Geral de Arquitetura'.",
-        "Teams Admin Center > Ajuda e suporte > Guia de implantação interativo: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft FastTrack com plano de implantação gerado automaticamente pelo portal: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "AD DS local=nenhuma integração nativa Teams; requer sincronização Entra",
+        "MSA pessoal=conta consumer; Teams corporativo requer Entra ID",
+        "LDAP on-prem=legacy; Entra ID é identity provider padrão Microsoft 365"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -5017,9 +5017,9 @@ export const questions = [
       "respostaCerta": "Filtro de feed de atividades — selecionar \"@Menções\" ou \"Não lidas\" no topo do feed de atividades — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Feeds de Atividades', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Configuração de política de mensagens pelo administrador para priorizar menções: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Feeds de Atividades'.",
-        "Ativar notificações de prioridade urgente para todos os canais seguidos: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Instalar o aplicativo \"Notificações Inteligentes\" da Teams App Store: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -5042,9 +5042,9 @@ export const questions = [
       "respostaCerta": "Seguir o canal (Follow Channel) nas configurações do canal para receber notificações de todas as atividades — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Canais Favoritos e Seguidos', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Adicionar o canal como favorito clicando na estrela ao lado do nome do canal: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Canais Favoritos e Seguidos'.",
-        "Configurar uma regra de alerta no Teams Admin Center para o canal específico: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Ativar notificações de prioridade urgente nas configurações pessoais do Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -5067,9 +5067,9 @@ export const questions = [
       "respostaCerta": "Salvar mensagem (Save Message) — clicar em \"...\" na mensagem e selecionar \"Salvar esta mensagem\" — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Mensagens Salvas', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Fixar a mensagem no canal para acesso rápido por todos os membros: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Mensagens Salvas'.",
-        "Encaminhar a mensagem para si mesmo via e-mail pelo Outlook: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Copiar o link da mensagem e salvá-lo no Microsoft To Do como tarefa: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -5092,9 +5092,9 @@ export const questions = [
       "respostaCerta": "\"Compartilhar no Teams\" (Share to Teams) disponível no Outlook, que envia o conteúdo do e-mail para um chat ou canal do Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Integração Teams e Outlook', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Encaminhar o e-mail para o endereço de e-mail do canal no Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Integração Teams e Outlook'.",
-        "Copiar o link do e-mail no Outlook e colar no chat do Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Usar o Power Automate para criar um fluxo de sincronização Outlook-Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -5117,9 +5117,9 @@ export const questions = [
       "respostaCerta": "Editar apenas aquela ocorrência específica da reunião recorrente no Outlook ou Teams e adicionar o participante somente nela — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Reuniões Recorrentes', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Criar uma reunião separada para aquela semana e cancelar a ocorrência recorrente: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Reuniões Recorrentes'.",
-        "Adicionar o participante à série completa e depois removê-lo das outras ocorrências: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Usar o Power Automate para adicionar o participante via API somente na data desejada: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -5142,9 +5142,9 @@ export const questions = [
       "respostaCerta": "Compartilhar PowerPoint Live no Teams — permite que participantes naveguem pelos slides independentemente e vejam legendas ao vivo — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Apresentação de Conteúdo em Reuniões', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Compartilhar a tela inteira com o PowerPoint em modo apresentação: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Apresentação de Conteúdo em Reuniões'.",
-        "Fazer upload do arquivo no canal e compartilhar o link durante a reunião: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Usar o Microsoft Whiteboard integrado para apresentar slides do PowerPoint: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Lobby permite automático=aprovação prévia sempre necessária",
+        "Presenter pode ignorar=somente organizador controla acesso",
+        "Não há whitelist=lobby funciona caso-a-caso por reunião"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -5167,9 +5167,9 @@ export const questions = [
       "respostaCerta": "Microsoft Whiteboard integrado às reuniões do Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Quadro Branco em Reuniões', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Loop com componente de canvas visual: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Quadro Branco em Reuniões'.",
-        "PowerPoint Live com modo de anotação colaborativa: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "OneNote compartilhado como guia na reunião com modo de desenho: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -5192,9 +5192,9 @@ export const questions = [
       "respostaCerta": "Na guia Wiki/Notas do canal no Teams, armazenada no site SharePoint da equipe — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Notas de Reunião', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "No OneDrive for Business do organizador da reunião como arquivo .docx: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Notas de Reunião'.",
-        "No Exchange Online como item de calendário com notas anexadas: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "No Microsoft OneNote compartilhado do bloco de anotações da equipe: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -5217,9 +5217,9 @@ export const questions = [
       "respostaCerta": "Usar a opção \"Silenciar todos\" (Mute All) disponível no painel de participantes da reunião — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Configurações de Áudio em Reuniões', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Ativar a supressão de ruído de fundo nas configurações de áudio da reunião: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Configurações de Áudio em Reuniões'.",
-        "Configurar a política de reunião para silenciar participantes automaticamente ao entrar: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Remover temporariamente os participantes ruidosos e reConvidá-los: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -5242,9 +5242,9 @@ export const questions = [
       "respostaCerta": "Apenas o organizador da reunião entra diretamente; todos os outros participantes — incluindo membros internos e co-organizadores — aguardam no lobby para admissão manual — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Política de Reunião — Lobby Avançado', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Apenas usuários externos aguardam no lobby; membros internos entram diretamente: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Política de Reunião — Lobby Avançado'.",
-        "Todos os participantes entram diretamente, pois co-organizadores herdam permissões do organizador: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "A configuração bloqueia completamente o acesso de convidados à reunião: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -5267,9 +5267,9 @@ export const questions = [
       "respostaCerta": "Aba \"Chamadas\" no Teams > seção \"Histórico\" com lista de chamadas recentes — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Histórico de Chamadas', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Teams Admin Center > Análise por usuário > Histórico de chamadas: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Histórico de Chamadas'.",
-        "Outlook > Calendário > filtrar eventos por tipo \"Chamada Teams\": Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft 365 Admin Center > Relatórios > Atividade de chamadas por usuário: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -5292,9 +5292,9 @@ export const questions = [
       "respostaCerta": "Selecionar dispositivos certificados para Microsoft Teams listados no catálogo oficial de dispositivos certificados da Microsoft — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Dispositivos de Áudio Certificados', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Escolher qualquer dispositivo USB com driver Plug and Play compatível com Windows 10: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Dispositivos de Áudio Certificados'.",
-        "Priorizar dispositivos com cancelamento de ruído ativo independente da certificação Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Usar apenas dispositivos fabricados por parceiros Microsoft como Logitech e Jabra sem verificar certificação: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -5317,9 +5317,9 @@ export const questions = [
       "respostaCerta": "Configurar fluxos de chamada separados para \"horário comercial\" e \"fora do horário/feriados\" nas configurações do Atendedor Automático no Teams Admin Center — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Atendedor Automático — Horário de Funcionamento', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Criar dois Atendedores Automáticos separados e alternar entre eles via Power Automate agendado: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Atendedor Automático — Horário de Funcionamento'.",
-        "Configurar regras de encaminhamento no Exchange Online com base no horário do servidor: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Usar o Dial Plan com regras de normalização diferenciadas por período do dia: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -5342,9 +5342,9 @@ export const questions = [
       "respostaCerta": "Roteamento por ociosidade mais longa (Longest Idle) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Fila de Chamada — Agentes', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Roteamento round-robin (sequencial entre agentes): Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Fila de Chamada — Agentes'.",
-        "Roteamento por presença (Presence-based routing): Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Roteamento por atendente (Attendant routing — toca em todos simultaneamente): Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -5367,9 +5367,9 @@ export const questions = [
       "respostaCerta": "Habilitar o modo de recusa de chamada por agente (Agent opt-out) nas configurações da fila, permitindo que agentes se removam temporariamente via o aplicativo Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Fila de Chamada — Configurações Avançadas', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Configurar status de presença automático que remove o agente da fila quando em \"Ocupado\": Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Fila de Chamada — Configurações Avançadas'.",
-        "Criar uma política de chamada com opção de recusa temporária atribuída aos agentes: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Usar o Power Automate para remover e readicionar agentes com base em gatilhos de calendário: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -5392,9 +5392,9 @@ export const questions = [
       "respostaCerta": "Política de reunião — desativar \"Permitir que participantes anônimos iniciem uma reunião\" (Allow anonymous users to start a meeting) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Políticas de Reunião — Segurança', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Configuração global de reunião — desativar acesso anônimo completamente no tenant: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Políticas de Reunião — Segurança'.",
-        "Política de acesso condicional bloqueando acesso de anônimos antes do organizador: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configuração de lobby — definir que todos aguardem sem exceção até o organizador admitir: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -5417,9 +5417,9 @@ export const questions = [
       "respostaCerta": "Microsoft Teams Premium — recurso de marca d'água (Watermarking) aplicado via política de reunião para vídeo dos participantes e conteúdo compartilhado — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Marca d'Água em Reuniões', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft 365 E5 com Microsoft Purview Information Protection aplicado a reuniões: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Marca d'Água em Reuniões'.",
-        "Microsoft Defender for Cloud Apps com política de sessão aplicando marca d'água em tempo real: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Rótulo de sensibilidade com proteção de conteúdo aplicado automaticamente a gravações: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -5442,9 +5442,9 @@ export const questions = [
       "respostaCerta": "Criptografia de ponta a ponta para reuniões em grupo, rótulos de sensibilidade em reuniões e prevenção de cópia de chat de reunião — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Reuniões Protegidas (Teams Premium)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Gravação automática obrigatória, transcrição criptografada e exportação segura para Purview: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Reuniões Protegidas (Teams Premium)'.",
-        "Lobby inteligente com reconhecimento facial e autenticação biométrica de participantes: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Bloqueio de compartilhamento de tela para participantes externos e anonimização de vídeo: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -5467,9 +5467,9 @@ export const questions = [
       "respostaCerta": "Microsoft Lists adicionado como guia (tab) no canal do Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Microsoft Lists no Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Planner com exibição de lista habilitada no canal: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Microsoft Lists no Teams'.",
-        "Microsoft Excel Online compartilhado como guia no canal: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "SharePoint List acessado via guia de site do SharePoint no canal: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -5492,9 +5492,9 @@ export const questions = [
       "respostaCerta": "Aplicativo Tarefas (Tasks by Planner and To Do) no Microsoft Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Aplicativo Tarefas no Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Project Online integrado ao Teams como painel de tarefas unificado: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Aplicativo Tarefas no Teams'.",
-        "Microsoft Lists com exibição de calendário sincronizada ao Outlook: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Viva Goals integrado ao Teams para rastreamento de OKRs e tarefas: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -5517,9 +5517,9 @@ export const questions = [
       "respostaCerta": "Instalar o aplicativo oficial do ServiceNow da Teams App Store ou usar o conector do ServiceNow com Incoming Webhook para notificações e cartões adaptáveis para ações — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Integração com ServiceNow', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Criar um fluxo no Power Automate com conector ServiceNow e envio de mensagens ao Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Integração com ServiceNow'.",
-        "Configurar e-mail para canal do Teams com encaminhamento de notificações do ServiceNow: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Usar a API do Microsoft Graph para criar um bot customizado que consulta tickets do ServiceNow: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -5542,9 +5542,9 @@ export const questions = [
       "respostaCerta": "Guia de canal personalizada (Custom Channel Tab) desenvolvida com o Teams JavaScript SDK e hospedada em servidor HTTPS — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Guias Personalizadas (Custom Tabs)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Incoming Webhook com payload HTML para renderizar o aplicativo dentro do Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Guias Personalizadas (Custom Tabs)'.",
-        "iFrame estático adicionado via configurações do canal sem necessidade de desenvolvimento: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Power Apps canvas app incorporado como guia sem necessidade de SDK do Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -5567,9 +5567,9 @@ export const questions = [
       "respostaCerta": "Microsoft Teams Toolkit — extensão para Visual Studio Code que simplifica o desenvolvimento, depuração e publicação de aplicativos Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Teams Toolkit', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Azure DevOps com pipeline de CI/CD configurado para publicação no Teams App Store: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Teams Toolkit'.",
-        "Microsoft Power Platform CLI com comandos de empacotamento para Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "GitHub Copilot com templates de aplicativo Teams pré-configurados para VS Code: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -5592,9 +5592,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Dispositivos > Telefones IP — exibe versão de firmware, status e detalhes de cada dispositivo — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Relatório de Dispositivos — Detalhes', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Intune > Dispositivos > Hardware > Detalhes de firmware por dispositivo: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Relatório de Dispositivos — Detalhes'.",
-        "Azure AD > Dispositivos > Propriedades do dispositivo > Versão de SO: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Endpoint Configuration Manager > Inventário de hardware > Relatório de firmware: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -5617,9 +5617,9 @@ export const questions = [
       "respostaCerta": "Uma chamada onde uma ou mais métricas de qualidade de mídia (jitter, perda de pacote, latência) excedem os limites definidos pela Microsoft para qualidade aceitável — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'CQD — Dimensões e Métricas', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Uma chamada que foi encerrada antes de 30 segundos de duração pelo usuário: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'CQD — Dimensões e Métricas'.",
-        "Uma chamada onde o usuário explicitamente classificou a qualidade como ruim no feedback pós-chamada: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Uma chamada PSTN que falhou antes de ser atendida pelo destinatário: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -5642,9 +5642,9 @@ export const questions = [
       "respostaCerta": "Permite correlacionar métricas de qualidade de chamada com localizações físicas específicas (andares, edifícios, sub-redes), facilitando a identificação de problemas de rede por localização — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'CQD — Building Data', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Habilita relatórios de uso de Teams Rooms por sala física com mapa de calor de ocupação: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'CQD — Building Data'.",
-        "Permite que o CQD exiba nomes de usuários em vez de endereços IP nos relatórios de qualidade: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Automatiza a configuração de QoS por sub-rede com base nas informações de edifício: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -5667,9 +5667,9 @@ export const questions = [
       "respostaCerta": "Conta de recurso (Resource Account) associada ao Atendedor Automático ou Fila de Chamada com licença de conta de recurso do Teams Phone — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Acesso Externo (Federação) permite chat com domínios externos; Acesso de Convidado (Guest Access) traz o usuário para dentro do seu tenant. No tópico de 'Contas de Recursos', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Caixa de correio compartilhada no Exchange Online com número de telefone atribuído: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Contas de Recursos'.",
-        "Grupo de segurança no Azure AD com número de serviço vinculado: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Conta de usuário padrão com licença Teams e número de telefone de serviço: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Identidade no Teams é governada pelo Microsoft Entra ID (MFA, Acesso Condicional e Guest Access)."
     }
@@ -5692,9 +5692,9 @@ export const questions = [
       "respostaCerta": "Licença de Conta de Recurso do Teams Phone (Teams Phone Resource Account) — gratuita, mas necessária para associar número de serviço — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Acesso Externo (Federação) permite chat com domínios externos; Acesso de Convidado (Guest Access) traz o usuário para dentro do seu tenant. No tópico de 'Licença de Conta de Recurso', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Licença Microsoft Teams Essentials com add-on de voz: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Licença de Conta de Recurso'.",
-        "Licença Microsoft 365 Business Basic com Teams Phone habilitado: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Licença de Audioconferência aplicada diretamente à conta de recurso: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "SBC on-premises=Direct Routing; PSTN gateway=método legado",
+        "Números de serviço=recebem apenas; não iniciam chamadas",
+        "Plano de chamada=rotas de voz=conceitos ortogonais, ambos necessários"
       ],
       "dicaOuro": "Identidade no Teams é governada pelo Microsoft Entra ID (MFA, Acesso Condicional e Guest Access)."
     }
@@ -5717,9 +5717,9 @@ export const questions = [
       "respostaCerta": "Pelo próprio usuário nas configurações pessoais do Teams (Aparência e acessibilidade) — o administrador não controla temas individuais por política — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Modo Escuro e Acessibilidade', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Pelo administrador via política de configuração de aplicativos no Teams Admin Center: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Modo Escuro e Acessibilidade'.",
-        "Pelo departamento de TI via GPO aplicando configurações de acessibilidade do Windows ao Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Pelo Microsoft 365 Admin Center nas configurações de experiência do usuário: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -5742,9 +5742,9 @@ export const questions = [
       "respostaCerta": "Microsoft Mesh integrado ao Teams — permite reuniões imersivas com avatares e ambientes 3D compartilhados — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Teams para Realidade Mista', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft HoloLens Teams App com suporte a hologramas em reuniões padrão: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Teams para Realidade Mista'.",
-        "Azure Spatial Anchors integrado ao Teams para colaboração em espaço físico: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Viva com módulo de realidade aumentada para reuniões de equipe: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -5767,9 +5767,9 @@ export const questions = [
       "respostaCerta": "Usar PowerShell com o cmdlet Add-TeamUser em loop ou importar via script com lista CSV de usuários — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Importação em Massa de Membros', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Adicionar um grupo do Azure AD como membro da equipe, contendo os 500 usuários: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Importação em Massa de Membros'.",
-        "Usar o Teams Admin Center > Equipes > Gerenciar membros com importação CSV: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Criar uma equipe pública para que os 500 usuários se adicionem manualmente: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -5792,9 +5792,9 @@ export const questions = [
       "respostaCerta": "Em um site SharePoint Online separado e dedicado, criado automaticamente para cada canal privado, distinto do site SharePoint da equipe principal — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Canais Privados — Armazenamento', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Na biblioteca de documentos do site SharePoint da equipe principal em pasta com acesso restrito: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Canais Privados — Armazenamento'.",
-        "No OneDrive for Business dos membros do canal privado com permissões compartilhadas: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "No Exchange Online como anexos na caixa de correio do grupo do canal privado: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Shared channels=acesso B2B externo; não substituem Teams Federation",
+        "30 canais privados=limite por equipe; shared=limite separado",
+        "Teams Connect=multi-tenant collaboration; requer Entra ID integração"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -5817,9 +5817,9 @@ export const questions = [
       "respostaCerta": "No site SharePoint Online do locatário do proprietário do canal compartilhado, com acesso sincronizado para membros de outros tenants via B2B Direct Connect — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Canais Compartilhados — Armazenamento', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Em um site SharePoint neutro hospedado pela Microsoft fora dos tenants dos participantes: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Canais Compartilhados — Armazenamento'.",
-        "No OneDrive for Business do criador do canal compartilhado com links de acesso externo: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Distribuído entre os tenants dos participantes com replicação automática pelo Microsoft 365: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Shared channels=acesso B2B externo; não substituem Teams Federation",
+        "30 canais privados=limite por equipe; shared=limite separado",
+        "Teams Connect=multi-tenant collaboration; requer Entra ID integração"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -5842,9 +5842,9 @@ export const questions = [
       "respostaCerta": "Gerenciamento de Risco Interno (Insider Risk Management) no Microsoft Purview com políticas de vazamento de dados e indicadores de risco do Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Insider Risk Management', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Sentinel com regras analíticas baseadas em logs de auditoria do Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Insider Risk Management'.",
-        "Microsoft Defender for Cloud Apps com política de atividade detectando downloads em massa: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Conformidade de Comunicação com monitoramento de palavras-chave relacionadas a saída de funcionários: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -5867,9 +5867,9 @@ export const questions = [
       "respostaCerta": "Políticas de retenção + Rótulos de retenção com revisão de disposição + Prova de disposição no Microsoft Purview Records Management — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Gerenciamento de Ciclo de Vida de Dados', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Políticas de DLP com ação de exclusão automática + eDiscovery com exportação certificada: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Gerenciamento de Ciclo de Vida de Dados'.",
-        "Bloqueio de Preservação + Conformidade de Comunicação + Auditoria Premium do Purview: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Information Barriers + Customer Key + Microsoft Purview Data Catalog: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -5892,9 +5892,9 @@ export const questions = [
       "respostaCerta": "Transferência consultiva (Consultative Transfer) — o agente fala com o especialista enquanto o cliente aguarda em espera, e então completa a transferência — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Transferência de Chamadas — Tipos', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Transferência cega (Blind Transfer) — transfere diretamente sem consulta prévia: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Transferência de Chamadas — Tipos'.",
-        "Estacionamento de chamada (Call Park) — coloca em espera para outro ramal atender: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Encaminhamento simultâneo (Simultaneous Ring) — toca em múltiplos destinos ao mesmo tempo: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -5917,9 +5917,9 @@ export const questions = [
       "respostaCerta": "O administrador pode configurar a saudação de correio de voz via PowerShell usando Set-CsOnlineVoicemailUserSettings ou o usuário pode configurar pelo Outlook Web App nas configurações de voz — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Voicemail — Configurações Avançadas', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Acessar o Teams Admin Center > Usuários > Voz > Saudação de correio de voz personalizada: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Voicemail — Configurações Avançadas'.",
-        "Criar um Atendedor Automático temporário com a saudação de férias redirecionando para o correio de voz: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configurar encaminhamento de chamadas no Exchange Online com mensagem de ausência integrada ao correio de voz: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -5942,9 +5942,9 @@ export const questions = [
       "respostaCerta": "Detecção de proximidade (Proximity Detection) — o Teams no dispositivo móvel ou laptop detecta o dispositivo Teams Rooms via Bluetooth e oferece ingresso com um toque — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Hiperlocalização e Salas Inteligentes', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Reserva inteligente de sala via Teams Panel com reconhecimento facial do usuário: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Hiperlocalização e Salas Inteligentes'.",
-        "Integração do Teams com Azure Maps para geolocalização de salas por GPS: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Mesh com sensores IoT na sala detectando presença de dispositivos cadastrados: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "AD DS local=nenhuma integração nativa Teams; requer sincronização Entra",
+        "MSA pessoal=conta consumer; Teams corporativo requer Entra ID",
+        "LDAP on-prem=legacy; Entra ID é identity provider padrão Microsoft 365"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -5967,9 +5967,9 @@ export const questions = [
       "respostaCerta": "Sim, o Teams suporta interoperabilidade nativa com o Skype (versão consumidor) para chat e chamadas de áudio, configurável nas configurações de acesso externo — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Aplicativo de Chat Externo — Interoperabilidade', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Não, o Teams só se comunica com outros tenants Microsoft 365 via federação Teams-to-Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Aplicativo de Chat Externo — Interoperabilidade'.",
-        "Sim, mas apenas para chamadas de vídeo; mensagens de texto não são suportadas com Skype consumidor: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Apenas via canal compartilhado configurado especificamente para contas Skype pessoais: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -5992,9 +5992,9 @@ export const questions = [
       "respostaCerta": "Usar a Microsoft Graph API (POST /teams/{id}/clone) ou criar um modelo de equipe baseado na equipe existente via Teams Admin Center — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Clonagem de Equipes', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Exportar a equipe como arquivo .zip e importar 10 vezes via Teams Admin Center: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Clonagem de Equipes'.",
-        "Copiar manualmente cada canal e guia nas 10 novas equipes criadas pelo Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Usar o PowerShell com New-Team e adicionar canais individualmente via Add-TeamChannel em script: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -6017,9 +6017,9 @@ export const questions = [
       "respostaCerta": "No cliente Teams Desktop: pressionar Ctrl+Alt+Shift+1 para gerar logs de diagnóstico automaticamente salvos na pasta de logs do Teams no dispositivo — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Logs de Diagnóstico do Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Acessar Teams Admin Center > Usuários > selecionar usuário > Coletar logs de diagnóstico remotamente: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Logs de Diagnóstico do Teams'.",
-        "Executar Get-CsTeamsUserLog no PowerShell com o UPN do usuário afetado: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Abrir o Task Manager, localizar o processo Teams e exportar dump de memória para análise: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -6042,9 +6042,9 @@ export const questions = [
       "respostaCerta": "Relatório de uso do Teams no Microsoft 365 Admin Center combinado com Microsoft Graph API para consultar atividade de grupos, ou Azure AD com dados de última atividade do grupo — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Relatório de Equipes Inativas', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Teams Admin Center > Análise e relatórios > Relatório de equipes inativas com filtro de 90 dias: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Relatório de Equipes Inativas'.",
-        "Microsoft Purview > Gerenciamento de ciclo de vida > Relatório de equipes sem atividade recente: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Power BI com conector nativo do Teams Admin Center filtrando equipes por data de última mensagem: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -6067,9 +6067,9 @@ export const questions = [
       "respostaCerta": "Auditoria Premium (Audit Premium) no Microsoft Purview — permite retenção de logs de auditoria por até 10 anos com licença de retenção de log de auditoria de 10 anos — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Auditoria Premium', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de retenção no Purview aplicada aos logs de auditoria do Teams Admin Center: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Auditoria Premium'.",
-        "Azure Monitor Log Analytics com retenção configurada para 3.650 dias para dados do Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Sentinel com arquivo de dados de longo prazo habilitado para logs do Microsoft 365: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -6092,9 +6092,9 @@ export const questions = [
       "respostaCerta": "Revisões de acesso (Access Reviews) no Microsoft Entra ID configuradas para membros convidados de Grupos Microsoft 365 associados às equipes do Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Acesso Externo (Federação) permite chat com domínios externos; Acesso de Convidado (Guest Access) traz o usuário para dentro do seu tenant. No tópico de 'Acesso de Convidado — Ciclo de Vida', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de expiração de convidados no Teams Admin Center com remoção automática após 90 dias: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Acesso de Convidado — Ciclo de Vida'.",
-        "Power Automate com gatilho de tempo que remove convidados inativos mensalmente: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Barreiras de informação com revisão periódica de segmentos contendo usuários externos: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Acesso anônimo=participação reunião sem identidade; não team membership",
+        "Acesso Externo=chat c/ domínios federados; não membership em teams",
+        "Azure AD B2C=identidades consumer; não integrável nativamente em Teams"
       ],
       "dicaOuro": "Identidade no Teams é governada pelo Microsoft Entra ID (MFA, Acesso Condicional e Guest Access)."
     }
@@ -6117,9 +6117,9 @@ export const questions = [
       "respostaCerta": "Permite que usuários e sistemas externos enviem e-mails diretamente para o canal, e o conteúdo aparece como mensagem no canal do Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Endereço de E-mail do Canal', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "É usado exclusivamente para notificações automáticas de reuniões agendadas no canal: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Endereço de E-mail do Canal'.",
-        "Serve como alias do grupo Microsoft 365 para comunicação interna via Outlook: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Permite que membros do canal respondam mensagens do Teams via e-mail sem abrir o aplicativo: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -6142,9 +6142,9 @@ export const questions = [
       "respostaCerta": "Usar o aplicativo oficial do Salesforce disponível na Teams App Store ou configurar Power Automate com conector do Salesforce e ação de envio de mensagem ao Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Integração com Sistemas de Terceiros', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Configurar um Incoming Webhook no canal e programar o Salesforce para enviar payloads JSON ao endpoint: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Integração com Sistemas de Terceiros'.",
-        "Usar o Microsoft Graph API com permissões de envio de mensagem integradas ao Salesforce via OAuth: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Criar um bot personalizado no Azure Bot Service que consulta o Salesforce e posta no Teams via polling: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -6167,9 +6167,9 @@ export const questions = [
       "respostaCerta": "Consultar a página oficial de disponibilidade de Calling Plans por país em docs.microsoft.com — o Calling Plan da Microsoft tem disponibilidade limitada por região geográfica — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Teams Phone — Planos por País', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Verificar no Teams Admin Center > Voz > Planos de chamada > Disponibilidade regional: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Teams Phone — Planos por País'.",
-        "Abrir um ticket de suporte Microsoft para consultar disponibilidade de Calling Plans no Brasil: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Testar a atribuição de número brasileiro no Teams Admin Center; o sistema bloqueia automaticamente países não suportados: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -6192,9 +6192,9 @@ export const questions = [
       "respostaCerta": "Leitura Imersiva (Immersive Reader) disponível nas mensagens do Teams — ajusta tipografia, espaçamento e oferece narração de texto — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Política de Mensagens — Leitura Imersiva', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Modo de alto contraste combinado com narrador do Windows aplicado ao Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Política de Mensagens — Leitura Imersiva'.",
-        "Configurações de acessibilidade do Teams com zoom de texto e síntese de voz nativa: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Edge com modo de leitura ativado ao acessar o Teams via navegador: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -6217,9 +6217,9 @@ export const questions = [
       "respostaCerta": "Microsoft Purview > Explorador de Conteúdo (Content Explorer) — exibe conteúdo rotulado e classificado em todo o Microsoft 365, incluindo SharePoint associado ao Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Relatório de Proteção de Informações', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Teams Admin Center > Conformidade > Relatório de rótulos de sensibilidade por canal: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Relatório de Proteção de Informações'.",
-        "Microsoft Defender for Cloud Apps > Governança de dados > Relatório de rótulos aplicados: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Azure Information Protection Scanner com relatório de classificação para arquivos do SharePoint Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -6242,9 +6242,9 @@ export const questions = [
       "respostaCerta": "1) Microsoft 365 Admin Center > Integridade do serviço > verificar status do Teams; 2) Consultar @MSFT365Status no Twitter/X para atualizações em tempo real; 3) Verificar o painel de integridade no Teams Admin Center — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Integridade do Teams em Tempo Real', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "1) Executar ping para teams.microsoft.com; 2) Verificar logs do Azure Monitor; 3) Abrir ticket de suporte Premier imediatamente: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Integridade do Teams em Tempo Real'.",
-        "1) Consultar o CQD para métricas de qualidade em tempo real; 2) Verificar alertas do Microsoft Sentinel; 3) Acionar o time de NOC para investigação de rede: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "1) Verificar o status do Azure AD no portal do Azure; 2) Testar login no Teams Web; 3) Reiniciar o cliente Teams Desktop em estações afetadas: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -6267,9 +6267,9 @@ export const questions = [
       "respostaCerta": "Microsoft Teams (novo) ou New Teams — cliente reimplementado com arquitetura mais eficiente substituindo o cliente clássico baseado em Electron — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Teams New Experience (Nova Experiência)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Teams 2.0 com interface Material Design e integração nativa com Windows 11: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Teams New Experience (Nova Experiência)'.",
-        "Microsoft Teams Premium Client com recursos avançados de IA e desempenho otimizado: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Teams Lite — versão simplificada para dispositivos com hardware limitado: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -6292,9 +6292,9 @@ export const questions = [
       "respostaCerta": "Usar o modo de otimização de mídia para VDI — o processamento de mídia é redirecionado para o endpoint local do usuário, evitando sobrecarga no servidor VDI — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Virtual Desktop Infrastructure (VDI)', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Instalar o Teams diretamente na imagem VDI sem otimizações adicionais de mídia: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Virtual Desktop Infrastructure (VDI)'.",
-        "Usar o Teams Web App no navegador do VDI para chamadas, evitando instalação do cliente: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configurar QoS no servidor VDI para priorizar tráfego de mídia do Teams sobre outros processos: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -6317,9 +6317,9 @@ export const questions = [
       "respostaCerta": "Assim como em VDI, a otimização de mídia do Teams deve ser configurada para redirecionar o processamento de áudio e vídeo ao dispositivo físico local do usuário — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Windows 365 e Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "O Windows 365 processa mídia nativamente na nuvem com qualidade garantida pela Microsoft sem configuração adicional: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Windows 365 e Teams'.",
-        "Teams no Windows 365 não suporta chamadas PSTN; apenas reuniões de vídeo internas são suportadas: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Instalar o cliente Teams localmente no dispositivo físico e usar o redirecionamento de USB para webcam e microfone: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -6342,9 +6342,9 @@ export const questions = [
       "respostaCerta": "1.000 equipes por usuário — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Limite de Equipes por Usuário', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "250 equipes por usuário: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Limite de Equipes por Usuário'.",
-        "500 equipes por usuário: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "5.000 equipes por usuário: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -6367,9 +6367,9 @@ export const questions = [
       "respostaCerta": "100 proprietários por equipe — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Limite de Proprietários por Equipe', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "10 proprietários por equipe: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Limite de Proprietários por Equipe'.",
-        "25 proprietários por equipe: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "50 proprietários por equipe: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -6392,9 +6392,9 @@ export const questions = [
       "respostaCerta": "Até 50 membros externos de outros tenants podem ser adicionados a um canal compartilhado — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Canais Compartilhados — Limites', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Até 10 membros externos por canal compartilhado: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Canais Compartilhados — Limites'.",
-        "Até 100 membros externos por canal compartilhado: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Sem limite definido; qualquer número de externos pode ser adicionado: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "500 membros=limite de grupos Office 365; equipes Teams é mais alto",
+        "10.000 membros=suportado mas performance degradação; recomendado evitar",
+        "50.000 membros=limite sharepoint; Teams limite é menor 25k"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -6417,9 +6417,9 @@ export const questions = [
       "respostaCerta": "1.000 participantes por reunião padrão do Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Limites de Reuniões', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "300 participantes por reunião padrão: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Limites de Reuniões'.",
-        "500 participantes por reunião padrão: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "5.000 participantes por reunião padrão: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -6442,9 +6442,9 @@ export const questions = [
       "respostaCerta": "Participantes além do limite de 1.000 entram automaticamente em modo somente visualização (view-only), podendo assistir mas sem interagir com áudio, vídeo ou chat — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'View-Only Meeting Experience', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "A reunião é encerrada automaticamente quando o limite de 1.000 é atingido: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'View-Only Meeting Experience'.",
-        "Participantes adicionais recebem erro de \"reunião cheia\" e não conseguem ingressar: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Participantes além do limite são redirecionados para a lista de espera e entram conforme outros saem: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -6467,9 +6467,9 @@ export const questions = [
       "respostaCerta": "Música em espera (Music on Hold) configurada via política de chamada no Teams Admin Center, com upload de arquivo de áudio personalizado — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Música em Espera', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Configuração de saudação de correio de voz com arquivo de áudio personalizado: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Música em Espera'.",
-        "Atendedor Automático com saudação de espera configurada para todas as chamadas: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Fila de Chamada com música de espera aplicada globalmente a todas as chamadas do tenant: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -6492,9 +6492,9 @@ export const questions = [
       "respostaCerta": "A política de chamada deve ter a gravação de chamadas 1:1 habilitada pelo administrador, e ambos os participantes são notificados sobre a gravação — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Chamadas 1:1 — Gravação', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Apenas a licença Microsoft Teams Premium é necessária; a gravação fica habilitada automaticamente: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Chamadas 1:1 — Gravação'.",
-        "Gravações de chamadas 1:1 não são suportadas no Teams; apenas reuniões podem ser gravadas: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "O usuário pode gravar chamadas 1:1 por padrão sem necessidade de configuração administrativa: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -6517,9 +6517,9 @@ export const questions = [
       "respostaCerta": "Microsoft Defender for Office 365 com Safe Attachments configurado para SharePoint, OneDrive e Microsoft Teams — detecta e bloqueia arquivos maliciosos pós-upload — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Proteção Avançada contra Ameaças', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Defender Antivirus com varredura em tempo real de arquivos do SharePoint associado ao Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Proteção Avançada contra Ameaças'.",
-        "Microsoft Purview DLP com detecção de conteúdo executável em arquivos do Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Azure Defender for Storage com análise de malware em bibliotecas do SharePoint do Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -6542,9 +6542,9 @@ export const questions = [
       "respostaCerta": "Microsoft Defender for Cloud Apps — gera alertas de atividade anômala como downloads em massa e permite investigação detalhada no portal do Defender — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Relatório de Atividades Suspeitas', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Sentinel com regra analítica baseada em logs de auditoria do SharePoint associado ao Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Relatório de Atividades Suspeitas'.",
-        "Microsoft Purview Insider Risk Management com indicador de exfiltração de dados ativado: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Teams Admin Center > Análise e relatórios > Relatório de atividades suspeitas por usuário: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -6567,9 +6567,9 @@ export const questions = [
       "respostaCerta": "Windows Hello for Business, chaves de segurança FIDO2 e aplicativo Microsoft Authenticator com autenticação por número correspondente — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Acesso Externo (Federação) permite chat com domínios externos; Acesso de Convidado (Guest Access) traz o usuário para dentro do seu tenant. No tópico de 'Autenticação sem Senha no Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Smart Card PIV, tokens OTP de hardware e biometria facial via câmera do dispositivo: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Autenticação sem Senha no Teams'.",
-        "Certificados de cliente, Kerberos sem senha e autenticação por voz via Cortana: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "PIN do Windows, reconhecimento de íris e autenticação por impressão digital via Intune: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "AD DS local=nenhuma integração nativa Teams; requer sincronização Entra",
+        "MSA pessoal=conta consumer; Teams corporativo requer Entra ID",
+        "LDAP on-prem=legacy; Entra ID é identity provider padrão Microsoft 365"
       ],
       "dicaOuro": "Identidade no Teams é governada pelo Microsoft Entra ID (MFA, Acesso Condicional e Guest Access)."
     }
@@ -6592,9 +6592,9 @@ export const questions = [
       "respostaCerta": "Política de risco de usuário no Entra ID Protection — bloquear acesso ou exigir alteração de senha segura quando risco alto for detectado, afetando acesso ao Teams e demais serviços — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Acesso Externo (Federação) permite chat com domínios externos; Acesso de Convidado (Guest Access) traz o usuário para dentro do seu tenant. No tópico de 'Proteção de Identidade e Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Regra de alerta no Teams Admin Center que suspende automaticamente a conta ao detectar login suspeito: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Proteção de Identidade e Teams'.",
-        "Microsoft Sentinel com playbook automatizado que desativa a licença do Teams do usuário comprometido: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Política de DLP que bloqueia compartilhamento de arquivos quando risco de identidade for detectado: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "AD DS local=nenhuma integração nativa Teams; requer sincronização Entra",
+        "MSA pessoal=conta consumer; Teams corporativo requer Entra ID",
+        "LDAP on-prem=legacy; Entra ID é identity provider padrão Microsoft 365"
       ],
       "dicaOuro": "Identidade no Teams é governada pelo Microsoft Entra ID (MFA, Acesso Condicional e Guest Access)."
     }
@@ -6617,9 +6617,9 @@ export const questions = [
       "respostaCerta": "Uso de câmera inteligente com enquadramento automático, microfone de sala certificado, conteúdo compartilhado via HDMI ingest e modo de reunião híbrida do Teams Rooms — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Coexistência — Reuniões Híbridas', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Todos os participantes presenciais devem usar headsets individuais conectados aos seus laptops, ignorando o sistema de sala: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Coexistência — Reuniões Híbridas'.",
-        "Desativar câmera e microfone da sala e usar apenas os dispositivos individuais dos participantes presenciais: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configurar a reunião como evento ao vivo para suportar participantes híbridos com qualidade garantida: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -6642,9 +6642,9 @@ export const questions = [
       "respostaCerta": "Exibe insights personalizados de bem-estar e produtividade no Teams, como tempo de foco, reuniões sem pausa e sugestões de descanso, com dados visíveis apenas ao próprio usuário — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Integração do Teams com Viva Insights', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Fornece relatórios detalhados de produtividade individual para gestores e RH via painel no Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Integração do Teams com Viva Insights'.",
-        "Monitora tempo de resposta de mensagens e alerta o gestor quando o colaborador está abaixo da média: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Integra dados de desempenho do Teams ao sistema de avaliação de RH automaticamente: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -6667,9 +6667,9 @@ export const questions = [
       "respostaCerta": "Microsoft Copilot Studio (anteriormente Power Virtual Agents) — permite criar agentes de IA com bases de conhecimento personalizadas e publicar diretamente no Microsoft Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Copilot Studio e Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Azure OpenAI Service com API de chat integrada via Incoming Webhook ao Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Copilot Studio e Teams'.",
-        "Microsoft Bot Framework SDK com conector do SharePoint e publicação no Teams App Store: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Copilot for Microsoft 365 com fonte de dados do SharePoint configurada pelo administrador: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -6692,9 +6692,9 @@ export const questions = [
       "respostaCerta": "Aplicativo de reunião com suporte a painel lateral (Side Panel) — extensão Teams configurada como aplicativo de reunião acessível durante a sessão — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Aplicativos de Reunião', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Guia de canal (Channel Tab) adicionada temporariamente durante a reunião pelo organizador: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Aplicativos de Reunião'.",
-        "Bot de reunião configurado para enviar mensagens no chat da reunião em tempo real: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Cartão Adaptável enviado no chat da reunião com painel de controle interativo: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -6717,9 +6717,9 @@ export const questions = [
       "respostaCerta": "Relatório de presença e engajamento do webinar disponível no Teams após o evento, acessível pelo organizador via opção \"Ver relatório de presença\" nas configurações do evento — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Relatório de Webinar', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Teams Admin Center > Análise e relatórios > Relatórios de webinar com métricas de engajamento: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Relatório de Webinar'.",
-        "Microsoft Forms > Respostas do formulário de registro com dados de presença cruzados: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Power BI com conector de eventos Teams para análise de comparecimento e engajamento: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -6742,9 +6742,9 @@ export const questions = [
       "respostaCerta": "Relatório de organização do Town Hall disponível para o organizador após o evento no Teams, com métricas de audiência, engajamento e Q&A exportáveis — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Relatório de Town Hall', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Teams Admin Center > Eventos ao Vivo > Relatórios históricos de Town Hall: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Relatório de Town Hall'.",
-        "Microsoft Stream > Analytics do vídeo gravado com dados de visualização e engajamento: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Power BI com conector do Microsoft Graph para eventos de comunicação corporativa: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -6767,9 +6767,9 @@ export const questions = [
       "respostaCerta": "Microsoft Intune com perfis de configuração para dispositivos Teams Rooms (Android ou Windows) garantindo conformidade, aplicativos gerenciados e políticas de segurança — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Gerenciamento de Dispositivos — Teams Rooms', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Microsoft Defender for Endpoint com perfis de segurança aplicados aos dispositivos Teams Rooms: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Gerenciamento de Dispositivos — Teams Rooms'.",
-        "Azure Arc com políticas de conformidade específicas para dispositivos de sala certificados: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Group Policy Objects (GPO) via Active Directory para dispositivos Teams Rooms baseados em Windows: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure AD Portal=identidades; Teams policies gerenciadas via Teams Admin",
+        "Exchange Admin Center=mailbox policies; Teams policies separadas",
+        "Intune=mobile device management; Teams Admin Center = Teams-specific"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -6792,9 +6792,9 @@ export const questions = [
       "respostaCerta": "Números de usuário são atribuídos a pessoas individuais para chamadas 1:1; números de serviço são atribuídos a Atendedores Automáticos, Filas de Chamada e Audioconferência, suportando alto volume de chamadas simultâneas — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Números de Serviço vs. Números de Usuário', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Números de serviço são gratuitos (toll-free) enquanto números de usuário sempre têm custo por minuto: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Números de Serviço vs. Números de Usuário'.",
-        "Números de usuário suportam chamadas PSTN externas; números de serviço são exclusivos para chamadas internas: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Números de serviço requerem Direct Routing; números de usuário são exclusivos do Calling Plan: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -6817,9 +6817,9 @@ export const questions = [
       "respostaCerta": "O Grupo de Roteamento de Voz (PSTN Usage Record) define os gateways e rotas disponíveis; a Política de Roteamento de Voz agrupa múltiplos PSTN Usage Records e é atribuída aos usuários — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Grupos de Roteamento de Voz', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "O Grupo de Roteamento de Voz define quais usuários podem fazer chamadas internacionais; a Política de Roteamento aplica restrições geográficas por sub-rede: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Grupos de Roteamento de Voz'.",
-        "São termos intercambiáveis que descrevem o mesmo objeto de configuração de roteamento no Teams Phone: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "O Grupo de Roteamento de Voz gerencia failover entre SBCs; a Política de Roteamento define prioridade de gateway por custo: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "SBC on-premises=Direct Routing; PSTN gateway=método legado",
+        "Números de serviço=recebem apenas; não iniciam chamadas",
+        "Plano de chamada=rotas de voz=conceitos ortogonais, ambos necessários"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -6842,9 +6842,9 @@ export const questions = [
       "respostaCerta": "Atribuir os líderes como proprietários (owners) das suas respectivas equipes — proprietários podem gerenciar membros, canais e configurações da equipe sem acesso administrativo global — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Administração Delegada de Equipes', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Criar Unidades Administrativas no Azure AD com escopo limitado ao departamento e atribuir função de Teams Administrator: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Administração Delegada de Equipes'.",
-        "Conceder acesso ao Teams Admin Center com filtro de equipe por departamento via RBAC personalizado: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Usar o Microsoft 365 Admin Center com delegação de administração parcial por grupo de segurança: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -6867,9 +6867,9 @@ export const questions = [
       "respostaCerta": "Investigação e resposta automatizadas (AIR), simulação de ataques de phishing (Attack Simulator) e Threat Explorer para análise avançada de ameaças que afetam o Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Integração com Microsoft Defender', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Safe Links e Safe Attachments para Teams — disponíveis exclusivamente no Plano 2: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Integração com Microsoft Defender'.",
-        "Proteção contra malware em arquivos do Teams e políticas anti-phishing — exclusivas do Plano 2: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Relatórios de segurança de e-mail e Teams com exportação para SIEM — exclusivos do Plano 2: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -6892,9 +6892,9 @@ export const questions = [
       "respostaCerta": "O arquivo manifest.json (manifesto do aplicativo) — define nome, versão, permissões, capacidades (tabs, bots, extensões) e configurações do aplicativo Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Manifesto de Aplicativo Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "O arquivo appsettings.json no projeto Azure Bot Service com configurações de canal Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Manifesto de Aplicativo Teams'.",
-        "O arquivo package.json do projeto Node.js com dependências do Teams JavaScript SDK: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "O arquivo TeamsApp.yaml gerado automaticamente pelo Teams Toolkit no Visual Studio Code: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "AD DS local=nenhuma integração nativa Teams; requer sincronização Entra",
+        "MSA pessoal=conta consumer; Teams corporativo requer Entra ID",
+        "LDAP on-prem=legacy; Entra ID é identity provider padrão Microsoft 365"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -6917,9 +6917,9 @@ export const questions = [
       "respostaCerta": "Política de mensagens (Messaging Policy) no Teams Admin Center — desativar a opção \"Reações permitidas\" (Giphy, memes, stickers e reações) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Reações a Mensagens', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Configurações de toda a organização no Teams Admin Center > seção de mensagens globais: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Reações a Mensagens'.",
-        "Política de reunião — seção de reações e interações de participantes: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft 365 Admin Center > Configurações > Microsoft Teams > Reações e emoji: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -6942,9 +6942,9 @@ export const questions = [
       "respostaCerta": "Política de mensagens — habilitar \"Usuários podem editar mensagens enviadas\" e desativar \"Usuários podem excluir mensagens enviadas\" — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Edição e Exclusão de Mensagens — Política', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Política de conformidade de comunicação com bloqueio de exclusão de mensagens auditadas: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Edição e Exclusão de Mensagens — Política'.",
-        "Política de retenção no Purview impedindo exclusão de mensagens por usuários finais: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Configuração de moderação de canal impedindo alterações após postagem inicial: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -6967,9 +6967,9 @@ export const questions = [
       "respostaCerta": "Resumo da reunião com pontos principais discutidos, itens de ação identificados, perguntas não respondidas e próximos passos sugeridos — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Relatório Pós-Reunião com Copilot', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Ata formal de reunião em formato Word enviada automaticamente por e-mail a todos os participantes: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Relatório Pós-Reunião com Copilot'.",
-        "Apresentação PowerPoint com os principais tópicos discutidos gerada automaticamente: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Relatório de sentimento dos participantes com análise de engajamento emocional durante a reunião: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -6992,9 +6992,9 @@ export const questions = [
       "respostaCerta": "Usuários podem participar de reuniões Zoom e Google Meet via navegador ou aplicativo dessas plataformas — não há interoperabilidade nativa de protocolo entre Teams e Zoom/Google Meet — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Interoperabilidade com Zoom e Google Meet', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Configurar federação SIP entre Teams e Zoom/Google Meet via Direct Routing com SBC compatível: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Interoperabilidade com Zoom e Google Meet'.",
-        "Habilitar acesso externo no Teams Admin Center selecionando Zoom e Google Meet como plataformas federadas: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Usar o Microsoft Teams Rooms com modo de interoperabilidade nativa para Zoom e Google Meet via CVI: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -7017,9 +7017,9 @@ export const questions = [
       "respostaCerta": "Cloud Video Interop (CVI) — solução de parceiros certificados Microsoft que permite que dispositivos SIP/H.323 participem de reuniões Teams via gateway de interoperabilidade — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'CVI — Cloud Video Interop', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Direct Routing com SBC configurado para transcodificar protocolos H.323 para WebRTC do Teams: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'CVI — Cloud Video Interop'.",
-        "Atualizar o firmware dos dispositivos legados para suporte nativo ao protocolo Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Adicionar os sistemas de sala como contas de recurso no Teams Admin Center com licença Teams Rooms: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -7042,9 +7042,9 @@ export const questions = [
       "respostaCerta": "Microsoft Entra ID (Azure AD) > Aplicativos empresariais > selecionar o aplicativo > Permissões — exibe permissões concedidas e consentimentos de administrador — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Revisão de Permissões de Aplicativos', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Teams Admin Center > Aplicativos > selecionar o aplicativo > aba de permissões e consentimentos: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Revisão de Permissões de Aplicativos'.",
-        "Microsoft Defender for Cloud Apps > Aplicativos OAuth > Permissões por aplicativo Teams: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft 365 Admin Center > Aplicativos integrados > Detalhes de permissões por aplicativo: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -7067,9 +7067,9 @@ export const questions = [
       "respostaCerta": "Desativar o consentimento de usuário para aplicativos no Microsoft Entra ID e habilitar o fluxo de solicitação de consentimento de administrador — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Consentimento de Aplicativos', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Desativar a instalação de aplicativos de terceiros na política de permissão de aplicativos do Teams Admin Center: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Consentimento de Aplicativos'.",
-        "Configurar acesso condicional bloqueando autenticação OAuth de aplicativos não aprovados: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Habilitar o Microsoft Defender for Cloud Apps com política de bloqueio de aplicativos OAuth não sancionados: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Azure Entra ID=identidades; Teams AC policies gerenciadas em Teams Admin",
+        "Microsoft 365 Admin Center=tenant-wide; Teams AC policies são específicas",
+        "Exchange Admin Center=email policies; Teams AC policies separadas"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -7092,9 +7092,9 @@ export const questions = [
       "respostaCerta": "A Microsoft não oferece ferramenta de backup nativa completa para Teams — dados são protegidos por retenção, eDiscovery e alta disponibilidade geográfica; para backup tradicional, soluções de terceiros certificadas devem ser consideradas — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Backup e Recuperação de Dados do Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Configurar política de retenção no Purview com ação de cópia para Azure Blob Storage como backup: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Backup e Recuperação de Dados do Teams'.",
-        "Usar o Microsoft 365 Backup (preview) disponível no Teams Admin Center para backup completo: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Exportar dados via Graph API semanalmente e armazenar no Azure Data Lake como backup corporativo: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -7117,9 +7117,9 @@ export const questions = [
       "respostaCerta": "Configurar o número de telefone de conferência padrão da ponte de audioconferência do usuário para o número brasileiro nas configurações de audioconferência do usuário no Teams Admin Center ou PowerShell — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Número de Discagem em Conferência', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Alterar as configurações regionais do tenant para Brasil no Microsoft 365 Admin Center: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Número de Discagem em Conferência'.",
-        "Criar um Atendedor Automático com número brasileiro que redireciona para a ponte de conferência: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Solicitar à Microsoft a adição de um número brasileiro à ponte de conferência via ticket de suporte: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -7142,9 +7142,9 @@ export const questions = [
       "respostaCerta": "Política de criação de equipes, convenção de nomenclatura, política de expiração, revisões de acesso, modelos de equipe padronizados e processo de ciclo de vida (criação, manutenção e arquivamento) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Canais compartilhados (Teams Connect) eliminam a necessidade de alternar entre tenants (tenant switching) para colaborar. No tópico de 'Boas Práticas de Governança', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Apenas política de expiração de grupos e script PowerShell de limpeza mensal de equipes inativas: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Boas Práticas de Governança'.",
-        "Desativar a criação de equipes por usuários finais e centralizar toda criação no Teams Admin Center: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Implementar barreiras de informação entre departamentos e política de DLP para todas as equipes: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Canais padrão (SharePoint do time), Canais Privados (SharePoint dedicado) e Canais Compartilhados (B2B Direct Connect)."
     }
@@ -7167,9 +7167,9 @@ export const questions = [
       "respostaCerta": "Microsoft 365 Admin Center > Integridade > Conectividade de rede — exibe testes de conectividade por localização com pontuação e recomendações de melhoria para Teams e outros serviços — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Microsoft 365 Network Connectivity', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Azure Network Watcher com testes de conectividade agendados para endpoints do Microsoft 365: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Microsoft 365 Network Connectivity'.",
-        "Microsoft Teams Network Assessment Tool executado diariamente em estações representativas de cada escritório: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Call Quality Dashboard com relatório de tendência de rede por site físico ao longo do tempo: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Microsoft 365 Apps for Business=aplicativos Office; Teams NÃO incluído",
+        "Office 2021 Perpetual=licença desktop; cloud services não inclusos",
+        "Windows 365 Cloud PC=serviço desktop virtualizado; não confere Teams"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -7192,9 +7192,9 @@ export const questions = [
       "respostaCerta": "Via Microsoft Copilot Studio — administradores e desenvolvedores criam agentes personalizados publicados no Teams; o Teams Admin Center controla quais agentes estão disponíveis para os usuários — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Microsoft 365 Copilot — Agentes no Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Via Azure OpenAI Studio com modelos GPT-4 configurados e publicados diretamente no Teams App Store: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Microsoft 365 Copilot — Agentes no Teams'.",
-        "Via Microsoft Power Apps com componentes de IA integrados ao Teams como guias de canal: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Via Microsoft Syntex com modelos de processamento de linguagem publicados como bots no Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -7217,9 +7217,9 @@ export const questions = [
       "respostaCerta": "Leitor Global (Global Reader) — permite visualizar configurações e relatórios do Microsoft 365 e Teams sem permissão de modificação — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Acesso Externo (Federação) permite chat com domínios externos; Acesso de Convidado (Guest Access) traz o usuário para dentro do seu tenant. No tópico de 'Licenciamento — Resumo de Funções', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Especialista de Suporte de Comunicações do Teams (Teams Communications Support Specialist): Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Licenciamento — Resumo de Funções'.",
-        "Leitor de Relatórios (Reports Reader) — acesso apenas a relatórios de uso sem acesso a configurações: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Administrador de Helpdesk (Helpdesk Administrator) — redefine senhas mas tem acesso limitado ao Teams: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Identidade no Teams é governada pelo Microsoft Entra ID (MFA, Acesso Condicional e Guest Access)."
     }
@@ -7242,9 +7242,9 @@ export const questions = [
       "respostaCerta": "Verificar explicitamente (MFA + acesso condicional), usar acesso de privilégio mínimo (RBAC + PIM) e assumir violação (monitoramento contínuo via Defender + Sentinel + auditoria Purview) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Zero Trust e Microsoft Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Bloquear todo acesso externo ao Teams e exigir VPN corporativa para qualquer acesso ao serviço: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Zero Trust e Microsoft Teams'.",
-        "Criptografar todas as comunicações E2EE, desativar gravações e restringir aplicativos de terceiros: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Implementar barreiras de informação entre todos os departamentos e desativar acesso de convidados globalmente: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -7267,9 +7267,9 @@ export const questions = [
       "respostaCerta": "Usar New-CsBatchPolicyAssignmentOperation para atribuição em lote de políticas a grandes grupos de usuários de forma assíncrona e eficiente — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Atualização de Políticas em Massa', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Executar Grant-CsTeamsMeetingPolicy em loop foreach para cada usuário do grupo em script síncrono: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Atualização de Políticas em Massa'.",
-        "Usar Set-CsGroupPolicyAssignment para atribuição via grupo do Azure AD sem processar usuários individualmente: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Exportar lista de usuários via Get-AzureADGroupMember e importar no Teams Admin Center via CSV: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -7292,9 +7292,9 @@ export const questions = [
       "respostaCerta": "Gravação pode ser bloqueada, marca d'água ativada, cópia de chat desabilitada e lobby configurado automaticamente conforme as configurações definidas no rótulo de sensibilidade — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "A configuração do lobby da reunião (lobby bypass) é essencial para segurança e controle de acessos de participantes externos. No tópico de 'Restrição de Gravação por Rótulo de Sensibilidade', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "A reunião é automaticamente criptografada E2EE e restrita apenas a membros internos sem possibilidade de convidados: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Restrição de Gravação por Rótulo de Sensibilidade'.",
-        "Transcrição é obrigatória e armazenada no Purview com retenção de 7 anos automaticamente: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "O link de reunião é de uso único e expira após o término, impedindo gravações não autorizadas: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de reunião controlam lobbies, gravações e privilégios de apresentação."
     }
@@ -7317,9 +7317,9 @@ export const questions = [
       "respostaCerta": "Health Dashboard for Direct Routing no Teams Admin Center (mostra status do SBC, latência SIP e erros), logs do SBC e Per-user Call Analytics para chamadas específicas afetadas — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Direct Routing conecta o Teams a troncos PSTN existentes através de um Session Border Controller (SBC) certificado. No tópico de 'Diagnóstico de Direct Routing', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Call Quality Dashboard com filtro de chamadas PSTN e relatório de falhas por gateway: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Diagnóstico de Direct Routing'.",
-        "Azure Monitor com logs do SBC exportados para Log Analytics e alertas de falha SIP: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Microsoft Sentinel com conector de Direct Routing para correlação de eventos de falha de chamada: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "SBC on-premises=Direct Routing; PSTN gateway=método legado",
+        "Números de serviço=recebem apenas; não iniciam chamadas",
+        "Plano de chamada=rotas de voz=conceitos ortogonais, ambos necessários"
       ],
       "dicaOuro": "Calling Plans (Microsoft é a operadora) vs Direct Routing (SBC local do cliente) vs Operator Connect."
     }
@@ -7342,9 +7342,9 @@ export const questions = [
       "respostaCerta": "Uso de GIFs, memes e stickers; leitura imersiva; mensagens de prioridade urgente; edição e exclusão de mensagens; tradução de mensagens e reações emoji — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Políticas de mensagens definem as interações diárias de chat e podem ser atribuídas globalmente ou por usuário. No tópico de 'Política de Mensagens — Resumo Completo', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Configurações de lobby de reunião, permissão de gravação e acesso de convidados a chats: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Política de Mensagens — Resumo Completo'.",
-        "Retenção de mensagens, políticas de DLP aplicadas ao chat e conformidade de comunicação: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Número máximo de participantes em chat em grupo e limite de tamanho de arquivos enviados no chat: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Governe o chat através das políticas de mensagens no Teams Admin Center."
     }
@@ -7367,9 +7367,9 @@ export const questions = [
       "respostaCerta": "Processador dual-core de 2.0 GHz ou superior, 4 GB de RAM (8 GB recomendado), câmera HD e microfone/fone certificado, com conexão de internet de pelo menos 1.5 Mbps por chamada — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Requisitos de Hardware para Teams', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Processador octa-core de 3.5 GHz, 16 GB de RAM, GPU dedicada e conexão de 50 Mbps simétricos: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Requisitos de Hardware para Teams'.",
-        "Qualquer hardware que execute Windows 10 ou macOS 10.14, sem requisitos específicos de câmera ou áudio: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Processador quad-core de 2.5 GHz, 8 GB de RAM obrigatório e GPU integrada Intel HD 620 ou superior: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -7392,9 +7392,9 @@ export const questions = [
       "respostaCerta": "Configurar alertas de política DLP no Microsoft Purview — definir limites de acionamento e destinatários de alerta nas configurações da política DLP aplicada ao Teams — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Histórico de chat do Teams fica armazenado em caixas de correio ocultas do Exchange Online para fins de conformidade e eDiscovery. No tópico de 'Gerenciamento de Alertas de Conformidade', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Criar regra de alerta no Teams Admin Center para eventos de DLP com envio de e-mail ao administrador: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Gerenciamento de Alertas de Conformidade'.",
-        "Configurar Microsoft Sentinel com playbook de alerta acionado por eventos DLP do Purview: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Habilitar notificações de conformidade no Microsoft 365 Admin Center > Integridade > Alertas de conformidade: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Compliance no Teams = Arquivos no SharePoint/OneDrive e Mensagens de chat indexadas no Exchange."
     }
@@ -7417,9 +7417,9 @@ export const questions = [
       "respostaCerta": "Relatórios e dashboards do Power BI (componente do Fabric) podem ser incorporados como guias em canais do Teams, e alertas de dados do Fabric podem ser enviados como notificações no Teams via Power Automate ou conectores — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Use políticas de permissão de aplicativos para bloquear apps de terceiros e políticas de configuração para fixar aplicativos importantes. No tópico de 'Teams e Microsoft Fabric', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "O Microsoft Fabric substitui o SharePoint Online como repositório de dados do Teams com análise em tempo real: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Teams e Microsoft Fabric'.",
-        "O Fabric sincroniza automaticamente mensagens do Teams em um Data Warehouse para análise de sentimento: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "O Teams Admin Center se conecta ao Fabric para exportar relatórios de uso em formato de lakehouse: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Políticas de permissão (segurança de dados) e políticas de configuração (setup/fixação de apps)."
     }
@@ -7442,9 +7442,9 @@ export const questions = [
       "respostaCerta": "Verificar integridade do serviço no M365 Admin Center, revisar relatórios de qualidade de chamadas no CQD, analisar relatórios de uso do Teams, verificar alertas de segurança no Defender, revisar políticas de expiração de equipes e auditar logs de conformidade no Purview — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Problema de rede agregada = Call Quality Dashboard (CQD). Problema de chamada de um único usuário = Call Analytics. No tópico de 'Revisão Final de Administração', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Apenas verificar o CQD para qualidade de chamadas e o Teams Admin Center para equipes inativas mensalmente: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Revisão Final de Administração'.",
-        "Executar Get-CsTeamsUpgradeStatus mensalmente e verificar firmware de dispositivos via Intune: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Revisar tickets de suporte abertos no portal Microsoft e comparar com SLA contratado mensalmente: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Call Quality Dashboard (CQD) para análise macro. Call Analytics para diagnóstico micro de usuários."
     }
@@ -7467,9 +7467,9 @@ export const questions = [
       "respostaCerta": "Planejar e configurar um ambiente Microsoft Teams (~35%), Gerenciar chat, chamadas e reuniões (~25%), Gerenciar equipes e canais (~20%) e Monitorar, reportar e solucionar problemas do Teams (~20%) — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Para qualidade de mídia em tempo real, priorize sempre portas UDP (50000-50019) no QoS e use a Network Assessment Tool. No tópico de 'Preparação para o Exame MS-700', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "Segurança e conformidade (~40%), Chamadas e voz (~30%), Aplicativos e integrações (~30%) com pesos iguais entre os demais domínios: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Preparação para o Exame MS-700'.",
-        "Gerenciamento de identidade (~35%), Configuração de rede (~25%), Políticas de reunião (~25%) e Governança de dados (~15%): Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "Licenciamento Microsoft 365 (~30%), Direct Routing (~25%), eDiscovery e conformidade (~25%) e Relatórios de uso (~20%): Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "Esta alternativa não representa o conceito técnico correto MS-700",
+        "Esta alternativa não soluciona o requisito apresentado adequadamente",
+        "Esta alternativa descreve comportamento ou limitação inaplicável"
       ],
       "dicaOuro": "Configuração de rede e qualidade exigem UDP, portas QoS dedicadas e modo de coexistência adequado."
     }
@@ -7492,11 +7492,12 @@ export const questions = [
       "respostaCerta": "1) Avaliação e planejamento (rede, licenciamento, identidade, coexistência); 2) Piloto com grupo representativo; 3) Implantação de colaboração (equipes, canais, reuniões); 4) Implantação de voz (Direct Routing, filas, atendedores); 5) Conformidade e segurança (DLP, retenção, barreiras); 6) Firstline Workers (Shifts, aplicativos móveis); 7) Monitoramento contínuo e otimização — essa opção atende de forma direta à solicitação do cenário apresentado.",
       "puloDoGato": "Foque sempre nas políticas globais e no fluxo de dados entre os serviços integrados. No tópico de 'Cenário Integrado MS-700', identifique de forma clara essa correlação.",
       "cascasDeBanana": [
-        "1) Implementar Direct Routing imediatamente; 2) Migrar todos os usuários de uma vez; 3) Configurar conformidade retroativamente; 4) Treinar usuários após implantação completa: Incorreto, pois não representa a ferramenta ou comportamento adequado no Teams para 'Cenário Integrado MS-700'.",
-        "1) Adquirir licenças E5 para todos; 2) Desativar Skype for Business no primeiro dia; 3) Configurar Teams Only para todo o tenant; 4) Implementar voz e conformidade simultaneamente: Incorreto, uma vez que descreve uma opção ou configuração que não resolve o problema apresentado.",
-        "1) Configurar barreiras de informação por país; 2) Implementar Direct Routing por região; 3) Migrar usuários por departamento sem piloto; 4) Avaliar rede após implantação completa: Incorreto, pois descreve um conceito inapropriado ou uma limitação que não se aplica ao caso."
+        "SBC on-premises=Direct Routing; PSTN gateway=método legado",
+        "Números de serviço=recebem apenas; não iniciam chamadas",
+        "Plano de chamada=rotas de voz=conceitos ortogonais, ambos necessários"
       ],
       "dicaOuro": "Administração do Teams exige atenção a permissões, políticas e conexões externas."
     }
   }
-];
+]
+;
