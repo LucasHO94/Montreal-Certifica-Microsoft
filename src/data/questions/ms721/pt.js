@@ -13,15 +13,15 @@ export const questions = [
     "domain": "Teams Phone",
     "explanation": {
       "intro": "Esta questão avalia conhecimentos sobre Teams Phone — subtema: Visão Geral do Teams Phone (Nível: iniciante).",
-      "papoReto": "O enunciado aborda o tema 'Visão Geral do Teams Phone'. O ponto principal é identificar que a resposta correta de fato é 'Microsoft Teams Phone (anteriormente denominado Phone System)'. As demais opções são distratores que descrevem ferramentas incorretas, limitações inexistentes ou conceitos que não se aplicam.",
+      "papoReto": "Teams Phone é PBX gerenciado Microsoft na nuvem, core de telefonia em Teams com recursos como transferência, correio de voz, auto-atendentes, filas",
       "respostaCerta": "Microsoft Teams Phone (anteriormente denominado Phone System) — essa opção resolve diretamente a situação do enunciado.",
-      "puloDoGato": "Fique atento aos detalhes do enunciado sobre 'Visão Geral do Teams Phone' para não confundir com outras alternativas parecidas.",
+      "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "Microsoft Teams Calling Plan isolado sem PBX integrado: Incorreto, pois descreve um conceito inadequado ou de outra tecnologia no contexto de Visão Geral do Teams Phone.",
-        "Azure Communication Services com módulo de telefonia corporativa: Incorreto, pois descreve um conceito inadequado ou de outra tecnologia no contexto de Visão Geral do Teams Phone.",
-        "Microsoft 365 Voice com gateway SIP nativo: Incorreto, pois descreve um conceito inadequado ou de outra tecnologia no contexto de Visão Geral do Teams Phone."
+        "Calling Plan é opção conectividade PSTN, não o PBX em si — Teams Phone é PBX independente do PSTN",
+        "Azure Communication Services é plataforma API para developers, não PBX corporativo gerenciado",
+        "Microsoft 365 Voice não é termo atual — Phone System rebatizado Teams Phone em 2019"
       ],
-      "dicaOuro": "Dica de prova: Para 'Visão Geral do Teams Phone', associe sempre com 'Microsoft Teams Phone'."
+      "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo da Microsoft"
     }
   },
   {
@@ -38,15 +38,15 @@ export const questions = [
     "domain": "Teams Phone",
     "explanation": {
       "intro": "Esta questão avalia conhecimentos sobre Teams Phone — subtema: Opções de Conectividade PSTN (Nível: iniciante).",
-      "papoReto": "O enunciado aborda o tema 'Opções de Conectividade PSTN'. O ponto principal é identificar que a resposta correta de fato é 'Microsoft Calling Plan, Operator Connect e Direct Routing'. As demais opções são distratores que descrevem ferramentas incorretas, limitações inexistentes ou conceitos que não se aplicam.",
+      "papoReto": "Três opções PSTN em Teams: Calling Plan (Microsoft operadora), Operator Connect (parceira gerencia), Direct Routing (seu SBC + controle)",
       "respostaCerta": "Microsoft Calling Plan, Operator Connect e Direct Routing — essa opção resolve diretamente a situação do enunciado.",
-      "puloDoGato": "Fique atento aos detalhes do enunciado sobre 'Opções de Conectividade PSTN' para não confundir com outras alternativas parecidas.",
+      "puloDoGato": "Calling Plan simples, Operator Connect meio-termo, Direct Routing máximo controle",
       "cascasDeBanana": [
-        "SIP Trunking direto, VoIP Gateway e Microsoft Phone Bridge: Incorreto, pois descreve um conceito inadequado ou de outra tecnologia no contexto de Opções de Conectividade PSTN.",
-        "Azure Voice Gateway, Teams PSTN Bridge e Direct SIP Connect: Incorreto, pois descreve um conceito inadequado ou de outra tecnologia no contexto de Opções de Conectividade PSTN.",
-        "Calling Plan, Hybrid Voice e Skype Connect Legacy: Incorreto, pois descreve um conceito inadequado ou de outra tecnologia no contexto de Opções de Conectividade PSTN."
+        "Azure Voice Gateway não existe — confunde com Azure Communication Services (API, não PSTN)",
+        "Skype Connect Legacy descontinuado — Microsoft removeu suporte em 2017-2018",
+        "SIP Trunking direto sem SBC não se integra ao Teams Phone — exige Direct Routing com SBC certificado"
       ],
-      "dicaOuro": "Dica de prova: Para 'Opções de Conectividade PSTN', associe sempre com 'Microsoft Calling Plan, Operator Connect e Direct Routing'."
+      "dicaOuro": "3 opções podem coexistir no mesmo tenant, atribuídas por usuário conforme necessidade da organização"
     }
   },
   {
@@ -63,15 +63,15 @@ export const questions = [
     "domain": "Teams Phone",
     "explanation": {
       "intro": "Esta questão avalia conhecimentos sobre Teams Phone — subtema: Microsoft Calling Plan (Nível: iniciante).",
-      "papoReto": "O enunciado aborda o tema 'Microsoft Calling Plan'. O ponto principal é identificar que a resposta correta de fato é 'Organizações que desejam conectividade PSTN totalmente gerenciada pela Microsoft, sem necessidade de infraestrutura de telefonia própria, em países onde o Calling Plan está disponível'. As demais opções são distratores que descrevem ferramentas incorretas, limitações inexistentes ou conceitos que não se aplicam.",
+      "papoReto": "Calling Plan = Microsoft é operadora PSTN, cobrança por minuto/planos, zero infraestrutura SBC/SIP sua",
       "respostaCerta": "Organizações que desejam conectividade PSTN totalmente gerenciada pela Microsoft, sem necessidade de infraestrutura de telefonia própria, em países onde o Calling Plan está disponível — essa opção resolve diretamente a situação do enunciado.",
-      "puloDoGato": "Fique atento aos detalhes do enunciado sobre 'Microsoft Calling Plan' para não confundir com outras alternativas parecidas.",
+      "puloDoGato": "Calling Plan = Microsoft cuida de tudo, você só paga e disca",
       "cascasDeBanana": [
-        "Organizações com infraestrutura SIP própria que desejam manter controle total sobre o roteamento de chamadas: Incorreto, pois descreve um conceito inadequado ou de outra tecnologia no contexto de Microsoft Calling Plan.",
-        "Empresas com contratos exclusivos com operadoras locais que não são parceiras Microsoft: Incorreto, pois descreve um conceito inadequado ou de outra tecnologia no contexto de Microsoft Calling Plan.",
-        "Organizações em países onde apenas o Direct Routing está disponível como opção PSTN: Incorreto, pois descreve um conceito inadequado ou de outra tecnologia no contexto de Microsoft Calling Plan."
+        "Infraestrutura SIP própria exige Direct Routing com SBC — Calling Plan é totalmente gerenciado",
+        "Operadoras locais não parceiras exigem Direct Routing — Calling Plan usa infraestrutura Microsoft",
+        "Países sem Calling Plan devem usar Direct Routing/Operator Connect — disponibilidade varia por região"
       ],
-      "dicaOuro": "Dica de prova: Para 'Microsoft Calling Plan', associe sempre com 'Organizações que desejam conectividade PSTN totalmente gerenciada pela Microsoft, sem necessidade de infraestrutura de telefonia própria, em países onde o Calling Plan está disponível'."
+      "dicaOuro": "Disponibilidade por país varia — verificar suporte regional em docs Microsoft antes contratação"
     }
   },
   {
@@ -88,15 +88,15 @@ export const questions = [
     "domain": "Teams Phone",
     "explanation": {
       "intro": "Esta questão avalia conhecimentos sobre Teams Phone — subtema: Operator Connect (Nível: iniciante).",
-      "papoReto": "O enunciado aborda o tema 'Operator Connect'. O ponto principal é identificar que a resposta correta de fato é 'No Operator Connect, a operadora parceira Microsoft gerencia a infraestrutura PSTN e a configuração é feita pelo Teams Admin Center; no Calling Plan, a Microsoft é a operadora e gerencia tudo diretamente'. As demais opções são distratores que descrevem ferramentas incorretas, limitações inexistentes ou conceitos que não se aplicam.",
+      "papoReto": "Operator Connect = operadora parceira gerencia PSTN + SBC, reduz complexidade vs Direct Routing",
       "respostaCerta": "No Operator Connect, a operadora parceira Microsoft gerencia a infraestrutura PSTN e a configuração é feita pelo Teams Admin Center; no Calling Plan, a Microsoft é a operadora e gerencia tudo diretamente — essa opção resolve diretamente a situação do enunciado.",
-      "puloDoGato": "Fique atento aos detalhes do enunciado sobre 'Operator Connect' para não confundir com outras alternativas parecidas.",
+      "puloDoGato": "Operator Connect = operadora terceira + SBC dela, meio termo entre Calling Plan e Direct Routing",
       "cascasDeBanana": [
-        "O Operator Connect exige implantação de SBC próprio pelo cliente; o Calling Plan não requer infraestrutura adicional: Incorreto, pois descreve um conceito inadequado ou de outra tecnologia no contexto de Operator Connect.",
-        "O Operator Connect é exclusivo para chamadas internacionais; o Calling Plan cobre apenas chamadas domésticas: Incorreto, pois descreve um conceito inadequado ou de outra tecnologia no contexto de Operator Connect.",
-        "Não há diferença funcional; ambos usam a mesma infraestrutura Microsoft com operadoras diferentes: Incorreto, pois descreve um conceito inadequado ou de outra tecnologia no contexto de Operator Connect."
+        "SBC próprio é exigência de Direct Routing, não Operator Connect — operadora gerencia SBC em Operator Connect",
+        "Calling Plan é Microsoft como operadora; Operator Connect é operadora terceira parceira — estruturas diferentes",
+        "Operator Connect e Calling Plan funcionam globalmente — diferenças são gerenciamento, não escopo geográfico"
       ],
-      "dicaOuro": "Dica de prova: Para 'Operator Connect', associe sempre com 'No Operator Connect, a operadora parceira Microsoft gerencia a infraestrutura PSTN e a configuração é feita pelo Teams Admin Center; no Calling Plan, a Microsoft é a operadora e gerencia tudo diretamente'."
+      "dicaOuro": "Operadora parceira em Operator Connect gerencia tanto PSTN quanto SBC por você"
     }
   },
   {
@@ -113,15 +113,15 @@ export const questions = [
     "domain": "Teams Phone",
     "explanation": {
       "intro": "Esta questão avalia conhecimentos sobre Teams Phone — subtema: Direct Routing — Visão Geral (Nível: iniciante).",
-      "papoReto": "O enunciado aborda o tema 'Direct Routing — Visão Geral'. O ponto principal é identificar que a resposta correta de fato é 'Session Border Controller (SBC) certificado pela Microsoft conectado ao Teams Phone via SIP TLS'. As demais opções são distratores que descrevem ferramentas incorretas, limitações inexistentes ou conceitos que não se aplicam.",
+      "papoReto": "Direct Routing = você gerencia SBC certificado Microsoft, máxima flexibilidade, controle total troncos SIP",
       "respostaCerta": "Session Border Controller (SBC) certificado pela Microsoft conectado ao Teams Phone via SIP TLS — essa opção resolve diretamente a situação do enunciado.",
-      "puloDoGato": "Fique atento aos detalhes do enunciado sobre 'Direct Routing — Visão Geral' para não confundir com outras alternativas parecidas.",
+      "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Azure VPN Gateway com configuração de túnel SIP para o Microsoft 365: Incorreto, pois descreve um conceito inadequado ou de outra tecnologia no contexto de Direct Routing — Visão Geral.",
-        "Exchange Online com conector de voz habilitado para roteamento PSTN: Incorreto, pois descreve um conceito inadequado ou de outra tecnologia no contexto de Direct Routing — Visão Geral.",
-        "Microsoft Teams Rooms com módulo de telefonia PSTN integrado: Incorreto, pois descreve um conceito inadequado ou de outra tecnologia no contexto de Direct Routing — Visão Geral."
+        "Exchange Online não participa de roteamento PSTN Teams Phone — não é componente Direct Routing",
+        "Azure VPN Gateway é rede privada, não participa de SIP/PSTN — não é intermediário telefonia",
+        "Teams Rooms é dispositivo sala, não gateway PSTN — não faz roteamento de chamadas externas"
       ],
-      "dicaOuro": "Dica de prova: Para 'Direct Routing — Visão Geral', associe sempre com 'Session Border Controller'."
+      "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Lync Mediant, Acme/Ixia, etc. — verificar lista compatibilidade Microsoft"
     }
   },
   {
