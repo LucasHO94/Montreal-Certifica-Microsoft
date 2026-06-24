@@ -6106,7 +6106,7 @@
         "explanation": {
             "intro": "Comportamentos de Relacionamento no Dataverse:",
             "papoReto": "No relacionamento 'Referencial' (Referential), a existência do Filho independe do Pai. Se a Conta for deletada, os Contatos atrelados apenas perdem o vínculo (o campo de lookup fica em branco), mas eles não são excluídos do sistema.",
-            "puloDoGato": "Lembre-se: Referential (Referencial) = 'Apenas aponta, se sumir não ligo' (Remove link). Parental (Parental) = 'Nasce junto, morre junto' (Cascade Delete).",
+            "puloDoGato": "Memorize: Referential (Referencial) = 'Apenas aponta, se sumir não ligo' (Remove link). Parental (Parental) = 'Nasce junto, morre junto' (Cascade Delete).",
             "cascasDeBanana": [
                 "Exclusão em Cascata: Esse é o comportamento do relacionamento tipo 'Parental'.",
                 "Impede que o Pai seja deletado: Esse é o comportamento de Restrição (Restrict Delete)."

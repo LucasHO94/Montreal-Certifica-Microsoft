@@ -12,14 +12,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Configurações Avançadas (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Configurações Avançadas (Nível iniciante).",
       "papoReto": "No contexto de Configurações Avançadas, a alternativa correta é 'Ctrl+Page Up e Ctrl+Page Down'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Ctrl+Page Up e Ctrl+Page Down — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Configurações Avançadas.",
+      "respostaCerta": "Ctrl+Page Up e Ctrl+Page Down — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Configurações Avançadas.",
       "cascasDeBanana": [
-        "Ctrl+Tab e Ctrl+Shift+Tab: Incorreto, pois alternativa inválida.",
-        "Alt+Seta para cima e Alt+Seta para baixo: Incorreto, pois alternativa inválida.",
-        "Ctrl+Seta para esquerda e Ctrl+Seta para direita: Incorreto, pois alternativa inválida."
+        "Ctrl+Tab e Ctrl+Shift+Tab: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Alt+Seta para cima e Alt+Seta para baixo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ctrl+Seta para esquerda e Ctrl+Seta para direita: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Configurações Avançadas, associe mentalmente a funcionalidade correta 'Ctrl+Page Up e Ctrl+Page Down'."
     }
@@ -37,14 +37,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Configurações Avançadas (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Configurações Avançadas (Nível iniciante).",
       "papoReto": "No contexto de Configurações Avançadas, a alternativa correta é 'Revisão → Proteger Planilha → definir senha e permissões'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Revisão → Proteger Planilha → definir senha e permissões — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Configurações Avançadas.",
+      "respostaCerta": "Revisão → Proteger Planilha → definir senha e permissões — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Configurações Avançadas.",
       "cascasDeBanana": [
-        "Arquivo → Informações → Proteger Pasta de Trabalho → Planilha: Incorreto, pois alternativa inválida.",
-        "Página Inicial → Células → Formatar → Bloquear Planilha: Incorreto, pois alternativa inválida.",
-        "Dados → Validação → Proteger Conteúdo: Incorreto, pois alternativa inválida."
+        "Arquivo → Informações → Proteger Pasta de Trabalho → Planilha: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Página Inicial → Células → Formatar → Bloquear Planilha: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Dados → Validação → Proteger Conteúdo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Configurações Avançadas, associe mentalmente a funcionalidade correta 'Revisão → Proteger Planilha → definir senha e permissões'."
     }
@@ -62,14 +62,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Configurações Avançadas (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Configurações Avançadas (Nível iniciante).",
       "papoReto": "No contexto de Configurações Avançadas, a alternativa correta é '.xlsm'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": ".xlsm — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Configurações Avançadas.",
+      "respostaCerta": ".xlsm — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Configurações Avançadas.",
       "cascasDeBanana": [
-        ".xlsx: Incorreto, pois alternativa inválida.",
-        ".xlsb: Incorreto, pois alternativa inválida.",
-        ".xltm: Incorreto, pois alternativa inválida."
+        ".xlsx: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        ".xlsb: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        ".xltm: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Configurações Avançadas, associe mentalmente a funcionalidade correta '.xlsm'."
     }
@@ -87,14 +87,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Proteção (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Proteção (Nível iniciante).",
       "papoReto": "No contexto de Proteção, a alternativa correta é 'Revisão → Proteger Pasta de Trabalho → marcar Estrutura'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Revisão → Proteger Pasta de Trabalho → marcar Estrutura — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Proteção.",
+      "respostaCerta": "Revisão → Proteger Pasta de Trabalho → marcar Estrutura — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Proteção.",
       "cascasDeBanana": [
-        "Revisão → Proteger Planilha → marcar Estrutura: Incorreto, pois alternativa inválida.",
-        "Arquivo → Informações → Proteger → Estrutura da Pasta de Trabalho: Incorreto, pois alternativa inválida.",
-        "Página Inicial → Células → Formatar → Proteger Estrutura: Incorreto, pois alternativa inválida."
+        "Revisão → Proteger Planilha → marcar Estrutura: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Arquivo → Informações → Proteger → Estrutura da Pasta de Trabalho: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Página Inicial → Células → Formatar → Proteger Estrutura: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Proteção, associe mentalmente a funcionalidade correta 'Revisão → Proteger Pasta de Trabalho → marcar Estrutura'."
     }
@@ -112,14 +112,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Proteção (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Proteção (Nível iniciante).",
       "papoReto": "No contexto de Proteção, a alternativa correta é 'Selecionar as células que devem ser editáveis → Formatar Células → Proteção → desmarcar Bloqueada → depois proteger a planilha'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Selecionar as células que devem ser editáveis → Formatar Células → Proteção → desmarcar Bloqueada → depois proteger a planilha — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Proteção.",
+      "respostaCerta": "Selecionar as células que devem ser editáveis → Formatar Células → Proteção → desmarcar Bloqueada → depois proteger a planilha — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Proteção.",
       "cascasDeBanana": [
-        "Proteger a planilha e depois desbloquear as células desejadas via Revisão: Incorreto, pois alternativa inválida.",
-        "Usar Permitir Edição de Intervalos antes de proteger a planilha para definir as células liberadas: Incorreto, pois alternativa inválida.",
-        "Selecionar as células → Revisão → Desbloquear Intervalo → proteger a planilha: Incorreto, pois alternativa inválida."
+        "Proteger a planilha e depois desbloquear as células desejadas via Revisão: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Permitir Edição de Intervalos antes de proteger a planilha para definir as células liberadas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Selecionar as células → Revisão → Desbloquear Intervalo → proteger a planilha: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Proteção, associe mentalmente a funcionalidade correta 'Selecionar as células que devem ser editáveis → Formatar Células → Proteção → desmarcar Bloqueada → depois proteger a planilha'."
     }
@@ -137,14 +137,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Proteção (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Proteção (Nível intermediario).",
       "papoReto": "No contexto de Proteção, a alternativa correta é 'Revisão → Permitir Edição de Intervalos → criar intervalos com senhas individuais → proteger a planilha'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Revisão → Permitir Edição de Intervalos → criar intervalos com senhas individuais → proteger a planilha — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Proteção.",
+      "respostaCerta": "Revisão → Permitir Edição de Intervalos → criar intervalos com senhas individuais → proteger a planilha — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Proteção.",
       "cascasDeBanana": [
-        "Revisão → Proteger Planilha → Usuários → atribuir intervalos por usuário: Incorreto, pois alternativa inválida.",
-        "Arquivo → Compartilhar → Permissões por Intervalo → definir senhas: Incorreto, pois alternativa inválida.",
-        "Não é possível definir senhas diferentes por intervalo no Excel: Incorreto, pois alternativa inválida."
+        "Revisão → Proteger Planilha → Usuários → atribuir intervalos por usuário: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Arquivo → Compartilhar → Permissões por Intervalo → definir senhas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível definir senhas diferentes por intervalo no Excel: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Proteção, associe mentalmente a funcionalidade correta 'Revisão → Permitir Edição de Intervalos → criar intervalos com senhas individuais → proteger a planilha'."
     }
@@ -162,14 +162,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Nomes Definidos (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Nomes Definidos (Nível iniciante).",
       "papoReto": "No contexto de Nomes Definidos, a alternativa correta é 'Um rótulo atribuído a uma célula intervalo fórmula ou constante que torna as fórmulas mais legíveis e fáceis de manter'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Um rótulo atribuído a uma célula intervalo fórmula ou constante que torna as fórmulas mais legíveis e fáceis de manter — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Nomes Definidos.",
+      "respostaCerta": "Um rótulo atribuído a uma célula intervalo fórmula ou constante que torna as fórmulas mais legíveis e fáceis de manter — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Nomes Definidos.",
       "cascasDeBanana": [
-        "Um alias para uma planilha inteira que permite referenciá-la por nome curto: Incorreto, pois alternativa inválida.",
-        "Um tipo especial de comentário que nomeia intervalos para documentação: Incorreto, pois alternativa inválida.",
-        "Uma formatação condicional nomeada aplicável a múltiplos intervalos: Incorreto, pois alternativa inválida."
+        "Um alias para uma planilha inteira que permite referenciá-la por nome curto: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Um tipo especial de comentário que nomeia intervalos para documentação: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Uma formatação condicional nomeada aplicável a múltiplos intervalos: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Nomes Definidos, associe mentalmente a funcionalidade correta 'Um rótulo atribuído a uma célula intervalo fórmula ou constante que torna as fórmulas mais legíveis e fáceis de manter'."
     }
@@ -187,14 +187,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Nomes Definidos (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Nomes Definidos (Nível iniciante).",
       "papoReto": "No contexto de Nomes Definidos, a alternativa correta é 'Selecionar o intervalo → clicar na Caixa de Nome → digitar o nome e pressionar Enter'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Selecionar o intervalo → clicar na Caixa de Nome → digitar o nome e pressionar Enter — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Nomes Definidos.",
+      "respostaCerta": "Selecionar o intervalo → clicar na Caixa de Nome → digitar o nome e pressionar Enter — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Nomes Definidos.",
       "cascasDeBanana": [
-        "Inserir → Nome → Definir → digitar o nome e o intervalo: Incorreto, pois alternativa inválida.",
-        "Fórmulas → Gerenciador de Nomes → Novo → digitar o nome e definir o intervalo: Incorreto, pois alternativa inválida.",
-        "Ambas as opções A e C estão corretas: Incorreto, pois alternativa inválida."
+        "Inserir → Nome → Definir → digitar o nome e o intervalo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Fórmulas → Gerenciador de Nomes → Novo → digitar o nome e definir o intervalo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas as opções A e C estão corretas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Nomes Definidos, associe mentalmente a funcionalidade correta 'Selecionar o intervalo → clicar na Caixa de Nome → digitar o nome e pressionar Enter'."
     }
@@ -212,14 +212,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Nomes Definidos (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Nomes Definidos (Nível intermediario).",
       "papoReto": "No contexto de Nomes Definidos, a alternativa correta é 'Copiar uma célula que usa o nome para a nova pasta de trabalho; o Excel copia o nome automaticamente ou usar Fórmulas → Gerenciador de Nomes para recriar'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Copiar uma célula que usa o nome para a nova pasta de trabalho; o Excel copia o nome automaticamente ou usar Fórmulas → Gerenciador de Nomes para recriar — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Nomes Definidos.",
+      "respostaCerta": "Copiar uma célula que usa o nome para a nova pasta de trabalho; o Excel copia o nome automaticamente ou usar Fórmulas → Gerenciador de Nomes para recriar — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Nomes Definidos.",
       "cascasDeBanana": [
-        "Exportar os nomes como arquivo .xlsx e importar na nova pasta: Incorreto, pois alternativa inválida.",
-        "Usar Fórmulas → Aplicar Nomes → Exportar para outra pasta de trabalho: Incorreto, pois alternativa inválida.",
-        "Vincular as duas pastas de trabalho e referenciar os nomes diretamente: Incorreto, pois alternativa inválida."
+        "Exportar os nomes como arquivo .xlsx e importar na nova pasta: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Fórmulas → Aplicar Nomes → Exportar para outra pasta de trabalho: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Vincular as duas pastas de trabalho e referenciar os nomes diretamente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Nomes Definidos, associe mentalmente a funcionalidade correta 'Copiar uma célula que usa o nome para a nova pasta de trabalho; o Excel copia o nome automaticamente ou usar Fórmulas → Gerenciador de Nomes para recriar'."
     }
@@ -237,14 +237,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Auditoria (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Auditoria (Nível iniciante).",
       "papoReto": "No contexto de Auditoria, a alternativa correta é 'Fórmulas → Rastrear Precedentes'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Fórmulas → Rastrear Precedentes — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Auditoria.",
+      "respostaCerta": "Fórmulas → Rastrear Precedentes — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Auditoria.",
       "cascasDeBanana": [
-        "Fórmulas → Rastrear Dependentes: Incorreto, pois alternativa inválida.",
-        "Fórmulas → Verificar Erros → Rastrear Origem: Incorreto, pois alternativa inválida.",
-        "Exibir → Rastrear Células de Entrada: Incorreto, pois alternativa inválida."
+        "Fórmulas → Rastrear Dependentes: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Fórmulas → Verificar Erros → Rastrear Origem: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Exibir → Rastrear Células de Entrada: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Auditoria, associe mentalmente a funcionalidade correta 'Fórmulas → Rastrear Precedentes'."
     }
@@ -262,14 +262,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Auditoria (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Auditoria (Nível iniciante).",
       "papoReto": "No contexto de Auditoria, a alternativa correta é 'Fórmulas → Rastrear Dependentes'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Fórmulas → Rastrear Dependentes — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Auditoria.",
+      "respostaCerta": "Fórmulas → Rastrear Dependentes — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Auditoria.",
       "cascasDeBanana": [
-        "Fórmulas → Rastrear Precedentes: Incorreto, pois alternativa inválida.",
-        "Fórmulas → Avaliar Fórmula: Incorreto, pois alternativa inválida.",
-        "Dados → Análise de Hipóteses → Rastrear Impacto: Incorreto, pois alternativa inválida."
+        "Fórmulas → Rastrear Precedentes: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Fórmulas → Avaliar Fórmula: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Dados → Análise de Hipóteses → Rastrear Impacto: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Auditoria, associe mentalmente a funcionalidade correta 'Fórmulas → Rastrear Dependentes'."
     }
@@ -287,14 +287,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Auditoria (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Auditoria (Nível intermediario).",
       "papoReto": "No contexto de Auditoria, a alternativa correta é 'Fórmulas → Avaliar Fórmula'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Fórmulas → Avaliar Fórmula — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Auditoria.",
+      "respostaCerta": "Fórmulas → Avaliar Fórmula — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Auditoria.",
       "cascasDeBanana": [
-        "Fórmulas → Verificar Erros → Rastrear Erro: Incorreto, pois alternativa inválida.",
-        "Fórmulas → Mostrar Fórmulas: Incorreto, pois alternativa inválida.",
-        "Dados → Validação → Verificar Erros de Referência: Incorreto, pois alternativa inválida."
+        "Fórmulas → Verificar Erros → Rastrear Erro: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Fórmulas → Mostrar Fórmulas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Dados → Validação → Verificar Erros de Referência: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Auditoria, associe mentalmente a funcionalidade correta 'Fórmulas → Avaliar Fórmula'."
     }
@@ -312,14 +312,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Lookup (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Lookup (Nível iniciante).",
       "papoReto": "No contexto de Funções de Lookup, a alternativa correta é 'PROCV (VLOOKUP)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "PROCV (VLOOKUP) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Lookup.",
+      "respostaCerta": "PROCV (VLOOKUP) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Lookup.",
       "cascasDeBanana": [
-        "PROCH: Incorreto, pois alternativa inválida.",
-        "ÍNDICE: Incorreto, pois alternativa inválida.",
-        "CORRESP: Incorreto, pois alternativa inválida."
+        "PROCH: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "ÍNDICE: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "CORRESP: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Lookup, associe mentalmente a funcionalidade correta 'PROCV'."
     }
@@ -337,14 +337,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Lookup (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Lookup (Nível iniciante).",
       "papoReto": "No contexto de Funções de Lookup, a alternativa correta é 'A coluna de pesquisa deve sempre ser a primeira coluna (mais à esquerda) do intervalo'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "A coluna de pesquisa deve sempre ser a primeira coluna (mais à esquerda) do intervalo — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Lookup.",
+      "respostaCerta": "A coluna de pesquisa deve sempre ser a primeira coluna (mais à esquerda) do intervalo — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Lookup.",
       "cascasDeBanana": [
-        "A coluna de pesquisa deve ser a última coluna do intervalo: Incorreto, pois alternativa inválida.",
-        "PROCV só funciona com dados numéricos na coluna de pesquisa: Incorreto, pois alternativa inválida.",
-        "PROCV não suporta correspondência aproximada: Incorreto, pois alternativa inválida."
+        "A coluna de pesquisa deve ser a última coluna do intervalo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "PROCV só funciona com dados numéricos na coluna de pesquisa: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "PROCV não suporta correspondência aproximada: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Lookup, associe mentalmente a funcionalidade correta 'A coluna de pesquisa deve sempre ser a primeira coluna'."
     }
@@ -362,14 +362,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Lookup (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Lookup (Nível iniciante).",
       "papoReto": "No contexto de Funções de Lookup, a alternativa correta é 'ÍNDICE + CORRESP (INDEX + MATCH)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "ÍNDICE + CORRESP (INDEX + MATCH) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Lookup.",
+      "respostaCerta": "ÍNDICE + CORRESP (INDEX + MATCH) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Lookup.",
       "cascasDeBanana": [
-        "PROCH + PROCV aninhados: Incorreto, pois alternativa inválida.",
-        "DESLOC + CORRESP: Incorreto, pois alternativa inválida.",
-        "ESCOLHER + PROCV: Incorreto, pois alternativa inválida."
+        "PROCH + PROCV aninhados: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "DESLOC + CORRESP: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "ESCOLHER + PROCV: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Lookup, associe mentalmente a funcionalidade correta 'ÍNDICE + CORRESP'."
     }
@@ -387,14 +387,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Lookup (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Lookup (Nível iniciante).",
       "papoReto": "No contexto de Funções de Lookup, a alternativa correta é 'PROCX (XLOOKUP)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "PROCX (XLOOKUP) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Lookup.",
+      "respostaCerta": "PROCX (XLOOKUP) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Lookup.",
       "cascasDeBanana": [
-        "FILTRO: Incorreto, pois alternativa inválida.",
-        "ÍNDICE: Incorreto, pois alternativa inválida.",
-        "PESQUISAR: Incorreto, pois alternativa inválida."
+        "FILTRO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "ÍNDICE: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "PESQUISAR: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Lookup, associe mentalmente a funcionalidade correta 'PROCX'."
     }
@@ -412,14 +412,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Lookup (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Lookup (Nível intermediario).",
       "papoReto": "No contexto de Funções de Lookup, a alternativa correta é 'O quarto argumento [se_não_encontrado] do PROCX'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "O quarto argumento [se_não_encontrado] do PROCX — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Lookup.",
+      "respostaCerta": "O quarto argumento [se_não_encontrado] do PROCX — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Lookup.",
       "cascasDeBanana": [
-        "O terceiro argumento [modo_correspondência] com valor -1: Incorreto, pois alternativa inválida.",
-        "Usar SEERRO envolvendo o PROCX: Incorreto, pois alternativa inválida.",
-        "O quinto argumento [modo_pesquisa] com valor 0: Incorreto, pois alternativa inválida."
+        "O terceiro argumento [modo_correspondência] com valor -1: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar SEERRO envolvendo o PROCX: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "O quinto argumento [modo_pesquisa] com valor 0: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Lookup, associe mentalmente a funcionalidade correta 'O quarto argumento [se_não_encontrado] do PROCX'."
     }
@@ -437,14 +437,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Texto (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Texto (Nível iniciante).",
       "papoReto": "No contexto de Funções de Texto, a alternativa correta é '=ESQUERDA(A1;LOCALIZAR(\" \";A1)-1)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=ESQUERDA(A1;LOCALIZAR(\" \";A1)-1) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Texto.",
+      "respostaCerta": "=ESQUERDA(A1;LOCALIZAR(\" \";A1)-1) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Texto.",
       "cascasDeBanana": [
-        "=ESQUERDA: Incorreto, pois alternativa inválida.",
-        "=EXT.TEXTO: Incorreto, pois alternativa inválida.",
-        "=TEXTO: Incorreto, pois alternativa inválida."
+        "=ESQUERDA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=EXT.TEXTO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=TEXTO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Texto, associe mentalmente a funcionalidade correta '=ESQUERDA'."
     }
@@ -462,14 +462,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Texto (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Texto (Nível iniciante).",
       "papoReto": "No contexto de Funções de Texto, a alternativa correta é 'UNIRTEXTO (TEXTJOIN)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "UNIRTEXTO (TEXTJOIN) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Texto.",
+      "respostaCerta": "UNIRTEXTO (TEXTJOIN) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Texto.",
       "cascasDeBanana": [
-        "CONCATENAR: Incorreto, pois alternativa inválida.",
-        "&: Incorreto, pois alternativa inválida.",
-        "JUNTAR: Incorreto, pois alternativa inválida."
+        "CONCATENAR: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "&: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "JUNTAR: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Texto, associe mentalmente a funcionalidade correta 'UNIRTEXTO'."
     }
@@ -487,14 +487,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Texto (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Texto (Nível intermediario).",
       "papoReto": "No contexto de Funções de Texto, a alternativa correta é 'Usar FILTRARXML ou fórmula matricial com CONCAT+SE+ÉNÚM+VALOR+EXT.TEXTO para extrair dígitos'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Usar FILTRARXML ou fórmula matricial com CONCAT+SE+ÉNÚM+VALOR+EXT.TEXTO para extrair dígitos — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Texto.",
+      "respostaCerta": "Usar FILTRARXML ou fórmula matricial com CONCAT+SE+ÉNÚM+VALOR+EXT.TEXTO para extrair dígitos — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Texto.",
       "cascasDeBanana": [
-        "Usar LOCALIZAR para encontrar os números e EXT.TEXTO para extrair: Incorreto, pois alternativa inválida.",
-        "Usar Dados → Texto para Colunas com delimitador espaço: Incorreto, pois alternativa inválida.",
-        "Usar SUBSTITUIR para remover o texto e manter apenas os números: Incorreto, pois alternativa inválida."
+        "Usar LOCALIZAR para encontrar os números e EXT.TEXTO para extrair: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Dados → Texto para Colunas com delimitador espaço: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar SUBSTITUIR para remover o texto e manter apenas os números: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Texto, associe mentalmente a funcionalidade correta 'Usar FILTRARXML ou fórmula matricial com CONCAT+SE+ÉNÚM+VALOR+EXT.TEXTO para extrair dígitos'."
     }
@@ -512,14 +512,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Lógicas (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Lógicas (Nível iniciante).",
       "papoReto": "No contexto de Funções Lógicas, a alternativa correta é '=SE(A1>1000;\"Alto\";SE(A1>=500;\"Médio\";\"Baixo\"))'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=SE(A1>1000;\"Alto\";SE(A1>=500;\"Médio\";\"Baixo\")) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções Lógicas.",
+      "respostaCerta": "=SE(A1>1000;\"Alto\";SE(A1>=500;\"Médio\";\"Baixo\")) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções Lógicas.",
       "cascasDeBanana": [
-        "=SE: Incorreto, pois alternativa inválida.",
-        "=SEERRO: Incorreto, pois alternativa inválida.",
-        "=ESCOLHER: Incorreto, pois alternativa inválida."
+        "=SE: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=SEERRO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=ESCOLHER: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções Lógicas, associe mentalmente a funcionalidade correta '=SE'."
     }
@@ -537,14 +537,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Lógicas (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Lógicas (Nível iniciante).",
       "papoReto": "No contexto de Funções Lógicas, a alternativa correta é 'OU (OR)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "OU (OR) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções Lógicas.",
+      "respostaCerta": "OU (OR) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções Lógicas.",
       "cascasDeBanana": [
-        "E: Incorreto, pois alternativa inválida.",
-        "NÃO: Incorreto, pois alternativa inválida.",
-        "XOR: Incorreto, pois alternativa inválida."
+        "E: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "NÃO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "XOR: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções Lógicas, associe mentalmente a funcionalidade correta 'OU'."
     }
@@ -562,14 +562,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Lógicas (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Lógicas (Nível intermediario).",
       "papoReto": "No contexto de Funções Lógicas, a alternativa correta é '=SE(E(B1>=7;C1>=0,75;D1=\"Não\");\"Aprovado\";\"Reprovado\")'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=SE(E(B1>=7;C1>=0,75;D1=\"Não\");\"Aprovado\";\"Reprovado\") — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções Lógicas.",
+      "respostaCerta": "=SE(E(B1>=7;C1>=0,75;D1=\"Não\");\"Aprovado\";\"Reprovado\") — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções Lógicas.",
       "cascasDeBanana": [
-        "=SE: Incorreto, pois alternativa inválida.",
-        "=E: Incorreto, pois alternativa inválida.",
-        "=SEERRO: Incorreto, pois alternativa inválida."
+        "=SE: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=E: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=SEERRO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções Lógicas, associe mentalmente a funcionalidade correta '=SE'."
     }
@@ -587,14 +587,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Estatísticas (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Estatísticas (Nível iniciante).",
       "papoReto": "No contexto de Funções Estatísticas, a alternativa correta é '=MÉDIASE(intervalo;\"<>0\")'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=MÉDIASE(intervalo;\"<>0\") — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções Estatísticas.",
+      "respostaCerta": "=MÉDIASE(intervalo;\"<>0\") — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções Estatísticas.",
       "cascasDeBanana": [
-        "=MÉDIA: Incorreto, pois alternativa inválida.",
-        "=MÉDIASES: Incorreto, pois alternativa inválida.",
-        "Ambas A e B estão corretas dependendo da versão do Excel: Incorreto, pois alternativa inválida."
+        "=MÉDIA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=MÉDIASES: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e B estão corretas dependendo da versão do Excel: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções Estatísticas, associe mentalmente a funcionalidade correta '=MÉDIASE'."
     }
@@ -612,14 +612,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Estatísticas (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Estatísticas (Nível iniciante).",
       "papoReto": "No contexto de Funções Estatísticas, a alternativa correta é 'CONT.SE (COUNTIF)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "CONT.SE (COUNTIF) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções Estatísticas.",
+      "respostaCerta": "CONT.SE (COUNTIF) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções Estatísticas.",
       "cascasDeBanana": [
-        "CONT.NÚM: Incorreto, pois alternativa inválida.",
-        "CONT.VALORES: Incorreto, pois alternativa inválida.",
-        "CONTAR.VAZIO: Incorreto, pois alternativa inválida."
+        "CONT.NÚM: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "CONT.VALORES: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "CONTAR.VAZIO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções Estatísticas, associe mentalmente a funcionalidade correta 'CONT.SE'."
     }
@@ -637,14 +637,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Estatísticas (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Estatísticas (Nível intermediario).",
       "papoReto": "No contexto de Funções Estatísticas, a alternativa correta é 'CONT.SES (COUNTIFS)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "CONT.SES (COUNTIFS) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções Estatísticas.",
+      "respostaCerta": "CONT.SES (COUNTIFS) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções Estatísticas.",
       "cascasDeBanana": [
-        "CONT.SE: Incorreto, pois alternativa inválida.",
-        "SOMARPRODUTO: Incorreto, pois alternativa inválida.",
-        "Ambas A e C estão corretas: Incorreto, pois alternativa inválida."
+        "CONT.SE: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "SOMARPRODUTO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e C estão corretas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções Estatísticas, associe mentalmente a funcionalidade correta 'CONT.SES'."
     }
@@ -662,14 +662,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Data (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Data (Nível iniciante).",
       "papoReto": "No contexto de Funções de Data, a alternativa correta é 'DIATRABALHOTOTAL (NETWORKDAYS)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "DIATRABALHOTOTAL (NETWORKDAYS) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Data.",
+      "respostaCerta": "DIATRABALHOTOTAL (NETWORKDAYS) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Data.",
       "cascasDeBanana": [
-        "DATADIF: Incorreto, pois alternativa inválida.",
-        "DIAS: Incorreto, pois alternativa inválida.",
-        "DIATRABALHO: Incorreto, pois alternativa inválida."
+        "DATADIF: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "DIAS: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "DIATRABALHO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Data, associe mentalmente a funcionalidade correta 'DIATRABALHOTOTAL'."
     }
@@ -687,14 +687,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Data (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Data (Nível iniciante).",
       "papoReto": "No contexto de Funções de Data, a alternativa correta é 'DIATRABALHO (WORKDAY)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "DIATRABALHO (WORKDAY) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Data.",
+      "respostaCerta": "DIATRABALHO (WORKDAY) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Data.",
       "cascasDeBanana": [
-        "DIATRABALHOTOTAL: Incorreto, pois alternativa inválida.",
-        "DATAM: Incorreto, pois alternativa inválida.",
-        "FIMMÊS: Incorreto, pois alternativa inválida."
+        "DIATRABALHOTOTAL: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "DATAM: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "FIMMÊS: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Data, associe mentalmente a funcionalidade correta 'DIATRABALHO'."
     }
@@ -712,14 +712,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Data (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Data (Nível intermediario).",
       "papoReto": "No contexto de Funções de Data, a alternativa correta é '=DATADIF(DataNasc;HOJE();\"Y\")'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=DATADIF(DataNasc;HOJE();\"Y\") — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Data.",
+      "respostaCerta": "=DATADIF(DataNasc;HOJE();\"Y\") — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Data.",
       "cascasDeBanana": [
-        "=ANO: Incorreto, pois alternativa inválida.",
-        "=INT: Incorreto, pois alternativa inválida.",
-        "=ANOS: Incorreto, pois alternativa inválida."
+        "=ANO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=INT: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=ANOS: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Data, associe mentalmente a funcionalidade correta '=DATADIF'."
     }
@@ -737,14 +737,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Data (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Data (Nível intermediario).",
       "papoReto": "No contexto de Funções de Data, a alternativa correta é '=INT((MÊS(A1)-1)/3)+1'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=INT((MÊS(A1)-1)/3)+1 — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Data.",
+      "respostaCerta": "=INT((MÊS(A1)-1)/3)+1 — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Data.",
       "cascasDeBanana": [
-        "=TRIMESTRE: Incorreto, pois alternativa inválida.",
-        "=MÊS: Incorreto, pois alternativa inválida.",
-        "=ARRED: Incorreto, pois alternativa inválida."
+        "=TRIMESTRE: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=MÊS: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=ARRED: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Data, associe mentalmente a funcionalidade correta '=INT'."
     }
@@ -762,14 +762,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Matemáticas (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Matemáticas (Nível iniciante).",
       "papoReto": "No contexto de Funções Matemáticas, a alternativa correta é 'SOMASE (SUMIF)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "SOMASE (SUMIF) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções Matemáticas.",
+      "respostaCerta": "SOMASE (SUMIF) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções Matemáticas.",
       "cascasDeBanana": [
-        "SOMA: Incorreto, pois alternativa inválida.",
-        "SOMARPRODUTO: Incorreto, pois alternativa inválida.",
-        "SUBTOTAL: Incorreto, pois alternativa inválida."
+        "SOMA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "SOMARPRODUTO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "SUBTOTAL: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções Matemáticas, associe mentalmente a funcionalidade correta 'SOMASE'."
     }
@@ -787,14 +787,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Matemáticas (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Matemáticas (Nível iniciante).",
       "papoReto": "No contexto de Funções Matemáticas, a alternativa correta é 'SOMASES (SUMIFS)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "SOMASES (SUMIFS) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções Matemáticas.",
+      "respostaCerta": "SOMASES (SUMIFS) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções Matemáticas.",
       "cascasDeBanana": [
-        "SOMASE: Incorreto, pois alternativa inválida.",
-        "SOMARPRODUTO: Incorreto, pois alternativa inválida.",
-        "Ambas A e C estão corretas: Incorreto, pois alternativa inválida."
+        "SOMASE: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "SOMARPRODUTO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e C estão corretas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções Matemáticas, associe mentalmente a funcionalidade correta 'SOMASES'."
     }
@@ -812,14 +812,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Matemáticas (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Matemáticas (Nível intermediario).",
       "papoReto": "No contexto de Funções Matemáticas, a alternativa correta é '=SOMARPRODUTO(Notas;Pesos)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=SOMARPRODUTO(Notas;Pesos) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções Matemáticas.",
+      "respostaCerta": "=SOMARPRODUTO(Notas;Pesos) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções Matemáticas.",
       "cascasDeBanana": [
-        "=SOMA: Incorreto, pois alternativa inválida.",
-        "=SOMASE com critério de peso: Incorreto, pois alternativa inválida.",
-        "Ambas A e B estão corretas: Incorreto, pois alternativa inválida."
+        "=SOMA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=SOMASE com critério de peso: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e B estão corretas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções Matemáticas, associe mentalmente a funcionalidade correta '=SOMARPRODUTO'."
     }
@@ -837,14 +837,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Fórmulas Matriciais (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Fórmulas Matriciais (Nível intermediario).",
       "papoReto": "No contexto de Fórmulas Matriciais, a alternativa correta é 'Uma fórmula que opera sobre arrays de valores retornando múltiplos resultados inserida com Ctrl+Shift+Enter'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Uma fórmula que opera sobre arrays de valores retornando múltiplos resultados inserida com Ctrl+Shift+Enter — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Fórmulas Matriciais.",
+      "respostaCerta": "Uma fórmula que opera sobre arrays de valores retornando múltiplos resultados inserida com Ctrl+Shift+Enter — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Fórmulas Matriciais.",
       "cascasDeBanana": [
-        "Uma fórmula que referencia múltiplas planilhas simultaneamente inserida com Shift+Enter: Incorreto, pois alternativa inválida.",
-        "Uma fórmula que usa nomes definidos para referenciar arrays inserida normalmente com Enter: Incorreto, pois alternativa inválida.",
-        "Uma fórmula que combina várias funções aninhadas inserida com Alt+Enter: Incorreto, pois alternativa inválida."
+        "Uma fórmula que referencia múltiplas planilhas simultaneamente inserida com Shift+Enter: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Uma fórmula que usa nomes definidos para referenciar arrays inserida normalmente com Enter: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Uma fórmula que combina várias funções aninhadas inserida com Alt+Enter: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Fórmulas Matriciais, associe mentalmente a funcionalidade correta 'Uma fórmula que opera sobre arrays de valores retornando múltiplos resultados inserida com Ctrl+Shift+Enter'."
     }
@@ -862,14 +862,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Fórmulas Matriciais (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Fórmulas Matriciais (Nível intermediario).",
       "papoReto": "No contexto de Fórmulas Matriciais, a alternativa correta é 'Fórmulas de matriz dinâmica com derramamento automático (spill)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Fórmulas de matriz dinâmica com derramamento automático (spill) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Fórmulas Matriciais.",
+      "respostaCerta": "Fórmulas de matriz dinâmica com derramamento automático (spill) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Fórmulas Matriciais.",
       "cascasDeBanana": [
-        "Fórmulas de array nomeadas: Incorreto, pois alternativa inválida.",
-        "Fórmulas LAMBDA: Incorreto, pois alternativa inválida.",
-        "Fórmulas LET com arrays: Incorreto, pois alternativa inválida."
+        "Fórmulas de array nomeadas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Fórmulas LAMBDA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Fórmulas LET com arrays: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Fórmulas Matriciais, associe mentalmente a funcionalidade correta 'Fórmulas de matriz dinâmica com derramamento automático'."
     }
@@ -887,14 +887,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Array Dinâmico (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Array Dinâmico (Nível intermediario).",
       "papoReto": "No contexto de Funções de Array Dinâmico, a alternativa correta é 'ÚNICO (UNIQUE)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "ÚNICO (UNIQUE) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Array Dinâmico.",
+      "respostaCerta": "ÚNICO (UNIQUE) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Array Dinâmico.",
       "cascasDeBanana": [
-        "REMDUPLICATAS: Incorreto, pois alternativa inválida.",
-        "CONT.SE com critério único: Incorreto, pois alternativa inválida.",
-        "FILTRO com condição de unicidade: Incorreto, pois alternativa inválida."
+        "REMDUPLICATAS: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "CONT.SE com critério único: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "FILTRO com condição de unicidade: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Array Dinâmico, associe mentalmente a funcionalidade correta 'ÚNICO'."
     }
@@ -912,14 +912,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Array Dinâmico (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Array Dinâmico (Nível intermediario).",
       "papoReto": "No contexto de Funções de Array Dinâmico, a alternativa correta é 'CLASSIFICAR (SORT)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "CLASSIFICAR (SORT) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Array Dinâmico.",
+      "respostaCerta": "CLASSIFICAR (SORT) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Array Dinâmico.",
       "cascasDeBanana": [
-        "ORDEM: Incorreto, pois alternativa inválida.",
-        "MENOR: Incorreto, pois alternativa inválida.",
-        "ÍNDICE com CORRESP ordenado: Incorreto, pois alternativa inválida."
+        "ORDEM: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "MENOR: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "ÍNDICE com CORRESP ordenado: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Array Dinâmico, associe mentalmente a funcionalidade correta 'CLASSIFICAR'."
     }
@@ -937,14 +937,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Array Dinâmico (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Array Dinâmico (Nível intermediario).",
       "papoReto": "No contexto de Funções de Array Dinâmico, a alternativa correta é 'FILTRO (FILTER)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "FILTRO (FILTER) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Array Dinâmico.",
+      "respostaCerta": "FILTRO (FILTER) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Array Dinâmico.",
       "cascasDeBanana": [
-        "PROCX com condição: Incorreto, pois alternativa inválida.",
-        "SOMASES com retorno de linhas: Incorreto, pois alternativa inválida.",
-        "DESLOC com critério de filtro: Incorreto, pois alternativa inválida."
+        "PROCX com condição: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "SOMASES com retorno de linhas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "DESLOC com critério de filtro: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Array Dinâmico, associe mentalmente a funcionalidade correta 'FILTRO'."
     }
@@ -962,14 +962,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Array Dinâmico (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Array Dinâmico (Nível intermediario).",
       "papoReto": "No contexto de Funções de Array Dinâmico, a alternativa correta é 'SEQUÊNCIA (SEQUENCE)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "SEQUÊNCIA (SEQUENCE) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Array Dinâmico.",
+      "respostaCerta": "SEQUÊNCIA (SEQUENCE) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Array Dinâmico.",
       "cascasDeBanana": [
-        "LINHA: Incorreto, pois alternativa inválida.",
-        "COLUNA: Incorreto, pois alternativa inválida.",
-        "ÍNDICE com incremento: Incorreto, pois alternativa inválida."
+        "LINHA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "COLUNA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "ÍNDICE com incremento: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Array Dinâmico, associe mentalmente a funcionalidade correta 'SEQUÊNCIA'."
     }
@@ -987,14 +987,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Financeiras (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Financeiras (Nível iniciante).",
       "papoReto": "No contexto de Funções Financeiras, a alternativa correta é 'VP (PV)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "VP (PV) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções Financeiras.",
+      "respostaCerta": "VP (PV) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções Financeiras.",
       "cascasDeBanana": [
-        "VF: Incorreto, pois alternativa inválida.",
-        "VPL: Incorreto, pois alternativa inválida.",
-        "TIR: Incorreto, pois alternativa inválida."
+        "VF: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "VPL: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "TIR: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções Financeiras, associe mentalmente a funcionalidade correta 'VP'."
     }
@@ -1012,14 +1012,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Financeiras (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Financeiras (Nível iniciante).",
       "papoReto": "No contexto de Funções Financeiras, a alternativa correta é 'VF (FV)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "VF (FV) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções Financeiras.",
+      "respostaCerta": "VF (FV) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções Financeiras.",
       "cascasDeBanana": [
-        "VP: Incorreto, pois alternativa inválida.",
-        "PGTO: Incorreto, pois alternativa inválida.",
-        "NPER: Incorreto, pois alternativa inválida."
+        "VP: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "PGTO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "NPER: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções Financeiras, associe mentalmente a funcionalidade correta 'VF'."
     }
@@ -1037,14 +1037,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Financeiras (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções Financeiras (Nível intermediario).",
       "papoReto": "No contexto de Funções Financeiras, a alternativa correta é '=PGTO(1,5%;36;-50000)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=PGTO(1,5%;36;-50000) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções Financeiras.",
+      "respostaCerta": "=PGTO(1,5%;36;-50000) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções Financeiras.",
       "cascasDeBanana": [
-        "=VP: Incorreto, pois alternativa inválida.",
-        "=NPER: Incorreto, pois alternativa inválida.",
-        "=VF: Incorreto, pois alternativa inválida."
+        "=VP: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=NPER: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=VF: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções Financeiras, associe mentalmente a funcionalidade correta '=PGTO'."
     }
@@ -1062,14 +1062,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Gráficos Avançados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gráficos Avançados, subtema Tipos de Gráfico (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gráficos Avançados, subtema Tipos de Gráfico (Nível iniciante).",
       "papoReto": "No contexto de Tipos de Gráfico, a alternativa correta é 'Gráfico de Pizza (Pie Chart)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Gráfico de Pizza (Pie Chart) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Tipos de Gráfico.",
+      "respostaCerta": "Gráfico de Pizza (Pie Chart) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Tipos de Gráfico.",
       "cascasDeBanana": [
-        "Gráfico de Barras: Incorreto, pois alternativa inválida.",
-        "Gráfico de Linha: Incorreto, pois alternativa inválida.",
-        "Gráfico de Dispersão: Incorreto, pois alternativa inválida."
+        "Gráfico de Barras: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Gráfico de Linha: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Gráfico de Dispersão: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Tipos de Gráfico, associe mentalmente a funcionalidade correta 'Gráfico de Pizza'."
     }
@@ -1087,14 +1087,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Gráficos Avançados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gráficos Avançados, subtema Tipos de Gráfico (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gráficos Avançados, subtema Tipos de Gráfico (Nível iniciante).",
       "papoReto": "No contexto de Tipos de Gráfico, a alternativa correta é 'Gráfico de Combinação com eixo secundário'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Gráfico de Combinação com eixo secundário — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Tipos de Gráfico.",
+      "respostaCerta": "Gráfico de Combinação com eixo secundário — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Tipos de Gráfico.",
       "cascasDeBanana": [
-        "Gráfico de Barras Empilhadas: Incorreto, pois alternativa inválida.",
-        "Gráfico de Bolhas com duas séries: Incorreto, pois alternativa inválida.",
-        "Gráfico de Dispersão com duas séries: Incorreto, pois alternativa inválida."
+        "Gráfico de Barras Empilhadas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Gráfico de Bolhas com duas séries: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Gráfico de Dispersão com duas séries: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Tipos de Gráfico, associe mentalmente a funcionalidade correta 'Gráfico de Combinação com eixo secundário'."
     }
@@ -1112,14 +1112,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Gráficos Avançados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gráficos Avançados, subtema Tipos de Gráfico (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gráficos Avançados, subtema Tipos de Gráfico (Nível iniciante).",
       "papoReto": "No contexto de Tipos de Gráfico, a alternativa correta é 'Histograma'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Histograma — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Tipos de Gráfico.",
+      "respostaCerta": "Histograma — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Tipos de Gráfico.",
       "cascasDeBanana": [
-        "Gráfico de Caixa: Incorreto, pois alternativa inválida.",
-        "Gráfico de Barras Agrupadas: Incorreto, pois alternativa inválida.",
-        "Gráfico de Área: Incorreto, pois alternativa inválida."
+        "Gráfico de Caixa: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Gráfico de Barras Agrupadas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Gráfico de Área: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Tipos de Gráfico, associe mentalmente a funcionalidade correta 'Histograma'."
     }
@@ -1137,14 +1137,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gráficos Avançados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gráficos Avançados, subtema Tipos de Gráfico (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gráficos Avançados, subtema Tipos de Gráfico (Nível intermediario).",
       "papoReto": "No contexto de Tipos de Gráfico, a alternativa correta é 'Inserir → Gráficos → Inserir Gráfico de Cascata Funil Ações Superfície ou Radar → Cascata'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Inserir → Gráficos → Inserir Gráfico de Cascata Funil Ações Superfície ou Radar → Cascata — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Tipos de Gráfico.",
+      "respostaCerta": "Inserir → Gráficos → Inserir Gráfico de Cascata Funil Ações Superfície ou Radar → Cascata — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Tipos de Gráfico.",
       "cascasDeBanana": [
-        "Inserir → Gráficos → Barras → Barras Empilhadas e ajustar manualmente: Incorreto, pois alternativa inválida.",
-        "Inserir → Gráfico de Combinação → Cascata: Incorreto, pois alternativa inválida.",
-        "Não é possível criar gráfico Waterfall nativamente no Excel; requer suplemento: Incorreto, pois alternativa inválida."
+        "Inserir → Gráficos → Barras → Barras Empilhadas e ajustar manualmente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Inserir → Gráfico de Combinação → Cascata: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível criar gráfico Waterfall nativamente no Excel; requer suplemento: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Tipos de Gráfico, associe mentalmente a funcionalidade correta 'Inserir → Gráficos → Inserir Gráfico de Cascata Funil Ações Superfície ou Radar → Cascata'."
     }
@@ -1162,14 +1162,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Gráficos Avançados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gráficos Avançados, subtema Formatação de Gráficos (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gráficos Avançados, subtema Formatação de Gráficos (Nível iniciante).",
       "papoReto": "No contexto de Formatação de Gráficos, a alternativa correta é 'Clicar com o botão direito nos rótulos de dados → Formatar Rótulos de Dados → marcar Percentual'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Clicar com o botão direito nos rótulos de dados → Formatar Rótulos de Dados → marcar Percentual — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Formatação de Gráficos.",
+      "respostaCerta": "Clicar com o botão direito nos rótulos de dados → Formatar Rótulos de Dados → marcar Percentual — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Formatação de Gráficos.",
       "cascasDeBanana": [
-        "Clicar no gráfico → Design do Gráfico → Adicionar Elemento → Rótulos de Dados → Percentual: Incorreto, pois alternativa inválida.",
-        "Selecionar a série → Formatar → Rótulos → Mostrar como Percentual: Incorreto, pois alternativa inválida.",
-        "Ambas as opções A e B estão corretas: Incorreto, pois alternativa inválida."
+        "Clicar no gráfico → Design do Gráfico → Adicionar Elemento → Rótulos de Dados → Percentual: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Selecionar a série → Formatar → Rótulos → Mostrar como Percentual: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas as opções A e B estão corretas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Formatação de Gráficos, associe mentalmente a funcionalidade correta 'Clicar com o botão direito nos rótulos de dados → Formatar Rótulos de Dados → marcar Percentual'."
     }
@@ -1187,14 +1187,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gráficos Avançados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gráficos Avançados, subtema Formatação de Gráficos (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gráficos Avançados, subtema Formatação de Gráficos (Nível intermediario).",
       "papoReto": "No contexto de Formatação de Gráficos, a alternativa correta é 'Converter os dados em uma Tabela do Excel (Ctrl+T) antes de criar o gráfico pois tabelas expandem automaticamente'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Converter os dados em uma Tabela do Excel (Ctrl+T) antes de criar o gráfico pois tabelas expandem automaticamente — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Formatação de Gráficos.",
+      "respostaCerta": "Converter os dados em uma Tabela do Excel (Ctrl+T) antes de criar o gráfico pois tabelas expandem automaticamente — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Formatação de Gráficos.",
       "cascasDeBanana": [
-        "Usar nomes definidos dinâmicos com DESLOC como fonte do gráfico: Incorreto, pois alternativa inválida.",
-        "Usar Power Query como fonte de dados do gráfico: Incorreto, pois alternativa inválida.",
-        "Ambas A e B são abordagens válidas: Incorreto, pois alternativa inválida."
+        "Usar nomes definidos dinâmicos com DESLOC como fonte do gráfico: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Power Query como fonte de dados do gráfico: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e B são abordagens válidas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Formatação de Gráficos, associe mentalmente a funcionalidade correta 'Converter os dados em uma Tabela do Excel'."
     }
@@ -1212,14 +1212,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Gráficos Avançados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gráficos Avançados, subtema Minigráficos (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gráficos Avançados, subtema Minigráficos (Nível iniciante).",
       "papoReto": "No contexto de Minigráficos, a alternativa correta é 'Inserir → Minigráficos → Linha → selecionar intervalo de dados e local de destino'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Inserir → Minigráficos → Linha → selecionar intervalo de dados e local de destino — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Minigráficos.",
+      "respostaCerta": "Inserir → Minigráficos → Linha → selecionar intervalo de dados e local de destino — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Minigráficos.",
       "cascasDeBanana": [
-        "Inserir → Gráfico → Minigráfico → Linha: Incorreto, pois alternativa inválida.",
-        "Inserir → Ilustrações → Minigráfico de Célula: Incorreto, pois alternativa inválida.",
-        "Não é possível inserir gráficos dentro de células no Excel: Incorreto, pois alternativa inválida."
+        "Inserir → Gráfico → Minigráfico → Linha: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Inserir → Ilustrações → Minigráfico de Célula: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível inserir gráficos dentro de células no Excel: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Minigráficos, associe mentalmente a funcionalidade correta 'Inserir → Minigráficos → Linha → selecionar intervalo de dados e local de destino'."
     }
@@ -1237,14 +1237,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gráficos Avançados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gráficos Avançados, subtema Minigráficos (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gráficos Avançados, subtema Minigráficos (Nível intermediario).",
       "papoReto": "No contexto de Minigráficos, a alternativa correta é 'Selecionar os minigráficos → guia Minigráfico → marcar Ponto Alto e Ponto Baixo e definir cores'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Selecionar os minigráficos → guia Minigráfico → marcar Ponto Alto e Ponto Baixo e definir cores — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Minigráficos.",
+      "respostaCerta": "Selecionar os minigráficos → guia Minigráfico → marcar Ponto Alto e Ponto Baixo e definir cores — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Minigráficos.",
       "cascasDeBanana": [
-        "Formatar Células → Minigráfico → Destacar Pontos Extremos: Incorreto, pois alternativa inválida.",
-        "Clicar com o botão direito no minigráfico → Formatar → Pontos de Destaque: Incorreto, pois alternativa inválida.",
-        "Design do Minigráfico → Marcadores → Ponto Alto e Ponto Baixo: Incorreto, pois alternativa inválida."
+        "Formatar Células → Minigráfico → Destacar Pontos Extremos: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Clicar com o botão direito no minigráfico → Formatar → Pontos de Destaque: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Design do Minigráfico → Marcadores → Ponto Alto e Ponto Baixo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Minigráficos, associe mentalmente a funcionalidade correta 'Selecionar os minigráficos → guia Minigráfico → marcar Ponto Alto e Ponto Baixo e definir cores'."
     }
@@ -1262,14 +1262,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Criação e Configuração (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Criação e Configuração (Nível iniciante).",
       "papoReto": "No contexto de Criação e Configuração, a alternativa correta é 'Selecionar qualquer célula do intervalo → Inserir → Tabela Dinâmica → definir o local de destino'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Selecionar qualquer célula do intervalo → Inserir → Tabela Dinâmica → definir o local de destino — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Criação e Configuração.",
+      "respostaCerta": "Selecionar qualquer célula do intervalo → Inserir → Tabela Dinâmica → definir o local de destino — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Criação e Configuração.",
       "cascasDeBanana": [
-        "Formatar os dados como Tabela antes de criar a Tabela Dinâmica obrigatoriamente: Incorreto, pois alternativa inválida.",
-        "Inserir → Tabela Dinâmica → selecionar os campos manualmente antes de confirmar: Incorreto, pois alternativa inválida.",
-        "Dados → Tabela Dinâmica → Assistente de Criação: Incorreto, pois alternativa inválida."
+        "Formatar os dados como Tabela antes de criar a Tabela Dinâmica obrigatoriamente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Inserir → Tabela Dinâmica → selecionar os campos manualmente antes de confirmar: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Dados → Tabela Dinâmica → Assistente de Criação: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Criação e Configuração, associe mentalmente a funcionalidade correta 'Selecionar qualquer célula do intervalo → Inserir → Tabela Dinâmica → definir o local de destino'."
     }
@@ -1287,14 +1287,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Criação e Configuração (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Criação e Configuração (Nível iniciante).",
       "papoReto": "No contexto de Criação e Configuração, a alternativa correta é 'Filtros, Colunas, Linhas e Valores'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Filtros, Colunas, Linhas e Valores — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Criação e Configuração.",
+      "respostaCerta": "Filtros, Colunas, Linhas e Valores — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Criação e Configuração.",
       "cascasDeBanana": [
-        "Linhas, Colunas, Dados e Totais: Incorreto, pois alternativa inválida.",
-        "Campos, Grupos, Filtros e Resumos: Incorreto, pois alternativa inválida.",
-        "Categorias, Séries, Valores e Totais: Incorreto, pois alternativa inválida."
+        "Linhas, Colunas, Dados e Totais: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Campos, Grupos, Filtros e Resumos: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Categorias, Séries, Valores e Totais: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Criação e Configuração, associe mentalmente a funcionalidade correta 'Filtros, Colunas, Linhas e Valores'."
     }
@@ -1312,14 +1312,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Criação e Configuração (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Criação e Configuração (Nível iniciante).",
       "papoReto": "No contexto de Criação e Configuração, a alternativa correta é 'Clicar com o botão direito na Tabela Dinâmica → Atualizar ou usar Análise → Atualizar'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Clicar com o botão direito na Tabela Dinâmica → Atualizar ou usar Análise → Atualizar — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Criação e Configuração.",
+      "respostaCerta": "Clicar com o botão direito na Tabela Dinâmica → Atualizar ou usar Análise → Atualizar — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Criação e Configuração.",
       "cascasDeBanana": [
-        "Excluir e recriar a Tabela Dinâmica: Incorreto, pois alternativa inválida.",
-        "Salvar e reabrir a pasta de trabalho: Incorreto, pois alternativa inválida.",
-        "A Tabela Dinâmica atualiza automaticamente ao salvar: Incorreto, pois alternativa inválida."
+        "Excluir e recriar a Tabela Dinâmica: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Salvar e reabrir a pasta de trabalho: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "A Tabela Dinâmica atualiza automaticamente ao salvar: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Criação e Configuração, associe mentalmente a funcionalidade correta 'Clicar com o botão direito na Tabela Dinâmica → Atualizar ou usar Análise → Atualizar'."
     }
@@ -1337,14 +1337,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Criação e Configuração (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Criação e Configuração (Nível iniciante).",
       "papoReto": "No contexto de Criação e Configuração, a alternativa correta é 'Alterar a fonte de dados via Análise → Alterar Fonte de Dados para incluir o novo intervalo ou usar uma Tabela do Excel como fonte'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Alterar a fonte de dados via Análise → Alterar Fonte de Dados para incluir o novo intervalo ou usar uma Tabela do Excel como fonte — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Criação e Configuração.",
+      "respostaCerta": "Alterar a fonte de dados via Análise → Alterar Fonte de Dados para incluir o novo intervalo ou usar uma Tabela do Excel como fonte — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Criação e Configuração.",
       "cascasDeBanana": [
-        "Recriar a Tabela Dinâmica selecionando o novo intervalo completo: Incorreto, pois alternativa inválida.",
-        "Atualizar a Tabela Dinâmica; ela detecta automaticamente novos registros: Incorreto, pois alternativa inválida.",
-        "Usar Dados → Atualizar Tudo para incluir os novos registros automaticamente: Incorreto, pois alternativa inválida."
+        "Recriar a Tabela Dinâmica selecionando o novo intervalo completo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Atualizar a Tabela Dinâmica; ela detecta automaticamente novos registros: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Dados → Atualizar Tudo para incluir os novos registros automaticamente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Criação e Configuração, associe mentalmente a funcionalidade correta 'Alterar a fonte de dados via Análise → Alterar Fonte de Dados para incluir o novo intervalo ou usar uma Tabela do Excel como fonte'."
     }
@@ -1362,14 +1362,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Cálculos (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Cálculos (Nível iniciante).",
       "papoReto": "No contexto de Cálculos, a alternativa correta é 'Análise da Tabela Dinâmica → Campos, Itens e Conjuntos → Campo Calculado → definir a fórmula'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Análise da Tabela Dinâmica → Campos, Itens e Conjuntos → Campo Calculado → definir a fórmula — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Cálculos.",
+      "respostaCerta": "Análise da Tabela Dinâmica → Campos, Itens e Conjuntos → Campo Calculado → definir a fórmula — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Cálculos.",
       "cascasDeBanana": [
-        "Adicionar uma coluna calculada na fonte de dados e atualizar a Tabela Dinâmica: Incorreto, pois alternativa inválida.",
-        "Inserir → Campo → Calculado → definir a fórmula na Tabela Dinâmica: Incorreto, pois alternativa inválida.",
-        "Clicar com o botão direito na Tabela Dinâmica → Inserir Campo Calculado: Incorreto, pois alternativa inválida."
+        "Adicionar uma coluna calculada na fonte de dados e atualizar a Tabela Dinâmica: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Inserir → Campo → Calculado → definir a fórmula na Tabela Dinâmica: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Clicar com o botão direito na Tabela Dinâmica → Inserir Campo Calculado: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Cálculos, associe mentalmente a funcionalidade correta 'Análise da Tabela Dinâmica → Campos, Itens e Conjuntos → Campo Calculado → definir a fórmula'."
     }
@@ -1387,14 +1387,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Cálculos (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Cálculos (Nível intermediario).",
       "papoReto": "No contexto de Cálculos, a alternativa correta é 'Campo Calculado opera sobre campos inteiros da Tabela Dinâmica; Item Calculado opera sobre itens específicos dentro de um campo'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Campo Calculado opera sobre campos inteiros da Tabela Dinâmica; Item Calculado opera sobre itens específicos dentro de um campo — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Cálculos.",
+      "respostaCerta": "Campo Calculado opera sobre campos inteiros da Tabela Dinâmica; Item Calculado opera sobre itens específicos dentro de um campo — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Cálculos.",
       "cascasDeBanana": [
-        "Item Calculado é mais preciso que Campo Calculado para cálculos financeiros: Incorreto, pois alternativa inválida.",
-        "Campo Calculado funciona apenas com valores numéricos; Item Calculado funciona com texto: Incorreto, pois alternativa inválida.",
-        "Não há diferença funcional entre os dois: Incorreto, pois alternativa inválida."
+        "Item Calculado é mais preciso que Campo Calculado para cálculos financeiros: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Campo Calculado funciona apenas com valores numéricos; Item Calculado funciona com texto: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não há diferença funcional entre os dois: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Cálculos, associe mentalmente a funcionalidade correta 'Campo Calculado opera sobre campos inteiros da Tabela Dinâmica; Item Calculado opera sobre itens específicos dentro de um campo'."
     }
@@ -1412,14 +1412,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Cálculos (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Cálculos (Nível intermediario).",
       "papoReto": "No contexto de Cálculos, a alternativa correta é 'Clicar com o botão direito no campo de valores → Mostrar Valores Como → % do Total Geral'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Clicar com o botão direito no campo de valores → Mostrar Valores Como → % do Total Geral — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Cálculos.",
+      "respostaCerta": "Clicar com o botão direito no campo de valores → Mostrar Valores Como → % do Total Geral — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Cálculos.",
       "cascasDeBanana": [
-        "Análise → Configurações do Campo de Valor → Formato → Percentual: Incorreto, pois alternativa inválida.",
-        "Formatar as células da Tabela Dinâmica como percentual com Ctrl+Shift+%: Incorreto, pois alternativa inválida.",
-        "Adicionar um Campo Calculado com fórmula de percentual: Incorreto, pois alternativa inválida."
+        "Análise → Configurações do Campo de Valor → Formato → Percentual: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Formatar as células da Tabela Dinâmica como percentual com Ctrl+Shift+%: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Adicionar um Campo Calculado com fórmula de percentual: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Cálculos, associe mentalmente a funcionalidade correta 'Clicar com o botão direito no campo de valores → Mostrar Valores Como → % do Total Geral'."
     }
@@ -1437,14 +1437,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Agrupamento (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Agrupamento (Nível iniciante).",
       "papoReto": "No contexto de Agrupamento, a alternativa correta é 'Clicar com o botão direito em qualquer data → Agrupar → selecionar Meses e Anos'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Clicar com o botão direito em qualquer data → Agrupar → selecionar Meses e Anos — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Agrupamento.",
+      "respostaCerta": "Clicar com o botão direito em qualquer data → Agrupar → selecionar Meses e Anos — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Agrupamento.",
       "cascasDeBanana": [
-        "Análise → Agrupar Campo → selecionar o intervalo de agrupamento: Incorreto, pois alternativa inválida.",
-        "Modificar a fonte de dados para incluir colunas de Mês e Ano antes de criar a Tabela Dinâmica: Incorreto, pois alternativa inválida.",
-        "Filtros → Agrupar por Data → Meses e Anos: Incorreto, pois alternativa inválida."
+        "Análise → Agrupar Campo → selecionar o intervalo de agrupamento: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Modificar a fonte de dados para incluir colunas de Mês e Ano antes de criar a Tabela Dinâmica: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Filtros → Agrupar por Data → Meses e Anos: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Agrupamento, associe mentalmente a funcionalidade correta 'Clicar com o botão direito em qualquer data → Agrupar → selecionar Meses e Anos'."
     }
@@ -1462,14 +1462,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Agrupamento (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Agrupamento (Nível intermediario).",
       "papoReto": "No contexto de Agrupamento, a alternativa correta é 'Clicar com o botão direito no campo numérico → Agrupar → definir início, fim e intervalo dos grupos'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Clicar com o botão direito no campo numérico → Agrupar → definir início, fim e intervalo dos grupos — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Agrupamento.",
+      "respostaCerta": "Clicar com o botão direito no campo numérico → Agrupar → definir início, fim e intervalo dos grupos — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Agrupamento.",
       "cascasDeBanana": [
-        "Criar uma coluna auxiliar na fonte de dados com as faixas e usar essa coluna como campo de linha: Incorreto, pois alternativa inválida.",
-        "Análise → Campos, Itens e Conjuntos → Item Calculado → definir as faixas: Incorreto, pois alternativa inválida.",
-        "Usar Segmentação de Dados com faixas personalizadas: Incorreto, pois alternativa inválida."
+        "Criar uma coluna auxiliar na fonte de dados com as faixas e usar essa coluna como campo de linha: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Análise → Campos, Itens e Conjuntos → Item Calculado → definir as faixas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Segmentação de Dados com faixas personalizadas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Agrupamento, associe mentalmente a funcionalidade correta 'Clicar com o botão direito no campo numérico → Agrupar → definir início, fim e intervalo dos grupos'."
     }
@@ -1487,14 +1487,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Segmentação de Dados (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Segmentação de Dados (Nível iniciante).",
       "papoReto": "No contexto de Segmentação de Dados, a alternativa correta é 'Um filtro visual interativo que permite filtrar a Tabela Dinâmica clicando em botões sem usar os menus de filtro'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Um filtro visual interativo que permite filtrar a Tabela Dinâmica clicando em botões sem usar os menus de filtro — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Segmentação de Dados.",
+      "respostaCerta": "Um filtro visual interativo que permite filtrar a Tabela Dinâmica clicando em botões sem usar os menus de filtro — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Segmentação de Dados.",
       "cascasDeBanana": [
-        "Um gráfico interativo vinculado à Tabela Dinâmica: Incorreto, pois alternativa inválida.",
-        "Um painel de controle que exibe os campos disponíveis: Incorreto, pois alternativa inválida.",
-        "Uma forma de segmentar os dados em múltiplas planilhas automaticamente: Incorreto, pois alternativa inválida."
+        "Um gráfico interativo vinculado à Tabela Dinâmica: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Um painel de controle que exibe os campos disponíveis: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Uma forma de segmentar os dados em múltiplas planilhas automaticamente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Segmentação de Dados, associe mentalmente a funcionalidade correta 'Um filtro visual interativo que permite filtrar a Tabela Dinâmica clicando em botões sem usar os menus de filtro'."
     }
@@ -1512,14 +1512,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Segmentação de Dados (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Segmentação de Dados (Nível intermediario).",
       "papoReto": "No contexto de Segmentação de Dados, a alternativa correta é 'Clicar com o botão direito na Segmentação → Conexões de Relatório → selecionar todas as Tabelas Dinâmicas desejadas'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Clicar com o botão direito na Segmentação → Conexões de Relatório → selecionar todas as Tabelas Dinâmicas desejadas — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Segmentação de Dados.",
+      "respostaCerta": "Clicar com o botão direito na Segmentação → Conexões de Relatório → selecionar todas as Tabelas Dinâmicas desejadas — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Segmentação de Dados.",
       "cascasDeBanana": [
-        "Criar uma Segmentação separada para cada Tabela Dinâmica e vinculá-las via macro VBA: Incorreto, pois alternativa inválida.",
-        "Usar Análise → Segmentação de Dados → Conectar a Múltiplas Tabelas: Incorreto, pois alternativa inválida.",
-        "Não é possível conectar uma segmentação a múltiplas Tabelas Dinâmicas: Incorreto, pois alternativa inválida."
+        "Criar uma Segmentação separada para cada Tabela Dinâmica e vinculá-las via macro VBA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Análise → Segmentação de Dados → Conectar a Múltiplas Tabelas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível conectar uma segmentação a múltiplas Tabelas Dinâmicas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Segmentação de Dados, associe mentalmente a funcionalidade correta 'Clicar com o botão direito na Segmentação → Conexões de Relatório → selecionar todas as Tabelas Dinâmicas desejadas'."
     }
@@ -1537,14 +1537,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Linha do Tempo (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Linha do Tempo (Nível iniciante).",
       "papoReto": "No contexto de Linha do Tempo, a alternativa correta é 'Um filtro visual interativo específico para campos de data que permite filtrar por períodos como meses, trimestres e anos'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Um filtro visual interativo específico para campos de data que permite filtrar por períodos como meses, trimestres e anos — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Linha do Tempo.",
+      "respostaCerta": "Um filtro visual interativo específico para campos de data que permite filtrar por períodos como meses, trimestres e anos — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Linha do Tempo.",
       "cascasDeBanana": [
-        "Um gráfico de linha vinculado à evolução temporal dos dados da Tabela Dinâmica: Incorreto, pois alternativa inválida.",
-        "Uma segmentação de dados especial para dados numéricos em ordem cronológica: Incorreto, pois alternativa inválida.",
-        "Um recurso que projeta tendências futuras com base nos dados históricos: Incorreto, pois alternativa inválida."
+        "Um gráfico de linha vinculado à evolução temporal dos dados da Tabela Dinâmica: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Uma segmentação de dados especial para dados numéricos em ordem cronológica: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Um recurso que projeta tendências futuras com base nos dados históricos: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Linha do Tempo, associe mentalmente a funcionalidade correta 'Um filtro visual interativo específico para campos de data que permite filtrar por períodos como meses, trimestres e anos'."
     }
@@ -1562,14 +1562,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Gráfico Dinâmico (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Gráfico Dinâmico (Nível iniciante).",
       "papoReto": "No contexto de Gráfico Dinâmico, a alternativa correta é 'Um Gráfico Dinâmico está vinculado a uma Tabela Dinâmica e se atualiza automaticamente quando os filtros ou dados da tabela mudam'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Um Gráfico Dinâmico está vinculado a uma Tabela Dinâmica e se atualiza automaticamente quando os filtros ou dados da tabela mudam — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Gráfico Dinâmico.",
+      "respostaCerta": "Um Gráfico Dinâmico está vinculado a uma Tabela Dinâmica e se atualiza automaticamente quando os filtros ou dados da tabela mudam — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Gráfico Dinâmico.",
       "cascasDeBanana": [
-        "Um Gráfico Dinâmico suporta mais tipos de gráfico que um gráfico comum: Incorreto, pois alternativa inválida.",
-        "Um Gráfico Dinâmico pode ser exportado como arquivo independente; o gráfico comum não: Incorreto, pois alternativa inválida.",
-        "Não há diferença funcional entre os dois tipos de gráfico: Incorreto, pois alternativa inválida."
+        "Um Gráfico Dinâmico suporta mais tipos de gráfico que um gráfico comum: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Um Gráfico Dinâmico pode ser exportado como arquivo independente; o gráfico comum não: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não há diferença funcional entre os dois tipos de gráfico: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Gráfico Dinâmico, associe mentalmente a funcionalidade correta 'Um Gráfico Dinâmico está vinculado a uma Tabela Dinâmica e se atualiza automaticamente quando os filtros ou dados da tabela mudam'."
     }
@@ -1587,14 +1587,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Formatação (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Formatação (Nível iniciante).",
       "papoReto": "No contexto de Formatação, a alternativa correta é 'Selecionar a Tabela Dinâmica → Design → escolher o estilo na galeria de Estilos de Tabela Dinâmica'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Selecionar a Tabela Dinâmica → Design → escolher o estilo na galeria de Estilos de Tabela Dinâmica — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Formatação.",
+      "respostaCerta": "Selecionar a Tabela Dinâmica → Design → escolher o estilo na galeria de Estilos de Tabela Dinâmica — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Formatação.",
       "cascasDeBanana": [
-        "Página Inicial → Formatar como Tabela → selecionar o estilo desejado: Incorreto, pois alternativa inválida.",
-        "Clicar com o botão direito → Formatar Tabela Dinâmica → Estilos: Incorreto, pois alternativa inválida.",
-        "Análise → Opções → Estilo → selecionar o estilo desejado: Incorreto, pois alternativa inválida."
+        "Página Inicial → Formatar como Tabela → selecionar o estilo desejado: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Clicar com o botão direito → Formatar Tabela Dinâmica → Estilos: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Análise → Opções → Estilo → selecionar o estilo desejado: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Formatação, associe mentalmente a funcionalidade correta 'Selecionar a Tabela Dinâmica → Design → escolher o estilo na galeria de Estilos de Tabela Dinâmica'."
     }
@@ -1612,14 +1612,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Importação de Dados (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Importação de Dados (Nível iniciante).",
       "papoReto": "No contexto de Importação de Dados, a alternativa correta é 'Uma ferramenta de ETL integrada ao Excel que permite importar, transformar e carregar dados de diversas fontes'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Uma ferramenta de ETL integrada ao Excel que permite importar, transformar e carregar dados de diversas fontes — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Importação de Dados.",
+      "respostaCerta": "Uma ferramenta de ETL integrada ao Excel que permite importar, transformar e carregar dados de diversas fontes — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Importação de Dados.",
       "cascasDeBanana": [
-        "Um suplemento para criar gráficos avançados e dashboards: Incorreto, pois alternativa inválida.",
-        "Uma ferramenta de análise estatística integrada ao Excel: Incorreto, pois alternativa inválida.",
-        "Um recurso para criar conexões entre planilhas da mesma pasta de trabalho: Incorreto, pois alternativa inválida."
+        "Um suplemento para criar gráficos avançados e dashboards: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Uma ferramenta de análise estatística integrada ao Excel: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Um recurso para criar conexões entre planilhas da mesma pasta de trabalho: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Importação de Dados, associe mentalmente a funcionalidade correta 'Uma ferramenta de ETL integrada ao Excel que permite importar, transformar e carregar dados de diversas fontes'."
     }
@@ -1637,14 +1637,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Importação de Dados (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Importação de Dados (Nível iniciante).",
       "papoReto": "No contexto de Importação de Dados, a alternativa correta é 'Arquivos Excel, CSV, PDF, bancos de dados SQL, SharePoint, web, APIs e muitas outras fontes'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Arquivos Excel, CSV, PDF, bancos de dados SQL, SharePoint, web, APIs e muitas outras fontes — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Importação de Dados.",
+      "respostaCerta": "Arquivos Excel, CSV, PDF, bancos de dados SQL, SharePoint, web, APIs e muitas outras fontes — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Importação de Dados.",
       "cascasDeBanana": [
-        "Apenas arquivos Excel e CSV: Incorreto, pois alternativa inválida.",
-        "Apenas bancos de dados SQL Server e Oracle: Incorreto, pois alternativa inválida.",
-        "Apenas fontes Microsoft como SharePoint e Azure: Incorreto, pois alternativa inválida."
+        "Apenas arquivos Excel e CSV: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Apenas bancos de dados SQL Server e Oracle: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Apenas fontes Microsoft como SharePoint e Azure: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Importação de Dados, associe mentalmente a funcionalidade correta 'Arquivos Excel, CSV, PDF, bancos de dados SQL, SharePoint, web, APIs e muitas outras fontes'."
     }
@@ -1662,14 +1662,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Importação de Dados (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Importação de Dados (Nível iniciante).",
       "papoReto": "No contexto de Importação de Dados, a alternativa correta é 'Dados → Obter Dados → De Outras Fontes → Da Web → inserir a URL e configurar atualização automática'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Obter Dados → De Outras Fontes → Da Web → inserir a URL e configurar atualização automática — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Importação de Dados.",
+      "respostaCerta": "Dados → Obter Dados → De Outras Fontes → Da Web → inserir a URL e configurar atualização automática — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Importação de Dados.",
       "cascasDeBanana": [
-        "Copiar e colar o conteúdo da página web no Excel manualmente: Incorreto, pois alternativa inválida.",
-        "Usar macro VBA com objeto XMLHttp para importar os dados: Incorreto, pois alternativa inválida.",
-        "Inserir → Conteúdo Online → Web → URL: Incorreto, pois alternativa inválida."
+        "Copiar e colar o conteúdo da página web no Excel manualmente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar macro VBA com objeto XMLHttp para importar os dados: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Inserir → Conteúdo Online → Web → URL: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Importação de Dados, associe mentalmente a funcionalidade correta 'Dados → Obter Dados → De Outras Fontes → Da Web → inserir a URL e configurar atualização automática'."
     }
@@ -1687,14 +1687,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Transformação de Dados (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Transformação de Dados (Nível iniciante).",
       "papoReto": "No contexto de Transformação de Dados, a alternativa correta é 'Página Inicial → Usar Primeira Linha como Cabeçalho'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Página Inicial → Usar Primeira Linha como Cabeçalho — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Transformação de Dados.",
+      "respostaCerta": "Página Inicial → Usar Primeira Linha como Cabeçalho — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Transformação de Dados.",
       "cascasDeBanana": [
-        "Transformar → Promover Cabeçalhos → Primeira Linha: Incorreto, pois alternativa inválida.",
-        "Clicar com o botão direito na primeira linha → Promover como Cabeçalho: Incorreto, pois alternativa inválida.",
-        "Ambas A e B estão corretas: Incorreto, pois alternativa inválida."
+        "Transformar → Promover Cabeçalhos → Primeira Linha: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Clicar com o botão direito na primeira linha → Promover como Cabeçalho: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e B estão corretas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Transformação de Dados, associe mentalmente a funcionalidade correta 'Página Inicial → Usar Primeira Linha como Cabeçalho'."
     }
@@ -1712,14 +1712,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Transformação de Dados (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Transformação de Dados (Nível iniciante).",
       "papoReto": "No contexto de Transformação de Dados, a alternativa correta é 'Selecionar as colunas a manter → clicar com o botão direito → Remover Outras Colunas'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Selecionar as colunas a manter → clicar com o botão direito → Remover Outras Colunas — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Transformação de Dados.",
+      "respostaCerta": "Selecionar as colunas a manter → clicar com o botão direito → Remover Outras Colunas — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Transformação de Dados.",
       "cascasDeBanana": [
-        "Selecionar as colunas a excluir → Página Inicial → Remover Colunas: Incorreto, pois alternativa inválida.",
-        "Ambas A e B são abordagens válidas dependendo do número de colunas: Incorreto, pois alternativa inválida.",
-        "Transformar → Gerenciar Colunas → Remover Colunas Selecionadas: Incorreto, pois alternativa inválida."
+        "Selecionar as colunas a excluir → Página Inicial → Remover Colunas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e B são abordagens válidas dependendo do número de colunas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Transformar → Gerenciar Colunas → Remover Colunas Selecionadas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Transformação de Dados, associe mentalmente a funcionalidade correta 'Selecionar as colunas a manter → clicar com o botão direito → Remover Outras Colunas'."
     }
@@ -1737,14 +1737,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Transformação de Dados (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Transformação de Dados (Nível intermediario).",
       "papoReto": "No contexto de Transformação de Dados, a alternativa correta é 'Adicionar coluna personalizada com condição If ou usar Substituir Valores para mapear cada mês ao número correspondente'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Adicionar coluna personalizada com condição If ou usar Substituir Valores para mapear cada mês ao número correspondente — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Transformação de Dados.",
+      "respostaCerta": "Adicionar coluna personalizada com condição If ou usar Substituir Valores para mapear cada mês ao número correspondente — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Transformação de Dados.",
       "cascasDeBanana": [
-        "Usar Transformar → Tipo de Dados → Número; o Power Query converte automaticamente: Incorreto, pois alternativa inválida.",
-        "Criar uma coluna de índice e usar como referência de mês: Incorreto, pois alternativa inválida.",
-        "Usar Mesclar Consultas com uma tabela de referência mês-número: Incorreto, pois alternativa inválida."
+        "Usar Transformar → Tipo de Dados → Número; o Power Query converte automaticamente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Criar uma coluna de índice e usar como referência de mês: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Mesclar Consultas com uma tabela de referência mês-número: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Transformação de Dados, associe mentalmente a funcionalidade correta 'Adicionar coluna personalizada com condição If ou usar Substituir Valores para mapear cada mês ao número correspondente'."
     }
@@ -1762,14 +1762,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Mesclar e Acrescentar (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Mesclar e Acrescentar (Nível intermediario).",
       "papoReto": "No contexto de Mesclar e Acrescentar, a alternativa correta é 'Mesclar combina tabelas horizontalmente por uma coluna chave como um JOIN; Acrescentar empilha tabelas verticalmente como um UNION'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Mesclar combina tabelas horizontalmente por uma coluna chave como um JOIN; Acrescentar empilha tabelas verticalmente como um UNION — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Mesclar e Acrescentar.",
+      "respostaCerta": "Mesclar combina tabelas horizontalmente por uma coluna chave como um JOIN; Acrescentar empilha tabelas verticalmente como um UNION — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Mesclar e Acrescentar.",
       "cascasDeBanana": [
-        "Acrescentar combina colunas de duas tabelas; Mesclar empilha linhas: Incorreto, pois alternativa inválida.",
-        "Mesclar é equivalente ao PROCV; Acrescentar é equivalente ao SOMASE: Incorreto, pois alternativa inválida.",
-        "Não há diferença funcional entre as duas operações: Incorreto, pois alternativa inválida."
+        "Acrescentar combina colunas de duas tabelas; Mesclar empilha linhas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Mesclar é equivalente ao PROCV; Acrescentar é equivalente ao SOMASE: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não há diferença funcional entre as duas operações: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Mesclar e Acrescentar, associe mentalmente a funcionalidade correta 'Mesclar combina tabelas horizontalmente por uma coluna chave como um JOIN; Acrescentar empilha tabelas verticalmente como um UNION'."
     }
@@ -1787,14 +1787,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Mesclar e Acrescentar (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Mesclar e Acrescentar (Nível intermediario).",
       "papoReto": "No contexto de Mesclar e Acrescentar, a alternativa correta é 'Dados → Obter Dados → De Arquivo → Da Pasta → selecionar a pasta com os arquivos e usar Acrescentar Consultas'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Obter Dados → De Arquivo → Da Pasta → selecionar a pasta com os arquivos e usar Acrescentar Consultas — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Mesclar e Acrescentar.",
+      "respostaCerta": "Dados → Obter Dados → De Arquivo → Da Pasta → selecionar a pasta com os arquivos e usar Acrescentar Consultas — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Mesclar e Acrescentar.",
       "cascasDeBanana": [
-        "Importar cada planilha separadamente e usar Acrescentar Consultas 11 vezes: Incorreto, pois alternativa inválida.",
-        "Criar uma macro VBA que copia os dados de cada planilha para uma planilha mestre: Incorreto, pois alternativa inválida.",
-        "Usar Consolidar Dados do Excel em vez do Power Query: Incorreto, pois alternativa inválida."
+        "Importar cada planilha separadamente e usar Acrescentar Consultas 11 vezes: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Criar uma macro VBA que copia os dados de cada planilha para uma planilha mestre: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Consolidar Dados do Excel em vez do Power Query: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Mesclar e Acrescentar, associe mentalmente a funcionalidade correta 'Dados → Obter Dados → De Arquivo → Da Pasta → selecionar a pasta com os arquivos e usar Acrescentar Consultas'."
     }
@@ -1812,14 +1812,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Linguagem M (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Linguagem M (Nível intermediario).",
       "papoReto": "No contexto de Linguagem M, a alternativa correta é 'Editor Avançado do Power Query onde se escreve código na linguagem M'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Editor Avançado do Power Query onde se escreve código na linguagem M — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Linguagem M.",
+      "respostaCerta": "Editor Avançado do Power Query onde se escreve código na linguagem M — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Linguagem M.",
       "cascasDeBanana": [
-        "Console VBA integrado ao Power Query: Incorreto, pois alternativa inválida.",
-        "Fórmulas DAX aplicadas dentro do Power Query: Incorreto, pois alternativa inválida.",
-        "Python integrado ao Power Query via suplemento: Incorreto, pois alternativa inválida."
+        "Console VBA integrado ao Power Query: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Fórmulas DAX aplicadas dentro do Power Query: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Python integrado ao Power Query via suplemento: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Linguagem M, associe mentalmente a funcionalidade correta 'Editor Avançado do Power Query onde se escreve código na linguagem M'."
     }
@@ -1837,14 +1837,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Atualização de Dados (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Atualização de Dados (Nível iniciante).",
       "papoReto": "No contexto de Atualização de Dados, a alternativa correta é 'Dados → Consultas e Conexões → clicar com o botão direito na consulta → Propriedades → marcar \"Atualizar dados ao abrir o arquivo\"'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Consultas e Conexões → clicar com o botão direito na consulta → Propriedades → marcar \"Atualizar dados ao abrir o arquivo\" — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Atualização de Dados.",
+      "respostaCerta": "Dados → Consultas e Conexões → clicar com o botão direito na consulta → Propriedades → marcar \"Atualizar dados ao abrir o arquivo\" — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Atualização de Dados.",
       "cascasDeBanana": [
-        "Power Query → Atualizar → Configurar Atualização Automática → Ao Abrir: Incorreto, pois alternativa inválida.",
-        "Arquivo → Opções → Power Query → Atualização Automática → Ao Abrir Arquivo: Incorreto, pois alternativa inválida.",
-        "Não é possível atualizar automaticamente ao abrir; requer macro VBA: Incorreto, pois alternativa inválida."
+        "Power Query → Atualizar → Configurar Atualização Automática → Ao Abrir: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Arquivo → Opções → Power Query → Atualização Automática → Ao Abrir Arquivo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível atualizar automaticamente ao abrir; requer macro VBA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Atualização de Dados, associe mentalmente a funcionalidade correta 'Dados → Consultas e Conexões → clicar com o botão direito na consulta → Propriedades → marcar \"Atualizar dados ao abrir o arquivo\"'."
     }
@@ -1862,14 +1862,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Validação de Dados (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Validação de Dados (Nível iniciante).",
       "papoReto": "No contexto de Validação de Dados, a alternativa correta é 'Dados → Validação de Dados → Permitir: Data → entre → definir as datas mínima e máxima'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Validação de Dados → Permitir: Data → entre → definir as datas mínima e máxima — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Validação de Dados.",
+      "respostaCerta": "Dados → Validação de Dados → Permitir: Data → entre → definir as datas mínima e máxima — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Validação de Dados.",
       "cascasDeBanana": [
-        "Página Inicial → Formatar Células → Data → Intervalo → definir as datas: Incorreto, pois alternativa inválida.",
-        "Revisão → Proteger Planilha → Restringir Datas: Incorreto, pois alternativa inválida.",
-        "Inserir → Controle de Formulário → Seletor de Data com intervalo: Incorreto, pois alternativa inválida."
+        "Página Inicial → Formatar Células → Data → Intervalo → definir as datas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Revisão → Proteger Planilha → Restringir Datas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Inserir → Controle de Formulário → Seletor de Data com intervalo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Validação de Dados, associe mentalmente a funcionalidade correta 'Dados → Validação de Dados → Permitir: Data → entre → definir as datas mínima e máxima'."
     }
@@ -1887,14 +1887,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Validação de Dados (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Validação de Dados (Nível iniciante).",
       "papoReto": "No contexto de Validação de Dados, a alternativa correta é 'Dados → Validação de Dados → Permitir: Lista → definir as opções separadas por ponto e vírgula ou selecionar um intervalo'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Validação de Dados → Permitir: Lista → definir as opções separadas por ponto e vírgula ou selecionar um intervalo — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Validação de Dados.",
+      "respostaCerta": "Dados → Validação de Dados → Permitir: Lista → definir as opções separadas por ponto e vírgula ou selecionar um intervalo — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Validação de Dados.",
       "cascasDeBanana": [
-        "Inserir → Controle de Formulário → Caixa de Combinação: Incorreto, pois alternativa inválida.",
-        "Página Inicial → Células → Formatar → Lista Suspensa: Incorreto, pois alternativa inválida.",
-        "Desenvolvedor → Controles → Caixa de Listagem: Incorreto, pois alternativa inválida."
+        "Inserir → Controle de Formulário → Caixa de Combinação: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Página Inicial → Células → Formatar → Lista Suspensa: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Desenvolvedor → Controles → Caixa de Listagem: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Validação de Dados, associe mentalmente a funcionalidade correta 'Dados → Validação de Dados → Permitir: Lista → definir as opções separadas por ponto e vírgula ou selecionar um intervalo'."
     }
@@ -1912,14 +1912,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Validação de Dados (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Validação de Dados (Nível intermediario).",
       "papoReto": "No contexto de Validação de Dados, a alternativa correta é 'Usar Validação de Dados com fórmula INDIRETO referenciando nomes definidos para cada categoria da primeira lista'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Usar Validação de Dados com fórmula INDIRETO referenciando nomes definidos para cada categoria da primeira lista — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Validação de Dados.",
+      "respostaCerta": "Usar Validação de Dados com fórmula INDIRETO referenciando nomes definidos para cada categoria da primeira lista — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Validação de Dados.",
       "cascasDeBanana": [
-        "Usar macro VBA para popular a segunda lista conforme a seleção da primeira: Incorreto, pois alternativa inválida.",
-        "Usar Power Query para filtrar as opções da segunda lista dinamicamente: Incorreto, pois alternativa inválida.",
-        "Criar tabelas separadas para cada categoria e vincular via PROCX: Incorreto, pois alternativa inválida."
+        "Usar macro VBA para popular a segunda lista conforme a seleção da primeira: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Power Query para filtrar as opções da segunda lista dinamicamente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Criar tabelas separadas para cada categoria e vincular via PROCX: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Validação de Dados, associe mentalmente a funcionalidade correta 'Usar Validação de Dados com fórmula INDIRETO referenciando nomes definidos para cada categoria da primeira lista'."
     }
@@ -1937,14 +1937,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Formatação Condicional (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Formatação Condicional (Nível iniciante).",
       "papoReto": "No contexto de Formatação Condicional, a alternativa correta é 'Um recurso que aplica formatação automática a células com base em regras ou condições definidas pelo usuário'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Um recurso que aplica formatação automática a células com base em regras ou condições definidas pelo usuário — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Formatação Condicional.",
+      "respostaCerta": "Um recurso que aplica formatação automática a células com base em regras ou condições definidas pelo usuário — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Formatação Condicional.",
       "cascasDeBanana": [
-        "Um tipo de estilo de célula aplicado manualmente com base em critérios visuais: Incorreto, pois alternativa inválida.",
-        "Um recurso que formata automaticamente toda a planilha com base no tema selecionado: Incorreto, pois alternativa inválida.",
-        "Uma forma de proteger células com formatação específica contra edição: Incorreto, pois alternativa inválida."
+        "Um tipo de estilo de célula aplicado manualmente com base em critérios visuais: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Um recurso que formata automaticamente toda a planilha com base no tema selecionado: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Uma forma de proteger células com formatação específica contra edição: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Formatação Condicional, associe mentalmente a funcionalidade correta 'Um recurso que aplica formatação automática a células com base em regras ou condições definidas pelo usuário'."
     }
@@ -1962,14 +1962,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Formatação Condicional (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Formatação Condicional (Nível iniciante).",
       "papoReto": "No contexto de Formatação Condicional, a alternativa correta é 'Selecionar o intervalo → Página Inicial → Formatação Condicional → Realçar Regras das Células → É Menor do que → 0 → definir formato vermelho'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Selecionar o intervalo → Página Inicial → Formatação Condicional → Realçar Regras das Células → É Menor do que → 0 → definir formato vermelho — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Formatação Condicional.",
+      "respostaCerta": "Selecionar o intervalo → Página Inicial → Formatação Condicional → Realçar Regras das Células → É Menor do que → 0 → definir formato vermelho — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Formatação Condicional.",
       "cascasDeBanana": [
-        "Selecionar o intervalo → Dados → Formatação Condicional → Valor Negativo → Vermelho: Incorreto, pois alternativa inválida.",
-        "Página Inicial → Estilos de Célula → Negativo → Vermelho → aplicar ao intervalo: Incorreto, pois alternativa inválida.",
-        "Inserir → Regra de Formatação → Menor que Zero → Cor de Fundo Vermelha: Incorreto, pois alternativa inválida."
+        "Selecionar o intervalo → Dados → Formatação Condicional → Valor Negativo → Vermelho: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Página Inicial → Estilos de Célula → Negativo → Vermelho → aplicar ao intervalo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Inserir → Regra de Formatação → Menor que Zero → Cor de Fundo Vermelha: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Formatação Condicional, associe mentalmente a funcionalidade correta 'Selecionar o intervalo → Página Inicial → Formatação Condicional → Realçar Regras das Células → É Menor do que → 0 → definir formato vermelho'."
     }
@@ -1987,14 +1987,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Formatação Condicional (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Formatação Condicional (Nível iniciante).",
       "papoReto": "No contexto de Formatação Condicional, a alternativa correta é 'Página Inicial → Formatação Condicional → Escalas de Cor → selecionar a escala Verde-Vermelho ou Vermelho-Verde'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Página Inicial → Formatação Condicional → Escalas de Cor → selecionar a escala Verde-Vermelho ou Vermelho-Verde — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Formatação Condicional.",
+      "respostaCerta": "Página Inicial → Formatação Condicional → Escalas de Cor → selecionar a escala Verde-Vermelho ou Vermelho-Verde — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Formatação Condicional.",
       "cascasDeBanana": [
-        "Página Inicial → Formatação Condicional → Barras de Dados → Gradiente de Cor: Incorreto, pois alternativa inválida.",
-        "Página Inicial → Formatação Condicional → Conjuntos de Ícones → Setas Coloridas: Incorreto, pois alternativa inválida.",
-        "Página Inicial → Formatar Células → Preenchimento → Gradiente Condicional: Incorreto, pois alternativa inválida."
+        "Página Inicial → Formatação Condicional → Barras de Dados → Gradiente de Cor: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Página Inicial → Formatação Condicional → Conjuntos de Ícones → Setas Coloridas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Página Inicial → Formatar Células → Preenchimento → Gradiente Condicional: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Formatação Condicional, associe mentalmente a funcionalidade correta 'Página Inicial → Formatação Condicional → Escalas de Cor → selecionar a escala Verde-Vermelho ou Vermelho-Verde'."
     }
@@ -2012,14 +2012,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Formatação Condicional (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Formatação Condicional (Nível intermediario).",
       "papoReto": "No contexto de Formatação Condicional, a alternativa correta é 'Selecionar toda a tabela → Nova Regra → Usar fórmula → =$C1=\"Atrasado\" com referência de coluna absoluta e linha relativa'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Selecionar toda a tabela → Nova Regra → Usar fórmula → =$C1=\"Atrasado\" com referência de coluna absoluta e linha relativa — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Formatação Condicional.",
+      "respostaCerta": "Selecionar toda a tabela → Nova Regra → Usar fórmula → =$C1=\"Atrasado\" com referência de coluna absoluta e linha relativa — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Formatação Condicional.",
       "cascasDeBanana": [
-        "Selecionar apenas a coluna Status e aplicar a regra de realce: Incorreto, pois alternativa inválida.",
-        "Usar Formatação Condicional → Realçar Regras → Texto que Contém → \"Atrasado\" na coluna inteira: Incorreto, pois alternativa inválida.",
-        "Aplicar a regra na coluna Status e usar Pincel de Formatação para copiar para as demais colunas: Incorreto, pois alternativa inválida."
+        "Selecionar apenas a coluna Status e aplicar a regra de realce: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Formatação Condicional → Realçar Regras → Texto que Contém → \"Atrasado\" na coluna inteira: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Aplicar a regra na coluna Status e usar Pincel de Formatação para copiar para as demais colunas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Formatação Condicional, associe mentalmente a funcionalidade correta 'Selecionar toda a tabela → Nova Regra → Usar fórmula → =$C1=\"Atrasado\" com referência de coluna absoluta e linha relativa'."
     }
@@ -2037,14 +2037,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Formatação Condicional (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Formatação Condicional (Nível intermediario).",
       "papoReto": "No contexto de Formatação Condicional, a alternativa correta é 'Uma regra com prioridade mais alta e a opção \"Parar se Verdadeiro\" ativada está impedindo a avaliação das regras seguintes'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Uma regra com prioridade mais alta e a opção \"Parar se Verdadeiro\" ativada está impedindo a avaliação das regras seguintes — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Formatação Condicional.",
+      "respostaCerta": "Uma regra com prioridade mais alta e a opção \"Parar se Verdadeiro\" ativada está impedindo a avaliação das regras seguintes — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Formatação Condicional.",
       "cascasDeBanana": [
-        "As regras conflitantes se cancelam mutuamente no Excel: Incorreto, pois alternativa inválida.",
-        "O intervalo tem proteção que impede a aplicação de Formatação Condicional: Incorreto, pois alternativa inválida.",
-        "O número máximo de regras por intervalo foi atingido: Incorreto, pois alternativa inválida."
+        "As regras conflitantes se cancelam mutuamente no Excel: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "O intervalo tem proteção que impede a aplicação de Formatação Condicional: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "O número máximo de regras por intervalo foi atingido: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Formatação Condicional, associe mentalmente a funcionalidade correta 'Uma regra com prioridade mais alta e a opção \"Parar se Verdadeiro\" ativada está impedindo a avaliação das regras seguintes'."
     }
@@ -2062,14 +2062,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Análise de Hipóteses (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Análise de Hipóteses (Nível iniciante).",
       "papoReto": "No contexto de Análise de Hipóteses, a alternativa correta é 'Dados → Análise de Hipóteses → Tabela de Dados com uma variável'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Análise de Hipóteses → Tabela de Dados com uma variável — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Análise de Hipóteses.",
+      "respostaCerta": "Dados → Análise de Hipóteses → Tabela de Dados com uma variável — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Análise de Hipóteses.",
       "cascasDeBanana": [
-        "Dados → Análise de Hipóteses → Atingir Meta: Incorreto, pois alternativa inválida.",
-        "Dados → Análise de Hipóteses → Gerenciador de Cenários: Incorreto, pois alternativa inválida.",
-        "Fórmulas → Avaliar Fórmula com múltiplos valores: Incorreto, pois alternativa inválida."
+        "Dados → Análise de Hipóteses → Atingir Meta: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Dados → Análise de Hipóteses → Gerenciador de Cenários: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Fórmulas → Avaliar Fórmula com múltiplos valores: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Análise de Hipóteses, associe mentalmente a funcionalidade correta 'Dados → Análise de Hipóteses → Tabela de Dados com uma variável'."
     }
@@ -2087,14 +2087,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Análise de Hipóteses (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Análise de Hipóteses (Nível iniciante).",
       "papoReto": "No contexto de Análise de Hipóteses, a alternativa correta é 'Dados → Análise de Hipóteses → Atingir Meta'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Análise de Hipóteses → Atingir Meta — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Análise de Hipóteses.",
+      "respostaCerta": "Dados → Análise de Hipóteses → Atingir Meta — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Análise de Hipóteses.",
       "cascasDeBanana": [
-        "Dados → Análise de Hipóteses → Tabela de Dados: Incorreto, pois alternativa inválida.",
-        "Dados → Análise de Hipóteses → Gerenciador de Cenários: Incorreto, pois alternativa inválida.",
-        "Fórmulas → Solver → Definir Meta: Incorreto, pois alternativa inválida."
+        "Dados → Análise de Hipóteses → Tabela de Dados: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Dados → Análise de Hipóteses → Gerenciador de Cenários: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Fórmulas → Solver → Definir Meta: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Análise de Hipóteses, associe mentalmente a funcionalidade correta 'Dados → Análise de Hipóteses → Atingir Meta'."
     }
@@ -2112,14 +2112,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Análise de Hipóteses (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Análise de Hipóteses (Nível intermediario).",
       "papoReto": "No contexto de Análise de Hipóteses, a alternativa correta é 'Dados → Análise de Hipóteses → Gerenciador de Cenários → criar e comparar os três cenários'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Análise de Hipóteses → Gerenciador de Cenários → criar e comparar os três cenários — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Análise de Hipóteses.",
+      "respostaCerta": "Dados → Análise de Hipóteses → Gerenciador de Cenários → criar e comparar os três cenários — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Análise de Hipóteses.",
       "cascasDeBanana": [
-        "Dados → Análise de Hipóteses → Tabela de Dados com duas variáveis: Incorreto, pois alternativa inválida.",
-        "Criar três planilhas separadas uma para cada cenário: Incorreto, pois alternativa inválida.",
-        "Usar Power Query para simular os três cenários simultaneamente: Incorreto, pois alternativa inválida."
+        "Dados → Análise de Hipóteses → Tabela de Dados com duas variáveis: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Criar três planilhas separadas uma para cada cenário: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Power Query para simular os três cenários simultaneamente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Análise de Hipóteses, associe mentalmente a funcionalidade correta 'Dados → Análise de Hipóteses → Gerenciador de Cenários → criar e comparar os três cenários'."
     }
@@ -2137,14 +2137,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Solver (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Solver (Nível intermediario).",
       "papoReto": "No contexto de Solver, a alternativa correta é 'Um suplemento de otimização que encontra o valor ótimo de uma célula objetivo ajustando células variáveis sujeitas a restrições definidas pelo usuário'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Um suplemento de otimização que encontra o valor ótimo de uma célula objetivo ajustando células variáveis sujeitas a restrições definidas pelo usuário — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Solver.",
+      "respostaCerta": "Um suplemento de otimização que encontra o valor ótimo de uma célula objetivo ajustando células variáveis sujeitas a restrições definidas pelo usuário — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Solver.",
       "cascasDeBanana": [
-        "Uma ferramenta de análise estatística para resolver sistemas de equações lineares: Incorreto, pois alternativa inválida.",
-        "Um recurso que resolve erros de fórmulas automaticamente: Incorreto, pois alternativa inválida.",
-        "Uma extensão do Atingir Meta que suporta múltiplas células de entrada simultaneamente: Incorreto, pois alternativa inválida."
+        "Uma ferramenta de análise estatística para resolver sistemas de equações lineares: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Um recurso que resolve erros de fórmulas automaticamente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Uma extensão do Atingir Meta que suporta múltiplas células de entrada simultaneamente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Solver, associe mentalmente a funcionalidade correta 'Um suplemento de otimização que encontra o valor ótimo de uma célula objetivo ajustando células variáveis sujeitas a restrições definidas pelo usuário'."
     }
@@ -2162,14 +2162,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Solver (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Solver (Nível intermediario).",
       "papoReto": "No contexto de Solver, a alternativa correta é 'Definir a célula de lucro como objetivo → Máximo → definir as células de quantidade como variáveis → adicionar restrições de capacidade e matéria-prima'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Definir a célula de lucro como objetivo → Máximo → definir as células de quantidade como variáveis → adicionar restrições de capacidade e matéria-prima — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Solver.",
+      "respostaCerta": "Definir a célula de lucro como objetivo → Máximo → definir as células de quantidade como variáveis → adicionar restrições de capacidade e matéria-prima — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Solver.",
       "cascasDeBanana": [
-        "Usar Atingir Meta com três células variáveis e múltiplas restrições: Incorreto, pois alternativa inválida.",
-        "Configurar o Solver com objetivo de Minimizar o custo sem restrições: Incorreto, pois alternativa inválida.",
-        "Usar Tabela de Dados com duas variáveis para simular as combinações: Incorreto, pois alternativa inválida."
+        "Usar Atingir Meta com três células variáveis e múltiplas restrições: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Configurar o Solver com objetivo de Minimizar o custo sem restrições: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Tabela de Dados com duas variáveis para simular as combinações: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Solver, associe mentalmente a funcionalidade correta 'Definir a célula de lucro como objetivo → Máximo → definir as células de quantidade como variáveis → adicionar restrições de capacidade e matéria-prima'."
     }
@@ -2187,14 +2187,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Consolidar Dados (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Consolidar Dados (Nível iniciante).",
       "papoReto": "No contexto de Consolidar Dados, a alternativa correta é 'Dados → Consolidar → selecionar a função (Soma) e adicionar os intervalos de cada planilha'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Consolidar → selecionar a função (Soma) e adicionar os intervalos de cada planilha — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Consolidar Dados.",
+      "respostaCerta": "Dados → Consolidar → selecionar a função (Soma) e adicionar os intervalos de cada planilha — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Consolidar Dados.",
       "cascasDeBanana": [
-        "Copiar e colar os dados de cada planilha na planilha resumo e somar manualmente: Incorreto, pois alternativa inválida.",
-        "Usar fórmulas 3D como =SOMA: Incorreto, pois alternativa inválida.",
-        "Ambas A e C são abordagens válidas: Incorreto, pois alternativa inválida."
+        "Copiar e colar os dados de cada planilha na planilha resumo e somar manualmente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar fórmulas 3D como =SOMA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e C são abordagens válidas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Consolidar Dados, associe mentalmente a funcionalidade correta 'Dados → Consolidar → selecionar a função'."
     }
@@ -2212,14 +2212,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Fórmulas 3D (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Fórmulas 3D (Nível intermediario).",
       "papoReto": "No contexto de Fórmulas 3D, a alternativa correta é '=MÉDIA(Jan:Dez!B5)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=MÉDIA(Jan:Dez!B5) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Fórmulas 3D.",
+      "respostaCerta": "=MÉDIA(Jan:Dez!B5) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Fórmulas 3D.",
       "cascasDeBanana": [
-        "=MÉDIA3D: Incorreto, pois alternativa inválida.",
-        "=MÉDIAS: Incorreto, pois alternativa inválida.",
-        "=MÉDIA: Incorreto, pois alternativa inválida."
+        "=MÉDIA3D: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=MÉDIAS: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=MÉDIA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Fórmulas 3D, associe mentalmente a funcionalidade correta '=MÉDIA'."
     }
@@ -2237,14 +2237,14 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Macros (Nível iniciante).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Macros (Nível iniciante).",
       "papoReto": "No contexto de Macros, a alternativa correta é 'Guia Desenvolvedor'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Guia Desenvolvedor — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Macros.",
+      "respostaCerta": "Guia Desenvolvedor — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Macros.",
       "cascasDeBanana": [
-        "Guia Exibir: Incorreto, pois alternativa inválida.",
-        "Guia Fórmulas: Incorreto, pois alternativa inválida.",
-        "Guia Dados: Incorreto, pois alternativa inválida."
+        "Guia Exibir: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Guia Fórmulas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Guia Dados: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Macros, associe mentalmente a funcionalidade correta 'Guia Desenvolvedor'."
     }
@@ -2262,14 +2262,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Macros (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Macros (Nível intermediario).",
       "papoReto": "No contexto de Macros, a alternativa correta é 'Regravar a macro ativando \"Usar Referências Relativas\" antes de iniciar a gravação'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Regravar a macro ativando \"Usar Referências Relativas\" antes de iniciar a gravação — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Macros.",
+      "respostaCerta": "Regravar a macro ativando \"Usar Referências Relativas\" antes de iniciar a gravação — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Macros.",
       "cascasDeBanana": [
-        "Editar o código VBA substituindo as referências absolutas por referências relativas: Incorreto, pois alternativa inválida.",
-        "Usar o comando Application.ActiveCell no VBA para tornar as referências relativas: Incorreto, pois alternativa inválida.",
-        "Ambas B e C são abordagens válidas para converter referências absolutas em relativas: Incorreto, pois alternativa inválida."
+        "Editar o código VBA substituindo as referências absolutas por referências relativas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar o comando Application.ActiveCell no VBA para tornar as referências relativas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas B e C são abordagens válidas para converter referências absolutas em relativas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Macros, associe mentalmente a funcionalidade correta 'Regravar a macro ativando \"Usar Referências Relativas\" antes de iniciar a gravação'."
     }
@@ -2287,14 +2287,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Macros (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Macros (Nível intermediario).",
       "papoReto": "No contexto de Macros, a alternativa correta é 'Loop For Each ws In ThisWorkbook.Worksheets com a formatação aplicada dentro do loop'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Loop For Each ws In ThisWorkbook.Worksheets com a formatação aplicada dentro do loop — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Macros.",
+      "respostaCerta": "Loop For Each ws In ThisWorkbook.Worksheets com a formatação aplicada dentro do loop — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Macros.",
       "cascasDeBanana": [
-        "Loop For i = 1 To Sheets.Count com índice de planilha: Incorreto, pois alternativa inválida.",
-        "Loop Do While com verificação de nome de planilha: Incorreto, pois alternativa inválida.",
-        "Loop For Each aplicado ao objeto ActiveWorkbook.Sheets: Incorreto, pois alternativa inválida."
+        "Loop For i = 1 To Sheets.Count com índice de planilha: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Loop Do While com verificação de nome de planilha: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Loop For Each aplicado ao objeto ActiveWorkbook.Sheets: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Macros, associe mentalmente a funcionalidade correta 'Loop For Each ws In ThisWorkbook.Worksheets com a formatação aplicada dentro do loop'."
     }
@@ -2312,14 +2312,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Proteção Avançada (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Proteção Avançada (Nível intermediario).",
       "papoReto": "No contexto de Proteção Avançada, a alternativa correta é 'Formatar Células → Proteção → marcar \"Oculta\" → proteger a planilha'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Formatar Células → Proteção → marcar \"Oculta\" → proteger a planilha — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Proteção Avançada.",
+      "respostaCerta": "Formatar Células → Proteção → marcar \"Oculta\" → proteger a planilha — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Proteção Avançada.",
       "cascasDeBanana": [
-        "Revisão → Proteger Planilha → Ocultar Fórmulas → selecionar o intervalo: Incorreto, pois alternativa inválida.",
-        "Página Inicial → Células → Formatar → Ocultar Fórmulas → proteger: Incorreto, pois alternativa inválida.",
-        "Não é possível ocultar fórmulas sem bloquear a edição das células: Incorreto, pois alternativa inválida."
+        "Revisão → Proteger Planilha → Ocultar Fórmulas → selecionar o intervalo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Página Inicial → Células → Formatar → Ocultar Fórmulas → proteger: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível ocultar fórmulas sem bloquear a edição das células: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Proteção Avançada, associe mentalmente a funcionalidade correta 'Formatar Células → Proteção → marcar \"Oculta\" → proteger a planilha'."
     }
@@ -2337,14 +2337,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Classificar e Filtrar (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Classificar e Filtrar (Nível intermediario).",
       "papoReto": "No contexto de Classificar e Filtrar, a alternativa correta é 'Dados → Classificar → Adicionar Nível → configurar os três critérios em ordem de prioridade'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Classificar → Adicionar Nível → configurar os três critérios em ordem de prioridade — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Classificar e Filtrar.",
+      "respostaCerta": "Dados → Classificar → Adicionar Nível → configurar os três critérios em ordem de prioridade — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Classificar e Filtrar.",
       "cascasDeBanana": [
-        "Dados → Filtro Avançado → Classificação Múltipla: Incorreto, pois alternativa inválida.",
-        "Selecionar cada coluna e classificar sequencialmente começando pelo critério menos prioritário: Incorreto, pois alternativa inválida.",
-        "Página Inicial → Classificar e Filtrar → Classificação Personalizada → Múltiplos Níveis: Incorreto, pois alternativa inválida."
+        "Dados → Filtro Avançado → Classificação Múltipla: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Selecionar cada coluna e classificar sequencialmente começando pelo critério menos prioritário: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Página Inicial → Classificar e Filtrar → Classificação Personalizada → Múltiplos Níveis: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Classificar e Filtrar, associe mentalmente a funcionalidade correta 'Dados → Classificar → Adicionar Nível → configurar os três critérios em ordem de prioridade'."
     }
@@ -2362,14 +2362,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Classificar e Filtrar (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Classificar e Filtrar (Nível intermediario).",
       "papoReto": "No contexto de Classificar e Filtrar, a alternativa correta é 'Dados → Avançado (Filtro Avançado) → definir o intervalo de critérios com as condições em linhas separadas'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Avançado (Filtro Avançado) → definir o intervalo de critérios com as condições em linhas separadas — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Classificar e Filtrar.",
+      "respostaCerta": "Dados → Avançado (Filtro Avançado) → definir o intervalo de critérios com as condições em linhas separadas — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Classificar e Filtrar.",
       "cascasDeBanana": [
-        "Dados → AutoFiltro → Filtro Personalizado → adicionar múltiplas condições: Incorreto, pois alternativa inválida.",
-        "Usar Power Query para filtrar com condições compostas: Incorreto, pois alternativa inválida.",
-        "Usar FILTRO do Excel 365 com as condições compostas em uma fórmula: Incorreto, pois alternativa inválida."
+        "Dados → AutoFiltro → Filtro Personalizado → adicionar múltiplas condições: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Power Query para filtrar com condições compostas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar FILTRO do Excel 365 com as condições compostas em uma fórmula: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Classificar e Filtrar, associe mentalmente a funcionalidade correta 'Dados → Avançado'."
     }
@@ -2387,14 +2387,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Remover Duplicatas (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Remover Duplicatas (Nível intermediario).",
       "papoReto": "No contexto de Remover Duplicatas, a alternativa correta é 'Dados → Remover Duplicatas → selecionar apenas as colunas Nome e CPF como critério'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Remover Duplicatas → selecionar apenas as colunas Nome e CPF como critério — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Remover Duplicatas.",
+      "respostaCerta": "Dados → Remover Duplicatas → selecionar apenas as colunas Nome e CPF como critério — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Remover Duplicatas.",
       "cascasDeBanana": [
-        "Dados → Filtro Avançado → Somente Registros Únicos → copiar para outro local: Incorreto, pois alternativa inválida.",
-        "Usar Power Query → Remover Linhas → Remover Duplicatas: Incorreto, pois alternativa inválida.",
-        "Ambas A e C são abordagens válidas: Incorreto, pois alternativa inválida."
+        "Dados → Filtro Avançado → Somente Registros Únicos → copiar para outro local: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Power Query → Remover Linhas → Remover Duplicatas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e C são abordagens válidas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Remover Duplicatas, associe mentalmente a funcionalidade correta 'Dados → Remover Duplicatas → selecionar apenas as colunas Nome e CPF como critério'."
     }
@@ -2412,14 +2412,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Conexões Externas (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Conexões Externas (Nível intermediario).",
       "papoReto": "No contexto de Conexões Externas, a alternativa correta é 'Usar Dados → Consultas e Conexões → exportar os dados como tabela estática e distribuir a pasta de trabalho sem as conexões ativas'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Usar Dados → Consultas e Conexões → exportar os dados como tabela estática e distribuir a pasta de trabalho sem as conexões ativas — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Conexões Externas.",
+      "respostaCerta": "Usar Dados → Consultas e Conexões → exportar os dados como tabela estática e distribuir a pasta de trabalho sem as conexões ativas — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Conexões Externas.",
       "cascasDeBanana": [
-        "Compartilhar a pasta de trabalho normalmente; as conexões funcionarão automaticamente para todos: Incorreto, pois alternativa inválida.",
-        "Converter todas as consultas Power Query em valores antes de compartilhar: Incorreto, pois alternativa inválida.",
-        "Ambas A e C são abordagens válidas dependendo se os dados precisam ser atualizados: Incorreto, pois alternativa inválida."
+        "Compartilhar a pasta de trabalho normalmente; as conexões funcionarão automaticamente para todos: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Converter todas as consultas Power Query em valores antes de compartilhar: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e C são abordagens válidas dependendo se os dados precisam ser atualizados: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Conexões Externas, associe mentalmente a funcionalidade correta 'Usar Dados → Consultas e Conexões → exportar os dados como tabela estática e distribuir a pasta de trabalho sem as conexões ativas'."
     }
@@ -2437,14 +2437,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Subtotais (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Subtotais (Nível intermediario).",
       "papoReto": "No contexto de Subtotais, a alternativa correta é 'Classificar os dados pela coluna de categoria e depois usar Dados → Subtotal → definir a função e o campo'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Classificar os dados pela coluna de categoria e depois usar Dados → Subtotal → definir a função e o campo — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Subtotais.",
+      "respostaCerta": "Classificar os dados pela coluna de categoria e depois usar Dados → Subtotal → definir a função e o campo — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Subtotais.",
       "cascasDeBanana": [
-        "Usar SOMASE para calcular os subtotais manualmente: Incorreto, pois alternativa inválida.",
-        "Inserir linhas manualmente entre as categorias e calcular a soma: Incorreto, pois alternativa inválida.",
-        "Usar Filtro Avançado com cálculo automático de subtotais: Incorreto, pois alternativa inválida."
+        "Usar SOMASE para calcular os subtotais manualmente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Inserir linhas manualmente entre as categorias e calcular a soma: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Filtro Avançado com cálculo automático de subtotais: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Subtotais, associe mentalmente a funcionalidade correta 'Classificar os dados pela coluna de categoria e depois usar Dados → Subtotal → definir a função e o campo'."
     }
@@ -2462,14 +2462,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Previsão (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Previsão (Nível intermediario).",
       "papoReto": "No contexto de Previsão, a alternativa correta é 'Dados → Previsão → Planilha de Previsão → definir o período de previsão e nível de confiança'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Previsão → Planilha de Previsão → definir o período de previsão e nível de confiança — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Previsão.",
+      "respostaCerta": "Dados → Previsão → Planilha de Previsão → definir o período de previsão e nível de confiança — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Previsão.",
       "cascasDeBanana": [
-        "Inserir → Gráfico → Linha de Tendência → Previsão de 12 períodos: Incorreto, pois alternativa inválida.",
-        "Power Query → Transformar → Previsão → Série Temporal: Incorreto, pois alternativa inválida.",
-        "Análise de Hipóteses → Gerenciador de Cenários → Projeção Futura: Incorreto, pois alternativa inválida."
+        "Inserir → Gráfico → Linha de Tendência → Previsão de 12 períodos: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Power Query → Transformar → Previsão → Série Temporal: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Análise de Hipóteses → Gerenciador de Cenários → Projeção Futura: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Previsão, associe mentalmente a funcionalidade correta 'Dados → Previsão → Planilha de Previsão → definir o período de previsão e nível de confiança'."
     }
@@ -2487,14 +2487,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Previsão (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Previsão (Nível intermediario).",
       "papoReto": "No contexto de Previsão, a alternativa correta é 'Dados → Previsão → Planilha de Previsão → Opções → Intervalo de Confiança → alterar para 90%'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Previsão → Planilha de Previsão → Opções → Intervalo de Confiança → alterar para 90% — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Previsão.",
+      "respostaCerta": "Dados → Previsão → Planilha de Previsão → Opções → Intervalo de Confiança → alterar para 90% — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Previsão.",
       "cascasDeBanana": [
-        "Dados → Análise de Hipóteses → Previsão → Configurações → Confiança: Incorreto, pois alternativa inválida.",
-        "Inserir → Gráfico de Previsão → Opções → Intervalo → 90%: Incorreto, pois alternativa inválida.",
-        "Não é possível alterar o intervalo de confiança após criar a planilha de previsão: Incorreto, pois alternativa inválida."
+        "Dados → Análise de Hipóteses → Previsão → Configurações → Confiança: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Inserir → Gráfico de Previsão → Opções → Intervalo → 90%: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível alterar o intervalo de confiança após criar a planilha de previsão: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Previsão, associe mentalmente a funcionalidade correta 'Dados → Previsão → Planilha de Previsão → Opções → Intervalo de Confiança → alterar para 90%'."
     }
@@ -2512,14 +2512,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Lookup (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Lookup (Nível intermediario).",
       "papoReto": "No contexto de Funções de Lookup, a alternativa correta é 'FILTRO (FILTER) com critério de correspondência'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "FILTRO (FILTER) com critério de correspondência — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Lookup.",
+      "respostaCerta": "FILTRO (FILTER) com critério de correspondência — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Lookup.",
       "cascasDeBanana": [
-        "PROCV com correspondência aproximada: Incorreto, pois alternativa inválida.",
-        "ÍNDICE+CORRESP com fórmula matricial: Incorreto, pois alternativa inválida.",
-        "PROCX com modo de correspondência múltipla: Incorreto, pois alternativa inválida."
+        "PROCV com correspondência aproximada: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "ÍNDICE+CORRESP com fórmula matricial: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "PROCX com modo de correspondência múltipla: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Lookup, associe mentalmente a funcionalidade correta 'FILTRO'."
     }
@@ -2537,14 +2537,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Lookup (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Lookup (Nível intermediario).",
       "papoReto": "No contexto de Funções de Lookup, a alternativa correta é 'O quinto argumento [modo_pesquisa] com valor -1 para pesquisar do último para o primeiro'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "O quinto argumento [modo_pesquisa] com valor -1 para pesquisar do último para o primeiro — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Lookup.",
+      "respostaCerta": "O quinto argumento [modo_pesquisa] com valor -1 para pesquisar do último para o primeiro — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Lookup.",
       "cascasDeBanana": [
-        "O quarto argumento [se_não_encontrado] com referência à linha anterior: Incorreto, pois alternativa inválida.",
-        "O terceiro argumento [modo_correspondência] com valor -1: Incorreto, pois alternativa inválida.",
-        "Não é possível retornar a linha anterior com PROCX; requer ÍNDICE+CORRESP: Incorreto, pois alternativa inválida."
+        "O quarto argumento [se_não_encontrado] com referência à linha anterior: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "O terceiro argumento [modo_correspondência] com valor -1: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível retornar a linha anterior com PROCX; requer ÍNDICE+CORRESP: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Lookup, associe mentalmente a funcionalidade correta 'O quinto argumento [modo_pesquisa] com valor -1 para pesquisar do último para o primeiro'."
     }
@@ -2562,14 +2562,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções LAMBDA (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções LAMBDA (Nível intermediario).",
       "papoReto": "No contexto de Funções LAMBDA, a alternativa correta é 'Uma função que permite criar funções personalizadas reutilizáveis sem usar VBA definindo parâmetros e uma fórmula de cálculo'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Uma função que permite criar funções personalizadas reutilizáveis sem usar VBA definindo parâmetros e uma fórmula de cálculo — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções LAMBDA.",
+      "respostaCerta": "Uma função que permite criar funções personalizadas reutilizáveis sem usar VBA definindo parâmetros e uma fórmula de cálculo — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções LAMBDA.",
       "cascasDeBanana": [
-        "Uma função que executa código Python dentro do Excel: Incorreto, pois alternativa inválida.",
-        "Uma função que cria arrays dinâmicos com lógica condicional: Incorreto, pois alternativa inválida.",
-        "Uma função que substitui macros VBA para automação de tarefas repetitivas: Incorreto, pois alternativa inválida."
+        "Uma função que executa código Python dentro do Excel: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Uma função que cria arrays dinâmicos com lógica condicional: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Uma função que substitui macros VBA para automação de tarefas repetitivas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções LAMBDA, associe mentalmente a funcionalidade correta 'Uma função que permite criar funções personalizadas reutilizáveis sem usar VBA definindo parâmetros e uma fórmula de cálculo'."
     }
@@ -2587,14 +2587,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções LAMBDA (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções LAMBDA (Nível intermediario).",
       "papoReto": "No contexto de Funções LAMBDA, a alternativa correta é 'Fórmulas → Gerenciador de Nomes → Novo → nomear como CALCMARGEM e definir a fórmula LAMBDA no campo Refere-se a'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Fórmulas → Gerenciador de Nomes → Novo → nomear como CALCMARGEM e definir a fórmula LAMBDA no campo Refere-se a — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções LAMBDA.",
+      "respostaCerta": "Fórmulas → Gerenciador de Nomes → Novo → nomear como CALCMARGEM e definir a fórmula LAMBDA no campo Refere-se a — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções LAMBDA.",
       "cascasDeBanana": [
-        "Desenvolvedor → Funções Personalizadas → Salvar LAMBDA: Incorreto, pois alternativa inválida.",
-        "Arquivo → Opções → Fórmulas → Funções Personalizadas → Adicionar LAMBDA: Incorreto, pois alternativa inválida.",
-        "Inserir → Função → Personalizada → Salvar como LAMBDA nomeada: Incorreto, pois alternativa inválida."
+        "Desenvolvedor → Funções Personalizadas → Salvar LAMBDA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Arquivo → Opções → Fórmulas → Funções Personalizadas → Adicionar LAMBDA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Inserir → Função → Personalizada → Salvar como LAMBDA nomeada: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções LAMBDA, associe mentalmente a funcionalidade correta 'Fórmulas → Gerenciador de Nomes → Novo → nomear como CALCMARGEM e definir a fórmula LAMBDA no campo Refere-se a'."
     }
@@ -2612,14 +2612,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Função LET (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Função LET (Nível intermediario).",
       "papoReto": "No contexto de Função LET, a alternativa correta é 'Permite atribuir nomes a cálculos intermediários dentro da fórmula evitando repetição de cálculos e melhorando a legibilidade e o desempenho'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Permite atribuir nomes a cálculos intermediários dentro da fórmula evitando repetição de cálculos e melhorando a legibilidade e o desempenho — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Função LET.",
+      "respostaCerta": "Permite atribuir nomes a cálculos intermediários dentro da fórmula evitando repetição de cálculos e melhorando a legibilidade e o desempenho — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Função LET.",
       "cascasDeBanana": [
-        "Permite criar variáveis globais acessíveis em toda a pasta de trabalho: Incorreto, pois alternativa inválida.",
-        "Permite executar múltiplas fórmulas em sequência como um script: Incorreto, pois alternativa inválida.",
-        "Substitui o uso de colunas auxiliares em tabelas dinâmicas: Incorreto, pois alternativa inválida."
+        "Permite criar variáveis globais acessíveis em toda a pasta de trabalho: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Permite executar múltiplas fórmulas em sequência como um script: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Substitui o uso de colunas auxiliares em tabelas dinâmicas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Função LET, associe mentalmente a funcionalidade correta 'Permite atribuir nomes a cálculos intermediários dentro da fórmula evitando repetição de cálculos e melhorando a legibilidade e o desempenho'."
     }
@@ -2637,14 +2637,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Configurações Avançadas (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Configurações Avançadas (Nível intermediario).",
       "papoReto": "No contexto de Configurações Avançadas, a alternativa correta é 'Clicar com o botão direito na Tabela Dinâmica → Opções da Tabela Dinâmica → Layout e Formato → desmarcar \"Ajustar automaticamente larguras de coluna na atualização\"'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Clicar com o botão direito na Tabela Dinâmica → Opções da Tabela Dinâmica → Layout e Formato → desmarcar \"Ajustar automaticamente larguras de coluna na atualização\" — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Configurações Avançadas.",
+      "respostaCerta": "Clicar com o botão direito na Tabela Dinâmica → Opções da Tabela Dinâmica → Layout e Formato → desmarcar \"Ajustar automaticamente larguras de coluna na atualização\" — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Configurações Avançadas.",
       "cascasDeBanana": [
-        "Análise → Opções → Formato → Largura de Coluna → Fixar: Incorreto, pois alternativa inválida.",
-        "Formatar as colunas como largura fixa antes de atualizar: Incorreto, pois alternativa inválida.",
-        "Não é possível desativar o ajuste automático de colunas em Tabelas Dinâmicas: Incorreto, pois alternativa inválida."
+        "Análise → Opções → Formato → Largura de Coluna → Fixar: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Formatar as colunas como largura fixa antes de atualizar: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível desativar o ajuste automático de colunas em Tabelas Dinâmicas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Configurações Avançadas, associe mentalmente a funcionalidade correta 'Clicar com o botão direito na Tabela Dinâmica → Opções da Tabela Dinâmica → Layout e Formato → desmarcar \"Ajustar automaticamente larguras de coluna na atualização\"'."
     }
@@ -2662,14 +2662,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Configurações Avançadas (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Configurações Avançadas (Nível intermediario).",
       "papoReto": "No contexto de Configurações Avançadas, a alternativa correta é 'Clicar com o botão direito no campo → Configurações do Campo → Layout e Impressão → marcar \"Mostrar itens sem dados\"'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Clicar com o botão direito no campo → Configurações do Campo → Layout e Impressão → marcar \"Mostrar itens sem dados\" — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Configurações Avançadas.",
+      "respostaCerta": "Clicar com o botão direito no campo → Configurações do Campo → Layout e Impressão → marcar \"Mostrar itens sem dados\" — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Configurações Avançadas.",
       "cascasDeBanana": [
-        "Análise → Opções → Dados → Mostrar Itens Vazios: Incorreto, pois alternativa inválida.",
-        "Filtros da Tabela Dinâmica → Incluir Itens Sem Dados: Incorreto, pois alternativa inválida.",
-        "Não é possível exibir itens sem dados em Tabelas Dinâmicas: Incorreto, pois alternativa inválida."
+        "Análise → Opções → Dados → Mostrar Itens Vazios: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Filtros da Tabela Dinâmica → Incluir Itens Sem Dados: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível exibir itens sem dados em Tabelas Dinâmicas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Configurações Avançadas, associe mentalmente a funcionalidade correta 'Clicar com o botão direito no campo → Configurações do Campo → Layout e Impressão → marcar \"Mostrar itens sem dados\"'."
     }
@@ -2687,14 +2687,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Modelos de Dados (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Modelos de Dados (Nível intermediario).",
       "papoReto": "No contexto de Modelos de Dados, a alternativa correta é 'Um repositório interno do Excel que permite relacionar múltiplas tabelas e criar Tabelas Dinâmicas baseadas em dados de várias fontes sem usar PROCV'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Um repositório interno do Excel que permite relacionar múltiplas tabelas e criar Tabelas Dinâmicas baseadas em dados de várias fontes sem usar PROCV — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Modelos de Dados.",
+      "respostaCerta": "Um repositório interno do Excel que permite relacionar múltiplas tabelas e criar Tabelas Dinâmicas baseadas em dados de várias fontes sem usar PROCV — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Modelos de Dados.",
       "cascasDeBanana": [
-        "Um modelo de formatação aplicado automaticamente a Tabelas Dinâmicas: Incorreto, pois alternativa inválida.",
-        "Uma estrutura de dados do Power Query para organizar consultas relacionadas: Incorreto, pois alternativa inválida.",
-        "Um modelo de dados do Power BI integrado ao Excel: Incorreto, pois alternativa inválida."
+        "Um modelo de formatação aplicado automaticamente a Tabelas Dinâmicas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Uma estrutura de dados do Power Query para organizar consultas relacionadas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Um modelo de dados do Power BI integrado ao Excel: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Modelos de Dados, associe mentalmente a funcionalidade correta 'Um repositório interno do Excel que permite relacionar múltiplas tabelas e criar Tabelas Dinâmicas baseadas em dados de várias fontes sem usar PROCV'."
     }
@@ -2712,14 +2712,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Modelos de Dados (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Modelos de Dados (Nível intermediario).",
       "papoReto": "No contexto de Modelos de Dados, a alternativa correta é 'Adicionar ambas as tabelas ao Modelo de Dados → criar um Relacionamento entre elas → criar a Tabela Dinâmica usando o Modelo de Dados'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Adicionar ambas as tabelas ao Modelo de Dados → criar um Relacionamento entre elas → criar a Tabela Dinâmica usando o Modelo de Dados — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Modelos de Dados.",
+      "respostaCerta": "Adicionar ambas as tabelas ao Modelo de Dados → criar um Relacionamento entre elas → criar a Tabela Dinâmica usando o Modelo de Dados — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Modelos de Dados.",
       "cascasDeBanana": [
-        "Usar PROCV para trazer os dados de Clientes para a tabela de Vendas antes de criar a Tabela Dinâmica: Incorreto, pois alternativa inválida.",
-        "Mesclar as tabelas no Power Query e criar a Tabela Dinâmica a partir da tabela mesclada: Incorreto, pois alternativa inválida.",
-        "Ambas B e C são válidas; o Modelo de Dados é apenas uma opção alternativa: Incorreto, pois alternativa inválida."
+        "Usar PROCV para trazer os dados de Clientes para a tabela de Vendas antes de criar a Tabela Dinâmica: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Mesclar as tabelas no Power Query e criar a Tabela Dinâmica a partir da tabela mesclada: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas B e C são válidas; o Modelo de Dados é apenas uma opção alternativa: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Modelos de Dados, associe mentalmente a funcionalidade correta 'Adicionar ambas as tabelas ao Modelo de Dados → criar um Relacionamento entre elas → criar a Tabela Dinâmica usando o Modelo de Dados'."
     }
@@ -2737,14 +2737,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Medidas DAX (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Medidas DAX (Nível intermediario).",
       "papoReto": "No contexto de Medidas DAX, a alternativa correta é 'Cálculos personalizados criados com a linguagem DAX no Modelo de Dados que permitem agregações e análises mais sofisticadas que campos calculados comuns'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Cálculos personalizados criados com a linguagem DAX no Modelo de Dados que permitem agregações e análises mais sofisticadas que campos calculados comuns — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Medidas DAX.",
+      "respostaCerta": "Cálculos personalizados criados com a linguagem DAX no Modelo de Dados que permitem agregações e análises mais sofisticadas que campos calculados comuns — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Medidas DAX.",
       "cascasDeBanana": [
-        "Métricas predefinidas do Excel para análise financeira em Tabelas Dinâmicas: Incorreto, pois alternativa inválida.",
-        "Fórmulas matemáticas avançadas exclusivas para uso em Tabelas Dinâmicas: Incorreto, pois alternativa inválida.",
-        "Funções estatísticas do Excel aplicadas automaticamente ao Modelo de Dados: Incorreto, pois alternativa inválida."
+        "Métricas predefinidas do Excel para análise financeira em Tabelas Dinâmicas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Fórmulas matemáticas avançadas exclusivas para uso em Tabelas Dinâmicas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Funções estatísticas do Excel aplicadas automaticamente ao Modelo de Dados: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Medidas DAX, associe mentalmente a funcionalidade correta 'Cálculos personalizados criados com a linguagem DAX no Modelo de Dados que permitem agregações e análises mais sofisticadas que campos calculados comuns'."
     }
@@ -2762,14 +2762,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Transformação Avançada (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Transformação Avançada (Nível intermediario).",
       "papoReto": "No contexto de Transformação Avançada, a alternativa correta é 'Transformar → Dividir Coluna → Por Delimitador → selecionar vírgula → dividir em linhas'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Transformar → Dividir Coluna → Por Delimitador → selecionar vírgula → dividir em linhas — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Transformação Avançada.",
+      "respostaCerta": "Transformar → Dividir Coluna → Por Delimitador → selecionar vírgula → dividir em linhas — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Transformação Avançada.",
       "cascasDeBanana": [
-        "Transformar → Coluna de Texto para Colunas → vírgula → transpor: Incorreto, pois alternativa inválida.",
-        "Adicionar Coluna → Coluna Personalizada → fórmula para dividir o texto: Incorreto, pois alternativa inválida.",
-        "Página Inicial → Dividir Coluna → Em Linhas → delimitador vírgula: Incorreto, pois alternativa inválida."
+        "Transformar → Coluna de Texto para Colunas → vírgula → transpor: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Adicionar Coluna → Coluna Personalizada → fórmula para dividir o texto: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Página Inicial → Dividir Coluna → Em Linhas → delimitador vírgula: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Transformação Avançada, associe mentalmente a funcionalidade correta 'Transformar → Dividir Coluna → Por Delimitador → selecionar vírgula → dividir em linhas'."
     }
@@ -2787,14 +2787,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Transformação Avançada (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Transformação Avançada (Nível intermediario).",
       "papoReto": "No contexto de Transformação Avançada, a alternativa correta é 'Transformar → Não Dinâmico de Outras Colunas (Unpivot Other Columns)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Transformar → Não Dinâmico de Outras Colunas (Unpivot Other Columns) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Transformação Avançada.",
+      "respostaCerta": "Transformar → Não Dinâmico de Outras Colunas (Unpivot Other Columns) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Transformação Avançada.",
       "cascasDeBanana": [
-        "Transformar → Transpor → reorganizar as colunas: Incorreto, pois alternativa inválida.",
-        "Página Inicial → Acrescentar Consultas → empilhar as colunas: Incorreto, pois alternativa inválida.",
-        "Adicionar Coluna → Mesclar Colunas → criar coluna Mês-Valor: Incorreto, pois alternativa inválida."
+        "Transformar → Transpor → reorganizar as colunas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Página Inicial → Acrescentar Consultas → empilhar as colunas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Adicionar Coluna → Mesclar Colunas → criar coluna Mês-Valor: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Transformação Avançada, associe mentalmente a funcionalidade correta 'Transformar → Não Dinâmico de Outras Colunas'."
     }
@@ -2812,14 +2812,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Transformação Avançada (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Transformação Avançada (Nível intermediario).",
       "papoReto": "No contexto de Transformação Avançada, a alternativa correta é 'Adicionar Coluna → Coluna Condicional → definir as condições If-Then-Else'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Adicionar Coluna → Coluna Condicional → definir as condições If-Then-Else — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Transformação Avançada.",
+      "respostaCerta": "Adicionar Coluna → Coluna Condicional → definir as condições If-Then-Else — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Transformação Avançada.",
       "cascasDeBanana": [
-        "Transformar → Substituir Valores → com condição numérica: Incorreto, pois alternativa inválida.",
-        "Adicionar Coluna → Coluna Personalizada → fórmula if-then-else em linguagem M: Incorreto, pois alternativa inválida.",
-        "Ambas A e C são abordagens válidas: Incorreto, pois alternativa inválida."
+        "Transformar → Substituir Valores → com condição numérica: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Adicionar Coluna → Coluna Personalizada → fórmula if-then-else em linguagem M: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e C são abordagens válidas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Transformação Avançada, associe mentalmente a funcionalidade correta 'Adicionar Coluna → Coluna Condicional → definir as condições If-Then-Else'."
     }
@@ -2837,14 +2837,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Parâmetros (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Parâmetros (Nível intermediario).",
       "papoReto": "No contexto de Parâmetros, a alternativa correta é 'Criar um Parâmetro no Power Query e referenciar o parâmetro na etapa de filtro'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Criar um Parâmetro no Power Query e referenciar o parâmetro na etapa de filtro — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Parâmetros.",
+      "respostaCerta": "Criar um Parâmetro no Power Query e referenciar o parâmetro na etapa de filtro — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Parâmetros.",
       "cascasDeBanana": [
-        "Usar uma célula do Excel como referência dinâmica na consulta via fórmula: Incorreto, pois alternativa inválida.",
-        "Criar uma variável no Editor Avançado em linguagem M: Incorreto, pois alternativa inválida.",
-        "Usar Dados → Validação de Dados para controlar o valor de filtro da consulta: Incorreto, pois alternativa inválida."
+        "Usar uma célula do Excel como referência dinâmica na consulta via fórmula: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Criar uma variável no Editor Avançado em linguagem M: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Dados → Validação de Dados para controlar o valor de filtro da consulta: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Parâmetros, associe mentalmente a funcionalidade correta 'Criar um Parâmetro no Power Query e referenciar o parâmetro na etapa de filtro'."
     }
@@ -2862,14 +2862,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gráficos Avançados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gráficos Avançados, subtema Gráficos Dinâmicos (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gráficos Avançados, subtema Gráficos Dinâmicos (Nível intermediario).",
       "papoReto": "No contexto de Gráficos Dinâmicos, a alternativa correta é 'Clicar com o botão direito nos botões de campo → Ocultar Todos os Botões de Campo no Gráfico'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Clicar com o botão direito nos botões de campo → Ocultar Todos os Botões de Campo no Gráfico — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Gráficos Dinâmicos.",
+      "respostaCerta": "Clicar com o botão direito nos botões de campo → Ocultar Todos os Botões de Campo no Gráfico — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Gráficos Dinâmicos.",
       "cascasDeBanana": [
-        "Análise do Gráfico Dinâmico → Botões de Campo → Ocultar Tudo: Incorreto, pois alternativa inválida.",
-        "Design do Gráfico → Opções → Botões de Campo → Ocultar: Incorreto, pois alternativa inválida.",
-        "Clicar no gráfico → Formatar → Elementos do Gráfico → desmarcar Botões de Campo: Incorreto, pois alternativa inválida."
+        "Análise do Gráfico Dinâmico → Botões de Campo → Ocultar Tudo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Design do Gráfico → Opções → Botões de Campo → Ocultar: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Clicar no gráfico → Formatar → Elementos do Gráfico → desmarcar Botões de Campo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Gráficos Dinâmicos, associe mentalmente a funcionalidade correta 'Clicar com o botão direito nos botões de campo → Ocultar Todos os Botões de Campo no Gráfico'."
     }
@@ -2887,14 +2887,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gráficos Avançados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gráficos Avançados, subtema Formatação Avançada (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gráficos Avançados, subtema Formatação Avançada (Nível intermediario).",
       "papoReto": "No contexto de Formatação Avançada, a alternativa correta é 'Combinar um gráfico de rosca com um gráfico de pizza formatados para simular o velocímetro'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Combinar um gráfico de rosca com um gráfico de pizza formatados para simular o velocímetro — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Formatação Avançada.",
+      "respostaCerta": "Combinar um gráfico de rosca com um gráfico de pizza formatados para simular o velocímetro — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Formatação Avançada.",
       "cascasDeBanana": [
-        "Usar o tipo de gráfico Medidor disponível na galeria de gráficos do Excel: Incorreto, pois alternativa inválida.",
-        "Inserir → Gráficos → Especiais → Velocímetro: Incorreto, pois alternativa inválida.",
-        "Não é possível criar gráficos de velocímetro nativamente; requer suplemento: Incorreto, pois alternativa inválida."
+        "Usar o tipo de gráfico Medidor disponível na galeria de gráficos do Excel: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Inserir → Gráficos → Especiais → Velocímetro: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível criar gráficos de velocímetro nativamente; requer suplemento: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Formatação Avançada, associe mentalmente a funcionalidade correta 'Combinar um gráfico de rosca com um gráfico de pizza formatados para simular o velocímetro'."
     }
@@ -2912,14 +2912,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gráficos Avançados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gráficos Avançados, subtema Formatação Avançada (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gráficos Avançados, subtema Formatação Avançada (Nível intermediario).",
       "papoReto": "No contexto de Formatação Avançada, a alternativa correta é 'Criar duas séries de dados: uma para valores acima da meta e outra para abaixo, com cores diferentes'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Criar duas séries de dados: uma para valores acima da meta e outra para abaixo, com cores diferentes — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Formatação Avançada.",
+      "respostaCerta": "Criar duas séries de dados: uma para valores acima da meta e outra para abaixo, com cores diferentes — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Formatação Avançada.",
       "cascasDeBanana": [
-        "Usar Formatação Condicional no gráfico via Formatar Série de Dados → Cor Condicional: Incorreto, pois alternativa inválida.",
-        "Vincular a cor das barras a uma escala de cores definida nas opções do gráfico: Incorreto, pois alternativa inválida.",
-        "Usar macro VBA para verificar os valores e alterar as cores das barras dinamicamente: Incorreto, pois alternativa inválida."
+        "Usar Formatação Condicional no gráfico via Formatar Série de Dados → Cor Condicional: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Vincular a cor das barras a uma escala de cores definida nas opções do gráfico: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar macro VBA para verificar os valores e alterar as cores das barras dinamicamente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Formatação Avançada, associe mentalmente a funcionalidade correta 'Criar duas séries de dados: uma para valores acima da meta e outra para abaixo, com cores diferentes'."
     }
@@ -2937,14 +2937,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Formatação Condicional Avançada (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Formatação Condicional Avançada (Nível intermediario).",
       "papoReto": "No contexto de Formatação Condicional Avançada, a alternativa correta é 'Formatação Condicional → Conjuntos de Ícones → Gerenciar Regras → editar os percentuais de corte para cada ícone'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Formatação Condicional → Conjuntos de Ícones → Gerenciar Regras → editar os percentuais de corte para cada ícone — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Formatação Condicional Avançada.",
+      "respostaCerta": "Formatação Condicional → Conjuntos de Ícones → Gerenciar Regras → editar os percentuais de corte para cada ícone — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Formatação Condicional Avançada.",
       "cascasDeBanana": [
-        "Formatação Condicional → Nova Regra → Ícone Personalizado → definir os percentuais: Incorreto, pois alternativa inválida.",
-        "Inserir → Ícones → Setas → vincular à célula com regra de cor: Incorreto, pois alternativa inválida.",
-        "Não é possível personalizar os percentuais de corte nos Conjuntos de Ícones: Incorreto, pois alternativa inválida."
+        "Formatação Condicional → Nova Regra → Ícone Personalizado → definir os percentuais: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Inserir → Ícones → Setas → vincular à célula com regra de cor: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível personalizar os percentuais de corte nos Conjuntos de Ícones: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Formatação Condicional Avançada, associe mentalmente a funcionalidade correta 'Formatação Condicional → Conjuntos de Ícones → Gerenciar Regras → editar os percentuais de corte para cada ícone'."
     }
@@ -2962,14 +2962,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Compartilhamento (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Compartilhamento (Nível intermediario).",
       "papoReto": "No contexto de Compartilhamento, a alternativa correta é 'O arquivo deve estar salvo no OneDrive ou SharePoint e compartilhado com os colaboradores'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "O arquivo deve estar salvo no OneDrive ou SharePoint e compartilhado com os colaboradores — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Compartilhamento.",
+      "respostaCerta": "O arquivo deve estar salvo no OneDrive ou SharePoint e compartilhado com os colaboradores — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Compartilhamento.",
       "cascasDeBanana": [
-        "O arquivo deve estar em uma pasta de rede local com permissões de leitura e escrita: Incorreto, pois alternativa inválida.",
-        "Todos os usuários devem ter a mesma versão do Microsoft 365 instalada: Incorreto, pois alternativa inválida.",
-        "O arquivo deve estar no formato .xlsm para suportar coedição: Incorreto, pois alternativa inválida."
+        "O arquivo deve estar em uma pasta de rede local com permissões de leitura e escrita: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Todos os usuários devem ter a mesma versão do Microsoft 365 instalada: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "O arquivo deve estar no formato .xlsm para suportar coedição: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Compartilhamento, associe mentalmente a funcionalidade correta 'O arquivo deve estar salvo no OneDrive ou SharePoint e compartilhado com os colaboradores'."
     }
@@ -2987,14 +2987,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Inspetor de Documento (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Inspetor de Documento (Nível intermediario).",
       "papoReto": "No contexto de Inspetor de Documento, a alternativa correta é 'Arquivo → Informações → Verificar Problemas → Inspecionar Documento'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Arquivo → Informações → Verificar Problemas → Inspecionar Documento — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Inspetor de Documento.",
+      "respostaCerta": "Arquivo → Informações → Verificar Problemas → Inspecionar Documento — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Inspetor de Documento.",
       "cascasDeBanana": [
-        "Revisão → Proteger → Remover Informações Pessoais: Incorreto, pois alternativa inválida.",
-        "Arquivo → Salvar Como → Remover Metadados: Incorreto, pois alternativa inválida.",
-        "Dados → Ferramentas de Dados → Limpar Metadados: Incorreto, pois alternativa inválida."
+        "Revisão → Proteger → Remover Informações Pessoais: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Arquivo → Salvar Como → Remover Metadados: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Dados → Ferramentas de Dados → Limpar Metadados: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Inspetor de Documento, associe mentalmente a funcionalidade correta 'Arquivo → Informações → Verificar Problemas → Inspecionar Documento'."
     }
@@ -3012,14 +3012,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Informação (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Informação (Nível intermediario).",
       "papoReto": "No contexto de Funções de Informação, a alternativa correta é 'ÉERRO (ISERROR)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "ÉERRO (ISERROR) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Informação.",
+      "respostaCerta": "ÉERRO (ISERROR) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Informação.",
       "cascasDeBanana": [
-        "SEERRO: Incorreto, pois alternativa inválida.",
-        "ÉERROS: Incorreto, pois alternativa inválida.",
-        "TIPO.ERRO: Incorreto, pois alternativa inválida."
+        "SEERRO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "ÉERROS: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "TIPO.ERRO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Informação, associe mentalmente a funcionalidade correta 'ÉERRO'."
     }
@@ -3037,14 +3037,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Informação (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Informação (Nível intermediario).",
       "papoReto": "No contexto de Funções de Informação, a alternativa correta é 'ÉERRO retorna VERDADEIRO para todos os tipos de erro incluindo #N/D; ÉERROS retorna VERDADEIRO para todos os erros exceto #N/D'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "ÉERRO retorna VERDADEIRO para todos os tipos de erro incluindo #N/D; ÉERROS retorna VERDADEIRO para todos os erros exceto #N/D — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Informação.",
+      "respostaCerta": "ÉERRO retorna VERDADEIRO para todos os tipos de erro incluindo #N/D; ÉERROS retorna VERDADEIRO para todos os erros exceto #N/D — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Informação.",
       "cascasDeBanana": [
-        "ÉERROS retorna VERDADEIRO para todos os erros incluindo #N/D; ÉERRO exclui #N/D: Incorreto, pois alternativa inválida.",
-        "Ambas funcionam da mesma forma mas ÉERROS é mais recente e substitui ÉERRO: Incorreto, pois alternativa inválida.",
-        "ÉERRO funciona apenas com erros de fórmula; ÉERROS funciona com erros de referência também: Incorreto, pois alternativa inválida."
+        "ÉERROS retorna VERDADEIRO para todos os erros incluindo #N/D; ÉERRO exclui #N/D: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas funcionam da mesma forma mas ÉERROS é mais recente e substitui ÉERRO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "ÉERRO funciona apenas com erros de fórmula; ÉERROS funciona com erros de referência também: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Informação, associe mentalmente a funcionalidade correta 'ÉERRO retorna VERDADEIRO para todos os tipos de erro incluindo #N/D; ÉERROS retorna VERDADEIRO para todos os erros exceto #N/D'."
     }
@@ -3062,14 +3062,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Referência (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Referência (Nível intermediario).",
       "papoReto": "No contexto de Funções de Referência, a alternativa correta é 'INDIRETO (INDIRECT)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "INDIRETO (INDIRECT) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Referência.",
+      "respostaCerta": "INDIRETO (INDIRECT) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Referência.",
       "cascasDeBanana": [
-        "DESLOC: Incorreto, pois alternativa inválida.",
-        "ENDEREÇO: Incorreto, pois alternativa inválida.",
-        "ÍNDICE: Incorreto, pois alternativa inválida."
+        "DESLOC: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "ENDEREÇO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "ÍNDICE: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Referência, associe mentalmente a funcionalidade correta 'INDIRETO'."
     }
@@ -3087,14 +3087,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Referência (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Referência (Nível intermediario).",
       "papoReto": "No contexto de Funções de Referência, a alternativa correta é 'DESLOC (OFFSET) combinado com CONT.VALORES para definir o tamanho dinâmico'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "DESLOC (OFFSET) combinado com CONT.VALORES para definir o tamanho dinâmico — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Referência.",
+      "respostaCerta": "DESLOC (OFFSET) combinado com CONT.VALORES para definir o tamanho dinâmico — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Referência.",
       "cascasDeBanana": [
-        "INDIRETO com referência a uma célula que contém o endereço do intervalo: Incorreto, pois alternativa inválida.",
-        "ÍNDICE com CORRESP para localizar o último valor preenchido: Incorreto, pois alternativa inválida.",
-        "Ambas A e B são abordagens válidas: Incorreto, pois alternativa inválida."
+        "INDIRETO com referência a uma célula que contém o endereço do intervalo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "ÍNDICE com CORRESP para localizar o último valor preenchido: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e B são abordagens válidas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Referência, associe mentalmente a funcionalidade correta 'DESLOC'."
     }
@@ -3112,14 +3112,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Texto (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Texto (Nível intermediario).",
       "papoReto": "No contexto de Funções de Texto, a alternativa correta é '=NÃO(ÉERRO(LOCALIZAR(\"Aprovado\";A1)))'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=NÃO(ÉERRO(LOCALIZAR(\"Aprovado\";A1))) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Texto.",
+      "respostaCerta": "=NÃO(ÉERRO(LOCALIZAR(\"Aprovado\";A1))) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Texto.",
       "cascasDeBanana": [
-        "=EXATO: Incorreto, pois alternativa inválida.",
-        "=SE: Incorreto, pois alternativa inválida.",
-        "=CONT.SE: Incorreto, pois alternativa inválida."
+        "=EXATO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=SE: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=CONT.SE: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Texto, associe mentalmente a funcionalidade correta '=NÃO'."
     }
@@ -3137,14 +3137,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Texto (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Texto (Nível intermediario).",
       "papoReto": "No contexto de Funções de Texto, a alternativa correta é 'Fórmula aninhada com múltiplos SUBSTITUIR removendo ponto vírgula hífen e espaço'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Fórmula aninhada com múltiplos SUBSTITUIR removendo ponto vírgula hífen e espaço — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Texto.",
+      "respostaCerta": "Fórmula aninhada com múltiplos SUBSTITUIR removendo ponto vírgula hífen e espaço — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Texto.",
       "cascasDeBanana": [
-        "=TEXTO: Incorreto, pois alternativa inválida.",
-        "=LIMPAR: Incorreto, pois alternativa inválida.",
-        "=EXATO com normalização automática de caracteres especiais: Incorreto, pois alternativa inválida."
+        "=TEXTO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=LIMPAR: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=EXATO com normalização automática de caracteres especiais: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Texto, associe mentalmente a funcionalidade correta 'Fórmula aninhada com múltiplos SUBSTITUIR removendo ponto vírgula hífen e espaço'."
     }
@@ -3162,14 +3162,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Macros VBA (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Macros VBA (Nível intermediario).",
       "papoReto": "No contexto de Macros VBA, a alternativa correta é 'Worksheets.Add.Name = Format(Now, \"MMMM YYYY\")'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Worksheets.Add.Name = Format(Now, \"MMMM YYYY\") — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Macros VBA.",
+      "respostaCerta": "Worksheets.Add.Name = Format(Now, \"MMMM YYYY\") — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Macros VBA.",
       "cascasDeBanana": [
-        "Sheets.New.Name = MonthName: Incorreto, pois alternativa inválida.",
-        "ActiveWorkbook.AddSheet: Incorreto, pois alternativa inválida.",
-        "Worksheets.Insert.Name = Format: Incorreto, pois alternativa inválida."
+        "Sheets.New.Name = MonthName: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "ActiveWorkbook.AddSheet: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Worksheets.Insert.Name = Format: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Macros VBA, associe mentalmente a funcionalidade correta 'Worksheets.Add.Name = Format'."
     }
@@ -3187,14 +3187,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Macros VBA (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Macros VBA (Nível avancado).",
       "papoReto": "No contexto de Macros VBA, a alternativa correta é 'Worksheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:=\"caminho\\arquivo.pdf\"'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Worksheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:=\"caminho\\arquivo.pdf\" — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Macros VBA.",
+      "respostaCerta": "Worksheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:=\"caminho\\arquivo.pdf\" — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Macros VBA.",
       "cascasDeBanana": [
-        "Worksheet.SaveAs \"arquivo.pdf\", FileFormat:=xlPDF: Incorreto, pois alternativa inválida.",
-        "Application.ExportSheet ActiveSheet, \"PDF\", \"caminho\\\": Incorreto, pois alternativa inválida.",
-        "Worksheet.PrintOut ActivePrinter:=\"PDF\", OutputFile:=\"arquivo.pdf\": Incorreto, pois alternativa inválida."
+        "Worksheet.SaveAs \"arquivo.pdf\", FileFormat:=xlPDF: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Application.ExportSheet ActiveSheet, \"PDF\", \"caminho\\\": Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Worksheet.PrintOut ActivePrinter:=\"PDF\", OutputFile:=\"arquivo.pdf\": Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Macros VBA, associe mentalmente a funcionalidade correta 'Worksheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:=\"caminho\\arquivo.pdf\"'."
     }
@@ -3212,14 +3212,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Tabelas do Excel (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Tabelas do Excel (Nível intermediario).",
       "papoReto": "No contexto de Tabelas do Excel, a alternativa correta é 'Expansão automática ao adicionar dados, referências estruturadas em fórmulas, filtragem automática, formatação automática e integração com Power Query e Tabelas Dinâmicas'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Expansão automática ao adicionar dados, referências estruturadas em fórmulas, filtragem automática, formatação automática e integração com Power Query e Tabelas Dinâmicas — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Tabelas do Excel.",
+      "respostaCerta": "Expansão automática ao adicionar dados, referências estruturadas em fórmulas, filtragem automática, formatação automática e integração com Power Query e Tabelas Dinâmicas — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Tabelas do Excel.",
       "cascasDeBanana": [
-        "Apenas formatação automática e filtragem sem benefícios funcionais adicionais: Incorreto, pois alternativa inválida.",
-        "Proteção automática dos dados contra edição acidental: Incorreto, pois alternativa inválida.",
-        "Compressão automática dos dados para reduzir o tamanho do arquivo: Incorreto, pois alternativa inválida."
+        "Apenas formatação automática e filtragem sem benefícios funcionais adicionais: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Proteção automática dos dados contra edição acidental: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Compressão automática dos dados para reduzir o tamanho do arquivo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Tabelas do Excel, associe mentalmente a funcionalidade correta 'Expansão automática ao adicionar dados, referências estruturadas em fórmulas, filtragem automática, formatação automática e integração com Power Query e Tabelas Dinâmicas'."
     }
@@ -3237,14 +3237,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Tabelas do Excel (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Tabelas do Excel (Nível avancado).",
       "papoReto": "No contexto de Tabelas do Excel, a alternativa correta é '=SOMA(Tabela1[Vendas])'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=SOMA(Tabela1[Vendas]) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Tabelas do Excel.",
+      "respostaCerta": "=SOMA(Tabela1[Vendas]) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Tabelas do Excel.",
       "cascasDeBanana": [
-        "=SOMA: Incorreto, pois alternativa inválida.",
-        "=SOMA: Incorreto, pois alternativa inválida.",
-        "=SOMA: Incorreto, pois alternativa inválida."
+        "=SOMA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=SOMA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=SOMA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Tabelas do Excel, associe mentalmente a funcionalidade correta '=SOMA'."
     }
@@ -3262,14 +3262,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Tabelas do Excel (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Tabelas do Excel (Nível avancado).",
       "papoReto": "No contexto de Tabelas do Excel, a alternativa correta é '[@NomeColuna] usando o especificador @ para indicar a linha atual'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "[@NomeColuna] usando o especificador @ para indicar a linha atual — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Tabelas do Excel.",
+      "respostaCerta": "[@NomeColuna] usando o especificador @ para indicar a linha atual — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Tabelas do Excel.",
       "cascasDeBanana": [
-        "[#Esta Linha] seguido do nome da coluna: Incorreto, pois alternativa inválida.",
-        "[NomeColuna][#Linha Atual]: Incorreto, pois alternativa inválida.",
-        "Não é possível referenciar apenas a linha atual com referências estruturadas: Incorreto, pois alternativa inválida."
+        "[#Esta Linha] seguido do nome da coluna: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "[NomeColuna][#Linha Atual]: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível referenciar apenas a linha atual com referências estruturadas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Tabelas do Excel, associe mentalmente a funcionalidade correta '[@NomeColuna] usando o especificador @ para indicar a linha atual'."
     }
@@ -3287,14 +3287,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Funções Avançadas (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Funções Avançadas (Nível avancado).",
       "papoReto": "No contexto de Funções Avançadas, a alternativa correta é 'Adicionar Coluna → Invocar Função Personalizada → selecionar a função e mapear os parâmetros'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Adicionar Coluna → Invocar Função Personalizada → selecionar a função e mapear os parâmetros — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções Avançadas.",
+      "respostaCerta": "Adicionar Coluna → Invocar Função Personalizada → selecionar a função e mapear os parâmetros — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções Avançadas.",
       "cascasDeBanana": [
-        "Transformar → Aplicar Função → selecionar a função e o intervalo: Incorreto, pois alternativa inválida.",
-        "Página Inicial → Transformar Dados → Invocar Função por Linha: Incorreto, pois alternativa inválida.",
-        "Adicionar Coluna → Coluna Personalizada → chamar a função com sintaxe M: Incorreto, pois alternativa inválida."
+        "Transformar → Aplicar Função → selecionar a função e o intervalo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Página Inicial → Transformar Dados → Invocar Função por Linha: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Adicionar Coluna → Coluna Personalizada → chamar a função com sintaxe M: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções Avançadas, associe mentalmente a funcionalidade correta 'Adicionar Coluna → Invocar Função Personalizada → selecionar a função e mapear os parâmetros'."
     }
@@ -3312,14 +3312,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Funções Avançadas (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Funções Avançadas (Nível avancado).",
       "papoReto": "No contexto de Funções Avançadas, a alternativa correta é 'Clicar com o botão direito na consulta → Mover para Grupo → criar novo grupo'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Clicar com o botão direito na consulta → Mover para Grupo → criar novo grupo — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções Avançadas.",
+      "respostaCerta": "Clicar com o botão direito na consulta → Mover para Grupo → criar novo grupo — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções Avançadas.",
       "cascasDeBanana": [
-        "Power Query Editor → Exibir → Organizar Consultas em Grupos: Incorreto, pois alternativa inválida.",
-        "Dados → Consultas e Conexões → Agrupar Consultas → Novo Grupo: Incorreto, pois alternativa inválida.",
-        "Não é possível agrupar consultas no Power Query do Excel: Incorreto, pois alternativa inválida."
+        "Power Query Editor → Exibir → Organizar Consultas em Grupos: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Dados → Consultas e Conexões → Agrupar Consultas → Novo Grupo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível agrupar consultas no Power Query do Excel: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções Avançadas, associe mentalmente a funcionalidade correta 'Clicar com o botão direito na consulta → Mover para Grupo → criar novo grupo'."
     }
@@ -3337,14 +3337,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Análise Estatística (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Análise Estatística (Nível avancado).",
       "papoReto": "No contexto de Análise Estatística, a alternativa correta é 'CORREL'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "CORREL — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Análise Estatística.",
+      "respostaCerta": "CORREL — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Análise Estatística.",
       "cascasDeBanana": [
-        "COVARIÂNCIA.P: Incorreto, pois alternativa inválida.",
-        "DESVPAD: Incorreto, pois alternativa inválida.",
-        "TENDÊNCIA: Incorreto, pois alternativa inválida."
+        "COVARIÂNCIA.P: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "DESVPAD: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "TENDÊNCIA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Análise Estatística, associe mentalmente a funcionalidade correta 'CORREL'."
     }
@@ -3362,14 +3362,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Análise Estatística (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Análise Estatística (Nível avancado).",
       "papoReto": "No contexto de Análise Estatística, a alternativa correta é 'INCLINAÇÃO (SLOPE) para o coeficiente angular e INTERSEÇÃO (INTERCEPT) para o intercepto'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "INCLINAÇÃO (SLOPE) para o coeficiente angular e INTERSEÇÃO (INTERCEPT) para o intercepto — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Análise Estatística.",
+      "respostaCerta": "INCLINAÇÃO (SLOPE) para o coeficiente angular e INTERSEÇÃO (INTERCEPT) para o intercepto — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Análise Estatística.",
       "cascasDeBanana": [
-        "TENDÊNCIA: Incorreto, pois alternativa inválida.",
-        "CORREL para o coeficiente e MÉDIA para o intercepto: Incorreto, pois alternativa inválida.",
-        "PROJ.LIN: Incorreto, pois alternativa inválida."
+        "TENDÊNCIA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "CORREL para o coeficiente e MÉDIA para o intercepto: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "PROJ.LIN: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Análise Estatística, associe mentalmente a funcionalidade correta 'INCLINAÇÃO'."
     }
@@ -3387,14 +3387,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Auditoria Avançada (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Auditoria Avançada (Nível avancado).",
       "papoReto": "No contexto de Auditoria Avançada, a alternativa correta é 'Página Inicial → Localizar e Selecionar → Fórmulas → seleciona todas as células com fórmulas'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Página Inicial → Localizar e Selecionar → Fórmulas → seleciona todas as células com fórmulas — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Auditoria Avançada.",
+      "respostaCerta": "Página Inicial → Localizar e Selecionar → Fórmulas → seleciona todas as células com fórmulas — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Auditoria Avançada.",
       "cascasDeBanana": [
-        "Fórmulas → Mostrar Fórmulas → identificar visualmente as células: Incorreto, pois alternativa inválida.",
-        "Ctrl+` para mostrar todas as fórmulas e usar Localizar para identificá-las: Incorreto, pois alternativa inválida.",
-        "Usar macro VBA para iterar pelas células e verificar a propriedade HasFormula: Incorreto, pois alternativa inválida."
+        "Fórmulas → Mostrar Fórmulas → identificar visualmente as células: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ctrl+` para mostrar todas as fórmulas e usar Localizar para identificá-las: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar macro VBA para iterar pelas células e verificar a propriedade HasFormula: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Auditoria Avançada, associe mentalmente a funcionalidade correta 'Página Inicial → Localizar e Selecionar → Fórmulas → seleciona todas as células com fórmulas'."
     }
@@ -3412,14 +3412,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Auditoria Avançada (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Auditoria Avançada (Nível avancado).",
       "papoReto": "No contexto de Auditoria Avançada, a alternativa correta é 'Fórmulas → Verificar Erros → Referências Circulares → exibe a lista de células com referências circulares'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Fórmulas → Verificar Erros → Referências Circulares → exibe a lista de células com referências circulares — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Auditoria Avançada.",
+      "respostaCerta": "Fórmulas → Verificar Erros → Referências Circulares → exibe a lista de células com referências circulares — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Auditoria Avançada.",
       "cascasDeBanana": [
-        "Fórmulas → Rastrear Precedentes em todas as células: Incorreto, pois alternativa inválida.",
-        "Arquivo → Informações → Verificar Problemas → Referências Circulares: Incorreto, pois alternativa inválida.",
-        "Dados → Ferramentas de Dados → Detectar Referências Circulares: Incorreto, pois alternativa inválida."
+        "Fórmulas → Rastrear Precedentes em todas as células: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Arquivo → Informações → Verificar Problemas → Referências Circulares: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Dados → Ferramentas de Dados → Detectar Referências Circulares: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Auditoria Avançada, associe mentalmente a funcionalidade correta 'Fórmulas → Verificar Erros → Referências Circulares → exibe a lista de células com referências circulares'."
     }
@@ -3437,14 +3437,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Banco de Dados (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Banco de Dados (Nível avancado).",
       "papoReto": "No contexto de Funções de Banco de Dados, a alternativa correta é 'BDSOMA (DSUM)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "BDSOMA (DSUM) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Banco de Dados.",
+      "respostaCerta": "BDSOMA (DSUM) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Banco de Dados.",
       "cascasDeBanana": [
-        "SOMASES: Incorreto, pois alternativa inválida.",
-        "SOMARPRODUTO: Incorreto, pois alternativa inválida.",
-        "SOMASE: Incorreto, pois alternativa inválida."
+        "SOMASES: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "SOMARPRODUTO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "SOMASE: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Banco de Dados, associe mentalmente a funcionalidade correta 'BDSOMA'."
     }
@@ -3462,14 +3462,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Banco de Dados (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Banco de Dados (Nível avancado).",
       "papoReto": "No contexto de Funções de Banco de Dados, a alternativa correta é 'As funções de banco de dados usam um intervalo de critérios em células separadas permitindo critérios mais complexos com fórmulas e wildcards sem alterar a fórmula principal'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "As funções de banco de dados usam um intervalo de critérios em células separadas permitindo critérios mais complexos com fórmulas e wildcards sem alterar a fórmula principal — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Banco de Dados.",
+      "respostaCerta": "As funções de banco de dados usam um intervalo de critérios em células separadas permitindo critérios mais complexos com fórmulas e wildcards sem alterar a fórmula principal — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Banco de Dados.",
       "cascasDeBanana": [
-        "As funções de banco de dados são mais rápidas para grandes volumes de dados: Incorreto, pois alternativa inválida.",
-        "As funções de banco de dados suportam mais de 127 critérios enquanto SOMASES é limitado: Incorreto, pois alternativa inválida.",
-        "Não há vantagem real; SOMASES e CONT.SES substituem completamente as funções de banco de dados: Incorreto, pois alternativa inválida."
+        "As funções de banco de dados são mais rápidas para grandes volumes de dados: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "As funções de banco de dados suportam mais de 127 critérios enquanto SOMASES é limitado: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não há vantagem real; SOMASES e CONT.SES substituem completamente as funções de banco de dados: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Banco de Dados, associe mentalmente a funcionalidade correta 'As funções de banco de dados usam um intervalo de critérios em células separadas permitindo critérios mais complexos com fórmulas e wildcards sem alterar a fórmula principal'."
     }
@@ -3487,14 +3487,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Power Pivot (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Power Pivot (Nível avancado).",
       "papoReto": "No contexto de Power Pivot, a alternativa correta é 'Um suplemento que permite analisar milhões de linhas de dados de múltiplas fontes usando o Modelo de Dados interno e a linguagem DAX para cálculos avançados'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Um suplemento que permite analisar milhões de linhas de dados de múltiplas fontes usando o Modelo de Dados interno e a linguagem DAX para cálculos avançados — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Power Pivot.",
+      "respostaCerta": "Um suplemento que permite analisar milhões de linhas de dados de múltiplas fontes usando o Modelo de Dados interno e a linguagem DAX para cálculos avançados — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Power Pivot.",
       "cascasDeBanana": [
-        "Uma versão aprimorada das Tabelas Dinâmicas com mais opções de formatação: Incorreto, pois alternativa inválida.",
-        "Uma ferramenta de visualização de dados similar ao Power BI integrada ao Excel: Incorreto, pois alternativa inválida.",
-        "Um recurso para criar Tabelas Dinâmicas a partir de dados do SharePoint: Incorreto, pois alternativa inválida."
+        "Uma versão aprimorada das Tabelas Dinâmicas com mais opções de formatação: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Uma ferramenta de visualização de dados similar ao Power BI integrada ao Excel: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Um recurso para criar Tabelas Dinâmicas a partir de dados do SharePoint: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Power Pivot, associe mentalmente a funcionalidade correta 'Um suplemento que permite analisar milhões de linhas de dados de múltiplas fontes usando o Modelo de Dados interno e a linguagem DAX para cálculos avançados'."
     }
@@ -3512,14 +3512,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Power Pivot (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Power Pivot (Nível avancado).",
       "papoReto": "No contexto de Power Pivot, a alternativa correta é 'Relacionamento Um para Muitos (1:N) onde a tabela de dimensão tem valores únicos na coluna chave'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Relacionamento Um para Muitos (1:N) onde a tabela de dimensão tem valores únicos na coluna chave — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Power Pivot.",
+      "respostaCerta": "Relacionamento Um para Muitos (1:N) onde a tabela de dimensão tem valores únicos na coluna chave — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Power Pivot.",
       "cascasDeBanana": [
-        "Relacionamento Muitos para Muitos: Incorreto, pois alternativa inválida.",
-        "Relacionamento Um para Um: Incorreto, pois alternativa inválida.",
-        "Todos os tipos de relacionamento incluindo N:N são suportados nativamente: Incorreto, pois alternativa inválida."
+        "Relacionamento Muitos para Muitos: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Relacionamento Um para Um: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Todos os tipos de relacionamento incluindo N:N são suportados nativamente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Power Pivot, associe mentalmente a funcionalidade correta 'Relacionamento Um para Muitos'."
     }
@@ -3537,14 +3537,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Array Dinâmico (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Array Dinâmico (Nível avancado).",
       "papoReto": "No contexto de Funções de Array Dinâmico, a alternativa correta é 'CLASSIFICARPOR (SORTBY) com pares de array-ordem para cada critério de classificação'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "CLASSIFICARPOR (SORTBY) com pares de array-ordem para cada critério de classificação — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Array Dinâmico.",
+      "respostaCerta": "CLASSIFICARPOR (SORTBY) com pares de array-ordem para cada critério de classificação — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Array Dinâmico.",
       "cascasDeBanana": [
-        "CLASSIFICAR: Incorreto, pois alternativa inválida.",
-        "ÚNICO: Incorreto, pois alternativa inválida.",
-        "Não é possível classificar por múltiplos critérios com funções de array dinâmico: Incorreto, pois alternativa inválida."
+        "CLASSIFICAR: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "ÚNICO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível classificar por múltiplos critérios com funções de array dinâmico: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Array Dinâmico, associe mentalmente a funcionalidade correta 'CLASSIFICARPOR'."
     }
@@ -3562,14 +3562,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Array Dinâmico (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Array Dinâmico (Nível avancado).",
       "papoReto": "No contexto de Funções de Array Dinâmico, a alternativa correta é '=CLASSIFICAR(ÚNICO(intervalo);1;-1) com ÍNDICE para limitar aos 5 primeiros ou =PRIMEIROS.N.MAIORES'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=CLASSIFICAR(ÚNICO(intervalo);1;-1) com ÍNDICE para limitar aos 5 primeiros ou =PRIMEIROS.N.MAIORES — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Array Dinâmico.",
+      "respostaCerta": "=CLASSIFICAR(ÚNICO(intervalo);1;-1) com ÍNDICE para limitar aos 5 primeiros ou =PRIMEIROS.N.MAIORES — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Array Dinâmico.",
       "cascasDeBanana": [
-        "=MAIOR: Incorreto, pois alternativa inválida.",
-        "=ÍNDICE: Incorreto, pois alternativa inválida.",
-        "Ambas B e C são abordagens válidas: Incorreto, pois alternativa inválida."
+        "=MAIOR: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=ÍNDICE: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas B e C são abordagens válidas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Array Dinâmico, associe mentalmente a funcionalidade correta '=CLASSIFICAR'."
     }
@@ -3587,14 +3587,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Performance (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Performance (Nível avancado).",
       "papoReto": "No contexto de Performance, a alternativa correta é 'Fórmulas → Opções de Cálculo → Manual → calcular manualmente com F9 quando necessário'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Fórmulas → Opções de Cálculo → Manual → calcular manualmente com F9 quando necessário — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Performance.",
+      "respostaCerta": "Fórmulas → Opções de Cálculo → Manual → calcular manualmente com F9 quando necessário — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Performance.",
       "cascasDeBanana": [
-        "Arquivo → Opções → Avançado → desativar aceleração gráfica de hardware: Incorreto, pois alternativa inválida.",
-        "Reduzir o número de planilhas na pasta de trabalho: Incorreto, pois alternativa inválida.",
-        "Salvar no formato .xlsb que calcula mais rapidamente que .xlsx: Incorreto, pois alternativa inválida."
+        "Arquivo → Opções → Avançado → desativar aceleração gráfica de hardware: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Reduzir o número de planilhas na pasta de trabalho: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Salvar no formato .xlsb que calcula mais rapidamente que .xlsx: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Performance, associe mentalmente a funcionalidade correta 'Fórmulas → Opções de Cálculo → Manual → calcular manualmente com F9 quando necessário'."
     }
@@ -3612,14 +3612,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Performance (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Performance (Nível avancado).",
       "papoReto": "No contexto de Performance, a alternativa correta é 'INDIRETO é uma função volátil que recalcula sempre que qualquer célula da planilha muda independentemente de suas dependências'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "INDIRETO é uma função volátil que recalcula sempre que qualquer célula da planilha muda independentemente de suas dependências — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Performance.",
+      "respostaCerta": "INDIRETO é uma função volátil que recalcula sempre que qualquer célula da planilha muda independentemente de suas dependências — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Performance.",
       "cascasDeBanana": [
-        "INDIRETO consome mais memória RAM que outras funções de referência: Incorreto, pois alternativa inválida.",
-        "INDIRETO bloqueia o cache de cálculo do Excel impedindo otimizações: Incorreto, pois alternativa inválida.",
-        "INDIRETO requer acesso ao disco em cada cálculo tornando-o mais lento: Incorreto, pois alternativa inválida."
+        "INDIRETO consome mais memória RAM que outras funções de referência: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "INDIRETO bloqueia o cache de cálculo do Excel impedindo otimizações: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "INDIRETO requer acesso ao disco em cada cálculo tornando-o mais lento: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Performance, associe mentalmente a funcionalidade correta 'INDIRETO é uma função volátil que recalcula sempre que qualquer célula da planilha muda independentemente de suas dependências'."
     }
@@ -3637,14 +3637,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Formatação Condicional Avançada (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Formatação Condicional Avançada (Nível avancado).",
       "papoReto": "No contexto de Formatação Condicional Avançada, a alternativa correta é 'Formatação Condicional → Barras de Dados → Mais Regras → configurar eixo e cores de barras negativas e positivas separadamente'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Formatação Condicional → Barras de Dados → Mais Regras → configurar eixo e cores de barras negativas e positivas separadamente — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Formatação Condicional Avançada.",
+      "respostaCerta": "Formatação Condicional → Barras de Dados → Mais Regras → configurar eixo e cores de barras negativas e positivas separadamente — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Formatação Condicional Avançada.",
       "cascasDeBanana": [
-        "Criar duas regras de Formatação Condicional separadas uma para positivos e outra para negativos: Incorreto, pois alternativa inválida.",
-        "Formatação Condicional → Nova Regra → Barra de Dados Direcional → configurar cores: Incorreto, pois alternativa inválida.",
-        "Não é possível ter cores diferentes para barras positivas e negativas: Incorreto, pois alternativa inválida."
+        "Criar duas regras de Formatação Condicional separadas uma para positivos e outra para negativos: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Formatação Condicional → Nova Regra → Barra de Dados Direcional → configurar cores: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível ter cores diferentes para barras positivas e negativas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Formatação Condicional Avançada, associe mentalmente a funcionalidade correta 'Formatação Condicional → Barras de Dados → Mais Regras → configurar eixo e cores de barras negativas e positivas separadamente'."
     }
@@ -3662,14 +3662,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Tratamento de Erros (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Tratamento de Erros (Nível avancado).",
       "papoReto": "No contexto de Tratamento de Erros, a alternativa correta é 'Usar try-otherwise em linguagem M no Editor Avançado para capturar o erro e retornar um valor padrão'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Usar try-otherwise em linguagem M no Editor Avançado para capturar o erro e retornar um valor padrão — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Tratamento de Erros.",
+      "respostaCerta": "Usar try-otherwise em linguagem M no Editor Avançado para capturar o erro e retornar um valor padrão — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Tratamento de Erros.",
       "cascasDeBanana": [
-        "Configurar Dados → Propriedades da Consulta → Continuar em Caso de Erro: Incorreto, pois alternativa inválida.",
-        "Power Query → Opções → Tratamento de Erros → Usar Cache em Caso de Falha: Incorreto, pois alternativa inválida.",
-        "Não é possível tratar erros de fonte de dados no Power Query; requer macro VBA: Incorreto, pois alternativa inválida."
+        "Configurar Dados → Propriedades da Consulta → Continuar em Caso de Erro: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Power Query → Opções → Tratamento de Erros → Usar Cache em Caso de Falha: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível tratar erros de fonte de dados no Power Query; requer macro VBA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Tratamento de Erros, associe mentalmente a funcionalidade correta 'Usar try-otherwise em linguagem M no Editor Avançado para capturar o erro e retornar um valor padrão'."
     }
@@ -3687,14 +3687,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Texto (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Texto (Nível avancado).",
       "papoReto": "No contexto de Funções de Texto, a alternativa correta é '=EXT.TEXTO(A1;LOCALIZAR(\"@\";A1)+1;NÚM.CARACT(A1)-LOCALIZAR(\"@\";A1))'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=EXT.TEXTO(A1;LOCALIZAR(\"@\";A1)+1;NÚM.CARACT(A1)-LOCALIZAR(\"@\";A1)) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Texto.",
+      "respostaCerta": "=EXT.TEXTO(A1;LOCALIZAR(\"@\";A1)+1;NÚM.CARACT(A1)-LOCALIZAR(\"@\";A1)) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Texto.",
       "cascasDeBanana": [
-        "=DIREITA: Incorreto, pois alternativa inválida.",
-        "=SUBSTITUIR: Incorreto, pois alternativa inválida.",
-        "Ambas A e C estão corretas e produzem o mesmo resultado: Incorreto, pois alternativa inválida."
+        "=DIREITA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=SUBSTITUIR: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e C estão corretas e produzem o mesmo resultado: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Texto, associe mentalmente a funcionalidade correta '=EXT.TEXTO'."
     }
@@ -3712,14 +3712,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Validação de Dados (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Validação de Dados (Nível avancado).",
       "papoReto": "No contexto de Validação de Dados, a alternativa correta é '=CONT.SE($A$1:$A$100;A1)=1 usando Validação de Dados → Personalizado'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=CONT.SE($A$1:$A$100;A1)=1 usando Validação de Dados → Personalizado — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Validação de Dados.",
+      "respostaCerta": "=CONT.SE($A$1:$A$100;A1)=1 usando Validação de Dados → Personalizado — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Validação de Dados.",
       "cascasDeBanana": [
-        "=ÚNICO: Incorreto, pois alternativa inválida.",
-        "=NÃO: Incorreto, pois alternativa inválida.",
-        "=SOMASE: Incorreto, pois alternativa inválida."
+        "=ÚNICO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=NÃO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=SOMASE: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Validação de Dados, associe mentalmente a funcionalidade correta '=CONT.SE'."
     }
@@ -3737,14 +3737,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Compatibilidade (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Compatibilidade (Nível avancado).",
       "papoReto": "No contexto de Compatibilidade, a alternativa correta é 'Converter as fórmulas de array dinâmico em valores estáticos para as células de resultado e documentar as fórmulas originais em comentários antes de compartilhar'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Converter as fórmulas de array dinâmico em valores estáticos para as células de resultado e documentar as fórmulas originais em comentários antes de compartilhar — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Compatibilidade.",
+      "respostaCerta": "Converter as fórmulas de array dinâmico em valores estáticos para as células de resultado e documentar as fórmulas originais em comentários antes de compartilhar — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Compatibilidade.",
       "cascasDeBanana": [
-        "Salvar no formato .xls para garantir compatibilidade total: Incorreto, pois alternativa inválida.",
-        "Usar o Verificador de Compatibilidade e substituir cada função por alternativas compatíveis com Excel 2019: Incorreto, pois alternativa inválida.",
-        "Compartilhar normalmente pois o Excel 2019 converte automaticamente as funções não suportadas: Incorreto, pois alternativa inválida."
+        "Salvar no formato .xls para garantir compatibilidade total: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar o Verificador de Compatibilidade e substituir cada função por alternativas compatíveis com Excel 2019: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Compartilhar normalmente pois o Excel 2019 converte automaticamente as funções não suportadas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Compatibilidade, associe mentalmente a funcionalidade correta 'Converter as fórmulas de array dinâmico em valores estáticos para as células de resultado e documentar as fórmulas originais em comentários antes de compartilhar'."
     }
@@ -3762,14 +3762,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Configurações Avançadas (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Configurações Avançadas (Nível intermediario).",
       "papoReto": "No contexto de Configurações Avançadas, a alternativa correta é 'Salvar o arquivo na pasta XLStart do Excel ou definir uma pasta alternativa de inicialização em Arquivo → Opções → Avançado → Geral → Na inicialização abrir todos os arquivos em'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Salvar o arquivo na pasta XLStart do Excel ou definir uma pasta alternativa de inicialização em Arquivo → Opções → Avançado → Geral → Na inicialização abrir todos os arquivos em — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Configurações Avançadas.",
+      "respostaCerta": "Salvar o arquivo na pasta XLStart do Excel ou definir uma pasta alternativa de inicialização em Arquivo → Opções → Avançado → Geral → Na inicialização abrir todos os arquivos em — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Configurações Avançadas.",
       "cascasDeBanana": [
-        "Criar um atalho do arquivo na área de trabalho e configurar como inicialização automática do Windows: Incorreto, pois alternativa inválida.",
-        "Arquivo → Opções → Geral → Pasta de Trabalho Padrão → definir o arquivo: Incorreto, pois alternativa inválida.",
-        "Usar macro AutoExec no Personal.xlsb para abrir o arquivo automaticamente: Incorreto, pois alternativa inválida."
+        "Criar um atalho do arquivo na área de trabalho e configurar como inicialização automática do Windows: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Arquivo → Opções → Geral → Pasta de Trabalho Padrão → definir o arquivo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar macro AutoExec no Personal.xlsb para abrir o arquivo automaticamente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Configurações Avançadas, associe mentalmente a funcionalidade correta 'Salvar o arquivo na pasta XLStart do Excel ou definir uma pasta alternativa de inicialização em Arquivo → Opções → Avançado → Geral → Na inicialização abrir todos os arquivos em'."
     }
@@ -3787,14 +3787,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Personal.xlsb (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Personal.xlsb (Nível avancado).",
       "papoReto": "No contexto de Personal.xlsb, a alternativa correta é 'Uma pasta de trabalho oculta que abre automaticamente com o Excel e armazena macros globais disponíveis em qualquer pasta de trabalho'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Uma pasta de trabalho oculta que abre automaticamente com o Excel e armazena macros globais disponíveis em qualquer pasta de trabalho — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Personal.xlsb.",
+      "respostaCerta": "Uma pasta de trabalho oculta que abre automaticamente com o Excel e armazena macros globais disponíveis em qualquer pasta de trabalho — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Personal.xlsb.",
       "cascasDeBanana": [
-        "Um arquivo de backup automático criado pelo Excel para recuperação de dados: Incorreto, pois alternativa inválida.",
-        "Um arquivo de configurações pessoais do usuário para personalização da interface: Incorreto, pois alternativa inválida.",
-        "Um modelo de pasta de trabalho padrão aplicado a todos os novos arquivos criados: Incorreto, pois alternativa inválida."
+        "Um arquivo de backup automático criado pelo Excel para recuperação de dados: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Um arquivo de configurações pessoais do usuário para personalização da interface: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Um modelo de pasta de trabalho padrão aplicado a todos os novos arquivos criados: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Personal.xlsb, associe mentalmente a funcionalidade correta 'Uma pasta de trabalho oculta que abre automaticamente com o Excel e armazena macros globais disponíveis em qualquer pasta de trabalho'."
     }
@@ -3812,14 +3812,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Cubo (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Cubo (Nível avancado).",
       "papoReto": "No contexto de Funções de Cubo, a alternativa correta é 'Funções que recuperam dados de modelos OLAP ou do Modelo de Dados do Power Pivot como VALORCUBO e MEMBROCUBO permitindo análises multidimensionais fora de Tabelas Dinâmicas'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Funções que recuperam dados de modelos OLAP ou do Modelo de Dados do Power Pivot como VALORCUBO e MEMBROCUBO permitindo análises multidimensionais fora de Tabelas Dinâmicas — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Cubo.",
+      "respostaCerta": "Funções que recuperam dados de modelos OLAP ou do Modelo de Dados do Power Pivot como VALORCUBO e MEMBROCUBO permitindo análises multidimensionais fora de Tabelas Dinâmicas — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Cubo.",
       "cascasDeBanana": [
-        "Funções matemáticas para cálculo de volumes e geometria tridimensional: Incorreto, pois alternativa inválida.",
-        "Funções exclusivas do Power BI integradas ao Excel via suplemento: Incorreto, pois alternativa inválida.",
-        "Funções de banco de dados para consulta de cubos de dados no SQL Server: Incorreto, pois alternativa inválida."
+        "Funções matemáticas para cálculo de volumes e geometria tridimensional: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Funções exclusivas do Power BI integradas ao Excel via suplemento: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Funções de banco de dados para consulta de cubos de dados no SQL Server: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Cubo, associe mentalmente a funcionalidade correta 'Funções que recuperam dados de modelos OLAP ou do Modelo de Dados do Power Pivot como VALORCUBO e MEMBROCUBO permitindo análises multidimensionais fora de Tabelas Dinâmicas'."
     }
@@ -3837,14 +3837,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Flash Fill (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Flash Fill (Nível intermediario).",
       "papoReto": "No contexto de Flash Fill, a alternativa correta é 'Um recurso que detecta padrões na entrada de dados e preenche automaticamente as células restantes podendo ser acionado com Ctrl+E ou Dados → Preenchimento Relâmpago'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Um recurso que detecta padrões na entrada de dados e preenche automaticamente as células restantes podendo ser acionado com Ctrl+E ou Dados → Preenchimento Relâmpago — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Flash Fill.",
+      "respostaCerta": "Um recurso que detecta padrões na entrada de dados e preenche automaticamente as células restantes podendo ser acionado com Ctrl+E ou Dados → Preenchimento Relâmpago — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Flash Fill.",
       "cascasDeBanana": [
-        "Um recurso de autocompletar que sugere valores com base no histórico de entradas: Incorreto, pois alternativa inválida.",
-        "Uma forma de copiar formatação rapidamente entre células não adjacentes: Incorreto, pois alternativa inválida.",
-        "Um atalho para preencher células com a mesma fórmula da célula acima: Incorreto, pois alternativa inválida."
+        "Um recurso de autocompletar que sugere valores com base no histórico de entradas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Uma forma de copiar formatação rapidamente entre células não adjacentes: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Um atalho para preencher células com a mesma fórmula da célula acima: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Flash Fill, associe mentalmente a funcionalidade correta 'Um recurso que detecta padrões na entrada de dados e preenche automaticamente as células restantes podendo ser acionado com Ctrl+E ou Dados → Preenchimento Relâmpago'."
     }
@@ -3862,14 +3862,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Flash Fill (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Flash Fill (Nível intermediario).",
       "papoReto": "No contexto de Flash Fill, a alternativa correta é 'Digitar manualmente o resultado desejado na primeira célula da coluna adjacente e pressionar Ctrl+E para que o Flash Fill complete as demais'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Digitar manualmente o resultado desejado na primeira célula da coluna adjacente e pressionar Ctrl+E para que o Flash Fill complete as demais — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Flash Fill.",
+      "respostaCerta": "Digitar manualmente o resultado desejado na primeira célula da coluna adjacente e pressionar Ctrl+E para que o Flash Fill complete as demais — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Flash Fill.",
       "cascasDeBanana": [
-        "Usar Dados → Texto para Colunas com vírgula como delimitador: Incorreto, pois alternativa inválida.",
-        "Usar a fórmula =ESQUERDA: Incorreto, pois alternativa inválida.",
-        "Usar Power Query para dividir a coluna pelo delimitador vírgula: Incorreto, pois alternativa inválida."
+        "Usar Dados → Texto para Colunas com vírgula como delimitador: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar a fórmula =ESQUERDA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Power Query para dividir a coluna pelo delimitador vírgula: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Flash Fill, associe mentalmente a funcionalidade correta 'Digitar manualmente o resultado desejado na primeira célula da coluna adjacente e pressionar Ctrl+E para que o Flash Fill complete as demais'."
     }
@@ -3887,14 +3887,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gráficos Avançados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gráficos Avançados, subtema Gráficos de Mapa (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gráficos Avançados, subtema Gráficos de Mapa (Nível intermediario).",
       "papoReto": "No contexto de Gráficos de Mapa, a alternativa correta é 'Gráfico de Mapa Preenchido (Filled Map Chart)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Gráfico de Mapa Preenchido (Filled Map Chart) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Gráficos de Mapa.",
+      "respostaCerta": "Gráfico de Mapa Preenchido (Filled Map Chart) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Gráficos de Mapa.",
       "cascasDeBanana": [
-        "Gráfico de Bolhas Geográfico: Incorreto, pois alternativa inválida.",
-        "Gráfico de Dispersão com coordenadas GPS: Incorreto, pois alternativa inválida.",
-        "Não é possível criar gráficos geográficos nativamente no Excel: Incorreto, pois alternativa inválida."
+        "Gráfico de Bolhas Geográfico: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Gráfico de Dispersão com coordenadas GPS: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível criar gráficos geográficos nativamente no Excel: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Gráficos de Mapa, associe mentalmente a funcionalidade correta 'Gráfico de Mapa Preenchido'."
     }
@@ -3912,14 +3912,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Gráficos Avançados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gráficos Avançados, subtema Gráficos de Mapa (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gráficos Avançados, subtema Gráficos de Mapa (Nível avancado).",
       "papoReto": "No contexto de Gráficos de Mapa, a alternativa correta é 'Os nomes das regiões estão em formato não reconhecido pelo Bing Maps; a solução é padronizar os nomes em inglês ou no formato oficial reconhecido pelo serviço de mapas'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Os nomes das regiões estão em formato não reconhecido pelo Bing Maps; a solução é padronizar os nomes em inglês ou no formato oficial reconhecido pelo serviço de mapas — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Gráficos de Mapa.",
+      "respostaCerta": "Os nomes das regiões estão em formato não reconhecido pelo Bing Maps; a solução é padronizar os nomes em inglês ou no formato oficial reconhecido pelo serviço de mapas — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Gráficos de Mapa.",
       "cascasDeBanana": [
-        "O Excel não suporta nomes de regiões em português; requer tradução manual: Incorreto, pois alternativa inválida.",
-        "O gráfico de mapa só funciona com códigos ISO de países não com nomes por extenso: Incorreto, pois alternativa inválida.",
-        "O suplemento de mapas está desativado e precisa ser habilitado nas opções: Incorreto, pois alternativa inválida."
+        "O Excel não suporta nomes de regiões em português; requer tradução manual: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "O gráfico de mapa só funciona com códigos ISO de países não com nomes por extenso: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "O suplemento de mapas está desativado e precisa ser habilitado nas opções: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Gráficos de Mapa, associe mentalmente a funcionalidade correta 'Os nomes das regiões estão em formato não reconhecido pelo Bing Maps; a solução é padronizar os nomes em inglês ou no formato oficial reconhecido pelo serviço de mapas'."
     }
@@ -3937,14 +3937,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Tipos de Dados Vinculados (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Tipos de Dados Vinculados (Nível intermediario).",
       "papoReto": "No contexto de Tipos de Dados Vinculados, a alternativa correta é 'Tipos de dados conectados a fontes online que trazem informações dinâmicas como cotações de ações e dados geográficos diretamente para células do Excel'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Tipos de dados conectados a fontes online que trazem informações dinâmicas como cotações de ações e dados geográficos diretamente para células do Excel — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Tipos de Dados Vinculados.",
+      "respostaCerta": "Tipos de dados conectados a fontes online que trazem informações dinâmicas como cotações de ações e dados geográficos diretamente para células do Excel — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Tipos de Dados Vinculados.",
       "cascasDeBanana": [
-        "Tipos de validação de dados que verificam automaticamente o formato dos dados inseridos: Incorreto, pois alternativa inválida.",
-        "Conexões Power Query pré-configuradas para fontes de dados financeiras e geográficas: Incorreto, pois alternativa inválida.",
-        "Formatos de célula especiais que exibem dados em cartões visuais sem conexão externa: Incorreto, pois alternativa inválida."
+        "Tipos de validação de dados que verificam automaticamente o formato dos dados inseridos: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Conexões Power Query pré-configuradas para fontes de dados financeiras e geográficas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Formatos de célula especiais que exibem dados em cartões visuais sem conexão externa: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Tipos de Dados Vinculados, associe mentalmente a funcionalidade correta 'Tipos de dados conectados a fontes online que trazem informações dinâmicas como cotações de ações e dados geográficos diretamente para células do Excel'."
     }
@@ -3962,14 +3962,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Tipos de Dados Vinculados (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Tipos de Dados Vinculados (Nível avancado).",
       "papoReto": "No contexto de Tipos de Dados Vinculados, a alternativa correta é 'Usar a fórmula =A1.População ou clicar no ícone de extração de dados → selecionar o campo desejado'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Usar a fórmula =A1.População ou clicar no ícone de extração de dados → selecionar o campo desejado — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Tipos de Dados Vinculados.",
+      "respostaCerta": "Usar a fórmula =A1.População ou clicar no ícone de extração de dados → selecionar o campo desejado — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Tipos de Dados Vinculados.",
       "cascasDeBanana": [
-        "Clicar com o botão direito na célula → Extrair Dados → População: Incorreto, pois alternativa inválida.",
-        "Usar PROCX referenciando o tipo de dado geográfico como fonte: Incorreto, pois alternativa inválida.",
-        "Usar Power Query → Expandir Tipo de Dado → selecionar o campo População: Incorreto, pois alternativa inválida."
+        "Clicar com o botão direito na célula → Extrair Dados → População: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar PROCX referenciando o tipo de dado geográfico como fonte: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Power Query → Expandir Tipo de Dado → selecionar o campo População: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Tipos de Dados Vinculados, associe mentalmente a funcionalidade correta 'Usar a fórmula =A1.População ou clicar no ícone de extração de dados → selecionar o campo desejado'."
     }
@@ -3987,14 +3987,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Suplementos (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Suplementos (Nível intermediario).",
       "papoReto": "No contexto de Suplementos, a alternativa correta é 'Arquivo → Opções → Suplementos → Suplementos do Excel → Ir → marcar Solver → OK'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Arquivo → Opções → Suplementos → Suplementos do Excel → Ir → marcar Solver → OK — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Suplementos.",
+      "respostaCerta": "Arquivo → Opções → Suplementos → Suplementos do Excel → Ir → marcar Solver → OK — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Suplementos.",
       "cascasDeBanana": [
-        "Inserir → Suplementos → Loja de Suplementos → pesquisar Solver: Incorreto, pois alternativa inválida.",
-        "Desenvolvedor → Suplementos COM → adicionar Solver: Incorreto, pois alternativa inválida.",
-        "Dados → Obter Dados → Suplementos → Instalar Solver: Incorreto, pois alternativa inválida."
+        "Inserir → Suplementos → Loja de Suplementos → pesquisar Solver: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Desenvolvedor → Suplementos COM → adicionar Solver: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Dados → Obter Dados → Suplementos → Instalar Solver: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Suplementos, associe mentalmente a funcionalidade correta 'Arquivo → Opções → Suplementos → Suplementos do Excel → Ir → marcar Solver → OK'."
     }
@@ -4012,14 +4012,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Compatibilidade (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Compatibilidade (Nível intermediario).",
       "papoReto": "No contexto de Funções de Compatibilidade, a alternativa correta é 'Para garantir que arquivos criados em versões antigas do Excel continuem funcionando corretamente sem necessidade de atualização das fórmulas'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Para garantir que arquivos criados em versões antigas do Excel continuem funcionando corretamente sem necessidade de atualização das fórmulas — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Compatibilidade.",
+      "respostaCerta": "Para garantir que arquivos criados em versões antigas do Excel continuem funcionando corretamente sem necessidade de atualização das fórmulas — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Compatibilidade.",
       "cascasDeBanana": [
-        "Porque as funções novas têm limitações que as funções antigas não têm: Incorreto, pois alternativa inválida.",
-        "Porque as funções antigas são mais rápidas para cálculo em grandes volumes de dados: Incorreto, pois alternativa inválida.",
-        "Para oferecer opções alternativas ao usuário sem deprecar funcionalidades: Incorreto, pois alternativa inválida."
+        "Porque as funções novas têm limitações que as funções antigas não têm: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Porque as funções antigas são mais rápidas para cálculo em grandes volumes de dados: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Para oferecer opções alternativas ao usuário sem deprecar funcionalidades: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Compatibilidade, associe mentalmente a funcionalidade correta 'Para garantir que arquivos criados em versões antigas do Excel continuem funcionando corretamente sem necessidade de atualização das fórmulas'."
     }
@@ -4037,14 +4037,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Formatação Condicional Avançada (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Formatação Condicional Avançada (Nível avancado).",
       "papoReto": "No contexto de Formatação Condicional Avançada, a alternativa correta é 'Formatação Condicional → Regras de Primeiros e Últimos → 10% Superiores → definir formato verde'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Formatação Condicional → Regras de Primeiros e Últimos → 10% Superiores → definir formato verde — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Formatação Condicional Avançada.",
+      "respostaCerta": "Formatação Condicional → Regras de Primeiros e Últimos → 10% Superiores → definir formato verde — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Formatação Condicional Avançada.",
       "cascasDeBanana": [
-        "Formatação Condicional → Nova Regra → fórmula =A1>=PERCENTIL: Incorreto, pois alternativa inválida.",
-        "Ambas A e B produzem o mesmo resultado e são igualmente válidas: Incorreto, pois alternativa inválida.",
-        "Formatação Condicional → Escala de Cores → configurar o percentil 90 como verde: Incorreto, pois alternativa inválida."
+        "Formatação Condicional → Nova Regra → fórmula =A1>=PERCENTIL: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e B produzem o mesmo resultado e são igualmente válidas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Formatação Condicional → Escala de Cores → configurar o percentil 90 como verde: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Formatação Condicional Avançada, associe mentalmente a funcionalidade correta 'Formatação Condicional → Regras de Primeiros e Últimos → 10% Superiores → definir formato verde'."
     }
@@ -4062,14 +4062,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Drill Down (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Drill Down (Nível intermediario).",
       "papoReto": "No contexto de Drill Down, a alternativa correta é 'O Excel cria automaticamente uma nova planilha com os registros detalhados que compõem aquele valor'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "O Excel cria automaticamente uma nova planilha com os registros detalhados que compõem aquele valor — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Drill Down.",
+      "respostaCerta": "O Excel cria automaticamente uma nova planilha com os registros detalhados que compõem aquele valor — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Drill Down.",
       "cascasDeBanana": [
-        "O Excel abre o filtro da Tabela Dinâmica para aquele valor: Incorreto, pois alternativa inválida.",
-        "O Excel exibe um tooltip com os registros detalhados: Incorreto, pois alternativa inválida.",
-        "O Excel navega automaticamente para a fonte de dados e destaca os registros: Incorreto, pois alternativa inválida."
+        "O Excel abre o filtro da Tabela Dinâmica para aquele valor: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "O Excel exibe um tooltip com os registros detalhados: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "O Excel navega automaticamente para a fonte de dados e destaca os registros: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Drill Down, associe mentalmente a funcionalidade correta 'O Excel cria automaticamente uma nova planilha com os registros detalhados que compõem aquele valor'."
     }
@@ -4087,14 +4087,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Drill Down (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Drill Down (Nível avancado).",
       "papoReto": "No contexto de Drill Down, a alternativa correta é 'Clicar com o botão direito na Tabela Dinâmica → Opções da Tabela Dinâmica → Dados → desmarcar \"Habilitar mostrar detalhes\"'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Clicar com o botão direito na Tabela Dinâmica → Opções da Tabela Dinâmica → Dados → desmarcar \"Habilitar mostrar detalhes\" — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Drill Down.",
+      "respostaCerta": "Clicar com o botão direito na Tabela Dinâmica → Opções da Tabela Dinâmica → Dados → desmarcar \"Habilitar mostrar detalhes\" — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Drill Down.",
       "cascasDeBanana": [
-        "Proteger a planilha impedindo cliques duplos nas células: Incorreto, pois alternativa inválida.",
-        "Converter a Tabela Dinâmica em valores estáticos antes de compartilhar: Incorreto, pois alternativa inválida.",
-        "Usar Revisão → Restringir Edição → Sem Drill Down: Incorreto, pois alternativa inválida."
+        "Proteger a planilha impedindo cliques duplos nas células: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Converter a Tabela Dinâmica em valores estáticos antes de compartilhar: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Revisão → Restringir Edição → Sem Drill Down: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Drill Down, associe mentalmente a funcionalidade correta 'Clicar com o botão direito na Tabela Dinâmica → Opções da Tabela Dinâmica → Dados → desmarcar \"Habilitar mostrar detalhes\"'."
     }
@@ -4112,14 +4112,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Atualização Agendada (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Atualização Agendada (Nível avancado).",
       "papoReto": "No contexto de Atualização Agendada, a alternativa correta é 'Dados → Consultas e Conexões → Propriedades da Consulta → Controle de Atualização → marcar \"Atualizar a cada X minutos\" e definir 60'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Consultas e Conexões → Propriedades da Consulta → Controle de Atualização → marcar \"Atualizar a cada X minutos\" e definir 60 — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Atualização Agendada.",
+      "respostaCerta": "Dados → Consultas e Conexões → Propriedades da Consulta → Controle de Atualização → marcar \"Atualizar a cada X minutos\" e definir 60 — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Atualização Agendada.",
       "cascasDeBanana": [
-        "Power Query → Opções → Atualização Automática → 60 minutos: Incorreto, pois alternativa inválida.",
-        "Arquivo → Opções → Power Query → Agendamento → Atualizar a cada 60 minutos: Incorreto, pois alternativa inválida.",
-        "Não é possível agendar atualização automática por tempo no Excel Desktop; requer Power Automate: Incorreto, pois alternativa inválida."
+        "Power Query → Opções → Atualização Automática → 60 minutos: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Arquivo → Opções → Power Query → Agendamento → Atualizar a cada 60 minutos: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível agendar atualização automática por tempo no Excel Desktop; requer Power Automate: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Atualização Agendada, associe mentalmente a funcionalidade correta 'Dados → Consultas e Conexões → Propriedades da Consulta → Controle de Atualização → marcar \"Atualizar a cada X minutos\" e definir 60'."
     }
@@ -4137,14 +4137,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Array Dinâmico (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Array Dinâmico (Nível avancado).",
       "papoReto": "No contexto de Funções de Array Dinâmico, a alternativa correta é 'Combinar SEQUÊNCIA com ÍNDICE e operações de array para gerar todas as combinações'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Combinar SEQUÊNCIA com ÍNDICE e operações de array para gerar todas as combinações — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Array Dinâmico.",
+      "respostaCerta": "Combinar SEQUÊNCIA com ÍNDICE e operações de array para gerar todas as combinações — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Array Dinâmico.",
       "cascasDeBanana": [
-        "Usar FILTRO com critério de VERDADEIRO para retornar todas as linhas: Incorreto, pois alternativa inválida.",
-        "Usar ÚNICO aplicado à concatenação das duas listas: Incorreto, pois alternativa inválida.",
-        "Usar PROCX com modo de correspondência de array: Incorreto, pois alternativa inválida."
+        "Usar FILTRO com critério de VERDADEIRO para retornar todas as linhas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar ÚNICO aplicado à concatenação das duas listas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar PROCX com modo de correspondência de array: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Array Dinâmico, associe mentalmente a funcionalidade correta 'Combinar SEQUÊNCIA com ÍNDICE e operações de array para gerar todas as combinações'."
     }
@@ -4162,14 +4162,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Consolidação Avançada (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Consolidação Avançada (Nível avancado).",
       "papoReto": "No contexto de Consolidação Avançada, a alternativa correta é 'Usar Power Query → Obter Dados → De Arquivo → Da Pasta → apontar para a pasta de rede e configurar atualização automática'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Usar Power Query → Obter Dados → De Arquivo → Da Pasta → apontar para a pasta de rede e configurar atualização automática — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Consolidação Avançada.",
+      "respostaCerta": "Usar Power Query → Obter Dados → De Arquivo → Da Pasta → apontar para a pasta de rede e configurar atualização automática — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Consolidação Avançada.",
       "cascasDeBanana": [
-        "Usar Dados → Consolidar com links para cada arquivo individual: Incorreto, pois alternativa inválida.",
-        "Criar fórmulas 3D referenciando cada pasta de trabalho manualmente: Incorreto, pois alternativa inválida.",
-        "Usar macro VBA para abrir cada arquivo e copiar os dados para a planilha de consolidação: Incorreto, pois alternativa inválida."
+        "Usar Dados → Consolidar com links para cada arquivo individual: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Criar fórmulas 3D referenciando cada pasta de trabalho manualmente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar macro VBA para abrir cada arquivo e copiar os dados para a planilha de consolidação: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Consolidação Avançada, associe mentalmente a funcionalidade correta 'Usar Power Query → Obter Dados → De Arquivo → Da Pasta → apontar para a pasta de rede e configurar atualização automática'."
     }
@@ -4187,14 +4187,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Macros VBA (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Macros VBA (Nível avancado).",
       "papoReto": "No contexto de Macros VBA, a alternativa correta é 'Criar um objeto Outlook.Application via CreateObject e usar o método CreateItem(0) para criar o e-mail com anexo via Attachments.Add'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Criar um objeto Outlook.Application via CreateObject e usar o método CreateItem(0) para criar o e-mail com anexo via Attachments.Add — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Macros VBA.",
+      "respostaCerta": "Criar um objeto Outlook.Application via CreateObject e usar o método CreateItem(0) para criar o e-mail com anexo via Attachments.Add — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Macros VBA.",
       "cascasDeBanana": [
-        "Usar Application.SendMail do Excel com o caminho do arquivo como anexo: Incorreto, pois alternativa inválida.",
-        "Usar Shell para abrir o Outlook com parâmetros de linha de comando: Incorreto, pois alternativa inválida.",
-        "Usar o método ActiveWorkbook.SendMail com lista de destinatários: Incorreto, pois alternativa inválida."
+        "Usar Application.SendMail do Excel com o caminho do arquivo como anexo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Shell para abrir o Outlook com parâmetros de linha de comando: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar o método ActiveWorkbook.SendMail com lista de destinatários: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Macros VBA, associe mentalmente a funcionalidade correta 'Criar um objeto Outlook.Application via CreateObject e usar o método CreateItem'."
     }
@@ -4212,14 +4212,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Tabelas do Excel (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Tabelas do Excel (Nível avancado).",
       "papoReto": "No contexto de Tabelas do Excel, a alternativa correta é 'Design da Tabela → marcar Linha de Totais → clicar na célula de total de cada coluna e selecionar a função desejada no menu suspenso'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Design da Tabela → marcar Linha de Totais → clicar na célula de total de cada coluna e selecionar a função desejada no menu suspenso — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Tabelas do Excel.",
+      "respostaCerta": "Design da Tabela → marcar Linha de Totais → clicar na célula de total de cada coluna e selecionar a função desejada no menu suspenso — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Tabelas do Excel.",
       "cascasDeBanana": [
-        "Inserir manualmente as fórmulas MÉDIA e MÁXIMO na linha abaixo da tabela: Incorreto, pois alternativa inválida.",
-        "Design da Tabela → Linha de Totais → Configurar Funções → selecionar Média e Máximo: Incorreto, pois alternativa inválida.",
-        "Não é possível ter funções diferentes em colunas diferentes da linha de totais: Incorreto, pois alternativa inválida."
+        "Inserir manualmente as fórmulas MÉDIA e MÁXIMO na linha abaixo da tabela: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Design da Tabela → Linha de Totais → Configurar Funções → selecionar Média e Máximo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível ter funções diferentes em colunas diferentes da linha de totais: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Tabelas do Excel, associe mentalmente a funcionalidade correta 'Design da Tabela → marcar Linha de Totais → clicar na célula de total de cada coluna e selecionar a função desejada no menu suspenso'."
     }
@@ -4237,14 +4237,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Mesclagem Avançada (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Mesclagem Avançada (Nível avancado).",
       "papoReto": "No contexto de Mesclagem Avançada, a alternativa correta é 'Tipo de junção: Externa Esquerda (todos da primeira, correspondentes da segunda)'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Tipo de junção: Externa Esquerda (todos da primeira, correspondentes da segunda) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Mesclagem Avançada.",
+      "respostaCerta": "Tipo de junção: Externa Esquerda (todos da primeira, correspondentes da segunda) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Mesclagem Avançada.",
       "cascasDeBanana": [
-        "Tipo de junção: Interna: Incorreto, pois alternativa inválida.",
-        "Tipo de junção: Externa Completa: Incorreto, pois alternativa inválida.",
-        "Tipo de junção: Anti Esquerda: Incorreto, pois alternativa inválida."
+        "Tipo de junção: Interna: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Tipo de junção: Externa Completa: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Tipo de junção: Anti Esquerda: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Mesclagem Avançada, associe mentalmente a funcionalidade correta 'Tipo de junção: Externa Esquerda'."
     }
@@ -4262,14 +4262,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Data (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Data (Nível avancado).",
       "papoReto": "No contexto de Funções de Data, a alternativa correta é '=DATADIF(DataInicio;DataFim;\"M\")'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=DATADIF(DataInicio;DataFim;\"M\") — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Data.",
+      "respostaCerta": "=DATADIF(DataInicio;DataFim;\"M\") — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Data.",
       "cascasDeBanana": [
-        "=MESES: Incorreto, pois alternativa inválida.",
-        "=INT: Incorreto, pois alternativa inválida.",
-        "=: Incorreto, pois alternativa inválida."
+        "=MESES: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=INT: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Data, associe mentalmente a funcionalidade correta '=DATADIF'."
     }
@@ -4287,14 +4287,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Formatação Numérica (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Formatação Numérica (Nível avancado).",
       "papoReto": "No contexto de Formatação Numérica, a alternativa correta é '[Azul]#.##0;[Vermelho](#.##0);\"-\"'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "[Azul]#.##0;[Vermelho](#.##0);\"-\" — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Formatação Numérica.",
+      "respostaCerta": "[Azul]#.##0;[Vermelho](#.##0);\"-\" — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Formatação Numérica.",
       "cascasDeBanana": [
-        "[Azul]+#.##0;[Vermelho]-#.##0;\"0\": Incorreto, pois alternativa inválida.",
-        "#.##0;: Incorreto, pois alternativa inválida.",
-        "[Cor5]#.##0;[Cor3]-#.##0;\"-\": Incorreto, pois alternativa inválida."
+        "[Azul]+#.##0;[Vermelho]-#.##0;\"0\": Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "#.##0;: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "[Cor5]#.##0;[Cor3]-#.##0;\"-\": Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Formatação Numérica, associe mentalmente a funcionalidade correta '[Azul]#.##0;[Vermelho]'."
     }
@@ -4312,14 +4312,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Segurança (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Segurança (Nível avancado).",
       "papoReto": "No contexto de Segurança, a alternativa correta é 'Clicar em \"Habilitar Conteúdo\" no aviso de segurança; o Excel adiciona o arquivo à lista de documentos confiáveis para sessões futuras'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Clicar em \"Habilitar Conteúdo\" no aviso de segurança; o Excel adiciona o arquivo à lista de documentos confiáveis para sessões futuras — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Segurança.",
+      "respostaCerta": "Clicar em \"Habilitar Conteúdo\" no aviso de segurança; o Excel adiciona o arquivo à lista de documentos confiáveis para sessões futuras — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Segurança.",
       "cascasDeBanana": [
-        "Mover o arquivo para uma pasta configurada como Local Confiável nas configurações da Central de Confiabilidade: Incorreto, pois alternativa inválida.",
-        "Arquivo → Informações → Habilitar Conteúdo → Habilitar Todas as Macros apenas para este arquivo: Incorreto, pois alternativa inválida.",
-        "Ambas A e B são abordagens válidas e seguras: Incorreto, pois alternativa inválida."
+        "Mover o arquivo para uma pasta configurada como Local Confiável nas configurações da Central de Confiabilidade: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Arquivo → Informações → Habilitar Conteúdo → Habilitar Todas as Macros apenas para este arquivo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e B são abordagens válidas e seguras: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Segurança, associe mentalmente a funcionalidade correta 'Clicar em \"Habilitar Conteúdo\" no aviso de segurança; o Excel adiciona o arquivo à lista de documentos confiáveis para sessões futuras'."
     }
@@ -4337,14 +4337,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Classificação Personalizada (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Classificação Personalizada (Nível avancado).",
       "papoReto": "No contexto de Classificação Personalizada, a alternativa correta é 'Dados → Classificar → Ordem → Lista Personalizada → selecionar a lista de meses predefinida'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Classificar → Ordem → Lista Personalizada → selecionar a lista de meses predefinida — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Classificação Personalizada.",
+      "respostaCerta": "Dados → Classificar → Ordem → Lista Personalizada → selecionar a lista de meses predefinida — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Classificação Personalizada.",
       "cascasDeBanana": [
-        "Criar uma coluna auxiliar com o número do mês e classificar por ela: Incorreto, pois alternativa inválida.",
-        "Dados → Classificar → Opções → Classificar da Esquerda para a Direita → meses: Incorreto, pois alternativa inválida.",
-        "Ambas A e B são abordagens válidas: Incorreto, pois alternativa inválida."
+        "Criar uma coluna auxiliar com o número do mês e classificar por ela: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Dados → Classificar → Opções → Classificar da Esquerda para a Direita → meses: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e B são abordagens válidas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Classificação Personalizada, associe mentalmente a funcionalidade correta 'Dados → Classificar → Ordem → Lista Personalizada → selecionar a lista de meses predefinida'."
     }
@@ -4362,14 +4362,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Janelas (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Janelas (Nível intermediario).",
       "papoReto": "No contexto de Janelas, a alternativa correta é 'Exibir → Nova Janela → Exibir → Exibir Lado a Lado → navegar para planilhas diferentes em cada janela'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Exibir → Nova Janela → Exibir → Exibir Lado a Lado → navegar para planilhas diferentes em cada janela — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Janelas.",
+      "respostaCerta": "Exibir → Nova Janela → Exibir → Exibir Lado a Lado → navegar para planilhas diferentes em cada janela — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Janelas.",
       "cascasDeBanana": [
-        "Exibir → Dividir → selecionar as planilhas desejadas em cada painel: Incorreto, pois alternativa inválida.",
-        "Inserir → Nova Planilha → Exibir Lado a Lado → selecionar as planilhas: Incorreto, pois alternativa inválida.",
-        "Ctrl+Clique nas abas das planilhas → Exibir Lado a Lado: Incorreto, pois alternativa inválida."
+        "Exibir → Dividir → selecionar as planilhas desejadas em cada painel: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Inserir → Nova Planilha → Exibir Lado a Lado → selecionar as planilhas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ctrl+Clique nas abas das planilhas → Exibir Lado a Lado: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Janelas, associe mentalmente a funcionalidade correta 'Exibir → Nova Janela → Exibir → Exibir Lado a Lado → navegar para planilhas diferentes em cada janela'."
     }
@@ -4387,14 +4387,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Engenharia (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Engenharia (Nível intermediario).",
       "papoReto": "No contexto de Funções de Engenharia, a alternativa correta é 'DEC2HEX'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "DEC2HEX — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Engenharia.",
+      "respostaCerta": "DEC2HEX — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Engenharia.",
       "cascasDeBanana": [
-        "DECAHEX: Incorreto, pois alternativa inválida.",
-        "CONVERTER: Incorreto, pois alternativa inválida.",
-        "BASE com base 16: Incorreto, pois alternativa inválida."
+        "DECAHEX: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "CONVERTER: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "BASE com base 16: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Engenharia, associe mentalmente a funcionalidade correta 'DEC2HEX'."
     }
@@ -4412,14 +4412,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Preenchimento Relâmpago (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Preenchimento Relâmpago (Nível avancado).",
       "papoReto": "No contexto de Preenchimento Relâmpago, a alternativa correta é 'Digitar manualmente \"15/01/2024\" na célula adjacente ao primeiro registro e pressionar Ctrl+E para aplicar o padrão às demais'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Digitar manualmente \"15/01/2024\" na célula adjacente ao primeiro registro e pressionar Ctrl+E para aplicar o padrão às demais — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Preenchimento Relâmpago.",
+      "respostaCerta": "Digitar manualmente \"15/01/2024\" na célula adjacente ao primeiro registro e pressionar Ctrl+E para aplicar o padrão às demais — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Preenchimento Relâmpago.",
       "cascasDeBanana": [
-        "Usar Dados → Texto para Colunas para converter o formato de data: Incorreto, pois alternativa inválida.",
-        "Usar fórmula =DATA: Incorreto, pois alternativa inválida.",
-        "Ambas A e C são válidas mas Flash Fill é mais rápido para transformações simples de padrão: Incorreto, pois alternativa inválida."
+        "Usar Dados → Texto para Colunas para converter o formato de data: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar fórmula =DATA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e C são válidas mas Flash Fill é mais rápido para transformações simples de padrão: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Preenchimento Relâmpago, associe mentalmente a funcionalidade correta 'Digitar manualmente \"15/01/2024\" na célula adjacente ao primeiro registro e pressionar Ctrl+E para aplicar o padrão às demais'."
     }
@@ -4437,14 +4437,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Transformação Avançada (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Transformação Avançada (Nível avancado).",
       "papoReto": "No contexto de Transformação Avançada, a alternativa correta é 'Adicionar Coluna → Coluna Personalizada → fórmula Duration.Days([DataEntrega]-[DataPedido])'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Adicionar Coluna → Coluna Personalizada → fórmula Duration.Days([DataEntrega]-[DataPedido]) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Transformação Avançada.",
+      "respostaCerta": "Adicionar Coluna → Coluna Personalizada → fórmula Duration.Days([DataEntrega]-[DataPedido]) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Transformação Avançada.",
       "cascasDeBanana": [
-        "Transformar → Coluna de Data → Diferença entre Datas → Dias: Incorreto, pois alternativa inválida.",
-        "Adicionar Coluna → Data → Subtrair Datas → Dias: Incorreto, pois alternativa inválida.",
-        "Transformar → Calcular → Diferença de Datas com unidade Dias: Incorreto, pois alternativa inválida."
+        "Transformar → Coluna de Data → Diferença entre Datas → Dias: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Adicionar Coluna → Data → Subtrair Datas → Dias: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Transformar → Calcular → Diferença de Datas com unidade Dias: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Transformação Avançada, associe mentalmente a funcionalidade correta 'Adicionar Coluna → Coluna Personalizada → fórmula Duration.Days'."
     }
@@ -4462,14 +4462,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Subtotais Avançados (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Subtotais Avançados (Nível avancado).",
       "papoReto": "No contexto de Subtotais Avançados, a alternativa correta é 'SUBTOTAL (SUBTOTAL) com o código de função adequado'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "SUBTOTAL (SUBTOTAL) com o código de função adequado — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Subtotais Avançados.",
+      "respostaCerta": "SUBTOTAL (SUBTOTAL) com o código de função adequado — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Subtotais Avançados.",
       "cascasDeBanana": [
-        "SOMA com intervalo filtrado manualmente: Incorreto, pois alternativa inválida.",
-        "SOMASE com critério de visibilidade: Incorreto, pois alternativa inválida.",
-        "AGREGAR: Incorreto, pois alternativa inválida."
+        "SOMA com intervalo filtrado manualmente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "SOMASE com critério de visibilidade: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "AGREGAR: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Subtotais Avançados, associe mentalmente a funcionalidade correta 'SUBTOTAL'."
     }
@@ -4487,14 +4487,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Subtotais Avançados (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Subtotais Avançados (Nível avancado).",
       "papoReto": "No contexto de Subtotais Avançados, a alternativa correta é 'AGREGAR oferece mais funções que SUBTOTAL e permite ignorar além de linhas ocultas também erros e linhas filtradas com opções mais granulares de controle'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "AGREGAR oferece mais funções que SUBTOTAL e permite ignorar além de linhas ocultas também erros e linhas filtradas com opções mais granulares de controle — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Subtotais Avançados.",
+      "respostaCerta": "AGREGAR oferece mais funções que SUBTOTAL e permite ignorar além de linhas ocultas também erros e linhas filtradas com opções mais granulares de controle — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Subtotais Avançados.",
       "cascasDeBanana": [
-        "SUBTOTAL suporta mais tipos de cálculo que AGREGAR: Incorreto, pois alternativa inválida.",
-        "AGREGAR funciona apenas com Tabelas do Excel enquanto SUBTOTAL funciona com qualquer intervalo: Incorreto, pois alternativa inválida.",
-        "Não há diferença funcional entre as duas funções: Incorreto, pois alternativa inválida."
+        "SUBTOTAL suporta mais tipos de cálculo que AGREGAR: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "AGREGAR funciona apenas com Tabelas do Excel enquanto SUBTOTAL funciona com qualquer intervalo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não há diferença funcional entre as duas funções: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Subtotais Avançados, associe mentalmente a funcionalidade correta 'AGREGAR oferece mais funções que SUBTOTAL e permite ignorar além de linhas ocultas também erros e linhas filtradas com opções mais granulares de controle'."
     }
@@ -4512,14 +4512,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Pesquisa (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Pesquisa (Nível avancado).",
       "papoReto": "No contexto de Funções de Pesquisa, a alternativa correta é '=ENDEREÇO(CORRESP(valor;intervalo;0)+LINHA(intervalo)-1;COLUNA(intervalo))'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=ENDEREÇO(CORRESP(valor;intervalo;0)+LINHA(intervalo)-1;COLUNA(intervalo)) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Pesquisa.",
+      "respostaCerta": "=ENDEREÇO(CORRESP(valor;intervalo;0)+LINHA(intervalo)-1;COLUNA(intervalo)) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Pesquisa.",
       "cascasDeBanana": [
-        "=CÉLULA: Incorreto, pois alternativa inválida.",
-        "=PROCV: Incorreto, pois alternativa inválida.",
-        "Ambas A e B são abordagens válidas: Incorreto, pois alternativa inválida."
+        "=CÉLULA: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=PROCV: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e B são abordagens válidas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Pesquisa, associe mentalmente a funcionalidade correta '=ENDEREÇO'."
     }
@@ -4537,14 +4537,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Nomes Definidos Avançados (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Nomes Definidos Avançados (Nível avancado).",
       "papoReto": "No contexto de Nomes Definidos Avançados, a alternativa correta é '=ÍNDICE(Plan1!$A:$A;CONT.VALORES(Plan1!$A:$A))'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=ÍNDICE(Plan1!$A:$A;CONT.VALORES(Plan1!$A:$A)) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Nomes Definidos Avançados.",
+      "respostaCerta": "=ÍNDICE(Plan1!$A:$A;CONT.VALORES(Plan1!$A:$A)) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Nomes Definidos Avançados.",
       "cascasDeBanana": [
-        "=DESLOC: Incorreto, pois alternativa inválida.",
-        "=PROCX: Incorreto, pois alternativa inválida.",
-        "Ambas A e B são abordagens válidas: Incorreto, pois alternativa inválida."
+        "=DESLOC: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=PROCX: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e B são abordagens válidas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Nomes Definidos Avançados, associe mentalmente a funcionalidade correta '=ÍNDICE'."
     }
@@ -4562,14 +4562,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Importação de Dados (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Importação de Dados (Nível intermediario).",
       "papoReto": "No contexto de Importação de Dados, a alternativa correta é 'Dados → Obter Dados → De Arquivo → De Texto/CSV → selecionar o arquivo → configurar delimitador e codificação no Power Query antes de carregar'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Obter Dados → De Arquivo → De Texto/CSV → selecionar o arquivo → configurar delimitador e codificação no Power Query antes de carregar — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Importação de Dados.",
+      "respostaCerta": "Dados → Obter Dados → De Arquivo → De Texto/CSV → selecionar o arquivo → configurar delimitador e codificação no Power Query antes de carregar — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Importação de Dados.",
       "cascasDeBanana": [
-        "Abrir o arquivo CSV diretamente pelo Excel clicando duas vezes: Incorreto, pois alternativa inválida.",
-        "Renomear o arquivo para .txt e usar o Assistente de Importação de Texto: Incorreto, pois alternativa inválida.",
-        "Usar Arquivo → Abrir → Todos os Arquivos → selecionar o CSV e configurar na importação: Incorreto, pois alternativa inválida."
+        "Abrir o arquivo CSV diretamente pelo Excel clicando duas vezes: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Renomear o arquivo para .txt e usar o Assistente de Importação de Texto: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Arquivo → Abrir → Todos os Arquivos → selecionar o CSV e configurar na importação: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Importação de Dados, associe mentalmente a funcionalidade correta 'Dados → Obter Dados → De Arquivo → De Texto/CSV → selecionar o arquivo → configurar delimitador e codificação no Power Query antes de carregar'."
     }
@@ -4587,14 +4587,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Texto (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Texto (Nível avancado).",
       "papoReto": "No contexto de Funções de Texto, a alternativa correta é '=NÚM.CARACT(ARRUMAR(A1))-NÚM.CARACT(SUBSTITUIR(ARRUMAR(A1);\" \";\"\"))+1'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=NÚM.CARACT(ARRUMAR(A1))-NÚM.CARACT(SUBSTITUIR(ARRUMAR(A1);\" \";\"\"))+1 — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Texto.",
+      "respostaCerta": "=NÚM.CARACT(ARRUMAR(A1))-NÚM.CARACT(SUBSTITUIR(ARRUMAR(A1);\" \";\"\"))+1 — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Texto.",
       "cascasDeBanana": [
-        "=CONT.PALAVRAS: Incorreto, pois alternativa inválida.",
-        "=NÚM.CARACT: Incorreto, pois alternativa inválida.",
-        "=CONT.SE: Incorreto, pois alternativa inválida."
+        "=CONT.PALAVRAS: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=NÚM.CARACT: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=CONT.SE: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Texto, associe mentalmente a funcionalidade correta '=NÚM.CARACT'."
     }
@@ -4612,14 +4612,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Validação de Dados (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Validação de Dados (Nível avancado).",
       "papoReto": "No contexto de Validação de Dados, a alternativa correta é 'Dados → Validação de Dados → guia Mensagem de Entrada → marcar \"Mostrar mensagem de entrada ao selecionar célula\" → digitar o título e a mensagem'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Validação de Dados → guia Mensagem de Entrada → marcar \"Mostrar mensagem de entrada ao selecionar célula\" → digitar o título e a mensagem — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Validação de Dados.",
+      "respostaCerta": "Dados → Validação de Dados → guia Mensagem de Entrada → marcar \"Mostrar mensagem de entrada ao selecionar célula\" → digitar o título e a mensagem — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Validação de Dados.",
       "cascasDeBanana": [
-        "Inserir → Comentário → vincular à célula de validação: Incorreto, pois alternativa inválida.",
-        "Dados → Validação de Dados → guia Alerta de Erro → configurar mensagem de orientação: Incorreto, pois alternativa inválida.",
-        "Revisão → Comentários → Mostrar ao Selecionar Célula com Validação: Incorreto, pois alternativa inválida."
+        "Inserir → Comentário → vincular à célula de validação: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Dados → Validação de Dados → guia Alerta de Erro → configurar mensagem de orientação: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Revisão → Comentários → Mostrar ao Selecionar Célula com Validação: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Validação de Dados, associe mentalmente a funcionalidade correta 'Dados → Validação de Dados → guia Mensagem de Entrada → marcar \"Mostrar mensagem de entrada ao selecionar célula\" → digitar o título e a mensagem'."
     }
@@ -4637,14 +4637,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Macros VBA (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Macros VBA (Nível avancado).",
       "papoReto": "No contexto de Macros VBA, a alternativa correta é 'Loop For Each ws In ThisWorkbook.Worksheets seguido de ws.Protect Password:=\"senha123\" dentro do loop'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Loop For Each ws In ThisWorkbook.Worksheets seguido de ws.Protect Password:=\"senha123\" dentro do loop — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Macros VBA.",
+      "respostaCerta": "Loop For Each ws In ThisWorkbook.Worksheets seguido de ws.Protect Password:=\"senha123\" dentro do loop — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Macros VBA.",
       "cascasDeBanana": [
-        "Loop For i = 1 To ActiveWorkbook.Sheets.Count com Sheets: Incorreto, pois alternativa inválida.",
-        "Usar ActiveWorkbook.Protect com argumento Structure para proteger todas as planilhas simultaneamente: Incorreto, pois alternativa inválida.",
-        "Criar uma macro separada para cada planilha e executá-las sequencialmente: Incorreto, pois alternativa inválida."
+        "Loop For i = 1 To ActiveWorkbook.Sheets.Count com Sheets: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar ActiveWorkbook.Protect com argumento Structure para proteger todas as planilhas simultaneamente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Criar uma macro separada para cada planilha e executá-las sequencialmente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Macros VBA, associe mentalmente a funcionalidade correta 'Loop For Each ws In ThisWorkbook.Worksheets seguido de ws.Protect Password:=\"senha123\" dentro do loop'."
     }
@@ -4662,14 +4662,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Tabelas Dinâmicas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Formatação Avançada (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Tabelas Dinâmicas, subtema Formatação Avançada (Nível avancado).",
       "papoReto": "No contexto de Formatação Avançada, a alternativa correta é 'Ao aplicar a Formatação Condicional selecionar a opção \"Todas as células que mostram valores de [campo]\" em vez de um intervalo fixo'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Ao aplicar a Formatação Condicional selecionar a opção \"Todas as células que mostram valores de [campo]\" em vez de um intervalo fixo — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Formatação Avançada.",
+      "respostaCerta": "Ao aplicar a Formatação Condicional selecionar a opção \"Todas as células que mostram valores de [campo]\" em vez de um intervalo fixo — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Formatação Avançada.",
       "cascasDeBanana": [
-        "Aplicar a Formatação Condicional após cada atualização da Tabela Dinâmica: Incorreto, pois alternativa inválida.",
-        "Converter a Tabela Dinâmica em valores estáticos antes de aplicar a Formatação Condicional: Incorreto, pois alternativa inválida.",
-        "Usar macro VBA para reaplicar a Formatação Condicional após cada atualização: Incorreto, pois alternativa inválida."
+        "Aplicar a Formatação Condicional após cada atualização da Tabela Dinâmica: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Converter a Tabela Dinâmica em valores estáticos antes de aplicar a Formatação Condicional: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar macro VBA para reaplicar a Formatação Condicional após cada atualização: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Formatação Avançada, associe mentalmente a funcionalidade correta 'Ao aplicar a Formatação Condicional selecionar a opção \"Todas as células que mostram valores de [campo]\" em vez de um intervalo fixo'."
     }
@@ -4687,14 +4687,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Linguagem M Avançada (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Linguagem M Avançada (Nível avancado).",
       "papoReto": "No contexto de Linguagem M Avançada, a alternativa correta é 'Criar uma função com let e Text.Select combinado com List.Select e Character.IsUpper para filtrar apenas caracteres maiúsculos'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Criar uma função com let e Text.Select combinado com List.Select e Character.IsUpper para filtrar apenas caracteres maiúsculos — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Linguagem M Avançada.",
+      "respostaCerta": "Criar uma função com let e Text.Select combinado com List.Select e Character.IsUpper para filtrar apenas caracteres maiúsculos — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Linguagem M Avançada.",
       "cascasDeBanana": [
-        "Usar Text.Upper para converter todo o texto em maiúsculas: Incorreto, pois alternativa inválida.",
-        "Usar Text.Remove com lista de caracteres minúsculos para remover as letras minúsculas: Incorreto, pois alternativa inválida.",
-        "Usar Text.Split e filtrar os caracteres com condição de maiúscula: Incorreto, pois alternativa inválida."
+        "Usar Text.Upper para converter todo o texto em maiúsculas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Text.Remove com lista de caracteres minúsculos para remover as letras minúsculas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Text.Split e filtrar os caracteres com condição de maiúscula: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Linguagem M Avançada, associe mentalmente a funcionalidade correta 'Criar uma função com let e Text.Select combinado com List.Select e Character.IsUpper para filtrar apenas caracteres maiúsculos'."
     }
@@ -4712,14 +4712,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Gráficos Avançados (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Gráficos Avançados (Nível avancado).",
       "papoReto": "No contexto de Gráficos Avançados, a alternativa correta é 'Inserir → Gráficos → Inserir Gráfico Estatístico → Histograma → Pareto'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Inserir → Gráficos → Inserir Gráfico Estatístico → Histograma → Pareto — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Gráficos Avançados.",
+      "respostaCerta": "Inserir → Gráficos → Inserir Gráfico Estatístico → Histograma → Pareto — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Gráficos Avançados.",
       "cascasDeBanana": [
-        "Inserir → Gráficos → Combinação → configurar barras decrescentes e linha de percentual acumulado manualmente: Incorreto, pois alternativa inválida.",
-        "Não é possível criar gráfico de Pareto nativamente; requer configuração manual com gráfico de combinação: Incorreto, pois alternativa inválida.",
-        "Inserir → Gráficos → Estatístico → Pareto com linha de Lorenz: Incorreto, pois alternativa inválida."
+        "Inserir → Gráficos → Combinação → configurar barras decrescentes e linha de percentual acumulado manualmente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Não é possível criar gráfico de Pareto nativamente; requer configuração manual com gráfico de combinação: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Inserir → Gráficos → Estatístico → Pareto com linha de Lorenz: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Gráficos Avançados, associe mentalmente a funcionalidade correta 'Inserir → Gráficos → Inserir Gráfico Estatístico → Histograma → Pareto'."
     }
@@ -4737,14 +4737,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Array Dinâmico (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Array Dinâmico (Nível avancado).",
       "papoReto": "No contexto de Funções de Array Dinâmico, a alternativa correta é '=CLASSIFICAR(ÚNICO(intervalo))'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=CLASSIFICAR(ÚNICO(intervalo)) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Array Dinâmico.",
+      "respostaCerta": "=CLASSIFICAR(ÚNICO(intervalo)) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Array Dinâmico.",
       "cascasDeBanana": [
-        "=ÚNICO: Incorreto, pois alternativa inválida.",
-        "=FILTRO: Incorreto, pois alternativa inválida.",
-        "Ambas A e B produzem o mesmo resultado quando o intervalo não tem erros: Incorreto, pois alternativa inválida."
+        "=ÚNICO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=FILTRO: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e B produzem o mesmo resultado quando o intervalo não tem erros: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Array Dinâmico, associe mentalmente a funcionalidade correta '=CLASSIFICAR'."
     }
@@ -4762,14 +4762,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Auditoria (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Auditoria (Nível avancado).",
       "papoReto": "No contexto de Auditoria, a alternativa correta é 'Ativar Fórmulas → Mostrar Fórmulas (Ctrl+`) → copiar a planilha para um novo documento → desativar o modo de exibição de fórmulas'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Ativar Fórmulas → Mostrar Fórmulas (Ctrl+`) → copiar a planilha para um novo documento → desativar o modo de exibição de fórmulas — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Auditoria.",
+      "respostaCerta": "Ativar Fórmulas → Mostrar Fórmulas (Ctrl+`) → copiar a planilha para um novo documento → desativar o modo de exibição de fórmulas — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Auditoria.",
       "cascasDeBanana": [
-        "Usar macro VBA para iterar por cada célula com fórmula e listar o endereço e a fórmula em uma planilha de relatório: Incorreto, pois alternativa inválida.",
-        "Usar Fórmulas → Rastrear Precedentes em cada célula e documentar manualmente: Incorreto, pois alternativa inválida.",
-        "Exportar a planilha como CSV que converte automaticamente fórmulas em texto: Incorreto, pois alternativa inválida."
+        "Usar macro VBA para iterar por cada célula com fórmula e listar o endereço e a fórmula em uma planilha de relatório: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar Fórmulas → Rastrear Precedentes em cada célula e documentar manualmente: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Exportar a planilha como CSV que converte automaticamente fórmulas em texto: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Auditoria, associe mentalmente a funcionalidade correta 'Ativar Fórmulas → Mostrar Fórmulas'."
     }
@@ -4787,14 +4787,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Power Pivot DAX (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Power Pivot DAX (Nível avancado).",
       "papoReto": "No contexto de Power Pivot DAX, a alternativa correta é 'ALL() para remover os filtros do contexto e calcular o total geral no denominador da divisão'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "ALL() para remover os filtros do contexto e calcular o total geral no denominador da divisão — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Power Pivot DAX.",
+      "respostaCerta": "ALL() para remover os filtros do contexto e calcular o total geral no denominador da divisão — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Power Pivot DAX.",
       "cascasDeBanana": [
-        "CALCULATE: Incorreto, pois alternativa inválida.",
-        "TOTALYTD: Incorreto, pois alternativa inválida.",
-        "RELATED: Incorreto, pois alternativa inválida."
+        "CALCULATE: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "TOTALYTD: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "RELATED: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Power Pivot DAX, associe mentalmente a funcionalidade correta 'ALL'."
     }
@@ -4812,14 +4812,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Power Pivot DAX (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Power Pivot DAX (Nível avancado).",
       "papoReto": "No contexto de Power Pivot DAX, a alternativa correta é 'TOTALYTD([Total Vendas];Calendario[Data])'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "TOTALYTD([Total Vendas];Calendario[Data]) — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Power Pivot DAX.",
+      "respostaCerta": "TOTALYTD([Total Vendas];Calendario[Data]) — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Power Pivot DAX.",
       "cascasDeBanana": [
-        "CALCULATE: Incorreto, pois alternativa inválida.",
-        "Ambas A e B produzem o mesmo resultado sendo igualmente válidas: Incorreto, pois alternativa inválida.",
-        "SUMX: Incorreto, pois alternativa inválida."
+        "CALCULATE: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e B produzem o mesmo resultado sendo igualmente válidas: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "SUMX: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Power Pivot DAX, associe mentalmente a funcionalidade correta 'TOTALYTD'."
     }
@@ -4837,14 +4837,14 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Exportação (Nível intermediario).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Exportação (Nível intermediario).",
       "papoReto": "No contexto de Exportação, a alternativa correta é 'Clicar com o botão direito na aba da planilha → Mover ou Copiar → Nova Pasta de Trabalho → marcar Criar uma Cópia → salvar o novo arquivo'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Clicar com o botão direito na aba da planilha → Mover ou Copiar → Nova Pasta de Trabalho → marcar Criar uma Cópia → salvar o novo arquivo — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Exportação.",
+      "respostaCerta": "Clicar com o botão direito na aba da planilha → Mover ou Copiar → Nova Pasta de Trabalho → marcar Criar uma Cópia → salvar o novo arquivo — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Exportação.",
       "cascasDeBanana": [
-        "Selecionar toda a planilha → Copiar → Arquivo → Nova Pasta de Trabalho → Colar Especial → Valores: Incorreto, pois alternativa inválida.",
-        "Arquivo → Exportar → Planilha Específica → selecionar a planilha e salvar: Incorreto, pois alternativa inválida.",
-        "Usar macro VBA para copiar a planilha para um novo arquivo e salvar: Incorreto, pois alternativa inválida."
+        "Selecionar toda a planilha → Copiar → Arquivo → Nova Pasta de Trabalho → Colar Especial → Valores: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Arquivo → Exportar → Planilha Específica → selecionar a planilha e salvar: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar macro VBA para copiar a planilha para um novo arquivo e salvar: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Exportação, associe mentalmente a funcionalidade correta 'Clicar com o botão direito na aba da planilha → Mover ou Copiar → Nova Pasta de Trabalho → marcar Criar uma Cópia → salvar o novo arquivo'."
     }
@@ -4862,14 +4862,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Fórmulas Avançadas",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Lookup (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Fórmulas Avançadas, subtema Funções de Lookup (Nível avancado).",
       "papoReto": "No contexto de Funções de Lookup, a alternativa correta é '=PROCX(ValorLinha;ColunaCabeçalho;PROCX(ValorColuna;LinhaCabeçalho;MatrizDados)) aninhando dois PROCX'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "=PROCX(ValorLinha;ColunaCabeçalho;PROCX(ValorColuna;LinhaCabeçalho;MatrizDados)) aninhando dois PROCX — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Funções de Lookup.",
+      "respostaCerta": "=PROCX(ValorLinha;ColunaCabeçalho;PROCX(ValorColuna;LinhaCabeçalho;MatrizDados)) aninhando dois PROCX — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Funções de Lookup.",
       "cascasDeBanana": [
-        "=ÍNDICE: Incorreto, pois alternativa inválida.",
-        "Ambas A e B são abordagens válidas para pesquisa bidirecional: Incorreto, pois alternativa inválida.",
-        "=PROCX: Incorreto, pois alternativa inválida."
+        "=ÍNDICE: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e B são abordagens válidas para pesquisa bidirecional: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "=PROCX: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Funções de Lookup, associe mentalmente a funcionalidade correta '=PROCX'."
     }
@@ -4887,14 +4887,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Importação Avançada (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Importação Avançada (Nível avancado).",
       "papoReto": "No contexto de Importação Avançada, a alternativa correta é 'Dados → Obter Dados → De Outras Fontes → Da Web → inserir a URL da API e usar o Power Query para transformar o JSON em tabela'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dados → Obter Dados → De Outras Fontes → Da Web → inserir a URL da API e usar o Power Query para transformar o JSON em tabela — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Importação Avançada.",
+      "respostaCerta": "Dados → Obter Dados → De Outras Fontes → Da Web → inserir a URL da API e usar o Power Query para transformar o JSON em tabela — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Importação Avançada.",
       "cascasDeBanana": [
-        "Copiar o JSON manualmente e usar Dados → Texto para Colunas para parsear: Incorreto, pois alternativa inválida.",
-        "Usar macro VBA com objeto XMLHttp para chamar a API e parsear o JSON: Incorreto, pois alternativa inválida.",
-        "Ambas A e C são abordagens válidas sendo Power Query mais recomendada para atualizações recorrentes: Incorreto, pois alternativa inválida."
+        "Copiar o JSON manualmente e usar Dados → Texto para Colunas para parsear: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar macro VBA com objeto XMLHttp para chamar a API e parsear o JSON: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e C são abordagens válidas sendo Power Query mais recomendada para atualizações recorrentes: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Importação Avançada, associe mentalmente a funcionalidade correta 'Dados → Obter Dados → De Outras Fontes → Da Web → inserir a URL da API e usar o Power Query para transformar o JSON em tabela'."
     }
@@ -4912,14 +4912,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Macros VBA (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Macros VBA (Nível avancado).",
       "papoReto": "No contexto de Macros VBA, a alternativa correta é 'Cells(Rows.Count;\"A\").End(xlUp).Row + 1 para encontrar a última linha preenchida e adicionar 1'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Cells(Rows.Count;\"A\").End(xlUp).Row + 1 para encontrar a última linha preenchida e adicionar 1 — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Macros VBA.",
+      "respostaCerta": "Cells(Rows.Count;\"A\").End(xlUp).Row + 1 para encontrar a última linha preenchida e adicionar 1 — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Macros VBA.",
       "cascasDeBanana": [
-        "ActiveSheet.UsedRange.Rows.Count + 1: Incorreto, pois alternativa inválida.",
-        "Range: Incorreto, pois alternativa inválida.",
-        "ActiveCell.Row + 1 após selecionar a última célula: Incorreto, pois alternativa inválida."
+        "ActiveSheet.UsedRange.Rows.Count + 1: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Range: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "ActiveCell.Row + 1 após selecionar a última célula: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Macros VBA, associe mentalmente a funcionalidade correta 'Cells'."
     }
@@ -4937,14 +4937,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Análise de Dados",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Análise de Dados, subtema Análise de Hipóteses (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Análise de Dados, subtema Análise de Hipóteses (Nível avancado).",
       "papoReto": "No contexto de Análise de Hipóteses, a alternativa correta é 'Fórmulas → Opções de Cálculo → Automático Exceto para Tabelas de Dados → calcular as tabelas manualmente com F9'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Fórmulas → Opções de Cálculo → Automático Exceto para Tabelas de Dados → calcular as tabelas manualmente com F9 — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Análise de Hipóteses.",
+      "respostaCerta": "Fórmulas → Opções de Cálculo → Automático Exceto para Tabelas de Dados → calcular as tabelas manualmente com F9 — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Análise de Hipóteses.",
       "cascasDeBanana": [
-        "Reduzir o tamanho da Tabela de Dados diminuindo o número de variáveis: Incorreto, pois alternativa inválida.",
-        "Converter a Tabela de Dados em valores estáticos após calcular: Incorreto, pois alternativa inválida.",
-        "Mover a Tabela de Dados para uma planilha separada com cálculo manual: Incorreto, pois alternativa inválida."
+        "Reduzir o tamanho da Tabela de Dados diminuindo o número de variáveis: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Converter a Tabela de Dados em valores estáticos após calcular: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Mover a Tabela de Dados para uma planilha separada com cálculo manual: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Análise de Hipóteses, associe mentalmente a funcionalidade correta 'Fórmulas → Opções de Cálculo → Automático Exceto para Tabelas de Dados → calcular as tabelas manualmente com F9'."
     }
@@ -4962,14 +4962,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Power Query",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Power Query, subtema Boas Práticas (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Power Query, subtema Boas Práticas (Nível avancado).",
       "papoReto": "No contexto de Boas Práticas, a alternativa correta é 'Dividir a consulta em múltiplas consultas intermediárias com nomes descritivos desabilitando o carregamento das intermediárias e usando apenas a consulta final'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Dividir a consulta em múltiplas consultas intermediárias com nomes descritivos desabilitando o carregamento das intermediárias e usando apenas a consulta final — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Boas Práticas.",
+      "respostaCerta": "Dividir a consulta em múltiplas consultas intermediárias com nomes descritivos desabilitando o carregamento das intermediárias e usando apenas a consulta final — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Boas Práticas.",
       "cascasDeBanana": [
-        "Consolidar todas as etapas em uma única fórmula M no Editor Avançado: Incorreto, pois alternativa inválida.",
-        "Documentar as etapas em comentários no código M usando // para cada linha: Incorreto, pois alternativa inválida.",
-        "Ambas A e C são boas práticas complementares: Incorreto, pois alternativa inválida."
+        "Consolidar todas as etapas em uma única fórmula M no Editor Avançado: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Documentar as etapas em comentários no código M usando // para cada linha: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Ambas A e C são boas práticas complementares: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Boas Práticas, associe mentalmente a funcionalidade correta 'Dividir a consulta em múltiplas consultas intermediárias com nomes descritivos desabilitando o carregamento das intermediárias e usando apenas a consulta final'."
     }
@@ -4987,14 +4987,14 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Gerenciar Pastas de Trabalho",
     "explanation": {
-      "intro": "Conceito-chave para a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Segurança Avançada (Nível avancado).",
+      "intro": "Esta questão avalia conhecimentos sobre a certificação MO-201 — domínio Gerenciar Pastas de Trabalho, subtema Segurança Avançada (Nível avancado).",
       "papoReto": "No contexto de Segurança Avançada, a alternativa correta é 'Usar senhas longas e complexas separadas para abertura e modificação via Arquivo → Salvar Como → Ferramentas → Opções Gerais sendo que o Excel 365 usa criptografia AES-256 para proteção de abertura'. As demais opções apresentam configurações incorretas, limitações inexistentes ou não atendem ao cenário do enunciado.",
-      "respostaCerta": "Usar senhas longas e complexas separadas para abertura e modificação via Arquivo → Salvar Como → Ferramentas → Opções Gerais sendo que o Excel 365 usa criptografia AES-256 para proteção de abertura — essa opção responde adequadamente ao cenário.",
-      "puloDoGato": "Distratores plausíveis para a configuração de Segurança Avançada.",
+      "respostaCerta": "Usar senhas longas e complexas separadas para abertura e modificação via Arquivo → Salvar Como → Ferramentas → Opções Gerais sendo que o Excel 365 usa criptografia AES-256 para proteção de abertura — essa opção atende perfeitamente ao que foi solicitado no enunciado.",
+      "puloDoGato": "Cuidado com os distratores que parecem corretos mas introduzem termos ou caminhos incorretos para a configuração de Segurança Avançada.",
       "cascasDeBanana": [
-        "Usar apenas a proteção de planilha com senha simples pois é suficiente para uso corporativo: Incorreto, pois alternativa inválida.",
-        "Salvar no formato .xlsb que tem criptografia nativa mais forte que o .xlsx: Incorreto, pois alternativa inválida.",
-        "Usar o recurso Marcar como Final que impede qualquer modificação sem necessidade de senha: Incorreto, pois alternativa inválida."
+        "Usar apenas a proteção de planilha com senha simples pois é suficiente para uso corporativo: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Salvar no formato .xlsb que tem criptografia nativa mais forte que o .xlsx: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade.",
+        "Usar o recurso Marcar como Final que impede qualquer modificação sem necessidade de senha: Incorreto, pois não é a opção correta para resolver o problema apresentado ou não existe com essa finalidade."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Segurança Avançada, associe mentalmente a funcionalidade correta 'Usar senhas longas e complexas separadas para abertura e modificação via Arquivo → Salvar Como → Ferramentas → Opções Gerais sendo que o Excel 365 usa criptografia AES-256 para proteção de abertura'."
     }

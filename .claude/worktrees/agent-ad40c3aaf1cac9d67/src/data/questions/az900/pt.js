@@ -88,7 +88,7 @@ export const questions = [
       "intro": "A alta disponibilidade garante que seus sistemas permaneçam acessíveis mesmo quando falhas de hardware ou software acontecem.",
       "papoReto": "Alta Disponibilidade (High Availability) tem a ver com UPTIME. Significa que o seu aplicativo continua funcionando mesmo se um servidor físico queimar ou se um switch de rede falhar no datacenter, garantindo SLAs altíssimos (como 99,99%).",
       "respostaCerta": "Capacidade de permanecer operacional apesar de falhas, mantendo o sistema no ar para os usuários com o mínimo de interrupção.",
-      "puloDoGato": "Lembre-se: Alta Disponibilidade = SLA, Uptime, proteção contra falhas locais de hardware. Não confunda com escalabilidade (aumentar tamanho) ou elasticidade (crescer dinamicamente).",
+      "puloDoGato": "Memorize: Alta Disponibilidade = SLA, Uptime, proteção contra falhas locais de hardware. Não confunda com escalabilidade (aumentar tamanho) ou elasticidade (crescer dinamicamente).",
       "cascasDeBanana": [
         "Capacidade de aumentar recursos sob demanda: Isso é Escalabilidade.",
         "Capacidade de reduzir latência para o usuário final: Isso é distribuição geográfica global (Edge Locations, CDN).",
@@ -1188,7 +1188,7 @@ export const questions = [
       "intro": "Os conjuntos de disponibilidade oferecem resiliência contra eventos destrutivos físicos ou lógicos no nível do rack de datacenters.",
       "papoReto": "Um Availability Set (Conjunto de Disponibilidade) protege suas aplicações dividindo suas VMs entre múltiplos racks físicos e hosts locais. Ele usa duas categorias inteligentes: Fault Domains (separa as VMs em racks com energia e rede físicas independentes) e Update Domains (garante que apenas uma VM do conjunto seja atualizada e reiniciada pela Microsoft por vez).",
       "respostaCerta": "Proteger VMs contra falhas de hardware físico locais de hosts e manutenções preventivas programadas dentro do mesmo datacenter.",
-      "puloDoGato": "Lembre-se: Availability Set = Proteção local DENTRO de um datacenter (Fault & Update Domains). Availability Zone = Proteção regional entre DATACENTERS diferentes.",
+      "puloDoGato": "Memorize: Availability Set = Proteção local DENTRO de um datacenter (Fault & Update Domains). Availability Zone = Proteção regional entre DATACENTERS diferentes.",
       "cascasDeBanana": [
         "Replicar dados entre regiões: Função de georredundância ou Azure Site Recovery, não de sets locais de VM.",
         "Containers serverless: ACI é serverless de fábrica e não usa infraestrutura de sets visível pelo cliente.",
@@ -1388,7 +1388,7 @@ export const questions = [
       "intro": "A otimização financeira de longo prazo na nuvem permite que organizações obtenham descontos profundos em troca de previsibilidade de consumo.",
       "papoReto": "Se a sua empresa sabe que vai rodar um servidor de banco de dados pelos próximos anos sem desligá-lo, pagar no modelo Pay-as-you-go é um desperdício. Com as Instâncias Reservadas (Reserved Instances - RI), você assume um compromisso com a Microsoft de usar e pagar por aquela VM por um período contratual fixo de 1 ou 3 anos. Em troca, a Microsoft concede um desconto massivo que pode chegar a 72%!",
       "respostaCerta": "Garantir descontos expressivos de custos mensais em troca de compromisso contratual de consumo por 1 ou 3 anos de VMs.",
-      "puloDoGato": "Lembre-se: Instâncias Reservadas = Desconto financeiro massivo + Compromisso de longo prazo (1 ou 3 anos). Ótimo para sistemas estáveis e previsíveis.",
+      "puloDoGato": "Memorize: Instâncias Reservadas = Desconto financeiro massivo + Compromisso de longo prazo (1 ou 3 anos). Ótimo para sistemas estáveis e previsíveis.",
       "cascasDeBanana": [
         "Eliminar custos de storage: O desconto das reservas aplica-se estritamente à capacidade de computação (CPU/RAM), o armazenamento em disco virtual continua sendo cobrado normalmente.",
         "Garantir latência zero: As reservas de capacidade não alteram o desempenho físico de rede ou latência de roteamento.",

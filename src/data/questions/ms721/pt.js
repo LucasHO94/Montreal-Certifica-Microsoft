@@ -142,9 +142,9 @@ export const questions = [
       "respostaCerta": "Estar na lista de SBCs certificados Microsoft, ter FQDN público com certificado TLS válido, suportar SIP TLS na porta 5061 e SRTP para mídia, e ter conectividade com os IPs do Microsoft 365 — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "H.323 é protocolo legacy obsoleto, Teams usa SIP TLS — H.323 não se integra ao Teams Phone",
-        "Ser um dispositivo físico Cisco ou AudioCodes com firmware m... não é solução adequada para Teams Phone neste contexto",
-        "Estar hospedado no Azure com IP estático, porta 443 aberta e... não é solução adequada para Teams Phone neste contexto"
+        "H.323 is a legacy protocol — Teams Phone requires SIP TLS for Direct Routing; H.323 cannot integrate with modern Teams phone infrastructure",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "Self-signed certificates don't pass Teams validation — Direct Routing requires certificates from trusted Certificate Authorities with proper FQDN validation"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -167,9 +167,9 @@ export const questions = [
       "respostaCerta": "Certificado público emitido por uma Autoridade Certificadora (CA) confiável, com o FQDN do SBC no campo Subject Name ou Subject Alternative Name — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Certificado autoassinado não passa validação Teams — exige CA pública confiável",
-        "Certificado wildcard emitido pelo Azure Key Vault associado ... não é solução adequada para Teams Phone neste contexto",
-        "Certificado PKI interno da organização desde que o root CA e... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -192,9 +192,9 @@ export const questions = [
       "respostaCerta": "1) New-CsOnlinePSTNGateway (registrar SBC); 2) New-CsOnlineVoiceRoutingPolicy (criar política); 3) New-CsOnlinePSTNUsage (criar uso PSTN); 4) New-CsOnlineVoiceRoute (criar rota); 5) Grant-CsOnlineVoiceRoutingPolicy (atribuir ao usuário) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "1) Set-CsOnlinePSTNGateway; 2) New-CsOnlineVoiceRo... não é solução adequada Teams Phone neste contexto",
-        "1) New-CsSipTrunk; 2) New-CsVoiceNormalizationRule... não é solução adequada Teams Phone neste contexto",
-        "1) Add-CsDirectRoutingGateway; 2) Set-CsVoicePolic... não é solução adequada Teams Phone neste contexto"
+        "Set-CsOnlinePSTNGateway is used to update existing gateways, not register new ones — New-CsOnlinePSTNGateway is required for initial SBC registration in Direct Routing",
+        "New-CsSipTrunk is a Skype for Business Online cmdlet, not Teams — Teams uses New-CsOnlinePSTNGateway for Direct Routing SBC registration",
+        "Add-CsDirectRoutingGateway does not exist in Teams Online cmdlets — the correct cmdlet is New-CsOnlinePSTNGateway for SBC registration"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -217,9 +217,9 @@ export const questions = [
       "respostaCerta": "Health Dashboard for Direct Routing no Teams Admin Center — exibe status do SBC, latência média, erros SIP e histórico de conectividade — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Azure Monitor com workspace Log Analytics configur... não é solução adequada Teams Phone neste contexto",
-        "Microsoft Sentinel com conector de dados do Teams ... não é solução adequada Teams Phone neste contexto",
-        "Call Quality Dashboard (CQD) com filtro de chamada... não é solução adequada Teams Phone neste contexto"
+        "Azure Monitor with Log Analytics is for general Azure infrastructure monitoring, not Teams Phone health — it doesn't display SBC connection status or SIP errors",
+        "Microsoft Sentinel is a security/SIEM tool, not a phone system monitoring dashboard — it's not designed for tracking SBC connectivity or voice quality",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -242,9 +242,9 @@ export const questions = [
       "respostaCerta": "Um Dial Plan contém regras de normalização que convertem números discados em formatos E.164; é atribuído a usuários via política de dial plan (Grant-CsDialPlan) ou herdado do dial plan do serviço/tenant — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Um Dial Plan especifica os destinos PSTN permitido... não é solução adequada Teams Phone neste contexto",
-        "Um Dial Plan define quais gateways SBC o usuário p... não é solução adequada Teams Phone neste contexto",
-        "Um Dial Plan configura o correio de voz e saudaçõe... não é solução adequada Teams Phone neste contexto"
+        "Dial Plan does not specify permitted PSTN destinations or assign gateways — it contains number normalization rules; routing is controlled by voice routes and PSTN usages",
+        "Dial Plan does not specify permitted PSTN destinations or assign gateways — it contains number normalization rules; routing is controlled by voice routes and PSTN usages",
+        "Dial Plan does not configure voicemail or greetings — those are handled by auto-attendants and call queues; Dial Plan is exclusively for number normalization"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -267,9 +267,9 @@ export const questions = [
       "respostaCerta": "Regra que converte números iniciados com \"0800\" para o formato E.164 com código do país Brasil (+55), ex.: ^(0800\\d{7})$ → +55$1 — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Regra que remove o prefixo \"0\" e adiciona o DDI in... não é solução adequada Teams Phone neste contexto",
-        "Configuração de trunk SBC para aceitar números não... não é solução adequada Teams Phone neste contexto",
-        "Criação de rota de voz específica para números 080... não é solução adequada Teams Phone neste contexto"
+        "Removing the \"0\" prefix alone is incomplete — normalization must result in full E.164 format including country code (+55 for Brazil); partial normalization breaks PSTN routing",
+        "SBC trunks cannot accept non-normalized numbers — PSTN routing requires E.164 format; Dial Plan normalization rules must convert all local formats to +E.164",
+        "Voice routes alone cannot handle unnormalized numbers — normalization to E.164 is mandatory before any routing decision; Dial Plan normalization rules are required"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -292,9 +292,9 @@ export const questions = [
       "respostaCerta": "Online Voice Routing Policy (Política de Roteamento de Voz Online) — agrupa PSTN Usages e é atribuída via Grant-CsOnlineVoiceRoutingPolicy — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "PSTN Usage Record — objeto de uso que é atribuído ... não é solução adequada Teams Phone neste contexto",
-        "Online Voice Route — define o gateway SBC e padrão... não é solução adequada Teams Phone neste contexto",
-        "Dial Plan — contém rotas de voz e é atribuído via ... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -317,9 +317,9 @@ export const questions = [
       "respostaCerta": "Em países onde regulamentações de telecomunicações proíbem o bypass de tarifas PSTN locais — o LBR garante que chamadas usem o gateway local baseado na localização de rede do usuário — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Em qualquer implementação com mais de 5 gateways S... não é solução adequada Teams Phone neste contexto",
-        "Sempre que o Operator Connect é usado em conjunto ... não é solução adequada Teams Phone neste contexto",
-        "Apenas em organizações com usuários em mais de 10 ... não é solução adequada Teams Phone neste contexto"
+        "Location-Based Routing (LBR) is not required based on gateway quantity — it's mandated only by local regulations that prohibit PSTN tariff bypass",
+        "Operator Connect and Direct Routing can coexist without requiring LBR — LBR is only mandatory when regulations prohibit tariff bypass in that specific region",
+        "Location-Based Routing is not required based on the number of countries or regional complexity — it's only needed when regulations in that specific region mandate it"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -342,9 +342,9 @@ export const questions = [
       "respostaCerta": "Sites de rede com sub-redes mapeadas, política de roteamento baseado em localização habilitada no gateway SBC (New-CsOnlinePSTNGateway -LocationBasedRouting $true) e política LBR atribuída aos usuários — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "Instalar agente de detecção de localização no disp... não é solução adequada Teams Phone neste contexto",
-        "Configurar QoS por sub-rede e criar regras de fire... não é solução adequada Teams Phone neste contexto",
-        "Apenas habilitar a opção LBR no Teams Admin Center... não é solução adequada Teams Phone neste contexto"
+        "Location-Based Routing does not require installing client agents — it uses network site configurations and subnet mappings in Teams admin center",
+        "QoS and firewall rules are network policies separate from LBR — LBR requires network sites, subnet mappings, and SBC-level policy enablement",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -367,9 +367,9 @@ export const questions = [
       "respostaCerta": "Permite que o número de celular SIM da operadora parceira seja usado como número corporativo Teams, unificando chamadas móveis e do Teams em uma única identidade — o celular físico torna-se um endpoint Teams nativo — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Operator Connect = operadora terceira + SBC dela, meio termo entre Calling Plan e Direct Routing",
       "cascasDeBanana": [
-        "É um serviço de portabilidade numérica que migra n... não é solução adequada Teams Phone neste contexto",
-        "Permite que usuários façam chamadas PSTN pelo Team... não é solução adequada Teams Phone neste contexto",
-        "É um aplicativo Teams otimizado para dispositivos ... não é solução adequada Teams Phone neste contexto"
+        "Operator Connect Mobile is not a number portability service — it allows a mobile SIM number to function as a Teams Phone number by integrating the physical phone",
+        "Operator Connect Mobile is more than just enabling PSTN calls over mobile data — it makes the physical SIM a native Teams endpoint managed by the operator",
+        "Operator Connect Mobile is not a Teams app — it's a service integration where the operator manages the SIM and makes it a Teams Phone endpoint"
       ],
       "dicaOuro": "Operadora parceira gerencia PSTN e SBC por você — você configura via Teams Admin Center"
     }
@@ -392,9 +392,9 @@ export const questions = [
       "respostaCerta": "Criar dois Atendedores Automáticos aninhados — o principal oferece opção de idioma e redireciona para AAs secundários configurados com menus e saudações no respectivo idioma — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "Configurar um único AA com reconhecimento de voz m... não é solução adequada Teams Phone neste contexto",
-        "Criar políticas de roteamento de voz diferentes po... não é solução adequada Teams Phone neste contexto",
-        "Usar uma Fila de Chamada com agentes bilíngues e r... não é solução adequada Teams Phone neste contexto"
+        "Teams auto-attendants don't have built-in multi-language voice recognition — you must create separate AAs for each language and offer language selection in the main AA",
+        "Voice routing policies control PSTN trunk selection by call pattern, not language — language-based routing requires nested auto-attendants with language menus",
+        "Call queues with bilingual agents don't provide language selection at entry point — auto-attendants must first present language options before transferring to language-specific queues"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -417,9 +417,9 @@ export const questions = [
       "respostaCerta": "Atendente (Attendant — toca em todos simultaneamente), Serial (em sequência), Round Robin (rotativo) e Ociosidade mais longa (Longest Idle) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Fila = múltiplos agentes, FIFO + Longest Idle, presença automática, timeout/redirecionamento",
       "cascasDeBanana": [
-        "Simultâneo, Serial, Baseado em custo e Baseado em ... não é solução adequada Teams Phone neste contexto",
-        "Aleatório, Prioritário, Sequencial e Baseado em ha... não é solução adequada Teams Phone neste contexto",
-        "FIFO, LIFO, Round Robin e Baseado em disponibilida... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Longest Idle distribui para agente menos ocupado — combinar FIFO + Longest Idle reduz espera"
     }
@@ -442,9 +442,9 @@ export const questions = [
       "respostaCerta": "O roteamento baseado em presença ignora agentes com status Ocupado, Não Perturbe ou Em reunião; chamadas aguardam na fila ou são redirecionadas conforme o tempo limite configurado — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Fila = múltiplos agentes, FIFO + Longest Idle, presença automática, timeout/redirecionamento",
       "cascasDeBanana": [
-        "As chamadas são automaticamente distribuídas mesmo... não é solução adequada Teams Phone neste contexto",
-        "O sistema alterna automaticamente para roteamento ... não é solução adequada Teams Phone neste contexto",
-        "Todos os agentes recebem alerta simultâneo de cham... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Longest Idle distribui para agente menos ocupado — combinar FIFO + Longest Idle reduz espera"
     }
@@ -467,9 +467,9 @@ export const questions = [
       "respostaCerta": "Cloud Voicemail (Correio de Voz em Nuvem) — mensagens são transcritas e armazenadas na caixa de correio Exchange Online do usuário, acessíveis pelo Teams e Outlook — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Microsoft Stream Voicemail — grava mensagens como ... não é solução adequada Teams Phone neste contexto",
-        "Exchange Online não participa roteamento PSTN Teams Phone — não é componente Direct Routing",
-        "Azure Communication Services Voicemail — armazena ... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -492,9 +492,9 @@ export const questions = [
       "respostaCerta": "Set-CsOnlineVoicemailPolicy com o parâmetro -EnableTranscription $false atribuído via Grant-CsOnlineVoicemailPolicy ao grupo — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Exchange Online não participa de roteamento PSTN Teams Phone — não é componente Direct Routing",
-        "New-CsVoicemailCompliancePolicy -BlockTranscription atribuíd... não é solução adequada para Teams Phone neste contexto",
-        "Set-CsCloudVoicemailPolicy -DisableTranscription $true aplic... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -517,9 +517,9 @@ export const questions = [
       "respostaCerta": "Números de usuário são atribuídos a pessoas individuais para chamadas 1:1; números de serviço suportam alto volume de chamadas simultâneas e são usados em Atendedores Automáticos, Filas de Chamada e pontes de Audioconferência — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Números de usuário funcionam apenas com Calling Pl... não é solução adequada Teams Phone neste contexto",
-        "Números de serviço são sempre gratuitos (toll-free... não é solução adequada Teams Phone neste contexto",
-        "Números de serviço requerem licença E5; números de... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -542,9 +542,9 @@ export const questions = [
       "respostaCerta": "Carta de autorização (LOA) assinada, conta de faturamento da operadora atual, números a portar em formato E.164 e data de portabilidade desejada — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Apenas o contrato de prestação de serviços com a o... não é solução adequada Teams Phone neste contexto",
-        "Autorização do Azure AD Global Admin e confirmação... não é solução adequada Teams Phone neste contexto",
-        "Certificado de propriedade dos números emitido pel... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -567,9 +567,9 @@ export const questions = [
       "respostaCerta": "Plano Doméstico (Domestic), Plano Internacional (International) e Plano Pay-as-you-go — cada um com diferentes coberturas e modelos de cobrança — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Calling Plan = Microsoft cuida de tudo, você só paga e disca",
       "cascasDeBanana": [
-        "Plano Local, Plano Nacional e Plano Global — basea... não é solução adequada Teams Phone neste contexto",
-        "Plano de Voz, Plano de Dados e Plano Combinado — d... não é solução adequada Teams Phone neste contexto",
-        "Plano Básico, Plano Profissional e Plano Enterpris... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Disponibilidade por país varia — verificar suporte regional Microsoft antes contratação"
     }
@@ -592,9 +592,9 @@ export const questions = [
       "respostaCerta": "Chamadas para destinos não incluídos no plano doméstico, números gratuitos (toll-free) de entrada para reuniões de audioconferência e chamadas que excedem os minutos mensais do plano — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Calling Plan = Microsoft cuida de tudo, você só paga e disca",
       "cascasDeBanana": [
-        "Apenas chamadas internacionais para países fora do... não é solução adequada Teams Phone neste contexto",
-        "Todas as chamadas PSTN saintes independentemente d... não é solução adequada Teams Phone neste contexto",
-        "Chamadas de correio de voz transcritas automaticam... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Disponibilidade por país varia — verificar suporte regional Microsoft antes contratação"
     }
@@ -617,9 +617,9 @@ export const questions = [
       "respostaCerta": "Latência (RTT), jitter (variação de latência), perda de pacotes e largura de banda disponível — todos críticos para qualidade de áudio em tempo real — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Throughput total da WAN, velocidade de upload/download e con... não é solução adequada para Teams Phone neste contexto",
-        "MTU dos pacotes, configuração de VLAN e segmentação de rede ... não é solução adequada para Teams Phone neste contexto",
-        "Número de usuários simultâneos, capacidade do servidor DNS e... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -642,9 +642,9 @@ export const questions = [
       "respostaCerta": "Latência RTT < 100ms, jitter < 30ms e perda de pacotes < 1% — valores que garantem qualidade de voz aceitável para comunicações em tempo real — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Latência RTT < 50ms, jitter < 10ms e perda de pacotes < 0.1%... não é solução adequada para Teams Phone neste contexto",
-        "Latência RTT < 500ms, jitter < 100ms e perda de pacotes < 5%... não é solução adequada para Teams Phone neste contexto",
-        "Latência RTT < 200ms, jitter < 50ms e perda de pacotes < 2% ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -667,9 +667,9 @@ export const questions = [
       "respostaCerta": "Áudio: 50000–50019 UDP; Vídeo: 50020–50039 UDP; Compartilhamento de aplicativo/tela: 50040–50059 UDP — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Áudio: 50000–50019 TCP; Vídeo: 50020–50039 TCP; Compartilham... não é solução adequada para Teams Phone neste contexto",
-        "Áudio: 3478–3481 UDP; Vídeo: 3478–3481 UDP; Compartilhamento... não é solução adequada para Teams Phone neste contexto",
-        "Áudio: 1024–2000 UDP; Vídeo: 2001–3000 UDP; Compartilhamento... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -692,9 +692,9 @@ export const questions = [
       "respostaCerta": "Áudio: EF (DSCP 46); Vídeo: AF41 (DSCP 34); Compartilhamento de aplicativos: AF21 (DSCP 18) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Áudio: AF41 (DSCP 34); Vídeo: AF21 (DSCP 18); Compartilhamen... não é solução adequada para Teams Phone neste contexto",
-        "Áudio: BE (DSCP 0); Vídeo: EF (DSCP 46); Compartilhamento: A... não é solução adequada para Teams Phone neste contexto",
-        "Áudio: CS7 (DSCP 56); Vídeo: CS5 (DSCP 40); Compartilhamento... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -717,9 +717,9 @@ export const questions = [
       "respostaCerta": "Número de usuários por localização (site), personas de uso (Office Worker, Remote Worker, Teams Rooms) e capacidade de WAN existente por site — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Número de chamadas PSTN esperadas, capacidade do SBC e quant... não é solução adequada para Teams Phone neste contexto",
-        "Versão do cliente Teams, sistema operacional dos dispositivo... não é solução adequada para Teams Phone neste contexto",
-        "Endereços IP das sub-redes, configuração de VLAN por departa... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -742,9 +742,9 @@ export const questions = [
       "respostaCerta": "Avaliar a qualidade da conexão de rede de uma localização específica com os servidores Microsoft 365, medindo latência, jitter e perda de pacotes — deve ser executada antes da implantação e para diagnóstico de problemas — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Monitorar continuamente a qualidade de chamadas ativas em to... não é solução adequada para Teams Phone neste contexto",
-        "Gerar relatório de capacidade de largura de banda necessária... não é solução adequada para Teams Phone neste contexto",
-        "Configurar automaticamente QoS nos switches e roteadores da ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -767,9 +767,9 @@ export const questions = [
       "respostaCerta": "Configurar split tunneling na VPN para que tráfego de mídia UDP do Teams (portas 50000–50059) seja enviado diretamente à internet, sem passar pelo tunnel VPN corporativo — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Instalar o cliente Teams em modo Citrix VDI com otimização d... não é solução adequada para Teams Phone neste contexto",
-        "Aumentar a largura de banda do concentrador VPN para suporta... não é solução adequada para Teams Phone neste contexto",
-        "Configurar QoS no concentrador VPN para priorizar tráfego Te... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -792,9 +792,9 @@ export const questions = [
       "respostaCerta": "A Microsoft não recomenda mais o ExpressRoute como solução primária para Teams; a abordagem recomendada é otimizar a saída de internet local com split tunneling e QoS, pois a maioria do tráfego Teams já usa anycast da Microsoft — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "ExpressRoute é recomendado apenas para videoconferências HD;... não é solução adequada para Teams Phone neste contexto",
-        "ExpressRoute é obrigatório para Direct Routing em organizaçõ... não é solução adequada para Teams Phone neste contexto",
-        "ExpressRoute é a única forma de garantir SLA de qualidade de... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -817,9 +817,9 @@ export const questions = [
       "respostaCerta": "Telefones IP Teams, Teams Rooms (Windows e Android), Teams Panels, Headsets certificados, Speakerphones, Câmeras e Displays Teams — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Apenas telefones IP e headsets; outros dispositivos não poss... não é solução adequada para Teams Phone neste contexto",
-        "Dispositivos Microsoft Surface exclusivamente, com linha com... não é solução adequada para Teams Phone neste contexto",
-        "Teams Rooms é dispositivo sala, não gateway PSTN — não faz roteamento de chamadas externas"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -842,9 +842,9 @@ export const questions = [
       "respostaCerta": "Windows (MTR on Windows) e Android (MTR on Android) — cada plataforma com características, licenciamento e capacidades ligeiramente diferentes — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Apenas Windows — dispositivos Android não possuem certificaç... não é solução adequada para Teams Phone neste contexto",
-        "Windows e Linux — com imagem customizada Microsoft para disp... não é solução adequada para Teams Phone neste contexto",
-        "Windows, Android e iOS — com suporte a iPads como controlado... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -867,9 +867,9 @@ export const questions = [
       "respostaCerta": "Teams Rooms Basic (gratuita, funcionalidades essenciais de reunião, até 25 salas por tenant) e Teams Rooms Pro (paga, monitoramento avançado, IA de reunião, gerenciamento remoto e relatórios detalhados) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Microsoft 365 Rooms E3 (sem IA) e Microsoft 365 Rooms E5 (co... não é solução adequada para Teams Phone neste contexto",
-        "Teams Rooms Standard (reuniões básicas sem PSTN) e Teams Roo... não é solução adequada para Teams Phone neste contexto",
-        "Teams Rooms Free (apenas áudio) e Teams Rooms Full (vídeo HD... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -892,9 +892,9 @@ export const questions = [
       "respostaCerta": "Conta de recurso de sala (Room Resource Account) no Microsoft 365 com licença Teams Rooms atribuída e caixa de correio de sala configurada no Exchange Online — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Exchange Online não participa de roteamento PSTN Teams Phone — não é componente Direct Routing",
-        "Conta de usuário padrão com nome da sala e licença Teams Ess... não é solução adequada para Teams Phone neste contexto",
-        "Conta de serviço Azure AD com função de Device Administrator... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -917,9 +917,9 @@ export const questions = [
       "respostaCerta": "Exibir disponibilidade da sala em tempo real, reservar a sala ad-hoc diretamente no painel, mostrar reuniões agendadas e integrar com o calendário Exchange Online da conta de recurso da sala — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Gerenciar presença e status de disponibilidade dos participa... não é solução adequada para Teams Phone neste contexto",
-        "Teams Rooms é dispositivo sala, não gateway PSTN — não faz roteamento de chamadas externas",
-        "Controlar remotamente o sistema de áudio e vídeo da sala e i... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -942,9 +942,9 @@ export const questions = [
       "respostaCerta": "Modo Teams (padrão — totalmente integrado ao Teams Phone), Modo SIP legado (para interoperabilidade com PBX existente) e Modo de Área Comum (Common Area Phone — sem conta de usuário individual) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Modo Executivo, Modo Recepcionista e Modo Agente de Call Cen... não é solução adequada para Teams Phone neste contexto",
-        "Modo Wired, Modo Wi-Fi e Modo Bluetooth — baseados no tipo d... não é solução adequada para Teams Phone neste contexto",
-        "Modo Online, Modo Híbrido e Modo Offline — baseados na conec... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -967,9 +967,9 @@ export const questions = [
       "respostaCerta": "Licença Microsoft Teams Phone Common Area (licença dedicada para telefones de área comum) atribuída a uma conta de recurso de telefone de área comum sem usuário nomeado — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Licença Teams Essentials com add-on de voz atribuída a conta... não é solução adequada para Teams Phone neste contexto",
-        "Teams Rooms é dispositivo sala, não gateway PSTN — não faz roteamento de chamadas externas",
-        "Qualquer licença Microsoft 365 Business Basic com Teams Phon... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -992,9 +992,9 @@ export const questions = [
       "respostaCerta": "Provisionamento remoto via Teams Admin Center usando o MAC address do dispositivo para pré-associar a uma conta de usuário, ou via código de verificação gerado no portal para o usuário final — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Script PowerShell com Set-CsPhoneNumberAssignment executado ... não é solução adequada para Teams Phone neste contexto",
-        "Configuração manual via interface web de cada telefone acess... não é solução adequada para Teams Phone neste contexto",
-        "Implantação via Microsoft Intune com perfil MDM específico p... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -1017,9 +1017,9 @@ export const questions = [
       "respostaCerta": "Via Teams Admin Center > Dispositivos — configurar regras de atualização automática por fase (fase piloto e fase ampla), definindo horários de manutenção e grupos de dispositivos — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Via Azure Arc com extensão de gerenciamento de dispositivos ... não é solução adequada para Teams Phone neste contexto",
-        "Via script PowerShell agendado no Azure Automation que verif... não é solução adequada para Teams Phone neste contexto",
-        "Via Microsoft Intune com política de atualização de firmware... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -1042,9 +1042,9 @@ export const questions = [
       "respostaCerta": "Monitoramento proativo de saúde de salas com IA, detecção automática de incidentes, planos de atualização gerenciados, relatórios avançados de utilização de salas e suporte de especialistas Microsoft para resolução de problemas — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Integração com Microsoft Intune para conformidade de disposi... não é solução adequada para Teams Phone neste contexto",
-        "Gerenciamento de licenças Teams Rooms, atribuição de contas ... não é solução adequada para Teams Phone neste contexto",
-        "Visualização de qualidade de chamadas PSTN, relatórios de CQ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -1067,9 +1067,9 @@ export const questions = [
       "respostaCerta": "Fornecer visão agregada da qualidade de chamadas e reuniões em toda a organização com dados históricos e tendências; acessível a administradores Teams, Communications Administrators e usuários com função específica de CQD — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Gerar relatórios de faturamento de chamadas PSTN com custo p... não é solução adequada para Teams Phone neste contexto",
-        "Rastrear atividade de usuários no Teams incluindo mensagens,... não é solução adequada para Teams Phone neste contexto",
-        "Monitorar chamadas individuais em tempo real com alertas ins... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -1092,9 +1092,9 @@ export const questions = [
       "respostaCerta": "A porcentagem de streams de mídia (áudio/vídeo) classificados como ruins com base em limites de qualidade predefinidos (jitter > 30ms, perda de pacotes > 1% ou latência RTT > 500ms) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "A taxa de chamadas onde o usuário explicitamente classificou... não é solução adequada para Teams Phone neste contexto",
-        "O número absoluto de chamadas que foram encerradas prematura... não é solução adequada para Teams Phone neste contexto",
-        "A porcentagem de usuários com dispositivos de áudio não cert... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -1117,9 +1117,9 @@ export const questions = [
       "respostaCerta": "Dispositivo de áudio utilizado (microfone/speaker), qualidade do dispositivo, métricas de echo cancellation, versão do cliente Teams e tipo de conexão de rede (Wi-Fi vs. com fio) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Histórico de presença do usuário e reuniões recentes com par... não é solução adequada para Teams Phone neste contexto",
-        "Relatório de uso de aplicativos e versão do sistema operacio... não é solução adequada para Teams Phone neste contexto",
-        "Latência de rede RTT, jitter e perda de pacotes — indicadore... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -1142,9 +1142,9 @@ export const questions = [
       "respostaCerta": "Certificado TLS expirado ou inválido no SBC, conectividade de rede bloqueada entre SBC e IPs Microsoft 365, configuração SIP incorreta — verificar logs SIP do SBC, testar conectividade TLS na porta 5061 e validar certificado — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Sobrecarga de chamadas simultâneas excedendo a capacidade do... não é solução adequada para Teams Phone neste contexto",
-        "Expiração da licença Teams Phone do tenant que desativa cone... não é solução adequada para Teams Phone neste contexto",
-        "Atualização de firmware pendente no SBC que bloqueia novas c... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "SBC requirements are specific — it must be on Microsoft's certified list, have valid TLS certificate with FQDN, support SIP TLS on port 5061, and SRTP for media"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -1167,9 +1167,9 @@ export const questions = [
       "respostaCerta": "Configurar regras de alerta (Alert Rules) no Teams Admin Center > Notificações e alertas > Qualidade de chamadas, definindo o limite e os destinatários de notificação — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Configurar dashboard do Power BI com alerta de dados conecta... não é solução adequada para Teams Phone neste contexto",
-        "Criar um alerta no Azure Monitor com métrica de CQD via Micr... não é solução adequada para Teams Phone neste contexto",
-        "Ativar notificações de qualidade no Microsoft Sentinel com r... não é solução adequada para Teams Phone neste contexto"
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead",
+        "Microsoft Sentinel is a security/SIEM tool, not a phone system monitoring dashboard — it's not designed for tracking SBC connectivity or voice quality"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -1192,9 +1192,9 @@ export const questions = [
       "respostaCerta": "Logs de depuração (debug logs), logs de mídia (media logs) e logs do Windows Event Viewer — coletados via Ctrl+Alt+Shift+1 no cliente Teams ou manualmente na pasta de logs do Teams — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Logs de chamada SIP exportados diretamente pelo cliente Team... não é solução adequada para Teams Phone neste contexto",
-        "Apenas logs de eventos do Windows filtrados por fonte \"Micro... não é solução adequada para Teams Phone neste contexto",
-        "Logs de rede capturados pelo Microsoft Network Monitor integ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -1217,9 +1217,9 @@ export const questions = [
       "respostaCerta": "Permite que participantes discam por telefone para ingressar em reuniões Teams usando um número PSTN, resolvendo o problema de acesso quando o usuário não tem internet ou dispositivo compatível — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Habilita chamadas de voz entre usuários Teams e sistemas PBX... não é solução adequada para Teams Phone neste contexto",
-        "Fornece gravação automática de todas as reuniões com transcr... não é solução adequada para Teams Phone neste contexto",
-        "Substitui o Teams Phone para chamadas 1:1, permitindo chamad... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -1242,9 +1242,9 @@ export const questions = [
       "respostaCerta": "É o serviço que atribui números PSTN de discagem às reuniões Teams; configurada no Teams Admin Center > Reuniões > Pontes de conferência, onde se gerenciam números, PIN padrão e configurações de entrada/saída — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "É um serviço Azure que roteia chamadas de audioconferência e... não é solução adequada para Teams Phone neste contexto",
-        "É um SBC dedicado exclusivamente para audioconferência, sepa... não é solução adequada para Teams Phone neste contexto",
-        "É um dispositivo físico de hardware instalado on-premises qu... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -1267,9 +1267,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Usuários > selecionar usuário > aba Conta > Audioconferência — definir número de telefone de conferência padrão para o número brasileiro disponível na ponte — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "PowerShell com Set-CsOnlineDialInConferencingUser -ServiceNu... não é solução adequada para Teams Phone neste contexto",
-        "Exchange Online não participa de roteamento PSTN Teams Phone — não é componente Direct Routing",
-        "Microsoft 365 Admin Center > Usuários > Licenças > Configura... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -1292,9 +1292,9 @@ export const questions = [
       "respostaCerta": "Para iniciar a reunião discando pelo telefone quando a opção \"Os chamadores devem aguardar antes de entrar\" está ativada — o PIN autentica o organizador e libera os participantes do lobby telefônico — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Para gravar a reunião via telefone PSTN sem precisar usar o ... não é solução adequada para Teams Phone neste contexto",
-        "Para autenticar o organizador ao acessar relatórios de prese... não é solução adequada para Teams Phone neste contexto",
-        "Para silenciar ou remover participantes PSTN que entraram pe... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -1317,9 +1317,9 @@ export const questions = [
       "respostaCerta": "Política de reunião: \"Quem pode ignorar o lobby\" = Somente organizadores; desativar \"Participantes anônimos podem iniciar reunião\"; configurar que todos (incluindo internos) aguardem no lobby — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Desativar o link de reunião reutilizável e gerar novo link ú... não é solução adequada para Teams Phone neste contexto",
-        "Usar rótulo de sensibilidade \"Altamente Confidencial\" com lo... não é solução adequada para Teams Phone neste contexto",
-        "Ativar criptografia E2EE na reunião e configurar acesso cond... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -1342,9 +1342,9 @@ export const questions = [
       "respostaCerta": "Formulário de registro com campos personalizáveis, página de evento com tema visual, controle de quem pode apresentar/interagir, relatório de engajamento pós-evento e capacidade de aprovação manual de registros — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Integração automática com LinkedIn Events e exportação de le... não é solução adequada para Teams Phone neste contexto",
-        "Suporte a intérpretes simultâneos, múltiplos idiomas e tradu... não é solução adequada para Teams Phone neste contexto",
-        "Capacidade de até 10.000 participantes, gravação obrigatória... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -1367,9 +1367,9 @@ export const questions = [
       "respostaCerta": "Organizador (configura e gerencia o evento), Co-organizador (auxilia na gestão), Apresentador (apresenta conteúdo com controles de mídia) e Participante (assiste em modo somente visualização com Q&A) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Admin (configura), Producer (gerencia transmissão), Presente... não é solução adequada para Teams Phone neste contexto",
-        "Host (controle total), Moderador (gerencia Q&A), Speaker (ap... não é solução adequada para Teams Phone neste contexto",
-        "Owner (cria e deleta), Manager (edita configurações), Contri... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -1392,9 +1392,9 @@ export const questions = [
       "respostaCerta": "10.000 participantes por Town Hall com licença padrão; até 20.000 com Teams Premium — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "25.000 participantes — capacidade máxima para todos os tipos... não é solução adequada para Teams Phone neste contexto",
-        "1.000 participantes — mesmo limite de reuniões interativas p... não é solução adequada para Teams Phone neste contexto",
-        "50.000 participantes disponíveis para todos os planos Micros... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -1417,9 +1417,9 @@ export const questions = [
       "respostaCerta": "Estão sendo substituídos pelos Town Halls e Webinars — a Microsoft recomenda migração para os novos formatos que oferecem mais recursos; Live Events foi descontinuado em setembro de 2024 — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Foram migrados para o Viva Engage como Eventos Corporativos ... não é solução adequada para Teams Phone neste contexto",
-        "Estão sendo substituídos por Transmissões ao Vivo do Microso... não é solução adequada para Teams Phone neste contexto",
-        "Continuam disponíveis permanentemente como opção legada para... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -1442,9 +1442,9 @@ export const questions = [
       "respostaCerta": "Marca d'água em vídeo e conteúdo compartilhado, criptografia E2EE para reuniões em grupo, rótulos de sensibilidade em reuniões, prevenção de cópia de chat e proteção de reunião configurável — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Lobby com autenticação multifator obrigatória e verificação ... não é solução adequada para Teams Phone neste contexto",
-        "Canal privado dedicado para reuniões com barreiras de inform... não é solução adequada para Teams Phone neste contexto",
-        "Gravação obrigatória com armazenamento criptografado no Azur... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -1467,9 +1467,9 @@ export const questions = [
       "respostaCerta": "Requer Teams Premium; organizador designa intérpretes por par de idiomas antes da reunião; participantes selecionam o canal de idioma preferido; intérpretes precisam de conta Microsoft 365 — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Requer licença E5 com Copilot; tradução é feita via Azure Co... não é solução adequada para Teams Phone neste contexto",
-        "Disponível sem licença adicional; IA do Teams traduz automat... não é solução adequada para Teams Phone neste contexto",
-        "Funciona apenas em reuniões de canal; não disponível para re... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -1492,9 +1492,9 @@ export const questions = [
       "respostaCerta": "Chamadas PSTN de saída e entrada via SBC local continuam funcionando através do SBA; chamadas Teams-to-Teams internas falham pois requerem conectividade com o serviço Teams na nuvem — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Todas as funcionalidades do Teams continuam operan... não é solução adequada Teams Phone neste contexto",
-        "Apenas chamadas de emergência funcionam via SBA; c... não é solução adequada Teams Phone neste contexto",
-        "O SBA mantém chamadas PSTN e Teams internas, mas b... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -1517,9 +1517,9 @@ export const questions = [
       "respostaCerta": "New-CsTeamsSurvivableBranchAppliance para registrar o SBA e Set-CsOnlinePSTNGateway com o parâmetro -SurvivableBranchApplianceFqdn para associar ao SBC — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Add-CsDirectRoutingSBA configurado via Teams Admin... não é solução adequada Teams Phone neste contexto",
-        "Set-CsOnlineVoiceRoute -SurvivableBranch com FQDN ... não é solução adequada Teams Phone neste contexto",
-        "New-CsSurvivableBranchAppliance com parâmetro -Gat... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -1542,9 +1542,9 @@ export const questions = [
       "respostaCerta": "Permite que o tráfego de mídia (áudio/vídeo) entre usuários Teams e o SBC local flua diretamente pela rede local da filial, sem passar pelo Microsoft 365 na nuvem, reduzindo latência e consumo de WAN — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Prioriza automaticamente tráfego de voz sobre dado... não é solução adequada Teams Phone neste contexto",
-        "Comprime o tráfego de mídia Teams usando codecs ot... não é solução adequada Teams Phone neste contexto",
-        "Cache local de configurações de voz que permite ch... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -1567,9 +1567,9 @@ export const questions = [
       "respostaCerta": "Modo Sempre Bypass (Always Bypass) — mídia sempre flui pelo SBC local independentemente da localização do usuário; Modo Apenas para usuários locais (Only For Local Users) — bypass apenas quando o usuário está na mesma rede que o SBC — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "Modo Interno (Internal) — para usuários na sede; M... não é solução adequada Teams Phone neste contexto",
-        "Modo Primário — usa SBC local preferencialmente; M... não é solução adequada Teams Phone neste contexto",
-        "Modo Ativo (Active) — otimização sempre ligada; Mo... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -1592,9 +1592,9 @@ export const questions = [
       "respostaCerta": "Políticas de chamada de emergência (Emergency Calling Policy), endereços de rede registrados (Civic Addresses) mapeados a sub-redes no Teams Admin Center e roteamento de emergência para PSAP local via SBC ou Calling Plan — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E911 = localização precisa obrigatória para emergência, endereço dinâmico se mudança local",
       "cascasDeBanana": [
-        "Apenas configurar o número 911 como destino na rot... não é solução adequada Teams Phone neste contexto",
-        "Registrar todos os usuários com endereço da sede e... não é solução adequada Teams Phone neste contexto",
-        "Implementar Azure Maps com geolocalização GPS de d... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Endereço emergência atualizado automático se usuário muda prédio/escritório"
     }
@@ -1617,9 +1617,9 @@ export const questions = [
       "respostaCerta": "É o endereço físico validado de um local (prédio, andar) registrado no Teams Admin Center; associado a usuários via mapeamento de sub-rede a locais de rede (network sites), identificando automaticamente a localização pelo IP — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "É o número de ramal interno do usuário mapeado ao ... não é solução adequada Teams Phone neste contexto",
-        "É o endereço do datacenter Microsoft mais próximo ... não é solução adequada Teams Phone neste contexto",
-        "É o endereço de e-mail corporativo do usuário usad... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -1642,9 +1642,9 @@ export const questions = [
       "respostaCerta": "Location-Based Routing (LBR), políticas de emergência baseadas em localização, relatórios de qualidade de chamadas por site no CQD e Otimização de Mídia Local (LMO) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Apenas para relatórios de uso por localização no Microsoft 3... não é solução adequada para Teams Phone neste contexto",
-        "Somente para provisionamento automático de dispositivos Team... não é solução adequada para Teams Phone neste contexto",
-        "Exclusivamente para configuração de QoS automático por sub-r... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -1667,9 +1667,9 @@ export const questions = [
       "respostaCerta": "Regiões de Rede (Network Regions) > Sites de Rede (Network Sites) > Sub-redes (Network Subnets) — cada sub-rede mapeada a um site e cada site a uma região — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Locatário (Tenant) > Departamento (Department) > Usuário (Us... não é solução adequada para Teams Phone neste contexto",
-        "Azure Region > Resource Group > Virtual Network — hierarquia... não é solução adequada para Teams Phone neste contexto",
-        "Gateway SBC > Rota de Voz > Política de Roteamento — hierarq... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -1692,9 +1692,9 @@ export const questions = [
       "respostaCerta": "Política de largura de banda de mídia (Media Bit Rate) na política de reunião — configura limite máximo de bitrate para áudio, vídeo e compartilhamento de tela por usuário — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Configuração de QoS por sub-rede no Teams Admin Center limit... não é solução adequada para Teams Phone neste contexto",
-        "Política de rede do site com limite de banda configurado no ... não é solução adequada para Teams Phone neste contexto",
-        "Regra de firewall limitando bandwidth para destinos IP do Mi... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -1717,9 +1717,9 @@ export const questions = [
       "respostaCerta": "Comparar streams \"Inside\" vs \"Outside\" (baseados no mapeamento de sub-rede), analisar tipo de transporte (UDP vs. TCP/relay), verificar métricas de jitter e perda de pacotes segmentadas por sub-rede e tipo de conexão — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Comparar horários de pico de chamadas com janelas de backup ... não é solução adequada para Teams Phone neste contexto",
-        "Verificar versão do cliente Teams e sistema operacional dos ... não é solução adequada para Teams Phone neste contexto",
-        "Analisar relatório de uso de dispositivos para identificar m... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -1742,9 +1742,9 @@ export const questions = [
       "respostaCerta": "Compute unit (mini PC ou dispositivo Android), câmera PTZ certificada, speakerphone ou sistema de microfone/alto-falante, display(s) para conteúdo e vídeo, e opcionalmente touchscreen controller e Teams Panel — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Azure Sphere IoT device, câmera IP de segurança com suporte ... não é solução adequada para Teams Phone neste contexto",
-        "Surface Hub 2S, câmera USB padrão, headset Bluetooth e proje... não é solução adequada para Teams Phone neste contexto",
-        "Desktop Windows com Teams instalado, webcam USB, caixa de so... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -1767,9 +1767,9 @@ export const questions = [
       "respostaCerta": "Display interativo de grande formato com toque e caneta, sistema Teams Rooms integrado, Whiteboard colaborativo nativo, câmera e áudio integrados, e suporte a reuniões Teams completas sem dispositivos adicionais — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Smart TV certificada para Teams com suporte apenas a visuali... não é solução adequada para Teams Phone neste contexto",
-        "Servidor de aplicativos Azure para processamento de reuniões... não é solução adequada para Teams Phone neste contexto",
-        "Dispositivo de apresentação unidirecional para exibição de c... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -1792,9 +1792,9 @@ export const questions = [
       "respostaCerta": "Teams Display é um dispositivo all-in-one com tela sensível ao toque maior, câmera e microfone integrados, focado em experiência de comunicação pessoal (chat, chamadas, calendário) com Cortana para comandos de voz — complementa o PC sem substituir o telefone IP — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "É uma versão premium do telefone IP com display touchscreen ... não é solução adequada para Teams Phone neste contexto",
-        "Teams Rooms é dispositivo sala, não gateway PSTN — não faz roteamento de chamadas externas",
-        "É um monitor externo certificado para Teams que exibe status... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -1817,9 +1817,9 @@ export const questions = [
       "respostaCerta": "Dispositivos certificados são testados e otimizados para Teams, garantindo supressão de ruído, cancelamento de eco, botões de ação direta (atender/desligar/mudo) integrados ao Teams, drivers otimizados e melhor qualidade de áudio/vídeo comprovada — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Certificação garante compatibilidade apenas com Windows 11; ... não é solução adequada para Teams Phone neste contexto",
-        "Dispositivos não certificados são bloqueados pelo Teams Admi... não é solução adequada para Teams Phone neste contexto",
-        "Apenas dispositivos certificados recebem suporte técnico da ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -1842,9 +1842,9 @@ export const questions = [
       "respostaCerta": "1) Coletar dados no CQD filtrando por site/sub-rede; 2) Analisar Per-user Call Analytics de usuários afetados; 3) Verificar tipo de dispositivo e conexão; 4) Comparar métricas inside vs. outside; 5) Avaliar rede local com Network Assessment Tool — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "1) Verificar integridade do serviço Teams; 2) Coletar logs v... não é solução adequada para Teams Phone neste contexto",
-        "1) Verificar firewall e proxy; 2) Testar com VPN desativada;... não é solução adequada para Teams Phone neste contexto",
-        "1) Reiniciar o cliente Teams em todos os dispositivos; 2) At... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -1867,9 +1867,9 @@ export const questions = [
       "respostaCerta": "Templates oficiais disponíveis no GitHub Microsoft (CQD Power BI Query Templates) incluem relatórios de qualidade geral, análise helpdesk, qualidade de dispositivos, relatório de localização de rede e análise de Direct Routing PSTN — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Dashboards nativos do CQD exportáveis para Power BI via botã... não é solução adequada para Teams Phone neste contexto",
-        "Templates disponíveis no Teams Admin Center para download di... não é solução adequada para Teams Phone neste contexto",
-        "Relatórios pré-construídos no Microsoft AppSource conectados... não é solução adequada para Teams Phone neste contexto"
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -1892,9 +1892,9 @@ export const questions = [
       "respostaCerta": "Configuração de licença do Teams Phone, atribuição de número de telefone, políticas de voz atribuídas, status de habilitação do usuário para Enterprise Voice e configuração de roteamento de voz — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Status de conformidade do dispositivo no Intune, versão do c... não é solução adequada para Teams Phone neste contexto",
-        "Qualidade da conexão de rede do usuário, latência ao Microso... não é solução adequada para Teams Phone neste contexto",
-        "Histórico de chamadas dos últimos 30 dias, taxa de falhas e ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -1917,9 +1917,9 @@ export const questions = [
       "respostaCerta": "Filtrar por modalidade PSTN, analisar First/Final SIP Code para identificar códigos de erro SIP, verificar Connectivity Ice e comparar por gateway SBC para identificar qual gateway apresenta mais falhas — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Analisar jitter e perda de pacotes por sub-rede para identif... não é solução adequada para Teams Phone neste contexto",
-        "Verificar versão de firmware do SBC e comparar com última ve... não é solução adequada para Teams Phone neste contexto",
-        "Analisar relatório de presença dos usuários para correlacion... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "SBC requirements are specific — it must be on Microsoft's certified list, have valid TLS certificate with FQDN, support SIP TLS on port 5061, and SRTP for media",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -1942,9 +1942,9 @@ export const questions = [
       "respostaCerta": "SIP 403 (Forbidden) indica que a chamada foi recusada por falta de autorização — causas incluem rota de voz não configurada para o destino, usuário sem política de roteamento atribuída ou número destino bloqueado pelo SBC — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "SIP 403 indica que o número destino não existe na PSTN e a o... não é solução adequada para Teams Phone neste contexto",
-        "SIP 403 indica que o servidor SBC está sobrecarregado e recu... não é solução adequada para Teams Phone neste contexto",
-        "SIP 403 indica que o certificado TLS do SBC expirou e a cham... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -1967,9 +1967,9 @@ export const questions = [
       "respostaCerta": "SIP 503 (Service Unavailable) indica que o SBC ou a operadora PSTN está temporariamente indisponível — causas incluem sobrecarga do SBC, manutenção da operadora ou falha de conectividade entre SBC e PSTN — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "SIP 503 indica que o usuário Teams está offline e não pode r... não é solução adequada para Teams Phone neste contexto",
-        "SIP 503 indica que a licença Teams Phone do usuário expirou ... não é solução adequada para Teams Phone neste contexto",
-        "SIP 503 indica que o número de telefone discado não está no ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -1992,9 +1992,9 @@ export const questions = [
       "respostaCerta": "Parceiros certificados Microsoft implementam um bot de gravação via Teams Recording API (Graph API) que é automaticamente adicionado a chamadas e reuniões dos usuários cobertos pela política, sem possibilidade de desativação pelo usuário — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "O SBC de Direct Routing intercepta e grava todas a... não é solução adequada Teams Phone neste contexto",
-        "O administrador ativa gravação automática na polít... não é solução adequada Teams Phone neste contexto",
-        "Microsoft Purview Communication Compliance grava c... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -2017,9 +2017,9 @@ export const questions = [
       "respostaCerta": "1) Atribuir licença Teams Phone ao usuário; 2) Habilitar Enterprise Voice (Set-CsPhoneNumberAssignment); 3) Atribuir número de telefone; 4) Atribuir política de roteamento de voz online (Grant-CsOnlineVoiceRoutingPolicy); 5) Atribuir Dial Plan se necessário — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "1) Configurar SBC; 2) Criar conta Azure AD; 3) Atr... não é solução adequada Teams Phone neste contexto",
-        "1) Comprar Calling Plan; 2) Atribuir licença Teams... não é solução adequada Teams Phone neste contexto",
-        "Exchange Online não participa roteamento PSTN Teams Phone — não é componente Direct Routing"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -2042,9 +2042,9 @@ export const questions = [
       "respostaCerta": "-Identity (UPN ou ObjectId do usuário), -PhoneNumber (número em formato E.164), -PhoneNumberType (DirectRouting, CallingPlan ou OperatorConnect) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "-UserPrincipalName, -TelephoneNumber e -VoicePolic... não é solução adequada Teams Phone neste contexto",
-        "-UPN, -E164Number e -RoutingType são os parâmetros... não é solução adequada Teams Phone neste contexto",
-        "-Identity, -LineUri e -EnterpriseVoiceEnabled $tru... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -2067,9 +2067,9 @@ export const questions = [
       "respostaCerta": "Permite que um MTR e um Teams Display (ou outro dispositivo Teams) na mesma sala sejam coordenados — o MTR gerencia áudio/vídeo da sala enquanto o display pessoal do usuário serve como controle, evitando eco e feedback de áudio duplicado — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Sincroniza automaticamente múltiplos sistemas Teams Rooms em... não é solução adequada para Teams Phone neste contexto",
-        "Coordena a agenda de múltiplas salas de reunião para otimiza... não é solução adequada para Teams Phone neste contexto",
-        "Permite que dois MTRs em salas diferentes se conectem direta... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -2092,9 +2092,9 @@ export const questions = [
       "respostaCerta": "Enquadramento automático de pessoas (Active Speaker Tracking), detecção de múltiplas pessoas, zoom inteligente sem degradação de qualidade, visão panorâmica com enquadramento dividido por participante e integração com IA de reunião do Teams Premium — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Suporte a realidade aumentada com sobreposição de legendas n... não é solução adequada para Teams Phone neste contexto",
-        "Resolução 8K com compressão H.265, reconhecimento facial par... não é solução adequada para Teams Phone neste contexto",
-        "Gravação local em cartão SD, transmissão simultânea para múl... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -2117,9 +2117,9 @@ export const questions = [
       "respostaCerta": "Câmera PTZ ou inteligente com enquadramento automático, microfones de mesa ou teto com captação omnidirecional cobrindo toda a sala, speakerphone ou sistema de caixas de som distribuídas, e câmera frontal para capturar conteúdo do quadro branco — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Câmera de segurança IP com suporte SIP e sistema de PA da sa... não é solução adequada para Teams Phone neste contexto",
-        "Câmera de documento para captura de materiais físicos e micr... não é solução adequada para Teams Phone neste contexto",
-        "Uma webcam USB padrão posicionada no centro da sala e headse... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -2142,9 +2142,9 @@ export const questions = [
       "respostaCerta": "1) Verificar conectividade física (cabo de rede/Wi-Fi); 2) Confirmar que o dispositivo está ligado; 3) Verificar se a conta de recurso associada está ativa no Azure AD; 4) Confirmar licença válida atribuída; 5) Reiniciar o dispositivo remotamente pelo Teams Admin Center — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "1) Desativar e reativar o Teams Panel no Teams Admin Center;... não é solução adequada para Teams Phone neste contexto",
-        "Exchange Online não participa de roteamento PSTN Teams Phone — não é componente Direct Routing",
-        "1) Reinstalar o firmware de fábrica; 2) Recriar a conta de r... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -2167,9 +2167,9 @@ export const questions = [
       "respostaCerta": "O CQD mantém dados por até 12 meses; para preservação de longo prazo, os dados podem ser exportados via CQD Power BI connector ou Microsoft Graph API para armazenamento externo no Azure Data Lake ou Power BI Dataflows — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "O CQD mantém dados por 6 meses; exportação disponível apenas... não é solução adequada para Teams Phone neste contexto",
-        "Dados ilimitados no CQD sem necessidade de exportação; a ret... não é solução adequada para Teams Phone neste contexto",
-        "O CQD mantém dados por 30 dias apenas; para histórico maior ... não é solução adequada para Teams Phone neste contexto"
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -2192,9 +2192,9 @@ export const questions = [
       "respostaCerta": "Chamadas privadas, encaminhamento de chamadas, toque simultâneo, correio de voz, estacionamento de chamada, chamadas internacionais, delegação de chamadas e música em espera personalizada — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Política chamada = permissões granulares usuário (encaminhamento, toque, delegação)",
       "cascasDeBanana": [
-        "Roteamento de chamadas PSTN, seleção de gateway SB... não é solução adequada Teams Phone neste contexto",
-        "Conformidade de gravação, retenção de chamadas, tr... não é solução adequada Teams Phone neste contexto",
-        "Qualidade de áudio, codec preferencial, supressão ... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Política pode bloquear encaminhamento externo para controlar custos"
     }
@@ -2217,9 +2217,9 @@ export const questions = [
       "respostaCerta": "Fazer chamadas em nome do executivo, receber chamadas destinadas ao executivo, ver o calendário do executivo para contexto de chamadas, gerenciar encaminhamentos e ter linha telefônica compartilhada com o executivo no cliente Teams — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "Acesso completo à conta Teams do executivo incluin... não é solução adequada Teams Phone neste contexto",
-        "Gerenciar todas as configurações de voz do executi... não é solução adequada Teams Phone neste contexto",
-        "Apenas receber chamadas para o executivo; não pode... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -2242,9 +2242,9 @@ export const questions = [
       "respostaCerta": "Vantagem: visibilidade compartilhada de chamadas por todos os agentes no canal, histórico de chamadas centralizado no canal; Limitação: suporte apenas a canais padrão (não privados), limite de 200 agentes via canal e não suporta opt-out por agente — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Vantagem: gravação automática de todas as chamadas... não é solução adequada Teams Phone neste contexto",
-        "Vantagem: roteamento automático por habilidade bas... não é solução adequada Teams Phone neste contexto",
-        "Vantagem: suporte nativo para canais compartilhado... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -2267,9 +2267,9 @@ export const questions = [
       "respostaCerta": "Adquirir número toll-free via Teams Admin Center ou portabilidade, atribuir Créditos de Comunicação ao tenant (obrigatório para números toll-free), associar o número à conta de recurso do Atendedor Automático — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Números toll-free são incluídos automaticamente em... não é solução adequada Teams Phone neste contexto",
-        "Apenas o Direct Routing suporta números toll-free;... não é solução adequada Teams Phone neste contexto",
-        "Números toll-free exigem licença Teams Premium e a... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -2292,9 +2292,9 @@ export const questions = [
       "respostaCerta": "Inspeção TLS pode causar falhas de autenticação, degradação de qualidade de mídia e problemas de conectividade Teams — a Microsoft recomenda criar exceções (bypass) para todos os endpoints do Microsoft 365/Teams na inspeção TLS — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Inspeção TLS é totalmente compatível com Teams desde que o c... não é solução adequada para Teams Phone neste contexto",
-        "Inspeção TLS melhora a segurança do Teams sem impacto de des... não é solução adequada para Teams Phone neste contexto",
-        "Teams detecta automaticamente a inspeção TLS e usa protocolo... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -2317,9 +2317,9 @@ export const questions = [
       "respostaCerta": "Servidores TURN da Microsoft em 13.107.64.0/18 e outros ranges Microsoft 365, portas UDP 3478 e TCP 443 como fallback — definidos na documentação oficial de URLs e IPs do Microsoft 365 — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Servidores TURN em Azure datacenters regionais na porta UDP ... não é solução adequada para Teams Phone neste contexto",
-        "Servidores TURN em 52.120.0.0/14 na porta TCP 5061 com fallb... não é solução adequada para Teams Phone neste contexto",
-        "Servidores TURN proprietários da Microsoft em IPs não public... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -2342,9 +2342,9 @@ export const questions = [
       "respostaCerta": "1) Identificar e diferenciar o tráfego Teams (por IPs/portas/FQDNs); 2) Permitir saída local à internet sem hairpinning desnecessário; 3) Evitar inspeção desnecessária de pacotes para tráfego Teams otimizado — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "1) Bloquear tráfego não essencial; 2) Priorizar DNS do Micro... não é solução adequada para Teams Phone neste contexto",
-        "1) Implementar QoS em toda a rede; 2) Usar ExpressRoute para... não é solução adequada para Teams Phone neste contexto",
-        "1) Aumentar largura de banda WAN; 2) Configurar proxies regi... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -2367,9 +2367,9 @@ export const questions = [
       "respostaCerta": "Modo de dispositivo dedicado (Dedicated Device) via Android Enterprise — permite aplicar políticas de configuração de dispositivo, restringir aplicativos a apenas o Teams Rooms, configurar Wi-Fi e certificados corporativos — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Gerenciamento direto via Teams Admin Center sem necessidade ... não é solução adequada para Teams Phone neste contexto",
-        "Modo de administrador de dispositivo legado (Device Admin) e... não é solução adequada para Teams Phone neste contexto",
-        "Modo BYOD (Bring Your Own Device) com perfil de trabalho And... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -2392,9 +2392,9 @@ export const questions = [
       "respostaCerta": "Latência ao servidor Microsoft 365 mais próximo, qualidade da saída de internet (local vs. hairpin), avaliação de uso de proxy e inspeção TLS, pontuação de conectividade comparada com benchmark e recomendações específicas para melhoria — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Inventário de todos os dispositivos Teams na rede com status... não é solução adequada para Teams Phone neste contexto",
-        "Configuração automática de QoS nos roteadores detectados na ... não é solução adequada para Teams Phone neste contexto",
-        "Relatório de segurança com vulnerabilidades da rede corporat... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -2417,9 +2417,9 @@ export const questions = [
       "respostaCerta": "O reconhecimento de voz no Atendedor Automático funciona para navegação no menu (dizer o nome ou número da opção), mas não suporta linguagem natural complexa ou IA conversacional — é baseado em palavras-chave predefinidas — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Auto-atendente IVR = rotas inteligentes, menu hierárquico, presença agentes inteligente",
       "cascasDeBanana": [
-        "Reconhecimento de voz só funciona em inglês americ... não é solução adequada Teams Phone neste contexto",
-        "O recurso está disponível apenas com Teams Premium... não é solução adequada Teams Phone neste contexto",
-        "Reconhecimento de voz funciona apenas em chamadas ... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auto-atendente pode ter múltiplos níveis menu para roteamento complexo com efeitos sonoros"
     }
@@ -2442,9 +2442,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Voz > Feriados — criar listas de feriados com datas e horários específicos, depois associar essas listas ao fluxo de chamada de feriados no Atendedor Automático — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade; Poor Stream Rate < 5% aceitável, identifica degradação proativa",
       "cascasDeBanana": [
-        "Feriados são definidos nas configurações globais d... não é solução adequada Teams Phone neste contexto",
-        "Exchange Online não participa roteamento PSTN Teams Phone — não é componente Direct Routing",
-        "Exchange Online não participa roteamento PSTN Teams Phone — não é componente Direct Routing"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria Teams Admin Center registra todas mudanças políticas — verificar logs troubleshooting"
     }
@@ -2467,9 +2467,9 @@ export const questions = [
       "respostaCerta": "eCDN (Enterprise Content Delivery Network) — soluções de parceiros certificados Microsoft que distribuem o stream de vídeo via peer-to-peer ou caching local, reduzindo tráfego WAN para grandes eventos — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Azure CDN configurado com origem no Microsoft Stream para di... não é solução adequada para Teams Phone neste contexto",
-        "Microsoft Teams Live Events com compressão H.265 que reduz a... não é solução adequada para Teams Phone neste contexto",
-        "Split tunneling de VPN para forçar tráfego de vídeo do Town ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -2492,9 +2492,9 @@ export const questions = [
       "respostaCerta": "Política de reunião atribuída ao grupo — habilitar \"Gravar automaticamente\" (Auto-record meetings) para que todas as reuniões iniciadas por esses usuários sejam gravadas automaticamente no OneDrive/SharePoint — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Configuração global de reunião no Teams Admin Center habilit... não é solução adequada para Teams Phone neste contexto",
-        "Power Automate com gatilho de início de reunião que aciona g... não é solução adequada para Teams Phone neste contexto",
-        "Política de conformidade de gravação com bot de gravação aut... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -2517,9 +2517,9 @@ export const questions = [
       "respostaCerta": "Configurar múltiplos SBCs no mesmo Voice Route com prioridade e peso diferentes (Priority e Weight no New-CsOnlineVoiceRoute) — o Teams tenta o SBC de maior prioridade primeiro e faz failover automático para o próximo em caso de falha — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Usar dois tenants Microsoft 365 separados com Dire... não é solução adequada Teams Phone neste contexto",
-        "Configurar Azure Load Balancer na frente dos SBCs ... não é solução adequada Teams Phone neste contexto",
-        "Implantar dois SBCs idênticos em modo ativo-ativo ... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -2542,9 +2542,9 @@ export const questions = [
       "respostaCerta": "O FQDN deve ser um nome DNS público resolvível, com no mínimo dois rótulos (ex.: sbc.empresa.com.br), não pode ser endereço IP, deve corresponder ao Subject Name do certificado TLS do SBC e não pode usar subdomínios do Microsoft 365 — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Apenas FQDNs no formato sbc.teams.microsoft.com sã... não é solução adequada Teams Phone neste contexto",
-        "O endereço IP público do SBC pode ser usado direta... não é solução adequada Teams Phone neste contexto",
-        "O FQDN pode ser qualquer nome interno resolvível v... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -2567,9 +2567,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Voz > Operadoras — selecionar a operadora parceira, autorizar a operadora a gerenciar números no tenant, aguardar ativação pela operadora e depois atribuir números aos usuários via Teams Admin Center — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Operator Connect = operadora terceira + SBC dela, meio termo entre Calling Plan e Direct Routing",
       "cascasDeBanana": [
-        "Contatar a operadora diretamente por telefone, sol... não é solução adequada Teams Phone neste contexto",
-        "Instalar aplicativo da operadora na Teams App Stor... não é solução adequada Teams Phone neste contexto",
-        "Abrir ticket no portal Microsoft Partner Center pa... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Operadora parceira gerencia PSTN e SBC por você — você configura via Teams Admin Center"
     }
@@ -2592,9 +2592,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Voz > Números de telefone — exibe todos os números incluindo os do Operator Connect com status, tipo e usuário/serviço atribuído — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Operator Connect = operadora terceira + SBC dela, meio termo entre Calling Plan e Direct Routing",
       "cascasDeBanana": [
-        "Portal exclusivo da operadora parceira separado do... não é solução adequada Teams Phone neste contexto",
-        "Azure AD > Aplicativos empresariais > aplicativo d... não é solução adequada Teams Phone neste contexto",
-        "Microsoft 365 Admin Center > Faturamento > Assinat... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Operadora parceira gerencia PSTN e SBC por você — você configura via Teams Admin Center"
     }
@@ -2617,9 +2617,9 @@ export const questions = [
       "respostaCerta": "Shared Calling permite que múltiplos usuários compartilhem um único número de telefone e política de voz sem necessidade de licença Teams Phone individual — ideal para trabalhadores que raramente fazem chamadas PSTN, reduzindo custos de licenciamento — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "Shared Calling é o modo de delegação onde assisten... não é solução adequada Teams Phone neste contexto",
-        "Shared Calling é o recurso de filas de chamada ond... não é solução adequada Teams Phone neste contexto",
-        "Teams Rooms é dispositivo sala, não gateway PSTN — não faz roteamento chamadas externas"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -2642,9 +2642,9 @@ export const questions = [
       "respostaCerta": "Media Bypass permite que o fluxo de mídia (áudio/vídeo) vá diretamente entre o cliente Teams do usuário e o SBC, sem passar pelos servidores de processamento de mídia da Microsoft — reduz latência e consumo de largura de banda WAN — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Media Bypass desativa a criptografia SRTP para melhorar dese... não é solução adequada para Teams Phone neste contexto",
-        "Media Bypass redireciona chamadas PSTN diretamente entre doi... não é solução adequada para Teams Phone neste contexto",
-        "Media Bypass comprime automaticamente o tráfego de mídia ent... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -2667,9 +2667,9 @@ export const questions = [
       "respostaCerta": "SBC certificado com suporte a Media Bypass, conectividade de mídia direta entre o cliente Teams e o SBC (sem NAT restritivo), habilitar Media Bypass no gateway (Set-CsOnlinePSTNGateway -MediaBypass $true) e o cliente Teams deve suportar o recurso — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Apenas habilitar o parâmetro -MediaBypass no SBC; não há req... não é solução adequada para Teams Phone neste contexto",
-        "Media Bypass é habilitado automaticamente pelo Teams quando ... não é solução adequada para Teams Phone neste contexto",
-        "Media Bypass requer ExpressRoute com peering privado entre o... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -2692,9 +2692,9 @@ export const questions = [
       "respostaCerta": "SILK e Opus são os codecs primários do Teams para chamadas internas (wideband/fullband); para interoperabilidade PSTN via Direct Routing, G.711 (PCMU/PCMA) e G.722 são negociados com o SBC via SDP — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Teams usa H.264 para áudio e vídeo combinados; codecs separa... não é solução adequada para Teams Phone neste contexto",
-        "Teams usa exclusivamente G.711 para todas as chamadas de áud... não é solução adequada para Teams Phone neste contexto",
-        "Teams usa AAC-LC para áudio de alta qualidade e G.729 para c... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -2717,9 +2717,9 @@ export const questions = [
       "respostaCerta": "Captura de pacotes com Wireshark no endpoint do usuário ou switch de rede, filtrando tráfego UDP nas portas Teams (50000-50059) e analisando sequência RTP para identificar gaps de pacotes e jitter — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Instalar o Microsoft Network Monitor no servidor e capturar ... não é solução adequada para Teams Phone neste contexto",
-        "Executar traceroute para os IPs Microsoft 365 e analisar lat... não é solução adequada para Teams Phone neste contexto",
-        "Usar o Teams Admin Center > Call Analytics para visualizar p... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -2742,9 +2742,9 @@ export const questions = [
       "respostaCerta": "Via arquivo XML de configuração (SkypeSettings.xml) implantado na pasta C:\\Users\\Skype\\AppData\\Local\\Packages\\... ou via Microsoft Intune com perfil de configuração OMA-URI para dispositivos MTR Windows — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Via Teams Admin Center > Dispositivos > configurações avança... não é solução adequada para Teams Phone neste contexto",
-        "Via Group Policy Objects (GPO) com templates ADMX específico... não é solução adequada para Teams Phone neste contexto",
-        "Via PowerShell remoto conectando ao MTR Windows e executando... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -2767,9 +2767,9 @@ export const questions = [
       "respostaCerta": "Set-CalendarProcessing -AutomateProcessing AutoAccept para aceitar automaticamente; configurar -AllowConflicts $false para evitar duplos agendamentos; -AddOrganizerToSubject $false e -DeleteComments $false para manter informações da reunião — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Configurar regra de Caixa de Entrada no Outlook Web Access d... não é solução adequada para Teams Phone neste contexto",
-        "Criar Power Automate flow que monitora o calendário da sala ... não é solução adequada para Teams Phone neste contexto",
-        "Ativar \"Aceitação automática de reuniões\" no Teams Admin Cen... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -2792,9 +2792,9 @@ export const questions = [
       "respostaCerta": "Open Office (ambiente aberto com cancelamento de ruído básico), Professional (uso intensivo com supressão de ruído avançada), Home Office (uso doméstico) e Speakerphone (mãos livres para mesa) — diferenciadas por desempenho de áudio, durabilidade e caso de uso — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Basic (para usuários ocasionais), Standard (para uso diário)... não é solução adequada para Teams Phone neste contexto",
-        "Wired USB (com fio certificado), Wireless Bluetooth (sem fio... não é solução adequada para Teams Phone neste contexto",
-        "Categoria A (apenas áudio), Categoria B (áudio e microfone) ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -2817,9 +2817,9 @@ export const questions = [
       "respostaCerta": "Taxa de streams ruins (Poor Stream Rate) por modalidade, Poor Stream Rate por localização/site, tendência de qualidade semana a semana, top 10 usuários com mais streams ruins e taxa de streams ruins por tipo de dispositivo — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Consumo de largura de banda por site, utilização de CPU dos ... não é solução adequada para Teams Phone neste contexto",
-        "Número total de chamadas realizadas, minutos de uso PSTN, cu... não é solução adequada para Teams Phone neste contexto",
-        "Uptime do serviço Teams, número de tickets de suporte aberto... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -2842,9 +2842,9 @@ export const questions = [
       "respostaCerta": "No CQD, a dimensão \"UserFeedbackRatingMax\" captura avaliações de usuários (Rate My Call) que podem ser correlacionadas com métricas técnicas de qualidade para identificar discrepâncias entre percepção e dados objetivos — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Microsoft Forms coleta automaticamente avaliações pós-chamad... não é solução adequada para Teams Phone neste contexto",
-        "Viva Insights agrega avaliações de qualidade de reuniões e a... não é solução adequada para Teams Phone neste contexto",
-        "Power BI com conector Dynamics 365 Customer Service integra ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -2867,9 +2867,9 @@ export const questions = [
       "respostaCerta": "Interferência de canal Wi-Fi, roaming inadequado entre APs, capacidade insuficiente do AP e power management do adaptador — diagnosticar com analisador de espectro Wi-Fi, verificar SNR, taxa de retransmissão e separar SSID de voz em banda 5GHz com QoS WMM habilitado — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Problema de MTU na rede cabeada upstream do AP causando frag... não é solução adequada para Teams Phone neste contexto",
-        "Configuração de proxy automático (PAC file) interferindo com... não é solução adequada para Teams Phone neste contexto",
-        "Versão desatualizada do driver Wi-Fi no dispositivo causando... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -2892,9 +2892,9 @@ export const questions = [
       "respostaCerta": "O dispositivo de áudio do usuário (fone ou speakerphone) não está cancelando o eco adequadamente — verificar se está usando dispositivo certificado Teams, testar com headset diferente, verificar configurações de supressão de eco no cliente Teams e garantir que não está usando alto-falante e microfone abertos simultaneamente — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Configuração incorreta de SRTP no SBC de Direct Routing caus... não é solução adequada para Teams Phone neste contexto",
-        "Problema de latência de rede alta causando atraso que o cére... não é solução adequada para Teams Phone neste contexto",
-        "Bug no cliente Teams que duplica streams de áudio — atualiza... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -2917,9 +2917,9 @@ export const questions = [
       "respostaCerta": "Criar PSTN Usages separados para Brasil e América do Norte, criar Voice Routes com padrões de número específicos (^\\\\+55 para Brasil, ^\\\\+1 para América do Norte) apontando para SBCs respectivos, e criar Voice Routing Policies combinando os usages para usuários brasileiros — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Usar um único Voice Route com múltiplos SBCs e dei... não é solução adequada Teams Phone neste contexto",
-        "Criar Dial Plans com regras de normalização que re... não é solução adequada Teams Phone neste contexto",
-        "Configurar Location-Based Routing que automaticame... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -2942,9 +2942,9 @@ export const questions = [
       "respostaCerta": "Usar um SBC como gateway de interoperabilidade entre o PBX Cisco (via SIP trunk ou ISDN) e o Teams Phone via Direct Routing — o SBC transcodifica protocolos e roteia chamadas entre os dois sistemas durante a coexistência — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "Configurar federação SIP direta entre o PBX Cisco ... não é solução adequada Teams Phone neste contexto",
-        "Instalar o cliente Teams nos ramais Cisco para que... não é solução adequada Teams Phone neste contexto",
-        "Usar o Microsoft Teams Connector para Cisco dispon... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -2967,9 +2967,9 @@ export const questions = [
       "respostaCerta": "Migração em fases: 1) Configurar Direct Routing no Teams com mesmo SBC do SfB; 2) Mover usuários em lotes pequenos com Move-CsUser para TeamsOnly; 3) Verificar funcionalidade de voz de cada lote antes de prosseguir; 4) Manter SfB On-Premises até todos os usuários migrados — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Migrar todos os usuários simultaneamente em um úni... não é solução adequada Teams Phone neste contexto",
-        "Usar o Teams Migration Tool da Microsoft para migr... não é solução adequada Teams Phone neste contexto",
-        "Skype Empresarial é legacy — Teams Phone é substituição moderna"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -2992,9 +2992,9 @@ export const questions = [
       "respostaCerta": "Criar uma nova política de reunião personalizada com gravação desativada, compartilhamento de tela desativado e vídeo IP desativado, depois atribuí-la especificamente aos usuários ou grupo que recebe convidados externos — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Aplicar rótulo de sensibilidade \"Externo\" que automaticament... não é solução adequada para Teams Phone neste contexto",
-        "Configurar política de acesso condicional bloqueando gravaçã... não é solução adequada para Teams Phone neste contexto",
-        "Desativar essas funcionalidades nas configurações globais de... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -3017,9 +3017,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Análise e relatórios > Relatórios de uso > Uso de PSTN e SMS — filtrando por tipo de chamada \"Conference call\" com detalhes por usuário, duração e destino — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Power BI com conector de faturamento Microsoft 365 mostrando... não é solução adequada para Teams Phone neste contexto",
-        "Microsoft 365 Admin Center > Faturamento > Créditos de Comun... não é solução adequada para Teams Phone neste contexto",
-        "Exchange Online não participa de roteamento PSTN Teams Phone — não é componente Direct Routing"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -3042,9 +3042,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Reuniões > Pontes de conferência > Editar configurações da ponte — habilitar \"Tocar música para participantes em espera antes do início da reunião\" — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Habilitar música em espera na política de reunião individual... não é solução adequada para Teams Phone neste contexto",
-        "Configurar política de chamada com música em espera habilita... não é solução adequada para Teams Phone neste contexto",
-        "Criar Atendedor Automático com música de espera na frente da... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -3067,9 +3067,9 @@ export const questions = [
       "respostaCerta": "Configurar os telefones como Hot Desk phones no Teams Admin Center — usuários fazem login com suas credenciais Microsoft 365 no telefone e saem ao terminar, tendo acesso temporário ao seu próprio número e configurações — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Usar Microsoft Intune para atribuir perfis dinâmicos baseado... não é solução adequada para Teams Phone neste contexto",
-        "Configurar todos os telefones como telefones de área comum c... não é solução adequada para Teams Phone neste contexto",
-        "Instalar múltiplas contas de usuário em cada telefone e cria... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -3092,9 +3092,9 @@ export const questions = [
       "respostaCerta": "No arquivo SkypeSettings.xml ou via Teams Admin Center > configurações de dispositivo — habilitar ingresso automático em reuniões (AutoAccept) e configurar o tempo de antecipação (BeforeMeetingDuration) para 5 minutos — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Configurar Power Automate flow que envia comando de ingresso... não é solução adequada para Teams Phone neste contexto",
-        "Habilitar \"Ingresso antecipado automático\" na política de re... não é solução adequada para Teams Phone neste contexto",
-        "Exchange Online não participa de roteamento PSTN Teams Phone — não é componente Direct Routing"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -3117,9 +3117,9 @@ export const questions = [
       "respostaCerta": "Sensores de presença/ocupação certificados integrados ao Teams Rooms via API de sensor de espaço do Microsoft Places — detectam presença física e atualizam o status da sala em tempo real no Teams Panel e no sistema de reservas — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Teams Rooms é dispositivo sala, não gateway PSTN — não faz roteamento de chamadas externas",
-        "Sensor de CO2 conectado ao Azure IoT Hub com integração via ... não é solução adequada para Teams Phone neste contexto",
-        "Exchange Online não participa de roteamento PSTN Teams Phone — não é componente Direct Routing"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -3142,9 +3142,9 @@ export const questions = [
       "respostaCerta": "Monitorar o Health Dashboard for Direct Routing que mostra sessões ativas por SBC; configurar alertas no Teams Admin Center; verificar logs do SBC para contagem de sessões e implementar múltiplos SBCs com distribuição de carga via peso na Voice Route — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Habilitar throttling automático de chamadas no Azu... não é solução adequada Teams Phone neste contexto",
-        "Usar Azure Monitor com alerta baseado em métrica d... não é solução adequada Teams Phone neste contexto",
-        "Configurar limitação de chamadas simultâneas por u... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -3167,9 +3167,9 @@ export const questions = [
       "respostaCerta": "O arquivo de dados de edifício (building data) suporta campos de sub-rede, nome de edifício, cidade, país e campos personalizados como andar (floor) e ala (wing) — mapeando sub-redes específicas a localizações granulares dentro do edifício — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "A granularidade por andar requer integração com Azure Maps e... não é solução adequada para Teams Phone neste contexto",
-        "Apenas endereço IP individual pode ser mapeado a andares; su... não é solução adequada para Teams Phone neste contexto",
-        "O CQD não suporta granularidade por andar; o mínimo é por ed... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -3192,9 +3192,9 @@ export const questions = [
       "respostaCerta": "Problema na rede interna do site — possíveis causas incluem switch/AP com problemas de qualidade, ausência de QoS na rede local, congestionamento interno ou equipamentos com defeito no segmento de rede local — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Problema nos headsets e dispositivos dos usuários corporativ... não é solução adequada para Teams Phone neste contexto",
-        "Problema no SBC local ou no provedor ISP — indica que a cone... não é solução adequada para Teams Phone neste contexto",
-        "Problema geral nos servidores do Microsoft 365 — afeta o pro... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -3217,9 +3217,9 @@ export const questions = [
       "respostaCerta": "TCP é usado como fallback quando UDP está bloqueado por firewall ou proxy — TCP introduz retransmissões que aumentam latência e jitter, degradando qualidade de voz; a solução é abrir portas UDP 50000-50059 e 3478 no firewall corporativo — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "O uso de TCP indica que os usuários estão em VPN corporativa... não é solução adequada para Teams Phone neste contexto",
-        "TCP é usado apenas para chamadas PSTN via Direct Routing; ch... não é solução adequada para Teams Phone neste contexto",
-        "TCP oferece melhor qualidade que UDP para voz pois garante e... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -3242,9 +3242,9 @@ export const questions = [
       "respostaCerta": "Direct = mídia flui diretamente entre endpoints sem relay (ideal); Relay = mídia passa pelos servidores TURN da Microsoft (indica NAT restritivo ou firewall bloqueando UDP direto); Failed = não foi possível estabelecer conectividade de mídia (chamada falhou) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Direct = usuário na mesma sub-rede; Relay = usuário em sub-r... não é solução adequada para Teams Phone neste contexto",
-        "Direct = chamada interna sem PSTN; Relay = chamada via Direc... não é solução adequada para Teams Phone neste contexto",
-        "Direct = conexão cabeada; Relay = conexão Wi-Fi; Failed = se... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -3267,9 +3267,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Dispositivos > selecionar MTR > histórico de saúde e logs; Teams Rooms Pro Management Portal para diagnóstico avançado; acesso remoto via Windows Remote Desktop (se habilitado na política); logs do MTR exportáveis pelo portal de gerenciamento — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Azure Bastion para acesso seguro ao MTR Windows via portal A... não é solução adequada para Teams Phone neste contexto",
-        "Teams Admin Center > Call Analytics da conta de recurso da s... não é solução adequada para Teams Phone neste contexto",
-        "Microsoft Intune Remote Assistance para controle remoto do M... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -3292,9 +3292,9 @@ export const questions = [
       "respostaCerta": "Dispositivos all-in-one compactos com câmera, microfone e alto-falante integrados numa única unidade montável em parede ou mesa — ideais para salas pequenas (huddle rooms) de 2 a 5 pessoas com custo e complexidade de instalação reduzidos — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Teams Rooms é dispositivo sala, não gateway PSTN — não faz roteamento de chamadas externas",
-        "Teams Rooms é dispositivo sala, não gateway PSTN — não faz roteamento de chamadas externas",
-        "Sistemas modulares de alta performance para salas grandes de... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -3317,9 +3317,9 @@ export const questions = [
       "respostaCerta": "Habilitar gravação de chamadas na política de chamada; configurar política de retenção no Microsoft Purview aplicada ao OneDrive/SharePoint com exclusão automática após 60 dias para o tipo de conteúdo de gravações do Teams — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Configurar no Teams Admin Center um limite de rete... não é solução adequada Teams Phone neste contexto",
-        "Definir cota de armazenamento de 60 dias no OneDri... não é solução adequada Teams Phone neste contexto",
-        "Criar Power Automate flow que verifica e exclui gr... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -3342,9 +3342,9 @@ export const questions = [
       "respostaCerta": "Chamadas entre usuários SfB On-Premises e Teams Online são roteadas via infraestrutura híbrida — requer configuração de OAuth entre SfB e Azure AD, e o servidor de mediação SfB pode rotear chamadas PSTN para usuários Teams via Direct Routing compartilhado — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Usuários SfB On-Premises e Teams Online se comunic... não é solução adequada Teams Phone neste contexto",
-        "Chamadas são automaticamente roteadas pelo Microso... não é solução adequada Teams Phone neste contexto",
-        "Não há suporte para chamadas diretas entre SfB On-... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -3367,9 +3367,9 @@ export const questions = [
       "respostaCerta": "Alertas de qualidade de chamadas com threshold de Poor Stream Rate por período, alertas de dispositivos offline (Teams Rooms, telefones IP), alertas de Direct Routing (SBC offline, degradação de conectividade) e alertas de uso de PSTN — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Alertas de uso de licença e capacidade de armazenamento; mét... não é solução adequada para Teams Phone neste contexto",
-        "Apenas alertas de disponibilidade de serviço Teams; alertas ... não é solução adequada para Teams Phone neste contexto",
-        "Alertas de segurança e conformidade apenas; qualidade de cha... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -3392,9 +3392,9 @@ export const questions = [
       "respostaCerta": "Exportar dados do CQD via CQD Power BI connector ou Microsoft Graph API, processar via Azure Data Factory ou Power Automate e ingerir no Microsoft Sentinel via workspace Log Analytics com conector de dados customizado — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Configurar Diagnostic Settings no Teams Admin Center para en... não é solução adequada para Teams Phone neste contexto",
-        "Instalar o agente Log Analytics no SBC para capturar métrica... não é solução adequada para Teams Phone neste contexto",
-        "O CQD possui conector nativo para Microsoft Sentinel disponí... não é solução adequada para Teams Phone neste contexto"
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "Microsoft Sentinel is a security/SIEM tool, not a phone system monitoring dashboard — it's not designed for tracking SBC connectivity or voice quality"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -3417,9 +3417,9 @@ export const questions = [
       "respostaCerta": "A 51ª chamada aciona a ação de estouro (Overflow action) configurada — opções incluem desconectar a chamada, redirecionar para número externo, para outro AA ou fila, para correio de voz de usuário/grupo ou reproduzir mensagem de indisponibilidade — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Fila = múltiplos agentes, FIFO + Longest Idle, presença automática, timeout/redirecionamento",
       "cascasDeBanana": [
-        "A chamada é automaticamente colocada em uma fila d... não é solução adequada Teams Phone neste contexto",
-        "A chamada é rejeitada com sinal de ocupado e o cha... não é solução adequada Teams Phone neste contexto",
-        "O sistema coloca a chamada em espera infinita e no... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Longest Idle distribui para agente menos ocupado — combinar FIFO + Longest Idle reduz espera"
     }
@@ -3442,9 +3442,9 @@ export const questions = [
       "respostaCerta": "Texto para voz (TTS — Text-to-Speech) digitando o texto diretamente no portal com seleção de idioma e voz; upload de arquivo de áudio gravado (MP3, WAV, WMA); ou gravação via chamada telefônica diretamente no sistema — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "Apenas TTS com voz padrão em inglês americano; out... não é solução adequada Teams Phone neste contexto",
-        "Apenas upload de arquivo de áudio MP3; texto para ... não é solução adequada Teams Phone neste contexto",
-        "Apenas gravação via chamada telefônica; upload de ... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -3467,9 +3467,9 @@ export const questions = [
       "respostaCerta": "Per-user Call Analytics no Teams Admin Center — localizar a reunião no histórico de chamadas do organizador, selecionar a reunião e analisar métricas de qualidade de vídeo (resolução, frame rate, jitter de vídeo) por participante — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Microsoft Stream > Analytics do vídeo gravado da reunião par... não é solução adequada para Teams Phone neste contexto",
-        "CQD com filtro de data e hora da reunião específica para ver... não é solução adequada para Teams Phone neste contexto",
-        "Microsoft 365 Admin Center > Relatórios > Reuniões > selecio... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -3492,9 +3492,9 @@ export const questions = [
       "respostaCerta": "Criar política de reunião personalizada com \"Media bit rate (Kbs)\" reduzido (ex.: 500 Kbps) e atribuir apenas aos usuários das filiais afetadas via Grant-CsTeamsMeetingPolicy ou atribuição em grupo no Teams Admin Center — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Configurar QoS no roteador da filial para limitar banda de p... não é solução adequada para Teams Phone neste contexto",
-        "Criar sub-rede separada para usuários da filial e aplicar po... não é solução adequada para Teams Phone neste contexto",
-        "Habilitar modo de economia de dados no cliente Teams Desktop... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -3517,9 +3517,9 @@ export const questions = [
       "respostaCerta": "Permite que usuários discam um número alternativo (ex.: 112 na Europa ou 000 na Austrália) que é convertido para o número de emergência local padrão (ex.: 911 nos EUA) — útil para funcionários de outros países que podem discar o número de emergência do seu país natal — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Redireciona chamadas de emergência para uma centra... não é solução adequada Teams Phone neste contexto",
-        "Mascara o número real do chamador nas chamadas de ... não é solução adequada Teams Phone neste contexto",
-        "Substitui o número de exibição do usuário pelo núm... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -3542,9 +3542,9 @@ export const questions = [
       "respostaCerta": "Detecta automaticamente a localização atual do usuário com base na sub-rede/Wi-Fi/switch mapeados na topologia de rede, transmite o endereço físico preciso ao PSAP e pode notificar desk de segurança interno — mais preciso que localização estática por usuário — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E911 = localização precisa obrigatória para emergência, endereço dinâmico se mudança local",
       "cascasDeBanana": [
-        "Sistema de chamada de emergência que usa GPS do di... não é solução adequada Teams Phone neste contexto",
-        "Integração com câmeras de segurança do prédio que ... não é solução adequada Teams Phone neste contexto",
-        "Recurso que disca automaticamente para serviços de... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Endereço emergência atualizado automático se usuário muda prédio/escritório"
     }
@@ -3567,9 +3567,9 @@ export const questions = [
       "respostaCerta": "Topologia de rede configurada no Teams Admin Center com sub-redes mapeadas a endereços cívicos, política de roteamento de emergência dinâmico atribuída aos usuários, SBC certificado para emergency routing e cliente Teams Desktop versão compatível com detecção de localização dinâmica — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Apenas configurar endereços cívicos no Teams Admin... não é solução adequada Teams Phone neste contexto",
-        "Instalar agente de localização GPS em cada disposi... não é solução adequada Teams Phone neste contexto",
-        "Usar Operator Connect exclusivamente — Dynamic Eme... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -3592,9 +3592,9 @@ export const questions = [
       "respostaCerta": "Usar o modelo de tráfego Erlang B ou C baseado em número de usuários, taxa de chamadas por hora de pico (BHCA), duração média de chamadas e grau de serviço desejado — tipicamente 10-15% dos usuários em chamada simultânea em hora de pico como estimativa inicial — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Dimensionar 1 sessão SIP por usuário de voz como regra fixa ... não é solução adequada para Teams Phone neste contexto",
-        "Usar o Teams Network Planner para calcular automaticamente c... não é solução adequada para Teams Phone neste contexto",
-        "Contratar capacidade ilimitada de sessões no SBC para elimin... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -3617,9 +3617,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Dispositivos > selecionar categoria de dispositivo > Exportar (ícone de download) — gera arquivo CSV com todos os dados de inventário de dispositivos daquela categoria — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Microsoft Intune > Dispositivos > Exportar relatório de hard... não é solução adequada para Teams Phone neste contexto",
-        "Microsoft 365 Admin Center > Relatórios > Dispositivos regis... não é solução adequada para Teams Phone neste contexto",
-        "PowerShell com Get-CsTeamsDevice exportando para CSV com tod... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -3642,9 +3642,9 @@ export const questions = [
       "respostaCerta": "1) Teste de chamada de saída para número externo PSTN; 2) Teste de chamada de entrada de número externo para número Teams; 3) Verificar no Health Dashboard que o SBC está ativo; 4) Confirmar qualidade no Per-user Call Analytics pós-teste; 5) Testar chamada de emergência para número de teste (não 911 real) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Executar apenas teste de chamada interna Teams-to-Teams e as... não é solução adequada para Teams Phone neste contexto",
-        "Usar Teams Network Assessment Tool para validar conectividad... não é solução adequada para Teams Phone neste contexto",
-        "Abrir ticket de suporte Microsoft para que a equipe de valid... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -3667,9 +3667,9 @@ export const questions = [
       "respostaCerta": "Microsoft Teams Phone (add-on obrigatório para E3 — habilita PBX na nuvem e Enterprise Voice); não é necessário Calling Plan para Direct Routing pois a conectividade PSTN vem pelo SBC/operadora local — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Microsoft Teams Phone + Microsoft Calling Plan Dom... não é solução adequada Teams Phone neste contexto",
-        "Upgrade para Microsoft 365 E5 que inclui Teams Pho... não é solução adequada Teams Phone neste contexto",
-        "Microsoft Teams Essentials + add-on de Direct Rout... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -3692,9 +3692,9 @@ export const questions = [
       "respostaCerta": "Microsoft 365 gerencia infraestrutura de reuniões na nuvem sem necessidade de planejamento de servidor pelo cliente; o foco deve ser na capacidade de rede (largura de banda, QoS) e licenciamento adequado dos usuários organizadores — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Configurar pool de servidores Teams On-Premises para distrib... não é solução adequada para Teams Phone neste contexto",
-        "Provisionar servidores de conferência adicionais no Azure pa... não é solução adequada para Teams Phone neste contexto",
-        "Adquirir licenças de Audioconferência para cada participante... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -3717,9 +3717,9 @@ export const questions = [
       "respostaCerta": "Implementar solução de Contact Center como Serviço (CCaaS) de parceiro certificado Microsoft via Teams extensibility APIs (Graph API, Azure Communication Services) — parceiros como Genesys, NICE, Avaya integram nativamente ao Teams mantendo a experiência unificada — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "Usar Filas de Chamada nativas do Teams com roteame... não é solução adequada Teams Phone neste contexto",
-        "Configurar múltiplos Atendedores Automáticos aninh... não é solução adequada Teams Phone neste contexto",
-        "Implementar Azure Communication Services diretamen... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -3742,9 +3742,9 @@ export const questions = [
       "respostaCerta": "Todo tráfego Teams passando pelo proxy corporativo é o problema — proxies introduzem latência adicional e podem inspecionar/bloquear tráfego UDP; correção: implementar saída de internet local com bypass de proxy para endpoints Teams (categoria Optimize dos IPs/URLs Microsoft 365) com split tunneling se VPN for usada — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Falta de ExpressRoute entre a organização e o Microsoft 365 ... não é solução adequada para Teams Phone neste contexto",
-        "Ausência de servidor DNS local causando resolução lenta de F... não é solução adequada para Teams Phone neste contexto",
-        "Falta de QoS configurado nos dispositivos de usuário — imple... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -3767,9 +3767,9 @@ export const questions = [
       "respostaCerta": "1) Dial Plan de usuário (atribuído diretamente ao usuário); 2) Dial Plan de tenant (atribuído ao tenant); 3) Dial Plan de serviço (baseado no país do número atribuído ao usuário) — o mais específico tem precedência — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "1) Dial Plan global; 2) Dial Plan de tenant; 3) Di... não é solução adequada Teams Phone neste contexto",
-        "1) Dial Plan de serviço; 2) Dial Plan de usuário; ... não é solução adequada Teams Phone neste contexto",
-        "Apenas um Dial Plan pode existir por tenant; hiera... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -3792,9 +3792,9 @@ export const questions = [
       "respostaCerta": "Pattern: ^(\\\\d{4})$ | Translation: +5511300$1 — captura 4 dígitos e prefixa com código do país (+55), DDD (11) e prefixo do número do escritório (3000) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Pattern: (\\\\d)+(4) | Translation: +55113000+$1 — s... não é solução adequada Teams Phone neste contexto",
-        "Pattern: \\\\d{4} | Translation: 0055113000 — sem ân... não é solução adequada Teams Phone neste contexto",
-        "Pattern: ^$ | Translation: +55$1 — captura apenas ... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -3817,9 +3817,9 @@ export const questions = [
       "respostaCerta": "Corresponde a qualquer número no formato E.164 que começa com \"+\" mas NÃO é seguido por \"55\" (código do Brasil) — efetivamente roteia todas as chamadas internacionais exceto para o Brasil por essa rota — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "É uma expressão inválida — o lookahead negativo nã... não é solução adequada Teams Phone neste contexto",
-        "Corresponde a números que começam com \"+\" seguido ... não é solução adequada Teams Phone neste contexto",
-        "Corresponde apenas a números que começam exatament... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -3842,9 +3842,9 @@ export const questions = [
       "respostaCerta": "Permite que chamadores externos discam pelo nome (Dial by Name) ou pelo ramal (Dial by Extension) para localizar e ser conectado diretamente a um usuário interno da organização sem navegar pelos menus do AA — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "Permite que administradores pesquisem usuários no ... não é solução adequada Teams Phone neste contexto",
-        "Permite que o AA pesquise automaticamente o histór... não é solução adequada Teams Phone neste contexto",
-        "Sincroniza o diretório do AA com o Active Director... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -3867,9 +3867,9 @@ export const questions = [
       "respostaCerta": "Criar um escopo de inclusão/exclusão no AA — configurar \"Excluir\" usuários específicos ou grupos do Azure AD da pesquisa de diretório nas configurações de escopo do Atendedor Automático — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Criar política de privacidade no Microsoft Purview... não é solução adequada Teams Phone neste contexto",
-        "Configurar barreiras de informação entre executivo... não é solução adequada Teams Phone neste contexto",
-        "Remover o atributo DisplayName dos usuários no Azu... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -3892,9 +3892,9 @@ export const questions = [
       "respostaCerta": "Proteção avançada de reuniões (marca d'água, E2EE em grupo, rótulos de sensibilidade), interpretação simultânea de idiomas, resumos inteligentes com IA, webinars avançados com relatórios de engajamento, Town Halls com até 20.000 participantes e relatórios avançados de qualidade — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Licença de Phone System incluída, Direct Routing sem SBC pró... não é solução adequada para Teams Phone neste contexto",
-        "Chamadas PSTN ilimitadas, gravação automática sem limite de ... não é solução adequada para Teams Phone neste contexto",
-        "Microsoft Copilot integrado, Power BI analytics e Microsoft ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -3917,9 +3917,9 @@ export const questions = [
       "respostaCerta": "Registros ficam em status \"Pendente\" até aprovação manual pelo organizador no portal de gerenciamento do evento; organizador pode aprovar, rejeitar ou aguardar; aprovados recebem link de ingresso automático por e-mail; rejeições podem incluir mensagem personalizada — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Aprovação manual envia todos os registros para uma fila no M... não é solução adequada para Teams Phone neste contexto",
-        "O sistema aprova automaticamente após 48 horas se o organiza... não é solução adequada para Teams Phone neste contexto",
-        "Aprovação manual requer licença Teams Premium; sem ela todos... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -3942,9 +3942,9 @@ export const questions = [
       "respostaCerta": "MTR Windows autentica com a conta de recurso via Modern Authentication (OAuth 2.0) — suporta autenticação com senha da conta de recurso ou certificado de dispositivo; para maior segurança, pode usar autenticação baseada em certificado eliminando necessidade de senha — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "MTR Windows usa autenticação Kerberos com o Active Directory... não é solução adequada para Teams Phone neste contexto",
-        "MTR Windows usa token de dispositivo Azure AD gerado durante... não é solução adequada para Teams Phone neste contexto",
-        "MTR Windows requer conta de usuário com MFA habilitado; aute... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -3967,9 +3967,9 @@ export const questions = [
       "respostaCerta": "Configurar Windows Update for Business via Intune ou GPO com janelas de manutenção fora do horário de reuniões (ex.: 2h-4h da madrugada), definir deferral de atualizações para validação prévia e usar rings de atualização com dispositivos piloto antes da atualização ampla — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Desativar completamente o Windows Update em MTRs para garant... não é solução adequada para Teams Phone neste contexto",
-        "Atualizar manualmente cada MTR mensalmente visitando cada sa... não é solução adequada para Teams Phone neste contexto",
-        "MTR Windows gerencia automaticamente suas atualizações sem n... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -3992,9 +3992,9 @@ export const questions = [
       "respostaCerta": "Layout de exibição que posiciona vídeos dos participantes remotos na parte inferior da tela (linha do olhar) com conteúdo acima — cria sensação de presença mais natural e igualitária entre participantes presenciais e remotos em salas com display panorâmico — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Sistema de câmera que foca automaticamente no apresentador f... não é solução adequada para Teams Phone neste contexto",
-        "Modo de exibição que projeta legendas em tempo real na pared... não é solução adequada para Teams Phone neste contexto",
-        "Funcionalidade que reserva automaticamente os assentos da fr... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -4017,9 +4017,9 @@ export const questions = [
       "respostaCerta": "1) Verificar Health Dashboard for Direct Routing (status do SBC); 2) Verificar integridade do serviço Teams no M365 Admin Center; 3) Testar conectividade TLS do SBC (porta 5061); 4) Verificar logs SIP do SBC para códigos de erro; 5) Confirmar se certificado TLS do SBC está válido; 6) Testar chamada de diagnóstico — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "1) Verificar firewall corporativo; 2) Testar ping para Micro... não é solução adequada para Teams Phone neste contexto",
-        "1) Reiniciar o SBC imediatamente; 2) Contatar a operadora PS... não é solução adequada para Teams Phone neste contexto",
-        "1) Verificar CQD para Poor Stream Rate; 2) Analisar Per-user... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -4042,9 +4042,9 @@ export const questions = [
       "respostaCerta": "Fluxo normal de autenticação SIP com desafio de proxy — o SBC enviou INVITE, o proxy solicitou autenticação (407), o SBC respondeu com ACK, reenvio o INVITE com credenciais e a chamada foi estabelecida com sucesso (200 OK) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Falha de autenticação — o código 407 indica que as credencia... não é solução adequada para Teams Phone neste contexto",
-        "Ataque de replay SIP — a duplicação do INVITE indica tentati... não é solução adequada para Teams Phone neste contexto",
-        "Problema de roteamento — o 407 indica que o destino não foi ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -4067,9 +4067,9 @@ export const questions = [
       "respostaCerta": "NAT assimétrico bloqueando fluxo de mídia em uma direção, regras de firewall permitindo tráfego de saída mas bloqueando entrada de mídia UDP, configuração incorreta de IP de mídia no SBC (IP privado anunciado em SDP em vez de IP público) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Política de chamada bloqueando recebimento de áudio de exter... não é solução adequada para Teams Phone neste contexto",
-        "Problema de largura de banda afetando apenas o stream de upl... não é solução adequada para Teams Phone neste contexto",
-        "Codec incompatível entre Teams e SBC causando falha na decod... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -4092,9 +4092,9 @@ export const questions = [
       "respostaCerta": "Microsoft categoriza endpoints em três grupos: Optimize (críticos para Teams — devem ter acesso direto sem inspeção), Allow (importantes — acesso direto recomendado) e Default (podem usar proxy) — documentados em aka.ms/o365endpoints com IPs, URLs e portas atualizados — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Abrir portas UDP 16384-32767 bidirecionais para qualquer IP ... não é solução adequada para Teams Phone neste contexto",
-        "Bloquear todos os proxies e forçar tráfego Teams a passar po... não é solução adequada para Teams Phone neste contexto",
-        "Abrir apenas porta 443 TCP e 80 TCP para todos os IPs Micros... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -4117,9 +4117,9 @@ export const questions = [
       "respostaCerta": "SIP TLS: porta 5061 TCP (SBC ↔ Microsoft SIP Proxy); Mídia RTP/SRTP: portas UDP 3478-3481 (para servidores de relay) e 49152-53247 UDP (mídia direta entre SBC e cliente Teams); HTTPS 443 para sinalização adicional — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Porta 5060 UDP para SIP não criptografado e 16384-32767 UDP ... não é solução adequada para Teams Phone neste contexto",
-        "Apenas porta 443 TCP bidirecional — o Teams encapsula todo t... não é solução adequada para Teams Phone neste contexto",
-        "Portas 50000-50059 UDP para mídia e 5061 TCP para SIP — mesm... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -4142,9 +4142,9 @@ export const questions = [
       "respostaCerta": "Identificação de tráfego Teams por IP/porta/FQDN, roteamento preferencial de mídia Teams pela melhor rota de internet disponível, quebra de tráfego local (local breakout) para endpoints Microsoft 365 sem backhaul ao datacenter central e QoS baseado em aplicação para priorizar fluxos Teams — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Compressão de tráfego WAN para aumentar capacidade efetiva e... não é solução adequada para Teams Phone neste contexto",
-        "Tunelamento de todo tráfego Teams pelo datacenter central pa... não é solução adequada para Teams Phone neste contexto",
-        "Aceleração WAN com caching de conteúdo Teams e otimização TC... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -4167,9 +4167,9 @@ export const questions = [
       "respostaCerta": "Configurar alertas de gastos de Créditos de Comunicação no Microsoft 365 Admin Center, aplicar política de chamada desativando chamadas internacionais para usuários que não necessitam, usar relatórios PSTN no Teams Admin Center para monitoramento de uso e anomalias — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Calling Plan = Microsoft cuida de tudo, você só paga e disca",
       "cascasDeBanana": [
-        "Implementar Azure Cost Management com budget alert... não é solução adequada Teams Phone neste contexto",
-        "Configurar limite de minutos por usuário via Power... não é solução adequada Teams Phone neste contexto",
-        "Usar Microsoft Sentinel com regra analítica detect... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "Microsoft Sentinel is a security/SIEM tool, not a phone system monitoring dashboard — it's not designed for tracking SBC connectivity or voice quality"
       ],
       "dicaOuro": "Disponibilidade por país varia — verificar suporte regional Microsoft antes contratação"
     }
@@ -4192,9 +4192,9 @@ export const questions = [
       "respostaCerta": "Configurar política de identidade de chamador (Calling ID Policy) com o número de serviço da empresa como CallerID de saída e atribuir a política aos usuários do departamento via Grant-CsCallingLineIdentity — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Criar regra de normalização no Dial Plan que conve... não é solução adequada Teams Phone neste contexto",
-        "Configurar o Atendedor Automático para substituir ... não é solução adequada Teams Phone neste contexto",
-        "Alterar o número de telefone de cada usuário para ... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -4217,9 +4217,9 @@ export const questions = [
       "respostaCerta": "Ativar \"Filtro de chamadas com spam\" (Spam Filtering) na política de chamada que usa inteligência da Microsoft para identificar e bloquear chamadas de spam automaticamente; complementar com configuração de \"Bloquear chamadas de entradas sem ID de chamador\" — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Criar listas de bloqueio de números no SBC de Dire... não é solução adequada Teams Phone neste contexto",
-        "Implementar política de conformidade no Purview qu... não é solução adequada Teams Phone neste contexto",
-        "Configurar Azure Communication Services com filtro... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -4242,9 +4242,9 @@ export const questions = [
       "respostaCerta": "Display principal: vídeos dos participantes remotos e layout de reunião; Display secundário: conteúdo compartilhado (PowerPoint, tela compartilhada) — separação entre pessoas e conteúdo melhora a experiência de colaboração — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Ambos os displays mostram o mesmo conteúdo em espelho para g... não é solução adequada para Teams Phone neste contexto",
-        "Display principal: conteúdo compartilhado; Display secundári... não é solução adequada para Teams Phone neste contexto",
-        "Os dois displays são gerenciados independentemente por difer... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -4267,9 +4267,9 @@ export const questions = [
       "respostaCerta": "Certifica que o dispositivo foi testado e validado pela Microsoft para Teams Rooms com garantia de funcionalidade completa, compatibilidade com atualizações futuras, suporte coordenado entre Microsoft e fabricante e elegibilidade para gerenciamento via Teams Admin Center e MTR Pro portal — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Certifica apenas que o dispositivo tem o logo Teams e pode e... não é solução adequada para Teams Phone neste contexto",
-        "É uma certificação de segurança cibernética confirmando que ... não é solução adequada para Teams Phone neste contexto",
-        "Garante que o dispositivo é fabricado exclusivamente pela Mi... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -4292,9 +4292,9 @@ export const questions = [
       "respostaCerta": "Consultar log de auditoria unificado no Microsoft Purview com filtro de atividades de reunião Teams e verificar eventos de \"MeetingParticipantDetail\" sem registros de ingresso; complementar com relatório de uso de reuniões no Teams Admin Center — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Per-user Call Analytics do organizador mostra todas as reuni... não é solução adequada para Teams Phone neste contexto",
-        "CQD com filtro de Poor Stream Rate de 100% identifica reuniõ... não é solução adequada para Teams Phone neste contexto",
-        "Teams Admin Center > Relatórios > Reuniões falhas — relatóri... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -4317,9 +4317,9 @@ export const questions = [
       "respostaCerta": "Verificar: 1) Credenciais corretas (UPN e senha); 2) Licença Teams atribuída ao usuário; 3) Política de acesso condicional bloqueando login de dispositivos não gerenciados; 4) MFA requerido sem método compatível com dispositivo; 5) Conta bloqueada ou senha expirada no Azure AD — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Verificar conectividade Bluetooth do dispositivo — problemas... não é solução adequada para Teams Phone neste contexto",
-        "Reiniciar o dispositivo e aguardar sincronização automática ... não é solução adequada para Teams Phone neste contexto",
-        "Verificar apenas firmware do dispositivo — versão desatualiz... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -4342,9 +4342,9 @@ export const questions = [
       "respostaCerta": "No painel de participantes da reunião > \"Convidar alguém ou discar um número\" — inserir o número PSTN do participante externo; requer que o organizador tenha licença de Audioconferência ou Teams Phone com permissão de discagem de saída — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + Town Halls + relatórios avançados",
       "cascasDeBanana": [
-        "Usar o Atendedor Automático da organização para di... não é solução adequada Teams Phone neste contexto",
-        "Criar uma fila de chamada temporária e adicionar o... não é solução adequada Teams Phone neste contexto",
-        "Enviar convite de reunião adicional por e-mail dur... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação requer idiomas configurados, intérpretes em time separado"
     }
@@ -4367,9 +4367,9 @@ export const questions = [
       "respostaCerta": "Com a integração Dynamics 365 + Teams Phone (via Teams Phone Integration ou canal de voz do Dynamics), o agente recebe a chamada no painel do Dynamics com CTI (Computer Telephony Integration), abrindo automaticamente o registro do cliente identificado pelo número chamador — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "A integração requer que o agente use dois monitore... não é solução adequada Teams Phone neste contexto",
-        "A chamada chega apenas no cliente Teams separado e... não é solução adequada Teams Phone neste contexto",
-        "O Dynamics 365 bloqueia notificações de chamadas T... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -4392,9 +4392,9 @@ export const questions = [
       "respostaCerta": "Teams suporta até 1080p Full HD (com câmera e hardware compatíveis e largura de banda suficiente); a resolução efetiva é determinada dinamicamente pela largura de banda disponível, capacidade do hardware do endpoint, política de reunião (Media bit rate) e número de participantes visíveis — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Resolução de vídeo é configurada fixamente pelo administrado... não é solução adequada para Teams Phone neste contexto",
-        "A resolução é sempre 480p para chamadas com mais de 5 partic... não é solução adequada para Teams Phone neste contexto",
-        "Teams usa exclusivamente resolução 720p para todas as chamad... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -4417,9 +4417,9 @@ export const questions = [
       "respostaCerta": "\"Anunciar para todas as salas\" — o organizador pode enviar uma mensagem de broadcast para todas as salas simultâneas simultaneamente, que aparece como notificação para todos os participantes independentemente da sala em que estão — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Usar @equipe no chat principal da reunião — a mensagem apare... não é solução adequada para Teams Phone neste contexto",
-        "O organizador deve entrar em cada sala manualmente e fazer o... não é solução adequada para Teams Phone neste contexto",
-        "Compartilhar a tela na sala principal e isso automaticamente... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -4442,9 +4442,9 @@ export const questions = [
       "respostaCerta": "Filtrar por protocolo RTP (udp.port == 50000-50059), analisar sequência de números RTP para identificar gaps (pacotes fora de ordem ou perdidos), verificar delta de tempo entre pacotes para medir jitter e usar análise de stream RTP do Wireshark (Telephony > RTP > Stream Analysis) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Filtrar por dns.flags.response == 1 e verificar o tempo de r... não é solução adequada para Teams Phone neste contexto",
-        "Filtrar por tcp.port == 443 e analisar retransmissões TCP co... não é solução adequada para Teams Phone neste contexto",
-        "Usar filtro sip.status == 200 e analisar o SDP para medir a ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -4467,9 +4467,9 @@ export const questions = [
       "respostaCerta": "Causas: congestionamento de rede (fila de pacotes variável), ausência de QoS priorizando tráfego de voz, switches sem suporte a QoS, conexão Wi-Fi com interferência — correções: implementar QoS com marcação DSCP, atualizar equipamentos de rede, separar VLAN de voz e migrar usuários críticos para rede cabeada — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Jitter de 45ms é aceitável para chamadas de voz — o limite r... não é solução adequada para Teams Phone neste contexto",
-        "Jitter elevado indica problema no SBC — atualizar firmware d... não é solução adequada para Teams Phone neste contexto",
-        "Jitter elevado é sempre causado por latência alta ao Microso... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "SBC requirements are specific — it must be on Microsoft's certified list, have valid TLS certificate with FQDN, support SIP TLS on port 5061, and SRTP for media",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -4492,9 +4492,9 @@ export const questions = [
       "respostaCerta": "Impacto: voz cortada, palavras truncadas, degradação severa de inteligibilidade — correções: verificar cabo de rede com erros (usar show interfaces no switch), substituir equipamentos defeituosos, implementar QoS para priorizar tráfego de voz, verificar duplex mismatch e eliminar colisões na rede — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Aumentar a largura de banda do link WAN resolve automaticame... não é solução adequada para Teams Phone neste contexto",
-        "Perda de pacotes é sempre causada por problema no ISP — cont... não é solução adequada para Teams Phone neste contexto",
-        "3% de perda é imperceptível para voz humana — Teams usa FEC ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -4517,9 +4517,9 @@ export const questions = [
       "respostaCerta": "Etapas: submeter LOA assinada com dados corretos da conta, aguardar aprovação Microsoft (pode levar semanas), confirmar data de portabilidade, preparar usuários para mudança, validar números após portabilidade; Riscos: rejeição por dados incorretos na LOA, indisponibilidade temporária de números durante corte, números parcialmente portados se lote for muito grande — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Calling Plan = Microsoft cuida de tudo, você só paga e disca",
       "cascasDeBanana": [
-        "Portabilidade de 200 números é imediata — Microsof... não é solução adequada Teams Phone neste contexto",
-        "O único risco é o custo — a portabilidade pode ger... não é solução adequada Teams Phone neste contexto",
-        "Números portados funcionam imediatamente após subm... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Disponibilidade por país varia — verificar suporte regional Microsoft antes contratação"
     }
@@ -4542,9 +4542,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Reuniões > Pontes de conferência > configurar o número brasileiro como padrão da ponte; depois atualizar configurações de audioconferência dos usuários via PowerShell (Set-CsOnlineDialInConferencingUser) para apontar para o número brasileiro — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Calling Plan = Microsoft cuida de tudo, você só paga e disca",
       "cascasDeBanana": [
-        "Editar o template de convite de reunião no Outlook... não é solução adequada Teams Phone neste contexto",
-        "Alterar configurações de idioma e região do tenant... não é solução adequada Teams Phone neste contexto",
-        "Configurar um Atendedor Automático com número bras... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Disponibilidade por país varia — verificar suporte regional Microsoft antes contratação"
     }
@@ -4567,9 +4567,9 @@ export const questions = [
       "respostaCerta": "1) Verificar se câmera está fisicamente conectada e com LED ativo; 2) Reiniciar o sistema Teams Rooms; 3) Verificar no Teams Admin Center se a câmera aparece na lista de dispositivos da sala; 4) Verificar log do MTR para erros de câmera; 5) Testar câmera em reunião de diagnóstico; 6) Atualizar driver da câmera se necessário — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Verificar política de reunião do organizador — câmera desati... não é solução adequada para Teams Phone neste contexto",
-        "Apenas reiniciar o MTR resolve 100% dos problemas de câmera;... não é solução adequada para Teams Phone neste contexto",
-        "Problemas de câmera em MTR são sempre causados por firewall ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -4592,9 +4592,9 @@ export const questions = [
       "respostaCerta": "Volume do alto-falante zerado ou mudo no telefone, problema no alto-falante físico do dispositivo ou configuração de áudio incorreta no perfil do dispositivo — verificar controles de volume físicos, testar com fone de ouvido e verificar configuração de perfil de áudio no Teams Admin Center — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Codec de áudio incompatível impedindo decodificação de áudio... não é solução adequada para Teams Phone neste contexto",
-        "Política de chamada bloqueando recebimento de áudio de chama... não é solução adequada para Teams Phone neste contexto",
-        "Problema de rede bloqueando stream de áudio de entrada — ver... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -4617,9 +4617,9 @@ export const questions = [
       "respostaCerta": "Microsoft 365 Admin Center > Integridade > Preferências de notificação — configurar e-mail de notificação para incidentes e avisos do Teams; complementar com Microsoft 365 Service Health app no Teams para receber notificações diretamente no canal — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Assinar o feed RSS do portal de status do Microsoft 365 e us... não é solução adequada para Teams Phone neste contexto",
-        "Configurar webhook do Azure Monitor para capturar eventos de... não é solução adequada para Teams Phone neste contexto",
-        "Habilitar alertas no Microsoft Sentinel com conector de saúd... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "Microsoft Sentinel is a security/SIEM tool, not a phone system monitoring dashboard — it's not designed for tracking SBC connectivity or voice quality"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -4642,9 +4642,9 @@ export const questions = [
       "respostaCerta": "Linha do tempo do incidente (detecção, diagnóstico, resolução), causa raiz técnica identificada (ex.: certificado TLS SBC expirado), impacto no negócio quantificado, ações tomadas durante o incidente, ações corretivas implementadas e preventivas planejadas (ex.: alertas de expiração de certificado com 30 dias de antecedência) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Relatório de CQD do período do incidente exportado em PDF se... não é solução adequada para Teams Phone neste contexto",
-        "Lista completa de todos os usuários afetados com logs de cha... não é solução adequada para Teams Phone neste contexto",
-        "Apenas a descrição técnica do problema e o comando executado... não é solução adequada para Teams Phone neste contexto"
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -4667,9 +4667,9 @@ export const questions = [
       "respostaCerta": "Fase 1: Avaliação (inventário de números, ramais, funcionalidades PBX usadas); Fase 2: Design (escolha Direct Routing/Calling Plan, dimensionamento SBC, design de rede); Fase 3: Piloto (50 usuários não críticos); Fase 4: Migração em ondas por departamento; Fase 5: Cutover final e descomissionamento do PBX; Fase 6: Estabilização e suporte pós-migração — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Iniciar com fase de conformidade e eDiscovery ante... não é solução adequada Teams Phone neste contexto",
-        "Apenas configurar Teams Phone e enviar e-mail para... não é solução adequada Teams Phone neste contexto",
-        "Migrar todos os 1.500 usuários em um único fim de ... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -4692,9 +4692,9 @@ export const questions = [
       "respostaCerta": "Usar Power Automate com conector do Microsoft Teams Webinar (via Graph API de eventos) e conector do Salesforce para sincronizar registrantes automaticamente após cada registro ou ao final do webinar — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Exportar lista de registrantes manualmente do Teams em CSV e... não é solução adequada para Teams Phone neste contexto",
-        "Microsoft Teams possui integração nativa com Salesforce que ... não é solução adequada para Teams Phone neste contexto",
-        "Usar Microsoft Dynamics 365 como intermediário obrigatório —... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -4717,9 +4717,9 @@ export const questions = [
       "respostaCerta": "Executar Teams Network Assessment Tool por pelo menos 2 semanas em horário de pico medindo latência RTT, jitter e perda de pacotes; usar Teams Network Planner para calcular requisitos de banda; verificar capacidade de saída de internet, configuração de firewall (portas UDP), QoS e redundância de link — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Analisar relatórios históricos do CQD do site — se não há da... não é solução adequada para Teams Phone neste contexto",
-        "Apenas verificar velocidade de internet com Speedtest.net — ... não é solução adequada para Teams Phone neste contexto",
-        "Executar ping para microsoft.com e verificar se latência é m... não é solução adequada para Teams Phone neste contexto"
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -4742,9 +4742,9 @@ export const questions = [
       "respostaCerta": "Mutual TLS (mTLS) — o Teams valida o certificado do SBC verificando: FQDN corresponde ao registrado no New-CsOnlinePSTNGateway, certificado emitido por CA confiável da lista Microsoft, certificado não expirado e não revogado; o SBC também valida certificado da Microsoft — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Teams usa autenticação por senha compartilhada (sh... não é solução adequada Teams Phone neste contexto",
-        "Teams usa autenticação por IP — apenas o IP públic... não é solução adequada Teams Phone neste contexto",
-        "Teams usa autenticação por token OAuth 2.0 — o SBC... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -4767,9 +4767,9 @@ export const questions = [
       "respostaCerta": "O MTR funciona normalmente para áudio e compartilhamento de conteúdo — apenas o vídeo da sala não é transmitido; participantes remotos veem o avatar/nome da sala e podem ouvir perfeitamente via microfone e alto-falante da sala — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "O MTR entra em modo de emergência exibindo mensagem de erro ... não é solução adequada para Teams Phone neste contexto",
-        "Sem câmera o MTR bloqueia completamente o ingresso em reuniõ... não é solução adequada para Teams Phone neste contexto",
-        "O sistema usa automaticamente a câmera do notebook mais próx... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -4792,9 +4792,9 @@ export const questions = [
       "respostaCerta": "Código de verificação expirado (válido por tempo limitado), usuário sem licença Teams atribuída, política de acesso condicional bloqueando dispositivos não gerenciados, conta do usuário bloqueada no Azure AD ou clock do dispositivo muito desincronizado invalidando tokens — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "O FQDN do tenant Microsoft 365 não está configurado no telef... não é solução adequada para Teams Phone neste contexto",
-        "O código de verificação do Teams Admin Center é permanente —... não é solução adequada para Teams Phone neste contexto",
-        "Problema de firmware do telefone — versão desatualizada caus... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -4817,9 +4817,9 @@ export const questions = [
       "respostaCerta": "Configurar política de chamada com \"Encaminhamento de chamada e toque simultâneo para números externos\" desativado e atribuir aos usuários que não devem ter essa permissão — usuários ainda podem encaminhar para outros usuários Teams internos — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Remover a licença de Calling Plan do usuário para ... não é solução adequada Teams Phone neste contexto",
-        "Usar política de conformidade de comunicação para ... não é solução adequada Teams Phone neste contexto",
-        "Configurar regra de firewall bloqueando chamadas d... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -4842,9 +4842,9 @@ export const questions = [
       "respostaCerta": "Resumo inteligente com IA (capítulos de reunião, marcadores de momentos importantes, itens de ação identificados automaticamente), transcrição pesquisável, gravação com navegação por palestrante e perguntas ao Copilot sobre conteúdo da reunião — tudo acessível no Teams após a reunião — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Notificação automática por e-mail com resumo executivo gerad... não é solução adequada para Teams Phone neste contexto",
-        "Relatório de presença detalhado mostrando quanto tempo cada ... não é solução adequada para Teams Phone neste contexto",
-        "Apenas gravação automática e transcrição básica — recursos d... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -4867,9 +4867,9 @@ export const questions = [
       "respostaCerta": "Dashboard semanal do CQD com KPIs de Poor Stream Rate por site/modalidade, alertas automáticos no Teams Admin Center para degradação de qualidade, revisão mensal de tendências com comparação histórica, correlação de métricas de rede (QoS, utilização de WAN) com qualidade e loop de feedback com helpdesk para correlacionar tickets com dados do CQD — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Monitorar apenas uptime do SBC via SNMP — se o SBC está onli... não é solução adequada para Teams Phone neste contexto",
-        "Apenas configurar alertas de email quando usuários avaliam c... não é solução adequada para Teams Phone neste contexto",
-        "Executar Network Assessment Tool diariamente em cada site e ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -4892,9 +4892,9 @@ export const questions = [
       "respostaCerta": "O aplicativo de Supervisão de Fila de Chamada (Call Queue Real-time Analytics) no Teams Admin Center ou via parceiro CCaaS integrado — mostra status de agentes em tempo real, chamadas ativas e métricas de fila; relatórios históricos disponíveis no Teams Admin Center > Análise e relatórios — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Fila = múltiplos agentes, FIFO + Longest Idle, presença automática, timeout/redirecionamento",
       "cascasDeBanana": [
-        "Power BI com conector nativo de filas de chamada T... não é solução adequada Teams Phone neste contexto",
-        "Microsoft Viva Insights fornece relatório de dispo... não é solução adequada Teams Phone neste contexto",
-        "CQD com filtro de fila de chamada específica mostr... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead"
       ],
       "dicaOuro": "Longest Idle distribui para agente menos ocupado — combinar FIFO + Longest Idle reduz espera"
     }
@@ -4917,9 +4917,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Dispositivos > configurar regras de atualização do Teams Rooms — definir rings de atualização (automático ou manual), janela de manutenção e fase de implantação (piloto antes de amplo) para controlar o timing das atualizações do app MTR — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Desativar atualizações automáticas no registro do Windows do... não é solução adequada para Teams Phone neste contexto",
-        "Configurar política de Intune bloqueando atualizações de apl... não é solução adequada para Teams Phone neste contexto",
-        "Usar Windows Update for Business para controlar atualizações... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -4942,9 +4942,9 @@ export const questions = [
       "respostaCerta": "Verificar: certificados TLS dos SBCs (validade e renovação pendente), firmware de dispositivos (telefones, MTRs, painéis) com atualizações disponíveis, Poor Stream Rate no CQD por site, relatório PSTN de uso e anomalias, status de dispositivos offline, alertas ativos no Teams Admin Center e teste de chamada de emergência mensal — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Revisar tickets de suporte do mês e confirmar resolução — in... não é solução adequada para Teams Phone neste contexto",
-        "Apenas verificar uptime do SBC e confirmar que o serviço Tea... não é solução adequada para Teams Phone neste contexto",
-        "Executar Network Assessment Tool em todos os sites mensalmen... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -4967,9 +4967,9 @@ export const questions = [
       "respostaCerta": "ACS fornece APIs de vídeo, voz, chat e SMS para desenvolvimento de aplicativos personalizados de comunicação — pode integrar canais digitais (web chat, SMS, WhatsApp) com Teams Phone, permitindo que agentes Teams atendam múltiplos canais em uma interface unificada via arquitetura CCaaS customizada — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "ACS fornece apenas armazenamento de gravações de c... não é solução adequada Teams Phone neste contexto",
-        "ACS é usado apenas para autenticação de usuários e... não é solução adequada Teams Phone neste contexto",
-        "ACS substitui completamente o Teams Phone para con... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -4992,9 +4992,9 @@ export const questions = [
       "respostaCerta": "Direct Routing com SBC certificado é mais adequado — mantém contrato com operadora local existente, aproveita infraestrutura de rede madura para hospedar/conectar o SBC, dá controle total sobre roteamento e tem equipe técnica para gerenciar; Calling Plan não está disponível no Brasil; Operator Connect depende da operadora ser parceira Microsoft — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Azure Communication Services deve ser usado como P... não é solução adequada Teams Phone neste contexto",
-        "Operator Connect é automaticamente preferível ao D... não é solução adequada Teams Phone neste contexto",
-        "Microsoft Calling Plan é sempre a melhor opção por... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -5017,9 +5017,9 @@ export const questions = [
       "respostaCerta": "Chamada em grupo (Group Call Pickup) — configurável nas configurações de chamada do usuário no Teams; permite adicionar membros do grupo que recebem notificação e podem atender chamadas destinadas ao usuário principal — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Toque simultâneo configurado no Atendedor Automáti... não é solução adequada Teams Phone neste contexto",
-        "Fila de Chamada com os três usuários como agentes ... não é solução adequada Teams Phone neste contexto",
-        "Delegação de chamadas — configurar os dois colegas... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -5042,9 +5042,9 @@ export const questions = [
       "respostaCerta": "Colocar a chamada atual em espera e atender a nova chamada, rejeitar a nova chamada, ou usar a função de mesclar chamadas para criar uma conferência de 3 vias entre todos os participantes — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Transferir a chamada atual antes de atender a nova... não é solução adequada Teams Phone neste contexto",
-        "A segunda chamada é automaticamente direcionada ao... não é solução adequada Teams Phone neste contexto",
-        "Apenas rejeitar a segunda chamada — Teams Phone nã... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -5067,9 +5067,9 @@ export const questions = [
       "respostaCerta": "Optimize: endpoints mais críticos para Teams (sinalização e mídia em tempo real) — devem ter bypass completo de proxy/inspeção e QoS aplicado; Allow: endpoints importantes mas com menor sensibilidade a latência — acesso direto recomendado mas inspeção leve tolerável — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Não há diferença prática — ambas as categorias têm os mesmos... não é solução adequada para Teams Phone neste contexto",
-        "Optimize é para tráfego criptografado; Allow é para tráfego ... não é solução adequada para Teams Phone neste contexto",
-        "Optimize requer ExpressRoute obrigatório; Allow pode usar in... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -5092,9 +5092,9 @@ export const questions = [
       "respostaCerta": "Latência de 180ms causa atraso perceptível na conversa (eco e sobreposição de fala), degradando experiência de voz — mitigação: implementar saída de internet local na filial para reduzir latência, evitar backhaul ao datacenter central e verificar se há congestionamento no link WAN — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Latência alta afeta apenas videoconferências — chamadas de v... não é solução adequada para Teams Phone neste contexto",
-        "Implementar ExpressRoute resolve automaticamente o problema ... não é solução adequada para Teams Phone neste contexto",
-        "180ms é abaixo do limite de 200ms — nenhuma ação necessária ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -5117,9 +5117,9 @@ export const questions = [
       "respostaCerta": "MTR Android usa Android Enterprise Dedicated Device mode (sem conta de usuário pessoal), atualizações do app Teams Rooms são gerenciadas pela Google Play Store gerenciada via Intune, o sistema operacional Android tem ciclo de atualização diferente do Windows e algumas funcionalidades avançadas do MTR Pro Portal podem ter suporte limitado em Android vs. Windows — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "MTR Android não é suportado pelo Intune — requer solução MDM... não é solução adequada para Teams Phone neste contexto",
-        "MTR Android e MTR Windows são idênticos em gerenciamento — a... não é solução adequada para Teams Phone neste contexto",
-        "MTR Android tem funcionalidade reduzida e não suporta reuniõ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -5142,9 +5142,9 @@ export const questions = [
       "respostaCerta": "IntelliFrame usa IA para capturar uma visão panorâmica da sala e criar enquadramentos individuais virtuais de cada participante presencial — participantes remotos veem cada pessoa da sala em seu próprio quadro de vídeo individual, tornando a experiência mais equitativa entre presenciais e remotos — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "IntelliFrame é o sistema de gerenciamento centralizado de câ... não é solução adequada para Teams Phone neste contexto",
-        "IntelliFrame adiciona moldura (frame) personalizada com logo... não é solução adequada para Teams Phone neste contexto",
-        "IntelliFrame é o modo de enquadramento automático que zoom n... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -5167,9 +5167,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Voz > Números de telefone > Adicionar — selecionar país (EUA), tipo de número (usuário), quantidade (20) e área geográfica desejada; os números são disponibilizados imediatamente para atribuição — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Calling Plan = Microsoft cuida de tudo, você só paga e disca",
       "cascasDeBanana": [
-        "Abrir ticket no Microsoft 365 Admin Center > Supor... não é solução adequada Teams Phone neste contexto",
-        "Contatar a Microsoft por telefone ou e-mail solici... não é solução adequada Teams Phone neste contexto",
-        "Comprar números de uma operadora PSTN externa e im... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Disponibilidade por país varia — verificar suporte regional Microsoft antes contratação"
     }
@@ -5192,9 +5192,9 @@ export const questions = [
       "respostaCerta": "Política de chamada (Calling Policy) — habilitar \"Música em espera personalizada\" e fazer upload do arquivo de áudio (MP3/WAV) da música tema; atribuir a política aos usuários que devem usar a música personalizada — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Substituir o arquivo de áudio padrão do Teams no s... não é solução adequada Teams Phone neste contexto",
-        "Criar Power Automate flow que detecta chamadas em ... não é solução adequada Teams Phone neste contexto",
-        "Configurar na conta de recurso do Atendedor Automá... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -5217,9 +5217,9 @@ export const questions = [
       "respostaCerta": "Licença Microsoft 365 Copilot atribuída ao usuário organizador, transcrição de reunião habilitada na política de reunião, Teams e Microsoft 365 Apps atualizados para versões compatíveis e tenant configurado para receber serviços Copilot (região suportada) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Licença Azure OpenAI Service atribuída ao tenant para proces... não é solução adequada para Teams Phone neste contexto",
-        "Apenas licença Teams Premium — Copilot está incluído no Team... não é solução adequada para Teams Phone neste contexto",
-        "Licença Microsoft 365 E5 com Compliance — Copilot de reuniõe... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -5242,9 +5242,9 @@ export const questions = [
       "respostaCerta": "Política de reunião com \"Quem pode ignorar o lobby\" configurado como \"Somente organizadores e co-organizadores\" e desativar ingresso simultâneo — o organizador admite manualmente cada participante do lobby um de cada vez conforme necessário — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Configurar Atendedor Automático como pré-sala que autentica ... não é solução adequada para Teams Phone neste contexto",
-        "Criar uma reunião separada para cada candidato com link únic... não é solução adequada para Teams Phone neste contexto",
-        "Usar o recurso de Salas Simultâneas com uma sala por candida... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -5267,9 +5267,9 @@ export const questions = [
       "respostaCerta": "Mudança de VLAN, sub-rede ou configuração de DHCP após atualização de rede impedindo que dispositivos obtenham conectividade ou se autentiquem — verificar configuração de rede dos switches para portas onde os telefones estão conectados, confirmar VLAN de voz e DHCP corretos e reiniciar dispositivos remotamente pelo Teams Admin Center — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Certificados dos dispositivos expiraram na data da atualizaç... não é solução adequada para Teams Phone neste contexto",
-        "Licenças dos usuários expiraram simultaneamente após atualiz... não é solução adequada para Teams Phone neste contexto",
-        "Firmware desatualizado nos 15 telefones causando incompatibi... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -5292,9 +5292,9 @@ export const questions = [
       "respostaCerta": "Indica que a chamada foi uma chamada PSTN via Direct Routing ou Calling Plan — G.711 é o codec padrão para interoperabilidade com a PSTN; chamadas Teams-to-Teams usam SILK/Opus para melhor qualidade; isso é comportamento normal e esperado para chamadas externas — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Indica configuração incorreta no SBC que está rejeitando cod... não é solução adequada para Teams Phone neste contexto",
-        "Indica problema de compatibilidade — o cliente Teams do usuá... não é solução adequada para Teams Phone neste contexto",
-        "Indica que a chamada foi feita por dispositivo móvel — dispo... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -5317,9 +5317,9 @@ export const questions = [
       "respostaCerta": "Usar OpenSSL com comando: openssl s_client -connect sip.pstnhub.microsoft.com:5061 — verifica handshake TLS, valida cadeia de certificados e confirma conectividade na porta 5061; complementar com teste de resolução DNS do FQDN do SBC a partir da internet — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Usar telnet sip.pstnhub.microsoft.com 5061 para te... não é solução adequada Teams Phone neste contexto",
-        "Usar ping para sip.pstnhub.microsoft.com para veri... não é solução adequada Teams Phone neste contexto",
-        "Executar Teams Network Assessment Tool com modo SB... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -5342,9 +5342,9 @@ export const questions = [
       "respostaCerta": "Criar uma Voice Route com dois gateways (SBC-SP e SBC-RJ) com prioridades diferentes na mesma rota — Teams tenta SBC-SP primeiro (Priority 1) e falha automaticamente para SBC-RJ (Priority 2) se SP estiver indisponível; monitorar status via Health Dashboard — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Configurar dois tenants Microsoft 365 separados co... não é solução adequada Teams Phone neste contexto",
-        "Criar dois Dial Plans separados — um para SP e um ... não é solução adequada Teams Phone neste contexto",
-        "Usar Azure Traffic Manager com perfil de failover ... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -5367,9 +5367,9 @@ export const questions = [
       "respostaCerta": "O Teams Panel cria automaticamente uma reunião no calendário do Exchange Online da conta de recurso da sala pelo período solicitado, bloqueia a sala no sistema de agendamento e atualiza o status no painel para \"Ocupado\" com o tempo restante exibido — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "A reserva é criada no Microsoft Bookings automaticamente com... não é solução adequada para Teams Phone neste contexto",
-        "O painel envia e-mail de solicitação ao administrador da sal... não é solução adequada para Teams Phone neste contexto",
-        "Exchange Online não participa de roteamento PSTN Teams Phone — não é componente Direct Routing"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -5392,9 +5392,9 @@ export const questions = [
       "respostaCerta": "1) Via política de grupo (GPO) / Intune — configura QoS no sistema operacional Windows para que o cliente Teams marque pacotes com DSCP antes de enviar à rede (mais confiável, aplicado no endpoint); 2) Via switches/roteadores gerenciados — reclassificam pacotes baseados em porta/IP independentemente do endpoint (mais robusto mas requer infraestrutura gerenciada) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "1) Via Azure Policy aplicada ao tenant Microsoft 365; 2) Via... não é solução adequada para Teams Phone neste contexto",
-        "1) Via cliente Teams Desktop com configuração manual por usu... não é solução adequada para Teams Phone neste contexto",
-        "1) Via Teams Admin Center com política de QoS global; 2) Via... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -5417,9 +5417,9 @@ export const questions = [
       "respostaCerta": "Comparar dados do CQD antes e depois da data da atualização filtrando pelo site afetado; analisar dimensões de sub-rede, tipo de transporte (UDP vs. TCP) e Connectivity Ice para identificar mudança de comportamento; cruzar com métricas de jitter, latência e perda de pacotes para identificar qual parâmetro piorou após a mudança — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Abrir ticket Microsoft com os dados do CQD — apenas o suport... não é solução adequada para Teams Phone neste contexto",
-        "Executar Network Assessment Tool antes e depois da atualizaç... não é solução adequada para Teams Phone neste contexto",
-        "Verificar se houve incidente de serviço Teams no período — p... não é solução adequada para Teams Phone neste contexto"
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -5442,9 +5442,9 @@ export const questions = [
       "respostaCerta": "Criar três Online Voicemail Policies com configurações específicas para cada grupo via New-CsOnlineVoicemailPolicy e atribuir via Grant-CsOnlineVoicemailPolicy; para suporte, desativar correio de voz na política e configurar política de chamada com encaminhamento para fila de chamada em vez de voicemail — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Política chamada = permissões granulares usuário (encaminhamento, toque, delegação)",
       "cascasDeBanana": [
-        "Criar três policies no Teams Admin Center > Voz > ... não é solução adequada Teams Phone neste contexto",
-        "Exchange Online não participa roteamento PSTN Teams Phone — não é componente Direct Routing",
-        "Configurar três Atendedores Automáticos separados ... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Política pode bloquear encaminhamento externo para controlar custos"
     }
@@ -5467,9 +5467,9 @@ export const questions = [
       "respostaCerta": "Open office barulhento: headset com certificação \"Open Office\" ou superior com cancelamento de ruído ativo (ANC) robusto e supressão de ruído de microfone avançada; executivo em escritório privativo: headset \"Professional\" ou \"Business\" com qualidade de áudio premium, conforto para uso prolongado e integração com botões Teams — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Ambos os perfis devem usar o mesmo modelo — diferenciação po... não é solução adequada para Teams Phone neste contexto",
-        "Executivos devem usar speakerphone de mesa — headsets não sã... não é solução adequada para Teams Phone neste contexto",
-        "Desenvolvedores em open office não precisam de headset certi... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -5492,9 +5492,9 @@ export const questions = [
       "respostaCerta": "Timeout de sessão de firewall ou proxy configurado para 30 minutos — o equipamento de rede encerra sessões UDP/TCP ociosas após esse período, derrubando a chamada; solução: aumentar timeout de sessão para pelo menos 60 minutos para fluxos de mídia e sinalização Teams — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Expiração de token de autenticação OAuth 2.0 após 30 minutos... não é solução adequada para Teams Phone neste contexto",
-        "Limite de duração de chamada configurado na política de cham... não é solução adequada para Teams Phone neste contexto",
-        "Limitação de hardware do SBC que reinicia sessões SIP após 3... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -5517,9 +5517,9 @@ export const questions = [
       "respostaCerta": "O operador é um destino de fallback configurado no AA — chamadores podem pressionar \"0\" a qualquer momento nos menus para ser transferidos diretamente ao operador (usuário Teams, fila de chamada ou número externo) sem precisar navegar pelos menus completos — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "O operador é o número PSTN principal da empresa qu... não é solução adequada Teams Phone neste contexto",
-        "O operador é um agente especial que monitora todas... não é solução adequada Teams Phone neste contexto",
-        "O operador é o administrador que gerencia o AA e r... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -5542,9 +5542,9 @@ export const questions = [
       "respostaCerta": "Verificar método de transmissão DTMF configurado no SBC — deve ser compatível com o PBX legado: RFC 2833/RFC 4733 (out-of-band, preferido para VoIP), SIP INFO ou DTMF in-band; Teams prefere RFC 2833/4733 e o SBC deve transcodificar se o PBX usar método diferente — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Aumentar o gain de áudio no SBC para amplificar os... não é solução adequada Teams Phone neste contexto",
-        "Verificar se o codec G.729 está habilitado — este ... não é solução adequada Teams Phone neste contexto",
-        "Configurar QoS com prioridade máxima para pacotes ... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -5567,9 +5567,9 @@ export const questions = [
       "respostaCerta": "Implementar Direct Routing configurando um número de serviço local brasileiro no SBC como número de discagem para audioconferência (conferência PSTN via Direct Routing); ou adquirir números de serviço do Brasil via operadora parceira Operator Connect se disponível — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Usar apenas números internacionais (toll) ou gratuitos (toll... não é solução adequada para Teams Phone neste contexto",
-        "A Microsoft garante contratualmente números locais para todo... não é solução adequada para Teams Phone neste contexto",
-        "Configurar Power Automate que intercepta convites de reunião... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -5592,9 +5592,9 @@ export const questions = [
       "respostaCerta": "Poor Stream Rate no CQD segmentado por site e tipo de conexão, métricas de latência/jitter/perda de pacotes no Per-user Call Analytics, feedback qualitativo dos usuários piloto (MOS subjetivo), taxa de chamadas caindo e problemas de estabelecimento de chamada, além de teste de todos os cenários de uso (chamadas internas, PSTN, reuniões, AA, filas) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Relatório de uso do Teams Admin Center mostrando minutos de ... não é solução adequada para Teams Phone neste contexto",
-        "Número de tickets de suporte abertos durante o piloto — únic... não é solução adequada para Teams Phone neste contexto",
-        "Apenas velocidade de internet de cada usuário piloto e uptim... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -5617,9 +5617,9 @@ export const questions = [
       "respostaCerta": "Usar Microsoft Entra ID Certificate-Based Authentication (CBA) — emitir certificado de dispositivo via PKI corporativa ou Microsoft CA, importar certificado no MTR Windows, configurar a conta de recurso no Entra ID para aceitar autenticação por certificado e configurar o cliente Teams Rooms para usar o certificado para login — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Usar Managed Identity do Azure para autenticar o MTR Windows... não é solução adequada para Teams Phone neste contexto",
-        "Configurar FIDO2 security key no MTR Windows conectada via U... não é solução adequada para Teams Phone neste contexto",
-        "Usar Windows Hello for Business no dispositivo MTR Windows p... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -5642,9 +5642,9 @@ export const questions = [
       "respostaCerta": "Direct Routing TCO inclui: licença Teams Phone add-on (obrigatória), custo do SBC (hardware físico ~$5-15k ou SBC virtual em Azure ~$200-500/mês), contrato SIP trunk com operadora local, custo de implementação inicial e manutenção técnica ongoing — Calling Plan não disponível no Brasil, tornando Direct Routing ou Operator Connect as únicas opções viáveis — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Calling Plan = Microsoft cuida de tudo, você só paga e disca",
       "cascasDeBanana": [
-        "Os custos são idênticos — a Microsoft padronizou p... não é solução adequada Teams Phone neste contexto",
-        "Calling Plan é sempre mais barato que Direct Routi... não é solução adequada Teams Phone neste contexto",
-        "Direct Routing é sempre mais caro por exigir infra... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Disponibilidade por país varia — verificar suporte regional Microsoft antes contratação"
     }
@@ -5667,9 +5667,9 @@ export const questions = [
       "respostaCerta": "(A) Call Quality Dashboard (CQD); (B) Per-user Call Analytics no Teams Admin Center; (C) Health Dashboard for Direct Routing no Teams Admin Center; (D) Teams Network Assessment Tool executada no site — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "(A) Microsoft Sentinel; (B) Log de auditoria Purview; (C) Lo... não é solução adequada para Teams Phone neste contexto",
-        "(A) Teams Admin Center > Relatórios; (B) CQD com filtro de U... não é solução adequada para Teams Phone neste contexto",
-        "(A) Per-user Call Analytics; (B) CQD com filtro de usuário; ... não é solução adequada para Teams Phone neste contexto"
+        "Microsoft Sentinel is a security/SIEM tool, not a phone system monitoring dashboard — it's not designed for tracking SBC connectivity or voice quality",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -5692,9 +5692,9 @@ export const questions = [
       "respostaCerta": "Calling Plan: Microsoft gerencia tudo (numeração, roteamento, infraestrutura PSTN) — menor complexidade técnica; Operator Connect: operadora parceira gerencia infraestrutura PSTN e configuração de números via Teams Admin Center — complexidade intermediária; Direct Routing: cliente gerencia SBC e conectividade com operadora — maior flexibilidade e controle mas maior responsabilidade técnica — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "Direct Routing é o mais simples pois usa hardware ... não é solução adequada Teams Phone neste contexto",
-        "As três opções têm o mesmo nível de complexidade —... não é solução adequada Teams Phone neste contexto",
-        "Operator Connect e Calling Plan são idênticos tecn... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -5717,9 +5717,9 @@ export const questions = [
       "respostaCerta": "Configurar proxy no Windows via netsh winhttp set proxy ou nas configurações de proxy do sistema Windows; adicionar exceções (bypass) para todos os endpoints Microsoft 365 categoria \"Optimize\" que não devem passar pelo proxy; verificar se o proxy suporta CONNECT tunneling para WebSocket usado pelo Teams — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Teams Rooms é dispositivo sala, não gateway PSTN — não faz roteamento de chamadas externas",
-        "MTR Windows não suporta configuração de proxy — deve ser col... não é solução adequada para Teams Phone neste contexto",
-        "Teams Rooms é dispositivo sala, não gateway PSTN — não faz roteamento de chamadas externas"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -5742,9 +5742,9 @@ export const questions = [
       "respostaCerta": "Habilitar gravação automática na política de reunião + configurar política de retenção no Microsoft Purview aplicada ao SharePoint/OneDrive com retenção de 7 anos e ação de preservação (bloqueio de exclusão) + aplicar Preservation Lock para tornar a política imutável durante o período legal — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Configurar backup automático de gravações para Azure Blob St... não é solução adequada para Teams Phone neste contexto",
-        "Instruir usuários a não excluir gravações e auditar exclusõe... não é solução adequada para Teams Phone neste contexto",
-        "Criar grupo de segurança \"Gravações Protegidas\" no SharePoin... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -5767,9 +5767,9 @@ export const questions = [
       "respostaCerta": "Configurar política de chamada de emergência com \"Modo de notificação de emergência\" habilitado — especificar número ou grupo Teams que recebe chamada de conferência ou notificação de chat em tempo real quando chamada de emergência é feita, incluindo informação de localização do chamador baseada na topologia de rede — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Usar Microsoft Sentinel com regra analítica que de... não é solução adequada Teams Phone neste contexto",
-        "Configurar Atendedor Automático especial para núme... não é solução adequada Teams Phone neste contexto",
-        "Configurar Power Automate com gatilho de chamada d... não é solução adequada Teams Phone neste contexto"
+        "Microsoft Sentinel is a security/SIEM tool, not a phone system monitoring dashboard — it's not designed for tracking SBC connectivity or voice quality",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -5792,9 +5792,9 @@ export const questions = [
       "respostaCerta": "Azure Peering Service melhora a conectividade com a rede Microsoft usando roteamento preferencial (telemetria de prefixo) — tráfego Teams é roteado pelo ponto de peering Microsoft mais próximo com menor latência, especialmente beneficioso para ISPs parceiros que implementam o serviço para seus clientes corporativos — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Azure Peering Service é um CDN da Microsoft que faz cache de... não é solução adequada para Teams Phone neste contexto",
-        "Azure Peering Service é o serviço de DNS da Microsoft que re... não é solução adequada para Teams Phone neste contexto",
-        "Azure Peering Service é um substituto do ExpressRoute que fo... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -5817,9 +5817,9 @@ export const questions = [
       "respostaCerta": "Bluetooth Low Energy (BLE) — o MTR transmite sinal BLE que é detectado pelo cliente Teams no laptop do usuário quando está próximo da sala; pré-requisito: Bluetooth habilitado no laptop, cliente Teams atualizado e funcionalidade habilitada nas configurações do MTR e política do Teams Admin Center — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "QR Code exibido no display do MTR que o usuário escaneia com... não é solução adequada para Teams Phone neste contexto",
-        "Wi-Fi Direct — o MTR cria rede ad-hoc que detecta dispositiv... não é solução adequada para Teams Phone neste contexto",
-        "NFC (Near Field Communication) — usuário aproxima o laptop d... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -5842,9 +5842,9 @@ export const questions = [
       "respostaCerta": "Microsoft fornece número de teste de emergência (933 nos EUA) que toca em serviço de teste e reproduz a localização detectada pelo sistema — permite validar endereço cívico transmitido sem acionar serviços de emergência reais; complementar verificando topologia de rede e mapeamento de sub-rede no Teams Admin Center — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Fazer chamada 911 em horário comercial informando previament... não é solução adequada para Teams Phone neste contexto",
-        "Usar Per-user Call Analytics para ver localização transmitid... não é solução adequada para Teams Phone neste contexto",
-        "Verificar o log de auditoria do Purview após tentativa de ch... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -5867,9 +5867,9 @@ export const questions = [
       "respostaCerta": "Teams Admin Center > Voz > Números de telefone — visualiza todos os números com status (atribuído/não atribuído), tipo (usuário/serviço), usuário/serviço associado e tipo de conectividade (Calling Plan/Direct Routing/Operator Connect); exportar em CSV para análise detalhada — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Microsoft 365 Admin Center > Faturamento > Números... não é solução adequada Teams Phone neste contexto",
-        "Azure AD > Usuários > Exportar com atributo Teleph... não é solução adequada Teams Phone neste contexto",
-        "PowerShell com Get-CsPhoneNumberAssignment -Top 10... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -5892,9 +5892,9 @@ export const questions = [
       "respostaCerta": "Teams Essentials: reuniões de até 30 horas, 300 participantes, 10 GB de armazenamento em nuvem — sem integração completa com Microsoft 365 Apps, Exchange e SharePoint; Business Basic e superior: mesmos limites de reunião mas com ecossistema completo M365, SharePoint, Exchange e integração nativa com aplicativos Office — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Teams Essentials limita reuniões a 60 minutos e 100 particip... não é solução adequada para Teams Phone neste contexto",
-        "Teams Essentials não suporta gravação de reuniões ou transcr... não é solução adequada para Teams Phone neste contexto",
-        "Não há diferença em funcionalidades de reunião entre licença... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -5917,9 +5917,9 @@ export const questions = [
       "respostaCerta": "Alcance de captação de microfone adequado ao tamanho da sala (360° para mesas de reunião), cancelamento de eco acústico, supressão de ruído, botões físicos de controle integrados ao Teams (mudo, atender, desligar), conectividade USB e certificação Microsoft Teams confirmada no catálogo oficial — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Resolução de câmera HD integrada ao speakerphone, suporte Bl... não é solução adequada para Teams Phone neste contexto",
-        "Preço mais baixo do mercado — certificação Teams não é neces... não é solução adequada para Teams Phone neste contexto",
-        "Compatibilidade com Zoom e Google Meet além do Teams — dispo... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -5942,9 +5942,9 @@ export const questions = [
       "respostaCerta": "Criar Voice Routing Policies regionais com PSTN Usages específicos para cada região e SBCs correspondentes — atribuir a política regional correta aos usuários de cada região; complementar com topologia de rede mapeando sub-redes regionais para suportar LBR quando regulatoriamente necessário — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Criar tenant Microsoft 365 separado por região geo... não é solução adequada Teams Phone neste contexto",
-        "Usar apenas um Voice Route global com todos os SBC... não é solução adequada Teams Phone neste contexto",
-        "Usar Azure Traffic Manager para rotear chamadas PS... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Mediant, Acme/Ixia — verificar compatibilidade Microsoft"
     }
@@ -5967,9 +5967,9 @@ export const questions = [
       "respostaCerta": "No CQD usar dimensões de endpoint: \"First/Second Client Device Name\" para nome do dispositivo de áudio, \"First/Second OS\" para sistema operacional, \"First/Second Client Version\" para versão do cliente Teams — cruzar com Poor Stream Rate para identificar qual dispositivo/versão concentra problemas e recomendar atualização ou substituição — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Microsoft Intune com relatório de dispositivos e cruzamento ... não é solução adequada para Teams Phone neste contexto",
-        "Per-user Call Analytics individual de cada usuário com probl... não é solução adequada para Teams Phone neste contexto",
-        "Exportar lista de usuários com streams ruins do CQD e verifi... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -5992,9 +5992,9 @@ export const questions = [
       "respostaCerta": "Usar banda 5GHz dedicada para voz/vídeo com SSID separado, habilitar WMM (Wi-Fi Multimedia) para QoS wireless, configurar roaming rápido (802.11r Fast BSS Transition), desativar power saving em adaptadores Wi-Fi de dispositivos corporativos via GPO/Intune, garantir cobertura adequada com SNR > 25dB e evitar sobreposição de canais nos APs vizinhos — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Usar apenas banda 2.4GHz para maior alcance e penetração em ... não é solução adequada para Teams Phone neste contexto",
-        "Configurar canal fixo 1 em todos os APs para evitar interfer... não é solução adequada para Teams Phone neste contexto",
-        "Aumentar potência de transmissão dos APs ao máximo para gara... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -6017,9 +6017,9 @@ export const questions = [
       "respostaCerta": "Cada país tem regulamentações próprias de telecomunicações (ex.: necessidade de endereço local, documentação de pessoa jurídica local, restrições de portabilidade) — verificar disponibilidade de Calling Plan/Operator Connect por país; para países sem essas opções usar Direct Routing com operadora local; considerar requisitos de emergência locais (E911 equivalente por país) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Números de telefone Microsoft funcionam globalment... não é solução adequada Teams Phone neste contexto",
-        "A Microsoft gerencia todas as regulamentações loca... não é solução adequada Teams Phone neste contexto",
-        "Usar apenas números americanos para toda a empresa... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -6042,9 +6042,9 @@ export const questions = [
       "respostaCerta": "MTR suporta modo de \"Passthrough de HDMI\" ou \"Conteúdo apenas\" — quando um dispositivo é conectado via HDMI ao MTR, o conteúdo pode ser exibido nos monitores da sala sem iniciar reunião Teams; configuração via SkypeSettings.xml habilitando entrada HDMI ou via interface do MTR — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "MTR só funciona quando conectado a uma reunião Teams ativa —... não é solução adequada para Teams Phone neste contexto",
-        "Configurar um segundo PC dedicado para apresentações locais ... não é solução adequada para Teams Phone neste contexto",
-        "Desinstalar o aplicativo Teams Rooms temporariamente para us... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -6067,9 +6067,9 @@ export const questions = [
       "respostaCerta": "Política de reunião — configurar \"Quem pode apresentar\" como \"Somente organizadores\" ou \"Pessoas específicas\" e desativar a permissão de participantes promoverem outros a apresentadores nas configurações de funções de reunião da política — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Habilitar modo de conformidade de reunião no Teams Premium q... não é solução adequada para Teams Phone neste contexto",
-        "Configurar rótulo de sensibilidade \"Confidencial\" que automa... não é solução adequada para Teams Phone neste contexto",
-        "Configurar política de acesso condicional que valida funções... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -6092,9 +6092,9 @@ export const questions = [
       "respostaCerta": "Verificar codec negociado para chamadas móveis vs. fixos no Per-user Call Analytics (possível transcodificação ineficiente no SBC), verificar se o SBC tem configuração específica para troncos móveis vs. fixos, analisar logs SIP do SBC para ver se há re-INVITE com mudança de codec e verificar com a operadora se há problema na interconexão com redes móveis específicas — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Problema de cobertura 4G/5G do destinatário — qual... não é solução adequada Teams Phone neste contexto",
-        "Versão desatualizada do cliente Teams do usuário c... não é solução adequada Teams Phone neste contexto",
-        "Firewall corporativo bloqueando codecs específicos... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -6117,9 +6117,9 @@ export const questions = [
       "respostaCerta": "Coletar dados do CQD dos últimos 30-90 dias por modalidade (Teams, PSTN, conferência), calcular Poor Stream Rate baseline por site/departamento/tipo de dispositivo, documentar top 10 problemas identificados, registrar métricas atuais de jitter/latência/perda de pacotes por site e criar dashboard Power BI com snapshot do estado atual como referência para comparação futura — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Solicitar ao suporte Microsoft relatório de qualidade histór... não é solução adequada para Teams Phone neste contexto",
-        "Apenas documentar tickets de suporte abertos no mês atual — ... não é solução adequada para Teams Phone neste contexto",
-        "Executar Network Assessment Tool por 1 dia e usar os resulta... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -6142,9 +6142,9 @@ export const questions = [
       "respostaCerta": "Verificar se o modelo ainda está na lista de dispositivos suportados Microsoft (end of support), disponibilidade de atualizações de firmware e segurança, compatibilidade com novas funcionalidades do Teams (ex.: Teams Phone Mobile, hot desking), taxa de falhas e chamados de suporte, e custo de manutenção vs. custo de substituição por modelos certificados atuais — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Substituir apenas dispositivos com firmware abaixo da versão... não é solução adequada para Teams Phone neste contexto",
-        "Substituir automaticamente qualquer dispositivo com mais de ... não é solução adequada para Teams Phone neste contexto",
-        "Manter dispositivos enquanto funcionam — não há critério téc... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -6167,9 +6167,9 @@ export const questions = [
       "respostaCerta": "O suplemento Teams para Outlook requer conexão com Exchange Online ou Exchange On-Premises 2016 CU3+ com OAuth configurado — verificar versão do Exchange, configurar OAuth entre Exchange On-Premises e Azure AD via Hybrid Modern Authentication, garantir que autodiscover está funcionando corretamente e que o suplemento Teams está habilitado na política de suplementos do Exchange — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Exchange Online não participa de roteamento PSTN Teams Phone — não é componente Direct Routing",
-        "Reinstalar o cliente Teams em cada computador e reparar a in... não é solução adequada para Teams Phone neste contexto",
-        "Habilitar a integração Teams-Outlook no Teams Admin Center >... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "Location-Based Routing does not require installing client agents — it uses network site configurations and subnet mappings in Teams admin center",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -6192,9 +6192,9 @@ export const questions = [
       "respostaCerta": "Possível fraude de telecomunicações (IRSF — International Revenue Share Fraud ou TDoS) via comprometimento de conta Teams ou configuração inadequada do SBC — mitigação: desativar chamadas internacionais para usuários que não necessitam via política de chamada, implementar alertas de anomalia de uso PSTN, revisar contas comprometidas no Entra ID Protection e verificar regras de roteamento do SBC para chamadas não autorizadas — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Problema de faturamento Microsoft — chamadas fanta... não é solução adequada Teams Phone neste contexto",
-        "Usuários esqueceram de registrar chamadas internac... não é solução adequada Teams Phone neste contexto",
-        "Bug no relatório PSTN do Teams Admin Center que du... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -6217,9 +6217,9 @@ export const questions = [
       "respostaCerta": "Microsoft garante SLA de 99,9% de uptime para Teams (Microsoft Online Services SLA documentado em microsoft.com/licensing/docs) — monitorar cumprimento via Microsoft 365 Admin Center > Integridade do serviço com histórico de incidentes; Microsoft emite créditos de serviço automaticamente quando SLA é violado; relatório mensal de disponibilidade disponível no portal — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Teams não tem SLA publicado — disponibilidade é baseada em \"... não é solução adequada para Teams Phone neste contexto",
-        "Monitorar SLA usando Azure Monitor com alerts de disponibili... não é solução adequada para Teams Phone neste contexto",
-        "SLA do Teams é de 99,99% de uptime — qualquer indisponibilid... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -6242,9 +6242,9 @@ export const questions = [
       "respostaCerta": "PSTN: Direct Routing com SBC certificado redundante (SP + RJ) conectado a operadora local via SIP trunk; Dispositivos: MTR on Windows/Android para salas grandes, barras de colaboração para huddle rooms, Teams Panels nas entradas, telefones IP para usuários de voz intensivo; Rede: QoS com DSCP em todos os sites, saída de internet local por site, Network Assessment Tool pré-implantação; Monitoramento: CQD com building data carregado, alertas no Teams Admin Center, Health Dashboard para SBCs, revisão mensal de qualidade com Power BI — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Teams Rooms é dispositivo sala, não gateway PSTN — não faz roteamento de chamadas externas",
-        "Calling Plan Microsoft para PSTN (mais simples), Surface Hub... não é solução adequada para Teams Phone neste contexto",
-        "Direct Routing com único SBC central em São Paulo, webcams U... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -6267,9 +6267,9 @@ export const questions = [
       "respostaCerta": "Dynamic Emergency Calling (E911) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Call Park Policy... não é solução adequada para Teams Phone neste contexto",
-        "Location Information Server externo sem integração... não é solução adequada para Teams Phone neste contexto",
-        "Static Emergency Policy... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Lync Mediant, Acme/Ixia, etc. — verificar lista compatibilidade Microsoft"
     }
@@ -6292,9 +6292,9 @@ export const questions = [
       "respostaCerta": "Session Border Controller (SBC) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Teams Gateway Service... não é solução adequada para Teams Phone neste contexto",
-        "Azure Communication Services... não é solução adequada para Teams Phone neste contexto",
-        "SIP Proxy interno do Teams... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Lync Mediant, Acme/Ixia, etc. — verificar lista compatibilidade Microsoft"
     }
@@ -6317,9 +6317,9 @@ export const questions = [
       "respostaCerta": "Solicitar a portabilidade diretamente pelo Teams Admin Center via Operator Connect — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Operator Connect = operadora terceira + SBC dela, meio termo entre Calling Plan e Direct Routing",
       "cascasDeBanana": [
-        "Configurar o SBC localmente... não é solução adequada para Teams Phone neste contexto",
-        "Criar um trunk SIP manual... não é solução adequada para Teams Phone neste contexto",
-        "Adquirir novos números no PSTN... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Operadora parceira em Operator Connect gerencia tanto PSTN quanto SBC por você"
     }
@@ -6342,9 +6342,9 @@ export const questions = [
       "respostaCerta": "Plano de Chamada Doméstico — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "Plano de Chamada Pay-As-You-Go... não é solução adequada Teams Phone neste contexto",
-        "Plano de Chamada Internacional... não é solução adequada Teams Phone neste contexto",
-        "Plano de Chamada Zone-Based... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -6367,9 +6367,9 @@ export const questions = [
       "respostaCerta": "Um sistema de menu de voz automatizado que direciona chamadas — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "Um ramal exclusivo para usuários VIP... não é solução adequada Teams Phone neste contexto",
-        "Um agente virtual baseado em IA generativa... não é solução adequada Teams Phone neste contexto",
-        "Um serviço de transcrição de chamadas... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -6392,9 +6392,9 @@ export const questions = [
       "respostaCerta": "Longest Idle — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Fila = múltiplos agentes, FIFO + Longest Idle + presença automática",
       "cascasDeBanana": [
-        "Round Robin... não é solução adequada para Teams Phone neste contexto",
-        "Serial... não é solução adequada para Teams Phone neste contexto",
-        "Attendant Routing... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Longest Idle roteamento distribui chamadas para agente menos ocupado — reduz espera"
     }
@@ -6417,9 +6417,9 @@ export const questions = [
       "respostaCerta": "Agent opt-in/opt-out via configuração de fila no Teams Admin Center — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Fila = múltiplos agentes, FIFO + Longest Idle + presença automática",
       "cascasDeBanana": [
-        "Call Queues Policy... não é solução adequada para Teams Phone neste contexto",
-        "Delegated Admin... não é solução adequada para Teams Phone neste contexto",
-        "Supervisor Mode... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Longest Idle roteamento distribui chamadas para agente menos ocupado — reduz espera"
     }
@@ -6442,9 +6442,9 @@ export const questions = [
       "respostaCerta": "AF41 (DSCP 34) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "CS1 (DSCP 8)... não é solução adequada para Teams Phone neste contexto",
-        "EF (DSCP 46)... não é solução adequada para Teams Phone neste contexto",
-        "BE (DSCP 0)... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -6467,9 +6467,9 @@ export const questions = [
       "respostaCerta": "Estimar requisitos de largura de banda para implantação do Teams — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Monitorar qualidade de chamadas em tempo real... não é solução adequada para Teams Phone neste contexto",
-        "Gerenciar certificados de SBC... não é solução adequada para Teams Phone neste contexto",
-        "Configurar políticas de QoS... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -6492,9 +6492,9 @@ export const questions = [
       "respostaCerta": "Call Quality Dashboard (CQD) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Network Planner... não é solução adequada para Teams Phone neste contexto",
-        "Direct Routing Health Dashboard... não é solução adequada para Teams Phone neste contexto",
-        "Call Analytics por usuário... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -6517,9 +6517,9 @@ export const questions = [
       "respostaCerta": "49152–53247 (UDP) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "3478 (STUN)... não é solução adequada para Teams Phone neste contexto",
-        "5060 (SIP TCP)... não é solução adequada para Teams Phone neste contexto",
-        "443 (HTTPS)... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -6542,9 +6542,9 @@ export const questions = [
       "respostaCerta": "Local Media Optimization (LMO) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Geo-Routing... não é solução adequada para Teams Phone neste contexto",
-        "Media Bypass padrão... não é solução adequada para Teams Phone neste contexto",
-        "Direct Peering... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -6567,9 +6567,9 @@ export const questions = [
       "respostaCerta": "O cliente Teams deve conseguir alcançar o SBC diretamente via IP — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "O SBC deve estar na mesma sub-rede do servidor Teams... não é solução adequada para Teams Phone neste contexto",
-        "A chamada deve ser interna sem PSTN... não é solução adequada para Teams Phone neste contexto",
-        "O usuário deve ter licença E5... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -6592,9 +6592,9 @@ export const questions = [
       "respostaCerta": "Autenticação via conta Microsoft 365 no dispositivo — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Configuração via DHCP local sem autenticação... não é solução adequada para Teams Phone neste contexto",
-        "Registro via portal de fabricante separado... não é solução adequada para Teams Phone neste contexto",
-        "Instalação manual de firmware via USB... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -6617,9 +6617,9 @@ export const questions = [
       "respostaCerta": "Teams Rooms Pro — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Microsoft 365 E3... não é solução adequada para Teams Phone neste contexto",
-        "Teams Rooms é dispositivo sala, não gateway PSTN — não faz roteamento de chamadas externas",
-        "Teams Phone Standard... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -6642,9 +6642,9 @@ export const questions = [
       "respostaCerta": "Exibir disponibilidade e agendamento de salas de reunião fora da sala — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Controlar áudio e vídeo durante reuniões... não é solução adequada para Teams Phone neste contexto",
-        "Exibir feeds de câmera de segurança... não é solução adequada para Teams Phone neste contexto",
-        "Gerenciar filas de chamadas... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -6667,9 +6667,9 @@ export const questions = [
       "respostaCerta": "Funcionar como dispositivo dedicado para Teams com assistente Cortana integrado — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Gerenciar chamadas PSTN locais... não é solução adequada para Teams Phone neste contexto",
-        "Substituir monitores de desktop para reuniões de vídeo... não é solução adequada para Teams Phone neste contexto",
-        "Exibir dashboards de qualidade de chamadas... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -6692,9 +6692,9 @@ export const questions = [
       "respostaCerta": "Configurando Update Policies no Teams Admin Center — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Configurando scripts PowerShell locais... não é solução adequada para Teams Phone neste contexto",
-        "Usando o Microsoft Endpoint Configuration Manager exclusivam... não é solução adequada para Teams Phone neste contexto",
-        "Atualizando manualmente cada dispositivo via SSH... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -6717,9 +6717,9 @@ export const questions = [
       "respostaCerta": "Auto-login com conta de recurso de sala no perfil do dispositivo — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Azure AD Join com conta de usuário padrão... não é solução adequada para Teams Phone neste contexto",
-        "GPO de login automático no Active Directory local... não é solução adequada para Teams Phone neste contexto",
-        "Intune Kiosk Mode com conta pessoal... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -6742,9 +6742,9 @@ export const questions = [
       "respostaCerta": "Desabilitar \"Allow cloud recording\" para participantes externos na Meeting Policy — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Remover licença de gravação dos externos... não é solução adequada para Teams Phone neste contexto",
-        "Bloquear o acesso via Conditional Access... não é solução adequada para Teams Phone neste contexto",
-        "Configurar Data Loss Prevention (DLP)... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -6767,9 +6767,9 @@ export const questions = [
       "respostaCerta": "10.000 participantes — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "500 participantes... não é solução adequada para Teams Phone neste contexto",
-        "20.000 participantes... não é solução adequada para Teams Phone neste contexto",
-        "1.000 participantes... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -6792,9 +6792,9 @@ export const questions = [
       "respostaCerta": "Webinars do Teams — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Town Hall... não é solução adequada para Teams Phone neste contexto",
-        "Live Events... não é solução adequada para Teams Phone neste contexto",
-        "Reunião de Canal... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -6817,9 +6817,9 @@ export const questions = [
       "respostaCerta": "Town Hall suporta até 20.000 participantes com apresentação unidirecional; Webinar é interativo e bidirecional — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Town Hall usa Direct Routing; Webinar usa SIP... não é solução adequada para Teams Phone neste contexto",
-        "Town Hall requer licença E5; Webinar é gratuito... não é solução adequada para Teams Phone neste contexto",
-        "Webinar suporta mais participantes que Town Hall... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -6842,9 +6842,9 @@ export const questions = [
       "respostaCerta": "OneDrive do organizador ou SharePoint do canal para reuniões de canal — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Exchange Online não participa de roteamento PSTN Teams Phone — não é componente Direct Routing",
-        "Azure Storage Account do tenant... não é solução adequada para Teams Phone neste contexto",
-        "SharePoint do tenant raiz... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -6867,9 +6867,9 @@ export const questions = [
       "respostaCerta": "Compliance Recording Policy usando parceiro certificado de gravação — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Auto-Recording na Meeting Policy padrão... não é solução adequada para Teams Phone neste contexto",
-        "Microsoft Purview Communication Compliance... não é solução adequada para Teams Phone neste contexto",
-        "Azure Media Services... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -6892,9 +6892,9 @@ export const questions = [
       "respostaCerta": "Na caixa de entrada do Exchange Online do usuário — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "No OneDrive da organização... não é solução adequada Teams Phone neste contexto",
-        "No Azure Blob Storage do tenant... não é solução adequada Teams Phone neste contexto",
-        "No SharePoint pessoal do usuário... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -6917,9 +6917,9 @@ export const questions = [
       "respostaCerta": "Transcrição de Voicemail (Cloud Voicemail Transcription) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "Speech-to-Text do Power Automate... não é solução adequada Teams Phone neste contexto",
-        "Copilot for Teams... não é solução adequada Teams Phone neste contexto",
-        "Azure Cognitive Services manual... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -6942,9 +6942,9 @@ export const questions = [
       "respostaCerta": "Calling Policy com \"Make private calls\" habilitado apenas para o grupo específico — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Política de chamada = permissões granulares por usuário",
       "cascasDeBanana": [
-        "Meeting Policy com restrição de chamadas... não é solução adequada para Teams Phone neste contexto",
-        "Conditional Access com filtro de chamadas... não é solução adequada para Teams Phone neste contexto",
-        "Teams Policy com escopo de usuário... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Política de encaminhamento pode bloquear externos para controlar custos"
     }
@@ -6967,9 +6967,9 @@ export const questions = [
       "respostaCerta": "Número de Serviço (Service Number) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = formato internacional +55 11 números, obrigatório PSTN",
       "cascasDeBanana": [
-        "Número de Emergência (E911)... não é solução adequada para Teams Phone neste contexto",
-        "Número de Usuário (User Number)... não é solução adequada para Teams Phone neste contexto",
-        "Número Virtual (Virtual DID)... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Máscara de chamada permite múltiplas máscaras na mesma política para flexibilidade"
     }
@@ -6992,9 +6992,9 @@ export const questions = [
       "respostaCerta": "Emergency Call Routing Policy com Network Sites — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Política de chamada = permissões granulares por usuário",
       "cascasDeBanana": [
-        "Direct Routing Emergency Policy... não é solução adequada para Teams Phone neste contexto",
-        "Location Information Server isolado... não é solução adequada para Teams Phone neste contexto",
-        "Teams Network Topology Policy... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Política de encaminhamento pode bloquear externos para controlar custos"
     }
@@ -7017,9 +7017,9 @@ export const questions = [
       "respostaCerta": "Identificar IPs externos corporativos para mapear usuários a sites de rede — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Configurar bypass de proxy para mídia... não é solução adequada para Teams Phone neste contexto",
-        "Restringir acesso ao Teams por faixa de IP... não é solução adequada para Teams Phone neste contexto",
-        "Definir rotas de QoS para tráfego de voz... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -7042,9 +7042,9 @@ export const questions = [
       "respostaCerta": "Uma localização física mapeada a sub-redes de rede para aplicar políticas de localização — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Um datacenter de roteamento SIP... não é solução adequada para Teams Phone neste contexto",
-        "Um servidor de mídia regional da Microsoft... não é solução adequada para Teams Phone neste contexto",
-        "Um nó de conectividade para Direct Routing... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -7067,9 +7067,9 @@ export const questions = [
       "respostaCerta": "Call Quality Dashboard (CQD) com filtro por sub-rede — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Teams Health Dashboard... não é solução adequada para Teams Phone neste contexto",
-        "Call Analytics por usuário individual... não é solução adequada para Teams Phone neste contexto",
-        "Network Planner... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -7092,9 +7092,9 @@ export const questions = [
       "respostaCerta": "Microsoft 365 Network Connectivity Test — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Azure Network Watcher... não é solução adequada para Teams Phone neste contexto",
-        "Teams Network Planner... não é solução adequada para Teams Phone neste contexto",
-        "Microsoft Network Assessment Tool... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -7117,9 +7117,9 @@ export const questions = [
       "respostaCerta": "Um serviço que permite usar telefones SIP de terceiros certificados com o Teams — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Um componente de Direct Routing para roteamento de chamadas ... não é solução adequada para Teams Phone neste contexto",
-        "Um proxy SIP local implantado no datacenter do cliente... não é solução adequada para Teams Phone neste contexto",
-        "Um serviço de VoIP para reuniões de conferência... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -7142,9 +7142,9 @@ export const questions = [
       "respostaCerta": "Teams Phone Standard ou Teams Phone with Calling Plan — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Licença de add-on SIP Gateway separada... não é solução adequada para Teams Phone neste contexto",
-        "Microsoft 365 E5 exclusivamente... não é solução adequada para Teams Phone neste contexto",
-        "Teams Rooms é dispositivo sala, não gateway PSTN — não faz roteamento de chamadas externas"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -7167,9 +7167,9 @@ export const questions = [
       "respostaCerta": "Catálogo de dispositivos certificados no Teams Admin Center ou site Microsoft — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Partner Center da Microsoft... não é solução adequada para Teams Phone neste contexto",
-        "Microsoft AppSource... não é solução adequada para Teams Phone neste contexto",
-        "Azure Marketplace... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -7192,9 +7192,9 @@ export const questions = [
       "respostaCerta": "Conta de Recurso de Sala (Resource Account) do Exchange Online — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Conta pessoal do usuário da sala... não é solução adequada para Teams Phone neste contexto",
-        "Conta de administrador global do tenant... não é solução adequada para Teams Phone neste contexto",
-        "Conta de serviço genérica do Active Directory... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -7217,9 +7217,9 @@ export const questions = [
       "respostaCerta": "Intelligent Recap (Copilot for Teams) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Transcrição automática padrão... não é solução adequada para Teams Phone neste contexto",
-        "Microsoft Viva Insights... não é solução adequada para Teams Phone neste contexto",
-        "Forms pós-reunião... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -7242,9 +7242,9 @@ export const questions = [
       "respostaCerta": "O organizador da reunião e apresentadores designados com permissão — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Qualquer participante autenticado... não é solução adequada para Teams Phone neste contexto",
-        "Apenas usuários com licença E5... não é solução adequada para Teams Phone neste contexto",
-        "Apenas o administrador do tenant... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -7267,9 +7267,9 @@ export const questions = [
       "respostaCerta": "Dial Plan com regras de normalização para o formato local — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Calling Policy com PSTN habilitado... não é solução adequada Teams Phone neste contexto",
-        "Direct Routing com SBC regional... não é solução adequada Teams Phone neste contexto",
-        "Emergency Calling Policy... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -7292,9 +7292,9 @@ export const questions = [
       "respostaCerta": "Tenant Dial Plan sobrepõe o Service Country Dial Plan quando ambos estão atribuídos — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "Service Country Dial Plan sempre prevalece sobre o... não é solução adequada Teams Phone neste contexto",
-        "O Dial Plan do SBC substitui todos os outros... não é solução adequada Teams Phone neste contexto",
-        "User Dial Plan é ignorado quando existe Tenant Dia... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -7317,9 +7317,9 @@ export const questions = [
       "respostaCerta": "New-CsOnlinePSTNGateway — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Add-CsOnlinePSTNTrunk... não é solução adequada para Teams Phone neste contexto",
-        "New-CsVoicePolicy... não é solução adequada para Teams Phone neste contexto",
-        "Set-CsOnlineVoiceRoute... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Lync Mediant, Acme/Ixia, etc. — verificar lista compatibilidade Microsoft"
     }
@@ -7342,9 +7342,9 @@ export const questions = [
       "respostaCerta": "Voice Route com padrão de número internacional associado ao PSTN Gateway correto — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Dial Plan com normalização internacional... não é solução adequada para Teams Phone neste contexto",
-        "Emergency Call Routing Policy... não é solução adequada para Teams Phone neste contexto",
-        "Calling Policy com restrição de chamadas internacionais... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Lync Mediant, Acme/Ixia, etc. — verificar lista compatibilidade Microsoft"
     }
@@ -7367,9 +7367,9 @@ export const questions = [
       "respostaCerta": "Voice Routing Policy → PSTN Usage → Voice Route → PSTN Gateway — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Direct Routing = seu SBC, seu controle, máxima complexidade",
       "cascasDeBanana": [
-        "Calling Policy → Voice Routing Policy → Dial Plan → SBC... não é solução adequada para Teams Phone neste contexto",
-        "Dial Plan → Calling Policy → PSTN Gateway → Voice Route... não é solução adequada para Teams Phone neste contexto",
-        "PSTN Gateway → Voice Route → PSTN Usage → Voice Routing Poli... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "SBCs certificados: AudioCodes, Ribbon, Lync Mediant, Acme/Ixia, etc. — verificar lista compatibilidade Microsoft"
     }
@@ -7392,9 +7392,9 @@ export const questions = [
       "respostaCerta": "Uma ferramenta guiada que ajuda a planejar e executar a implantação do Teams na organização — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Um dashboard de qualidade de chamadas em tempo real... não é solução adequada para Teams Phone neste contexto",
-        "Um serviço de suporte técnico da Microsoft... não é solução adequada para Teams Phone neste contexto",
-        "Um relatório de licenças e uso do Teams... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -7417,9 +7417,9 @@ export const questions = [
       "respostaCerta": "Habilitar o Lobby com a opção \"Only organizers and co-organizers can bypass the lobby\" — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Configurar Conditional Access para bloquear externos... não é solução adequada para Teams Phone neste contexto",
-        "Remover a permissão de agendamento de reuniões dos externos... não é solução adequada para Teams Phone neste contexto",
-        "Desabilitar o link de reunião para externos... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -7442,9 +7442,9 @@ export const questions = [
       "respostaCerta": "Teams Rooms Pro Management Portal — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Microsoft Endpoint Manager... não é solução adequada para Teams Phone neste contexto",
-        "Teams Admin Center Device Inventory... não é solução adequada para Teams Phone neste contexto",
-        "Azure Monitor com Log Analytics... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "Azure Monitor with Log Analytics is for general Azure infrastructure monitoring, not Teams Phone health — it doesn't display SBC connection status or SIP errors"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -7467,9 +7467,9 @@ export const questions = [
       "respostaCerta": "Verificar o status do número e do operador diretamente no Teams Admin Center na seção Operator Connect — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Operator Connect = operadora terceira + SBC dela, meio termo entre Calling Plan e Direct Routing",
       "cascasDeBanana": [
-        "Recriar o trunk SIP manualmente... não é solução adequada para Teams Phone neste contexto",
-        "Abrir chamado no suporte Microsoft sem verificação prévia... não é solução adequada para Teams Phone neste contexto",
-        "Reatribuir o número a outro usuário para testar... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Operadora parceira em Operator Connect gerencia tanto PSTN quanto SBC por você"
     }
@@ -7492,9 +7492,9 @@ export const questions = [
       "respostaCerta": "Relatório de Building Data com mapeamento de sub-redes por localização física — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Relatório de usuários individuais por Call Analytics... não é solução adequada para Teams Phone neste contexto",
-        "Teams Health Dashboard com alertas automáticos... não é solução adequada para Teams Phone neste contexto",
-        "Network Planner com estimativa de banda... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -7517,9 +7517,9 @@ export const questions = [
       "respostaCerta": "Uma licença do Teams Phone (ou assinatura E5) combinada com uma opção de conectividade PSTN (como Calling Plan, Operator Connect ou Direct Routing) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Apenas o aplicativo desktop do Teams sem qualquer ... não é solução adequada Teams Phone neste contexto",
-        "Uma conta gratuita do Azure com subscrição ativa d... não é solução adequada Teams Phone neste contexto",
-        "Skype Empresarial é legacy — Teams Phone é substituição moderna"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -7542,9 +7542,9 @@ export const questions = [
       "respostaCerta": "Microsoft 365 E5 — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Phone = PBX nuvem Microsoft, nome antigo Phone System, mesma coisa",
       "cascasDeBanana": [
-        "Office 365 E1... não é solução adequada Teams Phone neste contexto",
-        "Microsoft 365 E3... não é solução adequada Teams Phone neste contexto",
-        "Microsoft 365 Business Basic... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Phone System = Teams Phone (rebrand 2019) — mesma solução, apenas nome novo"
     }
@@ -7567,9 +7567,9 @@ export const questions = [
       "respostaCerta": "O Teams Rooms on Windows roda em um PC dedicado com Windows IoT e periféricos modulares, enquanto o Teams Rooms on Android geralmente roda em barras de colaboração integradas (tudo-em-um) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "O Teams Rooms on Windows não requer licença do Teams Rooms P... não é solução adequada para Teams Phone neste contexto",
-        "O Teams Rooms on Android não suporta chamadas de vídeo, apen... não é solução adequada para Teams Phone neste contexto",
-        "O Teams Rooms on Android é exclusivo para salas de conferênc... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -7592,9 +7592,9 @@ export const questions = [
       "respostaCerta": "Quality of Service (Qualidade de Serviço) — tecnologia que prioriza pacotes de voz e vídeo na rede para evitar atrasos e cortes — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Quality of System (Qualidade do Sistema) — métrica que mede ... não é solução adequada para Teams Phone neste contexto",
-        "Query on Security (Consulta de Segurança) — protocolo que ve... não é solução adequada para Teams Phone neste contexto",
-        "Queue of Services (Fila de Serviços) — painel de controle qu... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -7617,9 +7617,9 @@ export const questions = [
       "respostaCerta": "Formulário de inscrição personalizável (Registration Form) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Gravação em nuvem automática na pasta do OneDrive... não é solução adequada para Teams Phone neste contexto",
-        "Configuração de bypass do lobby para convidados externos... não é solução adequada para Teams Phone neste contexto",
-        "Painel de votação rápida em tempo real (Polls)... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -7642,9 +7642,9 @@ export const questions = [
       "respostaCerta": "No Teams Admin Center, pesquisando pelo usuário afetado e acessando a guia 'Histórico de chamadas' (Call Analytics) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "No painel do Microsoft Entra ID verificando logs de login e ... não é solução adequada para Teams Phone neste contexto",
-        "No Call Quality Dashboard (CQD) criando um filtro para o end... não é solução adequada para Teams Phone neste contexto",
-        "No aplicativo Teams do próprio usuário acessando a pasta de ... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -7667,9 +7667,9 @@ export const questions = [
       "respostaCerta": "Estacionamento de chamadas (Call Park) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Delegação de chamadas (Call Delegation)... não é solução adequada Teams Phone neste contexto",
-        "Encaminhamento de chamadas (Call Forwarding)... não é solução adequada Teams Phone neste contexto",
-        "Chamada em grupo (Group Call Pickup)... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -7692,9 +7692,9 @@ export const questions = [
       "respostaCerta": "Formato E.164 (exemplo: +551130001234) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Calling Plan = Microsoft cuida de tudo, você só paga e disca",
       "cascasDeBanana": [
-        "Formato SIP URI legada (exemplo: sip:user@domain.c... não é solução adequada Teams Phone neste contexto",
-        "Formato local sem código de país ou DDD (exemplo: ... não é solução adequada Teams Phone neste contexto",
-        "Formato hexadecimal criptografado pelo Entra ID... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Disponibilidade por país varia — verificar suporte regional Microsoft antes contratação"
     }
@@ -7717,9 +7717,9 @@ export const questions = [
       "respostaCerta": "Console de controle de toque da sala (MTR Touch Console) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Painel Teams externo (Teams Panel) fixado na porta da sala... não é solução adequada para Teams Phone neste contexto",
-        "Aplicativo Teams no celular pessoal de qualquer participante... não é solução adequada para Teams Phone neste contexto",
-        "Teclado e mouse sem fio conectados ao computador principal... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -7742,9 +7742,9 @@ export const questions = [
       "respostaCerta": "Aproximadamente 100 kbps de download e upload — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Cerca de 1.5 Mbps simétricos para áudio básico... não é solução adequada para Teams Phone neste contexto",
-        "Apenas 5 kbps usando compressão de codec GSM... não é solução adequada para Teams Phone neste contexto",
-        "Mínimo de 10 Mbps simétricos por chamada de áudio... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -7767,9 +7767,9 @@ export const questions = [
       "respostaCerta": "Town Hall (Prefeitura) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Webinar avançado de alta definição... não é solução adequada para Teams Phone neste contexto",
-        "Teams Assembly... não é solução adequada para Teams Phone neste contexto",
-        "Reunião de canal privado integrada... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -7792,9 +7792,9 @@ export const questions = [
       "respostaCerta": "No Portal de Integridade do Serviço (Service Health Dashboard) no Microsoft 365 Admin Center — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "No console do SBC local verificando as conexões SIP ativas c... não é solução adequada para Teams Phone neste contexto",
-        "No painel do Call Quality Dashboard (CQD) na seção de relató... não é solução adequada para Teams Phone neste contexto",
-        "No log de auditoria do Microsoft Purview pesquisando por eve... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "Call Quality Dashboard shows user-side call quality metrics (jitter, packet loss, latency), not SBC connection status — use Health Dashboard for Direct Routing instead",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -7817,9 +7817,9 @@ export const questions = [
       "respostaCerta": "Para a caixa de correio do Exchange Online do usuário, onde a mensagem de voz é entregue como anexo de e-mail junto com a transcrição em texto — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Para uma pasta oculta do OneDrive for Business com... não é solução adequada Teams Phone neste contexto",
-        "Apenas para o histórico de chamadas do aplicativo ... não é solução adequada Teams Phone neste contexto",
-        "Para um servidor local de correio de voz configura... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -7842,9 +7842,9 @@ export const questions = [
       "respostaCerta": "Com uma licença gratuita de dispositivo virtual do Teams Phone (Microsoft Teams Phone Resource Account license) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Fila = múltiplos agentes, FIFO + Longest Idle, presença automática, timeout/redirecionamento",
       "cascasDeBanana": [
-        "Com uma licença completa do Microsoft 365 E5 assoc... não é solução adequada Teams Phone neste contexto",
-        "Elas não exigem nenhuma licença associada no tenan... não é solução adequada Teams Phone neste contexto",
-        "Com a mesma licença pessoal de Teams Phone Standar... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Longest Idle distribui para agente menos ocupado — combinar FIFO + Longest Idle reduz espera"
     }
@@ -7867,9 +7867,9 @@ export const questions = [
       "respostaCerta": "Configuração de telefone de linha direta (Hotline / PLAR) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "Transferência cega de chamadas... não é solução adequada para Teams Phone neste contexto",
-        "Roteamento baseado em localização (LBR)... não é solução adequada para Teams Phone neste contexto",
-        "Modo de acessibilidade de discagem por voz ativa... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -7892,9 +7892,9 @@ export const questions = [
       "respostaCerta": "Jitter — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Latência de ida e volta... não é solução adequada para Teams Phone neste contexto",
-        "RTT (Round Trip Time)... não é solução adequada para Teams Phone neste contexto",
-        "Largura de banda... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -7917,9 +7917,9 @@ export const questions = [
       "respostaCerta": "Lobby (Sala de Espera) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Políticas de retenção de reuniões... não é solução adequada para Teams Phone neste contexto",
-        "Bloqueio de chamadas externas... não é solução adequada para Teams Phone neste contexto",
-        "Acesso condicional... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -7942,9 +7942,9 @@ export const questions = [
       "respostaCerta": "Pressionando o atalho de teclado Ctrl + Alt + Shift + 1 no Teams — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Formatando o disco local onde o Teams está instalado... não é solução adequada para Teams Phone neste contexto",
-        "Abrindo o prompt de comando e digitando 'get-teams-logs'... não é solução adequada para Teams Phone neste contexto",
-        "Acessando o Painel de Controle do Windows > Ferramentas Admi... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -7967,9 +7967,9 @@ export const questions = [
       "respostaCerta": "Permite selecionar um operador parceiro no Teams Admin Center, que fornece os números e gerencia a conexão PSTN de forma simples na nuvem, sem necessidade de hardware local — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Operator Connect = operadora terceira + SBC dela, meio termo entre Calling Plan e Direct Routing",
       "cascasDeBanana": [
-        "Fornece conexão PSTN gratuita para qualquer país d... não é solução adequada Teams Phone neste contexto",
-        "Skype Empresarial é legacy — Teams Phone é substituição moderna",
-        "Substitui completamente o uso do Azure AD/Entra ID... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Operadora parceira gerencia PSTN e SBC por você — você configura via Teams Admin Center"
     }
@@ -7992,9 +7992,9 @@ export const questions = [
       "respostaCerta": "Uma conta de recurso (Resource Account) associada ao Atendedor Automático com a respectiva licença gratuita de conta de recurso atribuída — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Uma política de roteamento baseado em localização ... não é solução adequada Teams Phone neste contexto",
-        "Um SBC físico no local conectado via Direct Routin... não é solução adequada Teams Phone neste contexto",
-        "Exchange Online não participa roteamento PSTN Teams Phone — não é componente Direct Routing"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "SBC requirements are specific — it must be on Microsoft's certified list, have valid TLS certificate with FQDN, support SIP TLS on port 5061, and SRTP for media",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
@@ -8017,9 +8017,9 @@ export const questions = [
       "respostaCerta": "Permite que aparelhos telefônicos IP baseados em protocolo SIP de outros fabricantes legados (como Polycom, Cisco ou Yealink) se conectem e funcionem com o Teams Phone de forma básica — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "MTR = caixa preta sala, gerenciada Intune, monitora via Teams Admin Center",
       "cascasDeBanana": [
-        "É um painel de gerenciamento de vídeo integrado ao Microsoft... não é solução adequada para Teams Phone neste contexto",
-        "Permite conectar troncos SIP locais de operadoras ao Teams P... não é solução adequada para Teams Phone neste contexto",
-        "H.323 é protocolo legacy obsoleto, Teams usa SIP TLS — H.323 não se integra ao Teams Phone"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "MTR requer account de recurso com licença, autenticação via OAuth 2.0 ou certificado"
     }
@@ -8042,9 +8042,9 @@ export const questions = [
       "respostaCerta": "Microsoft 365 Network Connectivity Test (connectivity.office.com) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "QoS = DSCP + portas UDP 50000-50059 para priorizar media",
       "cascasDeBanana": [
-        "Teams Network Assessment CLI Tool... não é solução adequada para Teams Phone neste contexto",
-        "Azure Speed Test local... não é solução adequada para Teams Phone neste contexto",
-        "Windows Network Diagnostics... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Implementar QoS em switches, roteadores, firewalls — configuração apenas um ponto é insuficiente"
     }
@@ -8067,9 +8067,9 @@ export const questions = [
       "respostaCerta": "Co-organizador (Co-organizer) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "Teams Premium = IA + interpretação simultânea + relatórios avançados",
       "cascasDeBanana": [
-        "Administrador de Reunião (Meeting Admin)... não é solução adequada para Teams Phone neste contexto",
-        "Supervisor de Sala (Room Supervisor)... não é solução adequada para Teams Phone neste contexto",
-        "Apresentador (Presenter)... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Interpretação simultânea requer línguas configuradas previamente, intérpretes em time separado"
     }
@@ -8092,9 +8092,9 @@ export const questions = [
       "respostaCerta": "Transmissão Ruim (Poor Stream) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "CQD = dashboard qualidade chamadas, Poor Stream Rate < 5% aceitável",
       "cascasDeBanana": [
-        "Transmissão Crítica (Critical Stream)... não é solução adequada para Teams Phone neste contexto",
-        "Falha de Conexão SIP (SIP Call Failure)... não é solução adequada para Teams Phone neste contexto",
-        "Chamada Incompatível (Incompatible Call)... não é solução adequada para Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Auditoria em Teams Admin Center registra todas mudanças políticas — verificar logs para troubleshooting"
     }
@@ -8117,9 +8117,9 @@ export const questions = [
       "respostaCerta": "Política de mascaramento / substituição de ID de chamada (Caller ID Policy) — essa opção resolve diretamente a situação do enunciado.",
       "puloDoGato": "E.164 = +55 11 números, obrigatório PSTN; usuário vs serviço — impacto aplicabilidade",
       "cascasDeBanana": [
-        "Plano de Discagem Normalizado (Dial Plan Rule)... não é solução adequada Teams Phone neste contexto",
-        "Política de Roteamento de Voz Online (Voice Routin... não é solução adequada Teams Phone neste contexto",
-        "Regra de Tradução SIP no SBC (SBC Header Manipulat... não é solução adequada Teams Phone neste contexto"
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices",
+        "This option does not meet the technical requirements for Teams Phone — review Microsoft's certified solutions and configuration best practices"
       ],
       "dicaOuro": "Portabilidade exige LOA, conta faturamento, números E.164, data desejada"
     }
