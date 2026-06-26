@@ -3,10 +3,10 @@ export const questions = [
     "id": "q1_pl300",
     "text": "Ao conectar o Power BI Desktop a um banco de dados SQL Server com 50 milhões de linhas que precisa exibir dados sempre atualizados com latência máxima de 15 minutos, qual modo de conectividade é mais adequado?",
     "options": [
-      "DirectQuery, que envia queries diretamente ao banco de dados a cada interação do usuário, garantindo que os dados exibidos reflitam sempre o estado atual da fonte sem necessidade de refresh agendado, adequado para volumes grandes onde importar todos os dados seria inviável ou desnecessário.",
-      "Import, pois permite todas as funcionalidades DAX e oferece melhor performance de consulta ao carregar os dados na memória do Power BI; agendar refresh a cada 15 minutos garante a atualização exigida.",
-      "Live Connection, que mantém conexão em tempo real com o SQL Server sem armazenar dados localmente, diferente do DirectQuery por não permitir transformações no Power Query nem criação de medidas DAX adicionais.",
-      "Dual mode, que armazena os dados localmente E consulta a fonte em tempo real simultaneamente, garantindo tanto performance quanto dados atualizados sem nenhuma configuração adicional."
+      "DirectQuery: envia queries direto ao banco a cada interação, sem refresh agendado — ideal para volumes grandes.",
+      "Import: melhor performance e todo o DAX, carregando dados na memória; refresh agendado de 15 min atende ao requisito.",
+      "Live Connection: conexão em tempo real sem armazenar dados localmente; não permite transformações no Power Query nem medidas DAX.",
+      "Dual mode: armazena localmente E consulta em tempo real, sem configuração adicional."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -14,24 +14,24 @@ export const questions = [
     "explanation": {
       "intro": "No Power BI, a escolha do modo de conectividade é crucial para o desempenho e a atualização dos dados. Entender as diferenças entre Import, DirectQuery e Live Connection é fundamental para garantir que seus relatórios atendam aos requisitos de volume de dados e latência.",
       "papoReto": "Imagine que você está assistindo a um jogo de futebol. Se você escolhe o modo 'Import', é como se você gravasse o jogo e assistisse depois. Você tem controle total (pode pausar, voltar), mas a informação não é em tempo real. Para ter os últimos lances, você teria que gravar de novo e de novo. Já o 'DirectQuery' é como assistir ao jogo AO VIVO! Cada vez que você olha para a tela, você vê o que está acontecendo naquele exato momento, sem atrasos. É perfeito para quando você não pode perder nenhum detalhe e precisa da informação mais fresca possível, mesmo que isso signifique que você não pode pausar ou voltar tão facilmente. No nosso caso, com 50 milhões de linhas e a necessidade de dados super atualizados a cada 15 minutos, o DirectQuery é o seu narrador ao vivo, garantindo que o placar esteja sempre correto!",
-      "respostaCerta": "DirectQuery, que envia queries diretamente ao banco de dados a cada interação do usuário, garantindo que os dados exibidos reflitam sempre o estado atual da fonte sem necessidade de refresh agendado, adequado para volumes grandes onde importar todos os dados seria inviável ou desnecessário.",
+      "respostaCerta": "DirectQuery: envia queries direto ao banco a cada interação, sem refresh agendado — ideal para volumes grandes.",
       "puloDoGato": "A pegadinha aqui está nos detalhes: '50 milhões de linhas' e 'latência máxima de 15 minutos'. O volume de dados já sugere que importar tudo pode ser problemático ou demorado. A latência de 15 minutos é o fator decisivo, pois o modo Import, mesmo com refresh agendado, tem um limite de 8 atualizações por dia no Power BI Pro (aproximadamente a cada 3 horas), o que não atenderia ao requisito de 15 minutos. O DirectQuery, por consultar a fonte em tempo real, é o único que garante essa baixa latência sem a necessidade de agendamento.",
       "cascasDeBanana": [
-        "Import, pois permite todas as funcionalidades DAX e oferece melhor performance de consulta ao carregar os dados na memória do Power BI; agendar refresh a cada 15 minutos garante a atualização exigida.: Incorreto. Embora o modo Import ofereça melhor performance e suporte total ao DAX, o agendamento de refresh no Power BI Service para o plano Pro é limitado a 8 vezes ao dia (aproximadamente a cada 3 horas), o que não atende ao requisito de latência máxima de 15 minutos. Além disso, importar 50 milhões de linhas pode ser inviável ou consumir muitos recursos.",
-        "Live Connection, que mantém conexão em tempo real com o SQL Server sem armazenar dados localmente, diferente do DirectQuery por não permitir transformações no Power Query nem criação de medidas DAX adicionais.: Incorreto. O Live Connection é um modo de conectividade específico para fontes como SQL Server Analysis Services (SSAS), Azure Analysis Services ou Power BI Datasets, e não para um banco de dados SQL Server diretamente com o comportamento descrito. Para SQL Server, a opção de conexão em tempo real é o DirectQuery.",
-        "Dual mode, que armazena os dados localmente E consulta a fonte em tempo real simultaneamente, garantindo tanto performance quanto dados atualizados sem nenhuma configuração adicional.: Incorreto. O Dual mode é uma característica de modelos compostos (Composite Models) onde tabelas individuais podem ser configuradas para operar em modo Import ou DirectQuery. Não é um modo de conectividade geral para todo o modelo e a descrição de 'simultaneamente' para todo o conjunto de dados é imprecisa. Ele permite flexibilidade, mas não é a solução para o requisito de latência de 15 minutos para um banco de dados SQL Server inteiro."
+        "Import: melhor performance e todo o DAX, carregando dados na memória; refresh agendado de 15 min atende ao requisito.: Incorreto. Embora o modo Import ofereça melhor performance e suporte total ao DAX, o agendamento de refresh no Power BI Service para o plano Pro é limitado a 8 vezes ao dia (aproximadamente a cada 3 horas), o que não atende ao requisito de latência máxima de 15 minutos. Além disso, importar 50 milhões de linhas pode ser inviável ou consumir muitos recursos.",
+        "Live Connection: conexão em tempo real sem armazenar dados localmente; não permite transformações no Power Query nem medidas DAX.: Incorreto. O Live Connection é um modo de conectividade específico para fontes como SQL Server Analysis Services (SSAS), Azure Analysis Services ou Power BI Datasets, e não para um banco de dados SQL Server diretamente com o comportamento descrito. Para SQL Server, a opção de conexão em tempo real é o DirectQuery.",
+        "Dual mode: armazena localmente E consulta em tempo real, sem configuração adicional.: Incorreto. O Dual mode é uma característica de modelos compostos (Composite Models) onde tabelas individuais podem ser configuradas para operar em modo Import ou DirectQuery. Não é um modo de conectividade geral para todo o modelo e a descrição de 'simultaneamente' para todo o conjunto de dados é imprecisa. Ele permite flexibilidade, mas não é a solução para o requisito de latência de 15 minutos para um banco de dados SQL Server inteiro."
       ],
       "dicaOuro": "Pense na latência! Se a necessidade de atualização é muito frequente (minutos), DirectQuery é quase sempre a resposta. Se o volume de dados é gigantesco, DirectQuery também é o caminho."
     }
   },
   {
     "id": "q2_pl300",
-    "text": "Um analista precisa conectar o Power BI Desktop a uma planilha Excel armazenada em uma biblioteca de documentos do SharePoint Online da empresa. Qual é o conector correto e a abordagem recomendada para garantir a atualização automática dos dados no Power BI Service?",
+    "text": "Um analista precisa conectar o Power BI Desktop a uma planilha Excel no SharePoint Online da empresa. Qual o conector correto para garantir atualização automática no Power BI Service?",
     "options": [
-      "Usar o conector SharePoint Online List ou SharePoint Folder no Power BI Desktop, fornecendo a URL raiz do site SharePoint (ex: https://empresa.sharepoint.com/sites/nome); dessa forma, a conexão é mantida mesmo que o arquivo seja movido dentro da biblioteca, e o refresh funciona no Power BI Service sem necessidade de gateway.",
-      "Baixar o arquivo Excel localmente e conectar via conector Excel File; salvar o arquivo na pasta padrão do OneDrive sincronizado garante que o Power BI sempre acesse a versão mais recente automaticamente.",
-      "Usar o conector Web no Power BI Desktop com a URL direta do arquivo Excel no SharePoint; essa abordagem funciona tanto no Desktop quanto no Service sem necessidade de autenticação adicional.",
-      "Conectar via conector OneDrive for Business, que acessa automaticamente todos os arquivos do SharePoint da organização sem necessidade de especificar a URL do site ou da biblioteca."
+      "Conector SharePoint Folder, com a URL raiz do site; conexão persiste se o arquivo mover, refresh funciona no Service sem gateway.",
+      "Baixar o Excel e usar conector Excel File; salvar na pasta do OneDrive sincronizado garante acesso à versão mais recente.",
+      "Conector Web com a URL direta do arquivo no SharePoint; funciona no Desktop e Service sem autenticação adicional.",
+      "Conector OneDrive for Business, que acessa todos os arquivos do SharePoint da organização sem especificar site/biblioteca."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -51,12 +51,12 @@ export const questions = [
   },
   {
     "id": "q3_pl300",
-    "text": "Uma empresa possui um banco de dados SQL Server on-premises que precisa ser utilizado como fonte de dados para um relatório publicado no Power BI Service, com a necessidade de atualização diária automática. Qual a configuração mínima e correta que deve ser implementada para atender a esse requisito?",
+    "text": "Uma empresa tem SQL Server on-premises usado como fonte para um relatório no Power BI Service, com atualização diária automática necessária. Qual a configuração mínima correta?",
     "options": [
-      "Instalar o Personal Data Gateway no computador do analista de dados; o gateway pessoal permite refresh agendado no Service desde que o computador esteja ligado e conectado à rede corporativa no horário do refresh.",
-      "Não é necessário nenhum gateway para refresh de SQL Server on-premises; o Power BI Service conecta diretamente a bancos de dados on-premises via túnel seguro HTTPS configurado nas propriedades de rede do tenant.",
-      "Instalar e configurar um On-premises Data Gateway (modo padrão) em um servidor com acesso ao SQL Server on-premises, registrá-lo no Power BI Service, criar uma conexão de gateway apontando para o SQL Server, e configurar o refresh agendado no dataset do Power BI Service usando essa conexão de gateway.",
-      "Configurar uma VPN Site-to-Site entre a rede corporativa e o datacenter do Power BI Service é suficiente para permitir refresh de SQL Server on-premises sem necessidade de gateway adicional."
+      "Personal Data Gateway no computador do analista; permite refresh agendado desde que o PC esteja ligado e na rede corporativa no horário do refresh.",
+      "Não é necessário gateway para SQL Server on-premises; o Service conecta direto via túnel HTTPS configurado no tenant.",
+      "Gateway (modo padrão) em servidor com acesso ao SQL Server, registrado no Service, com refresh agendado via essa conexão.",
+      "VPN Site-to-Site entre a rede corporativa e o datacenter do Service seria suficiente, sem necessidade de gateway adicional."
     ],
     "correctAnswer": 2,
     "difficulty": "intermediario",
@@ -76,12 +76,12 @@ export const questions = [
   },
   {
     "id": "q4_pl300",
-    "text": "No Power Query Editor do Power BI Desktop, ao importar uma tabela de vendas que contém uma coluna 'Data' armazenada como texto (por exemplo, '2024-01-15'), qual é a abordagem mais eficiente e recomendada para converter essa coluna para o tipo de dados 'Date'?",
+    "text": "No Power Query, ao importar uma tabela de vendas com a coluna 'Data' armazenada como texto (ex: '2024-01-15'), qual é a abordagem mais eficiente para convertê-la para o tipo 'Date'?",
     "options": [
-      "Selecionar a coluna \"Data\", clicar em \"Data Type\" na faixa de opções Transform e selecionar \"Date\"; o Power Query gera o passo = Table.TransformColumnTypes(tabela, {{\"Data\", type date}}) que converte a coluna para o tipo Date usando a localidade configurada.",
-      "Criar uma coluna calculada no modelo DAX com a fórmula = DATEVALUE([Data]) que converte automaticamente o texto no formato \"yyyy-MM-dd\" para o tipo Date sem necessidade de transformação no Power Query.",
-      "Usar a opção \"Replace Values\" no Power Query para substituir os hífens por barras (de \"2024-01-15\" para \"2024/01/15\") e então o Power BI reconhece automaticamente o formato como Date sem necessidade de conversão explícita de tipo.",
-      "Adicionar uma coluna personalizada com a fórmula M = Date.FromText([Data]) e depois excluir a coluna original; Date.FromText é necessário pois o método de conversão de tipo não funciona com datas no formato ISO 8601."
+      "Coluna > Data Type > Date na faixa Transform; gera Table.TransformColumnTypes(tabela, {{\"Data\", type date}}).",
+      "Coluna calculada DAX = DATEVALUE([Data]), convertendo 'yyyy-MM-dd' para Date sem Power Query.",
+      "'Replace Values' trocando hifens por barras (2024-01-15 → 2024/01/15); Power BI reconheceria como Date.",
+      "Coluna M = Date.FromText([Data]) e excluir a original; necessário pois Date type não funcionaria com ISO 8601."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -103,10 +103,10 @@ export const questions = [
     "id": "q5_pl300",
     "text": "Qual das seguintes afirmações descreve corretamente o conceito de Query Folding no Power Query do Power BI e sua importância para a performance do refresh de dados?",
     "options": [
-      "Query Folding é a capacidade do Power Query de traduzir as transformações aplicadas no Editor (filtros, agrupamentos, junções) em queries nativas da fonte de dados (SQL, OData, etc.), fazendo com que o processamento ocorra no servidor da fonte e não no Power BI; isso reduz drasticamente o volume de dados transferidos e o tempo de refresh, especialmente em fontes relacionais grandes.",
-      "Query Folding é o processo de dobrar (comprimir) os dados antes de transferi-los da fonte para o Power BI, usando algoritmos de compressão nativos do conector para reduzir o uso de banda de rede durante o refresh; quanto mais etapas de transformação, maior a compressão aplicada.",
-      "Query Folding é a otimização automática do Power BI que reordena as etapas do Power Query para maximizar o paralelismo de execução; etapas independentes são executadas simultaneamente no mecanismo de mashup do Power BI para reduzir o tempo total de refresh.",
-      "Query Folding refere-se à capacidade de reutilizar queries entre diferentes tabelas do modelo, criando uma referência compartilhada que evita que a mesma fonte de dados seja consultada múltiplas vezes durante um único refresh do dataset."
+      "Query Folding traduz transformações do Editor em queries nativas da fonte, processando no servidor; reduz volume e tempo de refresh.",
+      "Query Folding comprime dados antes de transferir, usando algoritmos do conector; mais etapas = mais compressão.",
+      "Query Folding reordena etapas do Power Query para maximizar paralelismo; etapas independentes rodam simultaneamente no mashup engine.",
+      "Query Folding reutiliza queries entre tabelas via referência compartilhada, evitando consultar a mesma fonte múltiplas vezes num refresh."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -128,10 +128,10 @@ export const questions = [
     "id": "q6_pl300",
     "text": "No Power Query, qual é a diferença entre \"Mesclar Consultas\" (Merge Queries) e \"Acrescentar Consultas\" (Append Queries)?",
     "options": [
-      "Merge Queries combina colunas de duas tabelas baseado em uma coluna chave comum, similar a um JOIN do SQL (Left Outer, Inner, Full Outer, etc.), expandindo horizontalmente o resultado; Append Queries empilha linhas de duas ou mais tabelas com a mesma estrutura de colunas, similar a um UNION do SQL, expandindo verticalmente o resultado.",
-      "Merge Queries combina tabelas horizontalmente sempre usando Left Outer Join como único tipo disponível; Append Queries também faz junção mas usando Right Outer Join, sendo os dois métodos complementares para cobrir todos os cenários de combinação de tabelas.",
-      "Merge Queries e Append Queries são equivalentes funcionalmente; a diferença é apenas de performance: Merge é mais rápido para tabelas grandes pois usa índices da fonte, enquanto Append é preferível para tabelas pequenas sem índice.",
-      "Merge Queries é usado para combinar tabelas de fontes diferentes (ex: SQL + Excel), enquanto Append Queries só funciona com tabelas da mesma fonte de dados; tentar fazer Append entre fontes diferentes gera erro no refresh."
+      "Merge combina colunas por chave comum (tipo JOIN), expandindo horizontalmente; Append empilha linhas (tipo UNION), expandindo verticalmente.",
+      "Merge combina horizontalmente sempre via Left Outer Join único; Append também junta mas via Right Outer Join, sendo complementares.",
+      "Merge e Append são equivalentes; a diferença é performance: Merge mais rápido em tabelas grandes com índice, Append melhor para pequenas sem índice.",
+      "Merge combina tabelas de fontes diferentes (SQL+Excel); Append só funciona com tabelas da mesma fonte, gerando erro entre fontes diferentes."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -151,12 +151,12 @@ export const questions = [
   },
   {
     "id": "q7_pl300",
-    "text": "Como um analista de Power BI usa Parâmetros no Power Query para criar relatórios dinâmicos que se conectam a diferentes ambientes (Desenvolvimento, Teste, Produção) sem a necessidade de editar as queries manualmente a cada mudança de ambiente?",
+    "text": "Como um analista usa Parâmetros no Power Query para criar relatórios que se conectam a diferentes ambientes (Dev/Teste/Prod) sem editar queries manualmente a cada troca?",
     "options": [
-      "Criando parâmetros no Power Query (acessível via 'Home > Manage Parameters > New Parameter') com valores que representam o nome do servidor ou banco de dados; esses parâmetros são então referenciados nas strings de conexão das queries. Após a publicação do relatório, os valores dos parâmetros podem ser alterados diretamente no Power BI Service através da opção 'Edit Parameters', permitindo alternar entre ambientes sem reabrir o Power Query Editor.",
-      "Utilizando variáveis DAX com a função PARAMETER() para definir valores configuráveis no modelo de dados; essas variáveis são referenciadas em medidas e podem ser alteradas pelo usuário final via slicer no relatório, eliminando a necessidade de editar o Power Query.",
-      "Criando uma tabela de configuração em um arquivo Excel externo com os detalhes dos parâmetros de conexão para cada ambiente e importando-a no Power Query; as queries então referenciam essa tabela para obter o valor correto do ambiente, permitindo a alternância apenas atualizando o arquivo Excel.",
-      "Parâmetros no Power Query são projetados apenas para uso interno durante o desenvolvimento e não para ambientes dinâmicos em produção; para isso, é necessário empregar os Deployment Pipelines do Power BI Service, que gerenciam as configurações de conexão automaticamente por ambiente."
+      "Parâmetros no Power Query referenciados nas conexões; após publicar, alterados no Service via 'Edit Parameters', sem reabrir o Editor.",
+      "Variáveis DAX com PARAMETER() configuráveis no modelo; alteradas via slicer pelo usuário, sem editar o Power Query.",
+      "Tabela de configuração em Excel externo importada no Power Query; troca-se ambiente atualizando o Excel.",
+      "Parâmetros servem só para desenvolvimento; em produção usa-se Deployment Pipelines, que gerenciam conexões por ambiente."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -178,10 +178,10 @@ export const questions = [
     "id": "q8_pl300",
     "text": "Quais ferramentas de perfilamento de dados (Data Profiling) estão disponíveis no Power Query Editor do Power BI Desktop e o que cada uma delas revela?",
     "options": [
-      "Column Quality (percentual de valores válidos, erros e vazios por coluna), Column Distribution (histograma com contagem de valores distintos e únicos) e Column Profile (estatísticas detalhadas: mínimo, máximo, média, desvio padrão, contagem de valores, distribuição completa); todas acessíveis via aba Visualizar (View) do Power Query Editor.",
-      "Data Preview (amostra das primeiras 100 linhas), Data Statistics (contagem total de linhas e colunas) e Error Report (lista de todas as células com erro e suas mensagens); essas ferramentas são o principal recurso de perfilamento nativo do Power Query.",
-      "Column Quality e Column Distribution estão disponíveis apenas no Power BI Desktop Premium; usuários com licença Pro precisam usar a aba Transformar > Qualidade de Dados para acessar as estatísticas de perfil de dados.",
-      "O Power Query oferece apenas visualização de dados (Data Preview); a análise de qualidade e distribuição requer exportar os dados para o Excel e usar funções como CONT.VAZIO, CONT.SE e outras ferramentas do Excel para perfilamento completo."
+      "Column Quality (% válidos/erros/vazios), Column Distribution (histograma) e Column Profile (estatísticas: mín, máx, média); na aba View.",
+      "Data Preview (amostra de 100 linhas), Data Statistics (contagem de linhas/colunas) e Error Report (lista de erros); recursos nativos de perfilamento.",
+      "Column Quality e Distribution só no Desktop Premium; usuários Pro usam Transformar > Qualidade de Dados para acessar as estatísticas.",
+      "O Power Query só tem Data Preview; análise de qualidade exige exportar para Excel e usar CONT.VAZIO, CONT.SE etc."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -203,10 +203,10 @@ export const questions = [
     "id": "q9_pl300",
     "text": "Em uma coluna de valores numéricos importada de um arquivo CSV, algumas células contêm texto inválido, gerando erros de conversão de tipo. Quais são as opções disponíveis no Power Query para tratar esses erros?",
     "options": [
-      "Utilizar 'Substituir Erros' (Replace Errors) para trocar os valores com erro por um valor fixo (como null ou 0), 'Remover Erros' (Remove Errors) para excluir as linhas com erro, ou criar uma coluna personalizada com a função `try ... otherwise` na linguagem M para um tratamento mais flexível.",
-      "Usar a opção 'Ignorar Erros' nas configurações do conector de CSV, que instrui o Power Query a pular células inválidas, substituindo-as por null sem gerar erros.",
-      "Erros de conversão de tipo em CSV só podem ser tratados corrigindo o arquivo de origem; o Power Query não oferece mecanismos de tratamento de erros em linha, sendo a única opção filtrar as linhas com erro.",
-      "Aplicar a transformação 'Limpar' (Clean) na coluna via Transform > Text Column > Clean, que remove automaticamente caracteres inválidos e converte o resultado para o tipo numérico sem gerar erros."
+      "'Substituir Erros' troca por valor fixo (null/0), 'Remover Erros' exclui linhas, ou `try ... otherwise` em M.",
+      "'Ignorar Erros' no conector CSV instrui o Power Query a pular células inválidas, substituindo por null sem gerar erro.",
+      "Erros de conversão em CSV só são tratáveis corrigindo o arquivo original; Power Query não trata erro em linha, só filtra.",
+      "Transformação 'Limpar' (Clean) via Transform > Text Column > Clean remove caracteres inválidos e converte para numérico sem erro."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -228,10 +228,10 @@ export const questions = [
     "id": "q10_pl300",
     "text": "No Power Query, qual a diferença entre uma Coluna Personalizada (Custom Column) criada com fórmula M e uma Coluna de Exemplos (Column From Examples)?",
     "options": [
-      "Custom Column exige que o analista escreva a fórmula em linguagem M manualmente (ex: = [Preço] * [Quantidade]), oferecendo controle total sobre a lógica; Column From Examples permite que o analista forneça exemplos do resultado desejado e o Power Query infere automaticamente a fórmula M, sendo ideal para transformações de texto sem conhecimento aprofundado de M.",
-      "Custom Column é executada no servidor da fonte de dados via query folding; Column From Examples é executada localmente no mecanismo do Power BI, sendo sempre mais lenta; para máxima performance deve-se preferir Custom Column em todos os cenários.",
-      "Não há diferença funcional entre as duas abordagens; Column From Examples é apenas uma interface de assistência para gerar o código M que seria escrito numa Custom Column, mas o resultado e a performance são idênticos em todos os cenários.",
-      "Custom Column suporta apenas operações matemáticas e lógicas simples; para transformações de texto como extração de substrings, formatação e substituições é obrigatório usar Column From Examples que tem suporte nativo a operações de string."
+      "Custom Column exige fórmula M manual, controle total; Column From Examples infere a fórmula a partir de exemplos, sem precisar saber M.",
+      "Custom Column roda no servidor via query folding; Column From Examples roda localmente, sempre mais lenta; preferir Custom Column sempre.",
+      "Não há diferença funcional; Column From Examples só gera o código M que seria escrito numa Custom Column, com performance idêntica.",
+      "Custom Column só suporta operações simples; para texto (substrings, formatação) é obrigatório usar Column From Examples."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -251,12 +251,12 @@ export const questions = [
   },
   {
     "id": "q11_pl300",
-    "text": "Você importou uma tabela de vendas de um arquivo Excel para o Power Query. Esta tabela possui colunas separadas para cada mês do ano (Janeiro, Fevereiro, Março... Dezembro), onde cada coluna contém os valores de vendas correspondentes. Para transformar esta tabela em um formato adequado para um modelo dimensional no Power BI, qual é a ação correta a ser realizada no Power Query?",
+    "text": "Você importou do Excel uma tabela de vendas com colunas separadas por mês (Jan-Dez), cada uma com os valores de vendas. Para um modelo dimensional no Power BI, qual ação é correta no Power Query?",
     "options": [
-      "Selecionar as colunas de meses (Janeiro a Dezembro), e então, na guia 'Transformar', utilizar a função 'Dinamizar Colunas' (Unpivot Columns). O Power Query transformará as colunas de meses em duas novas colunas: 'Atributo' (com o nome do mês) e 'Valor' (com o valor de vendas), criando um formato normalizado com uma linha por mês por produto, ideal para relacionamentos em um modelo dimensional.",
-      "Usar a opção 'Transpor' (Transpose) na guia 'Transformar' para rotacionar a tabela, transformando as linhas em colunas e as colunas em linhas; depois renomear as colunas resultantes para 'Mês' e 'Vendas' para obter o formato normalizado.",
-      "Criar uma medida DAX com SUMX iterando sobre as colunas de mês usando COLUMNNAMES() para agregar os valores corretamente; não é necessário transformar a estrutura da tabela no Power Query, pois o DAX consegue trabalhar com tabelas em formato 'wide' (colunas por período).",
-      "Usar 'Preencher para Baixo' (Fill Down) em todas as colunas de mês para propagar os valores e depois usar 'Agrupar Por' (Group By) agrupando por mês para consolidar os dados no formato correto com uma linha por período."
+      "'Dinamizar Colunas' (Unpivot Columns) nas colunas de mês; cria 'Atributo' (mês) e 'Valor', uma linha por mês/produto, formato normalizado.",
+      "'Transpor' (Transpose) para rotacionar linhas/colunas, depois renomear para 'Mês' e 'Vendas' para obter formato normalizado.",
+      "Medida DAX com SUMX usando COLUMNNAMES() para agregar; não precisa transformar no Power Query, DAX lida com tabelas wide.",
+      "'Preencher para Baixo' (Fill Down) nas colunas de mês, depois 'Agrupar Por' (Group By) por mês para consolidar."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -278,10 +278,10 @@ export const questions = [
     "id": "q12_pl300",
     "text": "No Power Query, como você utilizaria o recurso 'Agrupar Por' (Group By) para calcular o total de vendas por categoria de produto?",
     "options": [
-      "Acessar a guia 'Transformar', selecionar 'Agrupar Por', escolher 'Categoria' como coluna de agrupamento e adicionar uma nova agregação 'Total Vendas' com a operação 'Soma' sobre a coluna 'Valor'. O resultado será uma tabela com uma linha por categoria e o total agregado, similar a um `GROUP BY` em SQL.",
-      "O recurso 'Agrupar Por' no Power Query suporta apenas a contagem de linhas ('Count Rows'). Para somar ou calcular médias, é necessário agrupar e, em seguida, usar as opções de 'Estatísticas' na guia 'Adicionar Coluna'.",
-      "Utilizar a função 'Resumir Colunas' ('Summarize Columns') na guia 'Transformar', pois ela é a equivalente ao 'Agrupar Por' para agregações numéricas. O 'Agrupar Por' é exclusivo para agrupamentos de texto sem operações de agregação.",
-      "O 'Agrupar Por' remove todas as colunas não agrupadas do resultado. Para manter outras colunas além da categoria e do total de vendas, seria necessário combinar o resultado agrupado com a tabela original usando um 'Mesclar Consultas' (Merge Queries)."
+      "Guia Transformar > 'Agrupar Por', escolher 'Categoria' e adicionar agregação 'Soma' sobre 'Valor'; resultado: uma linha por categoria, como GROUP BY em SQL.",
+      "'Agrupar Por' só suporta 'Count Rows'; para somar/médias é preciso agrupar e usar 'Estatísticas' em Adicionar Coluna.",
+      "Usar 'Resumir Colunas', equivalente ao Agrupar Por para números; Agrupar Por seria exclusivo para texto sem agregação.",
+      "'Agrupar Por' remove colunas não agrupadas; para manter outras colunas é preciso combinar com Mesclar Consultas (Merge)."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -301,12 +301,12 @@ export const questions = [
   },
   {
     "id": "q13_pl300",
-    "text": "Por que é recomendado desabilitar a opção \"Auto Date/Time\" nas configurações do Power BI Desktop e criar uma tabela de datas dedicada no Power Query ou via DAX?",
+    "text": "Por que é recomendado desabilitar 'Auto Date/Time' no Power BI e criar uma tabela de datas dedicada no Power Query ou via DAX?",
     "options": [
-      "Auto Date/Time cria tabelas ocultas de hierarquia de data para cada coluna do tipo Date no modelo, consumindo memória e aumentando o tamanho do arquivo .pbix; uma tabela de datas dedicada e centralizada oferece controle total sobre as colunas (colunas fiscais, feriados, semanas customizadas), permite relacionamento com múltiplas tabelas de fatos, e é a abordagem recomendada pela Microsoft para modelos de produção.",
-      "Auto Date/Time deve ser mantido habilitado em todos os relatórios pois é o único mecanismo que permite usar funções de time intelligence DAX como TOTALYTD e SAMEPERIODLASTYEAR; desabilitá-lo torna essas funções indisponíveis no modelo.",
-      "Auto Date/Time é necessário para criar hierarquias de data (Ano > Trimestre > Mês > Dia) no painel de visualizações; sem ele, as colunas de data não podem ser expandidas em hierarquias e o drill-down temporal em gráficos não funciona.",
-      "Desabilitar Auto Date/Time é obrigatório apenas em modelos com mais de 10 tabelas de fatos; para modelos menores, o impacto na performance é desprezível e manter o Auto Date/Time ativo simplifica o desenvolvimento sem prejuízos perceptíveis."
+      "Auto Date/Time cria tabelas ocultas por coluna Date, inflando o .pbix; tabela dedicada dá controle total e liga a múltiplas fatos — recomendação Microsoft.",
+      "Auto Date/Time deve ficar ativo, pois é o único jeito de usar TOTALYTD/SAMEPERIODLASTYEAR; desabilitar tornaria essas funções indisponíveis.",
+      "Auto Date/Time é necessário para hierarquias (Ano>Trimestre>Mês>Dia) no painel; sem ele, drill-down temporal não funcionaria.",
+      "Desabilitar só é obrigatório com 10+ tabelas de fatos; em modelos menores o impacto é desprezível, mantendo Auto Date/Time simplifica."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -326,12 +326,12 @@ export const questions = [
   },
   {
     "id": "q14_pl300",
-    "text": "Um analista precisa importar automaticamente todos os arquivos CSV de uma pasta que recebe novos arquivos mensalmente. Qual é a abordagem correta no Power Query para consolidar esses dados de forma eficiente e que se atualize automaticamente com novos arquivos?",
+    "text": "Um analista precisa importar automaticamente CSVs de uma pasta que recebe novos arquivos mensalmente. Qual a abordagem correta no Power Query para consolidar com atualização automática?",
     "options": [
-      "Conectar-se via conector \"Pasta\" (Obter Dados > Pasta), apontar para a pasta com os arquivos CSV. O Power Query listará todos os arquivos e permitirá usar a opção \"Combinar Arquivos\" (Transformar Dados > Combinar Arquivos), que aplica automaticamente a mesma transformação a todos os arquivos e os consolida em uma única tabela. Novos arquivos adicionados à pasta serão incluídos automaticamente no próximo refresh.",
-      "Importar cada arquivo CSV individualmente como consultas separadas e usar \"Anexar Consultas\" para consolidar. Ao adicionar novos arquivos mensais, basta criar uma nova consulta para o novo arquivo e adicioná-lo ao \"Anexar Consultas\" — essa é a única forma de garantir que o Power Query processe todos os arquivos corretamente.",
-      "Usar o conector \"Pasta do SharePoint\" mesmo para pastas locais, pois o conector \"Pasta\" padrão não suporta a combinação automática de arquivos, apenas lista os arquivos sem capacidade de consolidação.",
-      "Criar um parâmetro de caminho de pasta e usar a função Folder.Files(caminho) em uma consulta em branco. Depois, filtrar manualmente os arquivos CSV e expandir o conteúdo binário um a um para garantir a transformação correta de cada arquivo."
+      "Conector 'Pasta' apontando para a pasta; 'Combinar Arquivos' aplica a transformação a todos e consolida; novos arquivos entram no próximo refresh.",
+      "Importar cada CSV individualmente e usar 'Anexar Consultas'; a cada novo arquivo, criar consulta e adicionar ao Anexar.",
+      "Usar 'Pasta do SharePoint' mesmo para pastas locais, pois o conector 'Pasta' padrão não suportaria combinação automática.",
+      "Parâmetro de caminho + Folder.Files(caminho) em consulta em branco; filtrar CSVs e expandir conteúdo binário um a um."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -378,10 +378,10 @@ export const questions = [
     "id": "q16_pl300",
     "text": "No Power Query, qual é a diferença entre \"Duplicar\" (Duplicate) e \"Referenciar\" (Reference) uma consulta existente?",
     "options": [
-      "Duplicate cria uma cópia independente da consulta com todos os passos replicados — alterações na original não afetam a cópia; Reference cria uma nova consulta que usa o resultado da consulta original como ponto de partida — qualquer alteração na consulta referenciada é refletida na consulta filha, e a fonte de dados não é consultada duas vezes.",
-      "Duplicate e Reference são equivalentes funcionalmente; a única diferença é que Duplicate copia o nome da consulta com sufixo \"(2)\" enquanto Reference cria uma consulta com nome genérico \"Query1\"; ambas criam consultas independentes sem vínculo com a original.",
-      "Duplicate mantém o query folding da consulta original enquanto Reference sempre quebra o query folding; por isso, para manter máxima performance, deve-se sempre usar Duplicate em vez de Reference ao criar consultas derivadas.",
-      "Reference só está disponível para consultas que foram marcadas como \"Enable Load\" desabilitado (staging queries); para consultas com carga habilitada, apenas Duplicate está disponível para criar consultas derivadas no Power Query."
+      "Duplicate cria cópia independente — mudanças na original não afetam. Reference parte do resultado da original e reflete alterações, sem reconsultar a fonte.",
+      "Duplicate e Reference seriam equivalentes; só mudaria o nome (sufixo '(2)' vs 'Query1'); ambas criariam consultas independentes da original.",
+      "Duplicate mantém o query folding original; Reference sempre quebra; por performance, sempre usar Duplicate em vez de Reference.",
+      "Reference só estaria disponível para consultas com 'Enable Load' desabilitado (staging); com carga habilitada, só Duplicate estaria disponível."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -403,10 +403,10 @@ export const questions = [
     "id": "q17_pl300",
     "text": "No Power Query, como você substitui o valor \"N/A\" por null em uma coluna de texto para que o Power BI o trate corretamente como um valor ausente?",
     "options": [
-      "Selecionar a coluna, clicar em Transform > Replace Values, no campo \"Value To Find\" digitar \"N/A\" e deixar \"Replace With\" em branco (vazio); o Power Query substitui as ocorrências de \"N/A\" por null, que é o valor nulo nativo do M e tratado como BLANK() no DAX.",
-      "Usar Add Column > Conditional Column com a condição \"se [Coluna] = \"N/A\" então null senão [Coluna]\"; essa é a única forma de substituir um valor específico por null, pois o campo \"Replace With\" do Replace Values não aceita null como valor destino.",
-      "Aplicar Transform > Clean na coluna, que remove automaticamente strings inválidas como \"N/A\", \"NULL\", \"#N/D\" e outros marcadores comuns de valor ausente, convertendo-os para null sem necessidade de configuração manual.",
-      "Filtrar as linhas onde a coluna é igual a \"N/A\" para removê-las do dataset; substituir por null não é recomendado, pois o Power BI não distingue entre null e string vazia, tratando ambos como BLANK() e podendo distorcer contagens e médias."
+      "Coluna > Transform > Replace Values, 'Value To Find'='N/A' e 'Replace With' vazio; substitui por null, tratado como BLANK() no DAX.",
+      "Add Column > Conditional Column com 'se [Coluna]=\"N/A\" então null senão [Coluna]'; única forma, pois Replace With não aceitaria null.",
+      "Transform > Clean remove automaticamente strings como 'N/A', 'NULL', '#N/D' e converte para null sem configuração manual.",
+      "Filtrar e remover linhas com 'N/A'; substituir por null não seria recomendado pois Power BI trataria null e string vazia igual."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -426,12 +426,12 @@ export const questions = [
   },
   {
     "id": "q18_pl300",
-    "text": "Qual é a prática recomendada para organizar consultas no Power Query quando há múltiplas transformações complexas antes de carregar os dados no modelo de dados do Power BI?",
+    "text": "Qual prática é recomendada para organizar consultas no Power Query quando há múltiplas transformações complexas antes do modelo de dados?",
     "options": [
-      "Criar consultas de staging intermediárias com \"Enable Load\" desabilitado para as etapas de limpeza e preparação, e somente as consultas finais prontas para o modelo com \"Enable Load\" habilitado; isso organiza o pipeline de transformação, melhora a legibilidade e evita carregar tabelas intermediárias desnecessariamente no modelo.",
-      "Todas as transformações devem ser consolidadas em uma única consulta com o máximo de passos possível; múltiplas consultas intermediárias aumentam o tempo de refresh pois cada consulta gera uma conexão separada à fonte de dados, impactando negativamente a performance.",
-      "Usar grupos de consultas (Query Groups) para organizar visualmente as consultas no painel esquerdo do Power Query Editor; os grupos não afetam o carregamento — todas as consultas dentro de um grupo sempre carregam no modelo independente de configuração.",
-      "Desabilitar \"Enable Load\" em consultas intermediárias as exclui permanentemente do arquivo .pbix; para manter as transformações intermediárias no projeto sem carregá-las no modelo é necessário exportá-las como templates M separados."
+      "Consultas de staging com 'Enable Load' off para preparação, só as finais habilitadas; organiza o pipeline sem carregar tabelas extras.",
+      "Consolidar tudo numa única consulta; múltiplas consultas intermediárias aumentariam o tempo de refresh por conexões separadas.",
+      "Usar Query Groups para organizar visualmente; os grupos não afetariam carregamento — todas as consultas do grupo sempre carregariam.",
+      "Desabilitar 'Enable Load' excluiria a consulta do .pbix; para manter transformações sem carregar seria preciso exportar como templates M."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -451,12 +451,12 @@ export const questions = [
   },
   {
     "id": "q19_pl300",
-    "text": "No Power Query Editor, qual é a maneira mais eficiente e recomendada para criar uma nova coluna que classifica o valor de vendas em categorias 'Alto' (para vendas acima de R$ 10.000), 'Médio' (para vendas entre R$ 5.000 e R$ 10.000, inclusive) ou 'Baixo' (para vendas abaixo de R$ 5.000)?",
+    "text": "No Power Query, qual a forma mais eficiente de classificar vendas em 'Alto' (>R$10.000), 'Médio' (R$5.000-10.000) ou 'Baixo' (<R$5.000)?",
     "options": [
-      "Utilizar a funcionalidade 'Coluna Condicional' (Conditional Column) na guia 'Adicionar Coluna', configurando as condições na ordem: 'se [Vendas] for maior que 10000, então \"Alto\"'; 'se [Vendas] for maior ou igual a 5000, então \"Médio\"'; e 'senão, \"Baixo\"'. O Power Query gerará automaticamente a lógica M correspondente.",
-      "Criar uma nova medida DAX utilizando a função IF aninhada, como IF([Vendas] > 10000, \"Alto\", IF([Vendas] >= 5000, \"Médio\", \"Baixo\")), pois medidas DAX são ideais para classificações dinâmicas e não impactam o tamanho do modelo.",
-      "Aplicar a transformação 'Substituir Valores' (Replace Values) sequencialmente, primeiro para valores acima de 10000, depois para valores entre 5000 e 10000, e por fim para os demais, pois essa função permite a substituição condicional por faixas de valores.",
-      "Adicionar uma 'Coluna Personalizada' (Custom Column) com uma expressão DAX como SWITCH(TRUE(), [Vendas] > 10000, \"Alto\", [Vendas] >= 5000, \"Médio\", \"Baixo\"), já que o Power Query suporta diretamente funções DAX para lógica condicional."
+      "'Coluna Condicional' (Adicionar Coluna): 'se [Vendas]>10000 então Alto'; 'se >=5000 então Médio'; 'senão Baixo'. Gera a lógica M automaticamente.",
+      "Medida DAX com IF aninhado: IF([Vendas]>10000,\"Alto\",IF(>=5000,\"Médio\",\"Baixo\")), pois medidas DAX seriam ideais.",
+      "'Substituir Valores' (Replace Values) sequencialmente por faixa (>10000, 5000-10000, resto), pois permitiria substituição por faixas.",
+      "'Coluna Personalizada' com DAX SWITCH(TRUE(), [Vendas]>10000,\"Alto\",...), já que o Power Query suportaria DAX direto."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -476,12 +476,12 @@ export const questions = [
   },
   {
     "id": "q20_pl300",
-    "text": "Ao importar dados de um arquivo CSV para o Power Query, por que é crucial definir explicitamente os tipos de dados de cada coluna antes de carregar esses dados no modelo do Power BI?",
+    "text": "Ao importar CSV no Power Query, por que é crucial definir explicitamente os tipos de dados antes de carregar no modelo do Power BI?",
     "options": [
-      "Definir tipos de dados explicitamente garante que o Power BI armazene e processe os dados corretamente: colunas numéricas permitem agregações (SUM, AVG), colunas de data habilitam funções de time intelligence DAX, e colunas de texto não são agregadas erroneamente; sem tipos corretos, o Power BI pode importar números como texto e operações matemáticas retornarão erros ou resultados incorretos.",
-      "Os tipos de dados em Power Query são apenas para exibição visual no editor; o modelo de dados do Power BI infere automaticamente os tipos corretos durante o carregamento, independente do tipo definido no Power Query, com base nos valores reais de cada coluna.",
-      "Tipos de dados em Power Query afetam apenas a performance de refresh; definir o tipo correto permite ao conector otimizar a transferência de dados da fonte, mas não tem impacto nas funcionalidades DAX disponíveis após o carregamento no modelo.",
-      "É suficiente definir os tipos de dados no modelo de dados após o carregamento via Data View no Power BI Desktop; alterações de tipo no Power Query são redundantes e adicionam passos desnecessários que podem quebrar o query folding."
+      "Tipos explícitos garantem agregações corretas, time intelligence em datas, e texto não agregado por erro; sem tipo certo, cálculos podem falhar.",
+      "Tipos no Power Query seriam só visuais; o modelo infere automaticamente os tipos certos no carregamento, independente do que foi definido.",
+      "Tipos afetariam só performance de refresh, otimizando a transferência, sem impacto nas funcionalidades DAX após o carregamento.",
+      "Bastaria definir tipos no modelo via Data View após carregar; mudanças no Power Query seriam redundantes e quebrariam o query folding."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -501,12 +501,12 @@ export const questions = [
   },
   {
     "id": "q21_pl300",
-    "text": "Por que o Star Schema (esquema estrela) é a estrutura de modelo de dados recomendada para relatórios Power BI em vez de manter as tabelas no formato normalizado (3NF) do banco de dados transacional?",
+    "text": "Por que o Star Schema é a estrutura recomendada para Power BI em vez de manter tabelas normalizadas (3NF) do banco transacional?",
     "options": [
-      "O Star Schema é recomendado apenas por razões estéticas de organização do diagrama de relacionamentos no Power BI Desktop; em termos de performance e funcionalidade DAX, modelos normalizados (3NF) e Star Schema são equivalentes para o mecanismo VertiPaq do Power BI.",
-      "O Star Schema centraliza uma tabela de fatos com métricas numéricas rodeada por tabelas de dimensão desnormalizadas, otimizando para leitura analítica: reduz o número de joins necessários, melhora a performance das queries DAX e do mecanismo VertiPaq, simplifica a criação de medidas e a experiência do usuário final ao navegar no relatório.",
-      "O Star Schema é obrigatório no Power BI pois o mecanismo VertiPaq não suporta tabelas com mais de 20 colunas; a desnormalização das dimensões é necessária para dividir as tabelas grandes do banco transacional em tabelas menores compatíveis com o limite do Power BI.",
-      "O Star Schema é recomendado para modelos DirectQuery mas não para modelos Import; no modo Import, o VertiPaq comprime os dados independente da estrutura, tornando o esquema normalizado (3NF) mais eficiente por armazenar menos dados duplicados nas dimensões."
+      "Star Schema seria só estética do diagrama; em performance/DAX, modelos normalizados (3NF) e Star Schema seriam equivalentes para o VertiPaq.",
+      "Fato central com métricas rodeado por dimensões desnormalizadas: menos joins, melhor performance DAX/VertiPaq, medidas e UX mais simples.",
+      "Star Schema seria obrigatório pois o VertiPaq não suportaria tabelas com mais de 20 colunas; desnormalizar dividiria tabelas grandes do banco.",
+      "Star Schema seria recomendado só para DirectQuery; em Import, o VertiPaq comprimiria igual, tornando 3NF mais eficiente."
     ],
     "correctAnswer": 1,
     "difficulty": "iniciante",
@@ -528,10 +528,10 @@ export const questions = [
     "id": "q22_pl300",
     "text": "No Power BI Desktop, ao criar relacionamentos entre tabelas, quais são os tipos de cardinalidade disponíveis e qual a sua aplicação correta?",
     "options": [
-      "Many-to-One (*:1) e One-to-Many (1:*) são os mais comuns, usados para conectar tabelas de fatos a dimensões; One-to-One (1:1) é para tabelas com chaves únicas que poderiam ser mescladas; e Many-to-Many (*:*) é para cenários onde ambas as tabelas têm valores repetidos na coluna de junção, exigindo cuidado na configuração.",
-      "O Power BI suporta apenas Many-to-One (*:1) e One-to-Many (1:*); relacionamentos Many-to-Many e One-to-One não estão disponíveis nativamente e requerem criação de tabela ponte intermediária para serem simulados no modelo.",
-      "One-to-Many (1:*) é o único tipo recomendado pela Microsoft; os demais tipos (Many-to-Many, One-to-One) estão disponíveis mas são marcados como 'legacy' e podem ser removidos em versões futuras do Power BI Desktop.",
-      "Many-to-Many (*:*) é o tipo padrão criado automaticamente pelo Power BI ao detectar colunas com o mesmo nome em duas tabelas; para criar relacionamentos One-to-Many é necessário garantir manualmente que a coluna do lado 'um' não tenha valores duplicados antes de criar o relacionamento."
+      "Many-to-One/One-to-Many conectam fatos a dimensões; One-to-One é para chaves únicas; Many-to-Many exige cuidado com repetição nos dois lados.",
+      "Power BI suportaria só Many-to-One e One-to-Many; Many-to-Many e One-to-One exigiriam tabela ponte intermediária para serem simulados.",
+      "One-to-Many seria o único tipo recomendado pela Microsoft; os demais estariam marcados como 'legacy', podendo ser removidos futuramente.",
+      "Many-to-Many seria o padrão ao detectar colunas com mesmo nome; One-to-Many exigiria garantir manualmente unicidade do lado 'um'."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -551,12 +551,12 @@ export const questions = [
   },
   {
     "id": "q23_pl300",
-    "text": "Em um modelo Power BI com uma tabela de Fatos Vendas relacionada a uma tabela de Dimensão Produto (relação 1 para muitos), qual é o comportamento padrão da direção do filtro cruzado (Cross Filter Direction) e em que situações faz sentido alterá-la para \"Both\" (Bidirecional)?",
+    "text": "Numa relação Fato Vendas → Dimensão Produto, qual o padrão do Cross Filter Direction e quando mudar para 'Both' (Bidirecional)?",
     "options": [
-      "O padrão é Single (unidirecional), fluindo do lado '1' (Dimensão Produto) para o lado '*' (Fatos Vendas). Isso significa que filtrar produtos filtra vendas, mas filtrar vendas não filtra produtos automaticamente. A direção 'Both' (bidirecional) faz sentido quando é preciso que contagens na dimensão reflitam filtros aplicados na tabela de fatos (ex: 'quantos produtos distintos foram vendidos nesta região'), mas deve ser usada com cautela, pois pode criar ambiguidade em modelos complexos e impactar a performance.",
-      "O padrão é Both (bidirecional) em todos os relacionamentos criados automaticamente pelo Power BI; Single é uma opção avançada usada apenas em modelos com relacionamentos circulares onde o bidirecional causaria loop infinito de filtros.",
-      "A direção do filtro não afeta os resultados das medidas DAX, apenas o comportamento de filtros visuais em relatórios; medidas com CALCULATE ignoram completamente a direção do filtro configurada no relacionamento e sempre propagam o filtro nas duas direções.",
-      "\"Both\" é sempre preferível a \"Single\" pois permite máxima flexibilidade analítica; o único motivo para usar Single é quando há dois relacionamentos ativos entre as mesmas tabelas, situação em que o Power BI força Single automaticamente para evitar conflito."
+      "Padrão é Single (Dimensão→Fatos): produto filtra vendas, não o contrário. 'Both' serve quando a dimensão precisa refletir filtros dos fatos, com cautela.",
+      "Padrão seria Both em todos relacionamentos automáticos; Single seria avançado, só para evitar loop infinito em relacionamentos circulares.",
+      "Direção do filtro não afetaria medidas DAX, só filtros visuais; CALCULATE ignoraria a direção e sempre propagaria nas duas direções.",
+      "'Both' seria sempre preferível; o único motivo para Single seria dois relacionamentos ativos forçando Single automaticamente."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -576,12 +576,12 @@ export const questions = [
   },
   {
     "id": "q24_pl300",
-    "text": "Um modelo de dados no Power BI contém uma tabela de fatos chamada 'Fatos Vendas' e uma tabela de dimensão 'DimData'. A tabela 'Fatos Vendas' possui duas colunas de data: 'DataVenda' e 'DataEntrega', e ambas precisam se relacionar com a tabela 'DimData' para análises temporais. Qual é a abordagem correta para configurar e utilizar esses dois relacionamentos de forma eficiente no Power BI?",
+    "text": "Uma tabela de fatos tem 'DataVenda' e 'DataEntrega', ambas precisando se relacionar com a dimensão 'DimData'. Qual a abordagem correta e eficiente?",
     "options": [
-      "Criar o relacionamento 'Fatos Vendas[DataVenda]' → 'DimData[Data]' como ativo (linha sólida) e 'Fatos Vendas[DataEntrega]' → 'DimData[Data]' como inativo (linha tracejada); para analisar por data de entrega, usar a função USERELATIONSHIP(Fatos Vendas[DataEntrega], DimData[Data]) dentro de CALCULATE em medidas DAX específicas.",
-      "Criar dois relacionamentos ativos entre 'Fatos Vendas' e 'DimData', habilitando a opção \"Allow Multiple Active Relationships\" nas configurações do modelo; ambas as colunas de data filtrarão a 'DimData' simultaneamente, e o usuário pode escolher qual usar via slicer no relatório.",
-      "Duplicar a tabela 'DimData' para criar 'DimDataVenda' e 'DimDataEntrega' como tabelas separadas idênticas; então, criar relacionamentos ativos separados para cada dimensão de data, eliminando a necessidade de USERELATIONSHIP e simplificando as medidas DAX.",
-      "Relacionamentos inativos não são suportados no modo DirectQuery; para modelos DirectQuery com múltiplas colunas de data, é necessário criar views no banco de dados que materializam as agregações por cada tipo de data separadamente."
+      "DataVenda→DimData ativo; DataEntrega→DimData inativo; para entrega, usar USERELATIONSHIP(...) dentro de CALCULATE em medidas específicas.",
+      "Dois relacionamentos ativos habilitando 'Allow Multiple Active Relationships'; ambas as datas filtrariam a DimData ao mesmo tempo, via slicer.",
+      "Duplicar DimData em DimDataVenda/DimDataEntrega; relacionamentos ativos para cada, eliminando USERELATIONSHIP.",
+      "Relacionamentos inativos não seriam suportados em DirectQuery; seria preciso criar views materializando agregações por tipo de data."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -603,10 +603,10 @@ export const questions = [
     "id": "q25_pl300",
     "text": "Qual é o papel da função CALCULATE no DAX e por que ela é considerada a função mais importante da linguagem?",
     "options": [
-      "CALCULATE avalia uma expressão em um contexto de filtro modificado — permite adicionar, remover ou substituir filtros do contexto atual; é a única função DAX capaz de modificar o contexto de filtro, tornando possível cálculos como \"total do ano anterior\", \"% do total geral\", \"vendas de uma categoria específica independente do filtro visual\", e praticamente qualquer cálculo analítico complexo.",
-      "CALCULATE é importante pois é a função DAX que permite referenciar valores de outras linhas da mesma tabela (contexto de linha), diferente das funções de agregação como SUM e AVERAGE que operam apenas na linha atual; sem CALCULATE, não seria possível criar cálculos que comparam linhas entre si.",
-      "CALCULATE é a versão DAX do VLOOKUP do Excel — permite buscar valores em outras tabelas com base em uma chave de correspondência; é considerada fundamental pois a maioria dos relatórios de negócio requer combinar dados de tabelas diferentes em uma única medida.",
-      "CALCULATE executa cálculos em paralelo em múltiplos núcleos de CPU, sendo responsável pela performance superior do Power BI em relação a outras ferramentas de BI; sem CALCULATE, todas as medidas DAX seriam processadas sequencialmente com impacto severo de performance."
+      "CALCULATE avalia expressão em contexto de filtro modificado; única função que modifica o contexto, permitindo 'ano anterior' ou '% do total'.",
+      "CALCULATE permitiria referenciar outras linhas da mesma tabela (contexto de linha), diferente de SUM/AVERAGE que operariam só na linha atual.",
+      "CALCULATE seria a versão DAX do VLOOKUP — buscaria valores em outras tabelas via chave; fundamental para combinar dados de tabelas diferentes.",
+      "CALCULATE executaria cálculos em paralelo em múltiplos núcleos, responsável pela performance do Power BI; sem ele, medidas seriam sequenciais."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -626,12 +626,12 @@ export const questions = [
   },
   {
     "id": "q26_pl300",
-    "text": "Qual é a diferença fundamental entre Contexto de Filtro (Filter Context) e Contexto de Linha (Row Context) no DAX, e como a função CALCULATE desempenha um papel crucial na transição entre esses contextos?",
+    "text": "Qual a diferença fundamental entre Filter Context e Row Context no DAX, e como CALCULATE atua na transição entre eles?",
     "options": [
-      "Contexto de Filtro é criado por filtros visuais, slicers e CALCULATE — define quais linhas são visíveis para uma medida; Contexto de Linha é criado por iteradores (SUMX, FILTER, etc.) e colunas calculadas — representa a linha atual sendo processada. CALCULATE dentro de um iterador converte o contexto de linha em contexto de filtro (context transition), tornando os valores da linha atual disponíveis como filtros para a expressão avaliada.",
-      "Contexto de Filtro e Contexto de Linha são sinônimos no DAX — ambos representam o conjunto de linhas disponíveis para o cálculo atual; a diferença é apenas terminológica, sendo \"Contexto de Filtro\" usado para medidas e \"Contexto de Linha\" para colunas calculadas.",
-      "Contexto de Linha tem sempre precedência sobre Contexto de Filtro no DAX; quando ambos existem simultaneamente (ex: medida usada dentro de SUMX), o Contexto de Linha anula os filtros do Contexto de Filtro, e o CALCULATE é necessário para restaurar o Contexto de Filtro original.",
-      "O Contexto de Linha é criado automaticamente para todas as medidas DAX quando avaliadas em um visual de tabela — cada linha do visual gera um contexto de linha para a medida; o Contexto de Filtro só existe quando slicers ou filtros de página são aplicados ao relatório."
+      "Filter Context vem de filtros/slicers/CALCULATE; Row Context vem de iteradores e colunas calculadas. CALCULATE converte um no outro.",
+      "Filter Context e Row Context seriam sinônimos — ambos representariam linhas disponíveis; a diferença seria só terminológica (medidas vs colunas).",
+      "Row Context teria precedência sobre Filter Context; quando ambos existem (medida em SUMX), Row Context anularia os filtros, exigindo CALCULATE.",
+      "Row Context seria criado automaticamente para toda medida em tabela; Filter Context só existiria com slicers/filtros de página aplicados."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -651,12 +651,12 @@ export const questions = [
   },
   {
     "id": "q27_pl300",
-    "text": "Qual é a diferença fundamental entre as funções DAX ALL e ALLEXCEPT, e em que cenários cada uma é mais apropriada para manipulação do contexto de filtro?",
+    "text": "Qual a diferença entre as funções DAX ALL e ALLEXCEPT, e quando cada uma é mais apropriada para manipular o contexto de filtro?",
     "options": [
-      "ALL(Tabela) ou ALL(Tabela[Coluna]) remove todos os filtros de uma tabela ou coluna específica, retornando todos os valores. ALLEXCEPT(Tabela, Coluna1, Coluna2) remove todos os filtros da tabela, exceto os das colunas especificadas, preservando apenas esses filtros; é ideal para calcular percentuais do total dentro de uma categoria ou grupo específico.",
-      "ALL remove filtros apenas de visuais (slicers e filtros de página), preservando filtros aplicados via CALCULATE; ALLEXCEPT remove todos os filtros, incluindo os de CALCULATE, sendo mais \"agressiva\" na limpeza do contexto de filtro.",
-      "ALL e ALLEXCEPT funcionam de forma idêntica, removendo todos os filtros da tabela especificada; a diferença é que ALLEXCEPT aceita múltiplas tabelas como parâmetro, enquanto ALL aceita apenas uma tabela ou coluna por chamada.",
-      "ALL é usado exclusivamente como argumento de CALCULATE para modificar o contexto de filtro; ALLEXCEPT é uma função de tabela que retorna todas as linhas, exceto as que atendem a uma condição, similar ao WHERE NOT EXISTS do SQL."
+      "ALL(Tabela/Coluna) remove todos os filtros; ALLEXCEPT(Tabela, Col1, Col2) remove tudo exceto as colunas dadas — ideal para % do total num grupo.",
+      "ALL removeria filtros só de visuais (slicers/página), preservando os de CALCULATE; ALLEXCEPT removeria todos, incluindo os de CALCULATE.",
+      "ALL e ALLEXCEPT funcionariam de forma idêntica; a diferença seria ALLEXCEPT aceitar múltiplas tabelas, enquanto ALL aceitaria só uma.",
+      "ALL seria usado só como argumento de CALCULATE; ALLEXCEPT retornaria linhas exceto as que atendem uma condição, como WHERE NOT EXISTS."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -678,7 +678,7 @@ export const questions = [
     "id": "q28_pl300",
     "text": "Como você implementaria uma medida DAX para calcular o crescimento percentual das vendas em relação ao mesmo período do ano anterior (Year-over-Year, ou YoY%) no Power BI?",
     "options": [
-      "YoY% = DIVIDE(SUM(Vendas[Valor]) - CALCULATE(SUM(Vendas[Valor]), SAMEPERIODLASTYEAR(DimData[Data])), CALCULATE(SUM(Vendas[Valor]), SAMEPERIODLASTYEAR(DimData[Data])))",
+      "DIVIDE(SUM(Vendas[Valor]) - CALCULATE(SUM(Vendas[Valor]), SAMEPERIODLASTYEAR(DimData[Data])), CALCULATE(SUM(Vendas[Valor]), SAMEPERIODLASTYEAR(DimData[Data])))",
       "YoY% = (SUM(Vendas[Valor]) - SUM(Vendas[ValorAnoAnterior])) / SUM(Vendas[ValorAnoAnterior])",
       "YoY% = DIVIDE(SUM(Vendas[Valor]), CALCULATE(SUM(Vendas[Valor]), DATEADD(DimData[Data], -1, YEAR)))",
       "YoY% = (SUM(Vendas[Valor]) - CALCULATE(SUM(Vendas[Valor]), PREVIOUSYEAR(DimData[Data]))) / CALCULATE(SUM(Vendas[Valor]), PREVIOUSYEAR(DimData[Data]))"
@@ -726,12 +726,12 @@ export const questions = [
   },
   {
     "id": "q30_pl300",
-    "text": "Qual é a diferença fundamental entre as funções DAX `SUM(Vendas[Valor])` e `SUMX(Vendas, Vendas[Quantidade] * Vendas[PrecoUnitario])`, e em que cenários cada uma delas é a abordagem mais apropriada?",
+    "text": "Qual a diferença entre `SUM(Vendas[Valor])` e `SUMX(Vendas, Vendas[Quantidade]*Vendas[PrecoUnitario])`, e quando usar cada uma?",
     "options": [
-      "SUM agrega uma coluna existente diretamente; SUMX é um iterador que percorre linha a linha a tabela especificada, avalia a expressão para cada linha e soma os resultados — necessário quando o valor a somar precisa ser calculado por linha (ex: Quantidade × Preço), pois SUM(Quantidade × Preço) não existe como sintaxe válida no DAX.",
-      "SUM e SUMX são equivalentes quando aplicados a uma única coluna; SUMX é necessário apenas quando a expressão envolve colunas de tabelas diferentes (ex: multiplicar coluna de Vendas por coluna de Produtos), atuando como um JOIN implícito entre as tabelas durante a iteração.",
-      "SUMX é sempre preferível a SUM pois itera linha a linha aplicando a expressão com o contexto de linha completo, sendo mais preciso; SUM usa atalhos de agregação vetorial que podem retornar resultados incorretos quando há filtros complexos aplicados pelo CALCULATE.",
-      "SUMX deve ser evitado em medidas de produção pois processa linha a linha sem paralelização, sendo significativamente mais lento que SUM para tabelas com mais de 100.000 linhas; para cálculos como Quantidade × Preço, a solução correta é criar uma coluna calculada com o produto e então usar SUM nessa coluna."
+      "SUM agrega coluna existente direto; SUMX itera linha a linha e soma — necessário quando o valor precisa ser calculado por linha.",
+      "SUM e SUMX seriam equivalentes numa coluna única; SUMX só seria necessário entre colunas de tabelas diferentes, como JOIN implícito.",
+      "SUMX seria sempre melhor por iterar com contexto completo; SUM usaria atalhos vetoriais que falhariam com filtros do CALCULATE.",
+      "SUMX deveria ser evitado em produção por não paralelizar com 100k+ linhas; o correto seria criar coluna calculada e usar SUM nela."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -751,12 +751,12 @@ export const questions = [
   },
   {
     "id": "q31_pl300",
-    "text": "Qual é a diferença de performance e comportamento entre CALCULATE(SUM(Vendas[Valor]), DimProduto[Categoria] = \"Eletrônicos\") e CALCULATE(SUM(Vendas[Valor]), FILTER(DimProduto, DimProduto[Categoria] = \"Eletrônicos\"))?",
+    "text": "Qual a diferença de performance entre um predicado direto em CALCULATE e usar FILTER(DimProduto, DimProduto[Categoria]=\"Eletrônicos\")?",
     "options": [
-      "A primeira forma usa um predicado de filtro direto (filter argument) que o mecanismo DAX otimiza internamente convertendo em um filtro de coluna eficiente; a segunda usa FILTER que itera linha a linha pela tabela DimProduto — é mais lenta pois força varredura da tabela inteira; o predicado direto é preferível para filtros simples de igualdade em colunas de dimensão.",
-      "As duas formas são completamente equivalentes em performance e comportamento — o mecanismo DAX converte automaticamente a segunda forma na primeira durante a otimização de query; a escolha entre elas é apenas de preferência de estilo de código sem impacto técnico.",
-      "FILTER é sempre preferível ao predicado direto pois oferece mais controle sobre quais colunas são filtradas; o predicado direto Categoria = \"Eletrônicos\" remove TODOS os filtros da tabela DimProduto antes de aplicar o novo filtro, podendo causar resultados incorretos em contextos com múltiplos filtros simultâneos.",
-      "FILTER é necessário quando a condição envolve medidas (ex: FILTER(DimProduto, [TotalVendas] > 10000)); para filtros em colunas físicas da tabela, o predicado direto e o FILTER são equivalentes e a Microsoft recomenda FILTER por ser mais explícito e legível."
+      "Predicado direto seria otimizado como filtro de coluna; FILTER iteraria a tabela, mais lento. Direto é melhor p/ igualdade simples.",
+      "As duas formas seriam equivalentes; o DAX converteria automaticamente uma na outra — a escolha seria só estilo de código, sem impacto técnico.",
+      "FILTER seria sempre melhor por dar mais controle; o predicado direto removeria todos filtros da tabela antes do novo, causando erros.",
+      "FILTER seria necessário só com medidas na condição; em colunas físicas ambos seriam equivalentes e a Microsoft recomendaria FILTER por legibilidade."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -778,10 +778,10 @@ export const questions = [
     "id": "q32_pl300",
     "text": "Qual é a diferença fundamental entre Medidas (Measures) e Colunas Calculadas (Calculated Columns) no DAX e quando usar cada uma?",
     "options": [
-      "Colunas Calculadas são avaliadas linha a linha durante o refresh de dados, armazenadas fisicamente no modelo VertiPaq e consomem memória. Medidas são avaliadas dinamicamente em tempo de consulta no contexto de filtro do visual e não armazenam dados no modelo. Use medidas para agregações e KPIs dinâmicos, e colunas calculadas para atributos fixos por linha usados em filtros, segmentações ou eixos.",
-      "Medidas e Colunas Calculadas são equivalentes em termos de armazenamento e performance; a diferença é apenas sintática — medidas usam agregações (SUM, COUNT) enquanto colunas calculadas usam funções de linha (LEFT, IF); ambas são recalculadas a cada interação do usuário no relatório.",
-      "Colunas Calculadas são calculadas no Power Query antes do carregamento no modelo e não consomem memória adicional; Medidas são calculadas pelo mecanismo DAX após o carregamento e são a principal causa de lentidão em relatórios complexos por serem recalculadas a cada filtro aplicado.",
-      "Medidas só podem referenciar outras medidas e funções de agregação — não podem acessar valores de colunas individuais diretamente; Colunas Calculadas têm acesso a todas as colunas da tabela e de tabelas relacionadas, tornando-as mais flexíveis para lógica complexa de negócio."
+      "Colunas Calculadas avaliam linha a linha no refresh, armazenadas no VertiPaq; Medidas avaliam dinamicamente no contexto do visual, sem armazenar.",
+      "Medidas e Colunas Calculadas seriam equivalentes em armazenamento; diferença só sintática (agregação vs função de linha).",
+      "Colunas Calculadas seriam calculadas no Power Query sem consumir memória; Medidas seriam calculadas após carregar, causando lentidão a cada filtro.",
+      "Medidas só poderiam referenciar outras medidas/agregações, não colunas individuais; Colunas Calculadas teriam acesso a todas as colunas relacionadas."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -801,12 +801,12 @@ export const questions = [
   },
   {
     "id": "q33_pl300",
-    "text": "No DAX, para realizar cálculos de percentual e outras divisões, existem duas abordagens principais: a função `DIVIDE` e o operador de divisão `/`. Considerando a robustez e o tratamento de erros, por que a função `DIVIDE` é geralmente preferível ao operador `/`, e quais são os parâmetros que ela aceita?",
+    "text": "Por que `DIVIDE` é geralmente preferível ao operador `/` no DAX para cálculos de percentual, e quais parâmetros ela aceita?",
     "options": [
-      "A função `DIVIDE` é preferível porque ela trata automaticamente a divisão por zero ou por valores BLANK no denominador, retornando BLANK por padrão ou um valor alternativo especificado, o que evita erros no visual. Seus parâmetros são `DIVIDE(numerador, denominador, [resultado_alternativo])`.",
-      "DIVIDE e o operador `/` são equivalentes em comportamento, ambos retornando BLANK quando o denominador é zero. A preferência por DIVIDE é apenas uma convenção de estilo de código da comunidade Power BI, sem diferença técnica real.",
-      "DIVIDE é necessário apenas quando o denominador é uma medida calculada dinamicamente. Quando o denominador é uma coluna física da tabela, o operador `/` trata automaticamente a divisão por zero, retornando NULL sem gerar erro no visual.",
-      "O operador `/` é mais eficiente que DIVIDE porque usa operações de divisão nativas do processador. DIVIDE adiciona um overhead de verificação de zero a cada cálculo, sendo recomendado apenas para relatórios financeiros onde a precisão é crítica e a performance é secundária."
+      "DIVIDE trata divisão por zero/BLANK no denominador, retornando BLANK ou alternativo. Sintaxe: DIVIDE(numerador, denominador, [alternativo]).",
+      "DIVIDE e `/` seriam equivalentes, ambos retornando BLANK com denominador zero; a preferência seria só estilo de código, sem diferença técnica.",
+      "DIVIDE seria necessário só com denominador calculado dinamicamente; com coluna física, `/` trataria zero automaticamente, retornando NULL sem erro.",
+      "`/` seria mais eficiente por usar divisão nativa do processador; DIVIDE adicionaria overhead, recomendado só onde a precisão for crítica."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -828,10 +828,10 @@ export const questions = [
     "id": "q34_pl300",
     "text": "Qual é a diferença entre as funções DAX RELATED e RELATEDTABLE e em qual contexto cada uma é usada?",
     "options": [
-      "RELATED(Tabela[Coluna]) é usada em colunas calculadas para buscar um valor de uma tabela relacionada no lado \"1\" do relacionamento (da fato para a dimensão), funcionando como um VLOOKUP; RELATEDTABLE(Tabela) retorna a tabela inteira de linhas relacionadas do lado \"*\" do relacionamento (da dimensão para a fato), usada dentro de iteradores ou funções como COUNTROWS para contar registros relacionados.",
-      "RELATED e RELATEDTABLE são equivalentes — ambas buscam valores em tabelas relacionadas; a diferença é que RELATED retorna um valor escalar e RELATEDTABLE retorna uma tabela, mas o resultado final após agregação é idêntico; a escolha entre elas é apenas de preferência de sintaxe.",
-      "RELATED é usada em medidas para filtrar tabelas relacionadas dentro de CALCULATE; RELATEDTABLE é usada exclusivamente em colunas calculadas para criar listas de valores relacionados; tentar usar RELATED em uma medida ou RELATEDTABLE em uma coluna calculada gera erro de contexto.",
-      "RELATED requer que o relacionamento entre as tabelas seja bidirecional (Both) para funcionar corretamente; em relacionamentos unidirecionais (Single), é necessário usar LOOKUPVALUE como alternativa, pois RELATED só propaga filtros na direção do cross filter configurado."
+      "RELATED busca valor do lado \"1\" (fato→dimensão), como VLOOKUP; RELATEDTABLE retorna a tabela do lado \"*\", usada em iteradores/COUNTROWS.",
+      "RELATED e RELATEDTABLE seriam equivalentes — uma retorna escalar, outra tabela, mas o resultado após agregação seria idêntico; só mudaria a sintaxe.",
+      "RELATED seria usada em medidas para filtrar via CALCULATE; RELATEDTABLE seria exclusiva de colunas calculadas; usar uma no lugar da outra geraria erro.",
+      "RELATED exigiria relacionamento bidirecional (Both); em relacionamentos Single, seria necessário LOOKUPVALUE pois RELATED só propagaria na direção do filtro."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -851,7 +851,7 @@ export const questions = [
   },
   {
     "id": "q35_pl300",
-    "text": "Você precisa criar uma medida DAX no Power BI que exiba o nome do produto selecionado em um slicer. Se apenas um produto estiver selecionado, a medida deve mostrar o nome desse produto. Se múltiplos produtos estiverem selecionados ou nenhum produto estiver selecionado, a medida deve exibir a mensagem 'Múltiplos produtos selecionados'. Qual das seguintes expressões DAX atende a esse requisito?",
+    "text": "Você precisa de uma medida DAX que exiba o nome do produto selecionado num slicer, ou 'Múltiplos produtos selecionados' se houver 0 ou mais de 1. Qual expressão atende a esse requisito?",
     "options": [
       "Produto Selecionado = SELECTEDVALUE(DimProduto[Nome], \"Múltiplos produtos selecionados\")",
       "Produto Selecionado = IF(COUNTROWS(VALUES(DimProduto[Nome])) = 1, FIRSTNONBLANK(DimProduto[Nome], 1), \"Múltiplos produtos selecionados\")",
@@ -876,12 +876,12 @@ export const questions = [
   },
   {
     "id": "q36_pl300",
-    "text": "Em quais cenários a criação de uma Tabela Calculada (Calculated Table) via DAX é mais apropriada do que criar a tabela no Power Query?",
+    "text": "Em quais cenários criar uma Tabela Calculada via DAX é mais apropriado do que criar a tabela no Power Query?",
     "options": [
-      "Tabelas calculadas DAX são apropriadas para: criar tabela de datas com CALENDAR() ou CALENDARAUTO(), criar tabelas de suporte a parâmetros What-If com GENERATESERIES(), criar tabelas de desconexão (disconnected tables) para slicers de métricas, e criar tabelas derivadas com SUMMARIZE() ou UNION() que dependem de medidas ou relacionamentos já existentes no modelo.",
-      "Tabelas calculadas DAX são sempre preferíveis ao Power Query para qualquer transformação de dados, pois são atualizadas automaticamente sem necessidade de refresh agendado; tabelas do Power Query requerem refresh manual ou agendado para refletir novos dados da fonte.",
-      "Tabelas calculadas DAX são usadas exclusivamente para criar relacionamentos muitos-para-muitos (bridge tables); para qualquer outro tipo de tabela derivada, o Power Query oferece maior controle e performance superior ao DAX.",
-      "Tabelas calculadas DAX não são persistidas no modelo — são recalculadas a cada interação do usuário no relatório, similar às medidas; por isso consomem mais CPU mas menos memória que tabelas carregadas via Power Query."
+      "Para tabela de datas (CALENDAR), tabelas What-If (GENERATESERIES), desconexão para slicers, e derivadas (SUMMARIZE/UNION) dependentes de medidas existentes.",
+      "Tabelas DAX seriam sempre preferíveis pois atualizariam sem refresh agendado; tabelas do Power Query exigiriam refresh manual/agendado.",
+      "Tabelas DAX seriam exclusivas para bridge tables (M:N); para qualquer outro tipo derivado, o Power Query teria mais controle e performance.",
+      "Tabelas DAX não seriam persistidas — seriam recalculadas a cada interação como medidas, consumindo mais CPU mas menos memória que Power Query."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -901,12 +901,12 @@ export const questions = [
   },
   {
     "id": "q37_pl300",
-    "text": "No Power BI, o que são Grupos de Cálculo (Calculation Groups) e qual o principal problema que eles resolvem, especialmente em modelos de dados complexos com muitas medidas de time intelligence?",
+    "text": "No Power BI, o que são Calculation Groups e qual problema resolvem em modelos com muitas medidas de time intelligence?",
     "options": [
-      "Grupos de Cálculo são equivalentes a grupos de medidas do SSAS Multidimensional — servem apenas para organizar medidas relacionadas em pastas visuais no painel de campos, sem impacto no comportamento das medidas ou na quantidade de DAX necessário no modelo.",
-      "Grupos de Cálculo são criados diretamente no Power BI Desktop via interface visual em Model View; cada grupo pode conter até 10 itens de cálculo e são aplicados automaticamente a todas as medidas do modelo sem possibilidade de exclusão seletiva de medidas específicas.",
-      "Grupos de Cálculo são conjuntos de Itens de Cálculo (Calculation Items) que modificam o comportamento de medidas existentes quando aplicados — permitem criar uma única vez as variações de time intelligence (YTD, MTD, YoY, etc.) que se aplicam a qualquer medida do modelo, eliminando a necessidade de criar versões duplicadas de cada medida (ex: Vendas YTD, Custo YTD, Margem YTD) e reduzindo drasticamente o número de medidas no modelo.",
-      "Grupos de Cálculo substituem completamente as funções de time intelligence nativas do DAX como TOTALYTD e SAMEPERIODLASTYEAR; modelos que usam Grupos de Cálculo não podem usar essas funções pois há conflito de contexto de filtro entre os dois mecanismos."
+      "Seriam grupos de medidas do SSAS Multidimensional — só organizam em pastas visuais, sem impacto no DAX.",
+      "Criados via Model View; cada grupo teria até 10 itens aplicados a todas as medidas, sem exclusão seletiva.",
+      "São Itens de Cálculo que modificam medidas existentes — criam YTD/MTD/YoY uma vez para qualquer medida, sem duplicação.",
+      "Substituiriam TOTALYTD/SAMEPERIODLASTYEAR; modelos com Calculation Groups não poderiam usar essas funções."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -926,12 +926,12 @@ export const questions = [
   },
   {
     "id": "q38_pl300",
-    "text": "Por que é necessário marcar uma tabela como \"Tabela de Data\" (Mark as Date Table) no Power BI e quais são os requisitos para que essa marcação seja bem-sucedida?",
+    "text": "Por que marcar uma tabela como \"Tabela de Data\" no Power BI, e quais requisitos essa marcação exige?",
     "options": [
-      "Marcar uma tabela como \"Tabela de Data\" é essencial para que as funções de time intelligence DAX (como TOTALYTD, SAMEPERIODLASTYEAR e DATEADD) operem corretamente. Os requisitos incluem: a tabela deve ter uma coluna de tipo Date ou DateTime sem valores duplicados, sem datas faltando dentro do intervalo (sem gaps) e sem valores BLANK. A marcação é feita via \"Table Tools\" > \"Mark as Date Table\", selecionando a coluna de data.",
-      "Marcar como Date Table é obrigatório apenas para funções TOTALYTD e TOTALQTD; funções como DATEADD e SAMEPERIODLASTYEAR funcionam com qualquer coluna de data sem necessidade de marcação, usando o Auto Date/Time como fallback automaticamente.",
-      "Marcar como Date Table substitui o Auto Date/Time apenas visualmente no diagrama de relacionamentos; o mecanismo de time intelligence continua usando as tabelas ocultas do Auto Date/Time internamente, e a marcação é apenas informativa para o usuário.",
-      "A coluna selecionada como Date Table pode conter valores duplicados desde que cada data apareça no máximo duas vezes; o Power BI usa a primeira ocorrência de cada data para as funções de time intelligence e ignora as duplicatas automaticamente."
+      "Essencial para TOTALYTD/SAMEPERIODLASTYEAR/DATEADD; requer coluna Date/DateTime sem duplicados, sem gaps e sem BLANK, via Mark as Date Table.",
+      "Seria só para TOTALYTD/TOTALQTD; DATEADD/SAMEPERIODLASTYEAR funcionariam com qualquer coluna via Auto Date/Time.",
+      "Substituiria o Auto Date/Time só visualmente; o mecanismo usaria tabelas ocultas internamente — só informativa.",
+      "A coluna poderia ter duplicados (até 2x); o Power BI usaria a primeira ocorrência e ignoraria o resto."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -951,12 +951,12 @@ export const questions = [
   },
   {
     "id": "q39_pl300",
-    "text": "Como a cardinalidade de colunas afeta a compressão do mecanismo VertiPaq do Power BI e quais práticas melhoram a performance do modelo?",
+    "text": "Como a cardinalidade de colunas afeta a compressão do VertiPaq, e quais práticas melhoram a performance do modelo?",
     "options": [
-      "O VertiPaq usa compressão por dicionário e RLE (Run-Length Encoding) — colunas com baixa cardinalidade (poucos valores únicos, como Região, Categoria) comprimem muito melhor que colunas de alta cardinalidade (IDs únicos, timestamps precisos); boas práticas: remover colunas não usadas, evitar colunas com valores únicos por linha (usar chaves numéricas em vez de strings longas), usar tipos de dados adequados (Integer ocupa menos que Decimal), e evitar colunas calculadas desnecessárias.",
-      "O VertiPaq comprime melhor colunas de alta cardinalidade pois usa algoritmos de hash que são mais eficientes para valores únicos; colunas com poucos valores distintos (como status com 3 opções) são armazenadas sem compressão por serem triviais demais para os algoritmos.",
-      "A cardinalidade não afeta a compressão do VertiPaq — todos os dados são comprimidos com a mesma taxa independente do número de valores únicos; o fator mais importante para o tamanho do modelo é o número de linhas totais, não a distribuição de valores nas colunas.",
-      "Para máxima compressão, todas as colunas de texto devem ser convertidas para código numérico no Power Query antes do carregamento; o VertiPaq não tem suporte nativo à compressão de colunas de texto e as armazena como strings não comprimidas no modelo."
+      "Dicionário+RLE — baixa cardinalidade (Região, Categoria) comprime melhor que alta (IDs); evitar colunas únicas, usar tipos adequados.",
+      "Comprimiria melhor alta cardinalidade via hash; valores distintos poucos seriam armazenados sem compressão.",
+      "Cardinalidade não afetaria a compressão — o fator principal seria o número de linhas, não a distribuição.",
+      "Texto deveria ser convertido em código numérico no Power Query; VertiPaq não teria compressão nativa de texto."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -976,12 +976,12 @@ export const questions = [
   },
   {
     "id": "q40_pl300",
-    "text": "Como você criaria e utilizaria um Parâmetro What-If no Power BI Desktop para simular o impacto de diferentes percentuais de desconto nas vendas de forma interativa?",
+    "text": "Como criar e usar um Parâmetro What-If no Power BI para simular o impacto de diferentes percentuais de desconto nas vendas?",
     "options": [
-      "Acessar a guia 'Modelagem', selecionar 'Novo Parâmetro' e depois 'Intervalo Numérico'. Configurar o nome como 'Desconto%', tipo Decimal, mínimo 0, máximo 0,50 e incremento 0,05. O Power BI criará automaticamente uma tabela calculada, uma medida com SELECTEDVALUE() e um slicer. Em seguida, criar uma medida como Vendas com Desconto = SUM(Vendas[Valor]) * (1 - [Desconto% Valor]) para usar o parâmetro.",
-      "Criar o parâmetro no Power Query Editor através de 'Gerenciar Parâmetros', definindo um tipo numérico. Após aplicá-lo, ele aparecerá como um slicer no relatório e poderá ser referenciado diretamente em medidas DAX pelo seu nome.",
-      "Utilizar o recurso de Parâmetros What-If, que é exclusivo para licenças Power BI Premium. Para usuários Pro, a simulação de cenários deve ser feita manualmente, criando uma tabela de parâmetros no Power Query e um slicer para ela.",
-      "Após a criação do Parâmetro What-If, o Power BI gera automaticamente medidas de simulação para todas as medidas numéricas existentes no modelo. O analista apenas precisa selecionar quais medidas devem ser afetadas pela simulação através de uma interface dedicada."
+      "Modelagem > Novo Parâmetro > Intervalo Numérico; gera tabela, medida SELECTEDVALUE() e slicer; usar em Vendas com Desconto.",
+      "Criar no Power Query via 'Gerenciar Parâmetros', tipo numérico; apareceria como slicer referenciável em medidas DAX.",
+      "Seria exclusivo do Premium; Pro simularia manualmente com tabela de parâmetros e slicer no Power Query.",
+      "O Power BI geraria automaticamente medidas de simulação para todas as numéricas, via interface dedicada."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -1003,10 +1003,10 @@ export const questions = [
     "id": "q41_pl300",
     "text": "Um gerente quer visualizar a evolução mensal de vendas ao longo de 3 anos comparando as três categorias de produto simultaneamente. Qual tipo de visual é mais adequado para atender a essa necessidade?",
     "options": [
-      "Gráfico de linhas (Line Chart) com o eixo X representando os meses/anos, o eixo Y o valor de vendas e a legenda as categorias de produto, pois permite comparar tendências ao longo do tempo para múltiplas séries de forma clara.",
-      "Gráfico de barras clusterizado (Clustered Bar Chart), pois é ideal para comparar categorias lado a lado em períodos específicos, com o eixo Y para períodos e o eixo X para valores.",
-      "Gráfico de área empilhada (Stacked Area Chart), pois é sempre preferível ao gráfico de linhas para séries temporais com múltiplas categorias, mostrando contribuição individual e total acumulado.",
-      "Matriz (Matrix Visual) com meses nas linhas e categorias nas colunas, pois permite visualizar valores exatos e aplicar formatação condicional para identificar tendências."
+      "Gráfico de linhas: X=meses/anos, Y=vendas, legenda=categorias; compara tendências de séries no tempo com clareza.",
+      "Barras clusterizado, bom para comparar categorias lado a lado em períodos específicos, com Y=períodos e X=valores.",
+      "Área empilhada seria sempre preferível ao de linhas em séries temporais com categorias, mostrando contribuição e total.",
+      "Matriz com meses nas linhas e categorias nas colunas, vendo valores exatos com formatação condicional para tendências."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -1026,12 +1026,12 @@ export const questions = [
   },
   {
     "id": "q42_pl300",
-    "text": "Como você aplicaria formatação condicional em uma coluna de uma tabela no Power BI para colorir o fundo das células de acordo com as seguintes condições: verde para valores acima da meta, amarelo para valores entre 80% e 100% da meta, e vermelho para valores abaixo de 80% da meta?",
+    "text": "Como aplicar formatação condicional numa tabela do Power BI: verde acima da meta, amarelo entre 80-100% da meta, vermelho abaixo de 80%?",
     "options": [
-      "Na visualização de Tabela ou Matriz, selecione a seta para baixo ou os três pontos (...) ao lado do nome da coluna desejada, escolha 'Formatação Condicional' > 'Cor do Plano de Fundo'. Em seguida, selecione 'Regras' como estilo de formatação e defina as três regras: se o valor for maior ou igual à meta, aplique verde; se o valor estiver entre 80% e 100% da meta, aplique amarelo; e se o valor for menor que 80% da meta, aplique vermelho. Alternativamente, pode-se usar a opção 'Valor do Campo' referenciando uma medida DAX que retorna o código de cor hexadecimal baseado nessas condições.",
-      "A formatação condicional por regras de negócio complexas como esta exige a criação de uma coluna calculada no DAX que retorne a cor em hexadecimal. A interface visual de formatação condicional (acessada pelos três pontos na coluna) suporta apenas escalas de gradiente entre duas cores, não regras baseadas em condições lógicas com múltiplos limiares.",
-      "A formatação condicional com três cores distintas baseadas em regras é uma funcionalidade exclusiva do Power BI Premium. No Power BI Pro, apenas escalas de gradiente entre duas cores (mínimo e máximo) estão disponíveis para formatação condicional de tabelas e matrizes.",
-      "A formatação condicional no Power BI só pode ser aplicada a medidas numéricas diretas, não sendo possível colorir células baseadas em comparações com metas ou limiares percentuais. Para esse tipo de formatação, é necessário usar visuais de KPI ou Gauge que possuem suporte nativo a zonas de cor."
+      "Três pontos da coluna > 'Formatação Condicional' > 'Cor do Fundo' > 'Regras': definir as 3 faixas; ou 'Valor do Campo' com medida DAX retornando hex.",
+      "Exigiria coluna DAX com cor em hex; a interface visual só suportaria gradiente entre duas cores, não regras com limiares.",
+      "Três cores por regra seria exclusivo do Premium; no Pro só haveria gradiente entre duas cores disponível.",
+      "Funcionaria só em medidas numéricas diretas; metas/limiares exigiriam KPI ou Gauge com zonas de cor."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -1053,10 +1053,10 @@ export const questions = [
     "id": "q43_pl300",
     "text": "Qual é a diferença entre um Slicer (Segmentação de Dados) e um Filtro no painel de Filtros (Filters Pane) no Power BI e quando usar cada um?",
     "options": [
-      "Slicers e Filtros no painel Filters são funcionalmente idênticos, ambos filtram todos os visuais da página igualmente; a única diferença é visual: Slicer é um visual no canvas enquanto Filtros ficam no painel lateral; em termos de impacto nos dados, o resultado é sempre o mesmo.",
-      "Filtros no painel Filters têm precedência sobre Slicers — quando ambos filtram a mesma coluna com valores diferentes, o filtro do painel sempre prevalece e o Slicer é ignorado; por isso, desenvolvedores devem usar apenas um dos mecanismos por coluna para evitar conflitos.",
-      "Slicers são visuais interativos na página do relatório que os usuários finais veem e interagem diretamente, podendo ser estilizados e posicionados no canvas; Filtros no painel Filters são configurados pelo desenvolvedor e podem ser de página, visual ou relatório, podendo ser ocultados dos usuários; usar Slicer quando o usuário deve controlar o filtro, Filters Pane quando o filtro é fixo ou deve ser restrito ao usuário.",
-      "Slicers afetam apenas a página em que estão posicionados; para filtrar múltiplas páginas simultaneamente é necessário usar Filtros de Relatório no painel Filters que propagam o filtro para todas as páginas do relatório, pois Slicers não suportam sincronização entre páginas."
+      "Seriam funcionalmente idênticos, ambos filtrando a página igualmente; a única diferença seria visual (canvas vs painel).",
+      "Filtros no painel teriam precedência sobre Slicers na mesma coluna; o Slicer seria ignorado, exigindo só um mecanismo.",
+      "Slicer é visual que o usuário controla no canvas; Filters Pane é configurado pelo dev e pode ser oculto — controle vs fixo.",
+      "Slicers afetariam só a página onde estão; múltiplas páginas exigiriam Filtro de Relatório, pois não sincronizariam."
     ],
     "correctAnswer": 2,
     "difficulty": "iniciante",
@@ -1076,12 +1076,12 @@ export const questions = [
   },
   {
     "id": "q44_pl300",
-    "text": "Como configurar o Drill-Through em um relatório Power BI para permitir que usuários naveguem de uma página de resumo para uma página de detalhes filtrada pelo item selecionado?",
+    "text": "Como configurar Drill-Through num relatório Power BI para navegar de uma página resumo a uma de detalhes filtrada pelo item selecionado?",
     "options": [
-      "Na página de detalhes, arrastar a coluna de filtro (ex: Nome do Produto) para o campo \"Drill-through filters\" no painel de Visualizações; o Power BI cria automaticamente um botão \"Voltar\" na página de detalhes; na página de resumo, o usuário clica com o botão direito em um ponto de dados e seleciona Drill through > Nome da página de detalhes, que abre a página filtrada pelo item selecionado.",
-      "O Drill-Through é configurado na página de origem (resumo) arrastando a coluna para o campo \"Drill-through\" do visual de origem; o Power BI cria automaticamente a página de destino com todos os detalhes da linha selecionada sem necessidade de configuração adicional na página de destino.",
-      "Drill-Through requer que ambas as páginas (origem e destino) usem o mesmo visual — só é possível fazer drill-through de uma Tabela para outra Tabela ou de um Gráfico para outro Gráfico do mesmo tipo; navegação entre tipos diferentes de visual requer uso de Bookmarks com botões de navegação.",
-      "O Drill-Through só funciona com medidas numéricas como chave de navegação; para navegar por texto (ex: nome do produto), é necessário criar uma medida auxiliar com SELECTEDVALUE que converte a seleção de texto em um índice numérico usado como chave de drill-through."
+      "Na página de detalhes, arrastar a coluna para \"Drill-through filters\"; botão \"Voltar\" automático; no resumo, botão direito > Drill through.",
+      "Configurado na origem arrastando a coluna para \"Drill-through\" do visual; o destino seria criado automaticamente, sem config extra.",
+      "Exigiria mesmo tipo de visual na origem/destino (Tabela→Tabela); tipos diferentes exigiriam Bookmarks.",
+      "Funcionaria só com medidas numéricas como chave; texto exigiria medida auxiliar com SELECTEDVALUE convertendo em índice."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -1101,12 +1101,12 @@ export const questions = [
   },
   {
     "id": "q45_pl300",
-    "text": "Você precisa criar um sistema de navegação em um relatório do Power BI que permita aos usuários alternar entre diferentes visualizações (por exemplo, um gráfico de barras e um gráfico de linhas) na mesma página, sem a necessidade de duplicar a página. Qual é a abordagem mais eficiente e recomendada para implementar essa funcionalidade usando Bookmarks?",
+    "text": "Como alternar entre duas visualizações (ex: barras e linhas) na mesma página do Power BI sem duplicar a página, usando Bookmarks?",
     "options": [
-      "Bookmarks no Power BI capturam apenas o estado dos filtros e slicers da página — não é possível capturar visibilidade de visuais; para alternar entre diferentes tipos de visual, é necessário usar o recurso \"Visual Switch\" disponível em Visualizations > Options que permite múltiplos tipos para o mesmo dado.",
+      "Bookmarks capturariam só filtros/slicers — não visibilidade de visuais; para alternar tipos seria preciso \"Visual Switch\" em Visualizations > Options.",
       "Posicionar ambos os visuais sobrepostos no canvas, configurar a visibilidade de cada um (mostrar um, ocultar o outro) e criar dois Bookmarks via View > Bookmarks — cada bookmark captura o estado de visibilidade; criar dois botões com ações de Bookmark configuradas para alternar entre os estados, permitindo ao usuário escolher a visualização preferida.",
-      "Para alternar entre visuais, a abordagem correta é criar páginas separadas para cada visualização e usar botões de navegação de página; Bookmarks são exclusivos para capturar estados de filtro e destaques em uma única página, sem suporte a controle de visibilidade de elementos do canvas.",
-      "Bookmarks que controlam visibilidade de visuais requerem licença Power BI Premium; no plano Pro, Bookmarks capturam apenas o estado dos filtros e da seleção de dados, sendo necessário usar Themes para alterar a aparência dos visuais sem trocar de página."
+      "Seria preciso criar páginas separadas com botões de navegação; Bookmarks seriam exclusivos para filtro/destaque numa página, sem controle de visibilidade.",
+      "Bookmarks com controle de visibilidade exigiriam Premium; no Pro capturariam só filtros, sendo preciso Themes para mudar aparência sem trocar página."
     ],
     "correctAnswer": 1,
     "difficulty": "intermediario",
@@ -1129,9 +1129,9 @@ export const questions = [
     "text": "Como criar um Tooltip personalizado no Power BI que exibe um mini-relatório com múltiplos KPIs ao passar o mouse sobre um ponto de dados?",
     "options": [
       "Criar uma nova página no relatório, definir seu tamanho como \"Tooltip\" em Page Information (Width: 320, Height: 240) e habilitar \"Allow use as tooltip\"; adicionar os visuais desejados (KPIs, gráficos, cards) nessa página; no visual de origem, em Format > Tooltips, selecionar Type: Report Page e escolher a página de tooltip criada — ao passar o mouse, o mini-relatório é exibido filtrado pelo ponto de dados sob o cursor.",
-      "Tooltips personalizados são criados diretamente nas configurações de formatação do visual em Format > Tooltips > Custom Fields, onde é possível arrastar múltiplas medidas DAX que serão exibidas no tooltip padrão do Power BI com formatação customizada de fonte e cor.",
+      "Tooltips personalizados seriam criados em Format > Tooltips > Custom Fields, arrastando medidas DAX para o tooltip padrão com formatação customizada.",
       "Tooltips de página requerem que o visual de origem e a página de tooltip estejam no mesmo workspace publicado no Power BI Service; no Power BI Desktop, apenas tooltips simples com campos individuais estão disponíveis, sendo a funcionalidade de página de tooltip exclusiva do ambiente de produção.",
-      "Para criar tooltips com múltiplos KPIs, é necessário criar um visual personalizado (custom visual) via Power BI Developer Tools; a funcionalidade nativa de tooltip do Power BI suporta no máximo um campo adicional além dos campos padrão do visual."
+      "Múltiplos KPIs exigiriam visual customizado via Developer Tools; o tooltip nativo suportaria no máximo um campo adicional além dos padrão."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -1151,12 +1151,12 @@ export const questions = [
   },
   {
     "id": "q47_pl300",
-    "text": "Como você pode controlar o comportamento de interação entre dois visuais em uma página do Power BI — por exemplo, impedir que um gráfico de barras filtre uma tabela específica ao clicar em uma barra?",
+    "text": "Como impedir que um gráfico de barras filtre uma tabela específica ao clicar numa barra, no Power BI?",
     "options": [
-      "Selecionar o visual de origem (gráfico de barras), ir em Formatar > Editar Interações; ícones de interação aparecem no canto superior direito de cada visual da página — clicar no ícone 'Nenhum' (círculo com X) no visual de tabela para que cliques no gráfico não afetem a tabela.",
-      "Interações entre visuais são configuradas globalmente para toda a página em Arquivo > Opções > Configurações de Relatório > Interações Visuais; não é possível configurar interações individualmente entre pares de visuais.",
-      "Para impedir que um visual filtre outro, é necessário adicionar um filtro de nível de visual na tabela destino com a condição \"Não é filtrado por\" referenciando o visual de origem; a opção Editar Interações apenas alterna entre filtro e destaque.",
-      "Interações entre visuais só podem ser desabilitadas em visuais do mesmo tipo; não é possível desabilitar a interação entre um gráfico de barras e uma tabela, pois tipos diferentes de visual sempre interagem via filtro cruzado por padrão."
+      "Selecionar o gráfico, Formatar > Editar Interações; ícones aparecem em cada visual — clicar em 'Nenhum' (círculo com X) na tabela para bloquear o efeito.",
+      "Interações seriam configuradas globalmente em Arquivo > Opções > Interações Visuais; não seria possível configurar interações entre pares específicos.",
+      "Seria preciso filtro de nível de visual na tabela com \"Não é filtrado por\"; Editar Interações só alternaria entre filtro e destaque.",
+      "Interações só poderiam ser desabilitadas entre visuais do mesmo tipo; tipos diferentes sempre interagiriam via filtro cruzado por padrão."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -1179,9 +1179,9 @@ export const questions = [
     "text": "Quais dos seguintes visuais de inteligência artificial (IA) estão disponíveis nativamente no Power BI Desktop e qual a principal funcionalidade de cada um para a análise de dados?",
     "options": [
       "Key Influencers (identifica quais fatores influenciam uma métrica ou resultado), Decomposition Tree (permite explorar uma métrica por múltiplas dimensões em árvore hierárquica interativa), Q&A Visual (permite consultas em linguagem natural para gerar visuais dinamicamente), Smart Narrative (gera texto narrativo automático descrevendo insights dos dados) e Anomaly Detection (identifica automaticamente anomalias em séries temporais).",
-      "Os visuais de IA no Power BI são: AutoML Visual (treina modelos de machine learning diretamente no relatório), Cognitive Services Visual (aplica análise de sentimento e tradução de texto), e Azure ML Visual (consome endpoints de modelos Azure ML); esses visuais requerem licença Premium e configuração de workspace de IA.",
-      "O único visual de IA nativo do Power BI é o Q&A (perguntas e respostas em linguagem natural); os demais recursos analíticos avançados como detecção de anomalias e análise de influenciadores requerem integração com Azure Cognitive Services via Power Query antes do carregamento no modelo.",
-      "Visuais de IA no Power BI são exclusivos do Power BI Embedded e Power BI Premium; no plano Pro, apenas recursos básicos de análise como linha de tendência e previsão (forecast) em gráficos de linha estão disponíveis sem necessidade de licença adicional."
+      "Seriam: AutoML Visual (treina ML no relatório), Cognitive Services Visual (sentimento/tradução) e Azure ML Visual;",
+      "O único visual de IA nativo seria Q&A; detecção de anomalias e influenciadores exigiriam Azure Cognitive Services via Power Query antes do modelo.",
+      "Visuais de IA seriam exclusivos do Embedded/Premium; no Pro só haveria linha de tendência e forecast básicos em gráficos de linha."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -1204,9 +1204,9 @@ export const questions = [
     "text": "Como você adiciona uma linha de previsão (Forecast) a um gráfico de linhas no Power BI e quais configurações estão disponíveis para personalizá-la?",
     "options": [
       "No visual de gráfico de linhas com eixo de data, expanda o painel Analytics (ícone de lupa no painel de Visualizações) e adicione \"Forecast\"; as configurações disponíveis incluem: número de unidades a prever, intervalo de confiança (ex: 95%), sazonalidade (automática ou manual) e a opção de ignorar os últimos N pontos. O Power BI utiliza o modelo ETS (Exponential Smoothing) para calcular a previsão.",
-      "A linha de Forecast no Power BI é criada via medida DAX usando a função `FORECAST.ETS()` que calcula os valores previstos; depois adicione essa medida como uma segunda série no gráfico de linhas com formatação diferente para distinguir visualmente os valores reais dos previstos.",
-      "O Forecast no Power BI requer que os dados históricos tenham pelo menos 3 anos completos para que o algoritmo de sazonalidade funcione corretamente; para séries com menos de 3 anos de histórico, apenas a linha de tendência linear está disponível, sem previsão com intervalo de confiança.",
-      "A funcionalidade de Forecast está disponível apenas no Power BI Premium via integração com Azure Machine Learning; no plano Pro, o painel Analytics oferece apenas linhas de referência (constante, mínimo, máximo, média) sem capacidade de previsão temporal."
+      "Forecast seria criado via medida DAX com `FORECAST.ETS()`; adicionar como segunda série no gráfico com formatação distinta dos valores reais.",
+      "Exigiria pelo menos 3 anos de histórico para a sazonalidade funcionar; com menos, só haveria linha de tendência linear, sem intervalo de confiança.",
+      "Forecast estaria disponível só no Premium via Azure ML; no Pro, Analytics só ofereceria linhas de referência (constante, mín, máx, média)."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -1228,10 +1228,10 @@ export const questions = [
     "id": "q50_pl300",
     "text": "Qual é a abordagem correta para otimizar um relatório do Power BI para visualização em dispositivos móveis, garantindo uma experiência de usuário adequada?",
     "options": [
-      "No Power BI Desktop, ativar o modo de layout mobile via View > Mobile Layout; arrastar e redimensionar os visuais existentes na área de canvas mobile (proporção de smartphone); os visuais são os mesmos do relatório desktop — apenas o posicionamento é diferente; publicar no Service e acessar via aplicativo Power BI Mobile onde o layout otimizado é exibido automaticamente.",
-      "Relatórios mobile no Power BI são criados como arquivos separados (.pbix) com tamanho de página definido para dimensões de smartphone (360×640); não é possível ter layouts desktop e mobile no mesmo arquivo — é necessário manter dois arquivos sincronizados manualmente.",
-      "O layout mobile é gerado automaticamente pelo Power BI Service ao publicar qualquer relatório; o serviço reorganiza os visuais automaticamente para a tela do smartphone baseado em algoritmos de layout responsivo sem necessidade de configuração manual no Desktop.",
-      "O layout mobile no Power BI suporta apenas cinco tipos de visual: Card, KPI, Slicer, Tabela e Gráfico de Barras; visuais complexos como Scatter Chart, Mapa e Decomposition Tree são automaticamente removidos do layout mobile por limitações do aplicativo Power BI Mobile."
+      "Ativar View > Mobile Layout no Desktop; arrastar/redimensionar os mesmos visuais no canvas mobile (só muda posicionamento);",
+      "Relatórios mobile seriam arquivos .pbix separados com página em dimensão de smartphone; não haveria como ter desktop e mobile no mesmo arquivo.",
+      "O layout mobile seria gerado automaticamente pelo Service ao publicar, reorganizando visuais via layout responsivo, sem configuração no Desktop.",
+      "Layout mobile suportaria só 5 tipos de visual (Card, KPI, Slicer, Tabela, Barras); visuais complexos seriam removidos automaticamente."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -1253,10 +1253,10 @@ export const questions = [
     "id": "q51_pl300",
     "text": "Como um analista de dados pode aplicar um tema personalizado (Custom Theme) em um relatório Power BI para garantir consistência visual com a identidade da empresa, como cores e fontes corporativas?",
     "options": [
-      "Criar um arquivo JSON com as definições de cores, fontes e formatações padrão seguindo o schema de temas do Power BI; no Desktop, ir em View > Themes > Browse for Themes e importar o arquivo JSON; o tema é aplicado a todos os visuais do relatório e salvo dentro do arquivo .pbix, sendo mantido ao publicar no Service.",
-      "Temas personalizados são criados diretamente no Power BI Service em Workspace Settings > Theme Designer; após criar e salvar o tema no Service, ele é aplicado automaticamente a todos os relatórios publicados naquele workspace sem necessidade de configuração no Desktop.",
-      "Para aplicar identidade visual corporativa, o correto é formatar cada visual individualmente via painel Format de cada visualização; não existe recurso de tema global no Power BI — cada visual mantém sua formatação independente e não há mecanismo de herança de estilo entre visuais.",
-      "Temas no Power BI suportam apenas customização de paleta de cores — fontes, tamanhos, bordas e outros atributos de formatação são controlados exclusivamente pelas configurações padrão do Power BI Desktop e não podem ser alterados via arquivo de tema JSON."
+      "Criar JSON com cores/fontes/formatações no schema de temas; no Desktop, View > Themes > Browse for Themes e importar;",
+      "Temas seriam criados no Service em Workspace Settings > Theme Designer;",
+      "O correto seria formatar cada visual individualmente; não existiria tema global no Power BI, cada visual mantendo formatação independente.",
+      "Temas suportariam só paleta de cores — fontes, tamanhos e bordas seriam controlados só por configurações padrão, não pelo JSON do tema."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -1278,10 +1278,10 @@ export const questions = [
     "id": "q52_pl300",
     "text": "Quais práticas de acessibilidade devem ser implementadas em relatórios Power BI para atender usuários com deficiências visuais ou motoras?",
     "options": [
-      "Implementar texto alternativo (Alt Text) em todos os visuais, preferencialmente dinâmico via DAX; garantir contraste de cores adequado (mínimo 4,5:1 para texto); configurar a ordem de tabulação (Tab Order) para navegação por teclado; utilizar marcadores de dados e não depender exclusivamente da cor para diferenciar informações; e adicionar títulos descritivos aos visuais.",
-      "A acessibilidade em relatórios Power BI é gerenciada exclusivamente pelo administrador do tenant, sem controle por parte dos desenvolvedores de relatório, sendo aplicada globalmente para todos os relatórios.",
-      "O Power BI possui um modo de acessibilidade automático que detecta as configurações do sistema operacional do usuário e adapta o relatório (alto contraste, texto aumentado, navegação por teclado) sem necessidade de configuração manual pelo desenvolvedor.",
-      "A acessibilidade em relatórios Power BI exige o uso exclusivo de visuais certificados da Microsoft (core visuals), pois visuais customizados do AppSource não suportam recursos de acessibilidade como Alt Text e navegação por teclado."
+      "Alt Text em todos os visuais (idealmente via DAX); contraste mínimo 4,5:1; Tab Order para teclado; marcadores além de cor; títulos descritivos.",
+      "Acessibilidade seria gerenciada só pelo admin do tenant, sem controle do desenvolvedor de relatório, aplicada globalmente.",
+      "O Power BI teria modo automático que detectaria configs do SO e adaptaria o relatório (contraste, texto, teclado) sem configuração manual.",
+      "Acessibilidade exigiria só visuais certificados (core visuals); customizados do AppSource não suportariam Alt Text nem navegação por teclado."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -1301,12 +1301,12 @@ export const questions = [
   },
   {
     "id": "q53_pl300",
-    "text": "Como você pode criar botões de navegação entre páginas em um relatório Power BI para substituir as abas de página padrão e oferecer uma experiência de usuário mais controlada?",
+    "text": "Como criar botões de navegação entre páginas no Power BI para substituir as abas padrão por uma experiência mais controlada?",
     "options": [
-      "Para criar botões de navegação entre páginas, utilize 'Inserir > Botões > Navegador > Navegador de Página' para gerar botões automáticos para todas as páginas visíveis, ou 'Inserir > Botões > Em branco' para configurar um botão individual com a ação 'Navegação de Página'. As abas padrão podem ser ocultadas em 'Formatar página > Informações da página > Ocultar página' para garantir que a navegação seja feita apenas pelos botões customizados.",
-      "A navegação entre páginas por botões exige a criação prévia de Bookmarks para cada página de destino; a opção 'Navegação de Página' no campo Ação do botão só se torna disponível após a associação de um Bookmark, sem o qual o botão não pode ser configurado para navegar.",
-      "A criação de botões de navegação entre páginas é uma funcionalidade exclusiva do Power BI Service, acessível apenas após a publicação do relatório. No Power BI Desktop, a única forma de navegação entre páginas é através das abas padrão, sem a opção de configurar botões com ação de navegação.",
-      "Para ocultar as abas de página padrão e implementar navegação customizada, é mandatório publicar o relatório como Power BI Embedded, utilizando configurações específicas de iframe. Em relatórios padrão publicados no Service, as abas de página permanecem visíveis, independentemente das configurações de formatação no Desktop."
+      "'Inserir > Botões > Navegador de Página' (automático) ou 'Botões > Em branco' com ação 'Navegação de Página';",
+      "Exigiria criar Bookmarks antes para cada destino; 'Navegação de Página' só ficaria disponível após associar um Bookmark ao botão.",
+      "Seria exclusivo do Power BI Service, só após publicar; no Desktop a única navegação seria pelas abas padrão, sem botões com ação.",
+      "Ocultar abas exigiria publicar como Power BI Embedded com iframe; em relatórios padrão do Service as abas permaneceriam sempre visíveis."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -1326,12 +1326,12 @@ export const questions = [
   },
   {
     "id": "q54_pl300",
-    "text": "Você precisa criar uma medida DAX para aplicar formatação condicional em uma tabela no Power BI, de modo que as células da coluna de vendas fiquem verdes quando as vendas estiverem acima ou iguais à meta, e vermelhas quando estiverem abaixo da meta. Qual das seguintes opções descreve corretamente a medida DAX e sua aplicação para atingir esse objetivo usando a formatação condicional por 'Valor do Campo' (Field Value)?",
+    "text": "Como criar uma medida DAX para colorir verde (vendas ≥ meta) ou vermelho (vendas < meta) numa tabela, via formatação condicional 'Valor do Campo'?",
     "options": [
-      "A medida DAX Cor Vendas = IF(SUM(Vendas[Valor]) >= [Meta], \"#00B050\", \"#FF0000\") deve ser criada. Em seguida, na formatação condicional da coluna de vendas da tabela, deve-se selecionar o estilo 'Valor do Campo' (Field Value) e apontar para esta medida. O Power BI interpretará os códigos hexadecimais e aplicará as cores correspondentes.",
-      "A medida DAX deve retornar nomes de cores em inglês, como \"Green\" ou \"Red\", pois a formatação condicional por 'Valor do Campo' (Field Value) não suporta códigos hexadecimais. Portanto, a medida seria Cor Vendas = IF(SUM(Vendas[Valor]) >= [Meta], \"Green\", \"Red\").",
-      "A medida DAX para 'Valor do Campo' (Field Value) deve retornar um valor numérico de 1 a 16, que corresponde a uma cor predefinida na paleta do Power BI. Retornar strings de cor (hexadecimal ou nome) resultará em um erro silencioso e a formatação não será aplicada.",
-      "A formatação condicional por 'Valor do Campo' (Field Value) com medidas DAX é exclusiva para colunas de medidas numéricas em visuais de Tabela e Matriz. Para outros visuais, como Gráficos de Barras, é necessário usar a opção 'Regras' (Rules) com intervalos numéricos."
+      "Cor Vendas = IF(SUM(Vendas[Valor])>=[Meta], \"#00B050\", \"#FF0000\"); na formatação condicional da coluna, usar 'Valor do Campo' apontando para essa medida.",
+      "A medida deveria retornar nomes em inglês (\"Green\"/\"Red\"), pois 'Valor do Campo' não suportaria hex: Cor Vendas =.",
+      "'Valor do Campo' exigiria um número de 1 a 16 da paleta predefinida; retornar string de cor causaria erro silencioso sem aplicar formatação.",
+      "'Valor do Campo' com DAX seria exclusivo de Tabela/Matriz; em Gráficos de Barras seria preciso usar 'Regras' com intervalos numéricos."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -1353,10 +1353,10 @@ export const questions = [
     "id": "q55_pl300",
     "text": "Qual das seguintes afirmações descreve corretamente o recurso Quick Insights no Power BI Service e como ele auxilia na descoberta de padrões nos dados?",
     "options": [
-      "Quick Insights é um recurso do Power BI Service que aplica automaticamente algoritmos de machine learning em um dataset para detectar padrões, correlações, tendências, anomalias e outliers; é acessado clicando nos três pontos (...) de um dataset no workspace e selecionando \"Get Quick Insights\"; os resultados são apresentados como visuais interativos que podem ser fixados em dashboards.",
+      "Aplica ML automaticamente num dataset para detectar padrões, correlações, tendências e outliers; acessado via três pontos > \"Get Quick Insights\";",
       "Quick Insights é um painel de estatísticas descritivas gerado automaticamente pelo Power BI Desktop ao carregar um novo dataset; exibe média, mediana, desvio padrão e distribuição de cada coluna numérica, similar ao Data Profiling do Power Query mas no nível do modelo de dados.",
-      "Quick Insights é a versão simplificada do Q&A Visual — permite fazer perguntas em linguagem natural sobre os dados e recebe respostas em forma de visuais gerados automaticamente; difere do Q&A por não exigir que o usuário formule a pergunta, gerando os insights automaticamente.",
-      "Quick Insights requer que o dataset esteja em formato Premium ou Fabric para funcionar; datasets em workspaces Pro só recebem insights básicos (top 5 valores por categoria), enquanto insights avançados como detecção de anomalias e correlações estão disponíveis apenas em capacidades Premium."
+      "Seria versão simplificada do Q&A — perguntas em linguagem natural com respostas em visuais; diferindo por gerar insights automaticamente sem pergunta.",
+      "Exigiria dataset Premium/Fabric; no Pro só haveria insights básicos (top 5); detecção de anomalias e correlações seriam só Premium."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -1378,10 +1378,10 @@ export const questions = [
     "id": "q56_pl300",
     "text": "Qual das seguintes afirmações descreve corretamente o recurso 'Analyze in Excel' do Power BI Service, incluindo suas principais características e limitações?",
     "options": [
-      "Analyze in Excel permite conectar o Excel a um modelo semântico publicado no Power BI Service via conexão live, criando uma Tabela Dinâmica que usa as medidas DAX e dimensões do modelo Power BI; o usuário pode criar análises ad-hoc no Excel sem precisar exportar dados; requer instalação de updates do Excel e conexão autenticada; limitação: somente leitura — não permite modificar o modelo pelo Excel.",
-      "Analyze in Excel exporta os dados do dataset Power BI para um arquivo .xlsx local com todas as tabelas do modelo; o usuário trabalha com os dados offline no Excel e pode reimportar as análises de volta ao Power BI Service via 'Publish to Power BI' quando concluir.",
-      "Analyze in Excel cria uma cópia do modelo semântico no Excel em formato Power Pivot (.xlsm) que pode ser editada e expandida localmente; alterações no modelo Excel são sincronizadas automaticamente de volta ao dataset do Power BI Service via OneDrive.",
-      "Analyze in Excel está disponível apenas para datasets em workspaces Premium; em workspaces Pro, a opção está desabilitada e a única forma de analisar dados do Power BI no Excel é exportar manualmente via Export Data em cada visual do relatório."
+      "Conecta o Excel a um modelo publicado via conexão live, criando Tabela Dinâmica com as medidas/dimensões do modelo;",
+      "Exportaria os dados para .xlsx local com todas as tabelas; trabalho offline no Excel, reimportando via 'Publish to Power BI' ao concluir.",
+      "Criaria cópia do modelo em Power Pivot (.xlsm) editável localmente; alterações sincronizariam de volta ao dataset via OneDrive.",
+      "Estaria disponível só em workspaces Premium; no Pro a única forma seria exportar manualmente via Export Data em cada visual."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -1403,10 +1403,10 @@ export const questions = [
     "id": "q57_pl300",
     "text": "Quais são as opções de exportação de dados de um visual no Power BI Service e quais limitações cada opção tem?",
     "options": [
-      "A opção 'Exportar dados' em um visual do Power BI Service oferece 'Dados resumidos' (dados agregados, com limite de 30.000 linhas para Import e 150.000 para DirectQuery) e 'Dados subjacentes' (dados detalhados, com limite de 150.000 linhas). O administrador do tenant pode desabilitar a exportação, e ambas exportam para .xlsx ou .csv.",
-      "A exportação de dados no Power BI é ilimitada em número de linhas, sendo o único limite o tamanho máximo do arquivo Excel de 1 GB. Relatórios com mais de 1 GB de dados exportam automaticamente para formato .csv, que não possui limite de tamanho de arquivo.",
-      "'Dados subjacentes' não está disponível para modelos em modo DirectQuery; apenas 'Dados resumidos' pode ser exportado nesse modo. Para obter dados detalhados de fontes DirectQuery, é necessário conectar diretamente à fonte de dados via ODBC no Excel.",
-      "A exportação de dados requer que o usuário tenha permissão de edição (Membro ou Administrador) no workspace. Usuários com permissão de visualização (Visualizador) podem ver os relatórios, mas não têm acesso ao botão 'Exportar dados' nos visuais devido a restrições de segurança."
+      "'Exportar dados' oferece 'Dados resumidos' (agregados, 30k linhas Import/150k DirectQuery) e 'Dados subjacentes' (detalhados, 150k linhas);",
+      "Exportação seria ilimitada em linhas, só limitada pelo tamanho do Excel (1GB); acima disso exportaria automaticamente para .csv sem limite.",
+      "'Dados subjacentes' não estaria disponível em DirectQuery, só 'Dados resumidos'; dados detalhados exigiriam ODBC direto à fonte no Excel.",
+      "Exportação exigiria permissão de edição (Membro/Admin); Visualizadores veriam o relatório mas não teriam acesso ao botão 'Exportar dados'."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -1428,10 +1428,10 @@ export const questions = [
     "id": "q58_pl300",
     "text": "Quais são as formas de compartilhar um relatório Power BI com outros usuários e quais são os requisitos de licença para cada uma?",
     "options": [
-      "O compartilhamento direto (Share) exige licença Pro para o destinatário ou capacidade Premium/Fabric no workspace. Publicar na Web (Publish to web) torna o conteúdo público, sem licença, mas sem segurança. Incorporar no SharePoint Online e Aplicativos de workspace (Apps) geralmente requerem licença Pro ou capacidade Premium. Exportar para PDF/PPT é para usuários com acesso ao relatório.",
-      "Todos os métodos de compartilhamento do Power BI exigem que tanto o compartilhador quanto o destinatário possuam licença Power BI Pro, sendo a única exceção o Publish to Web, que permite compartilhamento público sem licença para visualização.",
-      "O compartilhamento direto (Share) via link não requer licença Pro para o destinatário, desde que o relatório esteja em um workspace compartilhado. A licença Pro é necessária apenas para criar e publicar relatórios, não para visualizá-los.",
-      "Publicar na Web (Publish to web) gera um link seguro e autenticado, acessível apenas por usuários do mesmo tenant Azure AD, sendo a opção mais segura para compartilhamento externo."
+      "Share exigiria Pro para o destinatário ou capacidade Premium/Fabric; Publish to Web seria público sem licença mas sem segurança;",
+      "Todos os métodos exigiriam Pro para ambos os lados, exceto Publish to Web, que permitiria compartilhamento público sem licença.",
+      "Share via link não exigiria Pro para o destinatário, desde que no workspace compartilhado; Pro seria só para criar/publicar, não visualizar.",
+      "Publish to Web geraria link seguro e autenticado, acessível só por usuários do mesmo tenant — seria a opção mais segura para compartilhar."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -1453,10 +1453,10 @@ export const questions = [
     "id": "q59_pl300",
     "text": "Qual é a diferença fundamental entre um Relatório (Report) e um Dashboard no Power BI Service?",
     "options": [
-      "Relatório e Dashboard são equivalentes no Power BI Service — ambos podem ter múltiplas páginas, suportam slicers e filtros interativos, e podem ser criados tanto no Desktop quanto no Service; a diferença é apenas visual: relatórios usam layout de página livre enquanto dashboards usam grade de tiles fixos.",
+      "Seriam equivalentes — ambos teriam múltiplas páginas, slicers e filtros, criados no Desktop ou Service;",
       "Relatório é criado no Power BI Desktop (arquivo .pbix), pode ter múltiplas páginas, suporta interatividade completa (filtros, drill-through, slicers) e é a principal ferramenta de análise; Dashboard é criado exclusivamente no Power BI Service fixando tiles de relatórios ou outros itens, tem apenas uma página (canvas), não suporta filtros interativos nativos mas permite monitoramento consolidado de múltiplas fontes em uma única visão.",
-      "Dashboards são a versão premium dos relatórios — têm todas as funcionalidades dos relatórios mais recursos adicionais como alertas de dados, comentários e integração com Teams; para criar dashboards é necessário licença Power BI Premium enquanto relatórios estão disponíveis no plano Pro.",
-      "Relatórios são para análise exploratória e Dashboards são para distribuição; a diferença técnica é que relatórios armazenam os dados localmente no .pbix enquanto dashboards consultam os dados em tempo real diretamente da fonte sem armazenamento intermediário no Power BI Service."
+      "Dashboards seriam versão premium dos relatórios, com alertas/comentários/Teams extras; exigiriam Premium enquanto relatórios seriam Pro.",
+      "Relatórios seriam exploração e Dashboards distribuição; relatórios armazenariam dados no .pbix, dashboards consultariam a fonte em tempo real."
     ],
     "correctAnswer": 1,
     "difficulty": "iniciante",
@@ -1478,10 +1478,10 @@ export const questions = [
     "id": "q60_pl300",
     "text": "Como configurar alertas de dados (Data Alerts) em um Dashboard do Power BI Service e quais tipos de tiles suportam esse recurso?",
     "options": [
-      "Alertas de dados estão disponíveis apenas em tiles do tipo Card, KPI e Gauge fixados no dashboard; para configurar, clicar nos três pontos (...) do tile e selecionar \"Manage alerts\"; definir condição (acima/abaixo de um valor), frequência de verificação e se notifica por email; o Power BI verifica o alerta a cada refresh do dataset e envia notificação quando a condição é atendida.",
-      "Alertas de dados estão disponíveis em todos os tipos de tiles de dashboard incluindo gráficos de barras, linhas e tabelas; para gráficos, o alerta é configurado para a série de dados principal e dispara quando qualquer ponto de dados excede o threshold definido.",
-      "Alertas de dados no Power BI Service requerem configuração de um Logic App ou Power Automate externo; o Service nativo não tem mecanismo de alerta interno — ele apenas expõe uma API de webhook que serviços externos podem monitorar para disparar notificações quando dados mudam.",
-      "Alertas de dados estão disponíveis apenas em workspaces Premium; no plano Pro, os tiles de Card e KPI podem ser fixados no dashboard mas a opção \"Manage alerts\" não aparece no menu, sendo necessário usar Power Automate com conector Power BI como alternativa."
+      "Disponíveis só em tiles Card/KPI/Gauge; nos três pontos do tile, \"Manage alerts\", definindo condição, frequência e notificação por email a cada refresh.",
+      "Estariam disponíveis em todos os tiles, incluindo barras/linhas/tabelas; para gráficos, dispararia quando qualquer ponto excedesse o threshold.",
+      "Exigiriam Logic App ou Power Automate externo; o Service nativo não teria alerta interno, só uma API de webhook para serviços externos.",
+      "Estariam disponíveis só no Premium; no Pro, Card/KPI poderiam ser fixados mas \"Manage alerts\" não apareceria, exigindo Power Automate."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -1503,10 +1503,10 @@ export const questions = [
     "id": "q61_pl300",
     "text": "Quais são as quatro funções (roles) disponíveis em workspaces do Power BI Service e quais permissões cada uma concede?",
     "options": [
-      "Admin: Controle total, incluindo gerenciamento de membros e configurações do workspace. Member: Publica, edita e exclui conteúdo, compartilha e cria aplicativos. Contributor: Publica e edita conteúdo, mas não pode excluir itens de outros nem publicar aplicativos. Viewer: Apenas visualiza relatórios e dashboards, sem permissão para editar ou acessar diretamente os datasets.",
-      "Os roles do workspace são Owner, Editor e Viewer; os termos Admin, Member e Contributor são usados apenas no SharePoint e não se aplicam aos workspaces do Power BI.",
-      "Todos os roles (Admin, Member, Contributor e Viewer) podem criar e publicar relatórios; a diferença principal está na capacidade de gerenciar usuários e configurações do workspace, que é restrita a Admin e Member.",
-      "O role Viewer permite exportar dados dos relatórios e se conectar aos datasets via 'Analyze in Excel', tendo as mesmas permissões de consumo e extração de dados que os outros roles, apenas sem a capacidade de criar ou editar."
+      "Admin: controle total e config do workspace. Member: publica/edita/exclui, compartilha e cria apps.",
+      "Roles seriam Owner, Editor e Viewer; Admin/Member/Contributor seriam termos do SharePoint, sem aplicação a workspaces do Power BI.",
+      "Todos os roles poderiam criar/publicar relatórios; a diferença estaria só em gerenciar usuários/config, restrita a Admin e Member.",
+      "Viewer permitiria exportar dados e usar 'Analyze in Excel', com as mesmas permissões de consumo dos outros roles, só sem criar/editar."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -1529,9 +1529,9 @@ export const questions = [
     "text": "Como implementar Row-Level Security (RLS) estático no Power BI Desktop para restringir que cada gerente regional veja apenas dados da sua região?",
     "options": [
       "No Power BI Desktop, ir em Modeling > Manage Roles; criar uma role (ex: \"Gerente Sul\") e adicionar filtro DAX na tabela de dimensão de região: [Regiao] = \"Sul\"; publicar o relatório; no Power BI Service, em Security do dataset, adicionar os usuários ou grupos de segurança à role correspondente; ao acessar o relatório, cada usuário vê apenas os dados filtrados pela sua role.",
-      "RLS estático é configurado exclusivamente no Power BI Service após a publicação; no Power BI Desktop apenas o RLS dinâmico (com USERNAME()) está disponível; para RLS estático com valores fixos por região, o analista deve criar filtros de página separados para cada região e publicar versões diferentes do relatório.",
-      "RLS no Power BI filtra apenas a tabela onde a regra DAX é definida — tabelas relacionadas não são filtradas automaticamente; para garantir que a tabela de fatos Vendas seja filtrada junto com a dimensão Região, é necessário criar regras DAX duplicadas em todas as tabelas do modelo.",
-      "Usuários com role Admin ou Member no workspace não estão sujeitos às regras RLS — apenas usuários com role Viewer são filtrados; por isso, todos os usuários que precisam de restrição de dados devem ser adicionados ao workspace com role Viewer antes de serem atribuídos às roles RLS."
+      "RLS estático seria só no Service após publicar; no Desktop só dinâmico (USERNAME()) existiria; estático exigiria filtros de página por região.",
+      "RLS filtraria só a tabela com a regra; tabelas relacionadas não filtrariam automaticamente, exigindo regras DAX duplicadas em todas as tabelas.",
+      "Admin/Member no workspace não estariam sujeitos a RLS, só Viewer; todos precisando de restrição teriam que ser adicionados como Viewer."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -1551,12 +1551,12 @@ export const questions = [
   },
   {
     "id": "q63_pl300",
-    "text": "Para implementar a Segurança em Nível de Linha (RLS) dinâmica no Power BI, de modo que cada usuário visualize automaticamente apenas os dados associados ao seu endereço de e-mail cadastrado em uma tabela de mapeamento, qual é a abordagem correta?",
+    "text": "Para RLS dinâmico no Power BI, onde cada usuário vê dados do seu e-mail numa tabela de mapeamento, qual a abordagem correta?",
     "options": [
-      "Criar uma tabela de mapeamento (ex: UsuarioRegiao com colunas Email e Regiao); no Manage Roles, criar uma role \"RLS Dinamico\" com o filtro DAX [Email] = USERPRINCIPALNAME() aplicado à tabela de mapeamento; garantir que o relacionamento entre UsuarioRegiao e a tabela de fatos/dimensão relevante (ex: DimRegiao) propague o filtro; e, no Power BI Service, adicionar todos os usuários a essa única role, pois USERPRINCIPALNAME() retornará o e-mail do usuário logado, aplicando o filtro dinamicamente.",
-      "O RLS dinâmico com USERPRINCIPALNAME() é exclusivo para o modo DirectQuery, pois requer acesso em tempo real à fonte de dados para autenticação do usuário. No modo Import, a única opção é criar roles estáticas separadas para cada usuário ou grupo.",
-      "A função USERPRINCIPALNAME() retorna o e-mail do proprietário do conjunto de dados, não do usuário que está visualizando o relatório. Para obter o e-mail do visualizador atual, deve-se usar a função USERNAME() em conjunto com uma tabela de mapeamento.",
-      "Para cada novo usuário ou alteração de mapeamento, é necessário criar uma nova role específica no Manage Roles e atribuir o usuário a ela, além de realizar um refresh completo do conjunto de dados para que as restrições sejam aplicadas."
+      "Tabela de mapeamento (Email/Regiao); role \"RLS Dinamico\" com filtro [Email]=USERPRINCIPALNAME() na tabela; relacionamento propaga o filtro;",
+      "RLS dinâmico com USERPRINCIPALNAME() seria exclusivo de DirectQuery; em Import só haveria roles estáticas separadas por usuário/grupo.",
+      "USERPRINCIPALNAME() retornaria o e-mail do proprietário do dataset, não do visualizador; seria preciso USERNAME() com tabela de mapeamento.",
+      "Cada novo usuário/mapeamento exigiria nova role no Manage Roles e refresh completo do dataset para aplicar as restrições."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -1578,10 +1578,10 @@ export const questions = [
     "id": "q64_pl300",
     "text": "No contexto do Power BI, qual é a principal diferença entre Object-Level Security (OLS) e Row-Level Security (RLS), e como cada um é tipicamente configurado?",
     "options": [
-      "Object-Level Security (OLS) restringe o acesso a tabelas ou colunas inteiras do modelo de dados, tornando-as invisíveis para usuários sem permissão no painel de campos e causando erros em medidas que as referenciam. Row-Level Security (RLS), por outro lado, restringe o acesso a linhas específicas dentro de tabelas que o usuário pode visualizar. A configuração de OLS é feita via Tabular Editor ou XMLA endpoint, não diretamente no Power BI Desktop.",
-      "OLS e RLS são termos intercambiáveis para a mesma funcionalidade de segurança de dados, sendo que OLS é utilizado para modelos DirectQuery e RLS para modelos Import. Ambos são configurados através da interface 'Gerenciar Funções' no Power BI Desktop.",
-      "OLS permite ocultar páginas inteiras de um relatório ou visuais específicos com base no perfil do usuário, enquanto RLS é usado para criptografar dados sensíveis em colunas, impedindo que usuários não autorizados os visualizem.",
-      "OLS é uma funcionalidade que aplica filtros dinâmicos em colunas de texto para ocultar valores específicos, similar a um filtro de relatório, enquanto RLS é usado para controlar quem pode publicar relatórios no serviço do Power BI."
+      "OLS restringe tabelas/colunas inteiras, tornando-as invisíveis e causando erro em medidas que as referenciam;",
+      "OLS e RLS seriam termos intercambiáveis — OLS para DirectQuery, RLS para Import; ambos configurados em 'Gerenciar Funções' no Desktop.",
+      "OLS ocultaria páginas/visuais por perfil de usuário; RLS criptografaria colunas sensíveis, impedindo visualização não autorizada.",
+      "OLS aplicaria filtros dinâmicos em texto para ocultar valores, como um filtro de relatório; RLS controlaria quem publica relatórios no Service."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -1603,10 +1603,10 @@ export const questions = [
     "id": "q65_pl300",
     "text": "No Power BI Service, qual a principal função de um App de Workspace e qual a diferença fundamental entre acessar o conteúdo diretamente de um workspace e acessá-lo através de um App?",
     "options": [
-      "Um App é um pacote publicado de relatórios e dashboards selecionados do workspace, com navegação customizada, que é distribuído para audiências amplas; a diferença é que o workspace é o ambiente de desenvolvimento e colaboração (acesso por roles), enquanto o App é o ambiente de consumo (acesso por permissão de App separada); usuários do App não têm acesso ao workspace subjacente nem podem editar os relatórios, vendo apenas o conteúdo publicado no App.",
-      "Apps de workspace são idênticos ao workspace em termos de conteúdo e acesso — a única diferença é a interface visual: o workspace usa o painel de navegação lateral enquanto o App usa uma página inicial personalizada; usuários com acesso ao App automaticamente têm acesso ao workspace com role Viewer.",
-      "Apps de workspace são obrigatórios para qualquer compartilhamento no Power BI Service; não é possível compartilhar relatórios individuais diretamente — todos os relatórios devem ser empacotados em um App antes de serem distribuídos para usuários fora do workspace de desenvolvimento.",
-      "Apps de workspace requerem licença Power BI Premium para publicação; no plano Pro, apenas o compartilhamento direto de relatórios individuais está disponível — a funcionalidade de App para distribuição em larga escala é exclusiva de capacidades Premium e Fabric."
+      "App é um pacote publicado de relatórios/dashboards selecionados, com navegação customizada, distribuído amplamente;",
+      "Apps seriam idênticos ao workspace em conteúdo/acesso — só mudaria a interface;",
+      "Apps seriam obrigatórios para qualquer compartilhamento; relatórios individuais não poderiam ser compartilhados diretamente sem empacotar num App.",
+      "Apps exigiriam licença Premium para publicar; no Pro só haveria compartilhamento direto individual, sem distribuição em larga escala via App."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -1626,12 +1626,12 @@ export const questions = [
   },
   {
     "id": "q66_pl300",
-    "text": "Qual é o procedimento correto para configurar o refresh agendado de um dataset no Power BI Service e quais são os limites de frequência de atualização associados aos diferentes planos de licença (Power BI Pro e Power BI Premium/Fabric)?",
+    "text": "Como configurar o refresh agendado de um dataset no Power BI Service, e quais limites de frequência existem por plano (Pro vs Premium/Fabric)?",
     "options": [
-      "No Power BI Service, navegue até o dataset desejado, selecione 'Configurações' (Settings), e na seção 'Atualização Agendada' (Scheduled Refresh), habilite 'Manter seus dados atualizados' (Keep your data up to date). Configure o fuso horário e adicione os horários de atualização. Os limites são: Power BI Pro permite até 8 atualizações por dia (com intervalo mínimo de 3 horas), enquanto Power BI Premium/Fabric permite até 48 atualizações por dia (com intervalo mínimo de 30 minutos). Para fontes de dados on-premises, é essencial ter um gateway de dados configurado.",
-      "O refresh agendado no Power BI Service tem um limite de 24 atualizações diárias para todos os planos. A diferença entre Power BI Pro e Premium/Fabric reside apenas na frequência mínima entre atualizações: 1 hora no Pro e 15 minutos no Premium/Fabric. Ambos os planos permitem configurar até 24 horários de atualização distintos por dataset.",
-      "Não há limite de atualizações diárias no Power BI Service. O limite é de tamanho: datasets menores que 1 GB podem fazer refresh a qualquer frequência, enquanto datasets maiores que 1 GB têm um limite de 4 atualizações diárias, independentemente do plano de licença contratado.",
-      "O refresh agendado está disponível apenas para datasets em modo Import. Datasets DirectQuery atualizam automaticamente a cada consulta do usuário sem necessidade de refresh agendado, e datasets em modo Composite não suportam refresh agendado por terem partes em cada modo."
+      "No dataset, Settings > Scheduled Refresh, habilitar 'Keep your data up to date', definir fuso e horários. Pro: até 8x/dia (mín 3h);",
+      "Refresh teria limite de 24x/dia para todos os planos; a diferença seria só a frequência mínima: 1h no Pro, 15min no Premium/Fabric.",
+      "Não haveria limite diário; o limite seria de tamanho: datasets <1GB refresh livre, >1GB limitados a 4x/dia, independente do plano.",
+      "Refresh agendado existiria só para Import; DirectQuery atualizaria a cada consulta; Composite não suportaria refresh agendado."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -1654,9 +1654,9 @@ export const questions = [
     "text": "O que são os selos de certificação de conteúdo (Endorsement) no Power BI Service e como eles ajudam na governança de dados?",
     "options": [
       "Endorsement tem dois níveis: Promoted (qualquer membro do workspace pode marcar — indica conteúdo de qualidade pronto para uso) e Certified (requer permissão especial configurada pelo admin do tenant — indica conteúdo validado, confiável e oficial da organização); os selos aparecem nos datasets, relatórios e apps nas buscas, ajudando usuários a identificar fontes de dados confiáveis.",
-      "Endorsement no Power BI tem três níveis: Bronze (criado pelo autor), Silver (revisado por um par) e Gold (aprovado pelo administrador); cada nível aparece com um ícone diferente nas listagens de conteúdo do workspace e do catálogo de dados da organização.",
-      "Endorsement é uma funcionalidade exclusiva do Microsoft Purview integrada ao Power BI; para marcar um dataset como certificado é necessário ter o Purview provisionado no tenant e criar uma política de certificação no catálogo de dados antes de aplicar o selo no Power BI Service.",
-      "O selo Certified no Power BI é aplicado automaticamente pelo sistema quando um dataset atende critérios técnicos como: refresh agendado configurado, RLS implementado, descrições de todas as colunas preenchidas e pelo menos 10 relatórios ativos usando o dataset como fonte."
+      "Teria três níveis: Bronze (autor), Silver (revisado por par) e Gold (aprovado pelo admin); cada um com ícone diferente nas listagens.",
+      "Seria exclusivo do Microsoft Purview; exigiria Purview provisionado e política de certificação no catálogo antes de aplicar o selo.",
+      "Certified seria aplicado automaticamente quando o dataset atendesse critérios técnicos (refresh, RLS, descrições, 10+ relatórios usando)."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -1679,9 +1679,9 @@ export const questions = [
     "text": "Como a visualização de Linhagem (Lineage View) no Power BI Service ajuda na gestão e governança de datasets?",
     "options": [
       "A visualização de Linhagem (Lineage View) no Power BI Service exibe um diagrama visual de ponta a ponta do fluxo de dados, desde as fontes até relatórios e dashboards. Ela permite identificar dependências, analisar o impacto de alterações em datasets upstream e rastrear problemas de atualização ao longo da cadeia de dados.",
-      "A Lineage View é uma funcionalidade exclusiva do Microsoft Purview, exigindo que o workspace esteja conectado a um Purview Data Catalog para ser utilizada no Power BI Service.",
-      "A Lineage View mostra a linhagem de apenas um item selecionado por vez; para visualizar a linhagem de todos os itens do workspace, é necessário exportar metadados via API REST e construir o diagrama externamente.",
-      "A Lineage View requer uma licença Power BI Premium para workspaces com mais de 10 itens, e em workspaces Pro, ela exibe apenas os primeiros 10 nós devido a limitações de performance."
+      "Seria exclusiva do Microsoft Purview, exigindo workspace conectado a um Purview Data Catalog para funcionar no Power BI Service.",
+      "Mostraria a linhagem de só um item por vez; para todo o workspace seria preciso exportar metadados via API e montar o diagrama externamente.",
+      "Exigiria Premium para workspaces com 10+ itens; no Pro mostraria só os primeiros 10 nós por limitação de performance."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -1705,8 +1705,8 @@ export const questions = [
     "options": [
       "O Gateway de dados local (modo padrão/Standard) é instalado em um servidor dedicado, suporta múltiplos usuários e fontes de dados, e é ideal para ambientes de produção com DirectQuery e atualização agendada. O Gateway de dados local (modo pessoal/Personal) é instalado no computador do usuário, para uso individual, não suporta DirectQuery para outros usuários e depende do computador estar ligado para atualizações agendadas, sendo adequado para desenvolvimento e uso pessoal.",
       "Os dois tipos são Gateway On-premises (para fontes locais na rede corporativa) e Gateway Cloud (para fontes na nuvem como Azure SQL e SharePoint Online); o Gateway Cloud é provisionado automaticamente pelo Power BI Service sem instalação manual, enquanto o Gateway On-premises requer download e configuração manual.",
-      "Gateway modo Padrão e modo Personal têm as mesmas funcionalidades técnicas — a diferença é apenas administrativa: o modo Padrão é gerenciado pelo departamento de TI enquanto o modo Personal é autogerenciado pelo analista de dados; ambos suportam os mesmos tipos de refresh e número de usuários simultâneos.",
-      "O Gateway modo Personal é obrigatório para conexões com Azure Data Lake Storage Gen2 e Azure Blob Storage, pois essas fontes requerem autenticação pessoal do usuário que não pode ser compartilhada; o Gateway modo Padrão não suporta autenticação OAuth necessária para essas fontes de nuvem."
+      "Padrão e Personal teriam as mesmas funcionalidades — diferença só administrativa (TI vs autogerenciado); suportariam o mesmo refresh e usuários.",
+      "Personal seria obrigatório para Azure Data Lake Gen2/Blob Storage por exigirem autenticação pessoal; Padrão não suportaria OAuth dessas fontes."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -1726,12 +1726,12 @@ export const questions = [
   },
   {
     "id": "q70_pl300",
-    "text": "O que é um dataset compartilhado (Shared Dataset), agora conhecido como Modelo Semântico, no Power BI e como ele promove a reutilização e consistência de dados na organização?",
+    "text": "O que é um Shared Dataset (Modelo Semântico) no Power BI, e como ele promove reuso e consistência de dados na organização?",
     "options": [
       "Um Shared Dataset é um modelo semântico publicado no Power BI Service que múltiplos relatórios de diferentes workspaces podem usar como fonte, sem duplicar o modelo; vantagens: única fonte de verdade para métricas e definições de negócio, refresh centralizado em um único dataset, RLS aplicado uma vez e herdado por todos os relatórios conectados, e redução do número de datasets redundantes na organização.",
-      "Shared Datasets são cópias sincronizadas de um dataset original — ao criar um shared dataset, o Power BI cria réplicas em cada workspace que o usa, mantendo-as sincronizadas automaticamente; cada workspace tem sua própria cópia independente que pode ser customizada sem afetar os outros.",
-      "Para usar um Shared Dataset de outro workspace, o usuário precisa ter role Member ou superior em ambos os workspaces (origem e destino); usuários com role Viewer não podem criar relatórios baseados em Shared Datasets mesmo que tenham permissão de Build no dataset.",
-      "Shared Datasets só podem ser usados dentro do mesmo workspace onde foram publicados; para compartilhar um dataset entre workspaces diferentes, é necessário exportar o arquivo .pbix e republicar em cada workspace destino, perdendo a sincronização automática entre as cópias."
+      "Seriam cópias sincronizadas — o Power BI criaria réplicas em cada workspace que usa, cada uma customizável independentemente sem afetar as outras.",
+      "Exigiria role Member ou superior em ambos os workspaces; Viewers não poderiam criar relatórios mesmo com permissão de Build no dataset.",
+      "Só funcionariam no mesmo workspace; compartilhar entre workspaces exigiria exportar .pbix e republicar, perdendo sincronização automática."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -1754,9 +1754,9 @@ export const questions = [
     "text": "Quais tipos de configurações de tenant (Tenant Settings) podem ser gerenciadas por um administrador do Power BI e como elas afetam os usuários na organização?",
     "options": [
       "Tenant Settings no Admin Portal controlam funcionalidades globais para toda a organização: habilitar/desabilitar Publish to Web, Export Data, Q&A, R e Python visuals, custom visuals do marketplace, compartilhamento externo com guests, AI features, e quem pode criar workspaces; podem ser aplicadas a toda a organização, grupos específicos de segurança, ou excluir grupos específicos.",
-      "Tenant Settings controlam apenas as configurações de segurança e autenticação do Power BI — política de senhas, duração de sessão, MFA e acesso condicional; configurações funcionais como habilitar/desabilitar recursos específicos são controladas por cada administrador de workspace individualmente.",
-      "Tenant Settings só podem ser configuradas pelo administrador global do Azure AD (Microsoft Entra ID); administradores do Power BI com role \"Power BI Administrator\" têm acesso somente leitura ao Admin Portal e não podem modificar as configurações do tenant.",
-      "Alterações em Tenant Settings têm efeito imediato apenas para novos usuários adicionados ao tenant após a alteração; usuários existentes mantêm as permissões que tinham antes da mudança e precisam ter suas configurações individuais atualizadas manualmente pelo administrador."
+      "Controlariam só segurança/autenticação (senhas, sessão, MFA); recursos funcionais seriam controlados por cada admin de workspace individualmente.",
+      "Só o admin global do Azure AD poderia configurar; \"Power BI Administrator\" teria acesso só leitura ao Admin Portal.",
+      "Mudanças valeriam só para novos usuários após a alteração; usuários existentes manteriam permissões antigas, exigindo atualização manual."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -1779,9 +1779,9 @@ export const questions = [
     "text": "Como um administrador ou proprietário de relatório pode monitorar o uso e a adoção de relatórios e dashboards publicados no Power BI Service?",
     "options": [
       "Através do Relatório de Métricas de Uso (Usage Metrics Report), acessível clicando nos três pontos (...) de um relatório ou dashboard no workspace e selecionando 'Exibir métricas de uso'; este relatório exibe detalhes como número de visualizações, usuários únicos, visualizações por dia/semana, páginas mais acessadas e distribuição por plataforma (web, mobile, embedded), sendo gerado automaticamente pelo Power BI Service.",
-      "As métricas de uso no Power BI são acessadas exclusivamente via Azure Monitor e Log Analytics Workspace, exigindo a configuração prévia da integração no Admin Portal, pois o Power BI Service não possui um relatório de uso nativo.",
-      "As Métricas de Uso estão disponíveis apenas para o administrador do tenant através do Portal de Administração > Métricas de Uso; proprietários individuais de relatórios não têm acesso às métricas de seus próprios relatórios, sendo esta uma funcionalidade restrita ao administrador global.",
-      "As Métricas de Uso no Power BI exibem apenas o número total de visualizações do relatório, sem detalhamento por usuário ou período; para análises detalhadas de adoção com identificação de usuários e tendências temporais, é necessário utilizar o Microsoft 365 Usage Analytics no centro de administração do Microsoft 365."
+      "Métricas de uso exigiriam Azure Monitor/Log Analytics configurados; o Power BI Service não teria relatório de uso nativo.",
+      "Métricas estariam disponíveis só ao admin do tenant via Admin Portal; proprietários não teriam acesso às métricas de seus próprios relatórios.",
+      "Mostrariam só o total de visualizações sem detalhamento; análise detalhada exigiria Microsoft 365 Usage Analytics no admin center."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -1803,10 +1803,10 @@ export const questions = [
     "id": "q73_pl300",
     "text": "Como um administrador do Power BI pode utilizar o Activity Log para realizar a auditoria das ações executadas pelos usuários em um tenant do Power BI?",
     "options": [
-      "O Activity Log registra ações de usuários no Power BI Service (visualizações, exportações, compartilhamentos, criações, exclusões, alterações de permissão) e pode ser acessado via Admin Portal > Audit Logs (que redireciona ao Microsoft Purview compliance portal) ou via API REST do Power BI (`GET /v1.0/myorg/admin/activityevents`); retém dados por 90 dias e é fundamental para auditoria de conformidade e investigação de incidentes.",
-      "O Activity Log do Power BI registra apenas ações administrativas (alterações de tenant settings, criação de workspaces, gestão de capacidades); ações de usuários comuns como visualizações e exportações são registradas separadamente no Azure AD Sign-in Logs, não no Power BI Activity Log.",
-      "Activity Log requer configuração prévia de um storage account Azure para armazenar os eventos; sem essa configuração, o Power BI não registra nenhuma ação de usuário e o Admin Portal não tem acesso histórico de atividades do tenant.",
-      "O Activity Log do Power BI tem retenção de 30 dias e não pode ser exportado; para auditoria de longo prazo é obrigatório usar o Microsoft Sentinel com conector do Power BI que mantém logs por período configurável e oferece funcionalidades avançadas de análise de segurança."
+      "Registra ações de usuários (visualizações, exportações, compartilhamentos, exclusões, permissões);",
+      "Registraria só ações administrativas (tenant settings, workspaces, capacidades); ações de usuário comum ficariam no Azure AD Sign-in Logs.",
+      "Exigiria storage account Azure configurado antes; sem isso, nada seria registrado e o Admin Portal não teria histórico.",
+      "Teria retenção de 30 dias sem exportação; auditoria de longo prazo exigiria Microsoft Sentinel com conector do Power BI."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -1829,9 +1829,9 @@ export const questions = [
     "text": "Quais são as principais vantagens do Power BI Premium em relação ao Power BI Pro para organizações com um grande número de usuários consumidores de relatórios?",
     "options": [
       "O Power BI Premium oferece capacidade dedicada (recursos de CPU/RAM exclusivos sem compartilhamento com outros tenants), permite a distribuição de conteúdo para usuários sem licença Pro (apenas licença gratuita para consumidores), possui limites maiores de refresh (48x/dia vs 8x), suporta datasets maiores (até 400 GB vs 1 GB no Pro), inclui XMLA endpoint para ferramentas externas, paginação de relatórios nativos e deployment pipelines avançados.",
-      "A principal vantagem do Premium sobre o Pro é exclusivamente o número de usuários suportados — o Pro limita o workspace a 100 usuários enquanto o Premium suporta usuários ilimitados; em termos de funcionalidades, recursos e limites técnicos, Pro e Premium são equivalentes.",
-      "Power BI Premium elimina completamente a necessidade de licenças individuais — com uma única licença Premium para o tenant, todos os usuários (criadores e consumidores) têm acesso completo a todas as funcionalidades do Power BI sem nenhuma licença adicional por usuário.",
-      "Power BI Premium é necessário para qualquer uso corporativo do Power BI; o plano Pro é destinado apenas para uso individual e teste — organizações com mais de 5 usuários são automaticamente migradas para Premium pelo Microsoft e cobradas pelo modelo de capacidade."
+      "A vantagem seria só o número de usuários — Pro limitaria a 100, Premium seria ilimitado; nos demais recursos, Pro e Premium seriam equivalentes.",
+      "Premium eliminaria licenças individuais — uma única licença para o tenant daria acesso completo a todos (criadores e consumidores).",
+      "Premium seria necessário para qualquer uso corporativo; organizações com 5+ usuários seriam migradas automaticamente para capacidade."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -1851,12 +1851,12 @@ export const questions = [
   },
   {
     "id": "q75_pl300",
-    "text": "No DAX, qual é a forma correta de utilizar a função SWITCH(TRUE(), ...) para criar classificações baseadas em múltiplas condições, e qual a principal razão pela qual essa abordagem é frequentemente preferível a uma série de IFs aninhados?",
+    "text": "No DAX, como usar SWITCH(TRUE(), ...) para classificar por múltiplas condições, e por que isso é preferível a IFs aninhados?",
     "options": [
       "Classificação = SWITCH(TRUE(), [Vendas] > 100000, \"Platinum\", [Vendas] > 50000, \"Gold\", [Vendas] > 20000, \"Silver\", \"Bronze\"). Esta sintaxe avalia cada condição em ordem e retorna o valor correspondente à primeira condição verdadeira, sendo preferível ao IF aninhado por ser mais legível, fácil de manter e ter performance equivalente ou superior.",
-      "SWITCH(TRUE()) deve ser evitado no DAX, pois ele força a avaliação de todas as condições, mesmo após encontrar uma verdadeira, o que o torna menos eficiente que IF aninhado, que utiliza avaliação de curto-circuito e é sempre mais performático para classificações complexas.",
-      "SWITCH(TRUE()) é limitado a condições de igualdade exata; para comparações como \"maior que\" ou \"menor que\", é obrigatório usar IF aninhado. O uso de TRUE() como primeiro argumento é um workaround que só se aplica a resultados booleanos de funções específicas, não a expressões de comparação.",
-      "A sintaxe correta para SWITCH com múltiplas condições numéricas é SWITCH([Vendas], \">100000\", \"Platinum\", \">50000\", \"Gold\", \"Bronze\"), onde as condições são strings de comparação. O uso de TRUE() como primeiro argumento é uma sintaxe legada e não recomendada nas versões atuais do DAX."
+      "SWITCH(TRUE()) deveria ser evitado por avaliar todas as condições mesmo após achar uma verdadeira, sendo menos eficiente que IF com curto-circuito.",
+      "SWITCH(TRUE()) seria limitado a igualdade exata; \">\" ou \"<\" exigiriam IF aninhado. TRUE() seria workaround só para resultados booleanos.",
+      "A sintaxe correta seria SWITCH([Vendas], \">100000\",\"Platinum\",...) com strings de comparação; TRUE() seria sintaxe legada não recomendada."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -1901,12 +1901,12 @@ export const questions = [
   },
   {
     "id": "q77_pl300",
-    "text": "No Power Query, você precisa aplicar a mesma série de transformações a múltiplas tabelas que possuem a mesma estrutura. Qual é a abordagem mais eficiente e recomendada para criar e reutilizar uma função customizada (Custom Function) para este propósito?",
+    "text": "No Power Query, qual a abordagem mais eficiente para criar e reutilizar uma Custom Function aplicando a mesma transformação a várias tabelas?",
     "options": [
       "Criar uma query de referência com os passos de transformação desejados, convertê-la em função via Home > Advanced Editor alterando o cabeçalho para (parametro as table) as table => e substituindo a referência à tabela pelo parâmetro; depois criar nova query com a lista de tabelas e usar Add Column > Invoke Custom Function selecionando a função criada e passando cada tabela como argumento, expandindo o resultado.",
-      "Funções customizadas no Power Query são criadas exclusivamente via interface visual sem necessidade de editar o código M; em Home > New Source > Custom Function, uma interface guiada permite definir os parâmetros e as transformações usando os mesmos controles visuais do editor padrão sem escrever código.",
-      "Custom Functions no Power Query não suportam tabelas como parâmetro — apenas tipos primitivos (texto, número, data, lógico) podem ser passados como argumento; para aplicar a mesma transformação a múltiplas tabelas é necessário criar queries de referência separadas para cada tabela e replicar os passos manualmente.",
-      "Invoke Custom Function está disponível apenas no Power Query Online (Dataflows); no Power Query do Power BI Desktop, funções customizadas devem ser chamadas manualmente via Advanced Editor editando o código M de cada query individualmente sem interface visual de invocação."
+      "Funções customizadas seriam criadas só via interface visual sem editar M, em Home > New Source > Custom Function, sem escrever código.",
+      "Custom Functions não suportariam tabela como parâmetro, só tipos primitivos; seria preciso replicar passos manualmente por tabela.",
+      "Invoke Custom Function existiria só no Power Query Online; no Desktop seria preciso chamar via Advanced Editor sem interface visual."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -1928,10 +1928,10 @@ export const questions = [
     "id": "q78_pl300",
     "text": "Qual das seguintes opções descreve corretamente os pré-requisitos e o processo de uso de scripts Python no Power Query do Power BI Desktop para realizar transformações de dados?",
     "options": [
-      "Pré-requisitos: Python instalado localmente (Anaconda recomendado) e configurado em File > Options > Python scripting. No Power Query, use 'Home > New Source > Python Script' para importar dados ou 'Transform > Run Python Script' para transformar dados existentes. O script recebe o dataset como DataFrame pandas ('dataset') e deve retornar um DataFrame. Uma limitação importante é que ele quebra o query folding.",
-      "Scripts Python no Power Query são executados no servidor do Power BI Service durante o refresh, não requerendo Python instalado localmente. O Power BI Desktop usa Python apenas para visualizações (visuais Python), enquanto transformações de dados via Python no Power Query são processadas exclusivamente na nuvem.",
-      "O uso de Python no Power Query do Power BI Desktop requer uma licença Power BI Premium. No plano Pro, apenas scripts R estão disponíveis para transformações de dados no Power Query, pois Python foi adicionado como recurso exclusivo Premium na atualização de 2024 do Power BI Desktop.",
-      "Scripts Python no Power Query devem retornar os dados em formato JSON ou CSV como uma string, e o Power Query converte automaticamente essa string para uma tabela. Retornar um DataFrame pandas diretamente não é suportado e causará um erro."
+      "Python instalado localmente (Anaconda) e configurado em File > Options > Python scripting;",
+      "Scripts Python rodariam no servidor do Service durante o refresh, sem precisar de Python local; Desktop usaria Python só para visuais.",
+      "Exigiria licença Premium; no Pro só R estaria disponível, pois Python seria recurso exclusivo Premium desde 2024.",
+      "Scripts deveriam retornar JSON/CSV como string, convertida automaticamente; retornar DataFrame pandas direto causaria erro."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -1954,9 +1954,9 @@ export const questions = [
     "text": "O que são Dataflows no Power BI Service e quais vantagens oferecem em relação às transformações feitas diretamente no Power Query de cada relatório?",
     "options": [
       "Dataflows são ETL na nuvem criados no Power BI Service usando Power Query Online — realizam transformações de dados centralizadas e armazenam os resultados em tabelas no Azure Data Lake Storage (Common Data Service); vantagens: reutilização por múltiplos datasets sem replicar lógica, transformações executadas no Service sem depender do computador do analista, e possibilidade de criar camadas de dados (staging, limpeza, modelo) independentes dos relatórios.",
-      "Dataflows são equivalentes a datasets no Power BI Service — a diferença é apenas que Dataflows armazenam dados brutos enquanto Datasets armazenam dados modelados; ambos são criados no Power BI Desktop e publicados no Service, seguindo o mesmo fluxo de desenvolvimento.",
-      "Dataflows substituem completamente a necessidade de Power Query nos relatórios individuais; ao usar um Dataflow como fonte, o Power Query do relatório é desabilitado automaticamente e todas as transformações devem ser feitas exclusivamente no Dataflow para evitar duplicação de lógica.",
-      "Dataflows requerem licença Power BI Premium para criação e uso; no plano Pro, apenas é possível consumir Dataflows criados por usuários Premium como fonte de dados em datasets, sem permissão para criar ou editar Dataflows no Service."
+      "Seriam equivalentes a datasets — Dataflows armazenariam dados brutos, Datasets modelados; ambos criados no Desktop e publicados no Service.",
+      "Substituiriam completamente o Power Query dos relatórios; usar Dataflow como fonte desabilitaria o Power Query do relatório automaticamente.",
+      "Exigiriam Premium para criar/usar; no Pro só seria possível consumir Dataflows criados por usuários Premium, sem criar/editar."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -1976,12 +1976,12 @@ export const questions = [
   },
   {
     "id": "q80_pl300",
-    "text": "Como você configuraria o Incremental Refresh em um conjunto de dados do Power BI para otimizar o tempo de atualização de tabelas que contêm grandes volumes de dados históricos, garantindo que apenas os dados mais recentes sejam processados a cada refresh?",
+    "text": "Como configurar Incremental Refresh no Power BI para otimizar atualização de tabelas históricas grandes, processando só dados recentes?",
     "options": [
       "No Power Query, criar dois parâmetros obrigatórios do tipo Date/Time chamados exatamente \"RangeStart\" e \"RangeEnd\"; filtrar a coluna de data da tabela usando esses parâmetros; no Power BI Desktop em Table Tools > Incremental Refresh, definir quantos anos/meses armazenar e quantos dias/meses atualizar a cada refresh; publicar no Service (requer workspace Premium ou Fabric para funcionar completamente).",
-      "Incremental Refresh é configurado exclusivamente no Power BI Service após a publicação — no Desktop apenas é possível visualizar os dados completos; no Service, nas configurações do dataset em Incremental Refresh, define-se a coluna de data e os períodos de retenção e atualização sem necessidade de parâmetros no Power Query.",
-      "Incremental Refresh no Power BI funciona para todos os conectores de dados; não há requisito especial de conector — qualquer fonte que suporte filtro de data no Power Query pode usar Incremental Refresh, incluindo arquivos CSV e Excel locais que são particionados automaticamente pelo Power BI.",
-      "Os parâmetros para Incremental Refresh podem ter qualquer nome desde que sejam do tipo Date/Time e estejam referenciados no filtro da tabela; a convenção de nomes \"RangeStart\" e \"RangeEnd\" é apenas uma recomendação de boas práticas, não um requisito técnico obrigatório do Power BI."
+      "Seria configurado só no Service após publicar; no Desktop só veria dados completos; definiria coluna de data e períodos sem parâmetros no Power Query.",
+      "Funcionaria para qualquer conector sem requisito especial; CSV e Excel locais seriam particionados automaticamente.",
+      "Os parâmetros poderiam ter qualquer nome Date/Time referenciado no filtro; \"RangeStart\"/\"RangeEnd\" seria só boa prática, não obrigatório."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -2003,10 +2003,10 @@ export const questions = [
     "id": "q81_pl300",
     "text": "Quais visuais geoespaciais estão disponíveis nativamente no Power BI Desktop e quais tipos de campos de dados são tipicamente necessários para cada um funcionar corretamente?",
     "options": [
-      "Map (Bing Maps) — requer campo de localização (cidade, país, CEP, coordenadas lat/long) ou latitude+longitude separados; Filled Map (Choropleth) — requer campo de região geográfica reconhecida (país, estado, continente) para colorir áreas; Azure Maps — versão avançada com mais camadas e tipos de mapa; Shape Map — usa arquivos TopoJSON customizados para mapas de regiões não padrão como territórios de vendas.",
-      "O Power BI tem apenas um visual de mapa nativo (Map Visual); os demais tipos como Filled Map e Azure Maps são visuais customizados disponíveis no AppSource que precisam ser instalados separadamente e requerem chave de API Azure Maps para funcionar.",
-      "Visuais de mapa no Power BI requerem que os dados de localização sejam sempre em formato de coordenadas geográficas (latitude e longitude numéricas); nomes de cidades, países e CEPs não são reconhecidos automaticamente — é necessário usar o Power Query para converter via API de geocodificação antes de usar nos visuais de mapa.",
-      "Filled Map e Map são equivalentes e intercambiáveis no Power BI; a diferença é apenas estética — Filled Map colore regiões enquanto Map usa bolhas, mas ambos aceitam os mesmos tipos de campo de localização e têm a mesma precisão geográfica usando o mesmo serviço de geocodificação do Bing."
+      "Map (Bing): localização ou lat/long; Filled Map: região geográfica reconhecida para colorir áreas; Azure Maps: versão avançada;",
+      "Haveria só um visual de mapa nativo; Filled Map e Azure Maps seriam customizados do AppSource, exigindo instalação e chave de API.",
+      "Exigiriam sempre coordenadas numéricas; nomes de cidades/países/CEP não seriam reconhecidos sem geocodificação prévia via Power Query.",
+      "Filled Map e Map seriam intercambiáveis, diferindo só visualmente (cor vs bolha), com mesma precisão geográfica via Bing."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -2028,10 +2028,10 @@ export const questions = [
     "id": "q82_pl300",
     "text": "Como configurar o visual de KPI no Power BI e quais campos são necessários para exibi-lo corretamente?",
     "options": [
-      "O visual KPI requer três campos: Indicator (medida ou valor atual a monitorar), Trend axis (campo de data ou período para exibir a tendência no gráfico sparkline de fundo), e Target goals (valor de meta para comparação); o visual exibe o valor atual, a variação em relação à meta (positiva em verde ou negativa em vermelho por padrão) e a linha de tendência temporal.",
-      "O visual KPI no Power BI requer apenas dois campos: Valor atual e Meta; o eixo de tendência é opcional e apenas cosmético — sem ele, o KPI funciona normalmente exibindo o valor e a variação percentual em relação à meta sem nenhuma funcionalidade reduzida.",
-      "O visual KPI no Power BI é equivalente ao visual Card com formatação condicional — ambos exibem um único valor com indicação de status; a diferença é apenas visual com o KPI tendo um ícone de seta enquanto o Card usa cores de fundo para indicar status acima ou abaixo da meta.",
-      "Para configurar o visual KPI é necessário criar uma medida DAX específica que retorna um objeto JSON com os campos \"value\", \"target\" e \"trend\" no formato esperado pelo visual; o campo Indicator não aceita medidas simples de SUM ou AVERAGE — requer a medida formatada especificamente para o visual KPI."
+      "Indicator (valor atual), Trend axis (data/período para o sparkline) e Target goals (meta); exibe valor, variação vs meta (verde/vermelho) e tendência.",
+      "Exigiria só dois campos (valor e meta); o eixo de tendência seria opcional/cosmético, sem reduzir funcionalidade sem ele.",
+      "Seria equivalente ao Card com formatação condicional, diferindo só visualmente (seta vs cor de fundo) para indicar status.",
+      "Exigiria medida DAX retornando JSON com \"value\"/\"target\"/\"trend\"; Indicator não aceitaria SUM/AVERAGE simples."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -2051,12 +2051,12 @@ export const questions = [
   },
   {
     "id": "q83_pl300",
-    "text": "No DAX, as funções de contagem são essenciais para diversas análises de dados. Qual das seguintes opções descreve corretamente a diferença e o uso apropriado das funções COUNTROWS, COUNT, COUNTA e DISTINCTCOUNT?",
+    "text": "Qual a diferença e uso apropriado das funções DAX COUNTROWS, COUNT, COUNTA e DISTINCTCOUNT?",
     "options": [
-      "COUNTROWS(Tabela) conta o número de linhas de uma tabela (incluindo linhas com valores nulos); COUNT(Coluna) conta valores numéricos não nulos em uma coluna; COUNTA(Coluna) conta valores não nulos de qualquer tipo em uma coluna; DISTINCTCOUNT(Coluna) conta o número de valores únicos distintos em uma coluna (equivalente ao COUNT DISTINCT do SQL), ignorando duplicatas.",
-      "COUNTROWS e COUNT são equivalentes — ambos contam o número de linhas da tabela atual no contexto de filtro; COUNTA é usado especificamente para colunas de texto e DISTINCTCOUNT para colunas numéricas; a escolha entre COUNT e COUNTROWS é apenas de preferência de sintaxe sem diferença funcional.",
-      "DISTINCTCOUNT inclui valores nulos na contagem de valores distintos — um valor nulo é tratado como um valor único; para excluir nulos da contagem distinta é necessário usar COUNTROWS(DISTINCT(FILTER(Tabela, NOT(ISBLANK(Tabela[Coluna]))))) como alternativa explícita ao DISTINCTCOUNT.",
-      "COUNT e COUNTA têm comportamento idêntico no DAX — ambos contam valores não nulos de qualquer tipo de dado; a distinção entre as duas funções existe apenas por compatibilidade com a sintaxe do Excel e não tem impacto prático no resultado das medidas DAX."
+      "COUNTROWS conta linhas da tabela (incl. nulos); COUNT conta números não nulos numa coluna; COUNTA conta qualquer valor não nulo;",
+      "COUNTROWS e COUNT seriam equivalentes — ambos contariam linhas no contexto de filtro; COUNTA seria só para texto e DISTINCTCOUNT só para números.",
+      "DISTINCTCOUNT incluiria nulos como valor único na contagem distinta; excluir nulos exigiria COUNTROWS(DISTINCT(FILTER(...NOT(ISBLANK(...))))).",
+      "COUNT e COUNTA teriam comportamento idêntico, ambos contando qualquer valor não nulo; a distinção existiria só por compatibilidade com Excel."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -2079,9 +2079,9 @@ export const questions = [
     "text": "Como o visual Decomposition Tree no Power BI é utilizado para análise exploratória de uma métrica e qual a função dos \"AI Splits\"?",
     "options": [
       "O Decomposition Tree permite decompor uma métrica (campo \"Analyze\") por diversas dimensões (campos \"Explain by\"), expandindo a árvore interativamente com o sinal de \"+\". Os AI Splits são sugestões automáticas da IA que identificam a dimensão que melhor explica a variação da métrica, com \"High value\" para o segmento de maior valor e \"Low value\" para o de menor valor, utilizando algoritmos estatísticos internos.",
-      "Decomposition Tree é exclusivamente uma ferramenta de drill-down hierárquico, funcionando apenas com dimensões que possuem hierarquia pré-definida no modelo (ex: Ano > Trimestre > Mês); para dimensões sem hierarquia, o visual exibe erro e não permite a decomposição interativa.",
-      "Os AI Splits no Decomposition Tree exigem integração com o Azure Machine Learning configurada no tenant do Power BI; sem essa integração, o símbolo \"+\" expande apenas pelas dimensões manualmente selecionadas pelo usuário, sem sugestões automáticas de IA.",
-      "O Decomposition Tree no Power BI exibe no máximo 4 níveis de decomposição; ao tentar adicionar um quinto nível, o visual colapsa automaticamente o primeiro nível para manter a legibilidade, sendo necessário usar um visual de Árvore Customizado do AppSource para decomposições com mais de 4 dimensões."
+      "Seria exclusivo de drill-down hierárquico com hierarquia pré-definida; sem hierarquia, exibiria erro e não permitiria decomposição.",
+      "AI Splits exigiriam Azure ML configurado no tenant; sem isso, \"+\" expandiria só por dimensões manuais, sem sugestões de IA.",
+      "Exibiria no máximo 4 níveis; um quinto colapsaria o primeiro automaticamente, exigindo visual customizado do AppSource para mais níveis."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2103,10 +2103,10 @@ export const questions = [
     "id": "q85_pl300",
     "text": "Como o uso de variáveis (VAR) melhora a legibilidade e performance de medidas DAX complexas?",
     "options": [
-      "Variáveis DAX são declaradas com VAR nome = expressão e referenciadas com RETURN; elas evitam o recálculo de expressões usadas múltiplas vezes, melhoram a legibilidade nomeando valores intermediários, facilitam o debug e capturam o contexto de filtro no momento da declaração.",
-      "Variáveis DAX são recalculadas a cada vez que são referenciadas dentro de uma medida, o que pode degradar a performance, mas são úteis apenas para melhorar a legibilidade de fórmulas complexas.",
-      "Variáveis DAX alteram dinamicamente o contexto de filtro da medida onde são usadas, permitindo que a expressão dentro da variável seja avaliada em um contexto diferente a cada referência.",
-      "O uso de variáveis DAX é recomendado apenas para medidas muito simples, pois em cálculos complexos elas adicionam uma sobrecarga de processamento que anula qualquer ganho de performance."
+      "VAR nome = expressão, referenciada com RETURN; evita recálculo de expressões repetidas, melhora legibilidade nomeando valores, facilita debug.",
+      "Seriam recalculadas a cada referência dentro da medida, degradando performance, úteis só para legibilidade de fórmulas complexas.",
+      "Alterariam dinamicamente o contexto de filtro da medida, avaliando a expressão interna em contexto diferente a cada referência.",
+      "Seriam recomendadas só para medidas simples; em cálculos complexos adicionariam overhead que anularia o ganho de performance."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2129,9 +2129,9 @@ export const questions = [
     "text": "Quando é mais adequado usar a função LOOKUPVALUE em vez de criar um relacionamento entre tabelas no modelo de dados do Power BI?",
     "options": [
       "LOOKUPVALUE é mais adequado quando não é possível criar um relacionamento direto (ex: chaves de múltiplas colunas, tipos de dados incompatíveis, relacionamento circular), para lookups em colunas calculadas onde um relacionamento já existe mas se precisa de uma coluna específica diferente da propagada, ou para lookup com múltiplas condições de correspondência.",
-      "LOOKUPVALUE deve ser sempre preferido a relacionamentos no modelo, pois oferece maior flexibilidade e transparência, explicitando a lógica de correspondência e melhorando a manutenibilidade e a performance das queries DAX.",
-      "LOOKUPVALUE só pode ser utilizado em medidas DAX, pois exige um contexto de filtro para determinar o valor a ser retornado; em colunas calculadas, a função RELATED é a alternativa correta para navegar por relacionamentos existentes.",
-      "LOOKUPVALUE funciona como um VLOOKUP do Excel, sempre retornando o primeiro valor encontrado em caso de múltiplas correspondências; para obter todos os valores, é necessário combinar FILTER com FIRSTNONBLANK."
+      "LOOKUPVALUE deveria ser sempre preferido a relacionamentos, por dar mais flexibilidade e melhorar manutenibilidade/performance das queries.",
+      "Só funcionaria em medidas DAX, exigindo contexto de filtro; em colunas calculadas, RELATED seria a alternativa correta.",
+      "Funcionaria como VLOOKUP, sempre retornando o primeiro valor em múltiplas correspondências; todos os valores exigiriam FILTER+FIRSTNONBLANK."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2155,8 +2155,8 @@ export const questions = [
     "options": [
       "O Scatter Chart requer: Eixo X (primeira métrica, ex: Custo), Eixo Y (segunda métrica, ex: Receita), e Valores (categoria que define cada ponto, ex: Produto); campos opcionais incluem Legenda (para colorir pontos por categoria), Tamanho (para o tamanho da bolha, transformando-o em um Bubble Chart), e Eixo de Reprodução (campo de data para animação temporal).",
       "O Scatter Chart no Power BI requer exatamente quatro campos obrigatórios: X, Y, Tamanho e Categoria; sem o campo Tamanho definido, o visual não renderiza e exibe mensagem de erro solicitando que todos os campos sejam preenchidos antes de exibir os dados.",
-      "O Eixo de Reprodução (Play Axis) no Scatter Chart do Power BI reproduz automaticamente a animação em loop contínuo ao abrir o relatório; para pausar a animação o usuário precisa fechar e reabrir o relatório pois não há controle de pausa/play disponível no visual nativo.",
-      "O Scatter Chart no Power BI suporta no máximo 3.500 pontos de dados por performance; para datasets com mais pontos, o visual aplica amostragem automática sem notificar o usuário, o que pode distorcer a análise de correlação e ocultar outliers importantes nos dados."
+      "Eixo de Reprodução reproduziria em loop automático ao abrir; pausar exigiria fechar e reabrir, sem controle de pausa/play nativo.",
+      "Suportaria no máximo 3.500 pontos; com mais, aplicaria amostragem automática sem avisar, distorcendo a correlação."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2176,12 +2176,12 @@ export const questions = [
   },
   {
     "id": "q88_pl300",
-    "text": "Em um visual de Matriz no Power BI, como você configuraria os totais e subtotais por linha e coluna, e qual é o comportamento de agregação fundamental que afeta os resultados exibidos?",
+    "text": "Como configurar totais/subtotais por linha e coluna numa Matriz, e qual o comportamento de agregação fundamental que afeta os resultados?",
     "options": [
       "A configuração de totais e subtotais é realizada no painel de formatação do visual, nas seções 'Totais de linha' e 'Totais de coluna', permitindo habilitar ou desabilitar cada um individualmente. O comportamento fundamental é que os totais e subtotais recalculam a medida DAX no contexto de filtro mais amplo, e não somam os valores exibidos nas células de detalhe. Isso é crucial para medidas não-aditivas, como médias e percentuais, que podem exigir lógica DAX específica para exibir totais semanticamente corretos.",
       "Os totais e subtotais em uma Matriz do Power BI sempre somam os valores exibidos nas linhas e colunas individuais. O Power BI garante a consistência visual somando as células visíveis, e as medidas DAX não são recalculadas para o contexto de total, apenas os valores de detalhe são agregados pela interface do relatório.",
-      "Para desabilitar apenas o total geral de uma Matriz, mantendo os subtotais de nível intermediário, é imprescindível criar uma medida DAX utilizando ISINSCOPE() para controlar a visibilidade. A interface de formatação da Matriz não oferece controle granular suficiente para gerenciar quais níveis de totais e subtotais são exibidos sem a aplicação de lógica DAX.",
-      "Subtotais em uma Matriz são sempre calculados somando as linhas do nível imediatamente inferior, independentemente da agregação da medida. Por exemplo, se a medida é um percentual, o subtotal exibirá a soma dos percentuais das linhas inferiores, exigindo reescrita da medida para corrigir esse comportamento padrão do visual."
+      "Desabilitar só o total geral mantendo subtotais exigiria medida DAX com ISINSCOPE(); a interface não ofereceria controle granular sem DAX.",
+      "Subtotais sempre somariam as linhas do nível inferior, independente da agregação; um percentual mostraria soma de percentuais, exigindo reescrita."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2204,9 +2204,9 @@ export const questions = [
     "text": "O que são Sensitivity Labels no Power BI e como elas integram com o Microsoft Purview Information Protection?",
     "options": [
       "Sensitivity Labels são rótulos de classificação de dados (ex: Confidential, Highly Confidential, Public) criados no Microsoft Purview e aplicáveis a datasets, relatórios, dashboards e dataflows no Power BI; quando um relatório é exportado para Excel ou PDF, o label é propagado automaticamente para o arquivo exportado aplicando as políticas de proteção configuradas (criptografia, marca d'água, restrições de compartilhamento).",
-      "Sensitivity Labels no Power BI são criados diretamente no Admin Portal do Power BI Service sem dependência do Microsoft Purview; cada organização define seus próprios labels no Power BI independentemente das políticas de classificação do Microsoft 365, permitindo esquemas de classificação diferentes para dados de BI e documentos corporativos.",
-      "Sensitivity Labels no Power BI funcionam apenas para controle visual e não aplicam proteção técnica aos dados; são puramente informativos para que usuários saibam a sensibilidade do conteúdo, mas não impedem exportação, compartilhamento ou acesso a dados classificados como Confidential.",
-      "A aplicação de Sensitivity Labels em conteúdo Power BI é automática e obrigatória — o Power BI detecta automaticamente o conteúdo sensível (dados financeiros, PII, etc.) e aplica o label apropriado sem intervenção do usuário; remover um label requer aprovação do administrador de conformidade do tenant."
+      "Seriam criados no Admin Portal do Power BI sem depender do Purview; cada org definiria labels próprios, independentes do M365.",
+      "Funcionariam só visualmente, sem proteção técnica; seriam informativos, não impedindo exportação/compartilhamento de dados Confidential.",
+      "A aplicação seria automática e obrigatória — o Power BI detectaria conteúdo sensível e aplicaria o label sem intervenção do usuário."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2229,9 +2229,9 @@ export const questions = [
     "text": "Qual é a principal diferença entre os Relatórios do Power BI (Power BI Reports) e os Relatórios Paginados (Paginated Reports) e em que cenários cada um é mais adequado?",
     "options": [
       "Power BI Reports são otimizados para análise interativa e exploração de dados — visuais dinâmicos, filtros, drill-through, responsivos ao tamanho da tela; Relatórios Paginados (criados no Power BI Report Builder) são otimizados para impressão e exportação — controle pixel-perfect do layout, quebras de página precisas, tabelas com centenas de colunas e milhares de linhas, adequados para faturas, extratos, relatórios regulatórios e documentos formais.",
-      "Relatórios Paginados são a versão antiga dos relatórios do Power BI — foram o formato padrão até 2019 e substituídos pelos Power BI Reports modernos; ainda estão disponíveis para compatibilidade com relatórios SSRS migrados, mas a Microsoft recomenda migrar todos os relatórios paginados para o formato moderno do Power BI.",
-      "Relatórios Paginados no Power BI suportam as mesmas fontes de dados que os Power BI Reports e têm as mesmas funcionalidades de visualização; a única diferença é que Paginados são otimizados para telas grandes (monitores 4K) enquanto Power BI Reports são otimizados para telas menores (laptops e tablets).",
-      "Relatórios Paginados são criados diretamente no Power BI Desktop usando o modo \"Paginated\" nas configurações do arquivo; não requerem ferramentas adicionais e seguem o mesmo fluxo de publicação dos Power BI Reports normais no Service."
+      "Paginados seriam a versão antiga, substituída pelos Reports modernos em 2019; manteriam-se só para compatibilidade com SSRS migrado.",
+      "Paginados suportariam as mesmas fontes/funcionalidades; a única diferença seria otimização para telas grandes vs pequenas.",
+      "Paginados seriam criados no Desktop via modo \"Paginated\", sem ferramentas extras, no mesmo fluxo de publicação dos Reports normais."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2253,10 +2253,10 @@ export const questions = [
     "id": "q91_pl300",
     "text": "No Power BI Desktop, como as hierarquias são criadas no modelo de dados e de que forma elas aprimoram a experiência de navegação nos visuais?",
     "options": [
-      "No painel de campos do Power BI Desktop, clicar com botão direito em uma coluna > Nova Hierarquia; arrastar outras colunas para dentro da hierarquia para definir os níveis (ex: Ano > Trimestre > Mês > Dia); nos visuais que suportam hierarquias (gráficos de barras/colunas/linhas, treemap), ícones de drill-up/down aparecem para navegar entre os níveis sem precisar trocar campos manualmente.",
-      "Hierarquias no Power BI são criadas automaticamente pelo modelo para colunas de data (Auto Date/Time) e para qualquer conjunto de colunas com relacionamento pai-filho; hierarquias manuais são criadas apenas para casos onde a detecção automática falha, como hierarquias geográficas customizadas.",
-      "Hierarquias no Power BI Desktop são apenas visuais — não afetam o modelo de dados subjacente nem o comportamento das medidas DAX; ao usar uma hierarquia em um visual, o Power BI usa as colunas individuais que a compõem, sendo equivalente a arrastar as colunas manualmente uma a uma.",
-      "Hierarquias no Power BI são obrigatórias para usar a funcionalidade de drill-down nos visuais; sem uma hierarquia definida explicitamente, os ícones de drill-down não aparecem mesmo que múltiplos campos estejam no eixo do visual, sendo necessário sempre criar uma hierarquia explícita para habilitar a navegação de drill-down."
+      "Botão direito > Nova Hierarquia; arrastar colunas para níveis (Ano>Trimestre>Mês); visuais compatíveis mostram drill-up/down sem troca manual.",
+      "Hierarquias seriam automáticas para datas (Auto Date/Time) e pai-filho; manuais só seriam necessárias se a detecção falhar.",
+      "Hierarquias seriam só visuais, sem afetar o modelo ou medidas; usar uma equivaleria a arrastar as colunas manualmente uma a uma.",
+      "Hierarquias seriam obrigatórias para drill-down; sem uma definida explicitamente, os ícones não apareceriam mesmo com múltiplos campos no eixo."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -2276,12 +2276,12 @@ export const questions = [
   },
   {
     "id": "q92_pl300",
-    "text": "Você precisa criar uma tabela de datas completa no Power BI usando DAX, que inclua colunas para ano, trimestre, mês, semana e indicadores de dia útil. Considere o seguinte código DAX:\n\n```\nDimData = \nVAR DataMin = MIN(Vendas[DataVenda])\nVAR DataMax = MAX(Vendas[DataVenda])\nRETURN\nADDCOLUMNS(\n    CALENDAR(DataMin, DataMax),\n    \"Ano\", YEAR([Date]),\n    \"Trimestre\", \"T\" & QUARTER([Date]),\n    \"Mês Num\", MONTH([Date]),\n    \"Mês Nome\", FORMAT([Date], \"MMMM\"),\n    \"Semana\", WEEKNUM([Date], 2),\n    \"Dia Semana\", FORMAT([Date], \"DDDD\"),\n    \"É Dia Útil\", IF(WEEKDAY([Date], 2) <= 5, TRUE(), FALSE())\n)\n```\n\nQual afirmação descreve corretamente a abordagem utilizada e suas implicações no Power BI?",
+    "text": "Você precisa criar uma tabela de datas em DAX com ano, trimestre, mês e indicador de dia útil. Código:\n```\nDimData =\nVAR DataMin = MIN(Vendas[DataVenda])\nVAR DataMax = MAX(Vendas[DataVenda])\nRETURN\nADDCOLUMNS(\n  CALENDAR(DataMin, DataMax),\n  \"Ano\", YEAR([Date]),\n  \"Trimestre\", QUARTER([Date]),\n  \"É Dia Útil\", WEEKDAY([Date],2)<=5\n)\n```\nQual afirmação descreve corretamente essa abordagem?",
     "options": [
-      "A tabela de datas é criada corretamente usando CALENDAR para definir o intervalo de datas e ADDCOLUMNS para adicionar atributos como ano, trimestre, mês, semana e indicadores de dia útil. Esta tabela calculada pode ser marcada como uma tabela de datas no Power BI.",
-      "Tabelas de datas no DAX devem ser criadas com CALENDARAUTO() sem parâmetros, pois essa função detecta automaticamente o intervalo de datas de todas as colunas de data do modelo e gera a tabela completa com todas as colunas de ano, trimestre, mês e semana sem necessidade de ADDCOLUMNS. CALENDAR com parâmetros manuais é uma abordagem legada menos precisa.",
-      "Tabelas de datas criadas via DAX com CALENDAR ou CALENDARAUTO não podem ser marcadas como Date Table, pois o Power BI não reconhece tabelas calculadas como fontes válidas de calendário; apenas tabelas importadas via Power Query podem ser marcadas como Date Table para uso com funções de time intelligence.",
-      "A função ADDCOLUMNS em tabelas calculadas DAX tem limite de 10 colunas adicionais; para tabelas de datas com mais de 10 atributos é necessário criar a tabela base com CALENDAR e depois adicionar as colunas extras via Power Query após o carregamento inicial do modelo."
+      "Correto: CALENDAR define o intervalo, ADDCOLUMNS adiciona os atributos; a tabela calculada pode ser marcada como Date Table.",
+      "CALENDARAUTO() detectaria automaticamente o intervalo de todas as datas, sem precisar de ADDCOLUMNS; CALENDAR manual seria legado e impreciso.",
+      "Tabelas calculadas via CALENDAR/CALENDARAUTO não poderiam ser Date Table; só tabelas do Power Query seriam válidas para time intelligence.",
+      "ADDCOLUMNS teria limite de 10 colunas; com mais atributos seria preciso criar a base com CALENDAR e adicionar o resto via Power Query."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2301,12 +2301,12 @@ export const questions = [
   },
   {
     "id": "q93_pl300",
-    "text": "No Power Query, qual é o procedimento correto para utilizar o recurso \"Pivot Column\" com o objetivo de transformar uma tabela onde cada linha representa um mês em uma tabela onde cada mês é uma coluna distinta?",
+    "text": "No Power Query, como usar \"Pivot Column\" para transformar uma tabela com uma linha por mês em uma onde cada mês é uma coluna?",
     "options": [
-      "Selecionar a coluna que contém os nomes dos meses (ex: \"Mês\"), ir em Transformar > Coluna Dinâmica; no diálogo, selecionar a coluna de valores (ex: \"Vendas\") e a função de agregação (Soma, Média, etc.); o Power Query cria uma coluna para cada valor distinto da coluna de meses, preenchendo com o valor agregado correspondente — esta é a operação inversa do Unpivot.",
-      "O recurso Coluna Dinâmica no Power Query cria colunas dinamicamente baseadas nos valores únicos da coluna selecionada. Se novos meses forem adicionados à fonte de dados, o Power Query automaticamente cria novas colunas no próximo refresh sem necessidade de reconfiguração; no entanto, colunas para meses que não existem mais nas últimas execuções são removidas automaticamente.",
-      "A Coluna Dinâmica está disponível apenas quando os dados de origem estão em formato de tabela estritamente normalizada com exatamente duas colunas (chave e valor); tentar usar Coluna Dinâmica em tabelas com mais de duas colunas gera erro e requer que as colunas adicionais sejam removidas antes da operação de pivot.",
-      "A operação Coluna Dinâmica no Power Query é equivalente ao Transpor — ambos rotacionam os dados trocando linhas por colunas; a diferença é que Transpor preserva a estrutura original enquanto Coluna Dinâmica agrega os valores usando a função de agregação selecionada antes de transpor."
+      "Selecionar a coluna de meses, Transformar > Coluna Dinâmica; escolher coluna de valores e agregação;",
+      "Coluna Dinâmica criaria colunas dinamicamente; novos meses gerariam novas colunas automaticamente no refresh; meses ausentes seriam removidos automaticamente.",
+      "Coluna Dinâmica só funcionaria com tabela estritamente normalizada de duas colunas; mais colunas gerariam erro, exigindo remoção antes do pivot.",
+      "Coluna Dinâmica seria equivalente a Transpor — ambos trocam linhas por colunas; a diferença seria Transpor preservar a estrutura, Dinâmica agregar antes."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2326,12 +2326,12 @@ export const questions = [
   },
   {
     "id": "q94_pl300",
-    "text": "Como aplicar formatação condicional nas barras de um gráfico de colunas no Power BI para colorir cada barra de acordo com o desempenho em relação à meta?",
+    "text": "Como colorir dinamicamente cada barra de um gráfico de colunas no Power BI, com base em uma medida DAX que compara vendas com a meta (verde se atingida, vermelho se não)?",
     "options": [
-      "Selecionar o visual de gráfico de colunas, ir em \"Formatar seu visual\" > \"Colunas\" > \"Cores\" > clicar no botão \"fx\" (Formatação condicional). Na caixa de diálogo, escolher \"Valor do campo\" e apontar para uma medida DAX que retorna a cor em hexadecimal baseada na condição (ex: IF([Vendas] >= [Meta], \"#00B050\", \"#FF0000\")). Cada barra do gráfico receberá a cor retornada pela medida no contexto daquele ponto de dados.",
-      "A formatação condicional de cores em gráficos de colunas só está disponível via opção \"Regras\" (regras numéricas) e não suporta \"Valor do campo\" com medidas DAX. Para aplicar cores baseadas em comparação com meta dinâmica, é necessário criar uma coluna calculada no modelo com a cor pré-calculada e usá-la no campo \"Legenda\" do gráfico.",
-      "Para colorir barras individualmente por condição em um gráfico de colunas, é necessário usar um visual customizado do AppSource como \"Charticulator\" ou \"Deneb\". O visual nativo de gráfico de colunas do Power BI aplica apenas uma cor por série ou escala de gradiente sem suporte a lógica condicional por ponto de dados.",
-      "A formatação condicional em gráficos de colunas funciona apenas quando a dimensão do eixo X é uma coluna de texto. Para eixos com datas ou números, o Power BI não consegue avaliar a medida de cor no contexto correto e aplica a cor padrão do tema, ignorando a formatação condicional configurada."
+      "\"Formatar visual\" > \"Colunas\" > \"Cores\" > \"fx\"; escolher \"Valor do campo\" apontando para medida DAX retornando hex.",
+      "Cores condicionais só estariam disponíveis via \"Regras\" numéricas, não \"Valor do campo\" com DAX; exigiria coluna calculada usada no campo \"Legenda\".",
+      "Colorir barras individualmente exigiria visual customizado (Charticulator/Deneb); o nativo só aplicaria uma cor por série ou gradiente.",
+      "Funcionaria só com eixo X de texto; com datas/números o Power BI não avaliaria a medida no contexto correto, ignorando a formatação."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2354,9 +2354,9 @@ export const questions = [
     "text": "Qual é o propósito da função EARLIER no DAX e em quais situações ela é necessária em colunas calculadas?",
     "options": [
       "EARLIER(coluna) acessa o valor de uma coluna no contexto de linha externo quando há contextos de linha aninhados, como em colunas calculadas que usam iteradores (FILTER, SUMX) para comparar o valor da linha atual (do contexto externo) com valores dentro do iterador.",
-      "EARLIER é uma função de inteligência de tempo que recupera o valor de uma métrica do período anterior, similar ao LAG do SQL, útil para análises de tendências e comparações de séries temporais.",
-      "EARLIER é usada em medidas DAX para referenciar colunas calculadas criadas previamente, garantindo que o DAX não confunda a coluna original com uma referência circular dentro da medida.",
-      "EARLIER foi substituída pela função VAR em versões recentes do DAX, que oferece uma forma mais legível de capturar o contexto externo. Seu uso é considerado legado e desaconselhado em novos desenvolvimentos."
+      "Seria função de time intelligence, recuperando valor do período anterior, como LAG do SQL, útil para tendências e séries temporais.",
+      "Seria usada em medidas para referenciar colunas calculadas previamente, evitando que o DAX confunda a coluna com referência circular.",
+      "Teria sido substituída por VAR nas versões recentes, mais legível para capturar o contexto externo; uso considerado legado."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -2379,9 +2379,9 @@ export const questions = [
     "text": "No contexto do Power BI Premium e Fabric, o que é o XMLA Endpoint e quais ferramentas e operações avançadas ele habilita para a gestão e desenvolvimento de modelos semânticos?",
     "options": [
       "XMLA Endpoint é um protocolo de conectividade que expõe o modelo semântico do Power BI como um Analysis Services compatível, permitindo: conexão via SQL Server Management Studio (SSMS) e Tabular Editor para edição avançada do modelo, DAX Studio para análise e otimização de queries DAX, ALM Toolkit para comparação e deploy de modelos, e aplicações externas via ADOMD.NET/AMO; suporta operações de leitura (todos os planos Premium/Fabric) e escrita (Premium P1+ e Fabric).",
-      "XMLA Endpoint é uma API REST exclusiva do Power BI Fabric que permite executar queries DAX e M remotamente via HTTP; difere do endpoint padrão de dataset pois suporta queries ad-hoc sem necessidade de criar relatórios, sendo usado principalmente por ferramentas de BI de terceiros para consumir dados do Power BI.",
-      "XMLA Endpoint no Power BI Pro permite que desenvolvedores publiquem modelos criados no Visual Studio (SSDT) diretamente no workspace sem usar o Power BI Desktop; é a única forma de fazer deploy de modelos tabulares complexos que excedem as capacidades do Power BI Desktop para o serviço de nuvem.",
-      "XMLA Endpoint habilita refresh programático de datasets via linha de comando — é a única forma de disparar refresh de datasets grandes que excedem o timeout da API REST padrão do Power BI; disponível em todos os planos Pro e Premium sem configuração adicional no workspace."
+      "Seria API REST exclusiva do Fabric para queries DAX/M via HTTP; diferiria do endpoint padrão por suportar ad-hoc sem criar relatórios.",
+      "No Pro permitiria publicar modelos do Visual Studio (SSDT) direto no workspace sem o Desktop; única forma de deploy de modelos complexos.",
+      "Habilitaria refresh programático via linha de comando, única forma de disparar refresh que excede o timeout padrão; disponível em Pro e Premium."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -2404,9 +2404,9 @@ export const questions = [
     "text": "No Power Query, como tratar corretamente uma coluna de datas importada de um arquivo CSV americano (formato MM/DD/YYYY) em um computador configurado com localidade brasileira (DD/MM/YYYY)?",
     "options": [
       "Selecionar a coluna, clicar com o botão direito em \"Alterar Tipo\" > \"Usando Localidade\"; selecionar o tipo \"Data\" e a localidade \"Inglês (Estados Unidos)\". O Power Query interpretará os valores usando a localidade americana (MM/DD/YYYY), convertendo-os corretamente para o tipo \"Data\" do Power BI, independentemente da configuração regional do computador.",
-      "Para tratar datas no formato americano em um computador brasileiro, alterar temporariamente a configuração regional do Windows para \"Inglês (Estados Unidos)\" antes de abrir o arquivo CSV no Power Query; após a importação, restaurar a configuração para \"Português (Brasil)\".",
-      "O Power Query detecta automaticamente o formato de data de cada arquivo baseado no padrão dos valores; se os valores tiverem meses acima de 12 na segunda posição (ex: 01/15/2024), o Power Query identifica automaticamente o formato americano sem necessidade de especificar a localidade manualmente.",
-      "Criar uma coluna personalizada com a fórmula M \"= Date.FromText([DataColuna], [Format=\"MM/dd/yyyy\"])\" é a única forma confiável de converter datas de formato americano; a opção \"Usando Localidade\" apenas altera a exibição visual da data sem mudar a interpretação real dos valores numéricos."
+      "Seria preciso alterar temporariamente a config regional do Windows para \"Inglês (EUA)\" antes de abrir o CSV, restaurando depois.",
+      "O Power Query detectaria automaticamente o formato pelo padrão dos valores (ex: mês>12 na 2ª posição), sem precisar especificar localidade.",
+      "Coluna M com Date.FromText([Coluna], [Format=\"MM/dd/yyyy\"]) seria a única forma confiável;"
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2429,9 +2429,9 @@ export const questions = [
     "text": "Quais são os passos corretos para publicar um relatório do Power BI Desktop no Power BI Service e o que ocorre com os componentes do arquivo durante esse processo?",
     "options": [
       "No Power BI Desktop, o processo envolve salvar o arquivo .pbix e, em seguida, clicar em 'Home' > 'Publish'. Após selecionar o workspace de destino, o Power BI Desktop envia o arquivo para o Service, criando ou atualizando dois itens distintos: um Dataset (contendo o modelo de dados, tabelas, relacionamentos e medidas DAX) e um Report (com as páginas e visuais). Se já existirem itens com o mesmo nome, o sistema perguntará se deseja substituí-los.",
-      "Ao publicar no Power BI Service, o arquivo .pbix inteiro é armazenado na nuvem como um único item, onde o dataset e o relatório são componentes inseparáveis. Para criar múltiplos relatórios sobre o mesmo dataset, é necessário publicar o arquivo .pbix várias vezes com nomes diferentes.",
-      "A publicação no Power BI Service exige que o computador esteja conectado a um gateway de dados antes de iniciar o processo. Sem um gateway configurado, o Power BI Desktop não consegue autenticar com o Service, e o botão 'Publish' permanece desabilitado nas configurações padrão.",
-      "Ao publicar, o Power BI Service cria automaticamente um dashboard que inclui todos os visuais do relatório fixados. O relatório publicado e o dashboard gerado automaticamente são sincronizados, de modo que qualquer alteração no relatório é refletida imediatamente no dashboard, sem a necessidade de recriar os tiles manualmente."
+      "O .pbix inteiro seria armazenado como item único, com dataset e relatório inseparáveis; múltiplos relatórios exigiriam publicar várias vezes.",
+      "Exigiria gateway de dados conectado antes de iniciar; sem gateway, o botão 'Publish' ficaria desabilitado.",
+      "Criaria automaticamente um dashboard com todos os visuais fixados, sincronizado com o relatório sem recriar tiles manualmente."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -2451,12 +2451,12 @@ export const questions = [
   },
   {
     "id": "q99_pl300",
-    "text": "Você precisa compartilhar um relatório do Power BI com usuários externos à sua organização, como fornecedores, clientes ou parceiros, garantindo a segurança dos dados e o controle de acesso. Qual é a abordagem mais segura e recomendada para realizar esse compartilhamento?",
+    "text": "Como compartilhar um relatório do Power BI com usuários externos (fornecedores, clientes), garantindo segurança e controle de acesso?",
     "options": [
-      "Adicionar o usuário externo como convidado (Guest) no Azure AD (Microsoft Entra ID) do seu tenant via Azure AD B2B Collaboration. Em seguida, compartilhar o relatório diretamente com o email do usuário convidado ou adicioná-lo a um grupo de segurança com acesso ao workspace/App. O usuário externo acessará o conteúdo via link, autenticando-se com sua própria conta de origem, e o administrador deve ter habilitado a opção \"Share content with external users\" no Admin Portal do Power BI.",
-      "Utilizar a funcionalidade \"Publicar na Web\" (Publish to Web), pois ela gera um link público que não requer login, sendo a única forma segura para dados não sensíveis e recomendada pela Microsoft para evitar configurações complexas de Azure AD B2B.",
-      "O compartilhamento com usuários externos não é suportado pelo Power BI Pro, exigindo uma licença Power BI Premium. No Power BI Pro, o compartilhamento é restrito a usuários do mesmo tenant, sendo necessário exportar o relatório para PDF ou PowerPoint e enviá-lo por e-mail para externos.",
-      "Criar uma conta de usuário corporativa temporária no tenant Azure AD para cada usuário externo e compartilhar o relatório com essa conta, pois contas de convidado (guest) do Azure AD B2B não são suportadas pelo Power BI Service para acesso a relatórios interativos com filtros e drill-through."
+      "Adicionar como convidado (Guest) via Azure AD B2B Collaboration; compartilhar com o email do convidado ou grupo de segurança;",
+      "Usar \"Publicar na Web\" (Publish to Web), que gera link público sem login — única forma segura para dados não sensíveis recomendada pela Microsoft.",
+      "Compartilhamento externo não seria suportado no Pro, exigindo Premium; no Pro seria preciso exportar para PDF/PPT e enviar por e-mail.",
+      "Criar conta corporativa temporária para cada externo, pois contas guest do Azure AD B2B não suportariam relatórios interativos."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2476,12 +2476,12 @@ export const questions = [
   },
   {
     "id": "q100_pl300",
-    "text": "Você está desenvolvendo um relatório no Power BI Desktop e percebe que algumas páginas e visuais estão demorando muito para carregar, impactando a experiência do usuário. Qual é a sequência correta de passos para utilizar o Performance Analyzer no Power BI Desktop para identificar os visuais lentos e otimizar o desempenho do relatório?",
+    "text": "Páginas e visuais demoram para carregar no Power BI Desktop. Qual a sequência correta com o Performance Analyzer para identificar e otimizar visuais lentos?",
     "options": [
-      "Acessar a guia 'Exibir' (View) > 'Analisador de Desempenho' (Performance Analyzer) > 'Iniciar Gravação' (Start Recording); interagir com os visuais da página para registrar as ações; analisar as métricas de 'Tempo de Consulta DAX', 'Tempo de Exibição Visual' e 'Outros' para cada visual; e, se necessário, exportar os resultados para análise aprofundada no DAX Studio.",
-      "O Performance Analyzer é uma ferramenta exclusiva do Power BI Service, disponível apenas em workspaces Premium. No Power BI Desktop, a análise de desempenho é realizada ativando o rastreamento de diagnóstico via 'Arquivo' > 'Opções e Configurações' > 'Opções' > 'Diagnóstico'.",
-      "O Performance Analyzer mede apenas o tempo de renderização visual (Visual display time). O tempo de execução das consultas DAX não é capturado por esta ferramenta no Desktop, exigindo o uso do DAX Studio para qualquer análise de performance de medidas.",
-      "Para otimizar o desempenho, deve-se aumentar o número de visuais por página para distribuir a carga de processamento. Páginas com muitos visuais pequenos são inerentemente mais rápidas do que páginas com poucos visuais grandes, devido à paralelização das consultas."
+      "View > Performance Analyzer > 'Start Recording'; interagir com os visuais; analisar 'Tempo de Consulta DAX', 'Tempo de Exibição Visual' e 'Outros';",
+      "Seria exclusivo do Service em workspaces Premium; no Desktop, análise seria via 'Opções' > 'Diagnóstico'.",
+      "Mediria só o tempo de renderização visual; tempo de query DAX não seria capturado, exigindo DAX Studio para qualquer análise.",
+      "Otimizar exigiria aumentar visuais por página para distribuir carga; mais visuais pequenos seriam sempre mais rápidos que poucos grandes."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2503,10 +2503,10 @@ export const questions = [
     "id": "q101_pl300",
     "text": "No Power Query, ao importar dados de uma API REST que retorna JSON com objetos aninhados, como expandir colunas do tipo Record e List para obter os valores individuais?",
     "options": [
-      "Colunas do tipo Record (objeto JSON aninhado) são expandidas clicando no ícone de expansão (setas duplas) no cabeçalho da coluna e selecionando os campos desejados — isso cria uma coluna separada para cada campo selecionado. Colunas do tipo List (array JSON) são expandidas via Transformar > Expandir para Novas Linhas, que cria uma linha para cada elemento da lista, ou Convert to Table para manter como tabela aninhada.",
-      "Colunas JSON aninhadas no Power Query são expandidas automaticamente pelo conector REST durante a importação — o Power BI detecta a estrutura do JSON e cria automaticamente as colunas planas sem necessidade de expansão manual; a expansão manual é necessária apenas para JSONs com estrutura irregular ou campos opcionais.",
-      "Para expandir objetos JSON aninhados no Power Query é necessário usar a função M Json.Document([Coluna]) em uma Coluna Personalizada que converte cada célula de texto JSON em um Record navegável; sem essa função, o Power Query não reconhece o conteúdo como JSON estruturado.",
-      "Colunas do tipo Record e List no Power Query só podem ser expandidas em até dois níveis de profundidade; para JSONs com aninhamento mais profundo é necessário usar Python ou R no Power Query para achatar a estrutura antes de retornar ao fluxo padrão de transformação."
+      "Record: ícone de expansão (setas duplas) no cabeçalho, selecionar campos — cria coluna por campo.",
+      "JSON aninhado seria expandido automaticamente pelo conector REST na importação; expansão manual só seria necessária para estrutura irregular.",
+      "Exigiria função M Json.Document([Coluna]) em Coluna Personalizada para converter texto JSON em Record navegável; sem ela não reconheceria JSON.",
+      "Record e List só poderiam ser expandidos até 2 níveis; aninhamento mais profundo exigiria Python/R para achatar antes."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2529,9 +2529,9 @@ export const questions = [
     "text": "No DAX, qual é a principal diferença entre as funções ALL() e ALLSELECTED() em relação à remoção de filtros, e em que cenário ALLSELECTED() é a escolha mais adequada para o cálculo de percentuais?",
     "options": [
       "A função ALL(Tabela) remove todos os filtros aplicados à tabela, incluindo aqueles de slicers e outros filtros externos, resultando em um denominador que representa o total absoluto do conjunto de dados. Já ALLSELECTED(Tabela) remove apenas os filtros do contexto de consulta interno do visual, preservando os filtros externos (slicers, filtros de página e de relatório), o que a torna ideal para calcular percentuais relativos à seleção atual do usuário.",
-      "ALL e ALLSELECTED são idênticos quando não há slicers na página; a diferença só se manifesta quando slicers estão ativos. Em páginas sem slicers, ambas as funções removem exatamente os mesmos filtros e retornam o mesmo resultado para qualquer medida que as utilize como argumento de CALCULATE.",
-      "ALLSELECTED preserva todos os filtros do contexto atual sem remover nenhum, sendo equivalente a não usar nenhuma função de ALL. Seu uso em CALCULATE não modifica o contexto de filtro e serve apenas como documentação explícita de que o desenvolvedor deseja manter os filtros atuais.",
-      "ALLSELECTED só funciona corretamente em visuais de Tabela e Matriz. Em gráficos de barras e colunas, o comportamento de ALLSELECTED é equivalente ao ALL, pois gráficos não têm contexto de filtro interno distinto do contexto externo dos slicers."
+      "ALL e ALLSELECTED seriam idênticos sem slicers na página; a diferença só apareceria com slicers ativos.",
+      "ALLSELECTED preservaria todos os filtros sem remover nada, equivalente a não usar ALL; serviria só como documentação explícita.",
+      "ALLSELECTED só funcionaria em Tabela/Matriz; em gráficos de barras seria equivalente ao ALL, sem contexto interno distinto."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -2554,9 +2554,9 @@ export const questions = [
     "text": "Qual é a principal diferença entre os visuais de Tabela (Table) e Matriz (Matrix) no Power BI, e em que cenários cada um é mais adequado para a análise de dados?",
     "options": [
       "Tabela exibe dados em formato plano com linhas e colunas sem agrupamento — adequada para listas detalhadas de registros individuais; Matriz suporta agrupamento de linhas e colunas em hierarquias com subtotais automáticos, drill-down e expansão de níveis — adequada para análises cross-tab (dimensão nas linhas × dimensão nas colunas × métricas nos valores), similar a uma Tabela Dinâmica do Excel.",
-      "Tabela e Matriz são equivalentes funcionalmente — a Matriz é apenas uma versão visualmente melhorada da Tabela com opções adicionais de formatação; qualquer análise feita em uma Tabela pode ser replicada em uma Matriz com o mesmo resultado usando configurações de formatação avançadas.",
-      "A principal diferença é de performance — a Tabela processa dados mais rapidamente que a Matriz para grandes volumes pois não calcula subtotais; para datasets com mais de 100.000 linhas, a Microsoft recomenda sempre usar Tabela em vez de Matriz para evitar timeout de query no Power BI Service.",
-      "Matriz no Power BI suporta apenas duas dimensões (uma no eixo de linhas e uma no eixo de colunas); para análises com mais de duas dimensões é necessário usar o visual de Tabela Dinâmica disponível no AppSource ou exportar os dados para o Excel e usar Tabelas Dinâmicas nativas."
+      "Seriam equivalentes — Matriz seria só versão melhorada visualmente da Tabela;",
+      "A diferença seria de performance — Tabela processaria mais rápido por não calcular subtotais; Microsoft recomendaria Tabela acima de 100k linhas.",
+      "Matriz suportaria só duas dimensões; mais de duas exigiria Tabela Dinâmica do AppSource ou exportar para Excel."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -2579,9 +2579,9 @@ export const questions = [
     "text": "No contexto do DAX (Data Analysis Expressions) no Power BI, qual é a principal funcionalidade da função TREATAS e em que cenário ela é tipicamente utilizada para simular relacionamentos virtuais entre tabelas?",
     "options": [
       "TREATAS(tabela_expressão, coluna1, coluna2, ...) aplica os valores de uma expressão de tabela como filtro em colunas especificadas, simulando um relacionamento que não existe fisicamente no modelo; útil para criar relacionamentos virtuais entre tabelas sem chave física comum, ou para aplicar filtros de uma tabela em colunas de outra sem criar relacionamento permanente no modelo.",
-      "TREATAS é uma função de transformação de dados que converte o tipo de dados de uma coluna para outro tipo — o nome vem de \"Treat As\", permitindo tratar uma coluna de texto como numérica ou uma coluna de data como texto em expressões DAX sem alterar o modelo físico.",
+      "Seria função de transformação que converteria o tipo de dados de uma coluna — \"Treat As\" permitiria tratar texto como.",
       "TREATAS é equivalente ao USERELATIONSHIP mas para relacionamentos muitos-para-muitos — enquanto USERELATIONSHIP ativa relacionamentos inativos existentes no modelo, TREATAS cria dinamicamente relacionamentos M:N temporários que não podem ser definidos permanentemente no diagrama de relacionamentos.",
-      "TREATAS está disponível apenas em modelos DirectQuery pois requer que as colunas referenciadas existam na mesma fonte de dados; em modelos Import, usar LOOKUPVALUE como alternativa para criar a mesma funcionalidade de relacionamento virtual entre tabelas de fontes diferentes."
+      "Estaria disponível só em DirectQuery, exigindo colunas na mesma fonte; em Import usaria LOOKUPVALUE como alternativa virtual."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -2601,12 +2601,12 @@ export const questions = [
   },
   {
     "id": "q105_pl300",
-    "text": "Como você utilizaria o conector Web no Power Query do Power BI Desktop para importar dados de uma tabela HTML presente em um site público?",
+    "text": "Como usar o conector Web no Power Query para importar dados de uma tabela HTML num site público?",
     "options": [
-      "Acessar 'Obter Dados' (Get Data) > 'Web'; inserir a URL do site desejado; o Power Query analisará o HTML da página e listará as tabelas detectadas, permitindo que você selecione a tabela específica; os dados serão importados como uma tabela com colunas identificadas automaticamente. Para sites que exigem autenticação ou possuem conteúdo dinâmico (gerado por JavaScript), pode ser necessário explorar as opções avançadas de autenticação ou utilizar a função Web.BrowserContents para capturar o HTML renderizado.",
-      "O conector Web no Power Query é limitado à importação de arquivos estruturados (como CSV, JSON, XML, Excel) disponíveis via URL, não sendo capaz de realizar web scraping de páginas HTML. Para extrair tabelas de páginas web, seria indispensável o uso de um script Python no Power Query, empregando bibliotecas como BeautifulSoup.",
-      "O conector Web importa exclusivamente a primeira tabela HTML encontrada na página. Para importar múltiplas tabelas de um mesmo site, é preciso criar queries separadas para a mesma URL e, em cada uma, usar a opção 'Table Index' para especificar qual tabela deve ser carregada.",
-      "A funcionalidade de web scraping via conector Web do Power BI exige que o site alvo possua um arquivo robots.txt que explicitamente permita o acesso a crawlers. O Power BI Desktop automaticamente verifica este arquivo antes da importação e bloqueia o acesso a sites que proíbem a coleta automatizada de dados em suas políticas."
+      "'Obter Dados' > 'Web'; inserir URL; o Power Query lista as tabelas detectadas no HTML para seleção; conteúdo dinâmico (JS) pode exigir Web.BrowserContents.",
+      "O conector Web seria limitado a arquivos estruturados (CSV, JSON, XML) via URL, sem fazer scraping de HTML; exigiria script Python com BeautifulSoup.",
+      "Importaria só a primeira tabela HTML da página; múltiplas tabelas exigiriam queries separadas usando 'Table Index' em cada uma.",
+      "Exigiria que o site tivesse robots.txt permitindo crawlers; o Desktop verificaria isso automaticamente e bloquearia sites que proíbem coleta."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2628,10 +2628,10 @@ export const questions = [
     "id": "q106_pl300",
     "text": "Como otimizar o visual Q&A (Perguntas e Respostas) no Power BI para que os usuários obtenham respostas mais precisas em português?",
     "options": [
-      "Em Modeling > Q&A Setup (ou via visual Q&A > configurações), adicionar sinônimos para nomes de tabelas e colunas em português (ex: \"vendas\", \"faturamento\", \"receita\" como sinônimos para a tabela Fatos_Vendas); adicionar perguntas sugeridas que aparecem como exemplos; revisar e corrigir interpretações incorretas que o Q&A registra automaticamente quando usuários reformulam perguntas; marcar a tabela de datas como Date Table para que consultas temporais funcionem.",
-      "O Q&A Visual no Power BI só funciona em inglês — para usar em português é necessário instalar o pacote de idioma Power BI Portuguese via Microsoft Store e configurar o idioma do tenant para pt-BR no Admin Portal; sem essa configuração, perguntas em português retornam erro de idioma não suportado.",
-      "Para otimizar o Q&A em português, criar medidas DAX com nomes em português e usar underscore em vez de espaços (ex: Total_Vendas_Brasil); o Q&A usa exclusivamente os nomes exatos das medidas e colunas como vocabulário — sinônimos não são suportados e qualquer variação de nomenclatura retorna \"não entendi a pergunta\".",
-      "Q&A Visual requer que todos os nomes de tabelas e colunas do modelo sejam em inglês para funcionar corretamente; o mecanismo NLP (Natural Language Processing) do Power BI foi treinado exclusivamente com terminologia em inglês e não reconhece entidades de negócio em outros idiomas sem tradução prévia."
+      "Em Modeling > Q&A Setup, adicionar sinônimos em português (\"vendas\", \"faturamento\" para Fatos_Vendas); adicionar perguntas sugeridas;",
+      "Q&A funcionaria só em inglês; usar em português exigiria instalar pacote de idioma e configurar pt-BR no Admin Portal.",
+      "Exigiria medidas DAX com nomes em português e underscore; Q&A usaria só nomes exatos como vocabulário, sem suporte a sinônimos.",
+      "Exigiria todos os nomes em inglês; o NLP teria sido treinado só em inglês, sem reconhecer entidades em outros idiomas."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2653,10 +2653,10 @@ export const questions = [
     "id": "q107_pl300",
     "text": "Qual é a principal diferença entre uma Conexão Live (Live Connection) com um modelo publicado no Power BI Service e o modo Import para a criação de novos relatórios no Power BI Desktop?",
     "options": [
-      "Live Connection estabelece uma conexão direta com um modelo de dados já publicado no Power BI Service, sem armazenar os dados no arquivo .pbix local, atuando como uma camada de visualização. Ele não permite a criação de novas tabelas, colunas calculadas ou modificação de relacionamentos no relatório. O modo Import, por outro lado, carrega os dados diretamente para o arquivo .pbix, permitindo modelagem completa e criando um dataset independente.",
-      "Ambos os modos, Live Connection e Import, oferecem as mesmas capacidades de modelagem de dados, incluindo a criação de novas tabelas, colunas calculadas e medidas DAX. A principal diferença é que, no Live Connection, as alterações são salvas diretamente no dataset do Power BI Service, enquanto no Import, são salvas no arquivo .pbix local.",
-      "Live Connection exige que o dataset de origem esteja hospedado em uma Capacidade Premium do Power BI para funcionar, impossibilitando a criação de relatórios Live Connection sobre datasets em workspaces Pro. O modo Import é a única opção para datasets em workspaces Pro.",
-      "No Live Connection, os dados são armazenados em cache no arquivo .pbix local para melhorar o desempenho da visualização, mas a atualização dos dados é sempre manual. No modo Import, os dados são sempre atualizados automaticamente via gateway de dados."
+      "Live Connection conecta direto a um modelo já publicado, sem armazenar dados no .pbix, como camada de visualização — sem criar.",
+      "Ambos ofereceriam as mesmas capacidades de modelagem; a diferença seria só onde salvar — Live no dataset do.",
+      "Live Connection exigiria Capacidade Premium na origem, impossibilitando uso em workspaces Pro; Import seria a única opção no Pro.",
+      "Live Connection armazenaria cache local no .pbix com atualização manual; Import atualizaria sempre automaticamente via gateway."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2678,10 +2678,10 @@ export const questions = [
     "id": "q108_pl300",
     "text": "Qual das seguintes descrições melhor explica o funcionamento da função GENERATE no DAX para criar tabelas calculadas que combinam linhas de duas tabelas com lógica customizada, e como ela se diferencia de GENERATEALL?",
     "options": [
-      "A função GENERATE(tabela1, tabela2_expressão) itera sobre cada linha de tabela1 e, para cada linha, avalia a tabela2_expressão no contexto de linha correspondente. O resultado é a combinação de cada linha de tabela1 com todas as linhas geradas pela tabela2_expressão. GENERATEALL funciona de forma similar, mas inclui as linhas de tabela1 mesmo quando a tabela2_expressão retorna uma tabela vazia para aquela linha, agindo como um LEFT JOIN.",
-      "A função GENERATE é equivalente a CROSSJOIN no DAX, pois ambas criam o produto cartesiano completo entre duas tabelas sem qualquer condição de filtragem. A única diferença é que GENERATE aceita expressões de tabela dinâmicas, enquanto CROSSJOIN exige tabelas físicas do modelo como argumentos.",
-      "A função GENERATE é uma função de streaming otimizada para processar tabelas muito grandes de forma incremental, sem carregar todos os dados na memória. Por isso, é a função recomendada para tabelas calculadas com mais de 10 milhões de linhas, onde CROSSJOIN poderia causar estouro de memória no mecanismo VertiPaq.",
-      "A função GENERATE só pode ser utilizada em medidas DAX e não é suportada em definições de tabelas calculadas. Para criar tabelas calculadas com combinações customizadas de linhas, deve-se usar SUMMARIZE ou UNION como alternativas, pois estas funcionam tanto em medidas quanto em tabelas calculadas."
+      "GENERATE(tabela1, tabela2_expr) itera tabela1, avaliando tabela2_expr no contexto de cada linha, combinando resultados (como INNER JOIN).",
+      "GENERATE seria equivalente a CROSSJOIN, criando produto cartesiano sem filtro;",
+      "GENERATE seria função de streaming otimizada para tabelas enormes sem carregar tudo na memória; recomendada acima de 10M linhas.",
+      "GENERATE só funcionaria em medidas, não em tabelas calculadas; para isso seria preciso usar SUMMARIZE ou UNION."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -2703,10 +2703,10 @@ export const questions = [
     "id": "q109_pl300",
     "text": "Como o visual Smart Narrative (Narrativa Inteligente) funciona no Power BI e como personalizar o texto gerado automaticamente?",
     "options": [
-      "Smart Narrative analisa os dados e visuais da página e gera automaticamente um resumo textual em linguagem natural descrevendo tendências, valores máximos/mínimos e insights principais; o texto é dinâmico — atualiza quando filtros são aplicados; pode ser personalizado clicando em \"+Value\" para inserir medidas DAX inline no texto, criando narrativas semi-automáticas que combinam texto fixo com valores calculados dinamicamente.",
-      "Smart Narrative gera texto apenas em inglês — para relatórios em português é necessário traduzir manualmente todo o texto gerado usando o editor de narrativa; o visual mantém os valores numéricos calculados automaticamente mas o texto descritivo não tem suporte a português sem edição manual completa.",
-      "Smart Narrative é um visual estático — o texto é gerado uma única vez no momento da criação e não é atualizado quando os dados são filtrados ou quando o dataset é atualizado; para narrativas dinâmicas que reagem a filtros é necessário usar medidas DAX com CONCATENATE e um visual de Card.",
-      "Smart Narrative requer que todos os visuais da página estejam selecionados antes de inserir o visual; o Power BI analisa apenas os visuais que estavam selecionados no momento da inserção — adicionar novos visuais após a criação da narrativa não atualiza o texto gerado automaticamente."
+      "Analisa dados/visuais da página e gera resumo em linguagem natural (tendências, máx/mín, insights); dinâmico, atualiza com filtros;",
+      "Geraria texto só em inglês; português exigiria tradução manual completa do texto, mesmo com valores numéricos calculados automaticamente.",
+      "Seria visual estático, gerado uma vez e não atualizado com filtros/refresh; dinâmico exigiria DAX com CONCATENATE e visual Card.",
+      "Exigiria todos os visuais selecionados antes de inserir; novos visuais após a criação não atualizariam o texto automaticamente."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -2729,8 +2729,8 @@ export const questions = [
     "text": "Um conjunto de dados (dataset) publicado no Power BI Service falha ao realizar um refresh agendado, apresentando o erro 'DataSource.Error: The server was not found or was not accessible'. Qual é a abordagem sistemática mais eficaz para diagnosticar e resolver este problema?",
     "options": [
       "Erro de servidor não encontrado indica que o arquivo .pbix foi publicado de um computador sem acesso ao servidor — republicar o relatório de um computador na mesma rede do servidor SQL resolve o problema permanentemente, pois o Power BI Service memoriza a rota de rede usada na publicação.",
-      "Verificar no Power BI Service se o gateway de dados está online (Dataset > Settings > Gateway Connection — status verde/vermelho); confirmar que o servidor SQL Server está acessível a partir da máquina do gateway (testar conexão via SSMS no servidor do gateway); verificar se as credenciais da fonte de dados estão atualizadas no Service (Dataset > Settings > Data Source Credentials); e confirmar que o nome do servidor no Power Query corresponde ao que o gateway consegue resolver (nome de rede, não 'localhost').",
-      "Esse erro é causado por firewall do Power BI Service bloqueando a conexão com servidores on-premises — a solução é abrir as portas 1433 (SQL Server) e 443 (HTTPS) no firewall do servidor para os IPs do datacenter do Power BI Service publicados pela Microsoft na lista de IPs do Azure.",
+      "Verificar gateway online (Dataset > Settings > Gateway Connection); testar conexão SQL via SSMS no servidor do gateway;",
+      "Seria causado por firewall do Service bloqueando on-premises;",
       "Erros de conexão no refresh do Service são sempre relacionados a credenciais expiradas — inserir novamente as credenciais em Dataset > Settings > Data Source Credentials resolve qualquer erro de conectividade independente da mensagem de erro exibida; o Power BI usa mensagens de erro genéricas que não refletem a causa real do problema."
     ],
     "correctAnswer": 1,
@@ -2751,12 +2751,12 @@ export const questions = [
   },
   {
     "id": "q111_pl300",
-    "text": "Como implementar corretamente um relacionamento Muitos-para-Muitos (M:M) entre uma tabela de Vendas e uma tabela de Territórios no Power BI, considerando que cada venda pode estar associada a múltiplos territórios e cada território pode ter múltiplas vendas?",
+    "text": "Como implementar um relacionamento Muitos-para-Muitos entre Vendas e Territórios no Power BI, com vendas em múltiplos territórios?",
     "options": [
       "Criar uma tabela ponte (bridge table) com as chaves primárias das tabelas de Vendas e Territórios, estabelecendo relacionamentos 1:* de Vendas para a tabela ponte e de Territórios para a tabela ponte. Alternativamente, utilizar o relacionamento nativo *:* entre as tabelas, configurando a direção de filtro cruzado como 'Ambos' (Both) e validando cuidadosamente o comportamento das agregações.",
-      "Relacionamentos M:M no Power BI Desktop são criados automaticamente quando o Power BI detecta chaves com valores repetidos em ambas as tabelas durante a criação do relacionamento; não é necessário criar tabela ponte, pois o Power BI gerencia internamente a resolução da ambiguidade de M:M sem configuração adicional.",
-      "Relacionamentos Muitos-para-Muitos não são suportados em modelos Import do Power BI, apenas em DirectQuery onde o banco de dados subjacente resolve o join; para modelos Import com necessidade de M:M, a única solução válida é desnormalizar os dados no Power Query eliminando a relação M:M antes do carregamento.",
-      "Para relacionamentos M:M no Power BI, deve-se usar a função DAX 'INTERSECT' para calcular manualmente a interseção das duas tabelas em cada medida; relacionamentos nativos M:M no Power BI causam duplicação de dados no VertiPaq e devem ser evitados em favor de cálculos explícitos com INTERSECT nas medidas."
+      "M:M seria criado automaticamente ao detectar chaves repetidas em ambas; sem precisar de tabela ponte, resolvido internamente pelo Power BI.",
+      "M:M não seria suportado em Import, só em DirectQuery; em Import a única solução seria desnormalizar no Power Query antes de carregar.",
+      "Exigiria a função DAX 'INTERSECT' para calcular a interseção manualmente em cada medida; M:M nativo causaria duplicação no VertiPaq."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -2776,12 +2776,12 @@ export const questions = [
   },
   {
     "id": "q112_pl300",
-    "text": "Como você configuraria a funcionalidade de Drill-Through entre relatórios diferentes (Cross-Report Drill-Through) no Power BI Service para permitir que usuários naveguem de um relatório de resumo para um relatório de detalhes?",
+    "text": "Como configurar Cross-Report Drill-Through no Power BI Service, para navegar de um relatório resumo a um relatório de detalhes?",
     "options": [
       "No relatório de destino (detalhes), configurar a página de drill-through como de costume arrastando a coluna chave para \"Drill-through filters\" e habilitar \"Cross-report\" nas propriedades da página de drill-through; no relatório de origem, o usuário clica com botão direito em um ponto de dados e seleciona o relatório de destino no menu de drill-through; ambos os relatórios devem estar no mesmo workspace e usar o mesmo dataset ou datasets com a mesma coluna chave.",
-      "Cross-Report Drill-Through é configurado no relatório de ORIGEM — na página de resumo, arrastar a coluna de drill-through para o campo \"Cross-Report Target\" e selecionar o relatório e página de destino; o relatório de destino não precisa de nenhuma configuração especial — qualquer página de qualquer relatório pode ser destino de cross-report drill-through.",
-      "Cross-Report Drill-Through requer que ambos os relatórios usem exatamente o mesmo dataset (mesmo arquivo .pbix publicado); se os relatórios usam datasets diferentes — mesmo com colunas de mesmo nome — o drill-through entre eles não funciona e exibe erro de incompatibilidade de fonte de dados.",
-      "Cross-Report Drill-Through está disponível apenas no Power BI Embedded e Power BI Premium — no Power BI Service padrão (plano Pro), apenas drill-through dentro do mesmo relatório (intra-report) está disponível; para simular cross-report drill-through no Pro, usar botões de navegação com parâmetros URL como alternativa."
+      "Seria configurado na ORIGEM, arrastando a coluna para \"Cross-Report Target\"; o destino não precisaria de configuração especial.",
+      "Exigiria exatamente o mesmo dataset nos dois relatórios; datasets diferentes, mesmo com colunas de mesmo nome, dariam erro.",
+      "Estaria disponível só no Embedded/Premium; no Pro só intra-report, simulável com botões de navegação e parâmetros URL."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -2803,10 +2803,10 @@ export const questions = [
     "id": "q113_pl300",
     "text": "Quais são as opções de autenticação disponíveis ao conectar o Power BI Desktop a um Azure SQL Database e quais são as considerações para cada uma?",
     "options": [
-      "Autenticação de Banco de Dados (usuário e senha SQL) é simples, mas exige gerenciamento manual de credenciais; Conta Microsoft (OAuth 2.0) usa Azure AD, é mais segura e suporta MFA, mas o refresh no Service usa a identidade do proprietário; Service Principal (ID de aplicativo Azure AD) é ideal para automação e refresh não interativo, requer configuração no Azure AD e no Power BI Service.",
-      "O Azure SQL Database só suporta autenticação via usuário e senha SQL no Power BI Desktop; autenticações Azure AD (Conta Microsoft e Service Principal) não estão disponíveis para Azure SQL via conectores nativos do Power BI.",
-      "A autenticação Conta Microsoft para Azure SQL Database no Power BI requer que o usuário tenha a role db_owner no banco de dados; permissões mais restritas como db_datareader não são compatíveis com a autenticação OAuth do Power BI.",
-      "Para refresh agendado no Power BI Service com Azure SQL Database, a única autenticação suportada é a de Banco de Dados (usuário/senha SQL); autenticações Azure AD não funcionam para refresh automático no background."
+      "Banco de Dados (usuário/senha) simples mas manual; Conta Microsoft (OAuth/Azure AD) mais segura com MFA, refresh usa identidade do proprietário;",
+      "Azure SQL só suportaria usuário/senha SQL no Desktop; autenticações Azure AD não estariam disponíveis via conectores nativos.",
+      "Conta Microsoft exigiria role db_owner no banco; permissões mais restritas como db_datareader não seriam compatíveis com OAuth.",
+      "Refresh agendado no Service só suportaria autenticação de Banco de Dados; Azure AD não funcionaria para refresh automático em background."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2854,9 +2854,9 @@ export const questions = [
     "text": "Qual a configuração correta e os campos essenciais para utilizar o visual Gráfico em Cascata (Waterfall Chart) no Power BI, visando exibir a decomposição de variação entre um valor inicial e um valor final?",
     "options": [
       "O visual Gráfico em Cascata (Waterfall Chart) no Power BI requer os campos 'Categoria' (para o eixo X, definindo as etapas da variação, como meses ou componentes), 'Eixo Y' (para a medida numérica com os valores de variação, onde valores positivos aumentam e negativos diminuem a barra), e opcionalmente 'Detalhes' (Breakdown) para decompor cada categoria em subcategorias. O visual calcula e exibe automaticamente barras de total no início e no fim para mostrar o valor acumulado.",
-      "O Gráfico em Cascata no Power BI requer obrigatoriamente três campos: 'Valor Inicial', 'Valor Final' e 'Categorias' (para as variações entre os dois extremos). Sem os campos de valor inicial e final definidos explicitamente, o visual não consegue calcular as variações e exibe barras incorretas.",
-      "O campo 'Detalhes' (Breakdown) do Gráfico em Cascata divide cada barra em segmentos coloridos por subcategoria, mas não afeta o valor total de cada barra — é puramente cosmético para identificar a composição de cada variação sem impacto nos cálculos do visual.",
-      "O Gráfico em Cascata no Power BI só suporta valores positivos. Para variações negativas (reduções), é necessário usar valores absolutos e criar uma coluna calculada com um indicador 'positivo/negativo' que o visual usa para colorir as barras de vermelho ou verde, pois não há suporte nativo a valores negativos nas barras."
+      "Exigiria obrigatoriamente 'Valor Inicial', 'Valor Final' e 'Categorias'; sem eles definidos explicitamente, não calcularia as variações.",
+      "'Detalhes' (Breakdown) dividiria a barra em segmentos coloridos sem afetar o valor total — seria puramente.",
+      "Suportaria só valores positivos; negativos exigiriam valores absolutos e coluna indicadora 'positivo/negativo' para colorir manualmente."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2879,9 +2879,9 @@ export const questions = [
     "text": "Como disparar o refresh de um dataset no Power BI Service programaticamente usando a API REST e em quais cenários essa abordagem é mais adequada do que o refresh agendado tradicional?",
     "options": [
       "Usar POST https://api.powerbi.com/v1.0/myorg/datasets/{datasetId}/refreshes com autenticação Bearer token (obtido via Azure AD OAuth 2.0); mais adequado que refresh agendado quando: refresh deve ser disparado após conclusão de um processo ETL externo (event-driven), quando o limite de 8 refreshes/dia do Pro precisa ser contornado com lógica condicional, ou quando se quer monitorar programaticamente o status de refresh e reagir a falhas.",
-      "A API REST do Power BI para refresh de datasets está disponível apenas para capacidades Premium — no plano Pro, o refresh programático via API não é suportado e retorna erro 403 Forbidden; a única alternativa para refresh automatizado no Pro é o refresh agendado via interface do Service.",
-      "O refresh via API REST do Power BI é síncrono — a chamada HTTP aguarda a conclusão do refresh e retorna o resultado final com sucesso ou falha; para refreshes de datasets grandes que levam mais de 30 minutos, é necessário configurar um timeout maior no cliente HTTP para evitar erro de conexão.",
-      "Para disparar refresh via API REST é necessário usar exclusivamente Service Principal com permissões de Owner no workspace; tokens de usuário (Microsoft Account OAuth) não são aceitos pela API de refresh por razões de segurança — apenas identidades de aplicativo têm permissão para operações programáticas no Power BI."
+      "API REST de refresh estaria disponível só em Premium; no Pro retornaria erro 403, exigindo refresh agendado via interface.",
+      "O refresh via API seria síncrono, aguardando conclusão; refreshes longos (30+ min) exigiriam timeout maior no cliente HTTP.",
+      "Exigiria exclusivamente Service Principal com Owner no workspace; tokens de usuário não seriam aceitos pela API de refresh."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -2901,12 +2901,12 @@ export const questions = [
   },
   {
     "id": "q117_pl300",
-    "text": "No Power Query, qual é a sequência correta de passos para importar e transformar dados de um arquivo JSON que contém um array de objetos (por exemplo, `[{...}, {...}]`) em uma tabela plana no Power BI?",
+    "text": "No Power Query, qual a sequência correta para importar um JSON com array de objetos (`[{...}, {...}]`) em tabela plana?",
     "options": [
       "Utilizar 'Obter Dados' > 'JSON', onde o Power Query importará o arquivo como uma lista de registros. Em seguida, converter a lista para uma tabela usando 'Para Tabela', expandir a coluna de registros selecionando os campos desejados e, se necessário, expandir recursivamente objetos aninhados adicionais para obter uma tabela plana.",
-      "Arquivos JSON no Power Query só podem ser importados se tiverem exatamente um nível de aninhamento; JSONs com objetos dentro de objetos (aninhamento profundo) geram erro de importação e precisam ser convertidos para CSV usando uma ferramenta externa antes de importar no Power BI Desktop.",
-      "O conector JSON do Power Query cria automaticamente uma tabela plana com todas as propriedades do JSON como colunas, não sendo necessária nenhuma expansão manual; o Power Query detecta automaticamente a estrutura e nível de aninhamento, criando as colunas adequadas sem intervenção do analista.",
-      "Para importar JSON no Power Query é obrigatório usar uma Coluna Personalizada com a função `Json.Document(File.Contents(caminho))`, pois o conector JSON nativo do Power BI Desktop não existe; o conector correto é o 'Consulta em Branco' com código M para leitura de arquivo JSON."
+      "JSON só seria importável com um nível de aninhamento; aninhamento profundo daria erro, exigindo conversão para CSV antes.",
+      "O conector JSON criaria automaticamente tabela plana com todas as propriedades como colunas, sem expansão manual necessária.",
+      "Exigiria obrigatoriamente Coluna Personalizada com Json.Document(File.Contents(caminho)), pois não existiria conector JSON nativo."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -2928,10 +2928,10 @@ export const questions = [
     "id": "q118_pl300",
     "text": "O que são Medidas Rápidas (Quick Measures) no Power BI Desktop e para quais cenários elas são mais úteis?",
     "options": [
-      "Medidas Rápidas são um recurso assistido do Power BI Desktop (Home > Quick Measures ou botão direito em uma tabela > New Quick Measure) que gera automaticamente código DAX para cálculos comuns: year-over-year change, running total, moving average, per category, filtered value, weighted average, entre outros; o DAX gerado é exibido e pode ser editado e aprendido pelo analista como referência.",
-      "Medidas Rápidas são criadas automaticamente pelo Power BI ao detectar padrões comuns nas medidas existentes — o modelo analisa as medidas criadas manualmente e sugere versões otimizadas como Quick Measures; não é um recurso iniciado pelo usuário mas uma sugestão proativa do Power BI Desktop.",
-      "Medidas Rápidas geram código DAX simplificado que funciona apenas com modelos de até 10 tabelas — modelos mais complexos com muitos relacionamentos podem gerar resultados incorretos pois o gerador de código DAX das Quick Measures não considera ambiguidades de relacionamento em modelos grandes.",
-      "Quick Measures estão disponíveis apenas no Power BI Premium — no plano Pro, a geração automática de DAX requer o Copilot for Power BI que é um recurso adicional cobrado separadamente; usuários Pro podem criar medidas manualmente mas não têm acesso ao assistente de Quick Measures."
+      "Recurso assistido (Home > Quick Measures ou botão direito > New Quick Measure) que gera DAX para cálculos comuns (YoY, running total, moving average etc.);",
+      "Seriam criadas automaticamente pelo Power BI ao detectar padrões em medidas existentes; não seria iniciado pelo usuário, mas sugestão proativa.",
+      "Gerariam DAX simplificado que só funcionaria em modelos de até 10 tabelas; modelos complexos gerariam resultados incorretos.",
+      "Estariam disponíveis só no Premium; no Pro exigiriam Copilot for Power BI, cobrado separadamente, sem acesso ao assistente."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -2954,9 +2954,9 @@ export const questions = [
     "text": "Como exportar um relatório do Power BI Service para PDF ou PowerPoint e quais são as principais características e limitações dessas exportações?",
     "options": [
       "No Power BI Service, a exportação é feita via Arquivo > Exportar > PDF (exporta todas as páginas visíveis como PDF estático, uma por slide) ou Exportar > PowerPoint (gera uma apresentação com um slide por página do relatório, com visuais como imagens estáticas). As limitações incluem visuais não interativos, filtros preservados no momento da exportação, possíveis problemas com visuais customizados e a possibilidade de desabilitação pelo administrador.",
-      "A exportação para PowerPoint do Power BI gera um arquivo .pptx com os visuais embutidos como objetos do Power BI interativos — o usuário pode filtrar e interagir com os dados diretamente no PowerPoint sem conexão com o Power BI Service; a apresentação funciona offline com os dados capturados no momento da exportação.",
-      "Exportação para PDF no Power BI Service exporta apenas a página atual visualizada — para exportar o relatório completo é necessário navegar para cada página e exportar individualmente; não existe opção de exportar todas as páginas de uma vez em um único arquivo PDF.",
-      "Exportação para PDF e PowerPoint está disponível apenas para relatórios em workspaces Premium — workspaces Pro permitem apenas exportação de dados individuais de cada visual (Export data); a exportação de páginas completas como imagem requer capacidade Premium para processamento no servidor do Service."
+      "PowerPoint geraria .pptx com visuais interativos do Power BI embutidos, filtráveis offline, sem conexão com o Service.",
+      "PDF exportaria só a página atual; o relatório completo exigiria exportar cada página individualmente, sem opção de tudo junto.",
+      "Estaria disponível só em Premium; no Pro só haveria Export data por visual, exigindo Premium para exportar páginas como imagem."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -2979,9 +2979,9 @@ export const questions = [
     "text": "Como as funções `INDEX` e `OFFSET`, introduzidas no DAX, são utilizadas para navegação posicional em tabelas ordenadas, e qual a sua principal diferença e aplicação?",
     "options": [
       "INDEX(posição, [relação], [orderBy], [partitionBy]) retorna a linha em uma posição absoluta específica de uma tabela ordenada; OFFSET(delta, [relação], [orderBy], [partitionBy]) retorna a linha em uma posição relativa ao contexto atual (ex: linha anterior com delta=-1); úteis para criar colunas calculadas que referenciam valores de linhas adjacentes sem usar EARLIER — ex: Variação = [Valor] - CALCULATE([Valor], OFFSET(-1, ALLSELECTED(DimData), ORDERBY(DimData[Data]))).",
-      "INDEX e OFFSET no DAX são equivalentes às funções INDEX e OFFSET do Excel — INDEX retorna o valor de uma célula em uma posição específica de um range e OFFSET retorna um range deslocado por linhas e colunas; foram adicionadas ao DAX para facilitar a migração de fórmulas Excel para Power BI sem reescrita.",
-      "INDEX e OFFSET são funções exclusivas de colunas calculadas no DAX — não podem ser usadas em medidas pois requerem contexto de linha para determinar a posição relativa; em medidas, usar EARLIER ou VAR para capturar valores de linha específicos como alternativa.",
-      "OFFSET(-1) no DAX sempre retorna a linha imediatamente anterior na ordem física de armazenamento da tabela no VertiPaq — não é possível especificar a ordenação desejada; para navegar por linhas em ordem de data, é necessário criar uma coluna de índice sequencial por data e usar LOOKUPVALUE com o índice calculado."
+      "Seriam equivalentes ao INDEX/OFFSET do Excel — célula em posição específica e range deslocado; adicionadas para facilitar migração de fórmulas.",
+      "Seriam exclusivas de colunas calculadas, não usáveis em medidas por exigirem contexto de linha; medidas usariam EARLIER ou VAR como alternativa.",
+      "OFFSET(-1) sempre retornaria a linha anterior na ordem física do VertiPaq, sem poder especificar ordenação; data exigiria índice sequencial."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -3003,10 +3003,10 @@ export const questions = [
     "id": "q121_pl300",
     "text": "No Power Query, como substituir valores nulos por zero em todas as colunas numéricas de uma tabela de forma eficiente, sem a necessidade de aplicar a operação 'Substituir Valores' (Replace Values) coluna por coluna individualmente?",
     "options": [
-      "No Editor de Consultas, selecionar todas as colunas numéricas desejadas (usando Ctrl+Click ou Shift+Click) e, em seguida, aplicar a transformação \"Substituir Valores\" (Replace Values) uma única vez para substituir nulos por zero. Alternativamente, no Editor Avançado, usar a função Table.TransformColumns com List.Transform e o operador ?? para aplicar a substituição de forma dinâmica a todas as colunas numéricas.",
-      "Criar uma coluna calculada no DAX para cada coluna numérica, utilizando IF(ISBLANK([Coluna]), 0, [Coluna]), e depois remover as colunas originais da tabela no Power Query.",
-      "Utilizar a função \"Preencher para Baixo\" (Fill Down) em todas as colunas numéricas simultaneamente, pois esta é a abordagem recomendada para preencher nulos e preservar a tendência dos dados.",
-      "Criar uma Coluna Personalizada para cada coluna numérica, usando a sintaxe if [Coluna] = null then 0 else [Coluna], pois o operador ?? não é válido na linguagem M do Power Query."
+      "Selecionar todas as colunas numéricas (Ctrl/Shift+Click) e aplicar \"Substituir Valores\" uma única vez.",
+      "Criar coluna DAX para cada numérica com IF(ISBLANK([Coluna]),0,[Coluna]) e remover as originais no Power Query.",
+      "Usar \"Preencher para Baixo\" (Fill Down) em todas as colunas simultaneamente, recomendada para preencher nulos preservando tendência.",
+      "Criar Coluna Personalizada por coluna com if [Coluna]=null then 0 else [Coluna], pois ?? não seria válido na linguagem M."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -3029,9 +3029,9 @@ export const questions = [
     "text": "Qual das seguintes descrições melhor explica a funcionalidade e os cenários de uso ideais para o visual Funnel Chart (Gráfico de Funil) no Power BI?",
     "options": [
       "Funnel Chart exibe estágios sequenciais de um processo onde o volume diminui a cada etapa — requer campo Category (nome de cada estágio do funil) e campo Values (valor/volume em cada estágio); cenários típicos: funil de vendas (leads → prospects → propostas → contratos), pipeline de recrutamento, conversão de e-commerce (visitas → carrinho → checkout → compra), e análise de retenção por etapa de onboarding.",
-      "Funnel Chart no Power BI é equivalente ao gráfico de barras horizontais — a diferença é apenas estética com o formato de funil; qualquer dado que funciona em barras horizontais também funciona no funil sem restrição de que os valores devem ser decrescentes entre as categorias.",
-      "Funnel Chart requer que os dados estejam ordenados decrescentemente na fonte de dados antes de importar — o Power BI não ordena automaticamente as categorias por valor; se os dados chegam em ordem diferente, o visual exibe o funil invertido ou com forma incorreta sem aviso ao desenvolvedor.",
-      "Funnel Chart no Power BI suporta no máximo 6 estágios por limitação do algoritmo de renderização do visual; para funis com mais de 6 etapas é necessário usar um visual customizado do AppSource ou representar o funil como gráfico de barras horizontais com formatação manual de largura decrescente."
+      "Seria equivalente a barras horizontais, diferindo só na estética; funcionaria com qualquer dado sem exigir valores decrescentes entre categorias.",
+      "Exigiria dados ordenados decrescentemente na fonte antes de importar; sem isso, exibiria o funil invertido sem aviso.",
+      "Suportaria no máximo 6 estágios por limitação de renderização; mais etapas exigiriam visual customizado do AppSource."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -3054,9 +3054,9 @@ export const questions = [
     "text": "Como a função `WINDOW` no DAX pode ser utilizada para calcular médias móveis e totais acumulados de forma mais eficiente e flexível em comparação com abordagens tradicionais?",
     "options": [
       "`WINDOW(from, from_type, to, to_type, [relação], [orderBy], [partitionBy], [matchBy])` define uma janela de linhas relativa ou absoluta para cálculo. Para uma média móvel de 3 períodos, um exemplo seria: `Média Móvel 3M = AVERAGEX(WINDOW(-2, REL, 0, REL, ALLSELECTED(DimData), ORDERBY(DimData[Data])), [Total Vendas])`. Aqui, `REL` indica posição relativa à linha atual, e `-2` inclui os 2 períodos anteriores até o atual, formando uma janela de 3.",
-      "`WINDOW` no DAX é equivalente à cláusula `OVER` do SQL Server — pode ser usada diretamente em medidas para calcular funções de janela como `ROW_NUMBER`, `RANK`, `LAG` e `LEAD` sem necessidade das funções específicas `RANKX`, `OFFSET` e `INDEX`; `WINDOW` é a função unificada que substitui todas as outras funções de janela do DAX.",
-      "A função `WINDOW` no DAX só funciona em colunas calculadas — em medidas, deve-se usar `AVERAGEX` com `DATESINPERIOD` para médias móveis e `CALCULATE` com `DATESYTD` para totais acumulados; `WINDOW` foi introduzida especificamente para colunas calculadas que precisam de contexto de linha com referências a linhas adjacentes.",
-      "`WINDOW` no DAX tem um limite de 1.000 linhas na janela definida — para janelas maiores, como um acumulado de todo o histórico, é necessário usar `CALCULATE` com `ALL` e filtro de data manual; tentar definir janelas maiores que 1.000 com `WINDOW` retorna um erro de limite excedido no mecanismo DAX."
+      "WINDOW seria equivalente ao OVER do SQL Server — calcularia ROW_NUMBER/RANK/LAG/LEAD sem precisar de RANKX/OFFSET/INDEX;",
+      "WINDOW só funcionaria em colunas calculadas; medidas usariam AVERAGEX+DATESINPERIOD e CALCULATE+DATESYTD em vez dela.",
+      "WINDOW teria limite de 1.000 linhas na janela; acumulados maiores exigiriam CALCULATE com ALL e filtro de data manual."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -3078,10 +3078,10 @@ export const questions = [
     "id": "q124_pl300",
     "text": "Qual a principal finalidade do Power BI Embedded e como ele se diferencia do compartilhamento padrão via Power BI Service para a distribuição de conteúdo analítico em aplicações externas?",
     "options": [
-      "Power BI Embedded é idêntico ao Publish to Web em termos de acesso — ambos permitem que usuários sem licença acessem relatórios; a diferença é que Embedded requer desenvolvimento de código JavaScript enquanto Publish to Web usa apenas um iframe simples; para aplicações sem desenvolvimento customizado, Publish to Web é a alternativa ao Embedded.",
-      "Power BI Embedded está disponível apenas para relatórios criados via API REST — relatórios criados no Power BI Desktop não podem ser incorporados via Embedded; é necessário criar os visuais programaticamente usando a biblioteca JavaScript do Power BI para que funcionem em modo Embedded.",
-      "Power BI Embedded permite incorporar relatórios, dashboards e visuais em aplicações web/mobile externas usando iframes e APIs JavaScript; usuários da aplicação não precisam de licença Power BI — a capacidade é provisionada via Azure (SKU A) e cobrada por hora; difere do Service pois o contexto é a aplicação do desenvolvedor, não o Power BI Service — os dados aparecem dentro da aplicação sem necessidade do usuário ter conta Power BI.",
-      "Power BI Embedded requer que os usuários finais da aplicação tenham contas Azure AD no tenant do desenvolvedor — o Embedded autentica cada usuário individualmente contra o Azure AD antes de exibir o relatório; usuários sem conta Azure AD não conseguem visualizar o conteúdo mesmo dentro da aplicação incorporada."
+      "Seria idêntico ao Publish to Web em acesso; a diferença seria exigir JavaScript enquanto Publish to Web usaria iframe simples.",
+      "Estaria disponível só para relatórios via API REST; relatórios do Desktop não poderiam ser incorporados, exigindo criação programática.",
+      "Incorpora relatórios/dashboards/visuais em apps externas via iframe/JS;",
+      "Exigiria que usuários finais tivessem contas Azure AD no tenant do dev, autenticando individualmente antes de exibir o relatório."
     ],
     "correctAnswer": 2,
     "difficulty": "intermediario",
@@ -3104,9 +3104,9 @@ export const questions = [
     "text": "No Power Query, como identificar e remover linhas duplicadas de uma tabela garantindo que apenas o registro mais recente de cada chave seja mantido?",
     "options": [
       "Ordenar a tabela pela coluna de data decrescentemente (Home > Sort > Sort Descending na coluna de data), depois selecionar a coluna chave e usar Home > Remove Rows > Remove Duplicates — o Power Query mantém a primeira ocorrência de cada chave após a ordenação, que será o registro mais recente; o passo gerado é Table.Distinct(Table.Sort(…), {\"ChaveColuna\"}).",
-      "Remove Duplicates no Power Query mantém aleatoriamente um dos registros duplicados sem considerar a ordem das linhas — para garantir o registro mais recente é necessário usar Group By com operação \"All Rows\" e depois criar Custom Column com List.Max([Grupo][DataColuna]) para selecionar a data máxima de cada grupo e filtrar o resultado.",
-      "Remove Duplicates no Power Query remove TODAS as ocorrências de uma chave duplicada incluindo o original — para deduplicar mantendo um registro por chave é necessário usar a opção \"Keep Duplicates\" e criar lógica de seleção manual; Remove Duplicates é usado apenas para validação de unicidade, não para limpeza.",
-      "Para manter o registro mais recente por chave, criar uma coluna de ranking no DAX com RANKX após o carregamento no modelo e filtrar rank = 1 via medida DAX; o Power Query não tem funcionalidade de ranking por grupo que permita selecionar o N-ésimo registro de cada grupo durante a transformação."
+      "Remove Duplicates manteria registro aleatório; garantir o mais recente exigiria Group By \"All Rows\" + Custom Column com List.Max([Grupo][Data]).",
+      "Remove Duplicates removeria TODAS as ocorrências, incluindo a original; deduplicar exigiria \"Keep Duplicates\" e seleção manual.",
+      "Exigiria coluna de ranking DAX com RANKX após carregar e filtrar rank=1; Power Query não teria ranking por grupo nativo."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -3128,10 +3128,10 @@ export const questions = [
     "id": "q126_pl300",
     "text": "O que é o Automatic Page Refresh no Power BI e em quais cenários ele é mais adequado para ser utilizado?",
     "options": [
-      "Automatic Page Refresh configura um relatório para atualizar automaticamente os visuais em intervalos regulares (mínimo 1 segundo em Premium, 30 minutos no Pro com DirectQuery); disponível em dois modos: Fixed Interval (atualiza em intervalos fixos) e Change Detection (atualiza apenas quando uma medida de detecção indica mudança nos dados); adequado para dashboards operacionais com dados em tempo real via DirectQuery ou Direct Lake.",
-      "Automatic Page Refresh está disponível para todos os modos de conectividade incluindo Import — ao habilitar, o Power BI re-importa automaticamente os dados da fonte no intervalo configurado sem necessidade de refresh agendado manual; é a solução recomendada para substituir o refresh agendado tradicional em datasets que precisam de atualização frequente.",
-      "Automatic Page Refresh atualiza apenas os visuais que têm medidas conectadas a fontes DirectQuery — visuais baseados em tabelas Import na mesma página não são atualizados; para atualizar toda a página incluindo visuais Import é necessário usar o botão de refresh manual do relatório no Service.",
-      "Automatic Page Refresh é habilitado globalmente para todo o relatório nas configurações de publicação do Power BI Service — não é possível configurar intervalos diferentes por página; todos os intervalos de refresh são padronizados para o menor valor configurado no relatório inteiro."
+      "Atualiza visuais em intervalos regulares (mín 1s Premium, 30min Pro com DirectQuery); modos Fixed Interval ou Change Detection;",
+      "Estaria disponível para todos os modos incluindo Import — re-importaria dados automaticamente no intervalo, substituindo o refresh agendado tradicional.",
+      "Atualizaria só visuais conectados a DirectQuery; visuais Import na mesma página exigiriam refresh manual do relatório.",
+      "Seria habilitado globalmente para o relatório inteiro nas configs de publicação, sem intervalos diferentes por página."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -3151,7 +3151,7 @@ export const questions = [
   },
   {
     "id": "q127_pl300",
-    "text": "Você está desenvolvendo um relatório de estoque no Power BI e precisa criar uma medida DAX para calcular o saldo de estoque. Este saldo deve ser semi-aditivo, ou seja, deve somar corretamente quando filtrado por dimensões como 'Produto' ou 'Local', mas deve retornar o último valor disponível para qualquer período de tempo selecionado (por exemplo, o saldo do último dia do mês, se o filtro for mensal, ou o saldo do último dia do ano, se o filtro for anual), em vez de uma soma simples dos saldos ao longo do tempo. Qual das seguintes medidas DAX atende a esse requisito?",
+    "text": "Você precisa de uma medida DAX para saldo de estoque semi-aditivo: soma por 'Produto'/'Local', mas retorna o último valor disponível para qualquer período (não soma ao longo do tempo). Qual medida atende a esse requisito?",
     "options": [
       "Saldo Estoque = CALCULATE(SUM(Estoque[Saldo]), LASTDATE(DimData[Data]))",
       "Saldo Estoque = SUM(Estoque[Saldo])",
@@ -3178,10 +3178,10 @@ export const questions = [
     "id": "q128_pl300",
     "text": "Como o visual Medidor (Gauge) é configurado no Power BI e quais campos são essenciais para exibir o progresso em relação a uma meta?",
     "options": [
-      "O visual Medidor (Gauge) requer o campo 'Valor' (uma medida com o valor atual a ser monitorado) como obrigatório. Opcionalmente, pode-se configurar 'Valor Mínimo' (padrão 0), 'Valor Máximo' (define o 100% do visual) e 'Valor de Destino' (uma linha de meta no arco). O arco é colorido conforme a proximidade ao máximo, sendo ideal para KPIs de desempenho com metas claras, como taxa de conclusão ou atingimento de quota.",
-      "O visual Medidor (Gauge) no Power BI requer obrigatoriamente quatro campos: Valor, Mínimo, Máximo e Destino. Sem todos os quatro definidos, o visual exibe uma mensagem de erro, pois valores padrão não são aplicados automaticamente pelo Power BI para campos não preenchidos.",
-      "O visual Medidor (Gauge) no Power BI calcula automaticamente os valores de mínimo e máximo com base nos dados históricos do dataset. O mínimo é o menor valor registrado e o máximo é o maior valor, eliminando a necessidade de configuração manual desses parâmetros pelo desenvolvedor do relatório.",
-      "O visual Medidor (Gauge) é equivalente ao visual KPI em termos de funcionalidade, ambos exibindo um valor atual em relação a uma meta com indicação de status positivo ou negativo. A diferença é apenas estética: o Medidor usa formato de velocímetro, enquanto o KPI usa formato numérico com seta de tendência."
+      "Requer 'Valor' obrigatório; opcionais 'Mínimo' (padrão 0), 'Máximo' (define 100%) e 'Destino' (linha de meta no arco); ideal para KPIs com metas claras.",
+      "Exigiria obrigatoriamente quatro campos (Valor, Mínimo, Máximo, Destino); sem todos definidos, exibiria erro sem aplicar padrões.",
+      "Calcularia automaticamente mínimo/máximo com base no histórico do dataset, eliminando configuração manual desses parâmetros.",
+      "Seria equivalente ao KPI funcionalmente; a diferença seria só estética (velocímetro vs numérico com seta)."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -3203,10 +3203,10 @@ export const questions = [
     "id": "q129_pl300",
     "text": "O que acontece quando o Power Query detecta automaticamente os tipos de dados ao importar um arquivo CSV e por que o passo \"Changed Type\" gerado automaticamente pode ser problemático em um ambiente de produção?",
     "options": [
-      "O Power Query analisa as primeiras 200 linhas do arquivo para inferir tipos de dados e gera automaticamente um passo \"Changed Type\" com os tipos detectados; o problema é que, se as primeiras 200 linhas não representarem o dataset completo (por exemplo, uma coluna numérica com valores de texto a partir da linha 201), o tipo inferido estará incorreto, causando erros ou truncamento de dados silencioso no refresh. A recomendação é sempre revisar e confirmar os tipos gerados, especialmente para colunas com dados mistos.",
-      "A detecção automática de tipo no Power Query analisa o dataset completo antes de definir os tipos — não há limite de 200 linhas; o passo \"Changed Type\" automático é sempre confiável, pois baseia-se na análise exaustiva de todos os valores da coluna antes de determinar o tipo mais adequado.",
-      "O passo \"Changed Type\" automático é gerado apenas para arquivos CSV e TXT — para outros formatos como Excel, JSON e bases de dados SQL, o Power Query usa os tipos de dados nativos da fonte sem geração de passo automático de conversão de tipo no pipeline de transformação.",
-      "A detecção automática de tipo pode ser desabilitada globalmente em File > Options > Data Load > Type Detection; desabilitar essa opção faz o Power Query importar todas as colunas como tipo Text, sendo necessário converter manualmente apenas as colunas que precisam de tipos específicos para o modelo."
+      "Analisa as primeiras 200 linhas para inferir tipos e gera \"Changed Type\";",
+      "Analisaria o dataset completo, sem limite de 200 linhas; \"Changed Type\" automático seria sempre confiável por análise exaustiva.",
+      "Seria gerado só para CSV/TXT; outros formatos (Excel, JSON, SQL) usariam tipos nativos da fonte sem passo automático.",
+      "Poderia ser desabilitado globalmente em Options > Type Detection; desabilitar importaria tudo como Text, exigindo conversão manual."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -3226,12 +3226,12 @@ export const questions = [
   },
   {
     "id": "q130_pl300",
-    "text": "Você está projetando um modelo de dados no Power BI que inclui duas tabelas de fatos distintas: 'Vendas' e 'Devoluções'. Ambas as tabelas precisam ser analisadas em conjunto com as mesmas tabelas de dimensão: 'Produto', 'Cliente' e 'Data'. Como você deve estruturar corretamente os relacionamentos e o modelo para garantir que os filtros funcionem de forma eficiente e que você possa criar medidas que combinem dados de ambas as tabelas de fatos?",
+    "text": "Você tem duas tabelas de fatos ('Vendas' e 'Devoluções') que compartilham as dimensões 'Produto', 'Cliente' e 'Data'. Como estruturar os relacionamentos para filtros eficientes e medidas combinando ambas?",
     "options": [
-      "Criar relacionamentos unidirecionais (single-direction) de cada tabela de fatos para cada dimensão compartilhada (ex: Vendas→DimProduto, Devoluções→DimProduto); usar uma única DimData marcada como tabela de data; criar medidas em cada tabela de fatos e medidas combinadas como `Vendas Líquidas = [Total Vendas] - [Total Devoluções]`, garantindo que as dimensões filtrem ambas as fatos corretamente através dos relacionamentos independentes.",
-      "Com duas tabelas de fatos compartilhando dimensões, é necessário criar relacionamentos bidirecionais (Both) em todas as dimensões para que filtros aplicados em uma tabela de fatos se propaguem corretamente para a outra; sem bidirecionalidade, slicers de Produto filtram apenas a tabela de fatos com relacionamento ativo, ignorando a outra.",
-      "A solução correta para múltiplas tabelas de fatos é consolidá-las em uma única tabela de fatos no Power Query usando Append Queries, adicionando uma coluna \"TipoTransacao\" (Venda/Devolução) para distinguir os registros; modelos com múltiplas tabelas de fatos separadas não são suportados em modelos Star Schema do Power BI.",
-      "Duas tabelas de fatos que compartilham as mesmas dimensões criam automaticamente relacionamentos ambíguos no Power BI — o sistema exige que o desenvolvedor escolha qual tabela de fatos é \"principal\" e crie relacionamentos ativos apenas para ela; a segunda tabela de fatos deve usar USERELATIONSHIP em todas as medidas para ativar seus relacionamentos inativos."
+      "Relacionamentos unidirecionais de cada fato para cada dimensão compartilhada; uma única DimData;",
+      "Exigiria relacionamentos bidirecionais (Both) em todas as dimensões; sem isso, slicers filtrariam só a fato com relacionamento ativo.",
+      "A solução seria consolidar num único fato via Append Queries com coluna \"TipoTransacao\"; múltiplos fatos não seriam suportados em Star Schema.",
+      "Duas fatos compartilhando dimensões criariam relacionamentos ambíguos automaticamente;"
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -3254,9 +3254,9 @@ export const questions = [
     "text": "Como o visual Key Influencers no Power BI é utilizado para analisar quais fatores influenciam uma métrica específica e qual a forma correta de interpretar os resultados apresentados por ele?",
     "options": [
       "Key Influencers requer: campo \"Analyze\" (métrica ou resultado a analisar — ex: Satisfação do Cliente), campos \"Explain by\" (dimensões que podem influenciar — ex: Produto, Região, Vendedor, Tempo de Entrega); o visual identifica automaticamente quais valores das dimensões estão correlacionados com valores altos ou baixos da métrica, exibindo os influenciadores ordenados por força da correlação com o coeficiente de impacto.",
-      "Key Influencers requer que a métrica no campo \"Analyze\" seja uma coluna binária (0/1 ou Sim/Não) — o visual usa algoritmos de classificação binária para determinar influenciadores; para métricas contínuas como satisfação em escala de 1-10 é necessário criar uma coluna calculada binária (ex: Satisfação >= 8 = \"Alta\") antes de usar o visual.",
-      "Key Influencers processa os dados no Power BI Desktop usando recursos locais de CPU — relatórios com Key Influencers publicados no Service precisam que todos os usuários tenham Power BI Desktop instalado para visualizar o visual; sem o Desktop, o visual exibe apenas texto estático sem a análise interativa de influenciadores.",
-      "Key Influencers funciona apenas com dados históricos — para análise de influenciadores em dados em tempo real via DirectQuery, o visual exibe erro de \"dados insuficientes\" e requer que o dataset seja convertido para modo Import com pelo menos 6 meses de histórico antes de usar o visual."
+      "Exigiria que \"Analyze\" fosse coluna binária (0/1); métricas contínuas exigiriam criar coluna calculada.",
+      "Processaria localmente no Desktop; relatórios publicados exigiriam Desktop instalado em todos os usuários para a análise interativa.",
+      "Funcionaria só com dados históricos; DirectQuery exibiria erro de \"dados insuficientes\", exigindo Import com 6+ meses de histórico."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -3279,9 +3279,9 @@ export const questions = [
     "text": "Como usar Deployment Pipelines no Power BI para gerenciar a promoção de conteúdo entre ambientes de Desenvolvimento, Teste e Produção?",
     "options": [
       "Criar um Deployment Pipeline no Power BI Service, associar workspaces a cada estágio (Desenvolvimento, Teste, Produção), usar o botão \"Deploy\" para promover conteúdo, e configurar Deployment Rules para substituir fontes de dados e parâmetros específicos por ambiente, preservando o histórico de deployments.",
-      "Deployment Pipelines são configurados no Azure DevOps e integrados ao Power BI via extensão oficial \"Power BI Deploy Task\"; no Power BI Service, a promoção manual via republicação de arquivos .pbix é a única forma de gerenciar o ciclo de vida do conteúdo.",
-      "Deployment Pipelines no Power BI promovem automaticamente conteúdo de Desenvolvimento para Teste e de Teste para Produção sem intervenção humana, detectando alterações nos workspaces e disparando o deploy após um período de estabilidade configurável.",
-      "Deployment Pipelines só funcionam com relatórios e dashboards; datasets e dataflows precisam ser promovidos manualmente entre ambientes via exportação e reimportação, pois a promoção automática de datasets não é suportada para evitar sobrescrever dados de produção."
+      "Seriam configurados no Azure DevOps via extensão \"Power BI Deploy Task\"; republicação manual de .pbix seria a única forma no Service.",
+      "Promoveriam automaticamente Dev→Teste→Produção sem intervenção, detectando alterações e disparando deploy após período de estabilidade.",
+      "Funcionariam só com relatórios/dashboards; datasets/dataflows exigiriam promoção manual via exportação e reimportação."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -3303,10 +3303,10 @@ export const questions = [
     "id": "q133_pl300",
     "text": "O que é Mesclagem Difusa (Fuzzy Matching) no Power Query e em quais cenários ela é mais útil para a limpeza e integração de dados?",
     "options": [
-      "Fuzzy Matching no Power Query é aplicado automaticamente em todas as operações de Merge Queries — não é uma opção separada; o Power Query sempre usa correspondência difusa por padrão e usa correspondência exata apenas quando a opção \"Exact Match Only\" é habilitada explicitamente nas configurações avançadas do merge.",
-      "Fuzzy Matching no Power Query funciona apenas para colunas do tipo numérico — aplica tolerância percentual na comparação de valores (ex: 100 e 102 são considerados iguais com tolerância de 5%); para colunas de texto, apenas correspondência exata está disponível no merge padrão do Power Query.",
-      "Fuzzy Matching é uma opção do Merge Queries que aproxima valores de texto similares mas não idênticos para fazer a correspondência — em vez de exigir igualdade exata, usa algoritmos de similaridade de string (ex: distância de Levenshtein) para combinar \"São Paulo\" com \"Sao Paulo\", \"SP\" ou \"S. Paulo\"; útil para limpar dados de entrada livre (formulários, CRMs) onde o mesmo valor foi escrito de formas diferentes; configurável com limiar de similaridade (0 a 1).",
-      "Fuzzy Matching requer instalação de biblioteca Python (fuzzywuzzy ou rapidfuzz) no computador onde o Power BI Desktop está instalado — sem essas bibliotecas, a opção aparece desabilitada no diálogo de Merge; é um recurso que delega o processamento de similaridade para o Python em vez de usar algoritmos nativos do Power Query."
+      "Seria aplicado automaticamente em todo Merge Queries, sem ser opção separada; exata só com \"Exact Match Only\" habilitada explicitamente.",
+      "Funcionaria só com colunas numéricas, com tolerância percentual; texto só teria correspondência exata no merge padrão.",
+      "Opção do Merge que aproxima textos similares (não idênticos) via similaridade de string (Levenshtein), combinando \"São Paulo\" com \"Sao Paulo\"/\"SP\";",
+      "Exigiria biblioteca Python (fuzzywuzzy/rapidfuzz) instalada; sem ela, a opção apareceria desabilitada no Merge."
     ],
     "correctAnswer": 2,
     "difficulty": "intermediario",
@@ -3328,10 +3328,10 @@ export const questions = [
     "id": "q134_pl300",
     "text": "Qual é a sintaxe DAX correta para criar medidas que calculam as vendas acumuladas no mês (MTD - Month-to-Date) e no trimestre (QTD - Quarter-to-Date), considerando as melhores práticas e funcionalidades do Power BI?",
     "options": [
-      "As funções TOTALMTD e TOTALQTD são as mais indicadas, como em Vendas MTD = TOTALMTD(SUM(Vendas[Valor]), DimData[Data]) e Vendas QTD = TOTALQTD(SUM(Vendas[Valor]), DimData[Data]). Elas acumulam desde o primeiro dia do período até a data mais recente no contexto de filtro, sendo equivalentes a CALCULATE(SUM(Vendas[Valor]), DATESMTD(DimData[Data])) e CALCULATE(SUM(Vendas[Valor]), DATESQTD(DimData[Data])) respectivamente. É crucial que a tabela de datas (DimData) esteja marcada como Tabela de Datas no modelo.",
+      "TOTALMTD/TOTALQTD são as mais indicadas: Vendas MTD=TOTALMTD(SUM(Vendas[Valor]),DimData[Data]);",
       "Vendas MTD = CALCULATE(SUM(Vendas[Valor]), FILTER(DimData, DimData[Mês] = MONTH(TODAY()) && DimData[Ano] = YEAR(TODAY()))) é a única forma correta de calcular MTD, pois as funções TOTALMTD e TOTALQTD dependem da data atual do sistema e retornam resultados incorretos quando o usuário filtra períodos históricos no relatório.",
       "TOTALMTD e TOTALQTD só estão disponíveis em modelos com licença Power BI Premium. No plano Pro, calcular MTD e QTD requer usar CALCULATE com FILTER manual na tabela de datas, pois as funções de time intelligence avançadas foram movidas para o Premium na atualização de 2023 do Power BI Desktop.",
-      "Vendas MTD = CALCULATE(SUM(Vendas[Valor]), PREVIOUSMONTH(DimData[Data])) calcula o acumulado do mês. PREVIOUSMONTH retorna todas as datas do mês anterior ao contexto atual, que combinado com o filtro do visual exibe o acumulado correto do período selecionado pelo usuário."
+      "MTD = CALCULATE(SUM(Vendas[Valor]),PREVIOUSMONTH(DimData[Data])) calcularia o acumulado; PREVIOUSMONTH retornaria as datas do mês anterior."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -3354,9 +3354,9 @@ export const questions = [
     "text": "Como criar títulos dinâmicos em visuais do Power BI que se atualizam automaticamente baseados nas seleções de slicers feitas pelo usuário?",
     "options": [
       "Criar uma medida DAX como \"Título Dinâmico = \"Vendas por \" & SELECTEDVALUE(DimRegiao[Regiao], \"Todas as Regiões\") & \" - \" & SELECTEDVALUE(DimData[Ano], \"Todos os Anos\")\"; no visual, acessar Format > General > Title > Text > clicar em \"fx\" e selecionar a medida criada; o título atualiza automaticamente conforme o usuário interage com os slicers.",
-      "Títulos dinâmicos no Power BI são criados via Power Query — criar uma query que retorna o texto do título baseado em parâmetros e referenciar essa query no campo de título do visual; medidas DAX não podem ser usadas em títulos de visuais pois o campo Title aceita apenas strings estáticas ou referências a colunas de texto.",
-      "Para criar títulos dinâmicos é necessário usar o visual \"Text Box\" posicionado sobre o visual original com a medida DAX vinculada; o campo Title nativo dos visuais do Power BI só aceita texto fixo digitado diretamente — sem suporte a medidas dinâmicas ou formatação condicional por field value.",
-      "Títulos dinâmicos requerem que o slicer esteja configurado como \"Single Select\" — com slicers de seleção múltipla, a medida SELECTEDVALUE retorna BLANK e o título fica em branco; para suportar seleção múltipla no título, usar CONCATENATEX com separador vírgula como alternativa ao SELECTEDVALUE."
+      "Seriam criados via Power Query, referenciando a query no campo de título; medidas DAX não poderiam ser usadas, só strings ou colunas de texto.",
+      "Exigiria visual \"Text Box\" sobreposto vinculado à medida; o campo Title nativo só aceitaria texto fixo, sem medidas dinâmicas.",
+      "Exigiria slicer \"Single Select\"; com seleção múltipla, SELECTEDVALUE retornaria BLANK, exigindo CONCATENATEX como alternativa."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -3379,9 +3379,9 @@ export const questions = [
     "text": "Como você pode editar os parâmetros do Power Query de um dataset publicado no Power BI Service sem a necessidade de republicar o arquivo .pbix?",
     "options": [
       "No Power BI Service, acesse o dataset > Configurações (Settings) > Parâmetros (Parameters); os parâmetros criados no Power Query Desktop aparecem listados e podem ter seus valores editados diretamente na interface do Service. Após salvar os novos valores, execute um refresh do dataset para aplicar as transformações com os novos parâmetros, o que é útil para alternar entre ambientes ou ajustar configurações sem republicar.",
-      "Parâmetros de Power Query não podem ser editados no Power BI Service após a publicação — são \"compilados\" no dataset durante a publicação e tornam-se imutáveis; para alterar valores de parâmetros em produção é obrigatório editar o .pbix no Desktop e republicar o relatório completo.",
-      "Parâmetros de Power Query são editáveis no Service apenas se forem do tipo Texto — parâmetros numéricos, de data e de lista precisam ser convertidos para tipo Texto antes da publicação para aparecerem editáveis nas configurações do dataset no Service.",
-      "Editar parâmetros no Service é possível apenas via API REST do Power BI usando o endpoint \"PATCH /datasets/{id}/parameters\" — a interface visual do Service em Dataset > Configurações não exibe parâmetros de Power Query, apenas configurações de refresh e credenciais de fontes de dados."
+      "Parâmetros não poderiam ser editados após a publicação — seriam \"compilados\" e imutáveis, exigindo editar o .pbix e republicar.",
+      "Seriam editáveis no Service só se do tipo Texto; numéricos/data/lista exigiriam conversão para Texto antes de publicar.",
+      "Só seria possível via API REST (PATCH /datasets/{id}/parameters); a interface visual não exibiria parâmetros do Power Query."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -3428,10 +3428,10 @@ export const questions = [
     "id": "q138_pl300",
     "text": "Como conectar o Power BI Desktop a uma API OData e quais são as vantagens específicas desse protocolo em relação ao conector Web genérico?",
     "options": [
-      "Para conectar, use 'Obter Dados' > 'Feed OData' e insira a URL do endpoint. As vantagens incluem detecção automática de entidades, suporte nativo a paginação automática, query folding para filtros e ordenações, e navegação automática de relacionamentos entre entidades.",
-      "O conector OData no Power BI é idêntico ao conector Web genérico, diferenciando-se apenas por adicionar o cabeçalho 'Accept: application/json'. Qualquer API REST que retorne JSON pode ser usada via conector OData sem diferença funcional.",
-      "OData no Power BI suporta apenas leitura de dados, e não é possível usar o Power Query para filtrar dados no servidor OData. Todos os dados são importados primeiro, e os filtros são aplicados localmente, tornando o desempenho equivalente ao conector Web para grandes volumes.",
-      "O conector OData exige que o servidor tenha um certificado SSL válido e suporte TLS 1.3. Servidores OData em ambientes de desenvolvimento com certificados autoassinados não são suportados e geram erros de conexão segura que não podem ser ignorados."
+      "'Obter Dados' > 'Feed OData' com a URL do endpoint; vantagens: detecção automática de entidades, paginação nativa, query folding e navegação de relacionamentos.",
+      "Seria idêntico ao conector Web, diferindo só pelo cabeçalho 'Accept: application/json'; qualquer API JSON funcionaria igual via OData.",
+      "Suportaria só leitura, sem filtrar no servidor; tudo seria importado e filtrado localmente, igualando a performance ao conector Web.",
+      "Exigiria certificado SSL válido e TLS 1.3; servidores com certificado autoassinado em dev gerariam erro de conexão segura."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -3454,9 +3454,9 @@ export const questions = [
     "text": "Qual é a principal funcionalidade da função `NAMEOF` no DAX e como ela contribui para a melhoria da manutenibilidade de medidas e colunas calculadas?",
     "options": [
       "A função NAMEOF(objeto) retorna o nome de uma coluna ou medida como uma string em tempo de compilação. Sua principal vantagem é que, se o objeto referenciado for renomeado, o DAX gera um erro de compilação imediato, prevenindo falhas silenciosas em tempo de execução e melhorando a manutenibilidade do código.",
-      "A função NAMEOF retorna o nome técnico interno completo de uma coluna no modelo VertiPaq, incluindo o prefixo da tabela (ex: 'Vendas[Valor]'), sendo essencial para referências em expressões M do Power Query.",
-      "A função NAMEOF é equivalente à COLUMNNAME(), ambas retornando o nome de colunas como string com comportamento idêntico, sendo a escolha entre elas uma questão de preferência de estilo.",
-      "A função NAMEOF só pode ser utilizada com medidas DAX explícitas, não sendo aplicável a colunas de tabelas ou colunas calculadas."
+      "Retornaria o nome técnico interno completo no VertiPaq, com prefixo da tabela, essencial para referências em expressões M.",
+      "Seria equivalente a COLUMNNAME(), com comportamento idêntico — a escolha seria só preferência de estilo.",
+      "Só poderia ser usada com medidas DAX explícitas, não aplicável a colunas de tabelas ou calculadas."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -3478,10 +3478,10 @@ export const questions = [
     "id": "q140_pl300",
     "text": "Qual das seguintes opções descreve corretamente como configurar um slicer de intervalo numérico (Between) no Power BI e qual a principal diferença em relação a um slicer de lista para campos numéricos?",
     "options": [
-      "Para configurar um slicer de intervalo numérico (Between), adicione um campo numérico ao visual Slicer e, em 'Formato' > 'Configurações do Slicer' > 'Estilo', selecione 'Entre'. Ele exibirá dois campos de entrada (mínimo e máximo) que permitem filtrar por um intervalo contínuo. A principal diferença para o estilo 'Lista' é que 'Entre' permite filtrar qualquer valor dentro do intervalo, mesmo que não exista nos dados, enquanto 'Lista' exibe apenas valores discretos existentes para seleção.",
+      "Campo numérico no Slicer, 'Formato' > 'Configurações' > 'Estilo' > 'Entre'; exibe campos de mín/máx para intervalo contínuo.",
       "Slicers de intervalo numérico (Between) só estão disponíveis para campos numéricos inteiros; campos decimais e monetários exibem apenas o estilo 'Lista', pois o Power BI não consegue calcular intervalos contínuos para valores com casas decimais, exigindo o uso de filtros de relatório para esses casos.",
-      "O estilo 'Entre' no slicer é funcionalmente equivalente ao uso de dois slicers separados (um para mínimo e outro para máximo), não havendo diferença na forma como os dados são filtrados; a vantagem é puramente estética, otimizando o espaço no canvas.",
-      "Slicers de intervalo 'Entre' no Power BI filtram apenas valores que existem exatamente nos dados; se o usuário digitar um valor mínimo ou máximo que não está presente nos dados, o filtro é ignorado, exibindo todos os registros, o que exige a criação de colunas calculadas para faixas de valores precisas."
+      "'Entre' seria equivalente a dois slicers separados, sem diferença na filtragem — vantagem puramente estética de espaço no canvas.",
+      "'Entre' filtraria só valores exatamente presentes; valor digitado ausente seria ignorado, exibindo tudo, exigindo colunas calculadas."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -3503,10 +3503,10 @@ export const questions = [
     "id": "q141_pl300",
     "text": "No Power Query, como você criaria uma tabela de metadados que captura automaticamente informações de auditoria de carga, como a data e hora do último refresh, o número de linhas carregadas de uma tabela principal e o nome da fonte de dados?",
     "options": [
-      "Criar uma nova consulta (query) no Power Query que utiliza a função `Table.FromRecords` para construir uma tabela com colunas como `DataRefresh = DateTime.LocalNow()`, `LinhasCarregadas = Table.RowCount(NomeDaSuaTabelaPrincipal)` e `FonteDados = \"Nome da Fonte\"`. Esta consulta será carregada no modelo como uma tabela de metadados, aproveitando que `DateTime.LocalNow()` captura o momento do refresh e `Table.RowCount` pode referenciar outras queries.",
-      "Criar medidas DAX que utilizam a função `NOW()` para capturar a data e hora do refresh, pois `DateTime.LocalNow()` não é confiável no Power BI Service devido à ausência de fuso horário local configurado, sendo `DateTime.UtcNow()` a única opção viável no Power Query para ambos os ambientes.",
+      "Nova query com Table.FromRecords criando colunas DataRefresh=DateTime.LocalNow(), LinhasCarregadas=Table.",
+      "Medidas DAX com NOW(), pois DateTime.LocalNow() não seria confiável no Service sem fuso configurado;",
       "Confiar que o Power BI Service armazena automaticamente todas as informações de refresh (data/hora, número de linhas) no dataset, acessíveis via `Dataset > Settings > Refresh History` ou API REST, eliminando a necessidade de criar tabelas de metadados personalizadas no Power Query.",
-      "Utilizar `Table.RowCount` em uma query de metadados não é possível para referenciar outras queries do mesmo arquivo .pbix, pois cada query é avaliada isoladamente. Seria necessário materializar a tabela principal em um arquivo intermediário e reimportá-la para contar suas linhas."
+      "Table.RowCount não poderia referenciar outras queries do mesmo .pbix; seria preciso materializar e reimportar a tabela principal."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -3528,10 +3528,10 @@ export const questions = [
     "id": "q142_pl300",
     "text": "Como a função ISINSCOPE deve ser utilizada no DAX para criar medidas que exibam comportamentos ou cálculos distintos em cada nível de uma hierarquia apresentada em um visual de Matriz?",
     "options": [
-      "ISINSCOPE(Coluna) retorna TRUE quando a coluna especificada está no \"escopo\" atual — ou seja, é usada como agrupamento no nível atual da hierarquia de uma Matriz; permite criar medidas contextuais: Resultado = IF(ISINSCOPE(DimProduto[Subcategoria]), [Margem%], IF(ISINSCOPE(DimProduto[Categoria]), [Margem% Categoria], [Margem% Total])) — exibe métricas diferentes em cada nível da hierarquia.",
-      "ISINSCOPE é equivalente a ISFILTERED — ambas retornam TRUE quando uma coluna tem filtro ativo no contexto atual; a diferença é apenas terminológica, sendo ISINSCOPE o termo preferido para hierarquias visuais enquanto ISFILTERED é usado para filtros de slicer; o resultado e o comportamento são idênticos em qualquer cenário.",
-      "ISINSCOPE funciona apenas em visuais de Matriz — em outros tipos de visual como Tabela, Gráfico de Barras e Treemap, a função sempre retorna FALSE independente do nível de agrupamento; para detectar o nível de agrupamento em outros visuais, usar HASONEVALUE como alternativa universal.",
-      "ISINSCOPE só pode verificar o escopo de colunas da mesma tabela — não é possível verificar colunas de tabelas relacionadas; para hierarquias que cruzam múltiplas tabelas dimensionais, usar ISFILTERED nas colunas de cada tabela separadamente e combinar com OR para simular o comportamento do ISINSCOPE."
+      "ISINSCOPE(Coluna) retorna TRUE quando a coluna está no nível de agrupamento atual da Matriz;",
+      "Seria equivalente a ISFILTERED — ambas TRUE com filtro ativo; diferença só terminológica (hierarquias vs slicers), comportamento idêntico.",
+      "Funcionaria só em Matriz; em Tabela/Barras/Treemap sempre retornaria FALSE, exigindo HASONEVALUE como alternativa universal.",
+      "Só verificaria colunas da mesma tabela, não relacionadas; hierarquias entre tabelas exigiriam ISFILTERED combinado com OR."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -3554,9 +3554,9 @@ export const questions = [
     "text": "Qual das seguintes afirmações descreve corretamente o uso e os cenários analíticos mais eficazes para o visual Treemap no Power BI?",
     "options": [
       "O visual Treemap no Power BI é configurado com um campo de 'Grupo' (para definir os retângulos principais) e um campo de 'Valores' (para determinar o tamanho de cada retângulo). Ele é particularmente eficaz para comparar proporções entre múltiplas categorias simultaneamente, analisar a composição de um portfólio e visualizar estruturas hierárquicas onde a magnitude relativa é mais importante do que a evolução temporal.",
-      "O Treemap é a ferramenta ideal para visualizar tendências de séries temporais complexas, especialmente quando há muitas categorias, pois ele representa o tempo no eixo X e os retângulos se redimensionam automaticamente. Ele serve como uma alternativa superior aos gráficos de linha sobrecarregados com mais de 10 séries.",
-      "O Treemap no Power BI só pode renderizar medidas com valores positivos; a inclusão de valores negativos resultará em um erro de visualização. Para contornar isso, é necessário criar uma coluna calculada que converta todos os valores para seus absolutos, pois o visual não oferece tratamento para números negativos.",
-      "O Treemap e o Gráfico de Pizza são intercambiáveis para a representação de proporções de um todo. A distinção é que o Treemap é mais adequado para um número limitado de categorias (até 5), enquanto o Gráfico de Pizza é preferível para conjuntos maiores (6 ou mais), mas ambos se tornam ineficazes acima de 10 categorias."
+      "Seria ideal para tendências temporais complexas com muitas categorias, representando tempo no eixo X — superior a linhas com 10+ séries.",
+      "Só renderizaria valores positivos; negativos dariam erro, exigindo coluna calculada com valores absolutos.",
+      "Treemap e Pizza seriam intercambiáveis; Treemap melhor até 5 categorias, Pizza para 6+, ambos ineficazes acima de 10."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -3578,10 +3578,10 @@ export const questions = [
     "id": "q144_pl300",
     "text": "Como você implementaria o Object-Level Security (OLS) para ocultar uma coluna de dados sensíveis, como 'Salário', de usuários não autorizados em um modelo Power BI, utilizando o Tabular Editor?",
     "options": [
-      "Para implementar OLS, você deve usar o Tabular Editor (uma ferramenta externa conectada via XMLA endpoint a um workspace Premium ou ao modelo local). Nele, crie uma role (ex: 'RH Restrito'), selecione a coluna 'Salário' na tabela 'Funcionários' e defina suas permissões como 'None' para essa role. Usuários atribuídos a essa role não verão a coluna no painel de campos, receberão erros ao tentar usar medidas que a referenciam, e visuais com essa coluna serão bloqueados. A atribuição de usuários à role é feita no Power BI Service via Dataset > Security.",
-      "OLS é configurado diretamente no Power BI Desktop, acessando 'Modelagem > Gerenciar Funções'. Ao criar uma função, as abas 'Permissões de Tabela' e 'Permissões de Coluna' permitem definir o acesso por objeto, eliminando a necessidade de ferramentas externas como o Tabular Editor para modelos padrão do Power BI.",
-      "O OLS no Power BI substitui automaticamente o valor das colunas restritas por asteriscos (***) para usuários sem permissão. A coluna permanece visível no painel de campos e nos visuais, mas seus valores são mascarados, permitindo que usuários sem permissão vejam a estrutura, mas não o conteúdo sensível.",
-      "O OLS só é eficaz em modelos DirectQuery. Em modelos Import, ocultar colunas via OLS não é efetivo, pois o VertiPaq armazena os dados localmente no arquivo .pbix, e usuários com acesso ao arquivo podem extrair os dados da coluna 'oculta' via exportação ou conexão direta ao modelo."
+      "Tabular Editor via XMLA endpoint: criar role ('RH Restrito'), selecionar coluna 'Salário', definir permissão 'None';",
+      "Seria configurado no Desktop em 'Modelagem > Gerenciar Funções', com abas de Permissões de Tabela/Coluna, sem precisar do Tabular Editor.",
+      "Substituiria o valor por asteriscos (***) para sem permissão; a coluna permaneceria visível, só os valores mascarados.",
+      "Só seria eficaz em DirectQuery; em Import o VertiPaq armazenaria localmente, permitindo extrair a coluna 'oculta' via exportação."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -3603,10 +3603,10 @@ export const questions = [
     "id": "q145_pl300",
     "text": "Como usar tipos List e Record nativos da linguagem M no Power Query para criar transformações avançadas sem usar a interface visual?",
     "options": [
-      "List em M é uma coleção ordenada de valores (ex: {1, 2, 3} ou {\"a\"..\"z\"}); Record é uma coleção de pares nome-valor (ex: [Nome=\"João\", Idade=30]). Funções como List.Transform, Record.ToTable e List.Generate permitem criar lógica complexa e transformações avançadas sem depender da interface visual.",
-      "List e Record no M são apenas representações intermediárias usadas internamente pelo Power Query durante o processamento; o analista não pode criar ou manipular List e Record diretamente em fórmulas M customizadas, devendo usar apenas tabelas (Table) para coleções de dados.",
-      "Record no M é equivalente a uma linha de tabela e não pode conter valores aninhados; cada campo de um Record deve ser um valor primitivo (texto, número, data), sendo necessário usar tabelas aninhadas (Table dentro de Table) para estruturas hierárquicas.",
-      "List e Record são tipos de dados auxiliares, úteis para operações rápidas e temporárias dentro de uma única etapa de transformação, mas não são projetados para serem passados entre consultas ou para construir estruturas de dados complexas que seriam persistidas como colunas de tabela."
+      "List é coleção ordenada (ex: {1,2,3}); Record é pares nome-valor (ex: [Nome=\"João\",Idade=30]); List.Transform, Record.ToTable e List.",
+      "Seriam só representações internas do Power Query; o analista não poderia criar/manipular List e Record diretamente, só Table.",
+      "Record seria equivalente a uma linha de tabela sem valores aninhados; cada campo precisaria ser primitivo, exigindo tabelas aninhadas.",
+      "Seriam tipos auxiliares só para operações rápidas dentro de uma etapa, não projetados para passar entre consultas ou persistir como coluna."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -3628,10 +3628,10 @@ export const questions = [
     "id": "q146_pl300",
     "text": "Qual das seguintes opções descreve corretamente o uso da função `FORMAT` no DAX para exibir valores numéricos e datas em formatos customizados, especialmente em medidas de texto?",
     "options": [
-      "`FORMAT(valor, formato_string)` é a função correta para converter números e datas em texto formatado. Por exemplo, `FORMAT([Total Vendas], \"R$ #,##0.00\")` pode retornar \"R$ 1.234,56\", `FORMAT(TODAY(), \"DD/MM/YYYY\")` retorna \"23/06/2026\", e `FORMAT([Margem], \"0.0%\")` retorna \"12,5%\". É ideal para criar medidas de texto para títulos dinâmicos, cartões de texto e narrativas.",
-      "`FORMAT` no DAX funciona apenas com valores de data e hora. Para formatar números, deve-se usar a função `TEXT`, que é o equivalente DAX do `TEXT` do Excel. Por exemplo, `TEXT([Total Vendas], \"R$ #,##0.00\")` seria a sintaxe correta para formatação numérica.",
-      "`FORMAT` sempre retorna texto no formato do idioma inglês, independentemente da configuração de localidade do relatório. Para obter formatação em português (ex: separador decimal vírgula, mês em português), é necessário usar `CONCATENATE` com funções como `MONTH`, `YEAR` e `DAY` para construir a string manualmente.",
-      "Medidas que utilizam `FORMAT` não podem ser usadas em visuais como Cards e KPIs, pois o retorno de texto em um campo de valor sempre gera um erro de tipo incompatível, exigindo que `FORMAT` seja usado apenas em campos de texto como Título e Tooltip."
+      "FORMAT(valor, formato) converte números/datas em texto formatado: FORMAT([Vendas],\"R$ #,##0.00\")→\"R$ 1.234,56\"; FORMAT(TODAY(),\"DD/MM/YYYY\");",
+      "FORMAT funcionaria só com data/hora; números exigiriam a função TEXT, equivalente ao TEXT do Excel.",
+      "FORMAT sempre retornaria texto em inglês, independente da localidade; português exigiria CONCATENATE com MONTH/YEAR/DAY manualmente.",
+      "Medidas com FORMAT não poderiam ser usadas em Cards/KPIs por erro de tipo incompatível, só em campos de texto como Título/Tooltip."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -3654,9 +3654,9 @@ export const questions = [
     "text": "Como você configuraria um filtro de data relativa (Relative Date Filtering) em um slicer de data no Power BI e quais opções estão disponíveis para definir a janela temporal?",
     "options": [
       "Para configurar um filtro de data relativa, adicione a coluna de data ao Slicer, vá em Formatar > Configurações do Slicer > Estilo, e selecione \"Data Relativa\" ou \"Hora Relativa\". Em seguida, configure a janela temporal escolhendo o período (Último/Próximo/Este), uma quantidade numérica e uma unidade (Dias, Semanas, Meses, Trimestres, Anos, Semanas Calendário, Meses Calendário, Anos Calendário). Por exemplo, \"Últimos 30 Dias\" filtra automaticamente os últimos 30 dias a partir da data atual sem necessidade de atualização manual do filtro.",
-      "O filtro de data relativa está disponível apenas no painel de Filtros (Filters Pane); para usar um filtro de data relativa em um slicer visual na página, é necessário usar o estilo \"Entre\" com medidas DAX que retornam TODAY() e TODAY()-N.",
-      "O filtro de data relativa no Power BI usa a data do último refresh do dataset como \"hoje\"; se o dataset foi atualizado ontem, \"Últimos 7 Dias\" inclui os 7 dias anteriores ao refresh, não à data atual de visualização; para filtros relativos à data de acesso do usuário, é preciso usar medidas DAX com TODAY().",
-      "O estilo \"Data Relativa\" no Slicer está disponível apenas para colunas de data de tabelas marcadas como \"Tabela de Datas\"; colunas de data em tabelas de fatos não suportam esse estilo e exibem apenas os estilos \"Entre\" e \"Lista\"."
+      "Estaria disponível só no Filters Pane; num slicer visual exigiria estilo \"Entre\" com medidas DAX retornando TODAY() e TODAY()-N.",
+      "Usaria a data do último refresh como \"hoje\", não a data de visualização; relativo à data de acesso exigiria medidas DAX com TODAY().",
+      "\"Data Relativa\" só estaria disponível para colunas de tabelas marcadas como Tabela de Datas; tabelas de fatos só teriam \"Entre\"/\"Lista\"."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -3676,12 +3676,12 @@ export const questions = [
   },
   {
     "id": "q148_pl300",
-    "text": "Você precisa criar medidas DAX para calcular o saldo de abertura (Opening Balance) e o saldo de fechamento (Closing Balance) de um período para análises financeiras e de estoque em diferentes granularidades temporais (mês, trimestre, ano). Qual é a abordagem correta para implementar essas medidas no Power BI, considerando as funções DAX mais adequadas?",
+    "text": "Como criar medidas DAX para saldo de abertura e fechamento de um período (mês, trimestre, ano) em análises financeiras/estoque, usando as funções mais adequadas?",
     "options": [
       "A abordagem correta envolve o uso de funções de inteligência de tempo como STARTOFMONTH e ENDOFMONTH dentro de CALCULATE para definir o contexto de data, ou as funções dedicadas OPENINGBALANCEMONTH e CLOSINGBALANCEMONTH (e suas variantes para trimestre e ano), que simplificam a criação dessas medidas.",
       "Saldo de abertura e fechamento são calculados eficientemente com funções de offset temporal como LAG e LEAD, pois permitem navegar entre períodos com maior precisão, especialmente para dados com granularidade diária irregular, onde LAG([Total Saldo], 1, DimData[Data]) representaria o saldo de abertura.",
-      "As funções OPENINGBALANCEMONTH e CLOSINGBALANCEMONTH são robustas e sempre retornam o último valor disponível, mesmo que não haja transações no dia exato de abertura ou fechamento. Elas são preferíveis a LASTNONBLANK para dados com lacunas temporais.",
-      "É redundante criar medidas separadas para saldo de abertura e fechamento, pois o saldo de abertura de um período é sempre o saldo de fechamento do período anterior. A prática recomendada é criar apenas CLOSINGBALANCEMONTH e derivar a abertura usando CALCULATE([Saldo Fechamento Mês], PREVIOUSMONTH(DimData[Data]))."
+      "OPENINGBALANCEMONTH/CLOSINGBALANCEMONTH sempre retornariam o último valor disponível mesmo sem transação no dia exato — preferíveis a LASTNONBLANK.",
+      "Seria redundante separar abertura/fechamento, pois abertura = fechamento do período anterior;"
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -3703,10 +3703,10 @@ export const questions = [
     "id": "q149_pl300",
     "text": "Como é possível integrar relatórios do Power BI diretamente no Microsoft Teams e quais são as principais formas de acesso e interação disponíveis para os usuários?",
     "options": [
-      "Existem múltiplas formas de integrar e acessar relatórios do Power BI no Microsoft Teams: 1) Adicionar como aba em canais ou chats; 2) Usar o aplicativo Power BI no Teams para uma experiência completa do serviço; 3) Compartilhar o link do relatório em um chat para um preview interativo; e 4) Compartilhar a tela com o relatório durante reuniões do Teams, mantendo a interatividade.",
-      "A integração do Power BI com o Teams exige que o administrador do tenant habilite explicitamente a funcionalidade tanto no Portal de Administração do Power BI quanto no Centro de Administração do Teams, sendo que, sem ambas as configurações, a opção Power BI não estará disponível.",
-      "Relatórios adicionados como aba no Teams são estáticos, exibindo apenas um snapshot do momento da configuração; para atualização, é necessário remover e recriar a aba, e interações como filtros e drill-through não são suportadas.",
-      "A integração completa do Power BI com o Teams, incluindo abas interativas e previews visuais, está disponível exclusivamente para relatórios em workspaces Premium, enquanto workspaces Pro permitem apenas o compartilhamento de links de texto."
+      "Múltiplas formas: 1) aba em canais/chats; 2) app Power BI no Teams para experiência completa; 3) link em chat com preview interativo;",
+      "Exigiria que o admin habilitasse explicitamente tanto no Admin Portal do Power BI quanto no Centro de Admin do Teams, sem o quê não funcionaria.",
+      "Abas no Teams seriam estáticas, snapshot do momento; atualizar exigiria recriar a aba, sem suporte a filtros/drill-through.",
+      "Integração completa (abas interativas) estaria só em Premium; Pro só permitiria compartilhar links de texto."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -3729,9 +3729,9 @@ export const questions = [
     "text": "O que é o Large Dataset Storage Format no Power BI Premium e quais são os benefícios e requisitos para habilitá-lo?",
     "options": [
       "O Large Dataset Storage Format (formato de armazenamento grande) armazena datasets no formato V3 do Analysis Services em vez do formato padrão .pbix, permitindo datasets que excedem o limite de 10 GB (até 400 GB em Premium), habilitando o XMLA endpoint para leitura e escrita, suportando refresh incremental avançado com partições gerenciadas no Service, e melhorando a performance de refresh para modelos grandes. Ele é habilitado manualmente nas configurações do dataset em um workspace Premium.",
-      "O Large Dataset Storage Format é habilitado automaticamente pelo Power BI Service quando o dataset excede 1 GB, não requerendo configuração manual. Abaixo de 1 GB, o formato padrão .pbix é usado; acima de 1 GB, o Service migra automaticamente para o formato grande sem intervenção do proprietário do dataset.",
-      "O Large Dataset Storage Format está disponível em todos os planos do Power BI, incluindo o Power BI Pro. É uma opção de otimização de armazenamento que reduz o tamanho do arquivo .pbix no Service sem impacto nas funcionalidades, e habilitá-lo no Pro aumenta o limite de dataset de 1 GB para 10 GB sem necessidade de licença Premium.",
-      "Ao habilitar o Large Dataset Storage Format, o dataset não pode mais ser baixado como arquivo .pbix pelo proprietário, pois o formato grande é incompatível com o Power BI Desktop e só pode ser editado diretamente no Service via browser ou via XMLA endpoint com ferramentas externas como Tabular Editor."
+      "Seria habilitado automaticamente quando o dataset excede 1GB, sem configuração manual, migrando do .pbix sem intervenção do proprietário.",
+      "Estaria disponível em todos os planos incluindo Pro; aumentaria o limite de 1GB para 10GB no Pro sem precisar de Premium.",
+      "Ao habilitar, o dataset não poderia mais ser baixado como .pbix, sendo editável só no Service via browser ou XMLA com Tabular Editor."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -3754,9 +3754,9 @@ export const questions = [
     "text": "Como você conectaria o Power BI Desktop a uma lista do SharePoint Online e quais são as melhores práticas para garantir um desempenho adequado na carga de dados?",
     "options": [
       "Utilizar 'Obter Dados' > 'Lista do SharePoint Online', inserir a URL raiz do site SharePoint (não a URL da lista específica), e selecionar a lista desejada no Navegador. Para performance, aplicar filtros de colunas no Power Query para carregar apenas o necessário, filtrar por período se a lista for grande, e usar a opção '2.0' do conector, que oferece melhor desempenho.",
-      "Para conectar a uma lista SharePoint, usar a URL completa da lista incluindo o parâmetro ListId (ex: `https://empresa.sharepoint.com/sites/site/_api/lists/getbyguid('ID-da-lista')`); usar a URL raiz do site gera erro pois o conector não consegue enumerar as listas disponíveis sem o identificador único da lista de destino.",
-      "Listas SharePoint Online no Power BI são sempre carregadas em modo DirectQuery — o Power BI não armazena os dados localmente para listas SharePoint pois são documentos vivos que podem ser editados por múltiplos usuários simultaneamente; o modo Import não está disponível para fontes SharePoint Online.",
-      "Conexões com SharePoint Online requerem gateway de dados on-premises mesmo para listas em SharePoint na nuvem — o gateway autentica via protocolo NTLM com o SharePoint e encaminha as requisições de dados; sem gateway, a autenticação OAuth do Power BI Service não é aceita pelo SharePoint Online."
+      "Usar a URL completa com ListId; a URL raiz daria erro pois o conector não conseguiria enumerar listas sem o identificador único.",
+      "Listas SharePoint sempre carregariam em DirectQuery, pois são documentos vivos editáveis; Import não estaria disponível.",
+      "Exigiria gateway on-premises mesmo para SharePoint na nuvem, autenticando via NTLM; sem gateway, OAuth não seria aceito."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -3780,7 +3780,7 @@ export const questions = [
     "options": [
       "Percentil 90 Vendas = PERCENTILX.INC(ALL(DimProduto), CALCULATE(SUM(Vendas[Valor])), 0.9)",
       "Percentil 90 Vendas = CALCULATE(SUM(Vendas[Valor]), TOPN(0.1, ALL(DimProduto), [Total Vendas]))",
-      "DAX não tem função nativa de percentil – para calcular percentis é necessário exportar os dados para R ou Python e importar o resultado de volta como tabela calculada.",
+      "DAX não teria função nativa de percentil – seria preciso exportar para R/Python e importar o resultado como tabela calculada.",
       "Percentil 90 Vendas = PERCENTILEX.INC(Vendas, Vendas[Valor], 0.9)"
     ],
     "correctAnswer": 0,
@@ -3801,12 +3801,12 @@ export const questions = [
   },
   {
     "id": "q153_pl300",
-    "text": "No Power BI, você precisa criar um painel de informações interativo que apareça e desapareça ao ser acionado por um botão de ajuda. Qual é a sequência correta de passos para implementar essa funcionalidade utilizando Bookmarks e o painel de Seleção (Selection)?",
+    "text": "Como criar um painel de informações que aparece/desaparece via botão de ajuda, usando Bookmarks e o painel de Seleção (Selection)?",
     "options": [
-      "Primeiro, crie o painel de informações (usando uma Caixa de Texto ou Forma) e posicione-o sobre os visuais existentes. Em seguida, no painel de Seleção (View > Selection), oculte o painel de informações. Crie dois Bookmarks: um para o estado \"Painel Fechado\" (com o painel oculto) e outro para o estado \"Painel Aberto\" (com o painel visível). Por fim, configure um botão de ajuda para acionar o Bookmark \"Painel Aberto\" e um botão de fechar dentro do painel para acionar o Bookmark \"Painel Fechado\".",
-      "Painéis de visibilidade condicional no Power BI exigem o uso de medidas DAX com SELECTEDVALUE para controlar a exibição, criando uma medida que retorna 1 ou 0 com base na seleção do usuário e aplicando formatação condicional de opacidade. Bookmarks não oferecem suporte para controle de visibilidade de objetos individuais.",
-      "O painel de Seleção (View > Selection) serve apenas para controlar a ordem de sobreposição (z-order) dos visuais, não sua visibilidade. Para ocultar ou mostrar visuais por meio de um botão, é preciso usar a propriedade de formatação \"Visual > General > Effects > Visibility\" com uma medida DAX que retorne verdadeiro ou falso.",
-      "Bookmarks que controlam a visibilidade de objetos são recalculados a cada interação do usuário com filtros e segmentadores, o que significa que todos os Bookmarks da página são resetados para o estado inicial, fechando painéis abertos e perdendo o estado de visibilidade configurado. Para visibilidade persistente, é necessário usar páginas separadas para cada estado."
+      "Criar o painel (Caixa de Texto/Forma) sobre os visuais; no painel de Seleção, ocultá-lo; criar dois Bookmarks (\"Fechado\" oculto, \"Aberto\" visível);",
+      "Exigiria medida DAX com SELECTEDVALUE retornando 1/0 e opacidade condicional; Bookmarks não suportariam controle de visibilidade individual.",
+      "O painel de Seleção controlaria só a ordem (z-order), não visibilidade; ocultar exigiria \"Visual > Effects > Visibility\" com medida DAX.",
+      "Bookmarks de visibilidade seriam recalculados a cada interação com filtros, resetando todos para o estado inicial;"
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -3830,8 +3830,8 @@ export const questions = [
     "options": [
       "Utiliza-se 'Obter Dados' > 'Google Analytics'; a autenticação é feita com uma conta Google que tenha acesso à propriedade GA4. O navegador exibirá a estrutura hierárquica Conta > Propriedade > Fluxos de Dados, com dimensões e métricas baseadas em eventos, como usuários, sessões (eventos de session_start), eventos personalizados, conversões, engajamento, dados demográficos e de e-commerce (se configurado).",
       "Utiliza-se 'Obter Dados' > 'Google Analytics'; a autenticação é feita com uma conta Google que tenha acesso à propriedade do Analytics. O navegador exibirá a estrutura hierárquica Conta > Propriedade > Vista, com dimensões e métricas como sessões, usuários, pageviews, taxa de rejeição, conversões e dados de e-commerce (se configurado).",
-      "O Power BI não possui conector nativo para Google Analytics, sendo necessário exportar os dados para CSV e importar via conector de arquivo; alternativamente, pode-se usar o Google Sheets como intermediário com o complemento Google Analytics, e conectar o Power BI ao Google Sheets.",
-      "Dados do Google Analytics no Power BI são sempre carregados em modo DirectQuery, o que pode levar a problemas de desempenho e atingir limites de requisições da API; para análise eficiente, é recomendado criar um dataset de amostragem com período fixo usando o modo Import com refresh semanal."
+      "Não haveria conector nativo; exigiria exportar para CSV ou usar Google Sheets como intermediário antes de conectar o Power BI.",
+      "Carregaria sempre em DirectQuery, atingindo limites de API; recomendaria dataset de amostragem com Import e refresh semanal."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -3851,12 +3851,12 @@ export const questions = [
   },
   {
     "id": "q155_pl300",
-    "text": "Um analista de dados implementou a seguinte coluna calculada DAX para classificar duplicatas em faixas de atraso (aging) em um relatório do Power BI:\n\n```\nFaixa Aging = \nVAR DiasAtraso = DATEDIFF(ContasReceber[Vencimento], TODAY(), DAY)\nRETURN\n    SWITCH(TRUE(),\n        DiasAtraso <= 0, \"A Vencer\",\n        DiasAtraso <= 30, \"1-30 dias\",\n        DiasAtraso <= 60, \"31-60 dias\",\n        DiasAtraso <= 90, \"61-90 dias\",\n        \"91+ dias\"\n    )\n```\n\nEle também planeja criar uma medida `Total Aging = SUM(ContasReceber[Valor])` para analisar os valores por faixa. Qual é a principal consideração ou limitação que o analista deve ter em mente ao usar esta abordagem para uma análise de aging dinâmica e sempre atualizada?",
+    "text": "Um analista criou esta coluna calculada DAX para classificar aging:\n```\nFaixa Aging =\nVAR DiasAtraso = DATEDIFF(ContasReceber[Vencimento], TODAY(), DAY)\nRETURN SWITCH(TRUE(),\n  DiasAtraso<=0,\"A Vencer\", DiasAtraso<=30,\"1-30\",\n  DiasAtraso<=60,\"31-60\", DiasAtraso<=90,\"61-90\",\"91+\")\n```\nQual a principal limitação para um aging sempre atualizado?",
     "options": [
-      "A principal limitação é que TODAY() em colunas calculadas é avaliado apenas no momento do refresh do modelo, tornando a classificação de aging estática e desatualizada até o próximo refresh. Para um aging dinâmico, seria mais adequado usar uma medida DAX que recalcula TODAY() a cada interação do usuário.",
-      "DATEDIFF no DAX calcula a diferença considerando apenas dias úteis automaticamente — fins de semana e feriados são excluídos do cálculo; para aging em dias corridos é necessário usar [DataAtual] - [Vencimento] que calcula a diferença em dias de calendário sem exclusão de fins de semana.",
-      "Análise de aging com TODAY() não funciona corretamente no Power BI Service — TODAY() retorna a data UTC do servidor do Service, que pode ser diferente da data local do usuário no Brasil (UTC-3); para garantir a data correta no fuso brasileiro, usar DATEADD(TODAY(), -3/24, HOUR) para ajustar manualmente o fuso horário na fórmula DAX.",
-      "O uso de VAR e SWITCH(TRUE()) em colunas calculadas é ineficiente para grandes volumes de dados, pois exige que o Power BI recalcule todas as linhas a cada filtro, sendo preferível criar tabelas de faixas de aging separadas."
+      "TODAY() em coluna calculada só avalia no refresh, tornando o aging estático até o próximo; uma medida DAX recalcularia a cada interação.",
+      "DATEDIFF consideraria só dias úteis automaticamente; para dias corridos seria preciso [DataAtual]-[Vencimento].",
+      "TODAY() não funcionaria corretamente no Service por retornar UTC do servidor; seria preciso ajustar com DATEADD(TODAY(),-3/24,HOUR).",
+      "VAR e SWITCH(TRUE()) em coluna calculada seriam ineficientes para grandes volumes, exigindo tabelas de faixas separadas."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -3878,10 +3878,10 @@ export const questions = [
     "id": "q156_pl300",
     "text": "Qual é a diferença entre Cross Highlight (destaque cruzado) e Cross Filter (filtro cruzado) ao clicar em um ponto de dados em um visual do Power BI?",
     "options": [
-      "Cross Highlight mantém todos os dados no visual relacionado mas escurece os não relacionados com o item selecionado — o total da medida permanece o mesmo, os dados não selecionados aparecem em transparência; Cross Filter remove completamente os itens não relacionados do visual — apenas os dados associados ao item selecionado são exibidos, alterando o total; configurado via Format > Edit Interactions escolhendo Highlight ou Filter para cada par de visuais.",
-      "Cross Highlight e Cross Filter são termos para o mesmo comportamento no Power BI — ambos filtram os dados dos visuais relacionados ao clicar em um ponto de dados; a distinção entre \"highlight\" e \"filter\" é apenas visual com o mesmo impacto nos totais e na contagem de registros exibidos.",
-      "Cross Highlight está disponível apenas em gráficos de barras e colunas — outros tipos de visual como dispersão, pizza e mapa usam sempre Cross Filter ao receber interação de outros visuais; a opção Highlight no painel Edit Interactions só aparece quando o visual de destino é do tipo barra ou coluna.",
-      "Cross Filter é a configuração padrão para todos os visuais do Power BI — ao clicar em qualquer ponto de dados, os visuais relacionados são filtrados para mostrar apenas os dados associados; Cross Highlight deve ser habilitado explicitamente em Edit Interactions para cada par de visuais desejado, pois não é o comportamento padrão."
+      "Cross Highlight mantém todos os dados, escurecendo os não relacionados (total inalterado); Cross Filter remove os não relacionados, alterando o total;",
+      "Seriam termos para o mesmo comportamento — a distinção \"highlight\" vs \"filter\" seria só visual, com mesmo impacto nos totais.",
+      "Cross Highlight estaria só em barras/colunas; outros visuais usariam sempre Cross Filter ao receber interação.",
+      "Cross Filter seria o padrão para todos os visuais; Cross Highlight exigiria habilitação explícita em Edit Interactions."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -3905,8 +3905,8 @@ export const questions = [
     "options": [
       "Datasets Certified são validados por uma autoridade designada pelo administrador do tenant, representando a fonte oficial e confiável da organização, pois passaram por revisão de qualidade, governança e alinhamento com definições de negócio. Já o selo Promoted indica apenas que o proprietário considera o dataset de qualidade e pronto para uso, sem um processo formal de validação. Para relatórios críticos de negócio, deve-se usar sempre um dataset Certified; Promoted é mais adequado para relatórios departamentais ou experimentais.",
       "Certified e Promoted têm o mesmo nível de confiabilidade técnica — a diferença é apenas administrativa: Certified requer aprovação do administrador enquanto Promoted é autoatribuído; em termos de qualidade de dados, acurácia de medidas e cobertura histórica, ambos os tipos são equivalentes pois o Power BI valida automaticamente os dados em ambos os casos.",
-      "Datasets Promoted são sempre mais atualizados que Certified — o processo de certificação demora semanas e os datasets Certified ficam desatualizados enquanto aguardam revalidação; para dados mais recentes e análises ágeis, Promoted é sempre a melhor escolha pois é atualizado pelo proprietário imediatamente sem burocracia de aprovação.",
-      "A distinção entre Certified e Promoted só é relevante para usuários sem licença Pro — usuários Pro têm acesso aos metadados técnicos do dataset (número de tabelas, refresh history, RLS configurado) para avaliar a qualidade independentemente; os selos de endorsement são um recurso de orientação para usuários consumidores sem capacidade técnica de avaliar datasets."
+      "Promoted seria sempre mais atualizado, pois a certificação demoraria semanas; Promoted seria sempre a melhor escolha para agilidade.",
+      "A distinção só importaria para usuários sem Pro; usuários Pro avaliariam a qualidade pelos metadados técnicos independentemente."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -3929,9 +3929,9 @@ export const questions = [
     "text": "Como a função COALESCE é utilizada no DAX e quais são as principais vantagens que ela oferece em comparação com a abordagem tradicional de IF(ISBLANK())?",
     "options": [
       "COALESCE(expressão1, expressão2, ...) retorna o primeiro valor não-BLANK e não-NULL da lista de argumentos, sendo mais conciso e legível que aninhar IF(ISBLANK()). Por exemplo, Valor Final = COALESCE([Vendas Realizadas], [Vendas Previstas], 0) retorna as vendas realizadas se existirem, caso contrário as previstas, e se ambas forem BLANK, retorna 0.",
-      "COALESCE no DAX é idêntico ao IFERROR — ambos retornam um valor alternativo quando a expressão principal falha; a diferença é que COALESCE trata apenas valores BLANK enquanto IFERROR trata apenas erros de cálculo.",
-      "COALESCE aceita apenas dois argumentos no DAX (expressão principal e valor alternativo); para criar cadeias de fallback com três ou mais opções é necessário aninhar múltiplos COALESCE.",
-      "COALESCE no DAX sempre retorna o tipo de dado do primeiro argumento — se o primeiro argumento é uma medida numérica e o valor alternativo é texto, o COALESCE gera erro de tipo incompatível e não retorna o alternativo."
+      "Seria idêntico ao IFERROR — ambos retornariam valor alternativo na falha; a diferença seria COALESCE tratar BLANK, IFERROR tratar erros.",
+      "Aceitaria só dois argumentos; fallback com três ou mais exigiria aninhar múltiplos COALESCE.",
+      "Sempre retornaria o tipo do primeiro argumento; tipo alternativo diferente geraria erro de incompatibilidade."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -3951,12 +3951,12 @@ export const questions = [
   },
   {
     "id": "q159_pl300",
-    "text": "Como você pode exportar dados de um relatório do Power BI para o Excel, mantendo uma conexão dinâmica (live connection) com o conjunto de dados (dataset) para que a planilha seja atualizada automaticamente?",
+    "text": "Como exportar dados do Power BI para Excel mantendo conexão dinâmica (live) com o dataset, para atualização automática da planilha?",
     "options": [
-      "No Power BI Service, utilizando a funcionalidade 'Analyze in Excel' (acessível pelos três pontos do dataset), que baixa um arquivo .odc (Office Data Connection) que abre o Excel com uma Tabela Dinâmica conectada ao dataset do Power BI. Ao clicar em 'Refresh' no Excel, os dados são atualizados buscando diretamente do dataset publicado no Service, mantendo a conexão dinâmica sem a necessidade de exportar dados estáticos.",
-      "Através da opção 'Exportar dados' em cada visual do relatório (clicando nos três pontos do visual > Exportar dados > .xlsx), o que cria um arquivo Excel com conexão dinâmica ao dataset. Ao abrir o arquivo exportado no Excel e clicar em 'Habilitar Conteúdo', a conexão é estabelecida automaticamente e os dados são atualizados dinamicamente com cada atualização do dataset no Service.",
-      "Uma conexão dinâmica do Excel com o Power BI só é possível via Power BI Desktop. Publicar o relatório no Service quebra a conexão dinâmica. Para manter a atualização automática, o analista deve ter o arquivo .pbix aberto no Desktop e usar a opção 'Exportar para Excel com Conexão Dinâmica' disponível no menu Arquivo do Desktop.",
-      "A conexão dinâmica do Excel com o Power BI exige que o Excel e o Power BI Service estejam no mesmo tenant do Azure AD e que o usuário tenha a função de Administrador (Admin) no workspace. Usuários com a função de Colaborador (Contributor) ou inferior não conseguem estabelecer conexão dinâmica via 'Analyze in Excel', pois a autenticação requer permissões elevadas de acesso ao modelo semântico."
+      "'Analyze in Excel' (três pontos do dataset) baixa um .odc que abre o Excel com Tabela Dinâmica conectada; 'Refresh' no Excel busca direto do dataset publicado.",
+      "'Exportar dados' em cada visual (.xlsx) criaria conexão dinâmica; 'Habilitar Conteúdo' estabeleceria a conexão automaticamente.",
+      "Conexão dinâmica só seria possível via Desktop; publicar quebraria a conexão, exigindo o .pbix aberto e 'Exportar com Conexão Dinâmica'.",
+      "Exigiria mesmo tenant Azure AD e role de Admin no workspace; Contributor ou inferior não conseguiria via 'Analyze in Excel'."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -3979,9 +3979,9 @@ export const questions = [
     "text": "Como você criaria uma consulta parametrizada no Power Query que aceita uma data como parâmetro para filtrar dados de uma tabela SQL dinamicamente, garantindo a otimização do desempenho?",
     "options": [
       "Criar um parâmetro chamado 'DataInicio' do tipo 'Date/Time' em 'Home > Manage Parameters > New Parameter'. Na consulta da tabela SQL, adicionar uma etapa de filtro na coluna de data relevante, referenciando o parâmetro, por exemplo: = Table.SelectRows(Fonte, each [DataVenda] >= DataInicio). Isso permite que o Power Query, quando a fonte suporta query folding, traduza o filtro para uma cláusula WHERE no SQL enviado ao servidor, e o valor do parâmetro pode ser alterado sem modificar a consulta principal.",
-      "Parâmetros do tipo Date no Power Query devem ser passados como strings no formato 'YYYY-MM-DD', pois o tipo 'Date/Time' não é suportado diretamente como tipo de parâmetro para filtros. Para isso, crie o parâmetro como 'Text' e converta-o dentro da query usando Date.FromText(DataInicioParam) antes de aplicar o filtro.",
-      "Consultas parametrizadas com datas no Power Query não suportam query folding. Filtros de data com parâmetros sempre são executados localmente no mecanismo do Power BI após trazer todos os dados da fonte. Para manter o query folding com filtros de data dinâmicos, é necessário usar stored procedures no SQL Server que aceitam parâmetros de data via Data Source Query nativa.",
-      "Parâmetros do Power Query só podem ser referenciados em strings de conexão (como nome do servidor ou banco de dados), não podendo ser usados em filtros de dados dentro das transformações da query. Para filtros dinâmicos por data, é necessário usar colunas calculadas DAX com funções como TODAY() e DATEADD para calcular os períodos dinamicamente, sem parametrização no Power Query."
+      "Datas deveriam ser strings 'YYYY-MM-DD', pois Date/Time não seria suportado como parâmetro; criar como Text e converter com Date.FromText.",
+      "Consultas parametrizadas com data não suportariam query folding, executando localmente; manter folding exigiria stored procedures no SQL Server.",
+      "Parâmetros só seriam referenciáveis em strings de conexão, não em filtros; filtro dinâmico exigiria colunas DAX com TODAY()/DATEADD."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -4003,10 +4003,10 @@ export const questions = [
     "id": "q161_pl300",
     "text": "Em qual cenário a função SUBSTITUTEWITHINDEX é tipicamente utilizada no DAX e qual problema fundamental ela aborda em relação à otimização de relacionamentos e desempenho do modelo de dados no Power BI?",
     "options": [
-      "A função SUBSTITUTEWITHINDEX é uma função de baixo nível que substitui valores de uma coluna por índices numéricos sequenciais, baseados em uma tabela de referência ordenada. Ela é usada internamente pelo Power BI para otimizar relacionamentos, especialmente em cenários onde não há chaves numéricas comuns, criando índices posicionais que o mecanismo VertiPaq utiliza para junções eficientes. Raramente é usada diretamente por usuários em DAX.",
+      "É função de baixo nível que substitui valores por índices numéricos sequenciais de uma tabela ordenada;",
       "A função SUBSTITUTEWITHINDEX é a principal função DAX para criar chaves substitutas (surrogate keys) numéricas em tabelas de dimensão, substituindo chaves de texto longas por inteiros sequenciais para otimizar o uso de memória no VertiPaq e deve ser aplicada em todas as dimensões com chaves de texto.",
-      "A função SUBSTITUTEWITHINDEX é empregada para converter relacionamentos Many-to-Many nativos em relacionamentos One-to-Many, criando uma coluna de índice compartilhada que elimina a necessidade de tabelas ponte e melhora a performance, sendo a alternativa recomendada para M:M.",
-      "A função SUBSTITUTEWITHINDEX está disponível exclusivamente em modelos do Analysis Services Tabular e só pode ser acessada via DAX Studio, não sendo reconhecida no Power BI Desktop por ser uma função de sistema interna, resultando em erro se tentada no editor de fórmulas DAX do Power BI."
+      "Converteria relacionamentos M:N nativos em 1:N, criando índice compartilhado que eliminaria tabelas ponte — alternativa recomendada para M:N.",
+      "Estaria disponível só no Analysis Services Tabular, acessível só via DAX Studio, gerando erro se usada no Power BI Desktop."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -4029,9 +4029,9 @@ export const questions = [
     "text": "O que é o Power BI Embedded Analytics Playground e como desenvolvedores o usam para testar a incorporação de relatórios?",
     "options": [
       "Power BI Embedded Analytics Playground (playground.powerbi.com) é um ambiente de desenvolvimento sandbox gratuito da Microsoft onde desenvolvedores podem: testar a incorporação de relatórios e dashboards sem configurar infraestrutura Azure, explorar a API JavaScript do Power BI Client, experimentar eventos e interações programáticas, e gerar código de incorporação pronto para uso em aplicações; usa amostras de dados da Microsoft para demonstração.",
-      "Power BI Embedded Analytics Playground é o nome do plano gratuito do Power BI Embedded no Azure — oferece até 1 hora por dia de capacidade de incorporação sem custo para desenvolvedores testarem suas aplicações com dados reais antes de contratar o SKU pago A1 ou superior para produção.",
-      "O Playground é acessado diretamente no Power BI Desktop via menu Tools > Embedded Playground — abre um simulador local que emula o ambiente de produção do Power BI Embedded sem conexão com internet; útil para desenvolvedores em ambientes corporativos com restrições de acesso à internet.",
-      "Power BI Embedded Analytics Playground requer uma assinatura Azure ativa com pelo menos um recurso Power BI Embedded provisionado — é uma interface de administração do recurso Azure, não um ambiente de teste independente; sem o recurso Azure provisionado, o Playground não funciona e exibe erro de autorização."
+      "Seria o plano gratuito do Embedded no Azure, com 1h/dia de capacidade grátis com dados reais antes de contratar SKU A1+.",
+      "Seria acessado no Desktop via Tools > Embedded Playground, simulando localmente o ambiente de produção sem internet.",
+      "Exigiria assinatura Azure ativa com recurso Embedded provisionado; sem ele, exibiria erro de autorização."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -4053,10 +4053,10 @@ export const questions = [
     "id": "q163_pl300",
     "text": "Qual é a abordagem correta para conectar o Power BI a dados do Dynamics 365 (Customer Engagement ou Business Central) e quais são as principais considerações de performance a serem observadas?",
     "options": [
-      "Para Dynamics 365 CE/CRM: Get Data > Dynamics 365 (online) inserindo a URL da instância; ou via conector OData com a URL da API Web do Dynamics; para Business Central: Get Data > Microsoft Dynamics 365 Business Central com autenticação OAuth; considerações: Dynamics tem limite de colunas retornadas por entidade, filtrar apenas campos necessários, usar views filtradas no Dynamics para reduzir volume, e cuidado com relacionamentos N:N que geram múltiplas chamadas à API.",
-      "Dynamics 365 no Power BI é acessado exclusivamente via exportação para Azure Data Lake — o conector nativo do Dynamics foi descontinuado após a integração com o Azure Synapse Analytics; o fluxo correto é habilitar o Azure Data Lake Storage no Dynamics e criar Shortcuts no Power BI Fabric apontando para o lake exportado.",
-      "O conector Dynamics 365 no Power BI usa sempre modo DirectQuery — os dados do Dynamics são consultados em tempo real a cada interação do usuário no relatório; não é possível usar modo Import para dados do Dynamics pois a Microsoft restringe o armazenamento local de dados do CRM por compliance.",
-      "Para conectar ao Dynamics 365, é necessário instalar o gateway de dados on-premises mesmo para instâncias Dynamics 365 na nuvem — o gateway autentica via protocolo proprietário do Dynamics que não é compatível com a autenticação OAuth direta do Power BI Service; sem gateway configurado, o refresh no Service falha com erro de autenticação."
+      "CE/CRM: Get Data > Dynamics 365 (online) com URL da instância, ou conector OData; Business Central: conector dedicado com OAuth;",
+      "Seria acessado só via exportação para Azure Data Lake, pois o conector nativo teria sido descontinuado; exigiria Shortcuts no Fabric.",
+      "Usaria sempre DirectQuery, consultando em tempo real; Import não seria possível por restrição de compliance da Microsoft.",
+      "Exigiria gateway on-premises mesmo na nuvem, pois o protocolo proprietário não seria compatível com OAuth direto."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -4103,10 +4103,10 @@ export const questions = [
     "id": "q165_pl300",
     "text": "Qual das seguintes descrições define corretamente os Small Multiples (Múltiplos Pequenos) no Power BI e como eles são configurados para criar uma grade de gráficos comparativos?",
     "options": [
-      "Small Multiples repetem o mesmo visual para cada valor de uma dimensão, criando uma grade de gráficos lado a lado para comparação direta. Eles são configurados arrastando uma coluna (ex: Categoria) para o campo \"Small multiples\" no painel de visualização, e estão disponíveis para gráficos de barras, colunas, linhas e área. As configurações incluem o número de linhas e colunas da grade, a escala dos eixos (individual por painel ou compartilhada), layout e espaçamento entre painéis.",
-      "Small Multiples no Power BI são criados usando o visual Matriz com expansão de colunas, onde cada coluna da Matriz representa um 'múltiplo' do mesmo gráfico para uma categoria diferente. O visual nativo de Small Multiples não existe no Power BI e é uma funcionalidade do Tableau erroneamente associada ao Power BI.",
-      "Small Multiples exigem que todos os painéis usem a mesma escala de eixo Y, pois o Power BI não permite escalas independentes por painel para evitar comparações visuais enganosas. Para categorias com magnitudes muito diferentes, é recomendado usar gráficos separados em vez de Small Multiples.",
-      "Small Multiples estão disponíveis apenas em visuais customizados do AppSource. O Power BI Desktop nativo não possui o campo 'Small multiples' nos visuais padrão, sendo necessário instalar visuais como 'Small Multiple Line Chart' ou 'Small Multiple Bar Chart' do marketplace para ter essa funcionalidade no relatório."
+      "Repetem o mesmo visual por valor de uma dimensão, em grade lado a lado; arrastar coluna para \"Small multiples\"; disponível em barras/colunas/linhas/área;",
+      "Seriam criados via Matriz com expansão de colunas; o visual nativo não existiria, sendo funcionalidade do Tableau mal associada.",
+      "Exigiriam mesma escala Y em todos os painéis, sem escalas independentes; magnitudes diferentes exigiriam gráficos separados.",
+      "Estariam disponíveis só via AppSource; o nativo não teria o campo \"Small multiples\", exigindo visual do marketplace."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -4129,9 +4129,9 @@ export const questions = [
     "text": "O que é o Tabular Object Model (TOM) no contexto do Power BI e como desenvolvedores o utilizam para automatizar tarefas de gestão de modelos?",
     "options": [
       "TOM é a biblioteca .NET (Microsoft.AnalysisServices.Tabular) que representa a estrutura completa de um modelo tabular — tabelas, colunas, medidas, relacionamentos, roles, perspectivas; desenvolvedores usam TOM via C# ou PowerShell para: criar/modificar medidas em massa, adicionar roles de segurança programaticamente, comparar modelos entre ambientes, fazer deploy de modelos via CI/CD pipeline; acessa modelos Power BI via XMLA endpoint em workspaces Premium.",
-      "TOM é o formato de arquivo interno dos arquivos .pbix do Power BI Desktop — ao descompactar o .pbix (que é um arquivo ZIP), o arquivo DataModel contém o modelo em formato TOM/JSON editável; desenvolvedores editam esse arquivo diretamente para modificar o modelo sem usar o Power BI Desktop, sendo uma prática comum para automatização.",
-      "TOM é exclusivo do SQL Server Analysis Services (SSAS) Tabular on-premises — no Power BI Service, os modelos usam um formato proprietário diferente que não é compatível com a biblioteca TOM; para automatização no Power BI Service, usar a API REST do Power BI que tem endpoints equivalentes para todas as operações do TOM.",
-      "TOM no Power BI requer conhecimento avançado de C# e não tem alternativa para usuários sem experiência em programação; ferramentas visuais como Tabular Editor usam uma interface proprietária incompatível com o TOM oficial da Microsoft para gerenciamento de modelos Power BI."
+      "Seria o formato interno do .pbix; descompactando, o DataModel teria o modelo em TOM/JSON editável diretamente sem o Desktop.",
+      "Seria exclusivo do SSAS Tabular on-premises; no Service usaria formato diferente, exigindo API REST como equivalente.",
+      "Exigiria C# avançado sem alternativa; ferramentas como Tabular Editor usariam interface incompatível com o TOM oficial."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -4154,9 +4154,9 @@ export const questions = [
     "text": "Como importar dados de múltiplas abas de um arquivo Excel no Power Query de forma eficiente quando as abas têm estrutura idêntica?",
     "options": [
       "Acessar 'Obter Dados' > 'Pasta de Trabalho do Excel'; no Navegador, em vez de selecionar abas individuais, selecionar o arquivo na raiz e clicar em 'Transformar Dados'. No Power Query, filtrar a tabela resultante para mostrar apenas as abas ('Kind' = 'Sheet'), usar a coluna 'Data' que contém tabelas aninhadas para cada aba, e então usar 'Combinar/Expandir' para consolidar todas em uma única tabela, adicionando automaticamente uma coluna com o nome da aba de origem.",
-      "Para importar múltiplas abas com estrutura idêntica, é necessário criar uma consulta separada para cada aba e usar 'Anexar Consultas' para consolidar; o Power Query não possui um mecanismo de importação em lote de abas do mesmo arquivo Excel, exigindo que cada aba seja importada individualmente e depois consolidada manualmente.",
-      "Selecionar múltiplas abas no Navegador do Excel (usando Ctrl+Click) e clicar em 'Carregar' consolida automaticamente todas as abas selecionadas em uma única tabela, sem a necessidade de passos adicionais de combinação; o Power Query detecta automaticamente a estrutura comum e cria os cabeçalhos corretos.",
-      "A forma mais eficiente de importar múltiplas abas é salvar o arquivo Excel como múltiplos arquivos CSV (um por aba) e usar o conector 'Pasta' para consolidar; o conector Excel nativo do Power BI não suporta a importação eficiente de múltiplas abas para arquivos com mais de 5 abas devido a uma limitação do conector."
+      "Exigiria consulta separada por aba e 'Anexar Consultas'; não haveria mecanismo de importação em lote do mesmo arquivo.",
+      "Selecionar múltiplas abas (Ctrl+Click) e 'Carregar' consolidaria automaticamente, sem passos adicionais de combinação.",
+      "Seria mais eficiente salvar como CSVs separados e usar conector 'Pasta'; o conector Excel não suportaria mais de 5 abas."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -4178,10 +4178,10 @@ export const questions = [
     "id": "q168_pl300",
     "text": "Como você calcularia o coeficiente de correlação de Pearson entre duas medidas no DAX para analisar o relacionamento linear entre variáveis em um relatório do Power BI?",
     "options": [
-      "Implementando a fórmula de Pearson manualmente em DAX, utilizando funções como SUMX, VAR e DIVIDE para otimização e clareza, ou através da funcionalidade de Medidas Rápidas (Quick Measures) que gera o código DAX automaticamente.",
-      "Utilizando a função DAX nativa \"PEARSON(coluna1, coluna2)\", que calcula o coeficiente de correlação de Pearson de forma direta, similar à função homônima do Excel.",
-      "Criando colunas calculadas para cada variável e, em seguida, aplicando a função \"CORREL\" no Power Query para obter o coeficiente de correlação.",
-      "Desenvolvendo um visual de dispersão (Scatter Chart) e ativando a linha de tendência, pois o Power BI calcula e exibe o coeficiente de determinação (R²) automaticamente no visual, que é equivalente ao coeficiente de Pearson."
+      "Implementando a fórmula de Pearson manualmente com SUMX, VAR e DIVIDE, ou via Quick Measures que gera o código DAX automaticamente.",
+      "Usando a função DAX nativa \"PEARSON(coluna1, coluna2)\", calculando o coeficiente direto, similar à função do Excel.",
+      "Criando colunas calculadas por variável e aplicando \"CORREL\" no Power Query para obter o coeficiente.",
+      "Usando Scatter Chart com linha de tendência, pois o R² exibido seria automaticamente equivalente ao coeficiente de Pearson."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -4203,10 +4203,10 @@ export const questions = [
     "id": "q169_pl300",
     "text": "O que é o recurso \"Personalize Visuals\" no Power BI e como ele permite que usuários finais customizem relatórios sem editar o arquivo original?",
     "options": [
-      "Personalize Visuals permite que usuários finais (consumidores do relatório) troquem campos, tipos de visual e formatações diretamente no Service sem editar o relatório original — habilitado pelo desenvolvedor em File > Options > Report Settings > Allow users to personalize visuals; usuários acessam via ícone de personalização no visual e podem salvar suas customizações como \"Personal Bookmark\" sem afetar o relatório original para outros usuários.",
-      "Personalize Visuals é um recurso exclusivo do Power BI Premium que permite edição colaborativa de relatórios por múltiplos usuários simultaneamente — cada usuário vê e edita sua própria versão do relatório que é sincronizada com o original a cada 5 minutos; no plano Pro, apenas o proprietário do relatório pode fazer edições.",
-      "Personalize Visuals permite que usuários finais adicionem novos visuais e páginas ao relatório — o recurso dá acesso completo ao modo de edição do relatório para todos os usuários com permissão de visualização; a diferença do modo de edição padrão é que as alterações são automaticamente salvas como versão pessoal sem sobrescrever o original.",
-      "Personalize Visuals funciona apenas offline no Power BI Desktop — no Service, apenas usuários com role Member ou superior no workspace podem personalizar visuais; usuários com role Viewer só podem visualizar o relatório como publicado sem nenhuma customização de campos ou tipos de visual."
+      "Permite que consumidores troquem campos/tipos/formatação no Service sem editar o original — habilitado em Report Settings;",
+      "Seria exclusivo do Premium, com edição colaborativa simultânea sincronizada a cada 5 min; no Pro só o proprietário editaria.",
+      "Permitiria adicionar visuais/páginas com acesso completo de edição para qualquer Viewer, salvando como versão pessoal.",
+      "Funcionaria só offline no Desktop; no Service exigiria role Member+; Viewer só visualizaria sem customização."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -4228,10 +4228,10 @@ export const questions = [
     "id": "q170_pl300",
     "text": "Como resolver problemas de caracteres especiais (acentos, cedilha) exibidos incorretamente ao importar um arquivo CSV no Power Query?",
     "options": [
-      "No Power Query, ao importar um CSV, deve-se expandir as opções avançadas e selecionar o \"Origem do Arquivo\" (File Origin) correto, como \"65001: Unicode (UTF-8)\" ou \"1252: Western European (Windows)\". Se já importado, ajustar o parâmetro Encoding na função Csv.Document do passo \"Fonte\".",
+      "Expandir opções avançadas e selecionar \"Origem do Arquivo\" correto (\"65001: UTF-8\" ou \"1252: Western European\"); ou ajustar Encoding na função Csv.",
       "Aplicar a transformação \"Transformar\" > \"Texto\" > \"Limpar\" (Clean) na coluna com caracteres especiais, pois a função \"Limpar\" remove caracteres não imprimíveis e corrige codificações incorretas para UTF-8.",
-      "O Power Query detecta automaticamente o encoding; se houver problemas, a correção deve ser feita na origem do arquivo CSV, salvando-o com o encoding correto antes de reimportar, pois o Power Query não corrige arquivos mal formados.",
-      "Configurar o \"Locale\" (Localidade) para \"Português (Brasil)\" no conector \"Texto/CSV\", pois isso instrui o Power Query a usar a tabela de caracteres Windows-1252, que é o padrão brasileiro."
+      "O Power Query detectaria automaticamente o encoding; problemas exigiriam corrigir na origem do CSV antes de reimportar.",
+      "Configurar \"Locale\" para \"Português (Brasil)\" no conector, instruindo a usar Windows-1252, o padrão brasileiro."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -4253,10 +4253,10 @@ export const questions = [
     "id": "q171_pl300",
     "text": "No Power BI Desktop, como você pode organizar medidas DAX em pastas de exibição (Display Folders) para melhorar a navegação e a usabilidade do painel de campos?",
     "options": [
-      "Selecionar a medida no painel de Campos, ir até o painel Propriedades, localizar a propriedade \"Pasta de exibição\" (Display folder) e digitar o nome da pasta desejada. Para subpastas, use a barra (/) como separador, por exemplo, \"Vendas/Receita\".",
-      "As Pastas de Exibição são configuradas exclusivamente no Power Query, onde uma consulta de metadados define a estrutura de pastas para cada tabela, e as medidas são alocadas automaticamente com base em palavras-chave em seus nomes.",
-      "Pastas de Exibição são aplicáveis apenas a tabelas e colunas; medidas DAX não podem ser organizadas em pastas, devendo ser agrupadas em tabelas vazias criadas especificamente para esse fim.",
-      "A configuração de Pastas de Exibição para medidas e colunas só é possível através de ferramentas externas como o Tabular Editor, pois a propriedade \"Pasta de exibição\" não está disponível na interface nativa do Power BI Desktop."
+      "Selecionar a medida, painel Propriedades, propriedade \"Pasta de exibição\", digitar o nome; subpastas usam barra (/), ex: \"Vendas/Receita\".",
+      "Seriam configuradas só no Power Query, com consulta de metadados definindo pastas alocadas automaticamente por palavra-chave.",
+      "Aplicáveis só a tabelas/colunas; medidas DAX não poderiam ser organizadas, exigindo tabelas vazias dedicadas.",
+      "Só seria possível via Tabular Editor, pois a propriedade não estaria disponível na interface nativa do Desktop."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -4279,9 +4279,9 @@ export const questions = [
     "text": "Como o recurso de Clustering automático é utilizado no visual Scatter Chart do Power BI e qual a forma correta de interpretar seus resultados?",
     "options": [
       "No visual Scatter Chart, clique nos três pontos (...) > 'Automatically find clusters'; o Power BI utiliza o algoritmo k-means para identificar grupos naturais nos dados e colore os pontos automaticamente por cluster. As configurações permitem ajustar o número de clusters (automático ou manual) e o nome do campo de cluster gerado. O cluster é salvo como uma nova coluna na tabela do modelo e pode ser usado em outros visuais para filtrar e analisar os grupos identificados.",
-      "O clustering no Scatter Chart do Power BI usa o algoritmo DBSCAN (Density-Based Spatial Clustering) que identifica clusters de forma livre sem necessidade de especificar o número de grupos previamente; o algoritmo detecta automaticamente quantos clusters existem baseado na densidade dos pontos, sendo superior ao k-means para dados com clusters de forma irregular.",
-      "O recurso de Clustering está disponível apenas em visuais Scatter Chart com o campo 'Play Axis' preenchido — sem animação temporal, o clustering não é ativado; para datasets estáticos sem dimensão temporal, usar o visual Key Influencers que oferece agrupamento similar sem necessidade do Play Axis.",
-      "Clusters identificados no Scatter Chart são temporários — existem apenas enquanto o visual está selecionado e são perdidos ao navegar para outra página ou ao aplicar filtros; para persistir a análise de clustering é necessário exportar os dados com os rótulos de cluster para Excel e reimportar como nova tabela no modelo."
+      "Usaria DBSCAN, identificando clusters livremente sem nº pré-definido, detectando pela densidade — superior ao k-means para formas irregulares.",
+      "Estaria disponível só com 'Play Axis' preenchido; sem animação temporal, usar Key Influencers como alternativa.",
+      "Clusters seriam temporários, existindo só enquanto selecionado; persistir exigiria exportar e reimportar como nova tabela."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -4303,10 +4303,10 @@ export const questions = [
     "id": "q173_pl300",
     "text": "Quais são as principais funcionalidades do aplicativo Power BI Mobile para iOS e Android, e como os relatórios são otimizados para garantir uma experiência de visualização eficaz em dispositivos móveis?",
     "options": [
-      "O Power BI Mobile (iOS e Android) permite visualizar relatórios e dashboards do serviço, interagir com filtros e drill-through, receber notificações de alertas de dados, escanear códigos QR para abrir relatórios específicos, usar realidade aumentada para visualização de dados, e anotar e compartilhar snapshots. Os relatórios são otimizados via Mobile Layout no Power BI Desktop (guia 'Exibir' > 'Layout Móvel'), que cria um layout específico para telas de smartphone.",
-      "O aplicativo Power BI Mobile é apenas um leitor de PDF, exportando relatórios do serviço para formato PDF e exibindo-os offline; não suporta interatividade como filtros, drill-through ou slicers, pois o motor de renderização do aplicativo mobile não executa DAX localmente no dispositivo.",
-      "O Power BI Mobile requer que todos os relatórios sejam republicados especificamente para mobile usando o Power BI Desktop Mobile Edition, uma versão separada do Desktop otimizada para criação de conteúdo mobile; relatórios criados no Desktop padrão não são compatíveis com o aplicativo mobile sem conversão prévia.",
-      "O Power BI Mobile só funciona com conexão WiFi corporativa, não suportando acesso via redes móveis 4G/5G por restrições de segurança da Microsoft; para acesso via rede móvel, o administrador deve habilitar explicitamente 'Mobile Data Access' no Admin Portal do Power BI antes que usuários consigam acessar relatórios fora da rede corporativa."
+      "Visualiza relatórios/dashboards, interage com filtros/drill-through, recebe alertas, escaneia QR codes, usa AR, anota e compartilha;",
+      "Seria apenas leitor de PDF offline, sem interatividade, pois o app não executaria DAX localmente no dispositivo.",
+      "Exigiria republicar tudo numa \"Desktop Mobile Edition\" separada; relatórios do Desktop padrão não seriam compatíveis sem conversão.",
+      "Só funcionaria com WiFi corporativo, sem 4G/5G; exigiria habilitar 'Mobile Data Access' no Admin Portal."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -4330,7 +4330,7 @@ export const questions = [
     "options": [
       "`Clientes Retidos = VAR ClientesAtual = VALUES(Vendas[ClienteID]) VAR ClientesAnterior = CALCULATETABLE( VALUES(Vendas[ClienteID]), SAMEPERIODLASTYEAR(DimData[Data])) RETURN COUNTROWS(INTERSECT(ClientesAtual, ClientesAnterior))` — Esta medida identifica clientes presentes em ambos os períodos usando `INTERSECT` e os conta.",
       "`Clientes Retidos = CALCULATE(DISTINCTCOUNT(Vendas[ClienteID]), FILTER(Vendas, CALCULATE(COUNTROWS(Vendas), SAMEPERIODLASTYEAR(DimData[Data])) > 0))` — Esta abordagem tenta filtrar clientes com compras no ano anterior, mas é complexa e pode não ser a forma mais direta ou eficiente de identificar a interseção de clientes entre períodos.",
-      "Taxa de retenção de clientes não pode ser calculada com medidas DAX — requer criação de coluna calculada 'IsRetained' na tabela de fatos que verifica a existência do cliente no período anterior usando LOOKUPVALUE com filtro de data; medidas DAX não têm acesso ao histórico completo de transações por cliente necessário para o cálculo de retenção.",
+      "Não poderia ser calculado com medidas DAX — exigiria coluna 'IsRetained' com LOOKUPVALUE, pois medidas não teriam acesso ao histórico completo.",
       "`Clientes Retidos = EXCEPT(VALUES(Vendas[ClienteID]), CALCULATETABLE(VALUES(Vendas[ClienteID]), SAMEPERIODLASTYEAR(DimData[Data])))` — Esta medida calcula os clientes que estavam no período atual, mas NÃO estavam no período anterior, o que representa clientes *novos*, não retidos."
     ],
     "correctAnswer": 0,
@@ -4353,10 +4353,10 @@ export const questions = [
     "id": "q175_pl300",
     "text": "Como você configuraria um alerta de dados em um tile do tipo Card em um Dashboard do Power BI Service para ser notificado quando as vendas ultrapassarem R$ 1.000.000?",
     "options": [
-      "No Dashboard, clique nos três pontos (...) do tile de Card com as vendas, selecione 'Manage alerts' e depois 'Add alert rule'. Configure a condição como 'Above', o limite como '1000000', e a frequência de notificação. O Power BI verificará a condição a cada refresh do dataset e enviará um email de notificação quando a condição for atendida, com a opção de notificação no feed do Power BI Service.",
-      "Alertas de dados no Power BI Dashboard são configurados no Power BI Desktop antes da publicação, através de 'File > Alert Settings', e são ativados automaticamente no Service após a publicação sem necessidade de configuração adicional.",
-      "Alertas de dados no Power BI requerem a configuração de um webhook externo via Power Automate, pois o Power BI Service nativamente não possui um mecanismo de alerta por email, apenas envia um evento para o Power Automate para disparo de notificações personalizadas.",
-      "Alertas de dados só podem ser configurados por administradores do workspace; usuários com a função 'Viewer' podem visualizar os dashboards, mas não têm permissão para criar regras de alerta, sendo os alertas criados centralizadamente pelo administrador para todos os usuários."
+      "Nos três pontos do tile, 'Manage alerts' > 'Add alert rule'; condição 'Above', limite '1000000', frequência;",
+      "Seriam configurados no Desktop antes de publicar via 'File > Alert Settings', ativados automaticamente no Service sem config adicional.",
+      "Exigiriam webhook externo via Power Automate, pois o Service nativo não teria alerta por email.",
+      "Só admins do workspace poderiam configurar; Viewers não teriam permissão, sendo alertas centralizados pelo admin."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -4378,10 +4378,10 @@ export const questions = [
     "id": "q176_pl300",
     "text": "Como conectar o Power BI Desktop a uma API REST que requer autenticação via Bearer Token no cabeçalho HTTP?",
     "options": [
-      "Utilizar a opção Obter Dados > Web > Avançado, inserindo o endpoint da API e adicionando um cabeçalho HTTP \"Authorization\" com o valor \"Bearer SEU_TOKEN\". Alternativamente, usar o Editor Avançado com a função Web.Contents(url, [Headers = [Authorization = \"Bearer \" & token]]), onde token pode ser um parâmetro do Power Query. Para tokens que expiram, é possível criar uma lógica de refresh do token com uma chamada OAuth antes da query principal.",
-      "APIs REST com Bearer Token não são suportadas nativamente pelo conector Web do Power BI Desktop — o conector suporta apenas autenticação Basic (usuário/senha) e Windows; para APIs com Bearer Token é necessário usar um script Python no Power Query com a biblioteca requests que suporta qualquer método de autenticação HTTP.",
-      "Bearer Token deve ser configurado nas credenciais do conector Web via Arquivo > Opções > Configurações da Fonte de Dados; após configurar o token nas opções globais, ele é automaticamente incluído em todas as requisições do conector Web sem necessidade de configuração por query; o token é criptografado e armazenado com segurança no arquivo de configuração do Power BI Desktop.",
-      "Para APIs com Bearer Token, criar uma query auxiliar que chama o endpoint de autenticação e obtém o token dinamicamente; o token obtido dinamicamente não pode ser referenciado em outras queries do mesmo arquivo .pbix pois cada query é avaliada em contexto isolado; o token deve ser hardcoded como parâmetro de texto no Power Query para funcionar corretamente."
+      "Obter Dados > Web > Avançado, cabeçalho \"Authorization: Bearer SEU_TOKEN\". Ou Web.Contents(url,[Headers=[Authorization=\"Bearer \"&token]]);",
+      "Bearer Token não seria suportado nativamente; o conector suportaria só Basic/Windows, exigindo script Python com requests.",
+      "Seria configurado nas credenciais via Opções > Fonte de Dados, incluído automaticamente em toda requisição sem config por query.",
+      "Exigiria query auxiliar para obter o token, mas não poderia ser referenciado em outras queries; o token teria que ser hardcoded."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -4401,12 +4401,12 @@ export const questions = [
   },
   {
     "id": "q177_pl300",
-    "text": "Um analista de dados precisa implementar uma análise de Pareto no Power BI para identificar os produtos que representam 80% das vendas totais. Ele deseja criar uma medida DAX para calcular o percentual acumulado de vendas por produto, que será usada em um gráfico de colunas com linha. Qual das seguintes medidas DAX calcula corretamente o percentual acumulado de vendas para uma análise de Pareto?",
+    "text": "Para análise de Pareto (produtos que somam 80% das vendas), qual medida DAX calcula corretamente o percentual acumulado de vendas por produto?",
     "options": [
       "% Acumulado Vendas = VAR VendasProdutoAtual = [Total Vendas] VAR VendasAcumuladas = CALCULATE([Total Vendas], FILTER(ALL(DimProduto), [Total Vendas] >= VendasProdutoAtual)) VAR TotalGeral = CALCULATE([Total Vendas], ALL(DimProduto)) RETURN DIVIDE(VendasAcumuladas, TotalGeral)",
       "% Acumulado = DIVIDE(RANKX(ALL(DimProduto), [Total Vendas]), COUNTROWS(ALL(DimProduto)))",
-      "A análise de Pareto deve ser feita exclusivamente com visuais personalizados do AppSource, que já incorporam a lógica de cálculo do percentual acumulado, tornando medidas DAX desnecessárias para este fim.",
-      "Para que a medida DAX de percentual acumulado funcione corretamente, a tabela de produtos deve ser fisicamente ordenada de forma decrescente por vendas no Power Query antes de ser carregada no modelo de dados."
+      "Pareto exigiria exclusivamente visuais customizados do AppSource, já com a lógica de acumulado, tornando medidas DAX desnecessárias.",
+      "A medida funcionaria só se a tabela de produtos fosse fisicamente ordenada decrescente por vendas no Power Query antes do carregamento."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -4426,12 +4426,12 @@ export const questions = [
   },
   {
     "id": "q178_pl300",
-    "text": "No Power BI, a capacidade de explorar dados em diferentes níveis de detalhe é fundamental para a análise. Qual das seguintes afirmações descreve corretamente a diferença entre Drill Down e Drill Through, e quando cada funcionalidade é mais adequada?",
+    "text": "Qual a diferença entre Drill Down e Drill Through no Power BI, e quando cada um é mais adequado?",
     "options": [
-      "Drill Down navega dentro do mesmo visual descendo níveis de uma hierarquia (ex: Ano → Trimestre → Mês → Dia) sem sair da página — os dados do visual são substituídos pelo nível inferior filtrado; Drill Through navega para outra página do relatório passando o contexto do item selecionado — o usuário vai de um visual de resumo para uma página de detalhes com dados relacionados ao item clicado; usar Drill Down para hierarquias temporais e geográficas, Drill Through para análise detalhada em página dedicada.",
-      "Drill Down e Drill Through são termos intercambiáveis no Power BI — ambos se referem à navegação para um nível mais detalhado de dados ao clicar em um ponto de dados; a diferença é apenas de interface: Drill Down usa duplo clique enquanto Drill Through usa clique com botão direito para acessar o submenu de navegação.",
-      "Drill Down requer que uma hierarquia formal seja criada e associada ao visual no modelo de dados — sem hierarquia definida em Model View, os ícones de drill-down não aparecem no visual; para usar drill-down com campos ad-hoc sem hierarquia formal, usar Drill Through que funciona com qualquer coluna sem configuração de hierarquia prévia.",
-      "Drill Through é mais limitado que Drill Down pois funciona apenas em visuais de Tabela e Matriz — gráficos de barras, colunas e linhas suportam apenas Drill Down via ícones de hierarquia; para análise detalhada a partir de gráficos, usar a opção \"See records\" que exibe as linhas subjacentes sem navegar para outra página."
+      "Drill Down desce níveis de hierarquia no mesmo visual, sem sair da página; Drill Through navega para outra página com o contexto do item — Drill Down para.",
+      "Seriam intercambiáveis, ambos navegando para mais detalhe ao clicar; diferença só de interface (duplo clique vs botão direito).",
+      "Drill Down exigiria hierarquia formal associada ao visual; campos ad-hoc sem hierarquia exigiriam Drill Through.",
+      "Drill Through seria mais limitado, só em Tabela/Matriz; gráficos suportariam só Drill Down via ícones de hierarquia."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -4451,12 +4451,12 @@ export const questions = [
   },
   {
     "id": "q179_pl300",
-    "text": "Quais são os principais grupos de endpoints da API REST do Power BI e para quais tarefas de administração e automação cada grupo é usado, considerando também o método de autenticação padrão?",
+    "text": "Quais são os principais grupos de endpoints da API REST do Power BI, suas tarefas, e qual o método de autenticação padrão?",
     "options": [
-      "Grupos principais: Datasets (refresh, obter status, atualizar parâmetros, clonar); Reports (clonar, exportar para PDF/PPTX/PNG, obter páginas); Dashboards (obter tiles, adicionar tiles); Workspaces (listar, criar, adicionar usuários, obter itens); Admin (inventário do tenant, atividade de usuários, capacidades); Embed (gerar tokens de embed para Embedded Analytics); acessados via https://api.powerbi.com/v1.0/myorg/ com autenticação Bearer OAuth 2.0.",
-      "A API REST do Power BI tem apenas dois grupos de endpoints: Reports (para operações em relatórios e dashboards) e Admin (para operações administrativas do tenant); todas as operações de dataset, workspace e embed são realizadas através desses dois grupos com parâmetros adicionais que especificam o tipo de operação desejada.",
-      "A API REST do Power BI usa autenticação por chave de API (API Key) gerada no Admin Portal do Power BI Service — diferente de outros serviços Azure que usam OAuth 2.0; a chave de API é incluída no cabeçalho X-API-Key de cada requisição e tem validade de 90 dias antes de precisar ser regenerada.",
-      "Endpoints da API REST do Power BI só podem ser chamados por Service Principals registrados no Azure AD com role Power BI Administrator — usuários individuais não podem usar a API REST diretamente; apenas contas de serviço (service accounts) com permissões administrativas têm acesso aos endpoints de automação do Power BI."
+      "Datasets (refresh, parâmetros), Reports (exportar PDF/PPTX), Dashboards (tiles), Workspaces (listar/criar), Admin (inventário/atividade), Embed (tokens);",
+      "Haveria só dois grupos: Reports (relatórios/dashboards) e Admin (tenant); dataset/workspace/embed usariam esses dois com parâmetros extras.",
+      "Usaria API Key gerada no Admin Portal, diferente de OAuth 2.0; incluída no cabeçalho X-API-Key, válida por 90 dias.",
+      "Só poderia ser chamada por Service Principals com role Power BI Administrator; usuários individuais não teriam acesso direto."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -4476,12 +4476,12 @@ export const questions = [
   },
   {
     "id": "q180_pl300",
-    "text": "Um analista de dados precisa conectar o Power BI Desktop a uma instância do Salesforce para analisar dados de vendas. Qual é a abordagem correta para estabelecer essa conexão e quais considerações importantes devem ser levadas em conta em relação aos objetos e tipos de dados disponíveis?",
+    "text": "Como conectar o Power BI Desktop ao Salesforce para analisar vendas, e quais considerações sobre objetos/tipos de dados são importantes?",
     "options": [
-      "Utilizar os conectores 'Salesforce Objects' ou 'Salesforce Reports' via 'Obter Dados', autenticar com credenciais Salesforce via OAuth 2.0. Os objetos padrão (Account, Contact, Opportunity) e customizados (com sufixo __c) estarão disponíveis, e os dados serão importados para o Power BI. É crucial aplicar filtros no Power Query para gerenciar o volume de dados de objetos grandes.",
-      "O Power BI conecta ao Salesforce exclusivamente via API SOAP, exigindo o download e configuração de um arquivo WSDL no Power BI Desktop antes de qualquer conexão, pois o conector nativo depende dele para descobrir os objetos disponíveis.",
-      "Conexões com Salesforce no Power BI são sempre em modo DirectQuery, pois o Salesforce não permite que dados sejam exportados/importados para sistemas externos por razões de compliance e segurança, garantindo que os dados permaneçam na fonte original.",
-      "A conexão com o Salesforce requer a instalação e configuração de um gateway de dados local para que o Power BI Service possa atualizar os dados, mesmo que o Salesforce seja uma fonte de dados em nuvem, devido à necessidade de criptografia de ponta a ponta."
+      "Conectores 'Salesforce Objects'/'Reports' via 'Obter Dados', OAuth 2.0; objetos padrão (Account, Contact, Opportunity) e customizados (__c);",
+      "Conectaria exclusivamente via API SOAP, exigindo download e configuração de WSDL antes de qualquer conexão.",
+      "Seria sempre DirectQuery, pois o Salesforce não permitiria exportar/importar dados por compliance, mantendo dados na fonte.",
+      "Exigiria gateway de dados local mesmo sendo nuvem, devido à necessidade de criptografia ponta a ponta."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -4501,11 +4501,11 @@ export const questions = [
   },
   {
     "id": "q181_pl300",
-    "text": "Você precisa criar uma medida DAX no Power BI que calcule o market share de cada produto como um percentual do total geral de vendas. O desafio é que essa medida deve manter o cálculo correto e significativo mesmo quando filtros de região, período ou outras dimensões são aplicados pelo usuário, garantindo que o market share seja sempre relativo ao contexto de filtro *atual*. Qual das seguintes expressões DAX atende a esse requisito?",
+    "text": "Como criar uma medida DAX de market share por produto que permaneça correta mesmo com filtros de região/período aplicados pelo usuário (relativa ao contexto de filtro atual)?",
     "options": [
       "Market Share = DIVIDE([Total Vendas], CALCULATE([Total Vendas], ALL(DimProduto)))",
       "Market Share = DIVIDE([Total Vendas], CALCULATE([Total Vendas], ALL()))",
-      "Market Share com filtros de contexto não pode ser calculado com uma única medida DAX; é necessário criar medidas separadas para cada granularidade de filtro.",
+      "Não poderia ser calculado com uma única medida; seria preciso medidas separadas para cada granularidade de filtro.",
       "Market Share = DIVIDE([Total Vendas], CALCULATE([Total Vendas], ALLEXCEPT(DimProduto, DimProduto[Categoria])))"
     ],
     "correctAnswer": 0,
@@ -4528,10 +4528,10 @@ export const questions = [
     "id": "q182_pl300",
     "text": "No Power BI, qual é a abordagem correta para criar ícones condicionais (semáforo) em uma coluna de uma visualização de Matriz, indicando o status de KPIs, utilizando medidas DAX?",
     "options": [
-      "Acessar 'Formatação Condicional' da coluna na Matriz, escolher 'Ícones' e configurar via 'Valor do Campo' (Field value) com uma medida DAX que retorna o nome do ícone (ex: \"✅\", \"⚠️\", \"❌\") ou via 'Regras' (Rules) com intervalos numéricos e ícones predefinidos do Power BI. Os ícones podem ser exibidos com ou sem o valor numérico.",
-      "Ícones condicionais em Matrizes são limitados aos conjuntos predefinidos do Power BI (setas, bandeiras, círculos), não permitindo o uso de emojis ou caracteres Unicode customizados. Para ícones personalizados, é obrigatório o uso de visuais customizados como o \"Icon Map\".",
-      "A formatação condicional de ícones em Matrizes exige que a coluna seja de tipo numérico. Colunas de texto ou medidas que retornam texto não suportam ícones, sendo necessário converter valores de status (ex: \"Aprovado\") para numéricos (ex: 1) antes da aplicação.",
-      "A aplicação de ícones condicionais em Matrizes afeta a linha inteira, não sendo possível direcionar os ícones para células específicas de uma coluna. Ao configurar, todas as colunas da mesma linha exibirão o ícone baseado na condição da coluna configurada."
+      "'Formatação Condicional' da coluna > 'Ícones', via 'Valor do Campo' com medida retornando o ícone, ou 'Regras' com intervalos numéricos e ícones predefinidos.",
+      "Seriam limitados aos conjuntos predefinidos (setas, bandeiras); emojis/Unicode customizados exigiriam visual como \"Icon Map\".",
+      "Exigiria coluna numérica; texto não suportaria ícones, exigindo converter status para números antes.",
+      "Afetaria a linha inteira, não células específicas; todas as colunas da linha exibiriam o ícone configurado."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -4551,12 +4551,12 @@ export const questions = [
   },
   {
     "id": "q183_pl300",
-    "text": "Ao trabalhar com dados armazenados no Azure Data Lake Storage Gen2 (ADLS Gen2), como um analista de dados deve conectar o Power BI Desktop a essa fonte e quais formatos de arquivo são nativamente suportados para análise direta, garantindo flexibilidade e performance?",
+    "text": "Como conectar o Power BI Desktop ao Azure Data Lake Storage Gen2 (ADLS Gen2), e quais formatos de arquivo são nativamente suportados?",
     "options": [
       "A conexão é feita através de 'Obter Dados' > 'Azure' > 'Azure Data Lake Storage Gen2', informando a URL do storage account. A autenticação suporta Chave de Conta, SAS Token, OAuth ou Managed Identity. Formatos como Parquet, CSV, JSON, ORC, Avro e Delta Lake (via conector específico) são nativamente suportados, permitindo navegação por pastas.",
-      "A única forma de conectar o Power BI Desktop ao ADLS Gen2 é via Azure Synapse Analytics, criando tabelas externas no Synapse Serverless SQL e conectando o Power BI ao endpoint SQL do Synapse, pois não há conector direto para ADLS Gen2.",
-      "O conector ADLS Gen2 do Power BI suporta exclusivamente arquivos no formato Parquet; outros formatos como CSV ou JSON devem ser convertidos previamente para Parquet para serem acessíveis, aproveitando a inferência automática de schema do Parquet.",
-      "Para conectar ao ADLS Gen2, o Power BI Desktop deve estar em uma VM Azure na mesma região do storage account, devido à latência. Conexões externas exigem o download prévio dos arquivos via Azure Storage Explorer para importação local."
+      "Única forma seria via Azure Synapse, criando tabelas externas no Synapse Serverless SQL, pois não haveria conector direto.",
+      "O conector suportaria só Parquet; outros formatos exigiriam conversão prévia para Parquet.",
+      "Exigiria VM Azure na mesma região por latência; conexões externas exigiriam download via Storage Explorer."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -4579,9 +4579,9 @@ export const questions = [
     "text": "Qual é a melhor prática para usar `SUMMARIZE` e `ADDCOLUMNS` juntos em DAX e por que `SUMMARIZE` sozinho com colunas de extensão para agregações é considerado um antipadrão?",
     "options": [
       "SUMMARIZE(tabela, col_agrup1, col_agrup2) é usado para criar uma tabela agrupada. A melhor prática para adicionar expressões de agregação é usar ADDCOLUMNS(SUMMARIZE(tabela, col_agrup), \"medida\", CALCULATE(SUM([valor]))), pois ADDCOLUMNS com CALCULATE garante que a agregação seja avaliada com o contexto de filtro correto para cada linha agrupada, enquanto adicionar agregações diretamente no SUMMARIZE avalia a expressão em um contexto de linha que pode ser incorreto.",
-      "SUMMARIZE é sempre preferível ao ADDCOLUMNS para criar tabelas calculadas com agregações, pois SUMMARIZE possui otimizações internas do VertiPaq que tornam a avaliação de expressões de agregação mais eficiente quando incluídas diretamente como argumentos adicionais. ADDCOLUMNS é uma alternativa mais verbosa sem benefício de performance.",
-      "SUMMARIZE e ADDCOLUMNS são intercambiáveis para qualquer tipo de agregação. Ambos produzem exatamente o mesmo resultado para SUM, AVERAGE, COUNT e outras funções de agregação simples; a diferença de comportamento só ocorre em expressões complexas com CALCULATE e múltiplos filtros aninhados.",
-      "ADDCOLUMNS não pode referenciar as colunas criadas pelo SUMMARIZE na mesma expressão. As colunas de agrupamento do SUMMARIZE não estão no escopo do ADDCOLUMNS que as envolve; para referenciar as colunas de agrupamento nas expressões de ADDCOLUMNS é necessário usar EARLIER ou criar variáveis explícitas antes da expressão ADDCOLUMNS."
+      "SUMMARIZE seria sempre preferível, com otimizações VertiPaq internas tornando agregações diretas mais eficientes; ADDCOLUMNS seria só mais verboso.",
+      "Seriam intercambiáveis para qualquer agregação, com resultado idêntico para SUM/AVERAGE/COUNT; diferença só em CALCULATE complexo.",
+      "ADDCOLUMNS não poderia referenciar colunas do SUMMARIZE na mesma expressão; exigiria EARLIER ou variáveis explícitas antes."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -4603,10 +4603,10 @@ export const questions = [
     "id": "q185_pl300",
     "text": "No Power BI Report Builder, que tipos de regiões de dados estão disponíveis para a criação de relatórios paginados e qual a aplicação mais adequada para cada uma delas?",
     "options": [
-      "Table (tabela simples com linhas de detalhe e grupos — para listas de registros com subtotais); Matrix (tabela dinâmica com grupos em linhas E colunas — para análise cross-tab); List (região livre para posicionar outros elementos repetidos por grupo — para relatórios de formulário ou etiquetas); Chart (gráficos estáticos incorporados no relatório paginado); Subreport (relatório paginado dentro de outro — para seções reutilizáveis); Data Bar, Sparkline e Indicator (visuais inline em células de tabela/matriz).",
-      "Power BI Report Builder tem apenas dois tipos de regiões de dados: Table (para dados tabulares) e Chart (para visualizações gráficas); Matrix, List e Subreport são termos do antigo SQL Server Reporting Services que foram descontinuados na migração para o Power BI Report Builder moderno.",
-      "Regiões de dados no Report Builder são equivalentes aos visuais do Power BI Desktop — Table corresponde ao visual Tabela, Matrix ao visual Matriz, e Chart ao visual de Gráfico de Barras; as funcionalidades são idênticas e os arquivos .pbix e .rdl são intercambiáveis entre o Desktop e o Report Builder.",
-      "List é a única região de dados do Report Builder que suporta posicionamento livre de elementos — Table e Matrix têm layout fixo de grade que não permite customização de posicionamento; para relatórios com layout complexo como faturas e contratos, apenas List pode ser usado como contêiner de elementos com posicionamento pixel-perfect."
+      "Table (listas com subtotais); Matrix (grupos em linhas E colunas, cross-tab); List (posicionamento livre, formulários/etiquetas); Chart;",
+      "Haveria só Table e Chart; Matrix, List e Subreport seriam termos do antigo SSRS, descontinuados no Report Builder moderno.",
+      "Seriam equivalentes aos visuais do Desktop (Table=Tabela, Matrix=Matriz); .pbix e .rdl seriam intercambiáveis entre eles.",
+      "List seria a única com posicionamento livre; Table/Matrix teriam layout fixo, exigindo List para faturas/contratos pixel-perfect."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -4626,12 +4626,12 @@ export const questions = [
   },
   {
     "id": "q186_pl300",
-    "text": "Um analista de dados precisa implementar medidas de segurança robustas para controlar o acesso ao serviço Power BI na organização. Como o Azure AD Conditional Access pode ser utilizado para aumentar a segurança do acesso ao Power BI, e quais políticas são consideradas mais relevantes para este cenário?",
+    "text": "Como o Azure AD Conditional Access pode aumentar a segurança de acesso ao Power BI, e quais políticas são mais relevantes?",
     "options": [
       "O Azure AD Conditional Access pode ser usado para exigir autenticação multifator (MFA) para acesso ao Power BI, bloquear acesso de dispositivos não gerenciados ou não conformes, restringir o acesso a localizações geográficas específicas, e integrar-se com o Microsoft Defender for Cloud Apps (MCAS) para controlar ações como downloads em sessões não confiáveis.",
-      "O Conditional Access não é aplicável diretamente ao Power BI, pois a segurança de acesso é gerenciada exclusivamente através das configurações de segurança do portal de administração do Power BI e das permissões de workspace.",
-      "A segurança do acesso ao Power BI é controlada apenas por meio de licenças de usuário e atribuições de funções no Microsoft 365 Admin Center, sem a necessidade de políticas de Conditional Access.",
-      "O Conditional Access é usado apenas para proteger o acesso a dados armazenados no Azure Data Lake Storage ou Azure SQL Database que são consumidos pelo Power BI, não para o serviço Power BI em si."
+      "Não seria aplicável diretamente ao Power BI; a segurança seria gerenciada só via Admin Portal e permissões de workspace.",
+      "Seria controlada só por licenças e funções no Microsoft 365 Admin Center, sem necessidade de Conditional Access.",
+      "Seria usado só para proteger dados no Data Lake/SQL consumidos pelo Power BI, não o serviço em si."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -4653,10 +4653,10 @@ export const questions = [
     "id": "q187_pl300",
     "text": "Como você criaria uma tabela de dados manualmente no Power Query, sem a necessidade de conectar a uma fonte de dados externa, para ser utilizada como uma tabela de parâmetros ou mapeamento dentro do Power BI?",
     "options": [
-      "Home > Enter Data — esta opção abre uma grade de edição onde você pode digitar os dados diretamente, nomear as colunas e a tabela. O Power Query gera automaticamente o código M correspondente, criando a tabela como uma query embutida no arquivo .pbix, sem dependência de fontes externas.",
-      "Tabelas manuais no Power BI são criadas exclusivamente via DAX, utilizando a função DATATABLE(\"Coluna1\", TEXT, \"Coluna2\", INTEGER, {{\"valor1\", 1}, {\"valor2\", 2}}}) no Model View. O Power Query não possui funcionalidade para entrada manual de dados, apenas para transformar dados de fontes existentes.",
-      "Para criar uma tabela manual no Power Query, é necessário usar Get Data > Blank Query e escrever o código M manualmente no Advanced Editor, utilizando a sintaxe #table({\"Coluna1\", \"Coluna2\"}, {{\"valor1\", 1}, {\"valor2\", 2}}}). A opção Enter Data não existe no Power Query, sendo um recurso exclusivo do Power BI Desktop para criação de tabelas DAX calculadas.",
-      "Tabelas manuais no Power Query são criadas através de Get Data > Manual Entry, uma opção disponível apenas no Power BI Desktop versão 2.0 ou superior. Em versões anteriores e no Power Query do Excel, é preciso usar a abordagem de arquivo CSV temporário salvo localmente e importado como fonte de dados."
+      "Home > Enter Data — abre grade de edição para digitar dados, nomear colunas/tabela; o Power Query gera o código M automaticamente, sem dependência externa.",
+      "Tabelas manuais seriam criadas só via DAX com DATATABLE() no Model View; Power Query não teria entrada manual de dados.",
+      "Exigiria Get Data > Blank Query com código M manual via #table(); Enter Data não existiria no Power Query.",
+      "Seriam criadas via Get Data > Manual Entry, só no Desktop 2.0+; versões antigas exigiriam CSV temporário."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -4676,12 +4676,12 @@ export const questions = [
   },
   {
     "id": "q188_pl300",
-    "text": "Você precisa calcular a taxa de churn (clientes perdidos) mensal em um relatório do Power BI. Você já possui a seguinte medida para identificar os clientes perdidos:\n```\nClientes Perdidos = \nVAR ClientesMesAtual = CALCULATETABLE( VALUES(Vendas[ClienteID]), DATESMTD(DimData[Data]))\nVAR ClientesMesAnterior = CALCULATETABLE( VALUES(Vendas[ClienteID]), PREVIOUSMONTH(DimData[Data]))\nRETURN COUNTROWS(EXCEPT(ClientesMesAnterior, ClientesMesAtual))\n```\nQual das seguintes opções representa a medida DAX correta para calcular o 'Churn Rate' mensal, considerando a medida 'Clientes Perdidos' já definida?",
+    "text": "Você tem a medida:\n```\nClientes Perdidos =\nVAR Atual = CALCULATETABLE(VALUES(Vendas[ClienteID]), DATESMTD(DimData[Data]))\nVAR Anterior = CALCULATETABLE(VALUES(Vendas[ClienteID]), PREVIOUSMONTH(DimData[Data]))\nRETURN COUNTROWS(EXCEPT(Anterior, Atual))\n```\nQual medida calcula corretamente o Churn Rate mensal?",
     "options": [
-      "Churn Rate = DIVIDE([Clientes Perdidos], COUNTROWS(CALCULATETABLE( VALUES(Vendas[ClienteID]), PREVIOUSMONTH(DimData[Data]))))",
-      "Churn Rate = 1 - [Taxa Retenção] — assumindo que a Taxa de Retenção já está calculada, esta é a forma mais eficiente e matematicamente equivalente de obter o Churn Rate.",
-      "O cálculo de Churn Rate mensal não é possível de ser realizado de forma confiável em DAX para modelos que possuem apenas dados de transações mensais, pois o DAX não consegue distinguir entre um cliente que não comprou (churn) e um cliente que não tinha necessidade de compra no período.",
-      "Churn Rate = DIVIDE([Clientes Perdidos], CALCULATE(DISTINCTCOUNT(Vendas[ClienteID]), ALL(DimData[Data]))) — o denominador deve ser o total de clientes distintos em todo o histórico de vendas, para uma base de comparação consistente e não afetada pelo período."
+      "Churn Rate = DIVIDE([Clientes Perdidos], COUNTROWS(CALCULATETABLE(VALUES(Vendas[ClienteID]), PREVIOUSMONTH(DimData[Data]))))",
+      "Churn Rate = 1 - [Taxa Retenção] — assumindo a Taxa de Retenção já calculada, seria a forma mais eficiente e equivalente.",
+      "Não seria possível calcular com confiabilidade em DAX com dados só mensais, pois não distinguiria churn de ausência de necessidade.",
+      "Churn Rate = DIVIDE([Clientes Perdidos], CALCULATE(DISTINCTCOUNT(Vendas[ClienteID]), ALL(DimData[Data]))) — denominador seria o total histórico de clientes."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -4704,9 +4704,9 @@ export const questions = [
     "text": "Como adicionar uma linha de tendência (Trend Line) a um gráfico de dispersão (Scatter Chart) no Power BI e quais informações estatísticas estão disponíveis ao utilizá-la?",
     "options": [
       "No visual Scatter Chart, expandir o painel Analytics (ícone de lupa) e adicionar 'Trend Line'; o Power BI calcula automaticamente a regressão linear e exibe a linha de tendência com a equação e o R² no tooltip ao passar o mouse; configurações como cor, estilo (sólida, tracejada), transparência, e a exibição do intervalo de confiança ao redor da linha de tendência estão disponíveis, sendo útil para identificar a direção e força de relacionamentos entre duas variáveis.",
-      "A linha de tendência no Power BI usa regressão polinomial de terceiro grau por padrão — para linhas de tendência linear simples é necessário selecionar 'Linear' nas opções do painel Analytics; o modelo polinomial padrão é mais preciso para dados de negócio que raramente seguem comportamento linear perfeito.",
-      "A linha de tendência no Scatter Chart do Power BI exibe apenas a linha visual sem cálculos estatísticos associados — para obter a equação da regressão (coeficientes a e b de y = ax + b) e o R², é necessário exportar os dados para R ou Python e calcular os parâmetros da regressão externamente.",
-      "Linha de tendência está disponível em todos os tipos de visual do Power BI incluindo gráficos de barras, colunas e pizza — no painel Analytics de qualquer visual, a opção Trend Line aparece automaticamente; para gráficos de linha temporal, a tendência é calculada em relação ao eixo de tempo e para gráficos de pizza em relação ao ângulo de cada fatia."
+      "Usaria regressão polinomial de terceiro grau por padrão; linear simples exigiria selecionar 'Linear' nas opções.",
+      "Exibiria só a linha visual sem cálculos; equação e R² exigiriam exportar para R/Python externamente.",
+      "Estaria disponível em todos os visuais incluindo barras e pizza, calculada conforme o tipo de eixo."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -4728,10 +4728,10 @@ export const questions = [
     "id": "q190_pl300",
     "text": "Qual é a relação entre o Microsoft Fabric e o Power BI, e como a migração de workspaces e conteúdos existentes do Power BI para o Fabric afeta relatórios e datasets já publicados?",
     "options": [
-      "O Microsoft Fabric é a plataforma unificada de analytics da Microsoft, e o Power BI é um de seus workloads principais, atuando como o componente de Business Intelligence e visualização. Workspaces existentes do Power BI podem ser migrados para capacidades Fabric (SKUs F) mantendo compatibilidade total com relatórios e datasets, e novos recursos como Direct Lake e OneLake ficam disponíveis sem a necessidade de recriar o conteúdo.",
-      "O Microsoft Fabric é um produto separado e concorrente ao Power BI, exigindo que as empresas escolham entre um ou outro. A migração para o Fabric descontinua automaticamente as licenças Power BI Pro, substituindo-as por licenças Fabric equivalentes com um modelo de custo diferente.",
-      "A migração para o Microsoft Fabric exige a recriação de todos os relatórios e datasets do Power BI em um novo formato nativo do Fabric, pois arquivos .pbix não são compatíveis. Embora haja uma ferramenta de migração, ela resulta em perda de fidelidade de aproximadamente 20% dos recursos avançados de DAX.",
-      "O Microsoft Fabric substituirá completamente o Power BI Service, que será descontinuado após 2025. Todos os usuários serão forçados a migrar para o portal do Fabric, e relatórios e datasets no Power BI Service clássico perderão suporte após essa data."
+      "Fabric é a plataforma unificada de analytics; Power BI é um workload principal (BI/visualização);",
+      "Seria produto separado e concorrente; a migração descontinuaria automaticamente licenças Pro, substituindo por Fabric.",
+      "Exigiria recriar tudo num formato nativo, pois .pbix não seria compatível; a ferramenta de migração perderia ~20% de recursos DAX.",
+      "Substituiria completamente o Power BI Service, descontinuado após 2025, forçando migração total ao portal Fabric."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -4754,9 +4754,9 @@ export const questions = [
     "text": "Como o painel \"Applied Steps\" no Power Query pode ser utilizado para auditar, reordenar e solucionar problemas em transformações de dados?",
     "options": [
       "O painel Applied Steps (Passos Aplicados), localizado no lado direito do Power Query Editor, lista todas as transformações em ordem sequencial. Cada passo pode ser clicado para visualizar o estado dos dados naquele ponto, renomeado (F2) para melhor documentação, reordenado via arrastar e soltar (com cuidado, pois pode quebrar dependências), excluído (X), ou editado via ícone de engrenagem para passos com interface visual. O Advanced Editor mostra o código M completo de todos os passos encadeados.",
-      "O painel Applied Steps é somente leitura, exibindo os passos para referência, mas não permitindo edição, exclusão ou reordenação após a criação. Para modificar transformações, é necessário excluir a query inteira e recriá-la do zero ou usar o Advanced Editor para editar o código M diretamente sem interface visual.",
-      "Reordenar passos no Applied Steps é sempre seguro, pois o Power Query detecta automaticamente dependências entre passos e rejeita reordenações inválidas com mensagem de erro. O sistema garante que passos que dependem de outros nunca podem ser movidos antes de suas dependências.",
-      "O painel Applied Steps exibe no máximo 50 passos por query. Para transformações com mais de 50 etapas, os passos mais antigos são removidos automaticamente da visualização e ficam acessíveis apenas via Advanced Editor. A Microsoft recomenda dividir queries com mais de 50 passos em múltiplas queries encadeadas via Reference."
+      "Seria somente leitura, sem edição/exclusão/reordenação; modificar exigiria recriar a query ou editar via Advanced Editor.",
+      "Reordenar seria sempre seguro, pois o Power Query rejeitaria automaticamente reordenações inválidas com erro.",
+      "Exibiria no máximo 50 passos; mais que isso removeria os antigos da visualização automaticamente."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -4778,10 +4778,10 @@ export const questions = [
     "id": "q192_pl300",
     "text": "Como as funções `INFO.*` do DAX podem ser utilizadas para consultar metadados do modelo Power BI de forma programática?",
     "options": [
-      "As funções `INFO.*` do DAX (como `INFO.TABLES()`, `INFO.COLUMNS()`, `INFO.MEASURES()`, `INFO.RELATIONSHIPS()`, `INFO.ROLES()`) retornam tabelas de metadados do modelo. Elas podem ser usadas em tabelas calculadas no Power BI Desktop ou via ferramentas externas como DAX Studio para documentação, auditoria e governança de modelos.",
-      "As funções `INFO.*` são exclusivas do SQL Server Analysis Services Tabular on-premises e não funcionam no Power BI Desktop ou Service. Para metadados no Power BI, deve-se usar a API REST do Power BI Service ou o Tabular Object Model (TOM) via Tabular Editor.",
-      "As funções `INFO.*` são funções internas do motor VertiPaq, não destinadas ao uso direto por usuários ou desenvolvedores DAX. Elas são acessíveis apenas por meio de logs de diagnóstico do Power BI ou por ferramentas de depuração de baixo nível.",
-      "Para usar as funções `INFO.*` no Power BI, é necessário ter uma licença Power BI Premium e habilitar o endpoint XMLA para leitura e escrita. Sem isso, as funções não serão reconhecidas pelo motor DAX."
+      "INFO.TABLES(), INFO.COLUMNS(), INFO.MEASURES(), INFO.RELATIONSHIPS(), INFO.ROLES() retornam tabelas de metadados do modelo;",
+      "Seriam exclusivas do SSAS Tabular on-premises, sem funcionar no Power BI; metadados exigiriam API REST ou TOM via Tabular Editor.",
+      "Seriam funções internas do VertiPaq, não destinadas a uso direto, acessíveis só via logs de diagnóstico.",
+      "Exigiriam licença Premium e XMLA endpoint habilitado para leitura/escrita; sem isso não seriam reconhecidas."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -4804,9 +4804,9 @@ export const questions = [
     "text": "No Power BI Desktop, ao configurar um botão, quais são os tipos de ação disponíveis e como eles são geralmente configurados?",
     "options": [
       "Os tipos de ação disponíveis incluem Voltar (Back), Indicador (Bookmark), Detalhar (Drill Through), Navegação de Página (Page Navigation), Perguntas e Respostas (Q&A), URL da Web (Web URL) e Em Branco (Blank). A configuração é feita na seção 'Ação' do painel 'Formatar' do botão, onde cada tipo possui suas próprias opções específicas, como a seleção de um indicador ou a inserção de uma URL, que pode ser dinâmica via medida DAX.",
-      "Botões no Power BI Desktop têm apenas dois tipos de ação: Indicador (Bookmark) e Navegação de Página (Page Navigation). Os demais tipos (Voltar, Detalhar, Perguntas e Respostas, URL da Web) são recursos exclusivos do Power BI Service, tornando-se disponíveis apenas após a publicação do relatório.",
-      "A ação de URL da Web (Web URL) sempre abre o link em uma nova aba do navegador sem possibilidade de customização. Para abrir URLs no mesmo frame do relatório ou em uma janela modal, é necessário usar JavaScript via Power BI Embedded API, pois o botão nativo não suporta a configuração do alvo de abertura.",
-      "As ações de botão no Power BI são estáticas. A URL para a ação URL da Web e o Indicador para a ação Indicador devem ser valores fixos definidos no Desktop. Não é possível usar medidas DAX para criar URLs ou selecionar Indicadores dinamicamente com base na seleção do usuário; para isso, seriam necessários visuais customizados do AppSource."
+      "Haveria só dois tipos (Indicador e Navegação de Página); os demais seriam exclusivos do Service após publicar.",
+      "URL da Web sempre abriria em nova aba sem customização; mesmo frame exigiria JavaScript via Embedded API.",
+      "Seriam estáticas — URL e Indicador exigiriam valores fixos, sem suporte a medidas DAX dinâmicas."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -4829,9 +4829,9 @@ export const questions = [
     "text": "Como conectar o Power BI Desktop a um banco de dados PostgreSQL e quais são os pré-requisitos essenciais para estabelecer e manter essa conexão, especialmente em cenários de atualização no Power BI Service?",
     "options": [
       "A conexão é feita via 'Obter Dados' > 'Banco de Dados' > 'Banco de Dados PostgreSQL', inserindo as credenciais. O pré-requisito principal é a instalação do driver Npgsql (PostgreSQL .NET Data Provider) no computador onde o Power BI Desktop está instalado. Para atualizações no Power BI Service com bancos on-premises, o mesmo driver deve ser instalado no servidor do gateway.",
-      "O Power BI Desktop possui suporte nativo ao PostgreSQL, sem a necessidade de drivers adicionais, pois o driver Npgsql já vem embutido no instalador do Power BI Desktop desde a versão de janeiro de 2023. Se for solicitada a instalação do driver, isso indica uma instalação corrompida do Power BI Desktop.",
-      "Para conectar ao PostgreSQL, deve-se usar o conector genérico ODBC do Power BI, configurando um DSN (Data Source Name) com o driver ODBC do PostgreSQL. O conector nativo PostgreSQL no Power BI só funciona para servidores PostgreSQL versão 14 ou superior; versões anteriores requerem conexão via ODBC para compatibilidade.",
-      "A conexão com PostgreSQL no Power BI sempre exige SSL obrigatório. Se o servidor PostgreSQL não tiver SSL configurado, a conexão falhará com um erro de certificado. Para ambientes de desenvolvimento sem SSL, é necessário modificar o registro do Windows para desabilitar a verificação SSL do driver Npgsql antes de tentar conectar."
+      "Teria suporte nativo sem drivers adicionais desde janeiro de 2023; pedido de driver indicaria instalação corrompida.",
+      "Exigiria conector ODBC genérico com DSN; o nativo só funcionaria com PostgreSQL 14+, versões antigas exigiriam ODBC.",
+      "Exigiria SSL obrigatório sempre; sem SSL no servidor, falharia, exigindo modificar o registro do Windows."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -4851,12 +4851,12 @@ export const questions = [
   },
   {
     "id": "q195_pl300",
-    "text": "Você é um analista de dados e precisa calcular o Customer Lifetime Value (LTV) médio por cliente em um modelo de dados do Power BI. O objetivo é obter o valor total de receita gerada por cada cliente ao longo de todo o seu histórico de relacionamento com a empresa, e então a média desses valores. Qual das seguintes abordagens DAX representa a maneira mais precisa e robusta para calcular o LTV médio por cliente, considerando o histórico completo de vendas?",
+    "text": "Qual abordagem DAX calcula corretamente o Customer Lifetime Value (LTV) médio por cliente, considerando o histórico completo de vendas de cada um?",
     "options": [
       "O LTV médio por cliente é calculado usando AVERAGEX(ALL(DimCliente), CALCULATE(SUM(Vendas[Valor]), ALL(DimData))). Esta abordagem itera sobre cada cliente, calcula seu LTV individual (removendo filtros de data com ALL(DimData)) e então retorna a média desses LTVs individuais.",
-      "O LTV é calculado com CALCULATE(SUM(Vendas[Valor]), ALLTIME(DimData[Data])). A função ALLTIME é projetada especificamente para remover todos os filtros temporais e obter o total histórico completo, sendo a função ideal para cálculos de lifetime.",
-      "O LTV histórico completo não deve ser calculado com medidas DAX para dados de múltiplos anos devido a limitações de memória do VertiPaq. É mais eficiente pré-computar o LTV por cliente no Power Query como uma coluna calculada durante o refresh.",
-      "O LTV médio é calculado de forma mais simples e eficiente com DIVIDE(SUM(Vendas[Valor]), DISTINCTCOUNT(Vendas[ClienteID])). Esta fórmula divide o total de vendas pelo número de clientes distintos, sendo matematicamente equivalente ao AVERAGEX para a maioria dos cenários."
+      "CALCULATE(SUM(Vendas[Valor]), ALLTIME(DimData[Data])) — ALLTIME removeria todos os filtros temporais, sendo ideal para lifetime.",
+      "Não deveria ser calculado com medidas DAX para múltiplos anos por limite de memória do VertiPaq; melhor pré-computar no Power Query.",
+      "DIVIDE(SUM(Vendas[Valor]), DISTINCTCOUNT(Vendas[ClienteID])) seria mais simples e matematicamente equivalente ao AVERAGEX."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -4878,10 +4878,10 @@ export const questions = [
     "id": "q196_pl300",
     "text": "Qual é a melhor maneira de compartilhar e apresentar um relatório Power BI de forma interativa durante uma reunião do Microsoft Teams, permitindo que o apresentador demonstre funcionalidades como filtros e drill-through em tempo real?",
     "options": [
-      "Compartilhar a janela do navegador onde o relatório está aberto no Power BI Service, permitindo que o apresentador interaja com filtros e drill-through em tempo real. Alternativamente, pode-se usar a integração nativa do Teams, adicionando o relatório como uma aba em um canal e compartilhando essa aba, ou utilizar a função 'Compartilhar para reunião' (Share to meeting) diretamente do Power BI Service para uma experiência mais integrada.",
-      "Relatórios Power BI não podem ser apresentados interativamente em reuniões do Teams; ao compartilhar a tela, os participantes veem apenas uma imagem estática. Para interatividade, é preciso exportar o relatório para PowerPoint com dados ao vivo e apresentá-lo como um arquivo .pptx.",
-      "Para apresentar Power BI interativamente no Teams, o apresentador deve possuir uma licença Power BI Premium, pois a interatividade em tempo real para múltiplos participantes exige recursos de servidor Premium. Com uma licença Pro, apenas exportações estáticas como PDF podem ser compartilhadas.",
-      "Compartilhar um relatório Power BI em uma reunião do Teams exige que todos os participantes possuam uma conta Power BI Pro e acesso ao workspace do relatório, caso contrário, eles não conseguirão visualizar o conteúdo, mesmo que o apresentador esteja compartilhando a tela."
+      "Compartilhar a janela do navegador com o relatório aberto no Service, interagindo com filtros/drill-through.",
+      "Não poderia ser apresentado interativamente; compartilhar tela mostraria só imagem estática, exigindo exportar para PowerPoint.",
+      "Exigiria licença Premium para interatividade em tempo real; no Pro só exportações estáticas como PDF seriam compartilháveis.",
+      "Exigiria que todos os participantes tivessem conta Pro e acesso ao workspace, senão não veriam o conteúdo."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -4903,10 +4903,10 @@ export const questions = [
     "id": "q197_pl300",
     "text": "Quais são as técnicas mais eficazes para otimizar medidas DAX com performance lenta identificadas via Performance Analyzer?",
     "options": [
-      "As técnicas mais eficazes incluem: 1) Substituir FILTER com tabela completa por predicado direto no CALCULATE quando possível; 2) Usar variáveis VAR para evitar recálculo de subexpressões; 3) Substituir colunas calculadas por medidas quando o valor é contextual; 4) Usar SUMX com tabela filtrada em vez de CALCULATE com FILTER para iterações simples; 5) Verificar cardinalidade das colunas usadas em relacionamentos; e 6) Usar DAX Studio com Server Timings para identificar gargalos específicos entre mecanismo de fórmula e mecanismo de armazenamento.",
-      "A principal otimização de medidas DAX lentas é aumentar a RAM do computador ou servidor — o VertiPaq é um mecanismo in-memory e performance de DAX é diretamente proporcional à memória disponível; otimizações de código DAX têm impacto marginal comparado ao aumento de hardware para datasets com mais de 10 milhões de linhas.",
-      "Medidas DAX lentas devem ser convertidas para colunas calculadas sempre que possível — colunas calculadas são pré-computadas no refresh e armazenadas no VertiPaq, eliminando o cálculo em tempo de query; substituir CALCULATE por colunas calculadas é a otimização mais impactante disponível no Power BI.",
-      "Para otimizar medidas DAX complexas, usar a função CACHE() que instrui o mecanismo a armazenar o resultado em cache por 24 horas — medidas com CACHE() são calculadas apenas uma vez por dia e o resultado é reutilizado em todas as queries subsequentes sem recálculo; disponível em modelos Premium via configurações avançadas do dataset."
+      "1) Predicado direto no CALCULATE em vez de FILTER completo; 2) VAR para evitar recálculo; 3) medidas em vez de colunas quando contextual;",
+      "Seria aumentar a RAM, pois VertiPaq é in-memory e a performance seria proporcional à memória; otimização de código teria impacto marginal.",
+      "Medidas lentas deveriam ser convertidas para colunas calculadas sempre, pré-computadas no refresh, eliminando cálculo em query.",
+      "Usar a função CACHE() para armazenar resultado por 24h, recalculando só uma vez por dia; disponível em modelos Premium."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -4929,9 +4929,9 @@ export const questions = [
     "text": "Como adicionar um visual Python no Power BI Desktop para criar uma visualização customizada e quais são as limitações dessa abordagem?",
     "options": [
       "Para adicionar um visual Python, primeiro habilite-o em Arquivo > Opções > Scripting Python e configure o caminho do interpretador. Em seguida, no painel de Visualizações, selecione o ícone Python, adicione os campos desejados (que formarão o DataFrame `dataset`), e escreva o código Python usando bibliotecas como matplotlib ou seaborn. As principais limitações incluem a falta de interatividade (não há cross-filtering do visual para outros visuais), a necessidade de Python instalado localmente no Desktop, e requisitos de configuração adicionais para o Power BI Service.",
-      "Visuais Python no Power BI são totalmente interativos, permitindo que cliques nos elementos do gráfico (barras, pontos, linhas) filtrem os outros visuais da página via cross-filtering nativo. A integração entre Python e o mecanismo de filtros do Power BI é automática e não requer configuração adicional além do código Python.",
-      "Visuais Python no Power BI Service requerem que cada usuário tenha Python instalado em seu computador local, pois o Service não executa o código Python em servidor. Se o usuário acessa o relatório em um computador sem Python, o visual exibe mensagem de erro e não renderiza, tornando visuais Python inadequados para distribuição.",
-      "Visuais Python no Power BI Service permitem a instalação de bibliotecas Python customizadas diretamente no ambiente do Service, desde que sejam especificadas no arquivo `requirements.txt` do projeto. Além disso, não há limite de tempo de execução ou de volume de dados, garantindo flexibilidade total para análises complexas."
+      "Seriam totalmente interativos, com cliques filtrando outros visuais via cross-filtering nativo, sem config adicional.",
+      "Exigiriam Python instalado em cada computador de usuário no Service, pois não executaria em servidor.",
+      "Permitiriam instalar bibliotecas customizadas via requirements.txt no Service, sem limite de tempo ou volume."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -4954,9 +4954,9 @@ export const questions = [
     "text": "Como um administrador monitora o uso e a performance de uma capacidade Power BI Premium ou Microsoft Fabric usando o aplicativo Capacity Metrics?",
     "options": [
       "Instalar o aplicativo 'Microsoft Fabric Capacity Metrics' no Power BI Service (via AppSource); o aplicativo conecta-se automaticamente à capacidade do tenant, exibindo a utilização de CPU por workload (datasets, dataflows, relatórios paginados, IA), eventos de throttling (quando a capacidade excede o limite e enfileira operações), consultas mais lentas, falhas de atualização e tendências de uso ao longo do tempo, permitindo identificar picos de uso e planejar upgrades de SKU ou distribuição de workloads.",
-      "O monitoramento de capacidade Power BI Premium é feito exclusivamente via Azure Monitor – o Power BI envia automaticamente todas as métricas de performance para um Log Analytics Workspace configurado no Azure Portal; o aplicativo Capacity Metrics no AppSource foi descontinuado após a integração com o Azure Monitor em 2023.",
-      "O aplicativo Capacity Metrics está disponível apenas para administradores globais do Azure AD – administradores do Power BI com a função 'Power BI Administrator' não têm acesso às métricas de capacidade; para delegar o monitoramento, o administrador global deve criar um relatório personalizado com os dados do Azure Monitor e compartilhar via Aplicativo do Power BI.",
-      "O Capacity Metrics no Power BI Premium mostra apenas métricas dos últimos 7 dias – para análise histórica de tendências de capacidade além de 7 dias é necessário configurar a exportação automática das métricas para uma Azure Storage Account e criar um relatório Power BI customizado sobre esses dados históricos armazenados externamente."
+      "Seria feito exclusivamente via Azure Monitor; o app Capacity Metrics teria sido descontinuado após integração em 2023.",
+      "Estaria disponível só para admins globais do Azure AD; 'Power BI Administrator' não teria acesso às métricas.",
+      "Mostraria só os últimos 7 dias; histórico maior exigiria exportar para Azure Storage e criar relatório customizado."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -4978,10 +4978,10 @@ export const questions = [
     "id": "q200_pl300",
     "text": "Como as assinaturas de relatório (subscriptions) são configuradas no Power BI Service para envio automático por e-mail e quais são as principais opções de personalização disponíveis?",
     "options": [
-      "No Power BI Service, as assinaturas são configuradas abrindo o relatório e selecionando 'Subscribe' (ícone de envelope ou menu de reticências). As opções incluem: definir destinatários (usuários do tenant com licença Pro ou Premium), assunto do e-mail, frequência (diária, semanal, horária, ou após a atualização do conjunto de dados), horário, fuso horário, e se o e-mail deve incluir um link para o relatório ou uma imagem do visual atual. O e-mail enviado contém um snapshot da página do relatório no momento do envio, com os filtros aplicados, e um link para a versão interativa.",
-      "Subscriptions no Power BI Service enviam o relatório completo como arquivo .pbix por e-mail — o destinatário recebe o arquivo e pode abri-lo no Power BI Desktop para análise offline; para enviar apenas imagem ou PDF do relatório, usar a opção Export ao invés de Subscribe; ambas as opções têm o mesmo custo em termos de licenciamento.",
-      "Subscriptions de relatórios no Power BI requerem licença Power BI Premium — no plano Pro, apenas dashboards suportam subscriptions por e-mail; para relatórios Pro, a alternativa é usar Power Automate com o conector Power BI que exporta o relatório para PDF e envia por e-mail via Outlook 365 como fluxo agendado.",
-      "Subscriptions no Power BI Service enviam sempre o relatório com os dados mais recentes do dataset — os filtros e slicers configurados pelo criador da subscription são ignorados no e-mail enviado; o destinatário recebe sempre a visão padrão do relatório sem filtros aplicados independente da configuração da subscription."
+      "No relatório, 'Subscribe' (envelope ou reticências); opções: destinatários, assunto, frequência (diária/semanal/após refresh), horário, fuso, link ou imagem;",
+      "Enviariam o .pbix completo por e-mail para análise offline no Desktop; imagem/PDF exigiriam usar Export em vez de Subscribe.",
+      "Exigiriam Premium; no Pro só dashboards suportariam subscriptions, exigindo Power Automate para relatórios.",
+      "Enviariam sempre os dados mais recentes ignorando filtros/slicers configurados pelo criador da subscription."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -5003,10 +5003,10 @@ export const questions = [
     "id": "q201_pl300",
     "text": "Como conectar o Power BI Desktop a um banco de dados MySQL e quais são os pré-requisitos necessários para essa conexão, incluindo considerações para atualização de dados no Power BI Service?",
     "options": [
-      "Para conectar o Power BI Desktop a um banco de dados MySQL, deve-se usar a opção Obter Dados > Banco de Dados > Banco de Dados MySQL, inserir os detalhes do servidor e banco de dados, e autenticar com usuário e senha MySQL. O pré-requisito essencial é a instalação do MySQL Connector/NET (driver ADO.NET da Oracle para MySQL) no computador local. Para atualizações no Power BI Service com MySQL on-premises, o mesmo driver deve ser instalado no servidor do gateway de dados on-premises. Esta conexão suporta tanto o modo Import quanto o DirectQuery.",
-      "O Power BI conecta ao MySQL nativamente sem drivers adicionais — o suporte ao MySQL está embutido no Power BI Desktop desde 2022 usando o driver ODBC nativo do Windows que já inclui suporte a MySQL; instalar drivers adicionais é necessário apenas para versões do MySQL anteriores à 5.7 que usam protocolo de autenticação diferente.",
-      "Para conectar ao MySQL no Power BI, usar o conector ODBC genérico configurando um DSN com o driver MySQL ODBC 8.0 — o conector nativo MySQL no Power BI Desktop não existe; o menu Obter Dados > Banco de Dados lista apenas SQL Server, Oracle e PostgreSQL como bancos relacionais suportados nativamente.",
-      "Conexões MySQL no Power BI só funcionam em modo DirectQuery — o modo Import não está disponível para MySQL pois o driver Connector/NET não suporta exportação em lote dos dados necessária para o mecanismo de importação do Power BI; para usar Import com MySQL é necessário configurar uma replicação para SQL Server e conectar ao SQL Server."
+      "Obter Dados > Banco de Dados MySQL, detalhes do servidor e credenciais; pré-requisito é instalar MySQL Connector/NET localmente;",
+      "Conectaria nativamente sem drivers desde 2022, via ODBC nativo do Windows; drivers extras só para MySQL anterior a 5.7.",
+      "Exigiria ODBC genérico com DSN, pois não existiria conector nativo MySQL; Obter Dados listaria só SQL Server/Oracle/PostgreSQL.",
+      "Só funcionaria em DirectQuery; Import exigiria replicar para SQL Server, pois o driver não suportaria exportação em lote."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -5026,7 +5026,7 @@ export const questions = [
   },
   {
     "id": "q202_pl300",
-    "text": "Um analista de dados implementou a seguinte medida DAX para projetar vendas futuras usando regressão linear simples baseada em dados históricos. Analise o código e as afirmações a seguir, considerando as capacidades do Power BI e DAX para análise preditiva.\n\n```\nProjeção Linear = \nVAR Periodos = COUNTROWS(ALL(DimData[AnoMes]))\nVAR SumX = SUMX(ALL(DimData[AnoMes]), RANKX(ALL(DimData[AnoMes]), DimData[AnoMes],, ASC))\nVAR SumY = CALCULATE(SUM(Vendas[Valor]), ALL(DimData))\nVAR SumXY = SUMX(ALL(DimData[AnoMes]), RANKX(ALL(DimData[AnoMes]), DimData[AnoMes],,ASC) * CALCULATE(SUM(Vendas[Valor])))\nVAR SumX2 = SUMX(ALL(DimData[AnoMes]), RANKX(ALL(DimData[AnoMes]),DimData[AnoMes],,ASC)^2)\nVAR b = DIVIDE(Periodos*SumXY - SumX*SumY, Periodos*SumX2 - SumX^2)\nVAR a = DIVIDE(SumY - b*SumX, Periodos)\nVAR PeriodoAtual = RANKX(ALL(DimData[AnoMes]), DimData[AnoMes],, ASC)\nRETURN a + b * PeriodoAtual\n```",
+    "text": "Para projetar vendas via regressão linear:\n```\nProjeção = VAR n=COUNTROWS(ALL(DimData[AnoMes])) VAR b=DIVIDE(n*SumXY-SumX*SumY,n*SumX2-SumX^2) VAR a=DIVIDE(SumY-b*SumX,n) RETURN a+b*RANKX(ALL(DimData[AnoMes]),DimData[AnoMes],,ASC)\n```\nQual afirmação é correta?",
     "options": [
       "A medida DAX apresentada implementa corretamente a regressão linear simples para projeção de vendas, embora seja uma abordagem complexa e manual.",
       "O Power BI possui uma função DAX nativa FORECAST.LINEAR que simplifica a criação de projeções lineares, tornando a implementação manual desnecessária.",
@@ -5051,12 +5051,12 @@ export const questions = [
   },
   {
     "id": "q203_pl300",
-    "text": "Qual é a abordagem correta para utilizar as propriedades avançadas de um arquivo JSON de tema no Power BI, a fim de customizar a formatação padrão de tipos específicos de visuais, como gráficos de barra ou de linha?",
+    "text": "Como usar propriedades avançadas de um JSON de tema no Power BI para customizar formatação de tipos específicos de visuais (barras, linhas)?",
     "options": [
-      "No JSON do tema, usar a seção \"visualStyles\" para definir propriedades de formatação por tipo de visual, como {\"visualStyles\": {\"barChart\": {\"*\": {\"dataPoint\": [{\"color\": \"#0070C0\"}]}}, \"lineChart\": {\"*\": {\"lineStyles\": [{\"strokeWidth\": 2}]}}}}. O asterisco \"*\" aplica para todas as instâncias do visual. Também é possível definir \"dataColors\", \"background\", \"foreground\" e \"tableAccent\" no nível raiz do JSON para configurações globais.",
-      "O arquivo JSON de tema do Power BI suporta apenas customização de paleta de cores (array \"dataColors\") e cor de fundo (\"background\"). Propriedades de formatação específicas por tipo de visual, como espessura de linha, tamanho de fonte e estilo de borda, não podem ser definidas no arquivo de tema; essas propriedades devem ser configuradas individualmente em cada visual após aplicar o tema.",
-      "A seção \"visualStyles\" do JSON de tema só funciona para visuais customizados do AppSource. Para visuais nativos do Power BI (barChart, lineChart, tableEx, etc.), as propriedades de estilo são controladas pelo mecanismo interno do Power BI Desktop e não podem ser sobrescritas pelo arquivo de tema JSON.",
-      "Temas JSON no Power BI são processados apenas no momento da importação. Alterações no arquivo JSON após importação não são refletidas no relatório. Para atualizar o tema, é necessário reimportá-lo via View > Themes > Browse for Themes, e o Power BI sobrescreve completamente as formatações individuais de todos os visuais com os valores do novo tema."
+      "Usar \"visualStyles\": {\"barChart\":{\"*\":{\"dataPoint\":[{\"color\":\"#0070C0\"}]}}, \"lineChart\":{\"*\":{\"lineStyles\":[{\"strokeWidth\":2}]}}};",
+      "Suportaria só paleta de cores e cor de fundo; formatação por tipo de visual (linha, fonte, borda) não seria definível no tema.",
+      "\"visualStyles\" funcionaria só para visuais do AppSource; nativos seriam controlados internamente, sem sobrescrita pelo tema.",
+      "Temas seriam processados só na importação; atualizar exigiria reimportar via Themes, sobrescrevendo tudo individualmente."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5079,9 +5079,9 @@ export const questions = [
     "text": "Como o Microsoft Purview (anteriormente Azure Purview) integra com o Power BI para governança de dados e quais informações são catalogadas automaticamente?",
     "options": [
       "Ao conectar o Power BI ao Microsoft Purview (via Purview Studio > Sources > Register > Power BI), o Purview faz scan automático do tenant catalogando: datasets, relatórios, dashboards, dataflows e suas linhagens; informações catalogadas: nomes, descrições, proprietários, workspaces, fontes de dados, linhagem (de onde vêm os dados e para onde vão), e Sensitivity Labels aplicados; permite pesquisa centralizada de ativos de dados de múltiplos sistemas incluindo Power BI.",
-      "O Microsoft Purview e o Power BI são sistemas completamente independentes sem integração nativa — para catalogar ativos do Power BI no Purview é necessário desenvolver um conector customizado via API REST do Power BI e API do Purview; a Microsoft não oferece integração nativa entre os dois produtos por questões de arquitetura de produto.",
-      "A integração Purview + Power BI cataloga apenas os datasets — relatórios, dashboards e dataflows não são escaneados pelo Purview pois são considerados artefatos de apresentação, não ativos de dados; apenas os objetos que contêm dados (datasets e dataflows) são relevantes para governança de dados e são incluídos no catálogo do Purview.",
-      "O scan do Purview no Power BI requer que o tenant tenha pelo menos 1000 ativos de dados para que o cataloging seja economicamente viável — tenants menores devem usar o Data Catalog nativo do Power BI Service (Hub de Dados) que oferece funcionalidades equivalentes ao Purview para organizações de menor porte sem custo adicional."
+      "Seriam sistemas independentes sem integração nativa; catalogar exigiria conector customizado via APIs REST de ambos.",
+      "Catalogaria só datasets — relatórios/dashboards/dataflows não seriam escaneados por serem artefatos de apresentação.",
+      "Exigiria 1000+ ativos para ser viável; tenants menores usariam o Data Catalog nativo (Hub de Dados) como equivalente."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5101,12 +5101,12 @@ export const questions = [
   },
   {
     "id": "q205_pl300",
-    "text": "No Power Query, como você criaria um parâmetro do tipo Lista para permitir que os usuários selecionem valores específicos, e como esse parâmetro seria utilizado para filtrar dados no Power BI Desktop?",
+    "text": "Como criar um parâmetro do tipo Lista no Power Query para os usuários selecionarem valores, e como usá-lo para filtrar dados no Power BI?",
     "options": [
       "Para criar um parâmetro de lista, acesse 'Home > Manage Parameters > New Parameter', defina o tipo como 'Text' (ou outro tipo de dado) e em 'Allowed Values', selecione 'List of values' para inserir manualmente os itens, ou 'Query' para referenciar uma consulta existente. No Power BI Desktop, o parâmetro será editável em 'Transform data > Edit Parameters' e pode ser referenciado em uma etapa de filtro da query, como `Table.SelectRows(tabela, each [Coluna] = NomeDoParametro)`.",
-      "Parâmetros do tipo Lista no Power Query automaticamente criam um slicer visual no relatório Power BI — ao definir os valores permitidos, o Power BI gera um slicer na próxima página do relatório com as opções configuradas; o usuário final seleciona o valor no slicer e a query é executada com o parâmetro atualizado em tempo real.",
-      "Parâmetros do tipo Lista só podem referenciar valores fixos digitados manualmente — não é possível usar outra query como fonte de valores para um parâmetro de lista; para listas dinâmicas baseadas em dados reais, criar um visual de slicer no relatório e usar DAX para parametrizar a análise em vez de parâmetros do Power Query.",
-      "Parâmetros de lista no Power Query funcionam apenas para filtros de texto — para filtros de data e número, os parâmetros devem ser do tipo Date/Time ou Number respectivamente e não suportam o tipo Lista; para listas de datas selecionáveis, criar uma tabela de dimensão de datas e usar slicer no relatório como alternativa ao parâmetro."
+      "Criaria automaticamente um slicer visual no relatório com as opções configuradas, executando a query ao selecionar.",
+      "Só referenciaria valores fixos digitados; para listas dinâmicas exigiria slicer com DAX em vez do parâmetro.",
+      "Funcionaria só para filtros de texto; data/número exigiriam tipo próprio sem suportar Lista."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -5128,10 +5128,10 @@ export const questions = [
     "id": "q206_pl300",
     "text": "Como você pode usar o recurso de anotações (Annotations) no aplicativo Power BI Mobile para marcar insights em relatórios e como esses insights anotados podem ser compartilhados?",
     "options": [
-      "No aplicativo Power BI Mobile (iOS/Android), abrir o relatório e tocar no ícone de lápis/anotação; usar as ferramentas de caneta, marcador, seta e texto para adicionar anotações sobre os visuais; ao finalizar, usar a opção de compartilhamento para enviar o snapshot anotado via email, Teams, WhatsApp ou outros apps de comunicação; as anotações são salvas como imagem estática — não são persistidas no relatório original no Service.",
-      "Anotações no Power BI Mobile são sincronizadas automaticamente com o relatório original no Service — outros usuários que acessarem o relatório via navegador verão as anotações adicionadas via mobile como camada sobreposta nos visuais; o proprietário do relatório pode aprovar ou rejeitar anotações de outros usuários via painel de revisão no Service.",
-      "O recurso de anotações do Power BI Mobile requer licença Power BI Premium — no plano Pro, o ícone de anotação aparece mas ao tentar usar, exibe mensagem de upgrade necessário; a funcionalidade de anotação é considerada um recurso de colaboração avançada exclusivo do Premium.",
-      "Anotações no Power BI Mobile só podem ser adicionadas em dashboards — relatórios interativos não suportam anotações via mobile pois a interatividade dos visuais conflita com o modo de desenho; para anotar relatórios, exportar para PDF primeiro via Service e usar as ferramentas de anotação do leitor de PDF no dispositivo móvel."
+      "Tocar no ícone de lápis/anotação no app; usar caneta/marcador/seta/texto sobre os visuais; compartilhar o snapshot anotado via email/Teams/WhatsApp;",
+      "Sincronizariam automaticamente com o relatório no Service, aparecendo como camada sobreposta para outros usuários via navegador.",
+      "Exigiria licença Premium; no Pro o ícone apareceria mas pediria upgrade ao tentar usar.",
+      "Só funcionariam em dashboards; relatórios interativos exigiriam exportar para PDF antes de anotar."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -5151,12 +5151,12 @@ export const questions = [
   },
   {
     "id": "q207_pl300",
-    "text": "Em relação às funções `SELECTEDMEASURE()` e `SELECTEDMEASURENAME()` no contexto de Grupos de Cálculo (Calculation Groups) no Power BI, qual das seguintes afirmações descreve corretamente seu uso e propósito?",
+    "text": "Em Calculation Groups no Power BI, qual o uso correto de `SELECTEDMEASURE()` e `SELECTEDMEASURENAME()`?",
     "options": [
       "Em Grupos de Cálculo, `SELECTEDMEASURE()` referencia a medida base à qual o item de cálculo está sendo aplicado, e `SELECTEDMEASURENAME()` retorna o nome dessa medida como uma string, permitindo lógica condicional e cálculos dinâmicos reutilizáveis.",
-      "SELECTEDMEASURE() pode ser utilizada em qualquer medida DAX regular para criar cálculos que se adaptam dinamicamente ao contexto do visual, eliminando a necessidade de Grupos de Cálculo para essa finalidade.",
-      "SELECTEDMEASURENAME() retorna o nome completo e qualificado da medida, incluindo o nome da tabela (ex: 'MinhaTabela'[MinhaMedida]), exigindo funções de texto para extrair apenas o nome da medida.",
-      "Ambas as funções são primariamente usadas para criar medidas implícitas (implicit measures) a partir de colunas numéricas, permitindo que o usuário final selecione a agregação desejada diretamente no visual."
+      "SELECTEDMEASURE() poderia ser usada em qualquer medida regular, eliminando a necessidade de Calculation Groups.",
+      "SELECTEDMEASURENAME() retornaria o nome qualificado com a tabela, exigindo funções de texto para extrair só o nome.",
+      "Ambas seriam usadas para criar medidas implícitas a partir de colunas numéricas no visual."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5180,8 +5180,8 @@ export const questions = [
     "options": [
       "Utilizar as funções DAX PATH(), PATHITEM(), PATHLENGTH() e PATHCONTAINS() para criar colunas calculadas que representem os níveis da hierarquia e permitam a navegação em visuais. Por exemplo, PATH(Funcionarios[ID], Funcionarios[GerenteID]) para o caminho e PATHITEM([Caminho], 1, TEXT) para os níveis.",
       "Hierarquias pai-filho no Power BI são tratadas automaticamente pelo visual de Decomposition Tree — ao adicionar a coluna de ID e a coluna de GerenteID ao visual, ele detecta automaticamente a estrutura hierárquica e constrói o organograma sem necessidade de transformações adicionais no Power Query ou DAX.",
-      "Tabelas pai-filho no Power BI devem ser completamente achatadas no Power Query antes do carregamento — as funções DAX PATH e PATHITEM não existem no Power BI Desktop; essas funções são exclusivas do DAX Studio para análise exploratória e não podem ser usadas em medidas ou colunas calculadas do modelo publicado.",
-      "Para hierarquias pai-filho com mais de 5 níveis, o Power BI tem limitação técnica de processar apenas os 5 primeiros níveis da hierarquia — estruturas organizacionais com mais de 5 níveis de subordinação (ex: multinacionais) devem ser truncadas no Power Query para evitar erros de overflow no mecanismo DAX ao calcular os caminhos PATH."
+      "Exigiria achatar completamente no Power Query; PATH/PATHITEM não existiriam no Desktop, só no DAX Studio.",
+      "Teria limitação técnica de só 5 níveis; estruturas maiores exigiriam truncamento no Power Query."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5204,9 +5204,9 @@ export const questions = [
     "text": "Como o recurso Copilot no Power BI (disponível no Microsoft Fabric) auxilia na criação de relatórios e na análise de dados?",
     "options": [
       "Copilot no Power BI (habilitado em capacidades Fabric F64+ ou Premium P1+) oferece: geração automática de páginas de relatório descrevendo o que você quer analisar em linguagem natural, geração de medidas DAX a partir de descrições em português/inglês, criação de narrativas inteligentes personalizadas, sugestões de visuais adequados para os dados, e resposta a perguntas sobre os dados em linguagem natural diretamente no relatório.",
-      "Copilot no Power BI está disponível em todos os planos incluindo Pro — é um recurso de produtividade gratuito incluído no Microsoft 365 E3 e E5; para habilitá-lo, o administrador do tenant ativa em Admin Portal > Copilot Settings sem necessidade de capacidade adicional Fabric ou Premium.",
-      "Copilot no Power BI gera apenas código DAX — não tem capacidade de criar visuais ou páginas de relatório automaticamente; para geração de relatórios completos, usar o recurso AutoML do Power BI Premium que analisa os dados e cria dashboards automaticamente baseado em padrões detectados nos dados sem intervenção do usuário.",
-      "Copilot no Power BI substitui completamente o Power Query e o DAX — ao ativar o Copilot, todo o processamento de dados e criação de medidas é feito por IA sem necessidade de conhecimento técnico; profissionais de dados que usam Copilot não precisam mais aprender Power Query M ou DAX pois o Copilot executa qualquer transformação descrita em linguagem natural."
+      "Estaria disponível em todos os planos incluindo Pro, gratuito no M365 E3/E5, sem precisar de capacidade Fabric/Premium.",
+      "Geraria só código DAX, sem criar visuais/páginas; relatórios completos exigiriam o AutoML do Premium.",
+      "Substituiria completamente Power Query e DAX, eliminando a necessidade de aprender essas ferramentas."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -5229,9 +5229,9 @@ export const questions = [
     "text": "Como as políticas de Data Loss Prevention (DLP) do Microsoft Purview se integram ao Power BI para proteger dados sensíveis?",
     "options": [
       "As políticas de DLP do Microsoft Purview são configuradas no Microsoft Purview Compliance Portal e se integram ao Power BI para detectar conteúdo sensível em datasets (como números de cartão de crédito ou CPF). Elas podem alertar o proprietário, bloquear o compartilhamento do dataset, exigir justificativa para acesso e gerar relatórios de conformidade, além de se integrar com Sensitivity Labels para aplicação automática de políticas baseadas na classificação do conteúdo.",
-      "As políticas de DLP no Power BI são configuradas diretamente no Admin Portal do Power BI Service, na seção Segurança > Prevenção de Perda de Dados, e não requerem o Microsoft Purview Compliance Portal. Elas são independentes das políticas DLP do Microsoft 365 e possuem seu próprio conjunto de regras específicas para datasets e relatórios do Power BI.",
-      "As políticas de DLP no Power BI só detectam dados sensíveis em datasets no modo Import. Datasets em DirectQuery não são escaneados, pois os dados permanecem na fonte externa e não são acessíveis para análise pelo mecanismo DLP do Purview. Para proteger dados em fontes DirectQuery, é necessário aplicar DLP diretamente no banco de dados de origem.",
-      "As políticas de DLP para Power BI bloqueiam automaticamente o refresh de datasets que contêm dados sensíveis detectados. Ao identificar informações de identificação pessoal (PII) ou dados financeiros regulados, o mecanismo DLP interrompe o refresh e notifica o administrador, mantendo o dataset em estado 'bloqueado' até que o proprietário aplique o Sensitivity Label correto e solicite o desbloqueio manual."
+      "Seriam configuradas no Admin Portal do Power BI, independentes do Purview Compliance Portal e das políticas do M365.",
+      "Detectariam dados sensíveis só em Import; DirectQuery não seria escaneado, exigindo DLP direto no banco de origem.",
+      "Bloqueariam automaticamente o refresh de datasets com dados sensíveis, exigindo Sensitivity Label correto para desbloquear."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5253,10 +5253,10 @@ export const questions = [
     "id": "q211_pl300",
     "text": "O Power BI oferece diversos conectores para integrar-se com sistemas SAP. Quais são os principais conectores disponíveis e quais as suas características e requisitos distintivos?",
     "options": [
-      "Power BI oferece quatro conectores SAP: 1) SAP HANA — conexão direta ao banco HANA com suporte Import e DirectQuery; 2) SAP BW Application Server — conecta ao BW via MDX com suporte a cubos e queries BW; 3) SAP BW Message Server — conecta via balanceador de carga de mensagens; 4) SAP Business Objects Universe — acessa universos do BO; cada um requer drivers específicos instalados (SAP HANA Client, SAP .NET Connector 3.0 para BW) e configurações de autenticação SAP (Single Sign-On via Kerberos é suportado).",
-      "O Power BI tem um único conector SAP universal que detecta automaticamente o tipo de sistema SAP (HANA, BW, R/3, S/4HANA) e configura a conexão adequada; não é necessário selecionar o tipo específico de conector SAP pois o Power BI faz o handshake inicial e determina o protocolo correto automaticamente.",
-      "Conectores SAP no Power BI funcionam apenas em modo DirectQuery — dados do SAP não podem ser importados para o modelo Power BI por restrições de licenciamento da SAP que proíbem extração em massa de dados para sistemas de terceiros; para usar Import com dados SAP é necessário adquirir licença SAP de extração de dados adicional.",
-      "SAP HANA no Power BI requer que o servidor HANA esteja configurado como sistema de produção certificado pela SAP — ambientes de desenvolvimento e QA do HANA não são suportados pelo conector Power BI por razões de estabilidade; para acessar ambientes não-produtivos do HANA, usar exportação CSV via SAP Data Services."
+      "Quatro conectores: SAP HANA (Import/DirectQuery); SAP BW Application Server (MDX, cubos); SAP BW Message Server (balanceador);",
+      "Haveria um único conector universal que detectaria automaticamente o tipo de sistema SAP e configuraria a conexão sem seleção manual.",
+      "Funcionariam só em DirectQuery; Import seria proibido por licenciamento SAP, exigindo licença adicional de extração.",
+      "SAP HANA exigiria sistema de produção certificado; ambientes dev/QA não seriam suportados, exigindo CSV via Data Services."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5276,12 +5276,12 @@ export const questions = [
   },
   {
     "id": "q212_pl300",
-    "text": "Um analista de dados precisa criar uma medida DAX no Power BI para identificar o número de transações que contêm dois produtos específicos (por exemplo, 'Produto X' e 'Produto Y') simultaneamente, como parte de uma análise de cesta de compras (market basket analysis). Qual das seguintes abordagens de medida DAX implementa corretamente essa lógica?",
+    "text": "Como criar uma medida DAX para contar transações que contêm dois produtos específicos simultaneamente (market basket analysis)?",
     "options": [
       "Transações com Ambos = VAR ProdutoA = \"Produto X\" VAR ProdutoB = \"Produto Y\" VAR TransacoesA = CALCULATETABLE( VALUES(Vendas[TransacaoID]), DimProduto[Nome] = ProdutoA) VAR TransacoesB = CALCULATETABLE( VALUES(Vendas[TransacaoID]), DimProduto[Nome] = ProdutoB) RETURN COUNTROWS(INTERSECT(TransacoesA, TransacoesB))",
-      "Análise de cesta de compras não pode ser feita com medidas DAX — requer algoritmos de association rules (Apriori, FP-Growth) que só estão disponíveis via Python ou R; o DAX não tem capacidade de processar sets de transações para calcular suporte, confiança e lift das regras de associação necessárias para market basket analysis.",
-      "Transações com Ambos = COUNTROWS(FILTER(Vendas, CALCULATE(DISTINCTCOUNT(Vendas[ProdutoID]), ALL(DimProduto)) = 2)) — filtrar transações onde a contagem distinta de produtos é exatamente 2 identifica cestas com dois itens; essa abordagem é mais eficiente que INTERSECT pois usa apenas uma passagem pelos dados em vez de criar duas tabelas intermediárias.",
-      "Para análise de cesta, criar uma coluna calculada \"ContemProdutoX\" (BOOL) e \"ContemProdutoY\" (BOOL) na tabela de transações usando CALCULATE com filtro de produto; depois criar medida COUNTROWS(FILTER(Transacoes, [ContemProdutoX] && [ContemProdutoY])); colunas calculadas são obrigatórias pois medidas não têm acesso ao nível de transação necessário para esse tipo de análise."
+      "Não seria possível com DAX — exigiria algoritmos de association rules (Apriori, FP-Growth) só disponíveis via Python/R.",
+      "COUNTROWS(FILTER(Vendas,CALCULATE(DISTINCTCOUNT(Vendas[ProdutoID]),ALL(DimProduto))=2)) seria mais eficiente que INTERSECT por usar uma só passagem.",
+      "Exigiria colunas calculadas booleanas por produto, pois medidas não teriam acesso ao nível de transação necessário."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5304,9 +5304,9 @@ export const questions = [
     "text": "Como você aplicaria formatação condicional na cor do valor exibido em um visual de Cartão (Card) no Power BI, baseando-se em uma comparação com uma meta específica?",
     "options": [
       "No visual Card, Format > Callout value > Font color > clicar em \"fx\"; selecionar \"Field value\" e apontar para medida DAX que retorna a cor: `Cor Card = IF([Atingimento%] >= 1, \"#00B050\", IF([Atingimento%] >= 0.8, \"#FFC000\", \"#FF0000\"))` — verde se atingiu meta, amarelo se entre 80-100%, vermelho se abaixo de 80%; a cor do valor do Card muda dinamicamente conforme o desempenho real.",
-      "Formatação condicional em visuais Card no Power BI não está disponível — o Card é um visual de exibição simples que suporta apenas cor estática configurada nas propriedades de formatação; para exibição de valores com cor condicional, usar o visual KPI que tem suporte nativo a zonas de cor (verde/amarelo/vermelho) baseadas em comparação com meta.",
-      "A formatação condicional de cor em Card só funciona para a cor de fundo do visual inteiro — não é possível alterar a cor do valor numérico individualmente; para destacar o número com cor condicional, usar formatação de fundo do Card e manter o texto na cor padrão (branco ou preto automático) para contraste adequado.",
-      "Para formatação condicional em Card, criar uma medida que retorna o valor formatado como texto colorido usando HTML: `= \"<font color='green'>\" & FORMAT([Valor], \"R$#,##0\") & \"</font>\"`; o Card renderiza automaticamente HTML inline para suportar formatação rica de texto incluindo cores, tamanhos e estilos de fonte."
+      "Não estaria disponível em Card, que suportaria só cor estática; cor condicional exigiria o visual KPI com zonas de cor nativas.",
+      "Funcionaria só para a cor de fundo inteira, não o valor individual; destacar exigiria fundo colorido com texto padrão.",
+      "Exigiria medida retornando HTML inline (`<font color='green'>...`), pois o Card renderizaria HTML automaticamente."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -5329,9 +5329,9 @@ export const questions = [
     "text": "Como você utilizaria o recurso 'Merge Queries' no Power Query para padronizar valores em uma coluna específica de uma tabela, utilizando uma tabela de mapeamento (de/para) como referência?",
     "options": [
       "Criar uma tabela de mapeamento no Power Query (via 'Enter Data' ou fonte externa) com colunas como 'ValorOriginal' e 'ValorPadronizado'; na tabela principal, usar 'Home > Merge Queries' (com 'Left Outer Join') tendo a coluna a ser padronizada como chave de junção; expandir a coluna do resultado selecionando apenas 'ValorPadronizado'; e, opcionalmente, usar Replace Errors ou uma lógica 'if null then original else new' para manter o valor original quando não houver correspondência na tabela de mapeamento.",
-      "A padronização via tabela de mapeamento no Power Query é feita exclusivamente com a função 'Replace Values' em cadeia, onde um passo 'Replace Values' é criado para cada par de/para na tabela de mapeamento; para 50 mapeamentos, seriam necessários 50 passos sequenciais, pois 'Merge Queries' não é adequado para substituição de valores em colunas de texto.",
-      "A abordagem correta para padronização via tabela de mapeamento é usar a função M 'Table.ReplaceValue' com uma função personalizada que busca o valor na tabela de mapeamento; não é possível usar o 'Merge' visual, pois ele cria uma nova coluna, e substituir a coluna original requer código M direto no Advanced Editor sem interface visual.",
-      "O 'Merge' com tabela de mapeamento só funciona para correspondências exatas; valores com diferença de maiúsculas/minúsculas ou espaços extras não são correspondidos. Para padronização robusta com variações de escrita, deve-se usar a opção 'Fuzzy Matching' no 'Merge' em vez de correspondência exata, o que torna a tabela de mapeamento desnecessária, pois o Power Query infere os mapeamentos automaticamente."
+      "Exigiria 'Replace Values' em cadeia, um passo por par de/para; 50 mapeamentos exigiriam 50 passos, pois Merge não serviria para texto.",
+      "Exigiria 'Table.ReplaceValue' com função customizada; Merge visual não funcionaria, pois criaria nova coluna em vez de substituir.",
+      "Funcionaria só para correspondência exata; variações exigiriam 'Fuzzy Matching', tornando a tabela de mapeamento desnecessária."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -5351,12 +5351,12 @@ export const questions = [
   },
   {
     "id": "q215_pl300",
-    "text": "Você precisa implementar uma análise ABC de produtos no Power BI usando DAX. O objetivo é classificar os produtos em três categorias com base no seu valor de vendas total:\n*   A: Produtos que representam os primeiros 20% do valor total de vendas acumulado.\n*   B: Produtos que representam os próximos 30% do valor total de vendas acumulado (ou seja, do 20% ao 50% acumulado).\n*   C: Produtos que representam os últimos 50% do valor total de vendas acumulado (ou seja, do 50% ao 100% acumulado).\n\nQual das seguintes opções apresenta a implementação DAX correta para criar uma coluna calculada \"Classificação ABC\" que atenda a esses requisitos?",
+    "text": "Análise ABC de produtos: A=primeiros 20% do valor acumulado, B=20-50% acumulado, C=50-100% acumulado. Qual implementação DAX cria corretamente a coluna \"Classificação ABC\"?",
     "options": [
       "A implementação DAX correta é: Classificação ABC = VAR PctAcumulado = DIVIDE( CALCULATE([Total Vendas], FILTER(ALL(DimProduto), [Total Vendas] >= MAX([Total Vendas]))), CALCULATE([Total Vendas], ALL(DimProduto))) RETURN SWITCH(TRUE(), PctAcumulado <= 0.2, \"A\", PctAcumulado <= 0.5, \"B\", \"C\")",
-      "Análise ABC no Power BI é feita exclusivamente via visual de Treemap — as cores automáticas do Treemap representam os grupos A, B e C com base no tamanho relativo dos retângulos; não é necessário criar medidas ou colunas calculadas pois o Treemap identifica automaticamente os três grupos de contribuição ao total.",
-      "A implementação DAX correta é: Classificação ABC = SWITCH(TRUE(), RANKX(ALL(DimProduto), [Total Vendas],, DESC) <= ROUND(COUNTROWS(ALL(DimProduto)) * 0.2, 0), \"A\", RANKX(ALL(DimProduto), [Total Vendas],, DESC) <= ROUND(COUNTROWS(ALL(DimProduto)) * 0.5, 0), \"B\", \"C\") — esta fórmula classifica pelos primeiros 20% e 50% dos produtos por número (não por valor acumulado), que é a definição correta de ABC.",
-      "Colunas calculadas DAX não podem referenciar medidas como [Total Vendas] — colunas calculadas só têm acesso a colunas físicas da tabela e funções escalares; para calcular a classificação ABC é necessário criar primeiro uma tabela calculada com SUMMARIZE que inclui o total por produto e depois fazer o join com a dimensão para obter a classificação."
+      "Seria feita exclusivamente via Treemap, cujas cores automáticas representariam A/B/C pelo tamanho relativo, sem medidas/colunas.",
+      "SWITCH(TRUE(),RANKX(...)<=ROUND(COUNTROWS(...)*0.2,0),\"A\",RANKX(...)<=ROUND(...*0.5,0),\"B\",\"C\") classificaria por número de produtos, não valor acumulado.",
+      "Colunas calculadas não poderiam referenciar medidas; exigiria tabela SUMMARIZE com join na dimensão."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5378,10 +5378,10 @@ export const questions = [
     "id": "q216_pl300",
     "text": "Como você pode configurar slicers no Power BI para que a seleção feita em uma página seja automaticamente aplicada e mantida ao navegar para outras páginas do relatório?",
     "options": [
-      "Para sincronizar slicers, selecione o slicer na página, vá em 'Exibir' (View) > 'Sincronizar Slicers' (Sync Slicers). No painel 'Sincronizar Slicers', configure a opção 'Sincronizar' (Sync) para todas as páginas desejadas e 'Visível' (Visible) apenas nas páginas onde o slicer deve aparecer fisicamente, permitindo que o slicer filtre outras páginas sem ser visível nelas.",
-      "A sincronização de slicers entre páginas no Power BI é automática para slicers que filtram a mesma coluna; ao criar slicers com a mesma coluna em múltiplas páginas, o Power BI sincroniza automaticamente as seleções sem necessidade de configuração manual no painel 'Sincronizar Slicers', que é usado apenas para desabilitar essa sincronização automática quando indesejada.",
-      "Slicers sincronizados entre páginas requerem que todos os visuais das páginas sincronizadas usem o mesmo conjunto de dados (dataset); se uma página usa um dataset diferente (via Live Connection para um modelo diferente), o slicer não pode ser sincronizado com páginas de outros datasets, pois o campo de filtro não existe no contexto do dataset alternativo.",
-      "O painel 'Sincronizar Slicers' só está disponível no Power BI Service após a publicação do relatório; no Power BI Desktop, slicers são sempre independentes por página e a sincronização só pode ser configurada após publicar o relatório nas configurações do Service, sendo que qualquer configuração de sincronização no Service é perdida ao baixar e reeditar o arquivo .pbix no Desktop."
+      "Selecionar o slicer, 'Exibir' > 'Sincronizar Slicers'; marcar 'Sincronizar' nas páginas desejadas e 'Visível' só.",
+      "Seria automática para slicers da mesma coluna; o painel 'Sincronizar Slicers' serviria só para desabilitar a sincronização automática.",
+      "Exigiria que todas as páginas usem o mesmo dataset; páginas com dataset diferente (Live Connection) não poderiam sincronizar.",
+      "Estaria disponível só no Service após publicar; no Desktop seria sempre independente, e config no Service se perderia ao reeditar."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -5404,9 +5404,9 @@ export const questions = [
     "text": "O que é Effective Identity no Power BI Embedded e como ela é usada para implementar RLS em aplicações que incorporam relatórios?",
     "options": [
       "A Effective Identity permite que a aplicação que incorpora o relatório especifique a identidade (username e roles) do usuário final ao gerar o token de embed. Isso é crucial para que o Power BI aplique corretamente as regras de RLS (Row-Level Security) definidas no modelo, especialmente quando o contexto de autenticação é um Service Principal e o RLS utiliza USERPRINCIPALNAME() ou roles estáticas.",
-      "A Effective Identity é configurada diretamente nas propriedades do dataset no Power BI Service, e não na geração do token de embed. Uma vez definida, todos os usuários que acessam o relatório incorporado utilizam essa mesma identidade efetiva, independentemente de sua autenticação individual na aplicação.",
-      "A Effective Identity é necessária apenas para modelos com RLS dinâmico que utilizam USERPRINCIPALNAME(). Para RLS estático com roles fixas, a aplicação pode passar qualquer username, pois o Power BI ignora o campo username e aplica o filtro apenas com base nas roles fornecidas.",
-      "A Effective Identity no Power BI Embedded substitui a necessidade de autenticação via Azure AD. A aplicação não precisa autenticar usuários, pois o token de embed com Effective Identity é suficiente para controlar o acesso e a segurança dos dados, eliminando a necessidade de integração com Azure AD B2B ou outros mecanismos de identidade externos."
+      "Seria configurada nas propriedades do dataset no Service, não no token; todos usariam a mesma identidade independente de autenticação.",
+      "Seria necessária só para RLS dinâmico com USERPRINCIPALNAME(); RLS estático aceitaria qualquer username, ignorado pelo Power BI.",
+      "Substituiria a necessidade de autenticação via Azure AD, sendo suficiente sozinha para controlar acesso e segurança."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5428,10 +5428,10 @@ export const questions = [
     "id": "q218_pl300",
     "text": "Qual a abordagem mais robusta e eficiente para consumir uma API REST com paginação baseada em número de página (ex: `page=1`, `page=2`) no Power Query, garantindo que todas as páginas sejam coletadas até que não haja mais dados?",
     "options": [
-      "Utilizar a função `List.Generate` para iterar sobre as páginas, iniciando com a página 1 e incrementando o número da página a cada iteração. A condição de parada deve verificar se a resposta da API ainda contém resultados, e os dados de cada página devem ser coletados e posteriormente combinados com `List.Combine` e transformados em tabela com `Table.FromList`.",
+      "Usar `List.Generate` para iterar páginas, incrementando a cada iteração;",
       "APIs com paginação no Power Query são tratadas automaticamente pelo conector Web — na configuração avançada do conector, selecionar \"Pagination\" e definir o parâmetro de página; o Power Query detecta o padrão de paginação da API e faz todas as chamadas necessárias automaticamente sem código M adicional; disponível para qualquer API REST que retorne o total de páginas no header HTTP.",
-      "`List.Generate` não pode ser usada para chamadas HTTP no Power Query pois gera múltiplas requisições paralelas que violam os rate limits das APIs — para APIs com paginação, usar recursão via função customizada que chama a si mesma para cada página; funções recursivas no M são a única abordagem que garante chamadas sequenciais respeitando rate limits.",
-      "Para APIs com paginação no Power Query, criar uma lista de números de página com `{1..100}` e usar `List.Transform` para chamar a API para cada número de página independentemente; se a API retornar páginas vazias para números acima do limite real, o Power Query descarta automaticamente os resultados vazios sem necessidade de condição de parada."
+      "`List.Generate` não poderia ser usada para HTTP por violar rate limits; exigiria recursão via função customizada chamando a si mesma.",
+      "Exigiria lista fixa `{1..100}` com `List.Transform` chamando cada página; páginas vazias seriam descartadas automaticamente."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5451,9 +5451,9 @@ export const questions = [
   },
   {
     "id": "q219_pl300",
-    "text": "Para relatório Power BI criar uma análise de cohort para medir a retenção de clientes com base no mês da primeira compra. Você já possui a seguinte medida DAX para calcular o número de clientes em um cohort específico:\n```dax\nClientes Cohort = \nVAR MesPrimeiraCompraStr = CALCULATE(FORMAT(MIN(DimData[Data]), \"YYYY-MM\"), ALL(DimData), VALUES(Vendas[ClienteID]))\nVAR MesAtualStr = FORMAT(MAX(DimData[Data]), \"YYYY-MM\")\nVAR MesPrimeiraCompraDate = DATE(LEFT(MesPrimeiraCompraStr,4), MID(MesPrimeiraCompraStr,6,2),1)\nVAR MesAtualDate = DATE(LEFT(MesAtualStr,4), MID(MesAtualStr,6,2),1)\nVAR MesesDesde = DATEDIFF(MesPrimeiraCompraDate, MesAtualDate, MONTH)\nRETURN IF(NOT ISBLANK(MesesDesde) && MesesDesde >= 0, DISTINCTCOUNT(Vendas[ClienteID]), BLANK())\n```\nComo você configuraria uma matriz para visualizar essa análise de cohort, mostrando a retenção de clientes ao longo do tempo, onde as linhas representam o mês de aquisição e as colunas representam os meses decorridos desde a aquisição?",
+    "text": "Você tem uma medida de cohort baseada em VAR MesesDesde=DATEDIFF(mês primeira compra, mês atual, MONTH), retornando DISTINCTCOUNT de clientes. Como configurar a matriz: linhas=mês de aquisição, colunas=meses decorridos?",
     "options": [
-      "Colocar uma coluna de mês da tabela de datas (por exemplo, DimData[AnoMês]) nas linhas da matriz para representar o mês de aquisição, a mesma coluna de mês (DimData[AnoMês]) nas colunas da matriz para representar o mês atual, e a medida Clientes Cohort nos valores.",
+      "Colocar DimData[AnoMês] nas linhas (mês de aquisição) e nas colunas (mês atual) da matriz, com a medida Clientes Cohort nos valores.",
       "Criar uma tabela auxiliar no Power Query com o mês da primeira compra para cada cliente, relacioná-la à tabela de vendas e usar o mês da primeira compra dessa tabela auxiliar nas linhas da matriz, o mês atual nas colunas e a contagem de clientes nos valores.",
       "Utilizar o visual \"Cohort Analysis\" do AppSource, pois o Power BI nativo não suporta análises de cohort complexas com medidas DAX em matrizes padrão.",
       "Colocar a medida Mês Primeira Compra (assumindo que seja uma medida separada) nas linhas, e uma medida que calcula MesesDesde diretamente nas colunas, e Clientes Cohort nos valores, pois o DAX não consegue calcular MesesDesde dinamicamente sem uma medida auxiliar para as colunas."
@@ -5478,10 +5478,10 @@ export const questions = [
     "id": "q220_pl300",
     "text": "No contexto do Power BI Service, o que são os Power BI Goals (agora conhecidos como Métricas no Microsoft Fabric) e qual a principal diferença entre eles e os visuais de KPI tradicionais em relatórios?",
     "options": [
-      "Power BI Goals (agora \"Metrics\" no Fabric) são um recurso do Service que cria scorecards com KPIs organizados hierarquicamente — cada métrica tem: valor atual (conectado a medida de dataset), meta, prazo, responsável, notas e histórico de progresso; diferem do visual KPI pois são itens independentes do Service (não visuais em relatórios), suportam acompanhamento manual ou automático, notificações de desvio, e check-ins periódicos; adequados para OKRs e gestão de desempenho.",
-      "Power BI Goals são idênticos ao visual KPI do Power BI Desktop — são apenas a versão cloud do mesmo visual com sincronização automática via OneDrive; ao criar um visual KPI no Desktop e publicar, ele aparece automaticamente na seção Goals do workspace sem necessidade de configuração adicional no Service.",
-      "Power BI Goals requerem licença Power BI Premium para criação — no plano Pro, apenas a visualização de Goals criados por usuários Premium está disponível; a limitação do Pro é de 5 Goals por workspace enquanto Premium suporta Goals ilimitados por workspace.",
-      "Power BI Goals são calculados exclusivamente por medidas DAX criadas especificamente para o scorecard — não é possível conectar Goals a medidas existentes em datasets publicados; para cada métrica do scorecard é necessário criar um novo dataset dedicado com a medida de KPI isolada para evitar conflitos com o modelo de dados principal."
+      "Goals (\"Metrics\" no Fabric) criam scorecards com KPIs hierárquicos: valor atual, meta, prazo, responsável, notas e histórico;",
+      "Seriam idênticos ao visual KPI, só a versão cloud sincronizada via OneDrive, aparecendo automaticamente na seção Goals.",
+      "Exigiriam Premium para criar; no Pro só visualizaria Goals de Premium, limitado a 5 por workspace.",
+      "Seriam calculados só por medidas dedicadas ao scorecard, exigindo dataset isolado por métrica."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -5504,9 +5504,9 @@ export const questions = [
     "text": "Qual é a abordagem correta para utilizar o módulo PowerShell do Power BI (`MicrosoftPowerBIMgmt`) na automação de tarefas administrativas e de auditoria, incluindo a extração de logs de atividade?",
     "options": [
       "Instalar o módulo `MicrosoftPowerBIMgmt` via `Install-Module`, conectar-se com `Connect-PowerBIServiceAccount` (suportando Service Principal), e utilizar cmdlets como `Get-PowerBIWorkspace`, `Get-PowerBIDataset`, `Get-PowerBIReport`, `Invoke-PowerBIRestMethod` para interagir com a API REST, e `Get-PowerBIActivityEvent -StartDateTime -EndDateTime` para extrair logs de auditoria históricos, permitindo a automação de relatórios de inventário e conformidade.",
-      "O módulo `MicrosoftPowerBIMgmt` é restrito ao Windows PowerShell 5.1, não sendo compatível com PowerShell Core (7.x) ou sistemas operacionais como Linux/macOS, exigindo o uso direto da API REST para automação cross-platform.",
-      "A execução do módulo PowerShell do Power BI é exclusiva para administradores globais do Azure AD, sendo que a função 'Power BI Administrator' não possui permissões suficientes para autenticação via `Connect-PowerBIServiceAccount`.",
-      "O cmdlet `Get-PowerBIActivityEvent` fornece apenas eventos de auditoria em tempo real, monitorando continuamente o tenant; para auditoria histórica de períodos específicos, é necessário usar o Microsoft Purview Compliance Portal, pois o PowerShell acessa apenas os últimos 30 minutos de atividade."
+      "Seria restrito ao Windows PowerShell 5.1, incompatível com PowerShell Core/Linux/macOS, exigindo API REST direta.",
+      "Seria exclusivo de admins globais do Azure AD; 'Power BI Administrator' não teria permissão para autenticar.",
+      "Get-PowerBIActivityEvent forneceria só eventos em tempo real; histórico exigiria o Purview Compliance Portal."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5528,10 +5528,10 @@ export const questions = [
     "id": "q222_pl300",
     "text": "Como identificar e tratar outliers em uma coluna numérica no Power Query usando o método IQR (Interquartile Range)?",
     "options": [
-      "Criar query auxiliar calculando Q1 e Q3 via List.Percentile(Table.Column(tabela, \"coluna\"), {0.25, 0.75}); calcular IQR = Q3 - Q1 e limites: inferior = Q1 - 1.5*IQR, superior = Q3 + 1.5*IQR; na tabela principal, adicionar Custom Column: = if [Coluna] < LimiteInferior or [Coluna] > LimiteSuperior then null else [Coluna] — substituindo outliers por null para tratamento posterior (exclusão, imputação, ou marcação com flag).",
-      "O Power Query tem função nativa Table.RemoveOutliers(tabela, coluna, fator) que remove automaticamente outliers baseado no método IQR com o fator de sensibilidade configurável (padrão 1.5); não é necessário calcular Q1, Q3 e IQR manualmente pois a função encapsula toda a lógica de detecção e remoção de outliers em uma única chamada.",
-      "Identificação de outliers no Power Query deve ser feita apenas com Z-score — o método IQR não está disponível pois List.Percentile não existe na linguagem M; para Z-score, calcular média e desvio padrão com List.Average e List.StandardDeviation e marcar como outlier valores com |Z| > 3.",
-      "Outliers no Power Query são identificados exclusivamente via Column Profile no painel de estatísticas — os valores mínimo e máximo exibidos no Column Profile são suficientes para determinar e remover outliers manualmente."
+      "Query auxiliar com List.Percentile(coluna,{0.25,0.75}) para Q1/Q3; IQR=Q3-Q1, limites Q1-1.5*IQR e Q3+1.5*IQR;",
+      "Haveria função nativa Table.RemoveOutliers(tabela,coluna,fator) que removeria outliers via IQR automaticamente, sem cálculo manual.",
+      "Deveria ser feita só com Z-score, pois List.Percentile não existiria em M; outlier seria |Z|>3 via média e desvio padrão.",
+      "Seriam identificados só via Column Profile, com mín/máx exibidos suficientes para remoção manual."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -5551,7 +5551,7 @@ export const questions = [
   },
   {
     "id": "q223_pl300",
-    "text": "Um analista de dados está desenvolvendo um relatório no Power BI que contém várias páginas. Ele deseja que um slicer de 'Ano' esteja presente em duas páginas diferentes (Página A e Página B) e que a seleção feita neste slicer seja refletida em ambas as páginas. Além disso, ele criou um bookmark na Página A para destacar uma visão específica dos dados, mas quer que, ao aplicar este bookmark, a seleção do slicer de 'Ano' não seja alterada para um valor pré-definido, mas sim mantenha a seleção atual ou a última seleção sincronizada. Qual a configuração CORRETA para o slicer de 'Ano' e para o bookmark para atender a esses requisitos?",
+    "text": "Slicer de 'Ano' sincronizado entre Páginas A e B; bookmark na Página A não deve alterar a seleção atual do slicer. Configuração correta?",
     "options": [
       "Sincronizar o slicer de 'Ano' entre a Página A e a Página B e, ao criar o bookmark, garantir que a propriedade 'Dados' (Data) esteja habilitada.",
       "Sincronizar o slicer de 'Ano' entre a Página A e a Página B e, ao criar o bookmark, garantir que a propriedade 'Dados' (Data) esteja desabilitada.",
@@ -5576,12 +5576,12 @@ export const questions = [
   },
   {
     "id": "q224_pl300",
-    "text": "Uma grande corporação global utiliza o Power BI para seus relatórios de vendas. O departamento de TI foi encarregado de automatizar a distribuição mensal de relatórios personalizados. Especificamente, cada gerente regional deve receber um relatório de vendas em PDF, contendo apenas os dados de sua região, filtrados pelo mês atual. Além disso, a diretoria executiva precisa de uma apresentação em PPTX com um resumo consolidado, e a equipe de auditoria solicita exportações em XLSX de tabelas específicas para conformidade. Todo o processo deve ser programático, seguro e eficiente, utilizando o Power BI Service Principal para autenticação.\n\nQual das seguintes afirmações descreve corretamente as capacidades da API de Exportação do Power BI (ExportTo) para atender a esses requisitos?",
+    "text": "A TI precisa automatizar distribuição de relatórios via Service Principal: PDF filtrado por região/mês para gerentes, PPTX consolidado para diretoria, XLSX para auditoria. Qual afirmação descreve corretamente a API ExportTo?",
     "options": [
-      "A API ExportTo permite a exportação para PDF, PPTX e XLSX, suporta filtragem de dados via parâmetros OData para personalização regional e é uma operação assíncrona que requer polling para verificar a conclusão.",
-      "A API ExportTo suporta apenas a exportação para PDF e PPTX, e a filtragem de dados para personalização regional deve ser pré-configurada no relatório, pois a API não aceita filtros dinâmicos.",
-      "A API ExportTo pode exportar para PDF, PPTX e XLSX, mas a personalização regional via filtros OData só é possível para relatórios paginados, e a operação é síncrona, retornando o arquivo imediatamente.",
-      "A API ExportTo permite a exportação para PDF, PPTX, XLSX e CSV. Embora suporte filtros dinâmicos, a autenticação via Service Principal não é recomendada para operações de exportação de dados sensíveis."
+      "Permite exportar para PDF, PPTX e XLSX, suporta filtragem via OData para personalização regional, e é assíncrona (requer polling).",
+      "Suportaria só PDF e PPTX; a filtragem regional exigiria etapa manual adicional.",
+      "Exportaria para PDF, PPTX e XLSX, mas a personalização via OData só funcionaria para relatórios paginados.",
+      "Permitiria PDF, PPTX, XLSX e CSV, com filtros dinâmicos sempre síncronos."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5604,9 +5604,9 @@ export const questions = [
     "text": "Como consolidar dados de fontes com granularidades temporais diferentes (uma com dados diários e outra com dados mensais) em um único modelo Power BI para permitir análises flexíveis em ambos os níveis de detalhe?",
     "options": [
       "Criar uma tabela de datas unificada com granularidade diária como âncora; para a fonte com dados mensais, expandir para granularidade diária no Power Query usando List.Dates para gerar todos os dias de cada mês e dividir o valor mensal pelo número de dias (Table.ExpandListColumn após List.Dates); ou manter ambas as granularidades e usar medidas DAX que agregam corretamente conforme o nível temporal selecionado pelo usuário.",
-      "Dados com granularidades diferentes no Power BI devem ser mantidos em datasets separados — um dataset para dados diários e outro para dados mensais; usar Live Connection em dois relatórios separados e combinar via Dashboard fixando tiles de cada relatório; tentar unificar granularidades diferentes em um único modelo sempre gera inconsistências nas medidas DAX.",
-      "A solução correta para granularidades mistas é usar DirectQuery para ambas as fontes — o banco de dados subjacente resolve automaticamente as diferenças de granularidade via JOIN nas queries geradas pelo Power BI; no modo Import, granularidades diferentes não podem coexistir no mesmo modelo pois o VertiPaq exige que todas as tabelas de fatos tenham a mesma granularidade temporal.",
-      "Granularidades mistas no Power BI são tratadas automaticamente pela tabela de datas marcada como Date Table — ao relacionar ambas as tabelas de fatos à mesma DimData, o Power BI normaliza automaticamente as granularidades para o menor denominador comum (dia) antes de calcular as medidas; não é necessária nenhuma transformação adicional no Power Query ou lógica especial no DAX."
+      "Deveriam ficar em datasets separados, combinados via Dashboard com tiles; unificar granularidades sempre geraria inconsistências.",
+      "Exigiria DirectQuery para ambas, com o banco resolvendo via JOIN; em Import, granularidades diferentes não poderiam coexistir.",
+      "Seriam normalizadas automaticamente pela Date Table para o menor denominador comum, sem transformação adicional necessária."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -5628,9 +5628,9 @@ export const questions = [
     "id": "q226_pl300",
     "text": "Um analista de dados está desenvolvendo um relatório de performance de vendas e precisa criar as seguintes medidas DAX para analisar vendedores: Ranking, % da Meta Atingida e Comparação com a Média da Equipe. Ele propôs as seguintes medidas iniciais:\n```\nRanking Vendedor = RANKX(ALL(DimVendedor), [Total Vendas],, DESC, Dense)\n% Meta Vendedor = DIVIDE([Total Vendas], MAX(DimVendedor[Meta]))\nVs Média Equipe = [Total Vendas] - CALCULATE(AVERAGEX(ALL(DimVendedor), [Total Vendas]))\n```\nConsiderando as melhores práticas e a funcionalidade do DAX, qual das seguintes afirmações sobre essas medidas é a mais precisa?",
     "options": [
-      "A medida \"% Meta Vendedor\" utiliza MAX(DimVendedor[Meta]) corretamente para obter a meta do vendedor no contexto de filtro, e AVERAGEX é a função mais robusta para calcular a média da equipe, enquanto RANKX com Dense é uma opção válida para o ranking.",
-      "A medida \"% Meta Vendedor\" deveria usar RELATED(DimVendedor[Meta]) em vez de MAX, pois RELATED é a função mais eficiente e direta para acessar colunas de tabelas relacionadas em medidas.",
-      "O RANKX na medida \"Ranking Vendedor\" deveria usar o tipo Skip (padrão sem Dense) para ser mais justo em caso de empates, pois mostra quantos vendedores estão empatados na mesma posição, o que é mais adequado para relatórios de RH.",
+      "\"% Meta Vendedor\" usa MAX(Meta) corretamente no contexto de filtro;",
+      "Deveria usar RELATED(Meta) em vez de MAX, pois RELATED seria mais eficiente para acessar colunas de.",
+      "RANKX deveria usar Skip (sem Dense) para ser mais justo em empates, mostrando quantos estão na mesma posição.",
       "A medida \"Vs Média Equipe\" poderia ser otimizada para [Total Vendas] - CALCULATE([Total Vendas], ALL(DimVendedor)) / COUNTROWS(ALL(DimVendedor)), pois a divisão direta é mais eficiente para médias simples."
     ],
     "correctAnswer": 0,
@@ -5654,9 +5654,9 @@ export const questions = [
     "text": "Qual é a diferença principal entre o Power BI Report Server (on-premises) e o Power BI Service (na nuvem) e em que cenários cada um é mais adequado para implantação?",
     "options": [
       "O Power BI Report Server é uma solução on-premises, ideal para organizações com requisitos regulatórios ou de segurança que impedem o uso da nuvem. Ele suporta relatórios Power BI, paginados e móveis, mas possui um conjunto de funcionalidades mais limitado em comparação com o Power BI Service, exigindo uma licença Power BI Premium com Software Assurance.",
-      "O Power BI Report Server é a versão gratuita do Power BI, oferecendo as mesmas funcionalidades do Power BI Service, mas com limitações de usuários e armazenamento, sendo ideal para pequenas empresas antes de migrarem para o Power BI Service Pro.",
-      "Power BI Report Server e Power BI Service são ambientes totalmente intercambiáveis, com sincronização automática de conteúdo, permitindo que organizações com ambientes híbridos utilizem ambos de forma transparente.",
-      "O Power BI Report Server está em processo de descontinuação pela Microsoft, com um prazo final em 2025, e todos os usuários devem migrar para o Power BI Service utilizando ferramentas de conversão automática fornecidas pela Microsoft."
+      "Seria a versão gratuita do Power BI, com as mesmas funcionalidades do Service, mas com limites de usuários/armazenamento.",
+      "Seriam ambientes totalmente intercambiáveis, com sincronização automática de conteúdo entre eles.",
+      "Estaria em descontinuação com prazo final em 2025, exigindo migração via ferramentas automáticas."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -5678,10 +5678,10 @@ export const questions = [
     "id": "q228_pl300",
     "text": "Como usar o Power Query para normalizar uma tabela desnormalizada (flat table) em um conjunto de tabelas de dimensão e fato para modelagem dimensional no Power BI?",
     "options": [
-      "Da tabela flat original, criar queries de dimensão por referência, selecionando as colunas pertinentes e removendo duplicatas com Table.Distinct; criar uma query de fato por referência, mantendo apenas as chaves e métricas; e desabilitar o carregamento da tabela flat original.",
-      "Normalização de dados no Power Query deve ser feita apenas para tabelas com menos de 100.000 linhas; para tabelas maiores, a desnormalização no Power Query degrada significativamente a performance de refresh, sendo preferível normalizar na fonte de dados.",
-      "A normalização via Power Query gera tabelas de dimensão sem garantia de unicidade, pois Table.Distinct não remove duplicatas corretamente quando há valores nulos nas colunas de chave; para dimensões com chaves únicas garantidas, deve-se usar Table.Group com agregação de primeira linha.",
-      "Normalizar dados no Power Query é desnecessário quando se usa o modo DirectQuery, pois o Power BI envia queries otimizadas para a tabela flat, e o banco de dados executa as agregações sem necessidade de estrutura dimensional."
+      "Da tabela flat, criar queries de dimensão por referência, selecionando colunas e removendo duplicatas com Table.Distinct;",
+      "Normalização só seria viável para tabelas com menos de 100k linhas; tabelas maiores degradariam a performance de refresh.",
+      "Table.Distinct não garantiria unicidade com valores nulos nas chaves; dimensões exigiriam Table.Group com agregação de primeira linha.",
+      "Seria desnecessária em DirectQuery, pois o banco executaria as agregações sem precisar de estrutura dimensional."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -5705,8 +5705,8 @@ export const questions = [
     "options": [
       "Estruturar uma medida polimórfica única, como `Valor DRE = VAR TipoConta = SELECTEDVALUE(DimConta[Tipo]) RETURN SWITCH(TRUE(), ISINSCOPE(DimConta[Conta]), SWITCH(TipoConta, \"Receita\", SUM(LancamentosFinanceiros[Valor]), \"Custo\", -SUM(LancamentosFinanceiros[Valor]), \"Margem Bruta\", [Receita Total] + [Custo dos Produtos Vendidos], BLANK()), SUMX(SUMMARIZE(ALLSELECTED(DimConta), DimConta[Conta]), [Valor DRE]))`, que utiliza `SELECTEDVALUE` para identificar o tipo de conta e `ISINSCOPE` para aplicar lógica diferente em níveis de conta e de subtotal, garantindo cálculos precisos em um visual de Matriz.",
       "Criar uma medida DAX separada para cada linha do DRE (ex: `Receita Bruta`, `Custo Total`, `Lucro Bruto`), pois uma única medida polimórfica não pode garantir a consistência dos cálculos em subtotais automáticos de visuais de Matriz.",
-      "Utilizar o visual de Tabela em vez da Matriz, pois a Tabela não calcula subtotais automáticos, evitando inconsistências quando há linhas de margem calculadas que não devem ser somadas diretamente.",
-      "Completar a medida com `Valor DRE = SWITCH(TRUE(), MAX(DimConta[Tipo]) = \"Receita\", SUM(LancamentosFinanceiros[Valor]), MAX(DimConta[Tipo]) = \"Custo\", -SUM(LancamentosFinanceiros[Valor]), MAX(DimConta[Tipo]) = \"Margem\", [Receita Total] - [Custo Total], BLANK())`, confiando que `MAX(DimConta[Tipo])` sempre retornará o tipo correto no contexto de linha da Matriz."
+      "Usar Tabela em vez de Matriz, pois Tabela não calcularia subtotais automáticos, evitando inconsistência de margens.",
+      "Usar MAX(DimConta[Tipo]) em vez de SELECTEDVALUE/ISINSCOPE, confiando que sempre retornaria o tipo correto na linha."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5729,9 +5729,9 @@ export const questions = [
     "text": "No Power BI, qual das seguintes afirmações descreve corretamente a funcionalidade dos Field Parameters e como eles permitem que usuários finais alternem dinamicamente entre métricas e dimensões em visuais de um relatório?",
     "options": [
       "Field Parameters (acessíveis via Modelagem > Novo Parâmetro > Campos) criam uma tabela especial que contém uma lista de campos (medidas ou colunas) selecionáveis pelo usuário através de um segmentador de dados (slicer). Ao conectar este segmentador a um eixo ou valor de um visual, o usuário pode alternar dinamicamente qual métrica ou dimensão é exibida, por exemplo, um segmentador com \"Vendas\", \"Custo\" e \"Margem\" permite trocar a medida do gráfico sem a necessidade de múltiplos visuais ou bookmarks.",
-      "Field Parameters são equivalentes a parâmetros What-If numéricos, com a única diferença de que Field Parameters aceitam campos (medidas e colunas) como valores em vez de números. Ambos criam um segmentador de dados que o usuário interage para selecionar o valor desejado e são implementados da mesma forma no modelo DAX com a mesma estrutura de tabela calculada.",
-      "Field Parameters no Power BI permitem que usuários finais criem novas medidas DAX durante a visualização do relatório. Ao selecionar campos no segmentador de dados, o Power BI gera automaticamente a expressão DAX correspondente à combinação de campos escolhida, funcionando como uma implementação visual de um editor DAX para usuários sem conhecimento técnico.",
-      "Field Parameters são uma funcionalidade exclusiva do Power BI Premium. No plano Power BI Pro, a opção \"Novo Parâmetro > Campos\" não está disponível no menu Modelagem, exigindo o uso de múltiplos bookmarks com diferentes configurações de visual combinados com botões de alternância como uma solução alternativa sem a funcionalidade nativa."
+      "Seriam equivalentes a What-If numéricos, só aceitando campos em vez de números, com a mesma estrutura de tabela calculada.",
+      "Permitiriam criar novas medidas DAX durante a visualização, gerando a expressão automaticamente pela combinação de campos.",
+      "Seriam exclusivos do Premium; no Pro a opção não existiria, exigindo bookmarks com botões como alternativa."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5753,10 +5753,10 @@ export const questions = [
     "id": "q231_pl300",
     "text": "Como fazer backup e restore de datasets Power BI Premium usando o XMLA endpoint e quais são os casos de uso?",
     "options": [
-      "Backup e restore de datasets Power BI Premium são realizados via SSMS ou scripts XMLA, utilizando comandos como 'backup database [NomeDataset] to [CaminhoArquivo.abf]' e 'restore database [NomeDataset] from [CaminhoArquivo.abf]'. O formato padrão é .abf, e os casos de uso incluem recuperação de desastres, migração e arquivamento de versões.",
-      "O Power BI Service gerencia automaticamente o backup de datasets Premium a cada 24 horas, permitindo que administradores restaurem pontos dos últimos 30 dias diretamente pelo Admin Portal, sem a necessidade de XMLA ou SSMS.",
-      "O backup via XMLA gera um arquivo .pbix, que pode ser aberto no Power BI Desktop. O formato .abf é obsoleto após a integração com o Microsoft Fabric, e sua restauração em versões recentes do Power BI resultará em erro.",
-      "Backup e restore via XMLA estão disponíveis apenas para leitura (XMLA endpoint Read-Only). Para restaurar, é preciso usar a API REST do Power BI com o endpoint '/datasets/{id}/restore', aceitando o arquivo .abf como payload."
+      "Via SSMS ou scripts XMLA com 'backup database...to .abf' e 'restore database...from .abf'; casos de uso: recuperação de desastres, migração e arquivamento.",
+      "O Service faria backup automático a cada 24h, restaurável dos últimos 30 dias via Admin Portal, sem XMLA/SSMS.",
+      "Geraria um .pbix abrível no Desktop; .abf seria obsoleto após o Fabric, dando erro em versões recentes.",
+      "Seria só leitura via XMLA; restaurar exigiria API REST com endpoint '/datasets/{id}/restore' e o .abf como payload."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5778,10 +5778,10 @@ export const questions = [
     "id": "q232_pl300",
     "text": "Qual a melhor abordagem para preparar dados de endereço no Power Query, visando otimizar a geocodificação e a exibição em visuais de mapa no Power BI?",
     "options": [
-      "Separar os componentes geográficos (País, Estado, Cidade, CEP) em colunas individuais no Power Query e, em seguida, definir a Categoria de Dados (Data Category) apropriada para cada coluna (ex: \"País\" como \"Country/Region\", \"Cidade\" como \"City\") no Power BI Desktop, para otimizar a geocodificação hierárquica do Bing Maps.",
-      "Realizar a geocodificação diretamente no Power Query usando uma função nativa como Address.GeoCode([Endereço]) para obter latitude e longitude, e então usar essas coordenadas no visual de mapa sem a necessidade de configurar a Categoria de Dados.",
-      "Sempre pré-calcular coordenadas de latitude e longitude externamente e importá-las, pois o serviço de geocodificação automática do Bing Maps no Power BI possui um limite rigoroso de 10.000 geocodificações por mês por tenant, impactando grandes datasets.",
-      "A Categoria de Dados para colunas geográficas é relevante apenas para conectores de mapa externos (como Azure Maps); o visual de mapa nativo do Power BI reconhece automaticamente colunas de localização pelos nomes (ex: \"Cidade\", \"Estado\") sem exigir configuração explícita de Data Category."
+      "Separar componentes geográficos (País, Estado, Cidade, CEP) em colunas e definir a Categoria de Dados apropriada para.",
+      "Geocodificar direto no Power Query com Address.GeoCode([Endereço]) para lat/long, usando as coordenadas sem configurar Categoria de Dados.",
+      "Sempre pré-calcular coordenadas externamente, pois o Bing Maps teria limite rígido de 10.000 geocodificações/mês por tenant.",
+      "Categoria de Dados seria relevante só para conectores externos; o mapa nativo reconheceria localização pelo nome da coluna automaticamente."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -5804,9 +5804,9 @@ export const questions = [
     "text": "Qual é a maneira correta de criar uma tabela de datas dinâmica no Power BI, utilizando a função DAX CALENDARAUTO, que se expande automaticamente para incluir novas datas conforme o modelo é atualizado?",
     "options": [
       "DimData = CALENDARAUTO(6) — Esta função cria uma tabela de datas que abrange todas as datas presentes em qualquer coluna de data do modelo, ajustando-se automaticamente a novas datas e permitindo a especificação do mês de fim do ano fiscal.",
-      "CALENDARAUTO detecta apenas colunas de data na tabela de fatos principal; para abranger todas as datas do modelo, é necessário usar CALENDAR(MIN(Data), MAX(Data)) referenciando explicitamente as tabelas.",
-      "CALENDARAUTO gera uma tabela de datas com granularidade horária, tornando-a impraticável para análises diárias; para granularidade diária, deve-se usar CALENDAR(dataInicio, dataFim).",
-      "Tabelas de datas criadas com CALENDARAUTO não podem ser marcadas como \"Date Table\" no Power BI, pois essa funcionalidade é exclusiva para tabelas de datas geradas via Power Query."
+      "Detectaria só colunas de data na tabela de fatos principal; abranger todo o modelo exigiria CALENDAR(MIN(Data),MAX(Data)) explícito.",
+      "Geraria granularidade horária, impraticável para análises diárias; diária exigiria CALENDAR(dataInicio,dataFim).",
+      "Não poderiam ser marcadas como \"Date Table\", funcionalidade exclusiva de tabelas geradas via Power Query."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -5828,10 +5828,10 @@ export const questions = [
     "id": "q234_pl300",
     "text": "Qual é a diferença fundamental entre visuais certificados e não certificados disponíveis no marketplace AppSource do Power BI, e quais são as implicações de segurança para a sua organização ao utilizá-los?",
     "options": [
-      "Visuais certificados passaram por um processo rigoroso de revisão da Microsoft, que verifica a ausência de chamadas a serviços externos não aprovados, a não coleta de dados de outros visuais ou do modelo, e a conformidade com requisitos de acessibilidade e performance. Visuais não certificados, por outro lado, podem ter qualquer comportamento não auditado, e organizações com políticas de segurança restritivas devem habilitar apenas visuais certificados via Admin Portal > Tenant Settings > Power BI visuals.",
-      "Visuais certificados e não certificados são idênticos em termos de segurança — a certificação da Microsoft valida apenas a qualidade visual e a aderência às diretrizes de design do Power BI; questões de segurança como chamadas externas e coleta de dados são controladas pela política de sandbox do Power BI que se aplica igualmente a todos os visuais customizados independente de certificação.",
-      "Visuais não certificados são completamente bloqueados no Power BI Service por padrão — apenas visuais da Microsoft e visuais com certificação aparecem no marketplace; para usar visuais de terceiros não certificados, o administrador deve criar uma exceção explícita no Admin Portal para cada visual individualmente antes que os usuários possam instalá-lo.",
-      "A certificação de visuais do Power BI é permanente — uma vez certificado, o visual mantém o status independente de atualizações futuras; desenvolvedores podem atualizar o código do visual sem revalidação pela Microsoft, tornando a certificação apenas uma garantia da versão inicial e não das versões subsequentes."
+      "Certificados passam por revisão da Microsoft (sem chamadas externas não aprovadas, sem coleta indevida, acessibilidade/performance);",
+      "Seriam idênticos em segurança; a certificação validaria só qualidade visual, com sandbox igual para todos os visuais.",
+      "Não certificados seriam bloqueados por padrão; usá-los exigiria exceção explícita do admin por visual.",
+      "A certificação seria permanente; atualizações de código não exigiriam revalidação pela Microsoft."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -5854,9 +5854,9 @@ export const questions = [
     "text": "Como um administrador do Microsoft 365 atribui licenças Power BI Pro a usuários e quais são as formas de licenciamento disponíveis para o Power BI Pro?",
     "options": [
       "As licenças Power BI Pro são atribuídas via Microsoft 365 Admin Center (admin.microsoft.com), seja individualmente em 'Usuários Ativos' ou via licenciamento baseado em grupo (Group-based Licensing) no Azure AD. As formas de aquisição incluem Power BI Pro standalone, como parte do Microsoft 365 E5, ou através do Power BI Premium Per User (PPU).",
-      "Licenças Power BI Pro são atribuídas exclusivamente via Admin Portal do Power BI Service (app.powerbi.com/admin); o Microsoft 365 Admin Center gerencia apenas licenças do Office 365 e não tem acesso ao gerenciamento de produtos BI.",
-      "Power BI Pro não pode ser adquirido como produto standalone; ele é incluído automaticamente em todas as assinaturas Microsoft 365 Business e Enterprise, e usuários sem uma assinatura Microsoft 365 não podem adquiri-lo separadamente.",
-      "A atribuição de licenças Power BI Pro só pode ser feita individualmente, pois o licenciamento baseado em grupo não é suportado para produtos Power BI, exigindo scripts PowerShell para atribuições em massa."
+      "Seriam atribuídas só via Admin Portal do Power BI; o M365 Admin Center gerenciaria só licenças Office 365.",
+      "Não poderia ser standalone; viria automaticamente incluído em assinaturas M365 Business/Enterprise.",
+      "Só poderia ser individual, pois licenciamento por grupo não seria suportado, exigindo scripts PowerShell."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -5878,10 +5878,10 @@ export const questions = [
     "id": "q236_pl300",
     "text": "Como você calcularia a duração entre dois timestamps (Data/Hora) no Power Query e converteria o resultado para um formato de horas e minutos legível, como 'HHh MMm' ou 'HH:MM'?",
     "options": [
-      "Subtraia diretamente os dois valores DateTime ([DataFim] - [DataInicio]) para obter um tipo Duration. Use Duration.TotalMinutes() para minutos totais ou combine Duration.Hours() e Duration.Minutes() com formatação de texto para um resultado legível como 'HHh MMm'.",
-      "Subtraia os valores DateTime, o que resultará em milissegundos. Divida por 3.600.000 para horas ou 60.000 para minutos. As funções Duration.* são exclusivas do Power Query Online e não estão no Power BI Desktop.",
-      "Converta cada timestamp para um número decimal de dias usando Number.From(), subtraia os resultados e, em seguida, multiplique por 24 para horas ou 1440 para minutos. Isso garante a correção de fuso horário.",
-      "O Power Query não calcula duração diretamente. Converta cada timestamp para segundos desde 01/01/1900, calcule a diferença e use funções auxiliares para formatar. As funções Duration.* são apenas para dados importados que já são do tipo Duration."
+      "Subtrair os DateTime ([DataFim]-[DataInicio]) para obter Duration; usar Duration.TotalMinutes() ou Duration.Hours()+Duration.",
+      "A subtração resultaria em milissegundos, dividir por 3.600.000/60.000; Duration.* seria exclusivo do Power Query Online.",
+      "Converter para dias decimais com Number.From(), subtrair e multiplicar por 24/1440, garantindo correção de fuso horário.",
+      "Não calcularia duração direto; exigiria converter para segundos desde 1900 e funções auxiliares de formatação."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -5901,12 +5901,12 @@ export const questions = [
   },
   {
     "id": "q237_pl300",
-    "text": "Um analista de dados precisa criar medidas DAX para identificar dias com ruptura de estoque (estoque zerado) e calcular a taxa de disponibilidade de produto em um modelo de dados que inclui uma tabela 'DimData' (dimensão de datas) e uma tabela 'Estoque' (fatos de estoque com 'QuantidadeDisponivel'). Ele propôs as seguintes medidas:\n\n```DAX\nDias Ruptura = CALCULATE(\n    DISTINCTCOUNT(DimData[Data]),\n    FILTER(\n        ALL(DimData),\n        CALCULATE(MIN(Estoque[QuantidadeDisponivel])) = 0\n    )\n)\nTaxa Disponibilidade = 1 - DIVIDE(\n    [Dias Ruptura],\n    COUNTROWS(ALL(DimData))\n)\n```\n\nConsiderando a necessidade de uma análise precisa e eficiente, qual das seguintes afirmações descreve MAIS CORRETAMENTE a abordagem para resolver este problema?",
+    "text": "Para ruptura de estoque, foram propostas:\n```DAX\nDias Ruptura = CALCULATE(DISTINCTCOUNT(DimData[Data]), FILTER(ALL(DimData), CALCULATE(MIN(Estoque[QuantidadeDisponivel]))=0))\nTaxa Disponibilidade = 1 - DIVIDE([Dias Ruptura], COUNTROWS(ALL(DimData)))\n```\nQual afirmação descreve mais corretamente essa abordagem?",
     "options": [
-      "As medidas propostas para 'Dias Ruptura' e 'Taxa Disponibilidade' estão corretas e são eficientes, pois `DISTINCTCOUNT` garante a contagem única de dias de ruptura e `COUNTROWS(ALL(DimData))` define o denominador total de dias, permitindo análise precisa mesmo com múltiplos produtos.",
-      "A medida `Dias Ruptura = COUNTROWS(FILTER(Estoque, Estoque[QuantidadeDisponivel] = 0))` seria suficiente; não é necessário `DISTINCTCOUNT` ou funções de data, pois cada linha da tabela de estoque já representa um dia por produto, e a divisão pelo total de linhas daria a taxa.",
-      "É crucial que a tabela de fatos tenha uma linha para cada produto por dia, mesmo com estoque zero. Dias sem registro devem ser preenchidos no Power Query (ex: `Table.FillDown`) antes de qualquer medida DAX, para evitar interpretações errôneas de ruptura.",
-      "Uma alternativa mais flexível e igualmente correta para a taxa de disponibilidade seria `AVERAGEX(ALL(DimData), IF(CALCULATE(SUM(Estoque[QuantidadeDisponivel])) > 0, 1, 0))`, que calcula a média de um indicador binário (disponível/não disponível) por dia."
+      "As medidas estão corretas e eficientes: DISTINCTCOUNT garante contagem única de dias e COUNTROWS(ALL) define o denominador total, mesmo com múltiplos produtos.",
+      "COUNTROWS(FILTER(Estoque,...=0)) seria suficiente, pois cada linha do Estoque já representaria um dia por produto.",
+      "Seria crucial ter uma linha por produto/dia mesmo com estoque zero, preenchendo lacunas no Power Query antes do DAX.",
+      "AVERAGEX(ALL(DimData), IF(CALCULATE(SUM(...))>0,1,0)) seria alternativa igualmente correta, calculando média de indicador binário."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5928,10 +5928,10 @@ export const questions = [
     "id": "q238_pl300",
     "text": "Qual é a abordagem mais eficaz para utilizar um arquivo JSON de tema no Power BI, garantindo que o relatório atenda aos padrões WCAG 2.1 de acessibilidade, especificamente em relação ao contraste de cores?",
     "options": [
-      "No JSON do tema, definir \"dataColors\" com paleta de cores que atenda à proporção mínima de contraste 4.5:1 para texto normal e 3:1 para texto grande (WCAG AA); verificar contraste com ferramentas como WebAIM Contrast Checker; evitar combinações problemáticas para daltonismo (vermelho/verde) usando paletas daltonismo-seguras (ex: usar azul/laranja em vez de vermelho/verde); no \"visualStyles\", configurar \"dataLabels\" com cores de texto adequadas ao fundo; testar com simuladores de deficiência visual.",
-      "Acessibilidade WCAG no Power BI é garantida automaticamente ao ativar o modo \"High Contrast\" nas configurações do Windows — o Power BI detecta o modo de alto contraste do sistema operacional e aplica automaticamente uma paleta de cores acessível em todos os visuais do relatório sem necessidade de customização no arquivo JSON de tema.",
-      "O padrão WCAG 2.1 não se aplica a relatórios Power BI — WCAG é um padrão para sites e aplicações web e não foi adaptado para ferramentas de BI; a Microsoft tem seu próprio padrão de acessibilidade para Power BI (PBIX Accessibility Standard) que define requisitos diferentes do WCAG para contraste, navegação por teclado e leitores de tela.",
-      "Temas JSON do Power BI têm limite de 7 cores na paleta \"dataColors\" — ao definir mais de 7 cores, apenas as primeiras 7 são utilizadas e as demais são ignoradas; para relatórios com mais de 7 séries de dados distintas, as cores se repetem ciclicamente usando as 7 cores definidas independente do tamanho da paleta."
+      "Definir \"dataColors\" com contraste mínimo 4.5:1 (texto normal) e 3:1 (grande); evitar vermelho/verde (daltonismo); configurar \"dataLabels\" adequados;",
+      "Seria garantida automaticamente ao ativar \"High Contrast\" do Windows, sem precisar customizar o JSON de tema.",
+      "WCAG não se aplicaria ao Power BI; a Microsoft teria seu próprio \"PBIX Accessibility Standard\" diferente.",
+      "Temas JSON teriam limite de 7 cores; mais séries repetiriam as 7 cores ciclicamente."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5954,9 +5954,9 @@ export const questions = [
     "text": "Como o Microsoft Entra ID (anteriormente Azure AD) é fundamental para a segurança e gestão de identidades no Power BI?",
     "options": [
       "Entra ID é a base de identidade do Power BI — todas as autenticações (usuários, Service Principals, aplicações Embedded) usam tokens OAuth 2.0 do Entra ID; gerencia: grupos de segurança para atribuição em workspaces e RLS, Conditional Access policies para controle de acesso contextual, Service Principals para automação, convidados externos (B2B) para colaboração, e SSPR (Self-Service Password Reset) que afeta o acesso ao Power BI indiretamente.",
-      "O Microsoft Entra ID e o Power BI têm sistemas de autenticação independentes — o Power BI tem seu próprio mecanismo de autenticação baseado em OAuth 1.0 que não depende do Entra ID; a integração com Entra ID é opcional e configurada pelo administrador do tenant para organizações que já usam Azure AD como provedor de identidade corporativo.",
-      "Grupos do Microsoft Entra ID não podem ser usados diretamente em workspaces do Power BI — apenas usuários individuais podem ser adicionados como membros; para gerenciar acesso em grupos, criar grupos no Admin Portal do Power BI que são independentes dos grupos do Entra ID e têm sua própria gestão de membros dentro do ecossistema Power BI.",
-      "Service Principals do Entra ID têm acesso limitado ao Power BI — podem fazer refresh de datasets via API REST mas não podem criar workspaces, publicar relatórios ou gerenciar usuários; para automação completa do Power BI incluindo criação de workspaces, usar contas de usuário de serviço (service accounts) com credenciais de usuário em vez de Service Principals."
+      "Seriam sistemas independentes — o Power BI teria autenticação própria via OAuth 1.0, sem depender do Entra ID, integração opcional.",
+      "Grupos do Entra ID não poderiam ser usados em workspaces; só usuários individuais, exigindo grupos próprios do Power BI.",
+      "Service Principals teriam acesso limitado (só refresh via API), não podendo criar workspaces; automação completa exigiria contas de usuário."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -5978,10 +5978,10 @@ export const questions = [
     "id": "q240_pl300",
     "text": "Quais são as principais opções de conectividade para integrar o Power BI com o Azure Synapse Analytics, e quais modos de conexão são suportados?",
     "options": [
-      "O Power BI oferece múltiplas formas de conectar ao Azure Synapse Analytics, incluindo: 1) Synapse Analytics SQL Pool (Dedicated) via conector 'Azure Synapse Analytics SQL' (suporta Import e DirectQuery); 2) Serverless SQL Pool via conector 'Azure SQL Database' usando o endpoint serverless; 3) Integração direta Power BI ↔ Synapse no Synapse Studio para desenvolvimento de relatórios; e 4) Via Azure Analysis Services hospedado no Synapse.",
-      "A conexão com o Azure Synapse Analytics no Power BI é feita exclusivamente pelo conector 'Azure SQL Data Warehouse', pois os conectores 'Azure Synapse Analytics SQL' e 'Azure Synapse Analytics (Workspace)' são apenas aliases sem diferenças funcionais.",
-      "A conexão com o Synapse Analytics Dedicated SQL Pool no Power BI suporta apenas o modo DirectQuery, pois ele não permite extração em lote de dados para importação, que é exclusiva do Serverless SQL Pool.",
-      "A integração direta Power BI ↔ Synapse Studio exige que os workspaces estejam na mesma assinatura Azure e região geográfica; caso contrário, a conexão deve ser feita via endpoint SQL."
+      "Múltiplas formas: Dedicated SQL Pool via conector específico (Import/DirectQuery); Serverless via endpoint; integração direta no Synapse Studio;",
+      "Seria feita só pelo conector 'Azure SQL Data Warehouse'; os demais conectores seriam apenas aliases sem diferença.",
+      "Dedicated SQL Pool suportaria só DirectQuery, pois extração em lote seria exclusiva do Serverless.",
+      "A integração direta no Synapse Studio exigiria mesma assinatura e região; senão exigiria endpoint SQL."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6001,12 +6001,12 @@ export const questions = [
   },
   {
     "id": "q241_pl300",
-    "text": "A equipe de vendas de uma empresa deseja analisar padrões de sazonalidade em suas vendas para otimizar o planejamento de estoque e campanhas de marketing. Para isso, um analista de dados criou a seguinte medida DAX no Power BI:\n\n```\nÍndice Sazonalidade =\nVAR MediaMesAtual = AVERAGEX(\n    FILTER(ALL(DimData), DimData[Mês Num] = MAX(DimData[Mês Num])),\n    [Total Vendas]\n)\nVAR MediaGeral = AVERAGEX(\n    ALL(DimData[Mês Num]),\n    AVERAGEX(\n        FILTER(ALL(DimData), DimData[Mês Num] = EARLIER(DimData[Mês Num])),\n        [Total Vendas]\n    )\n)\nRETURN DIVIDE(MediaMesAtual, MediaGeral)\n```\n\nConsiderando esta medida, qual é a interpretação correta do `Índice Sazonalidade` e sua aplicação para identificar padrões de alta e baixa temporada?",
+    "text": "Para sazonalidade, foi criada:\n```\nÍndice Sazonalidade =\nVAR MediaMesAtual=AVERAGEX(FILTER(ALL(DimData),DimData[Mês Num]=MAX(DimData[Mês Num])),[Total Vendas])\nVAR MediaGeral=AVERAGEX(ALL(DimData[Mês Num]),AVERAGEX(FILTER(ALL(DimData),DimData[Mês Num]=EARLIER(DimData[Mês Num])),[Total Vendas]))\nRETURN DIVIDE(MediaMesAtual,MediaGeral)\n```\nQual a interpretação correta desse índice?",
     "options": [
-      "A medida calcula o Índice de Sazonalidade, que compara a média histórica de vendas de um mês específico (em todos os anos) com a média geral de vendas de todos os meses (em todos os anos). Um índice maior que 1 indica que o mês está acima da média geral (alta temporada), e menor que 1 indica baixa temporada.",
-      "Sazonalidade no Power BI é detectada automaticamente pelo visual de Forecast que usa algoritmo ETS com componente sazonal — não é necessário criar medidas DAX manualmente; o visual identifica e quantifica a sazonalidade e exibe o índice de sazonalidade por período no tooltip ao passar o mouse sobre cada ponto da previsão.",
-      "`Índice Sazonalidade = DIVIDE([Total Vendas], CALCULATE([Total Vendas], SAMEPERIODLASTYEAR(DimData[Data])))` — comparar com o mesmo período do ano anterior é a definição correta de índice de sazonalidade; valores acima de 1 indicam crescimento YoY que é sinônimo de alta temporada sazonal naquele período específico do ano.",
-      "Análise de sazonalidade em DAX requer no mínimo 5 anos completos de dados históricos para ser estatisticamente válida — com menos de 5 anos, os índices calculados são considerados não confiáveis pelo mecanismo DAX que retorna automaticamente BLANK para períodos com menos de 5 observações históricas disponíveis."
+      "Compara a média histórica de vendas de um mês específico com a média geral de todos os meses; índice >1 indica alta temporada, <1 baixa temporada.",
+      "Sazonalidade seria detectada automaticamente pelo visual de Forecast (ETS), sem precisar de medidas DAX manuais.",
+      "DIVIDE([Total Vendas],CALCULATE([Total Vendas],SAMEPERIODLASTYEAR(...))) comparando YoY seria a definição correta de sazonalidade.",
+      "Exigiria no mínimo 5 anos de histórico para ser válida; com menos, o DAX retornaria BLANK automaticamente."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -6026,12 +6026,12 @@ export const questions = [
   },
   {
     "id": "q242_pl300",
-    "text": "Você precisa controlar a visibilidade de páginas específicas de um relatório Power BI para diferentes grupos de usuários. Considerando as capacidades nativas do Power BI para segurança em nível de página, qual das seguintes afirmações descreve a realidade e as abordagens viáveis para alcançar esse objetivo?",
+    "text": "Como controlar a visibilidade de páginas específicas de um relatório para diferentes grupos de usuários, dadas as capacidades nativas do Power BI?",
     "options": [
-      "Páginas de relatório no Power BI não têm controle de visibilidade por usuário nativamente — a segurança em nível de página não existe; alternativas: criar relatórios separados para cada audiência publicados em workspaces com permissões diferentes; usar Apps com navegação customizada que expõe apenas as páginas relevantes por audiência; ou implementar RLS na tabela de dimensão de páginas para controlar quais seções cada usuário acessa via lógica de dados.",
-      "Page-Level Security está disponível nas configurações de cada página do relatório no Power BI Desktop via Format Page > Page Security; configurar grupos de segurança do Entra ID que têm acesso a cada página individualmente; usuários sem acesso à página veem a aba desabilitada e não conseguem navegar para ela mesmo com link direto.",
-      "Restringir páginas por usuário é feito via Sensitivity Labels — aplicar label \"Confidential\" a páginas específicas e configurar a política DLP para bloquear acesso de usuários sem a classificação de segurança correspondente; o Power BI integra automaticamente as políticas de Sensitivity Labels aplicadas a páginas individuais com o sistema de autenticação do Entra ID.",
-      "Usar a propriedade \"Visible\" de cada página (Format Page > Page Information > Visible) para ocultar páginas por grupo — configurar visibilidade condicional via medida DAX que verifica o grupo do usuário atual; a propriedade Visible aceita medidas DAX como valor permitindo controle dinâmico de visibilidade de páginas por perfil de usuário."
+      "Não existiria segurança nativa por página; alternativas: relatórios separados por workspace, Apps com navegação customizada, ou RLS numa dimensão de páginas.",
+      "\"Page Security\" existiria nas configs de cada página, com grupos do Entra ID por página individualmente.",
+      "Seria via Sensitivity Labels + DLP, integrados automaticamente com o Entra ID por página.",
+      "A propriedade \"Visible\" aceitaria medida DAX como valor, permitindo visibilidade dinâmica por grupo do usuário."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6053,10 +6053,10 @@ export const questions = [
     "id": "q243_pl300",
     "text": "Como o Power BI Desktop pode se conectar a arquivos armazenados no Amazon S3, e quais são os principais métodos e considerações de autenticação disponíveis para essa conexão?",
     "options": [
-      "O Power BI Desktop oferece múltiplas formas de conexão ao Amazon S3: 1) Conector nativo Amazon S3 (em Obter Dados > Amazon S3) que suporta autenticação com Access Key ID e Secret Access Key; 2) Conector Web para URLs pré-assinadas de arquivos públicos ou temporariamente acessíveis; 3) Via Shortcuts no Microsoft Fabric, que permite conectar S3 como fonte externa e usar o OneLake; 4) Montar o S3 como um drive local (ex: com S3FS/S3 Browser) e usar o conector de pasta local.",
-      "Amazon S3 não é suportado como fonte de dados no Power BI Desktop; a Microsoft suporta apenas serviços de armazenamento da própria Azure (como ADLS Gen2 ou Azure Blob Storage). Para usar dados do S3 no Power BI, é obrigatório primeiro migrar os dados para Azure usando Azure Data Factory ou AzCopy e então conectar ao Azure Storage como fonte.",
-      "A conexão com S3 no Power BI usa sempre protocolo HTTPS com autenticação anônima, não havendo suporte para Access Keys ou IAM roles do AWS no conector nativo. Para dados privados no S3, é necessário gerar URLs pré-assinadas com validade máxima de 7 dias no console AWS e usar essas URLs no conector Web do Power BI para cada arquivo individualmente.",
-      "O conector Amazon S3 do Power BI Desktop usa DirectQuery exclusivamente, o que significa que arquivos no S3 (Parquet, CSV, JSON) são consultados em tempo real sem importação local. Para usar o modo Import com dados do S3, é preciso configurar um AWS Athena como camada SQL sobre o S3 e conectar o Power BI ao Athena via conector ODBC."
+      "Múltiplas formas: conector nativo Amazon S3 (Access Key/Secret); conector Web para URLs pré-assinadas; Shortcuts no Fabric usando OneLake;",
+      "S3 não seria suportado; só serviços Azure (ADLS Gen2, Blob); usar S3 exigiria migrar primeiro via Data Factory/AzCopy.",
+      "Usaria sempre HTTPS anônimo, sem Access Keys/IAM; dados privados exigiriam URLs pré-assinadas (máx 7 dias) no conector Web.",
+      "Usaria DirectQuery exclusivamente; Import exigiria AWS Athena como camada SQL conectada via ODBC."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6076,12 +6076,12 @@ export const questions = [
   },
   {
     "id": "q244_pl300",
-    "text": "Você está desenvolvendo um relatório de vendas no Power BI e precisa analisar a eficiência de diferentes canais de vendas, calculando a taxa de conversão e o ticket médio por canal. Você propõe as seguintes medidas DAX:\n```\nTaxa Conversão Canal = DIVIDE(\n    COUNTROWS(FILTER(ALL(Oportunidades), Oportunidades[Status] = \"Fechado Ganho\")),\n    COUNTROWS(ALL(Oportunidades))\n)\n\nTicket Médio Canal = DIVIDE(\n    CALCULATE(SUM(Vendas[Valor]), Vendas[Status] = \"Concluída\"),\n    CALCULATE(DISTINCTCOUNT(Vendas[PedidoID]), Vendas[Status] = \"Concluída\")\n)\n```\nAssumindo que as medidas filtram pelo contexto de canal do visual automaticamente via relacionamento entre as tabelas de Vendas, Oportunidades e DimCanal, qual das seguintes afirmações sobre essas medidas é verdadeira?",
+    "text": "Para taxa de conversão e ticket médio por canal, foram propostas:\n```\nTaxa Conversão Canal = DIVIDE(COUNTROWS(FILTER(ALL(Oportunidades),Status=\"Fechado Ganho\")),COUNTROWS(ALL(Oportunidades)))\nTicket Médio Canal = DIVIDE(CALCULATE(SUM(Vendas[Valor]),Status=\"Concluída\"),CALCULATE(DISTINCTCOUNT(Vendas[PedidoID]),Status=\"Concluída\"))\n```\nAssumindo filtro de canal via relacionamento, qual afirmação é verdadeira?",
     "options": [
-      "As medidas DAX propostas estão corretas e eficientes, pois utilizam o contexto de filtro do visual para calcular a taxa de conversão e o ticket médio por canal de forma dinâmica, sem a necessidade de medidas separadas por canal ou unificação prévia de tabelas.",
-      "A taxa de conversão de canal requer que os dados de oportunidades e vendas estejam na mesma tabela; se estiverem em tabelas separadas sem relacionamento direto, as medidas DAX não conseguem calcular a conversão corretamente, sendo necessário usar Merge Queries no Power Query.",
-      "A medida `Ticket Médio Canal = AVERAGE(Vendas[Valor])` seria mais apropriada, pois `AVERAGE` já calcula automaticamente a média por canal quando o visual filtra por canal, tornando as medidas complexas com `DIVIDE` e `DISTINCTCOUNT` desnecessárias.",
-      "Para análise de canal de vendas, é mandatório criar uma medida separada para cada canal (ex: \"Conversão Canal Digital\", \"Conversão Canal Físico\"), pois uma medida única de taxa de conversão não funciona corretamente quando múltiplos canais são filtrados simultaneamente."
+      "As medidas estão corretas, usando o contexto de filtro do visual dinamicamente, sem precisar de medidas separadas por canal.",
+      "Exigiria oportunidades e vendas na mesma tabela; tabelas separadas sem relacionamento exigiriam Merge Queries.",
+      "Ticket Médio Canal = AVERAGE(Vendas[Valor]) seria mais apropriado, tornando DIVIDE/DISTINCTCOUNT desnecessários.",
+      "Seria mandatório criar uma medida separada por canal, pois uma única medida não funcionaria com múltiplos canais filtrados."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6101,12 +6101,12 @@ export const questions = [
   },
   {
     "id": "q245_pl300",
-    "text": "Um analista de dados está investigando a performance de um relatório Power BI que está carregando muito lentamente. Ele precisa identificar as causas raiz e aplicar as soluções mais eficazes. Quais são as principais causas de relatórios Power BI lentos e como cada uma é diagnosticada e resolvida?",
+    "text": "Quais são as principais causas de relatórios Power BI lentos, e como cada uma é diagnosticada e resolvida?",
     "options": [
-      "As principais causas e suas soluções incluem: 1) Queries DAX lentas (diagnóstico com Performance Analyzer e DAX Studio, otimização de medidas); 2) Muitos visuais por página (reduzir visuais ou dividir em páginas); 3) Alto volume de dados em modo Import sem particionamento (implementar Incremental Refresh); 4) Modelo de dados não otimizado (remover colunas não usadas, reduzir cardinalidade, revisar relacionamentos bidirecionais); 5) DirectQuery lento (otimizar queries na fonte, adicionar índices, usar agregações).",
-      "Relatórios Power BI lentos são causados exclusivamente por queries DAX mal escritas. Problemas de modelo (cardinalidade, relacionamentos) e de design de relatório (número de visuais) não têm impacto significativo na performance; focar 100% na otimização de medidas DAX é suficiente para resolver qualquer problema de performance em relatórios Power BI.",
-      "A solução universal para relatórios lentos é aumentar o SKU da capacity Premium. Queries DAX e refresh de dados são fundamentalmente limitados pelo hardware da capacity; otimizações de código e modelo têm impacto marginal (menos de 10%) comparado ao impacto de dobrar os recursos de CPU e RAM da capacity.",
-      "Relatórios com mais de 10 visuais por página são automaticamente otimizados pelo Power BI Service via lazy loading. Visuais fora da área visível da tela não são calculados até o usuário rolar a página; portanto, o número de visuais por página não impacta o tempo de carregamento inicial do relatório e não deve ser considerado na otimização de performance."
+      "Queries DAX lentas (Performance Analyzer/DAX Studio); muitos visuais por página; alto volume sem particionamento (Incremental Refresh);",
+      "Seriam causados exclusivamente por DAX mal escrito; modelo e design de relatório não teriam impacto significativo.",
+      "A solução universal seria aumentar o SKU Premium; otimizações de código/modelo teriam impacto marginal (<10%).",
+      "Mais de 10 visuais seriam automaticamente otimizados via lazy loading, sem impacto no carregamento inicial."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -6128,10 +6128,10 @@ export const questions = [
     "id": "q246_pl300",
     "text": "O que é o modo Direct Lake no Microsoft Fabric e como ele difere do Import e DirectQuery para análise de dados em OneLake?",
     "options": [
-      "Direct Lake é um modo de conectividade exclusivo do Microsoft Fabric que acessa arquivos Delta Parquet diretamente do OneLake sem importar dados para o modelo nem gerar queries para a fonte — combina a performance do Import (acesso in-memory via VertiPaq) com a frescura do DirectQuery (dados sempre atuais sem refresh); ao atualizar os arquivos Delta no OneLake, o modelo Direct Lake detecta automaticamente e carrega apenas as partições alteradas (framing); disponível apenas em workspaces Fabric.",
-      "Direct Lake é equivalente ao modo Import com refresh em tempo real — a diferença é que o refresh ocorre automaticamente a cada 5 minutos em vez de ser agendado manualmente; a performance e o comportamento do modelo são idênticos ao Import pois os dados são copiados para o VertiPaq da mesma forma; Direct Lake apenas automatiza o processo de refresh sem mudanças no mecanismo de armazenamento.",
-      "Direct Lake substitui completamente o DirectQuery para todas as fontes de dados no Fabric — qualquer conexão configurada como DirectQuery em workspaces Fabric é automaticamente convertida para Direct Lake pelo mecanismo do Fabric sem necessidade de reconfiguração; Direct Lake e DirectQuery são nomes diferentes para o mesmo protocolo de acesso a dados em tempo real.",
-      "Direct Lake requer que os dados estejam no formato CSV no OneLake — arquivos Parquet e Delta Lake não são suportados pelo mecanismo Direct Lake pois usam compressão binária incompatível com o VertiPaq; para usar Direct Lake, converter os arquivos para CSV antes de carregar no OneLake e conectar o modelo semântico à pasta CSV do workspace Fabric."
+      "Acessa arquivos Delta Parquet direto do OneLake sem importar nem gerar queries — combina performance do Import (VertiPaq) com frescor do DirectQuery;",
+      "Seria equivalente ao Import com refresh automático a cada 5 min; performance idêntica, pois os dados seriam copiados igual.",
+      "Substituiria completamente o DirectQuery; qualquer conexão DirectQuery seria convertida automaticamente para Direct Lake.",
+      "Exigiria formato CSV no OneLake; Parquet/Delta não seriam suportados por incompatibilidade com o VertiPaq."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -6153,10 +6153,10 @@ export const questions = [
     "id": "q247_pl300",
     "text": "Ao conectar o Power BI ao Azure Cosmos DB, quais são as principais considerações de performance e custo para lidar com grandes volumes de dados?",
     "options": [
-      "O conector do Power BI para Cosmos DB opera exclusivamente no modo DirectQuery, pois o Cosmos DB, sendo um banco de dados NoSQL, não permite exportação em lote para o modo Import. Para otimizar custos, utilize filtros de partition key diretamente no Power BI.",
-      "A autenticação no Cosmos DB via Power BI é restrita a chaves primárias ou de leitura. O Microsoft Entra ID (anteriormente Azure AD) não é suportado pelo conector, exigindo o uso de chaves para todas as conexões, mesmo em ambientes de produção.",
-      "Para conectar, use 'Obter Dados > Azure > Azure Cosmos DB', insira a URL da conta e chave de acesso (ou Entra ID), e selecione a coleção. O Power Query importa documentos JSON como tabelas. A principal consideração de performance é o custo de RUs: queries sem filtros escaneiam toda a coleção, gerando alto custo. Aplique filtros no Power Query que sejam convertidos para queries SQL do Cosmos DB via Query Folding para otimizar RUs.",
-      "O conector nativo do Power BI para Cosmos DB é compatível apenas com a API SQL (Core). Para acessar dados de outras APIs como MongoDB ou Cassandra, é necessário usar conectores genéricos de ODBC/OLE DB, pois não há suporte direto para essas APIs no conector específico do Cosmos DB."
+      "Operaria exclusivamente em DirectQuery, pois Cosmos DB não permitiria exportação em lote para Import; otimizar custo com filtros de partition key.",
+      "Autenticação seria restrita a chaves; Entra ID não seria suportado, exigindo chaves mesmo em produção.",
+      "'Obter Dados > Azure Cosmos DB' com URL/chave (ou Entra ID); importa JSON como tabelas; cuidado com RUs — filtros via Query Folding otimizam custo.",
+      "Seria compatível só com a API SQL (Core); MongoDB/Cassandra exigiriam ODBC/OLE DB genérico."
     ],
     "correctAnswer": 2,
     "difficulty": "intermediario",
@@ -6201,12 +6201,12 @@ export const questions = [
   },
   {
     "id": "q249_pl300",
-    "text": "Criar narrativa dinâmica em Power BI com medida DAX que descreva insights de vendas, como a região de melhor desempenho e o crescimento anual. Ele desenvolveu a seguinte medida DAX para este propósito:\n\n```dax\nNarrativa Insights =\nVAR MelhorRegiao = TOPN(1, ALL(DimRegiao), [Total Vendas], DESC)\nVAR MelhorRegiaoNome = CALCULATE(MAX(DimRegiao[Nome]), MelhorRegiao)\nVAR MelhorRegiaoVendas = CALCULATE([Total Vendas], MelhorRegiao)\nVAR Crescimento = [YoY%]\nVAR TextoCrescimento = IF(Crescimento > 0, \"crescimento de \" & FORMAT(Crescimento, \"0.0%\"), \"queda de \" & FORMAT(ABS(Crescimento), \"0.0%\"))\nRETURN\n    \"Destaque: \" & MelhorRegiaoNome & \" lidera com \" & FORMAT(MelhorRegiaoVendas, \"R$ #,##0\") & \". Período com \" & TextoCrescimento & \" vs. ano anterior.\"\n```\n\nQual das seguintes afirmações descreve corretamente a funcionalidade e o uso desta medida no Power BI?",
+    "text": "Para narrativa dinâmica:\n```dax\nNarrativa Insights =\nVAR MelhorRegiao=TOPN(1,ALL(DimRegiao),[Total Vendas],DESC)\nVAR Nome=CALCULATE(MAX(DimRegiao[Nome]),MelhorRegiao)\nVAR Vendas=CALCULATE([Total Vendas],MelhorRegiao)\nVAR Cresc=[YoY%]\nRETURN \"Destaque: \"&Nome&\" lidera com \"&FORMAT(Vendas,\"R$ #,##0\")&\". \"&IF(Cresc>0,\"Crescimento\",\"Queda\")&\" vs ano anterior.\"\n```\nQual afirmação descreve corretamente essa medida?",
     "options": [
-      "A medida DAX está corretamente construída para gerar uma string de texto dinâmica que pode ser exibida em visuais como Card ou Caixa de Texto, utilizando variáveis para modularidade e CALCULATE com TOPN para extrair informações de tabelas.",
-      "Narrativas dinâmicas no Power BI são geradas exclusivamente pelo visual Smart Narrative; medidas DAX que retornam texto para uso em Cards ou Caixas de Texto não são suportadas, pois esses visuais aceitam apenas valores numéricos como entrada.",
-      "Medidas DAX que retornam strings longas (mais de 256 caracteres) geram erro de truncamento no Power BI; o limite para valores de texto em medidas usadas em visuais é de 255 caracteres, exigindo a divisão em múltiplas medidas para narrativas mais longas.",
-      "TOPN(1, ALL(DimRegiao), [Total Vendas], DESC) retorna uma tabela de uma linha; para extrair o nome da região dessa tabela dentro da mesma medida, seria necessário usar CALCULATETABLE em vez de TOPN, pois TOPN retorna uma tabela anônima sem referência de coluna."
+      "Está corretamente construída para gerar texto dinâmico exibível em Card/Caixa de Texto, usando variáveis e CALCULATE com TOPN.",
+      "Narrativas dinâmicas seriam geradas exclusivamente pelo visual Smart Narrative.",
+      "Strings longas (256+ caracteres) gerariam erro de truncamento no Power BI.",
+      "TOPN retornaria tabela de uma linha; extrair o nome exigiria CALCULATETABLE em vez de TOPN."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -6228,10 +6228,10 @@ export const questions = [
     "id": "q250_pl300",
     "text": "O que é o Power BI Premium Per User (PPU) e em quais situações ele se mostra mais vantajoso em comparação com o Power BI Pro ou o Power BI Premium Per Capacity?",
     "options": [
-      "PPU é uma licença individual que oferece todos os recursos do Power BI Pro, além de funcionalidades Premium como relatórios paginados, XMLA endpoint (leitura e escrita), Deployment Pipelines, e datasets maiores (até 100 GB), sem a necessidade de uma capacidade dedicada. É ideal para equipes pequenas de analistas avançados que precisam de recursos Premium, mas não justificam o custo de uma capacidade Premium por completo, ou para ambientes de desenvolvimento e teste.",
-      "O Power BI Premium Per User (PPU) é funcionalmente idêntico ao Power BI Pro, sendo a única diferença o preço e o nome, que reflete um alinhamento estratégico com a marca Premium da Microsoft, sem adicionar novas funcionalidades técnicas.",
-      "O PPU permite que usuários com licença gratuita (Free) acessem e consumam conteúdo publicado em workspaces PPU, de forma similar ao Power BI Premium Per Capacity, eliminando a necessidade de licenças Pro para consumidores finais.",
-      "Workspaces PPU operam em um ambiente completamente isolado, o que impede o compartilhamento de datasets ou relatórios com workspaces Pro ou Premium, exigindo que organizações com ambos os tipos de usuários mantenham ambientes separados."
+      "Licença individual com tudo do Pro + recursos Premium (paginados, XMLA R/W, Deployment Pipelines, datasets até 100GB), sem capacidade dedicada;",
+      "Seria funcionalmente idêntico ao Pro, com diferença só de preço/nome, sem novas funcionalidades técnicas.",
+      "Permitiria que usuários Free consumissem conteúdo PPU, eliminando necessidade de licença Pro para consumidores.",
+      "Workspaces PPU seriam isolados, impedindo compartilhamento com workspaces Pro/Premium."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6253,10 +6253,10 @@ export const questions = [
     "id": "q251_pl300",
     "text": "Como conectar o Power BI Desktop ao IBM Db2 e quais são os pré-requisitos necessários para essa conexão?",
     "options": [
-      "Para conectar o Power BI Desktop ao IBM Db2, utilize a opção 'Obter Dados' > 'Banco de Dados' > 'Banco de Dados IBM Db2'. Insira o servidor, porta e nome do banco de dados, e autentique com credenciais Db2. O pré-requisito é a instalação do IBM Data Server Driver Package (driver .NET do Db2), disponível gratuitamente no IBM Fix Central. Para atualização de dados no Power BI Service com Db2 on-premises, o mesmo driver deve ser instalado no servidor do gateway. O conector suporta os modos Importar e DirectQuery, e a versão do driver deve ser compatível com o Db2 Server (versões 9.7 ou superior).",
-      "O IBM Db2 é acessado no Power BI exclusivamente via conector ODBC genérico, pois não existe um conector nativo Db2 no Power BI Desktop. Para conectar, configure um DSN ODBC com o driver IBM Db2 ODBC e use 'Obter Dados' > 'Outros' > 'ODBC'. Esta é a única forma suportada pela Microsoft para bancos de dados IBM.",
-      "O conector IBM Db2 do Power BI exige que o banco de dados Db2 esteja hospedado na IBM Cloud; instâncias Db2 on-premises e em outras nuvens (AWS, Azure) não são suportadas pelo conector nativo. Para Db2 on-premises, é mandatório usar o conector ODBC com o driver IBM instalado localmente.",
-      "O IBM Db2 no Power BI suporta apenas o modo DirectQuery, pois o driver .NET do Db2 não oferece suporte à extração em lote de dados necessária para o mecanismo de importação. Para usar o modo Importar com Db2, é preciso replicar os dados para um SQL Server via IBM DataStage e conectar-se ao SQL Server como fonte."
+      "'Obter Dados' > 'Banco de Dados IBM Db2' com servidor/porta/banco e credenciais; pré-requisito é o IBM Data Server Driver Package;",
+      "Seria acessado só via ODBC genérico, pois não existiria conector nativo Db2 no Desktop.",
+      "Exigiria Db2 hospedado na IBM Cloud; on-premises/outras nuvens não seriam suportadas pelo conector nativo.",
+      "Suportaria só DirectQuery, pois o driver não suportaria extração em lote para Import."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -6279,9 +6279,9 @@ export const questions = [
     "text": "Como você configuraria uma tabela no Power BI para exibir barras de dados (data bars) inline nas células, facilitando a comparação visual de valores numéricos de forma eficiente?",
     "options": [
       "Na visualização de Tabela ou Matriz, você deve selecionar a coluna numérica desejada, clicar nos três pontos (...) para acessar o menu de mais opções, escolher 'Formatação Condicional' (Conditional Formatting) e, em seguida, 'Barras de Dados' (Data Bars). Lá, é possível configurar a cor das barras positivas e negativas, definir os valores mínimo e máximo do eixo (automático ou manual) e decidir se o valor numérico será exibido junto à barra ou apenas a barra. As barras são proporcionais ao valor dentro do intervalo configurado, permitindo uma comparação visual rápida sem sair da tabela.",
-      "Barras de Dados em tabelas do Power BI são criadas adicionando um visual de Gráfico de Barras sobreposto à tabela usando a funcionalidade de layering — não existe formatação condicional de data bar nativa em tabelas; para barras inline, usar o visual 'Table with Data Bars' disponível no AppSource que combina tabela e barras em um único visual customizado.",
-      "Barras de Dados em tabelas do Power BI só exibem a barra sem o valor numérico — para mostrar o número junto à barra é necessário adicionar uma coluna duplicada com o valor formatado como texto e posicioná-la ao lado da coluna de data bar; a formatação condicional de data bar e a exibição de valor numérico são mutuamente exclusivas nas propriedades da tabela.",
-      "Barras de Dados são aplicadas à linha inteira da tabela baseadas no valor da coluna configurada — não é possível aplicar data bars apenas em uma coluna específica sem afetar o layout das outras colunas da mesma linha; para barras por coluna individual é necessário usar o visual Matrix em vez de Table que tem controle mais granular de formatação por célula."
+      "Seriam criadas sobrepondo um Gráfico de Barras via layering; não existiria data bar nativa, exigindo visual do AppSource.",
+      "Exibiriam só a barra sem valor; mostrar o número exigiria coluna duplicada, pois seriam mutuamente exclusivos.",
+      "Afetariam a linha inteira; aplicar por coluna específica exigiria usar Matrix em vez de Table."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6306,7 +6306,7 @@ export const questions = [
       "As funções DAX FIND e SEARCH diferem fundamentalmente em sua sensibilidade a maiúsculas e minúsculas: FIND é case-sensitive, enquanto SEARCH é case-insensitive, tornando-as adequadas para diferentes cenários de busca de substrings.",
       "Funções de texto DAX como LEFT, MID e RIGHT realizam a contagem de caracteres com base em bytes, o que pode causar extrações imprecisas ao lidar com caracteres especiais (acentos, cedilha) que ocupam múltiplos bytes em codificações como UTF-16.",
       "Para operações de extração de substrings em grandes volumes de dados (acima de 100.000 linhas), o Power Query é sempre a opção de melhor performance, pois as colunas calculadas DAX são processadas sequencialmente e não vetorizadas.",
-      "A função COMBINEVALUES no DAX é utilizada para concatenar valores de diferentes colunas, mas não permite a especificação de um delimitador personalizado, usando por padrão um espaço entre os valores combinados."
+      "COMBINEVALUES concatenaria colunas mas não permitiria delimitador customizado, usando espaço por padrão."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6328,10 +6328,10 @@ export const questions = [
     "id": "q254_pl300",
     "text": "Como usar o verificador de acessibilidade integrado do Power BI Desktop para identificar e corrigir problemas de acessibilidade antes de publicar um relatório?",
     "options": [
-      "View > Accessibility Checker abre o painel de verificação que escaneia o relatório e lista problemas por categoria: Alt Text ausente em visuais, ordem de tabulação não configurada, baixo contraste de cores, visuais sem título, e outros problemas WCAG; cada problema é listado com link para o elemento afetado e sugestão de correção; executar o verificador antes de cada publicação como parte do processo de qualidade do relatório.",
-      "O verificador de acessibilidade do Power BI Desktop está disponível apenas para relatórios publicados no Service — no Desktop, a verificação é feita manualmente revisando cada visual; após publicar, acessar Report > Accessibility Check no menu do Service que gera relatório completo com pontuação de acessibilidade e itens a corrigir.",
-      "O verificador de acessibilidade do Power BI avalia automaticamente o contraste de todas as cores usadas e sugere substituições que atendam WCAG 2.1 nível AA — ao clicar em \"Fix\" em um problema de contraste, o Power BI substitui automaticamente as cores problemáticas pela alternativa mais próxima que atenda ao padrão sem alterar a identidade visual do relatório.",
-      "O verificador de acessibilidade só está disponível em Power BI Desktop versão Premium — na versão padrão do Desktop (gratuita), o menu View não inclui a opção Accessibility Checker; para verificar acessibilidade no Desktop padrão, instalar o add-in \"Accessibility for Power BI\" disponível no Microsoft AppSource como extensão do Desktop."
+      "View > Accessibility Checker escaneia o relatório, listando por categoria (Alt Text, tabulação, contraste, título); cada item com link e sugestão;",
+      "Estaria disponível só para relatórios publicados no Service; no Desktop a verificação seria manual.",
+      "Avaliaria automaticamente o contraste e, com \"Fix\", substituiria cores automaticamente para atender WCAG AA.",
+      "Estaria disponível só na versão Premium do Desktop; a gratuita exigiria add-in do AppSource."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6353,10 +6353,10 @@ export const questions = [
     "id": "q255_pl300",
     "text": "No Power BI Service, qual das seguintes afirmações descreve corretamente o \"My Workspace\" (Meu Workspace) e suas principais limitações em comparação com os workspaces colaborativos?",
     "options": [
-      "My Workspace é o workspace pessoal de cada usuário, criado automaticamente ao criar a conta Power BI; suas limitações incluem não poder ser compartilhado diretamente com outros usuários, não suportar Deployment Pipelines, não poder ser associado a uma capacidade Premium/Fabric, não suportar Apps de workspace, e seu conteúdo não aparecer nos resultados de busca organizacional. É adequado apenas para desenvolvimento pessoal e testes, enquanto o conteúdo de produção deve ser publicado em workspaces colaborativos.",
-      "My Workspace suporta todos os recursos dos workspaces colaborativos, incluindo Deployment Pipelines, Apps e atribuição a capacidade Premium; a única diferença é que não pode ter outros membros. Para compartilhar conteúdo do My Workspace, deve-se usar a opção \"Share\" que dá acesso de visualização ao usuário destinatário sem adicioná-lo como membro.",
-      "My Workspace é automaticamente excluído após 90 dias de inatividade. Se o usuário não publicar ou atualizar nenhum conteúdo por 90 dias, o Power BI Service remove o workspace e todo seu conteúdo sem aviso prévio. Para preservar conteúdo pessoal por mais de 90 dias, é necessário movê-lo para um workspace colaborativo antes do prazo de inatividade.",
-      "My Workspace pode ser convertido em workspace colaborativo via Admin Portal do Power BI. O administrador acessa a lista de workspaces pessoais e converte os que precisam ser colaborativos, mantendo todo o conteúdo e adicionando automaticamente o proprietário original como Admin do novo workspace colaborativo."
+      "Workspace pessoal criado automaticamente; limitações: não compartilhável, sem Deployment Pipelines/Apps/capacidade Premium, sem busca organizacional;",
+      "Suportaria todos os recursos colaborativos (Pipelines, Apps, Premium); só não teria outros membros, compartilhável via \"Share\".",
+      "Seria excluído automaticamente após 90 dias de inatividade, removendo conteúdo sem aviso.",
+      "Poderia ser convertido em colaborativo via Admin Portal, mantendo conteúdo e proprietário como Admin."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -6378,10 +6378,10 @@ export const questions = [
     "id": "q256_pl300",
     "text": "Como calcular o número de dias úteis entre duas datas no Power Query, excluindo finais de semana e feriados nacionais?",
     "options": [
-      "Criar uma tabela de feriados (usando 'Enter Data' para inserir as datas); em seguida, criar uma função customizada M que itera pelos dias entre as datas, contando apenas os dias úteis (onde o dia da semana não é sábado nem domingo E a data não está na lista de feriados), utilizando a seguinte lógica: = List.Count(List.Select(List.Dates(DataInicio, Duration.Days(DataFim - DataInicio), #duration(1,0,0,0)), each Date.DayOfWeek(_, Day.Monday) < 5 and not List.Contains(Feriados, _))).",
-      "O Power Query tem uma função nativa Date.WorkingDays(dataInicio, dataFim) que calcula dias úteis automaticamente, excluindo finais de semana e os feriados nacionais do Brasil configurados nas configurações regionais do Power BI Desktop; para feriados de outros países, alterar a configuração de localidade em File > Options > Regional Settings antes de usar a função.",
-      "Calcular dias úteis no Power Query requer criar uma tabela de calendário completa com uma coluna 'IsDiaUtil' (booleano) no Power Query, carregar no modelo de dados e, em seguida, usar uma medida DAX com COUNTROWS(FILTER(CalendarTable, CalendarTable[Date] >= StartDate && CalendarTable[Date] <= EndDate && CalendarTable[IsDiaUtil] = TRUE)) para contar apenas os dias úteis.",
-      "Date.WorkingDays não existe no M — para dias úteis sem feriados, usar List.Select(List.Dates(...), each Date.DayOfWeek(_, Day.Monday) < 5) que filtra apenas dias de semana; adicionar feriados requer a lógica extra com List.Contains conforme descrito na resposta correta."
+      "Tabela de feriados (Enter Data) + função M com List.Count(List.Select(List.Dates(...), each Date.DayOfWeek(_,Day.Monday)<5 and not List.Contains(Feriados,_))).",
+      "Haveria função nativa Date.WorkingDays(início,fim) que excluiria fins de semana e feriados nacionais do Brasil automaticamente.",
+      "Exigiria tabela de calendário com coluna 'IsDiaUtil' carregada no modelo, usando COUNTROWS(FILTER(...)) em DAX para contar.",
+      "Date.WorkingDays não existiria; dias úteis sem feriado usariam List.Select com Date.DayOfWeek<5, feriados exigiriam List.Contains extra."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6404,7 +6404,7 @@ export const questions = [
     "text": "Um analista de dados está desenvolvendo um modelo no Power BI para analisar a margem de contribuição por produto e identificar o ponto de equilíbrio. Ele propôs o seguinte conjunto de medidas DAX:\n\n```\nMargem Contribuição = [Receita Líquida] - [Custo Variável Total]\nÍndice MC = DIVIDE([Margem Contribuição], [Receita Líquida])\nPonto Equilíbrio Unidades = DIVIDE( CALCULATE([Custo Fixo Total], ALL(DimProduto)), [Preço Unitário] - [Custo Variável Unitário])\nMC por Unidade = [Preço Unitário] - [Custo Variável Unitário]\n```\n\nQual das seguintes afirmações sobre essas medidas e a análise de margem de contribuição no Power BI é *correta*?",
     "options": [
       "Margem de contribuição no Power BI é calculada automaticamente pelo visual de Waterfall Chart; não é necessário criar medidas DAX explícitas para esse cálculo.",
-      "O Índice MC = DIVIDE([Margem Contribuição], [Receita Líquida]) sempre retorna valores entre 0 e 1; se o índice retornar valor negativo, indica erro na modelagem dos dados.",
+      "Índice MC sempre retornaria entre 0 e 1; valor negativo indicaria erro na modelagem dos dados.",
       "O Ponto de Equilíbrio no Power BI deve ser calculado como coluna calculada em vez de medida, pois medidas geram resultados inconsistentes com filtros.",
       "As medidas DAX propostas são adequadas, pois o ALL(DimProduto) em Ponto Equilíbrio Unidades garante o custo fixo total independente do filtro, e o Índice MC pode ser negativo para produtos deficitários."
     ],
@@ -6431,7 +6431,7 @@ export const questions = [
       "Modelo \"App owns data\" (recomendado para ISVs): 1) Registrar aplicação no Entra ID com permissões Power BI; 2) Criar Service Principal; 3) Provisionar capacity Azure (SKU A) no portal Azure; 4) Criar workspaces e publicar relatórios via API usando o Service Principal; 5) Gerar embed token via API com EffectiveIdentity para RLS por cliente; 6) Incorporar no produto SaaS via Power BI JavaScript SDK; clientes finais não precisam de licença Power BI — custo é da capacity Azure por hora.",
       "ISVs devem usar o modelo \"User owns data\" para incorporar Power BI nos seus produtos — cada cliente final do produto SaaS precisa ter conta Azure AD no tenant do ISV e licença Power BI Pro; o ISV não precisa provisionar capacity Azure pois cada usuário usa sua própria licença Pro para acessar os relatórios incorporados no produto.",
       "Power BI Embedded para ISVs requer que o ISV seja parceiro certificado Microsoft (Gold ou Silver) — fornecedores sem certificação de parceria não têm acesso aos SKUs de capacity Azure necessários para Embedded; o processo de certificação leva em média 6 meses e inclui revisão técnica da implementação pela equipe de Power BI da Microsoft.",
-      "O custo do Power BI Embedded para ISVs é baseado em licenças por usuário final (por número de clientes do SaaS) — o SKU Azure A é uma licença anual que inclui um número máximo de usuários simultâneos especificado no contrato; ISVs com mais usuários que o limite do SKU devem adquirir SKUs adicionais proporcionalmente ao crescimento da base de clientes."
+      "Custo seria por licença de usuário final; SKU Azure A seria anual com limite de usuários simultâneos no contrato."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -6453,10 +6453,10 @@ export const questions = [
     "id": "q259_pl300",
     "text": "Quais das seguintes práticas de otimização de queries no Power Query são mais eficazes para reduzir o tempo de refresh de datasets grandes no Power BI?",
     "options": [
-      "Verificar e preservar o Query Folding, filtrando dados na fonte o mais cedo possível e selecionando apenas as colunas necessárias. Além disso, desabilitar o preview automático em consultas pesadas e utilizar staging queries com 'Enable Load' desabilitado para transformações intermediárias são cruciais. A ferramenta 'View Native Query' deve ser usada para confirmar o folding.",
-      "A principal otimização do Power Query é aumentar o número de passos Applied Steps, pois mais passos significam transformações mais granulares que o mecanismo pode otimizar individualmente. Consolidar múltiplos passos em um único passo via Advanced Editor reduz as oportunidades de otimização e deve ser evitado.",
-      "Query Folding é automaticamente preservado em todas as transformações do Power Query. O mecanismo detecta transformações que não podem ser traduzidas para SQL e as executa localmente sem impacto no folding das etapas subsequentes, portanto, a ordem dos passos não afeta se o Query Folding está ativo ou não.",
-      "Desabilitar o carregamento de queries intermediárias (Enable Load) aumenta o tempo de refresh, pois o Power BI precisa recalcular todas as queries desabilitadas a cada refresh. Para máxima performance, é recomendado habilitar o carregamento de todas as queries, incluindo as intermediárias, para que os resultados fiquem em cache."
+      "Preservar Query Folding, filtrando na fonte e selecionando só colunas necessárias; staging queries com Enable Load desabilitado;",
+      "A otimização principal seria aumentar Applied Steps, pois mais passos seriam mais otimizáveis; consolidar passos seria contraproducente.",
+      "Query Folding seria preservado automaticamente em tudo; a ordem dos passos não afetaria se está ativo.",
+      "Desabilitar Enable Load em queries intermediárias aumentaria o refresh; melhor habilitar carregamento de todas para cache."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -6478,10 +6478,10 @@ export const questions = [
     "id": "q260_pl300",
     "text": "Quais são os princípios de design de relatório Power BI que melhoram a experiência do usuário e a eficácia da comunicação de dados?",
     "options": [
-      "Princípios fundamentais: 1) Hierarquia visual — elementos mais importantes maiores e no topo esquerdo (leitura ocidental Z-pattern); 2) Economia visual — remover elementos desnecessários (gridlines, bordas, legendas redundantes); 3) Alinhamento e consistência — espaçamentos uniformes, mesmas fontes e cores por tipo de informação; 4) Contraste para destaque — usar cor para chamar atenção apenas para o que é crítico; 5) Contexto — incluir metas, benchmarks e títulos descritivos; 6) Interatividade intuitiva — slicers e filtros acessíveis, reset disponível.",
-      "O número ideal de visuais por página no Power BI é exatamente 7 (+/- 2) baseado no princípio de Miller (capacidade de memória de trabalho humana de 7 itens) — relatórios com mais de 9 visuais por página causam sobrecarga cognitiva e devem ser divididos em múltiplas páginas; relatórios com menos de 5 visuais subutilizam o espaço disponível e não justificam o custo de desenvolvimento.",
-      "A paleta de cores padrão do Power BI (tema Office) foi desenvolvida especificamente para máxima legibilidade e não deve ser alterada em relatórios corporativos — customizar cores via temas JSON reduz a legibilidade pois as cores padrão foram validadas por estudos de UX da Microsoft; usar sempre o tema padrão garantindo conformidade com as diretrizes de design do Power BI.",
-      "Relatórios Power BI devem seguir o padrão de dashboard estilo \"cockpit\" com o máximo de informações possível em uma única tela — usuários preferem ver tudo sem precisar rolar ou navegar entre páginas; dividir informações em múltiplas páginas aumenta a taxa de abandono do relatório pois usuários não exploram além da primeira página."
+      "Hierarquia visual (Z-pattern); economia visual (remover redundâncias); alinhamento/consistência; contraste só para o crítico; contexto (metas/benchmarks);",
+      "O ideal seria exatamente 7±2 visuais por página (princípio de Miller); mais de 9 causaria sobrecarga cognitiva.",
+      "A paleta padrão (tema Office) seria a única validada para legibilidade; customizar cores reduziria a legibilidade.",
+      "Deveria seguir estilo \"cockpit\" com máximo de informação numa tela; múltiplas páginas aumentariam abandono."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6503,10 +6503,10 @@ export const questions = [
     "id": "q261_pl300",
     "text": "Como implementar um framework de monitoramento de qualidade de dados no Power BI que alerte automaticamente quando anomalias são detectadas nos dados de produção?",
     "options": [
-      "Criar dataset de monitoramento com medidas de qualidade (% nulos, contagem de registros, valores fora de range, data de última atualização); publicar relatório com visual KPI/Card para cada métrica; configurar alertas de dados no Dashboard para as métricas críticas (ex: alerta quando registros < 90% do esperado); usar Power Automate com trigger \"Power BI Data Alert\" para enviar notificações detalhadas via Teams/email quando alertas disparam; agendar refresh do dataset de monitoramento logo após o refresh do dataset de produção.",
-      "Monitoramento de qualidade de dados no Power BI é configurado via Microsoft Purview Data Quality que escaneia automaticamente todos os datasets do tenant em busca de anomalias — sem necessidade de criar datasets ou relatórios de monitoramento separados; o Purview gera alertas automáticos ao detectar desvios nos padrões de dados comparados ao histórico de baseline.",
-      "Alertas de dados no Power BI Service são verificados em tempo real continuamente — qualquer anomalia nos dados é detectada em menos de 1 minuto após ocorrer; para alertas com latência aceitável de até 1 hora, o refresh agendado padrão é suficiente; alertas em tempo real requerem que o dataset use DirectQuery com Automatic Page Refresh configurado em 1 minuto.",
-      "Para monitoramento de qualidade de dados, usar exclusivamente o recurso de Data Profiling do Power Query — o Column Quality, Column Distribution e Column Profile são as ferramentas de monitoramento de qualidade do Power BI e devem ser revisados manualmente pelo engenheiro de dados após cada refresh para identificar anomalias nos dados de produção."
+      "Dataset de monitoramento com medidas de qualidade (% nulos, contagem, fora de range); KPI/Card por métrica; alertas no Dashboard;",
+      "Seria configurado via Microsoft Purview Data Quality, escaneando todos os datasets automaticamente, sem dataset próprio.",
+      "Alertas seriam verificados continuamente em tempo real (<1min); tempo real exigiria DirectQuery com Auto Page Refresh.",
+      "Exigiria exclusivamente Data Profiling do Power Query, revisado manualmente após cada refresh."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6528,10 +6528,10 @@ export const questions = [
     "id": "q262_pl300",
     "text": "Como conectar o Power BI Desktop a um banco de dados Oracle e quais são os pré-requisitos específicos desta conexão?",
     "options": [
-      "Para conectar o Power BI Desktop a um banco de dados Oracle, utilize 'Obter Dados' > 'Banco de Dados' > 'Banco de Dados Oracle'. Insira o TNS name ou a string de conexão (ex: servidor:1521/SERVICENAME) e autentique com usuário e senha Oracle. O pré-requisito crítico é instalar o Oracle Data Access Components (ODAC) ou Oracle Client no computador, disponível no site da Oracle. A versão do cliente Oracle (32 ou 64 bits) deve corresponder à arquitetura do Power BI Desktop instalado (geralmente 64 bits). Para agendamento de atualização no Power BI Service, o cliente Oracle deve ser instalado no servidor do gateway de dados local.",
-      "O Oracle Database é acessado no Power BI exclusivamente via conector ODBC genérico, pois não existe um conector nativo Oracle no Power BI Desktop. Deve-se usar 'Obter Dados' > 'Outros' > 'ODBC', configurando um DSN com o driver Oracle ODBC (Oracle ODBC Driver 19c). O conector nativo Oracle listado no menu é apenas um alias visual para o conector ODBC sem diferenças funcionais.",
-      "O conector Oracle no Power BI Desktop inclui automaticamente o Oracle Client embutido, eliminando a necessidade de instalar software adicional da Oracle no computador. Este Oracle Client embutido suporta todas as versões do Oracle Database de 11g a 21c sem configuração adicional pelo usuário.",
-      "Conexões Oracle no Power BI requerem que o servidor Oracle tenha a licença Oracle Advanced Networking Option habilitada para permitir conexões de ferramentas de terceiros como o Power BI. Sem essa licença, o Oracle Database recusa conexões do Power BI com erro de protocolo não suportado, independentemente do cliente Oracle instalado."
+      "'Obter Dados' > 'Banco de Dados Oracle', TNS name ou string de conexão; pré-requisito é instalar ODAC/Oracle Client (arquitetura compatível);",
+      "Seria acessado só via ODBC genérico, pois não existiria conector nativo Oracle; o nativo seria só um alias do ODBC.",
+      "Incluiria automaticamente o Oracle Client embutido, sem precisar instalar nada adicional, suportando 11g-21c.",
+      "Exigiria licença Oracle Advanced Networking Option no servidor para aceitar conexões de terceiros como o Power BI."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6551,12 +6551,12 @@ export const questions = [
   },
   {
     "id": "q263_pl300",
-    "text": "Você é um analista de dados e precisa calcular o Net Promoter Score (NPS) para uma pesquisa de satisfação de clientes no Power BI. As respostas da pesquisa incluem uma nota de 0 a 10 para cada respondente. O NPS é definido como a porcentagem de Promotores (clientes que deram notas 9 ou 10) menos a porcentagem de Detratores (clientes que deram notas de 0 a 6). Clientes que deram notas 7 ou 8 são considerados Neutros e não entram diretamente no cálculo percentual, mas são incluídos no total de respondentes. Qual das seguintes opções apresenta o conjunto correto de medidas DAX para calcular o NPS de acordo com esta metodologia?",
+    "text": "Para NPS (notas 0-10: Promotores 9-10, Neutros 7-8, Detratores 0-6; NPS = %Promotores - %Detratores), qual conjunto de medidas DAX está correto?",
     "options": [
       "Promotores = CALCULATE(DISTINCTCOUNT(Pesquisa[RespondentID]), Pesquisa[Nota] >= 9)\nDetratores = CALCULATE(DISTINCTCOUNT(Pesquisa[RespondentID]), Pesquisa[Nota] <= 6)\nTotal Respondentes = DISTINCTCOUNT(Pesquisa[RespondentID])\nNPS = DIVIDE([Promotores], [Total Respondentes]) * 100 - DIVIDE([Detratores], [Total Respondentes]) * 100",
       "NPS = AVERAGEX(ALL(Pesquisa), Pesquisa[Nota]) * 10 — Esta fórmula é a oficial do NPS, criada pela Bain & Company, que converte a nota média de 0-10 para a escala de 0-100, refletindo a satisfação geral.",
-      "NPS = SUMX(Pesquisa, SWITCH(TRUE(), Pesquisa[Nota]>=9, 1, Pesquisa[Nota]<=6, -1, 0)) / [Total Respondentes] * 100 — Esta abordagem calcula o NPS como uma média ponderada, onde Promotores valem +1, Detratores -1 e Neutros 0, sendo a forma mais precisa de refletir o impacto individual.",
-      "O NPS não pode ser calculado diretamente por medidas DAX no Power BI, pois requer a análise de cada respondente individualmente. É necessário criar colunas calculadas para classificar cada respondente e, em seguida, usar funções de agregação para contar os grupos."
+      "NPS = SUMX(Pesquisa,SWITCH(TRUE(),Nota>=9,1,Nota<=6,-1,0))/Total*100 seria mais preciso, ponderando +1/-1/0 por resposta.",
+      "Não poderia ser calculado por medidas DAX, exigindo colunas calculadas para classificar cada respondente individualmente."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6578,10 +6578,10 @@ export const questions = [
     "id": "q264_pl300",
     "text": "Como o comportamento de seleção múltipla com Ctrl+Click em visuais do Power BI afeta o filtro cruzado e como configurar o relatório para suportar esse comportamento?",
     "options": [
-      "Por padrão, clicar em múltiplos pontos de dados em um visual com Ctrl+Click aplica um filtro aditivo (operador OR) nos dados selecionados, afetando os outros visuais do relatório. Esse comportamento é nativo para visuais e não requer configuração adicional, exceto para slicers, que possuem uma opção específica 'Multi-select with CTRL' nas configurações de seleção.",
-      "A seleção múltipla com Ctrl+Click não está disponível em relatórios publicados no Power BI Service, funcionando apenas no Power BI Desktop. Para habilitá-la no Service, um administrador deve ativá-la no Portal de Administração, ou os usuários devem recorrer a slicers de múltipla seleção.",
-      "A seleção múltipla com Ctrl+Click em visuais do Power BI sempre aplica um filtro com operador lógico AND entre os itens selecionados, o que significa que apenas dados que satisfazem todas as condições selecionadas serão exibidos, tornando-a ineficaz para selecionar múltiplos valores de uma mesma dimensão.",
-      "Para habilitar a seleção múltipla em gráficos (não apenas slicers), é necessário que o desenvolvedor adicione um botão 'Modo de Seleção Múltipla' ao relatório. Sem esse botão, o Ctrl+Click apenas substitui a seleção anterior pelo último item clicado, e o botão é uma funcionalidade recente do Power BI Desktop 2024."
+      "Ctrl+Click aplica filtro aditivo (OR) nativamente em visuais, sem config adicional; slicers têm opção 'Multi-select with CTRL' própria.",
+      "Seleção múltipla não funcionaria no Service, só no Desktop; habilitar no Service exigiria ativação do admin.",
+      "Sempre aplicaria filtro com AND entre itens selecionados, tornando-a inútil para múltiplos valores da mesma dimensão.",
+      "Habilitar em gráficos exigiria botão 'Modo de Seleção Múltipla' adicionado pelo desenvolvedor, recurso de 2024."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -6603,10 +6603,10 @@ export const questions = [
     "id": "q265_pl300",
     "text": "No contexto do Power BI Premium, o que são Agregações (Aggregations) e como elas contribuem para a melhoria da performance em modelos que utilizam tabelas de fatos muito grandes em modo DirectQuery?",
     "options": [
-      "Agregações permitem criar tabelas pré-agregadas em modo Import sobre tabelas de fatos grandes em DirectQuery. O Power BI redireciona automaticamente queries de alto nível para a tabela agregada (rápida) e apenas queries de detalhe granular para a fonte DirectQuery, sendo configuradas na Model View através de 'Manage Aggregations'.",
-      "Agregações no Power BI são equivalentes a tabelas calculadas DAX, pois ambas criam tabelas pré-computadas para melhorar a performance. A diferença é que tabelas calculadas usam DAX e Agregações usam Power Query, sendo ambas armazenadas no VertiPaq e recalculadas a cada refresh.",
-      "Agregações no Power BI funcionam apenas para tabelas em modo Import, não sendo possível criá-las sobre tabelas em DirectQuery. Para DirectQuery, a melhoria de performance é obtida com o Incremental Refresh, que particiona os dados e carrega apenas o período recente em Import.",
-      "Agregações exigem que o analista crie manualmente medidas DAX com ISINSCOPE para direcionar as queries, pois o Power BI não possui um mecanismo automático de roteamento para tabelas agregadas, necessitando de lógica explícita para cada relatório."
+      "Permitem criar tabelas pré-agregadas em Import sobre fatos grandes em DirectQuery; o Power BI redireciona queries de alto nível para a agregada e só detalhe.",
+      "Seriam equivalentes a tabelas calculadas DAX, ambas pré-computadas; diferença seria DAX vs Power Query, recalculadas a cada refresh.",
+      "Funcionariam só em Import, não sobre DirectQuery; para DirectQuery a melhoria viria do Incremental Refresh.",
+      "Exigiriam medidas DAX manuais com ISINSCOPE para rotear queries, sem mecanismo automático de roteamento."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -6628,10 +6628,10 @@ export const questions = [
     "id": "q266_pl300",
     "text": "Ao importar dados de um arquivo Excel para o Power Query, qual é a abordagem recomendada para selecionar especificamente tabelas nomeadas (Named Tables) em vez de abas inteiras, e quais são as vantagens dessa prática?",
     "options": [
-      "No Power Query, utilize a opção 'Obter Dados' > 'Pasta de Trabalho do Excel'. No Navegador, expanda o arquivo e selecione as tabelas nomeadas, que são identificadas por um ícone de tabela distinto das abas. A vantagem é que tabelas nomeadas possuem um esquema fixo e se adaptam automaticamente a mudanças de tamanho no Excel, tornando-as mais robustas para o refresh de dados.",
-      "No Power Query, tabelas nomeadas do Excel e abas são funcionalmente equivalentes; a única diferença é visual no Navegador. Importar uma tabela nomeada ou a aba inteira que a contém resulta nos mesmos dados e colunas, sem impacto na robustez do processo de transformação.",
-      "Para importar tabelas nomeadas do Excel, é necessário usar o conector 'Tabelas do Excel' em 'Obter Dados' > 'Outras Fontes', pois o conector 'Pasta de Trabalho do Excel' padrão só suporta abas completas e ranges nomeados, não reconhecendo tabelas nomeadas (ListObject).",
-      "Tabelas nomeadas importadas no Power Query não suportam refresh automático; o Power Query captura apenas um snapshot estático. Para dados dinâmicos, é preferível usar abas inteiras com ranges definidos, que são relidos completamente a cada atualização."
+      "'Obter Dados' > 'Pasta de Trabalho do Excel'; no Navegador, selecionar as tabelas nomeadas (ícone distinto de.",
+      "Tabelas nomeadas e abas seriam funcionalmente equivalentes, com diferença só visual no Navegador, sem impacto na robustez.",
+      "Exigiria conector 'Tabelas do Excel' em 'Outras Fontes', pois 'Pasta de Trabalho' não reconheceria tabelas nomeadas (ListObject).",
+      "Tabelas nomeadas não suportariam refresh automático, capturando só snapshot estático; abas inteiras seriam preferíveis."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6651,12 +6651,12 @@ export const questions = [
   },
   {
     "id": "q267_pl300",
-    "text": "Você está desenvolvendo um modelo de dados para um e-commerce no Power BI e precisa calcular métricas chave como Ticket Médio por pedido e Frequência Média de Compras por cliente. Você propôs as seguintes medidas DAX:\n\n```\nTicket Médio = DIVIDE( SUM(Pedidos[ValorTotal]), DISTINCTCOUNT(Pedidos[PedidoID]))\nFrequência Média Compras = DIVIDE( DISTINCTCOUNT(Pedidos[PedidoID]), DISTINCTCOUNT(Pedidos[ClienteID]))\nReceita por Cliente = DIVIDE( SUM(Pedidos[ValorTotal]), DISTINCTCOUNT(Pedidos[ClienteID]))\nLTV Simplificado = [Ticket Médio] * [Frequência Média Compras] * [Vida Média Cliente Meses]\n```\n\nConsiderando um cenário comum onde a tabela 'Pedidos' tem granularidade de item (ou seja, cada linha representa um item dentro de um pedido), qual das seguintes afirmações sobre as medidas `Ticket Médio` e `Frequência Média Compras` está CORRETA?",
+    "text": "Para e-commerce, foram propostas:\n```\nTicket Médio = DIVIDE(SUM(Pedidos[ValorTotal]),DISTINCTCOUNT(Pedidos[PedidoID]))\nFrequência Média = DIVIDE(DISTINCTCOUNT(Pedidos[PedidoID]),DISTINCTCOUNT(Pedidos[ClienteID]))\n```\nConsiderando que 'Pedidos' tem granularidade de item (linha = item do pedido), qual afirmação é correta?",
     "options": [
-      "A medida Ticket Médio está corretamente formulada para calcular o valor médio por pedido, e a medida Frequência Média Compras calcula a frequência média de compras por cliente em um nível agregado.",
-      "A medida Ticket Médio = AVERAGE(Pedidos[ValorTotal]) seria mais eficiente e concisa, e a medida Frequência Média Compras deve ser uma coluna calculada para análises por cliente individual.",
-      "A medida Ticket Médio = DIVIDE(SUM(Pedidos[ValorTotal]), COUNTROWS(Pedidos)) seria mais apropriada, e a medida Frequência Média Compras está incorreta, pois medidas DAX não podem calcular frequência por cliente.",
-      "Ambas as medidas Ticket Médio e Frequência Média Compras estão incorretas, pois não consideram a granularidade da tabela de pedidos, que é por item."
+      "Ticket Médio está corretamente formulado para valor médio por pedido; Frequência Média calcula a frequência por cliente agregada.",
+      "Ticket Médio = AVERAGE(Pedidos[ValorTotal]) seria mais eficiente; Frequência Média deveria ser coluna calculada por cliente.",
+      "Ticket Médio = DIVIDE(SUM(...),COUNTROWS(Pedidos)) seria mais apropriado; Frequência Média estaria incorreta, pois DAX não calcularia por cliente.",
+      "Ambas estariam incorretas por não considerarem a granularidade por item da tabela de pedidos."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6678,10 +6678,10 @@ export const questions = [
     "id": "q268_pl300",
     "text": "Quais são as formas de integração bidirecional entre Power BI e Excel e quando cada abordagem é mais adequada?",
     "options": [
-      "A integração Power BI para Excel pode ser feita via 'Analyze in Excel' (conexão dinâmica via XMLA), 'Export Data' (instantâneo estático) ou 'Export to Excel' com tabela dinâmica conectada. Já do Excel para Power BI, pode-se importar o Excel como fonte de dados ou publicar um modelo Power Pivot do Excel no Power BI Desktop. 'Analyze in Excel' é ideal para analistas avançados que preferem Tabelas Dinâmicas, 'Export Data' para distribuição de dados pontuais, e importar Excel como fonte para dados de referência ou metas.",
-      "A integração Power BI ↔ Excel é estritamente unidirecional; o Power BI pode importar dados do Excel, mas o Excel não consegue consumir dados do Power BI diretamente. Para compartilhar dados do Power BI com usuários de Excel, a única opção é exportar manualmente via 'Export Data' em cada visual e enviar os arquivos por e-mail, pois a funcionalidade 'Analyze in Excel' não existe nativamente.",
-      "Publicar um modelo Power Pivot do Excel no Power BI Desktop cria automaticamente uma cópia sincronizada, onde alterações no modelo Excel são refletidas no Power BI Desktop em tempo real via sincronização do OneDrive. Para manter os dois modelos alinhados, basta salvar o arquivo Excel na pasta do OneDrive sincronizada com o workspace do Power BI.",
-      "Analyze in Excel requer que o modelo Power BI use o modo DirectQuery, pois modelos em modo Import não são acessíveis via 'Analyze in Excel'. Isso ocorre porque os dados armazenados no VertiPaq não podem ser expostos via protocolo XMLA para consumo pelo Excel. Para modelos Import, a exportação de dados é a única alternativa à conexão dinâmica."
+      "Power BI→Excel: 'Analyze in Excel' (dinâmica via XMLA), 'Export Data' (estático); Excel→Power BI: importar como fonte ou publicar Power Pivot no Desktop;",
+      "Seria estritamente unidirecional; Excel não consumiria dados do Power BI, exigindo 'Export Data' manual e e-mail.",
+      "Publicar Power Pivot criaria cópia sincronizada em tempo real via OneDrive, bastando salvar na pasta sincronizada.",
+      "'Analyze in Excel' exigiria DirectQuery; modelos Import não seriam acessíveis, pois VertiPaq não exporia via XMLA."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6704,9 +6704,9 @@ export const questions = [
     "text": "Como um administrador do Power BI pode auditar quais usuários acessaram um relatório específico nos últimos 30 dias, utilizando o Activity Log do Power BI?",
     "options": [
       "Através do PowerShell, utilizando o cmdlet Get-PowerBIActivityEvent com filtros para Activity -eq \"ViewReport\" e ArtifactId do relatório; ou via API REST de Admin, consultando /v1.0/myorg/admin/activityevents e aplicando filtros semelhantes. Ambos retornam detalhes como usuário, timestamp e workspace.",
-      "A auditoria de acesso a relatórios específicos no Power BI é feita via relatório de Usage Metrics — acessando o relatório > três pontos > View Usage Metrics Report; o Usage Metrics exibe automaticamente todos os usuários que acessaram o relatório com timestamps completos dos últimos 90 dias sem necessidade de PowerShell ou API REST.",
-      "O Activity Log do Power BI não registra visualizações de relatórios individuais — registra apenas ações administrativas como criação de workspaces, publicação de relatórios e alterações de permissão; para rastrear quem visualizou um relatório específico, usar o Azure Application Insights integrado via Power BI Embedded que registra todos os acessos com identidade do usuário.",
-      "Para auditar acessos a relatórios, o administrador deve habilitar o \"Report Access Logging\" nas configurações do relatório individual no Power BI Service antes de começar a coletar dados; sem habilitar explicitamente esse logging por relatório, o Power BI não registra visualizações no Activity Log por padrão para preservar performance do sistema."
+      "Seria via Usage Metrics Report, exibindo automaticamente todos os usuários com timestamps dos últimos 90 dias.",
+      "O Activity Log não registraria visualizações individuais, só ações administrativas; exigiria Application Insights via Embedded.",
+      "Exigiria habilitar \"Report Access Logging\" por relatório antes; sem isso não registraria visualizações por padrão."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6728,10 +6728,10 @@ export const questions = [
     "id": "q270_pl300",
     "text": "Qual é o procedimento correto para conectar o Power BI Desktop a um Teradata Database e quais são as principais considerações de performance ao consultar grandes volumes de dados?",
     "options": [
-      "Para conectar, use Get Data > Database > Teradata Database, insira o nome do servidor ou IP, e autentique com credenciais Teradata ou LDAP. É pré-requisito instalar o .NET Data Provider for Teradata. Para performance, explore o Primary Index (PI) do Teradata, pois queries que o utilizam são muito mais rápidas, e use filtros no Power Query que o query folding possa traduzir para cláusulas WHERE eficientes.",
-      "Teradata Database não tem conector nativo no Power BI Desktop; a conexão deve ser feita via conector ODBC, configurando um DSN com o driver Teradata ODBC. O menu Get Data > Database lista apenas SQL Server, Oracle, MySQL e PostgreSQL como bancos relacionais com conectores nativos, exigindo ODBC ou OLEDB para outros.",
-      "O Power BI usa o modo DirectQuery automaticamente para Teradata, pois o Teradata não permite extração em lote de dados devido a limitações de licença do driver JDBC. Para usar o modo Import, é necessário adquirir a licença Teradata JDBC Enterprise, que habilita a extração completa, já que a versão gratuita do driver suporta apenas leitura de até 1.000 linhas por query.",
-      "Conexões Teradata no Power BI exigem que a consulta seja sempre escrita em BTEQ (Teradata native SQL), pois o Power Query não gera SQL compatível com o dialeto do Teradata. O analista deve escrever a query SQL nativa na janela 'SQL Statement' obrigatória do conector Teradata antes de conectar, sem a possibilidade de usar a interface visual do Navigator para selecionar tabelas."
+      "Get Data > Teradata Database, servidor/credenciais; pré-requisito é o .NET Data Provider for Teradata;",
+      "Não teria conector nativo; exigiria ODBC com DSN e driver Teradata, pois Get Data listaria só SQL Server/Oracle/MySQL/PostgreSQL.",
+      "Usaria DirectQuery automaticamente, pois extração em lote exigiria licença JDBC Enterprise paga.",
+      "Exigiria sempre escrever em BTEQ na janela 'SQL Statement', sem usar a interface visual do Navigator."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6751,7 +6751,7 @@ export const questions = [
   },
   {
     "id": "q271_pl300",
-    "text": "A empresa XYZ precisa implementar uma análise de custo de estoque pelo método FIFO (First In, First Out) no Power BI. Foi iniciada a implementação de uma medida DAX, conforme o código abaixo, para calcular o custo total das unidades vendidas. Qual é a expressão DAX correta para preencher o espaço indicado por \"...\" na fórmula, garantindo que apenas a quantidade necessária de cada compra seja considerada, respeitando a ordem cronológica das compras?\n\n```dax\nCusto FIFO = \nVAR TotalVendido = [Total Unidades Vendidas]\nVAR ComprasCumulativas = \n    FILTER(\n        ADDCOLUMNS(\n            ALL(Compras),\n            \"CumulativoAtéAqui\", CALCULATE(SUM(Compras[Quantidade]), Compras[DataCompra] <= EARLIER(Compras[DataCompra]))\n        ),\n        [CumulativoAtéAqui] <= TotalVendido + Compras[Quantidade]\n    )\nRETURN\n    SUMX(\n        ComprasCumulativas,\n        MIN(\n            Compras[Quantidade],\n            ... // Espaço a ser preenchido\n        ) * Compras[PreçoUnitário]\n    )\n```",
+    "text": "Para custo de estoque FIFO:\n```dax\nCusto FIFO =\nVAR TotalVendido=[Total Unidades Vendidas]\nVAR ComprasCum=FILTER(ADDCOLUMNS(ALL(Compras),\"Cum\",CALCULATE(SUM(Compras[Quantidade]),Compras[DataCompra]<=EARLIER(Compras[DataCompra]))),[Cum]<=TotalVendido+Compras[Quantidade])\nRETURN SUMX(ComprasCum, MIN(Compras[Quantidade], ... ) * Compras[PreçoUnitário])\n```\nQual expressão preenche corretamente o \"...\", respeitando a ordem cronológica?",
     "options": [
       "MAX(0, TotalVendido - CALCULATE(SUM(Compras[Quantidade]), FILTER(ALL(Compras), Compras[DataCompra] < EARLIER(Compras[DataCompra]))))",
       "Compras[Quantidade]",
@@ -6779,9 +6779,9 @@ export const questions = [
     "text": "Qual é a sequência correta de passos para integrar um visual Power Apps dentro de um relatório Power BI, permitindo que os usuários escrevam dados de volta à fonte diretamente do relatório?",
     "options": [
       "Inserir o visual Power Apps no Power BI Desktop, selecionar os campos do modelo Power BI para passar como contexto de filtro; no Power Apps, criar um aplicativo canvas que receba esses campos via \"PowerBIIntegration.Data\", permita a entrada de dados e escreva na fonte desejada (SharePoint, Dataverse, SQL Server) usando conectores do Power Apps.",
-      "Utilizar o visual Power Automate no Power BI Desktop, configurando um fluxo que acione uma ação de criação ou atualização de registro na fonte de dados externa, pois o visual Power Apps é exclusivamente para exibição de dados e não suporta escrita de volta.",
-      "Integrar o visual Power Apps, mas garantir que todos os usuários finais possuam uma licença Power Apps Premium, pois a licença padrão incluída no Microsoft 365 ou Power BI Pro não é suficiente para interagir com aplicativos embarcados que realizam operações de escrita.",
-      "Adicionar o visual Power Apps, mas estar ciente de que ele só pode passar um único campo como contexto de filtro para o aplicativo; para cenários que exigem múltiplos campos de contexto, é necessário usar o visual Power Automate com um trigger que suporte múltiplos parâmetros."
+      "Usar o visual Power Automate, configurando fluxo que cria/atualiza registro, pois Power Apps seria só para exibição.",
+      "Exigiria que usuários finais tivessem licença Power Apps Premium, pois a padrão não bastaria para escrita.",
+      "Power Apps só passaria um único campo de contexto; múltiplos campos exigiriam Power Automate com trigger próprio."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6804,9 +6804,9 @@ export const questions = [
     "text": "Como conectar o Power BI Desktop ao Snowflake e quais são as vantagens específicas desta integração para análise de dados em nuvem?",
     "options": [
       "A conexão é feita via 'Obter Dados' > 'Banco de Dados' > 'Snowflake'. É necessário informar o servidor (ex: account.snowflakecomputing.com), warehouse, database e schema. A autenticação pode ser por usuário/senha, SSO (Okta/Azure AD) ou Key Pair Authentication. As vantagens incluem suporte nativo a DirectQuery com push-down de queries, query folding extensivo que traduz transformações Power Query para SQL Snowflake, suporte a virtual warehouses para isolamento de workloads de BI, e integração com Snowflake Partner Connect para configuração simplificada.",
-      "Snowflake no Power BI é acessado via conector ODBC genérico — não existe conector nativo Snowflake no Power BI Desktop; instalar o driver ODBC do Snowflake e configurar um DSN com as credenciais da conta; o conector Snowflake listado no menu Obter Dados é apenas um alias visual para o conector ODBC sem diferenças funcionais ou de performance.",
-      "O conector Snowflake do Power BI não suporta DirectQuery — todos os dados do Snowflake são importados para o VertiPaq via modo Import; para análises em tempo real de dados no Snowflake sem importação, usar o conector Azure Synapse Analytics como intermediário que tem suporte a DirectQuery com Snowflake como fonte externa.",
-      "Conexão com Snowflake no Power BI requer que o warehouse Snowflake esteja sempre ativo (running) — se o warehouse estiver suspenso (suspended), o Power BI falha na conexão com erro de timeout; o administrador Snowflake deve configurar o warehouse para nunca suspender automaticamente quando usado com Power BI para garantir disponibilidade do refresh agendado."
+      "Seria acessado só via ODBC genérico, pois não existiria conector nativo; o nativo listado seria apenas alias.",
+      "Não suportaria DirectQuery, só Import; tempo real exigiria Azure Synapse como intermediário.",
+      "Exigiria warehouse Snowflake sempre ativo; suspenso causaria timeout, exigindo nunca suspender automaticamente."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6826,12 +6826,12 @@ export const questions = [
   },
   {
     "id": "q274_pl300",
-    "text": "Você precisa criar uma tabela de sensibilidade dinâmica no Power BI para analisar como o lucro de uma empresa é impactado por variações simultâneas de preço e volume. Para isso, você já implementou as seguintes medidas DAX e parâmetros What-If: \"Var Preço % = [Variação Preço % Valor]\", \"Var Volume % = [Variação Volume % Valor]\", \"Receita Ajustada = [Total Receita] * (1 + [Var Preço %]) * (1 + [Var Volume %])\", \"Custo Ajustado = [Custo Fixo] + [Custo Variável Total] * (1 + [Var Volume %])\", \"Lucro Ajustado = [Receita Ajustada] - [Custo Ajustado]\", e \"Δ Lucro = [Lucro Ajustado] - [Lucro Base]\". Qual é a abordagem correta para construir uma tabela de sensibilidade 2D que exiba o \"Δ Lucro\" para cada combinação de variação de preço e volume?",
+    "text": "Você tem parâmetros What-If de Var Preço% e Var Volume%, e medida Δ Lucro = [Lucro Ajustado]-[Lucro Base]. Como construir uma tabela de sensibilidade 2D exibindo Δ Lucro por combinação de preço e volume?",
     "options": [
-      "Usar o visual Matriz com o parâmetro de preço nas linhas e o parâmetro de volume nas colunas, exibindo a medida \"Δ Lucro\" nos valores. Adicionar formatação condicional por gradiente de cor para criar um mapa de calor de sensibilidade.",
-      "Tabelas de sensibilidade 2D no Power BI requerem visuais customizados — o visual Matriz nativo não suporta dois parâmetros What-If simultaneamente como linha e coluna; é necessário instalar o visual 'Sensitivity Analysis Table' do AppSource.",
-      "Parâmetros What-If no Power BI são independentes entre si — não é possível usar dois parâmetros diferentes nas dimensões de linha e coluna de uma mesma Matriz simultaneamente; cada Matriz suporta apenas um parâmetro What-If que pode ser colocado nas linhas OU nas colunas, mas não em ambos ao mesmo tempo.",
-      "Análise de sensibilidade com dois parâmetros no Power BI gera todas as combinações possíveis automaticamente criando um produto cartesiano dos valores dos dois parâmetros — o analista não precisa configurar a Matriz manualmente; ao adicionar dois slicers de What-If ao relatório, o Power BI detecta automaticamente que são para análise de sensibilidade e cria a tabela 2D."
+      "Usar Matriz com parâmetro preço nas linhas e volume nas colunas, exibindo \"Δ Lucro\" nos valores; formatação condicional por gradiente para mapa de calor.",
+      "Exigiria visual customizado, pois a Matriz nativa não suportaria dois parâmetros simultaneamente como linha e coluna.",
+      "Parâmetros What-If seriam independentes; uma Matriz só suportaria um parâmetro, em linha OU coluna, não ambos.",
+      "Geraria automaticamente o produto cartesiano dos dois parâmetros, sem precisar configurar a Matriz manualmente."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -6853,10 +6853,10 @@ export const questions = [
     "id": "q275_pl300",
     "text": "Como aplicar princípios de storytelling com dados em um relatório Power BI para conduzir o usuário a insights específicos de forma estruturada?",
     "options": [
-      "Aplicar estrutura narrativa: 1) Página de contexto/situação — mostrar o estado atual com KPIs de alto nível; 2) Página de complicação — destacar o problema ou anomalia identificada com visual de destaque (ex: ranking com anomalia em vermelho); 3) Página de análise — detalhar as causas com drill-down e decomposição; 4) Página de recomendação/próximos passos — resumir insights com narrativa inteligente e ações sugeridas; usar Progressive Disclosure navegando do resumo ao detalhe via drill-through.",
-      "Storytelling em Power BI é implementado exclusivamente via Smart Narrative visual que gera automaticamente toda a narrativa baseada nos dados — o desenvolvedor não precisa estruturar páginas ou criar fluxo narrativo; o Smart Narrative cria a história completa com contexto, problema, análise e recomendações sem intervenção manual de design.",
-      "A estrutura narrativa em relatórios Power BI deve seguir obrigatoriamente o modelo BLUF (Bottom Line Up Front) colocando as conclusões na primeira página e os dados detalhados nas páginas subsequentes — qualquer outra estrutura narrativa causa confusão pois usuários executivos não têm tempo para explorar múltiplas páginas antes de ver as conclusões.",
-      "Relatórios Power BI são ferramentas analíticas, não narrativas — tentar aplicar storytelling em relatórios interativos é um antipadrão que conflita com a natureza exploratória do Power BI; para comunicação narrativa, exportar os insights para PowerPoint e criar apresentação linear onde o storytelling é mais adequado do que em relatórios interativos."
+      "Estrutura narrativa: contexto (KPIs de alto nível) → complicação (problema destacado) → análise (drill-down) → recomendação (narrativa + ações);",
+      "Seria implementado exclusivamente via Smart Narrative, que geraria toda a história automaticamente sem estruturação manual.",
+      "Deveria seguir obrigatoriamente o modelo BLUF, com conclusões na primeira página, sem outra estrutura aceitável.",
+      "Relatórios interativos não seriam adequados para storytelling; narrativa exigiria exportar para PowerPoint."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6878,10 +6878,10 @@ export const questions = [
     "id": "q276_pl300",
     "text": "Como implementar uma estratégia abrangente de governança de dados no Power BI que equilibre controle centralizado com agilidade de autoatendimento para analistas?",
     "options": [
-      "Framework de governança em camadas: 1) Centro de Excelência (CoE) define padrões (temas, nomenclatura, medidas certificadas); 2) Datasets certificados como \"fonte única de verdade\" acessíveis via Live Connection; 3) Workspaces por domínio com roles adequados; 4) Endorsement (Certified/Promoted) para curadoria de conteúdo; 5) Deployment Pipelines para controle de promoção Dev→Prod; 6) Sensitivity Labels para classificação de dados sensíveis; 7) Usage Metrics e Activity Log para monitoramento de adoção; 8) Treinamento e onboarding estruturado para novos analistas.",
-      "Governança de dados no Power BI é implementada exclusivamente via restrições técnicas — desabilitar todas as funcionalidades de autoatendimento no Admin Portal (bloquear criação de workspaces, desabilitar export, restringir Publish to Web) e centralizar toda a criação de relatórios no departamento de TI; a liberdade para analistas criarem seus próprios relatórios é incompatível com governança de dados adequada.",
-      "A estratégia de governança mais eficaz para Power BI é migrar todo o conteúdo para o Microsoft Fabric imediatamente — o Fabric tem recursos de governança nativos superiores ao Power BI Service que tornam obsoletas as práticas de governança do Power BI; organizações que não migram para Fabric até 2025 perderão o suporte a recursos de governança no Power BI Service clássico.",
-      "Governança de dados no Power BI é responsabilidade exclusiva do administrador do tenant — analistas e proprietários de relatórios não têm papel na governança; o administrador define todas as políticas e as implementa via Admin Portal sem necessidade de envolver os criadores de conteúdo no processo de governança."
+      "Framework em camadas: CoE define padrões; datasets certificados como fonte única; workspaces por domínio; Endorsement; Deployment Pipelines;",
+      "Seria via restrições técnicas puras — bloquear autoatendimento e centralizar tudo na TI, sem liberdade para analistas.",
+      "Seria migrar tudo para o Fabric imediatamente, tornando obsoletas as práticas atuais de governança.",
+      "Seria responsabilidade exclusiva do admin do tenant, sem papel para analistas/proprietários de relatórios."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -6903,10 +6903,10 @@ export const questions = [
     "id": "q277_pl300",
     "text": "No Power Query, qual é a principal finalidade e o uso correto da função `List.Accumulate` para implementar transformações que exigem a manutenção de um estado acumulado entre as iterações de uma lista?",
     "options": [
-      "List.Accumulate(lista, sementeInicial, (estado, elemento) => novoEstado) acumula um resultado iterando sobre a lista — cada iteração recebe o estado atual e o elemento atual, retornando o novo estado; ex: List.Accumulate({1,2,3,4,5}, 0, (soma, n) => soma + n) retorna 15; para transformações complexas: calcular total acumulado com desconto progressivo, implementar lógica de estoque FIFO, ou processar registros dependentes da ordem.",
-      "List.Accumulate é equivalente a List.Transform — ambas iteram sobre uma lista aplicando uma função a cada elemento; a diferença é apenas de nomenclatura onde Accumulate é o nome histórico e Transform é o nome moderno; usar List.Transform em todos os casos novos pois Accumulate está marcado como deprecated na versão atual do M.",
-      "List.Accumulate no Power Query só pode ser usado com listas numéricas — para listas de texto, records ou tabelas, o acumulador não consegue manter o estado corretamente e retorna erro de tipo; para transformações que requerem estado em listas não numéricas, deve-se usar List.Transform com índice.",
-      "List.Accumulate é uma função de redução (fold) que sempre retorna um único valor escalar — não pode ser usada para gerar listas ou tabelas como resultado; para gerar listas com estado acumulado entre elementos, usar List.Generate que foi projetada para produzir coleções como resultado da iteração."
+      "List.Accumulate(lista,semente,(estado,elem)=>novoEstado) acumula iterando, mantendo estado entre iterações; ex: soma 1-5 retorna 15;",
+      "Seria equivalente a List.Transform, diferindo só no nome; Accumulate estaria deprecated, devendo usar Transform sempre.",
+      "Só funcionaria com listas numéricas; texto/records/tabelas dariam erro de tipo, exigindo List.Transform com índice.",
+      "Sempre retornaria um escalar (fold), nunca lista/tabela; gerar coleções exigiria List.Generate em vez dela."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -6926,12 +6926,12 @@ export const questions = [
   },
   {
     "id": "q278_pl300",
-    "text": "Você está desenvolvendo um modelo de dados no Power BI para analisar a produtividade de equipes, utilizando as seguintes medidas DAX:\n\n```\nOutput por Hora = DIVIDE( [Total Output], SUM(Timesheet[HorasTrabalhadas]))\nÍndice Produtividade = DIVIDE( [Output por Hora], [Benchmark Output por Hora])\nHoras Produtivas % = DIVIDE( SUM(Timesheet[HorasProdutivas]), SUM(Timesheet[HorasTrabalhadas]))\nEficiência vs Meta = [Output por Hora] - CALCULATE([Benchmark Output por Hora], ALL(DimEquipe))\n```\n\nConsiderando as boas práticas de DAX e a funcionalidade dessas medidas para criar um conjunto de KPIs de produtividade com comparação a benchmarks, qual das seguintes afirmações está CORRETA?",
+    "text": "Para KPIs de produtividade, foram propostas:\n```\nOutput por Hora = DIVIDE([Total Output],SUM(Timesheet[HorasTrabalhadas]))\nEficiência vs Meta = [Output por Hora] - CALCULATE([Benchmark Output por Hora],ALL(DimEquipe))\n```\nQual afirmação sobre boas práticas DAX está correta?",
     "options": [
-      "A função DIVIDE é sempre a melhor prática para cálculos de divisão, como Output por Hora, pois ela trata automaticamente a divisão por zero, prevenindo erros e garantindo a robustez do modelo.",
-      "O uso do operador de divisão direta (/) em Output por Hora = [Total Output] / SUM(Timesheet[HorasTrabalhadas]) é mais eficiente que DIVIDE, sendo preferível para métricas onde o denominador sempre existirá, pois não tem o overhead de verificação de divisão por zero.",
-      "Para calcular a produtividade de equipes, AVERAGEX(DimFuncionario, DIVIDE([Total Output], SUM(Timesheet[HorasTrabalhadas]))) seria mais preciso que DIVIDE([Total Output], SUM(Timesheet[HorasTrabalhadas])), pois considera a produtividade individual de cada funcionário antes de agregar.",
-      "A medida Eficiência vs Meta pode gerar dependências circulares, pois [Benchmark Output por Hora] é uma medida que referencia outras medidas; benchmarks devem ser valores estáticos em tabelas de parâmetros para evitar esses problemas."
+      "DIVIDE seria sempre a melhor prática, pois trataria automaticamente divisão por zero, garantindo robustez.",
+      "O operador (/) seria mais eficiente que DIVIDE quando o denominador sempre existir, sem overhead de verificação.",
+      "AVERAGEX(DimFuncionario,DIVIDE(...)) seria mais preciso, considerando produtividade individual antes de agregar.",
+      "Eficiência vs Meta poderia gerar dependência circular, pois Benchmark referenciaria outras medidas; benchmarks deveriam ser estáticos."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6954,9 +6954,9 @@ export const questions = [
     "text": "Como os componentes do Microsoft Loop integram com Power BI para colaboração em torno de dados e insights?",
     "options": [
       "Microsoft Loop permite incorporar componentes interativos em documentos e chats Teams — relatórios Power BI podem ser incorporados em páginas Loop via link do relatório que cria um componente interativo; usuários podem visualizar e interagir com filtros do relatório diretamente no Loop sem sair do contexto de colaboração; os dados refletem o estado atual do relatório publicado no Service com a mesma autenticação e permissões aplicadas.",
-      "Microsoft Loop é uma plataforma de armazenamento de dados concorrente ao OneLake — empresas devem escolher entre usar Loop (Microsoft) ou OneLake (Fabric) para centralizar dados; relatórios Power BI conectados ao Loop usam o storage do Loop em vez do OneLake, tornando as duas plataformas incompatíveis no mesmo tenant.",
-      "Componentes Power BI no Loop são estáticos — capturam um snapshot do relatório no momento em que o link é adicionado à página Loop; para atualizar o componente com dados mais recentes é necessário remover e readicionar o link do relatório; não há atualização automática de componentes Power BI em páginas Loop.",
-      "A integração Loop + Power BI requer que o relatório esteja publicado em um workspace Premium — relatórios em workspaces Pro não podem ser incorporados em páginas Loop pois o protocolo de embedding do Loop usa APIs exclusivas do Power BI Premium que não estão disponíveis para workspaces Pro."
+      "Loop seria plataforma de storage concorrente ao OneLake, tornando-os incompatíveis no mesmo tenant.",
+      "Componentes Power BI no Loop seriam estáticos, exigindo remover/readicionar o link para atualizar.",
+      "Exigiria workspace Premium; Pro não poderia ser incorporado por usar APIs exclusivas do Premium."
     ],
     "correctAnswer": 0,
     "difficulty": "iniciante",
@@ -6978,10 +6978,10 @@ export const questions = [
     "id": "q280_pl300",
     "text": "No Power BI Service, como as credenciais de fontes de dados devem ser gerenciadas de forma segura para datasets publicados, especialmente quando múltiplos datasets utilizam a mesma fonte de dados?",
     "options": [
-      "No Power BI Service, cada dataset tem suas próprias credenciais em Dataset > Settings > Data Source Credentials; ao atualizar credenciais em um dataset, outros datasets que usam a mesma fonte NÃO são atualizados automaticamente — cada dataset mantém credenciais independentes; para gerenciamento centralizado: usar gateway de dados on-premises onde as credenciais são configuradas uma vez no gateway e compartilhadas por múltiplos datasets; para cloud, considerar Service Principal com segredos gerenciados no Azure Key Vault.",
-      "Credenciais no Power BI Service são compartilhadas automaticamente entre datasets que usam a mesma fonte de dados — ao atualizar a senha de uma fonte em qualquer dataset, todos os demais datasets que usam a mesma fonte são atualizados automaticamente pelo Service; isso garante consistência sem necessidade de atualizar dataset por dataset manualmente.",
-      "Para segurança máxima das credenciais no Power BI Service, usar sempre autenticação anônima — a autenticação com usuário e senha armazena as credenciais em texto claro no banco de dados do Power BI Service; autenticação anônima evita o armazenamento de credenciais sensíveis no Service pois não há informações de autenticação a armazenar.",
-      "Credenciais no Power BI Service expiram automaticamente a cada 90 dias — o Service envia email de alerta 14 dias antes da expiração e o dataset entra em estado de \"Credenciais expiradas\" após o prazo; o proprietário do dataset deve renovar manualmente as credenciais a cada 90 dias para manter o refresh funcionando; não há mecanismo de renovação automática de credenciais no Power BI Service."
+      "Cada dataset tem credenciais próprias (Dataset > Settings); atualizar uma não atualiza outras;",
+      "Seriam compartilhadas automaticamente entre datasets da mesma fonte, atualizando todos ao mudar uma senha.",
+      "Máxima segurança seria autenticação anônima, pois usuário/senha armazenaria credenciais em texto claro.",
+      "Expirariam automaticamente a cada 90 dias, exigindo renovação manual sem mecanismo automático."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -7003,10 +7003,10 @@ export const questions = [
     "id": "q281_pl300",
     "text": "Qual das seguintes abordagens descreve as melhores práticas para depurar e otimizar código M complexo no Editor Avançado do Power Query?",
     "options": [
-      "Utilizar técnicas manuais como adicionar passos intermediários com = PreviousStep para inspecionar dados, usar #table para testes inline, empregar comentários (// e /* */), usar try ... otherwise para tratamento de erros, dividir expressões com let ... in e verificar o Query Folding via View Native Query.",
-      "Aproveitar o depurador (debugger) integrado do Advanced Editor, que permite definir breakpoints em qualquer linha do código M e inspecionar o estado das variáveis let em tempo de execução.",
-      "Evitar o uso de comentários na linguagem M, pois eles geram erros de sintaxe; em vez disso, documentar transformações complexas usando o campo 'Description' nos 'Applied Steps'.",
-      "Considerar o código M no Advanced Editor como imutável e somente leitura, realizando todas as alterações e otimizações exclusivamente através da interface visual dos 'Applied Steps' para evitar corromper a query."
+      "Passos intermediários com PreviousStep para inspecionar; #table para testes inline; comentários (// e /* */); try...otherwise; let...in;",
+      "Usar o debugger integrado do Advanced Editor, com breakpoints em qualquer linha e inspeção de variáveis let em runtime.",
+      "Evitar comentários em M, pois gerariam erro de sintaxe; documentar via campo 'Description' nos Applied Steps.",
+      "Tratar o código M como imutável, fazendo alterações só via interface visual dos Applied Steps."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -7026,12 +7026,12 @@ export const questions = [
   },
   {
     "id": "q282_pl300",
-    "text": "Você está desenvolvendo um relatório de pipeline de vendas no Power BI e criou as seguintes medidas DAX para calcular o pipeline ponderado, o forecast de 30 dias e a cobertura do pipeline:\n\n```dax\nPipeline Ponderado = SUMX( Oportunidades, Oportunidades[ValorEstimado] * RELATED(DimFase[ProbabilidadeFechamento]))\n\nForecast 30 Dias = CALCULATE( [Pipeline Ponderado], FILTER( Oportunidades, Oportunidades[DataFechamentoPrevista] <= TODAY() + 30 AND Oportunidades[Status] = \"Em Aberto\"))\n\nCobertura Pipeline = DIVIDE( [Pipeline Ponderado], [Meta Período])\n```\n\nCom base nestas definições e no comportamento do DAX, qual das seguintes afirmações sobre as medidas ou seus componentes é VERDADEIRA?",
+    "text": "Para pipeline de vendas:\n```dax\nPipeline Ponderado = SUMX(Oportunidades,Oportunidades[ValorEstimado]*RELATED(DimFase[ProbabilidadeFechamento]))\nForecast 30 Dias = CALCULATE([Pipeline Ponderado],FILTER(Oportunidades,DataFechamentoPrevista<=TODAY()+30 && Status=\"Em Aberto\"))\n```\nQual afirmação é VERDADEIRA?",
     "options": [
-      "A medida Pipeline Ponderado utiliza corretamente SUMX para calcular o valor esperado ponderado, iterando linha a linha e multiplicando o valor estimado pela probabilidade de fechamento de cada oportunidade.",
-      "Pipeline ponderado deve usar AVERAGE em vez de SUMX para calcular o valor esperado — AVERAGE(Oportunidades[ValorEstimado]) * AVERAGE(DimFase[Probabilidade]) calcula a média ponderada correta; SUMX multiplica linha a linha criando distorção quando oportunidades têm valores muito diferentes entre si.",
-      "TODAY() em medidas DAX retorna a data do último refresh do dataset — se o dataset foi atualizado ontem, TODAY() retorna a data de ontem; para filtros de \"próximos 30 dias\" baseados na data atual de visualização, usar parâmetro What-If com a data atual como valor padrão em vez de TODAY() que não é dinâmico.",
-      "RELATED em SUMX não funciona quando a tabela iterada (Oportunidades) e a tabela relacionada (DimFase) têm relacionamento Many-to-Many — o RELATED retorna BLANK para relacionamentos M:M; usar LOOKUPVALUE como alternativa que funciona com qualquer tipo de relacionamento incluindo M:M."
+      "Pipeline Ponderado usa corretamente SUMX, iterando linha a linha e multiplicando valor estimado pela probabilidade de cada oportunidade.",
+      "Deveria usar AVERAGE em vez de SUMX; SUMX criaria distorção com oportunidades de valores muito diferentes.",
+      "TODAY() retornaria a data do último refresh, não a atual; \"próximos 30 dias\" exigiria parâmetro What-If em vez de TODAY().",
+      "RELATED não funcionaria em relacionamentos M:N, retornando BLANK; exigiria LOOKUPVALUE como alternativa."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -7054,9 +7054,9 @@ export const questions = [
     "text": "Qual é a abordagem mais eficaz para automatizar a publicação de relatórios Power BI no Power BI Service, utilizando a API REST e PowerShell, com o objetivo de implementar um pipeline de Integração Contínua/Entrega Contínua (CI/CD) robusto?",
     "options": [
       "Via PowerShell com módulo MicrosoftPowerBIMgmt: Connect-PowerBIServiceAccount -ServicePrincipal; $workspace = Get-PowerBIWorkspace -Name \"Producao\"; New-PowerBIReport -Path \"relatorio.pbix\" -WorkspaceId $workspace.Id -ConflictAction CreateOrOverwrite; para CI/CD completo: Azure DevOps Pipeline com stage de build (validação), stage de deploy Dev (publicar no workspace Dev), stage de deploy Test (Deployment Pipeline API), e stage de deploy Prod (aprovação manual + Deployment Pipeline API).",
-      "A publicação automática de relatórios Power BI via API só é possível para workspaces Premium — workspaces Pro não têm o endpoint de upload de .pbix disponível na API REST; para automação em workspaces Pro, usar o método de sincronização via OneDrive que detecta alterações no arquivo .pbix e publica automaticamente sem necessidade de API ou PowerShell.",
-      "O módulo PowerShell MicrosoftPowerBIMgmt não suporta autenticação via Service Principal — apenas autenticação interativa com credenciais de usuário é suportada no cmdlet Connect-PowerBIServiceAccount; para automação não interativa em pipelines CI/CD, usar diretamente a API REST do Power BI com tokens OAuth obtidos via MSAL (Microsoft Authentication Library).",
-      "Publicar um arquivo .pbix via API REST do Power BI substitui apenas o relatório (visuais e layout) — o dataset (modelo de dados, medidas DAX, relacionamentos) nunca é atualizado via publicação de API; para atualizar o modelo de dados em produção é necessário usar o XMLA endpoint para modificar o modelo diretamente sem republicar o .pbix completo."
+      "Publicação via API só seria possível em Premium; Pro exigiria sincronização via OneDrive sem API/PowerShell.",
+      "O módulo não suportaria Service Principal, só autenticação interativa; CI/CD exigiria API REST direta com MSAL.",
+      "Publicar .pbix substituiria só o relatório, nunca o dataset; atualizar o modelo exigiria XMLA endpoint."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -7079,9 +7079,9 @@ export const questions = [
     "text": "Como conectar o Power BI Desktop ao Google BigQuery e quais são as considerações de custo e performance para consultas de grandes volumes?",
     "options": [
       "A conexão é feita via 'Obter Dados' > 'Banco de Dados' > 'Google BigQuery', autenticando com conta Google (OAuth) ou Service Account (JSON key). Suporta modos Import e DirectQuery. Para otimização de custo e performance, o BigQuery cobra por bytes processados; filtros no Power Query (query folding) e o uso de partições/clustering no BigQuery reduzem drasticamente o volume de dados escaneados e o custo.",
-      "O conector Google BigQuery no Power BI suporta apenas o modo DirectQuery, pois o Google restringe a exportação em lote de dados para sistemas externos. Para análises offline, é necessário exportar os dados para o Google Cloud Storage e conectar o Power BI a ele.",
-      "A autenticação para o BigQuery no Power BI não suporta Service Account, aceitando apenas contas pessoais Google. Para automação de refresh, deve-se criar uma conta Google dedicada e usar suas credenciais no gateway de dados.",
-      "O BigQuery no Power BI sempre realiza um Full Table Scan, independentemente dos filtros aplicados no Power Query, pois o query folding não funciona devido à incompatibilidade do dialeto SQL. Para otimizar custos, é preciso criar views materializadas no BigQuery."
+      "Suportaria só DirectQuery, pois o Google restringiria exportação em lote; offline exigiria Google Cloud Storage.",
+      "Não suportaria Service Account, só contas pessoais; automação exigiria conta dedicada no gateway.",
+      "Sempre faria Full Table Scan, pois o query folding não funcionaria por incompatibilidade de dialeto SQL."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -7101,12 +7101,12 @@ export const questions = [
   },
   {
     "id": "q285_pl300",
-    "text": "Considerando as medidas DAX fornecidas para analisar o tempo de ciclo de processos (ex: tempo médio de aprovação de pedidos desde a criação até a conclusão), como `Tempo Ciclo Dias = AVERAGEX( Pedidos, DATEDIFF( Pedidos[DataCriacao], Pedidos[DataConclusao], DAY))`, `Tempo Ciclo Mediana = MEDIANX( Pedidos, DATEDIFF( Pedidos[DataCriacao], Pedidos[DataConclusao], DAY))` e `% Dentro do SLA = DIVIDE( COUNTROWS( FILTER(Pedidos, DATEDIFF(Pedidos[DataCriacao], Pedidos[DataConclusao], DAY) <= MAX(DimSLA[DiasMaximos]))), COUNTROWS(Pedidos))`, qual das seguintes afirmações é a mais precisa sobre as melhores práticas ou o comportamento dessas funções?",
+    "text": "Para tempo de ciclo: `AVERAGEX(Pedidos,DATEDIFF(DataCriacao,DataConclusao,DAY))` e `MEDIANX(Pedidos,DATEDIFF(...))`. Qual afirmação é mais precisa sobre essas funções?",
     "options": [
-      "Usar MEDIANX para tempo de ciclo é frequentemente mais representativo do que AVERAGEX, pois a mediana é menos sensível a outliers (pedidos com tempo de ciclo muito longo que podem distorcer a média).",
-      "A medida `Tempo Ciclo = AVERAGE(DATEDIFF(Pedidos[DataCriacao], Pedidos[DataConclusao], DAY))` é uma forma mais direta e eficiente de calcular a média dos tempos de ciclo, pois AVERAGE aceita DATEDIFF como argumento diretamente, sem a necessidade de AVERAGEX.",
-      "A função DATEDIFF no DAX sempre retorna valores positivos; se DataConclusao for anterior a DataCriacao (indicando dados incorretos), DATEDIFF automaticamente retorna o valor absoluto da diferença, eliminando a necessidade de tratamento de valores negativos.",
-      "MEDIANX não está disponível no DAX do Power BI Desktop; para calcular a mediana do tempo de ciclo, deve-se usar PERCENTILX.INC com o percentil 0.5 como alternativa equivalente."
+      "MEDIANX seria frequentemente mais representativo que AVERAGEX, pois a mediana é menos sensível a outliers de tempo de ciclo.",
+      "AVERAGE(DATEDIFF(...)) seria mais direto, pois AVERAGE aceitaria DATEDIFF diretamente, sem precisar de AVERAGEX.",
+      "DATEDIFF sempre retornaria valores positivos, convertendo automaticamente datas invertidas para valor absoluto.",
+      "MEDIANX não existiria no DAX; a mediana exigiria PERCENTILX.INC com percentil 0.5 como alternativa."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -7128,10 +7128,10 @@ export const questions = [
     "id": "q286_pl300",
     "text": "Quais são as melhores práticas para criar um dashboard executivo no Power BI que comunique KPIs estratégicos de forma eficiente para a alta liderança?",
     "options": [
-      "Práticas essenciais: 1) Máximo 5-7 KPIs por tela com hierarquia clara (mais importante maior e no topo); 2) Cada KPI com: valor atual, comparação com meta, tendência temporal (sparkline) e variação YoY; 3) Cores com significado consistente (verde=atingido, amarelo=em risco, vermelho=abaixo); 4) Títulos que afirmam o insight não apenas descrevem o dado (\"Vendas 15% acima da meta\" em vez de \"Vendas\"); 5) Mobile layout configurado; 6) Refresh automático com timestamp visível; 7) Drill-through para detalhamento sem poluir a visão executiva.",
-      "Dashboards executivos no Power BI devem ter o máximo de informações possível em uma única tela para que executivos não precisem navegar entre páginas — usar fonte tamanho 8 para caber mais dados e aproveitar toda a área disponível do canvas; executivos valorizam completude de informação sobre legibilidade pois têm capacidade analítica avançada.",
-      "A melhor prática para dashboards executivos é usar exclusivamente visuais de Tabela com dados detalhados — executivos precisam de números exatos para tomar decisões, não representações visuais aproximadas como gráficos; visuais gráficos são adequados apenas para apresentações onde a precisão não é crítica.",
-      "Dashboards executivos devem ser criados no Power BI Service como Dashboards (não relatórios) — os relatórios do Power BI não são adequados para uso executivo pois têm interatividade excessiva que confunde usuários não técnicos; Dashboards do Service têm interface simplificada adequada para alta liderança enquanto relatórios são para analistas de dados."
+      "Máximo 5-7 KPIs com hierarquia clara; cada um com valor/meta/tendência/YoY; cores consistentes; títulos que afirmam o insight; mobile layout;",
+      "Deveria ter o máximo de informação numa tela, com fonte tamanho 8, priorizando completude sobre legibilidade.",
+      "A melhor prática seria usar exclusivamente Tabelas com dados detalhados, evitando gráficos aproximados.",
+      "Deveriam ser criados como Dashboards (não relatórios), pois relatórios teriam interatividade excessiva para executivos."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -7153,10 +7153,10 @@ export const questions = [
     "id": "q287_pl300",
     "text": "Como garantir que dados sensíveis sejam protegidos quando relatórios Power BI são exportados para formatos como PDF, Excel ou PowerPoint por usuários autorizados?",
     "options": [
-      "Aplicar Sensitivity Labels (Rótulos de Sensibilidade) nos datasets e relatórios, garantindo que o label seja propagado ao arquivo exportado com as políticas de proteção configuradas (criptografia, marca d'água, restrições de acesso).",
-      "Configurar políticas de Prevenção de Perda de Dados (DLP) no Microsoft Purview para Power BI, que controlam e bloqueiam a exportação de dados sensíveis antes que ocorra.",
-      "A proteção de dados em arquivos exportados do Power BI é responsabilidade exclusiva do usuário, pois o Power BI Service não possui mecanismos para aplicar controles de proteção em arquivos após a exportação.",
-      "Desabilitar completamente todas as opções de exportação no Admin Portal do Power BI para todos os usuários, forçando a solicitação formal de dados ao departamento de TI."
+      "Aplicar Sensitivity Labels nos datasets/relatórios, propagando ao arquivo exportado com proteções (criptografia, marca d'água, restrições).",
+      "Configurar políticas de DLP no Microsoft Purview, controlando e bloqueando a exportação de dados sensíveis antes que ocorra.",
+      "Seria responsabilidade exclusiva do usuário, pois o Service não teria mecanismos de proteção pós-exportação.",
+      "Desabilitar completamente a exportação para todos, exigindo solicitação formal à TI."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -7179,9 +7179,9 @@ export const questions = [
     "text": "Como criar um modelo de dados no Power BI que consolida dados de três fontes diferentes (SQL Server, SharePoint e Excel) garantindo integridade referencial entre as tabelas?",
     "options": [
       "Conectar cada fonte separadamente no Power Query, padronizar tipos de dados e formatos das chaves de junção (ex: CustomerID como Integer em todas), criar tabelas de dimensão a partir da fonte mais confiável e usar Merge Queries no Power Query para consolidar e garantir a integridade antes de criar relacionamentos no modelo.",
-      "Consolidar dados de múltiplas fontes no Power BI exige que todas as fontes estejam no mesmo servidor ou provedor de nuvem, pois o Power BI não consegue criar relacionamentos entre tabelas de fontes heterogêneas; a solução é usar Azure Data Factory para centralizar os dados em um único Azure SQL Database.",
-      "A integridade referencial entre tabelas de fontes diferentes no Power BI é garantida automaticamente pelo mecanismo VertiPaq, que valida se todas as chaves da tabela filho existem na tabela pai e rejeita o relacionamento se houver chaves órfãs.",
-      "Para modelos com múltiplas fontes, é mandatório usar sempre o modo DirectQuery em todas as tabelas, pois misturar Import e DirectQuery (modo Composite) causa inconsistências nos relacionamentos devido a consultas em momentos diferentes."
+      "Exigiria todas as fontes no mesmo servidor/nuvem; a solução seria centralizar via Azure Data Factory num único Azure SQL.",
+      "Seria garantida automaticamente pelo VertiPaq, validando chaves filho na tabela pai e rejeitando órfãs.",
+      "Seria mandatório usar DirectQuery em tudo, pois misturar com Import (Composite) causaria inconsistências."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -7201,12 +7201,12 @@ export const questions = [
   },
   {
     "id": "q289_pl300",
-    "text": "Desenvolver dashboard qualidade dados Power BI, utilizando medidas DAX para monitorar a completude, unicidade e consistência dos dados, conforme os exemplos abaixo:\n\n```\n% Completude [Coluna] = DIVIDE(\n    COUNTROWS( FILTER(Tabela, NOT(ISBLANK(Tabela[Coluna])))),\n    COUNTROWS(Tabela)\n)\n\n% Unicidade ClienteID = DIVIDE(\n    DISTINCTCOUNT(Clientes[ClienteID]),\n    COUNTROWS(Clientes)\n)\n\n% Registros Válidos = DIVIDE(\n    COUNTROWS( FILTER(Vendas, Vendas[Valor] > 0 AND NOT(ISBLANK(Vendas[ClienteID])) AND Vendas[DataVenda] <= TODAY())),\n    COUNTROWS(Vendas)\n)\n```\n\nQual das seguintes afirmações sobre o uso dessas medidas DAX para monitoramento da qualidade de dados é correta?",
+    "text": "Para qualidade de dados:\n```\n% Completude = DIVIDE(COUNTROWS(FILTER(Tabela,NOT(ISBLANK(Tabela[Coluna])))),COUNTROWS(Tabela))\n% Unicidade = DIVIDE(DISTINCTCOUNT(Clientes[ClienteID]),COUNTROWS(Clientes))\n```\nQual afirmação sobre essas medidas DAX é correta?",
     "options": [
-      "Medidas de qualidade de dados em DAX recalculam automaticamente com cada refresh, refletindo a qualidade atual dos dados. Para monitorar o histórico de qualidade ao longo do tempo (ex: verificar se a completude melhorou nos últimos 6 meses), é necessário criar uma tabela de auditoria separada no Power Query que capture um snapshot dessas métricas a cada refresh e as armazene historicamente.",
-      "Medidas de qualidade de dados no Power BI são calculadas exclusivamente via Data Profiling do Power Query; Column Quality, Column Distribution e Column Profile fornecem todas as métricas de completude, unicidade e validade, tornando as medidas DAX redundantes para esse propósito.",
-      "A fórmula COUNTROWS(FILTER(Tabela, NOT(ISBLANK(Tabela[Coluna])))) é a forma mais eficiente de calcular a completude de uma coluna em DAX, pois o FILTER permite uma análise granular de cada linha, superando a performance de COUNTBLANK.",
-      "Medidas DAX de qualidade de dados são ideais para identificar e corrigir problemas de dados diretamente na fonte, pois o Power BI oferece funcionalidades de escrita de volta (write-back) que permitem a atualização dos sistemas de origem com base nos resultados das análises de qualidade."
+      "Recalculariam automaticamente a cada refresh; monitorar histórico exigiria tabela de auditoria capturando snapshots no Power Query.",
+      "Seriam calculadas exclusivamente via Data Profiling do Power Query, tornando medidas DAX redundantes.",
+      "COUNTROWS(FILTER(...NOT(ISBLANK...))) seria a forma mais eficiente, superando a performance de COUNTBLANK.",
+      "Seriam ideais para corrigir dados na fonte, pois o Power BI ofereceria write-back para os sistemas de origem."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -7228,10 +7228,10 @@ export const questions = [
     "id": "q290_pl300",
     "text": "Como usar o Power BI para criar relatórios de acompanhamento de projetos usando dados do Azure DevOps e quais conectores estão disponíveis para essa finalidade?",
     "options": [
-      "O Power BI possui um conector nativo para Azure DevOps (disponível em Obter Dados > Serviços Online > Azure DevOps) que se conecta via OData Feed à API Analytics do Azure DevOps. Ele permite acessar Work Items (tarefas, bugs, histórias), Pipelines (builds, releases), Test Plans e métricas de boards. Os dados são acessíveis via `https://analytics.dev.azure.com/{organizacao}/{projeto}/_odata/v4.0-preview/` e o conector suporta tanto o modo Import quanto DirectQuery. É crucial aplicar filtros de período e área no Power Query para gerenciar o volume de work items e evitar timeouts.",
-      "O conector Azure DevOps no Power BI acessa apenas dados de repositórios Git — commits, pull requests e branches; para dados de trabalho como tasks e bugs é necessário usar a API REST do Azure DevOps via conector Web com autenticação por Personal Access Token (PAT) pois os dados de work items não fazem parte da API Analytics do DevOps.",
-      "Azure DevOps no Power BI usa sempre modo DirectQuery — os dados de work items são consultados em tempo real a cada interação do usuário; modo Import não está disponível pois a API Analytics do DevOps não suporta exportação em lote de dados históricos; para análises offline, exportar os dados para CSV via DevOps e importar separadamente no Power BI.",
-      "O conector Azure DevOps requer licença Azure DevOps Services (cloud) — Azure DevOps Server (on-premises) não tem a API Analytics disponível e não pode ser conectado diretamente ao Power BI; para Azure DevOps Server on-premises, usar SQL Server Reporting Services (SSRS) que vem integrado ao DevOps Server como alternativa ao Power BI."
+      "Conector nativo (Obter Dados > Azure DevOps) via OData à API Analytics; acessa Work Items, Pipelines, Test Plans; suporta Import/DirectQuery;",
+      "Acessaria só dados de Git (commits, PRs); work items exigiriam API REST via conector Web com PAT.",
+      "Usaria sempre DirectQuery, pois a API Analytics não suportaria exportação em lote de histórico.",
+      "Exigiria Azure DevOps Services cloud; Server on-premises não teria API Analytics, exigindo SSRS."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -7253,10 +7253,10 @@ export const questions = [
     "id": "q291_pl300",
     "text": "Você tem uma coluna em seu banco de dados SQL Server que armazena dados JSON como texto. No Power Query, como você processaria essa coluna para extrair campos específicos do JSON?",
     "options": [
-      "Para processar uma coluna de texto contendo JSON em cada célula, adicione uma Coluna Personalizada com a fórmula `= Json.Document([NomeDaColunaJSON])`. Esta função converterá cada string JSON em um Record ou List do Power Query M. Em seguida, você pode expandir o Record clicando no ícone de expansão para selecionar os campos desejados, ou extrair um campo específico diretamente usando `= Json.Document([NomeDaColunaJSON])[NomeDoCampo]`. Para tratar possíveis erros de parsing, utilize a estrutura `= try Json.Document([NomeDaColunaJSON])[NomeDoCampo] otherwise null`.",
-      "JSON armazenado como texto em SQL Server deve ser processado no próprio banco de dados via query SQL, utilizando `JSON_VALUE([coluna], '$.campo')` em uma query nativa do conector SQL Server. Tentar processar JSON diretamente no Power Query é menos eficiente, pois o Power Query não possui otimização para parsing de JSON em grande volume, sendo mais adequado extrair os campos JSON na fonte antes de carregar.",
-      "A função `Json.Document` no Power Query é projetada apenas para processar arquivos JSON completos e não pode ser utilizada para fragmentos JSON armazenados como texto em colunas de banco de dados. Para JSON em colunas, é necessário usar `Text.FromBinary(Binary.FromText([ColunaJSON]))` para converter a string para o tipo Binary, que é aceito pelas funções JSON do Power Query.",
-      "JSON em colunas SQL Server no Power Query deve ser tratado exclusivamente via script Python, utilizando `import json; json.loads(coluna)` em uma coluna personalizada Python. O Power Query M nativo não possui capacidade de parsing de JSON aninhado com mais de 3 níveis de profundidade, tornando Python obrigatório para estruturas mais complexas."
+      "Coluna Personalizada com `Json.Document([Coluna])` converte cada string em Record/List;",
+      "Deveria ser processado no próprio SQL Server via `JSON_VALUE([coluna],'$.campo')`, pois o Power Query não otimizaria parsing em volume.",
+      "Json.Document funcionaria só com arquivos completos, exigindo `Text.FromBinary(Binary.FromText(...))` para fragmentos em colunas.",
+      "Exigiria script Python (`json.loads`), pois o M nativo não faria parsing de JSON aninhado com mais de 3 níveis."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -7276,12 +7276,12 @@ export const questions = [
   },
   {
     "id": "q292_pl300",
-    "text": "Um analista de dados precisa criar um relatório no Power BI para monitorar o Customer Satisfaction Score (CSAT) e suas tendências ao longo do tempo. A empresa coleta feedback dos clientes em uma escala de 1 a 5, onde notas 4 e 5 são consideradas \"satisfeitos\". O analista deseja calcular o CSAT atual, a tendência de CSAT nos últimos 3 meses e a variação do CSAT em relação ao mês anterior. Qual das seguintes opções apresenta o conjunto correto de medidas DAX e a definição apropriada para atender a esses requisitos?",
+    "text": "Para CSAT (escala 1-5, notas 4-5 = \"satisfeitos\"), calcular CSAT atual, tendência dos últimos 3 meses e variação vs mês anterior. Qual conjunto de medidas DAX está correto?",
     "options": [
       "CSAT Score = DIVIDE( CALCULATE( COUNTROWS(Pesquisa), Pesquisa[Nota] >= 4), COUNTROWS(Pesquisa)) * 100\nCSAT Trend = CALCULATE( [CSAT Score], DATESINPERIOD( DimData[Data], LASTDATE(DimData[Data]), -3, MONTH))\nΔ CSAT vs Período Anterior = [CSAT Score] - CALCULATE( [CSAT Score], PREVIOUSMONTH(DimData[Data]))\nO CSAT é definido como o percentual de respondentes com nota 4 ou 5 em uma escala de 5 pontos (ou 4-5 em escala 1-5).",
-      "CSAT = AVERAGE(Pesquisa[Nota]) / MAX(Pesquisa[Nota]) * 100 — CSAT é calculado dividindo a nota média pelo valor máximo possível e convertendo para percentual; essa é a fórmula oficial do CSAT que normaliza a escala de avaliação para 0-100 independente da escala original (1-5, 1-10, etc.).",
-      "CSAT Score não pode ser calculado como medida DAX quando as notas estão em uma tabela de fatos relacionada à tabela de datas — o contexto de filtro temporal do visual interfere na contagem de respondentes satisfeitos causando resultados incorretos; é necessário criar uma coluna calculada \"IsSatisfeito\" na tabela de pesquisa e usar SUM([IsSatisfeito]) / COUNT para o cálculo.",
-      "Para o CSAT Trend, a função DATESINPERIOD com -3 MONTH é inadequada, pois ela sempre calcula os últimos 3 meses do dataset completo, ignorando qualquer filtro de data aplicado pelo usuário no visual, o que levaria a uma análise de tendência imprecisa."
+      "CSAT = AVERAGE(Nota)/MAX(Nota)*100 seria a fórmula oficial, normalizando a escala para 0-100 independente da original.",
+      "Não poderia ser medida DAX com notas numa fato relacionada a datas; exigiria coluna \"IsSatisfeito\" e SUM/COUNT.",
+      "DATESINPERIOD com -3 MONTH ignoraria filtros do visual, sempre usando os últimos 3 meses do dataset completo."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -7301,12 +7301,12 @@ export const questions = [
   },
   {
     "id": "q293_pl300",
-    "text": "Como você criaria um relatório de Recursos Humanos (RH) no Power BI para análise de headcount, turnover e diversidade, garantindo a máxima privacidade de dados individuais e conformidade com regulamentações como a LGPD?",
+    "text": "Como criar um relatório de RH (headcount, turnover, diversidade) no Power BI garantindo máxima privacidade individual e conformidade com a LGPD?",
     "options": [
-      "Estrutura recomendada: 1) Agregar dados por departamento/nível/localização — nunca exibir dados de indivíduos identificáveis; 2) Aplicar RLS por gestor mostrando apenas os dados da equipe de cada um; 3) Usar Sensitivity Labels \"Confidential\" no dataset de RH; 4) Configurar OLS para ocultar colunas sensíveis (salário, dados pessoais) de usuários sem permissão; 5) Medidas: headcount ativo, taxa de turnover mensal, tempo médio na empresa, distribuição por gênero/etnia apenas de forma agregada; 6) Definir limiar mínimo de grupo (ex: não exibir grupos com menos de 5 pessoas).",
-      "Dados de RH no Power BI não têm restrições especiais — qualquer dado disponível no sistema de RH pode ser exibido em relatórios Power BI seguindo as mesmas políticas de dados que outros tipos de relatório; dados pessoais como nome, salário e informações médicas são igualmente acessíveis para qualquer analista com acesso ao workspace de RH.",
-      "Relatórios de RH no Power BI devem exibir dados individuais para que gestores possam tomar decisões precisas sobre cada funcionário — agregar dados por departamento oculta informações críticas de gestão como desempenho individual e histórico salarial; a privacidade é garantida pelo RLS que restringe o acesso ao gestor direto de cada funcionário.",
-      "O Power BI não é adequado para relatórios de RH com dados sensíveis — usar exclusivamente o módulo de People Analytics do Microsoft Viva que foi projetado especificamente para análises de RH com privacidade integrada; o Power BI não tem os controles de privacidade necessários para dados regulados como informações de funcionários sujeitos à LGPD."
+      "Agregar por departamento/nível (nunca indivíduo); RLS por gestor; Sensitivity Labels \"Confidential\"; OLS ocultando colunas sensíveis;",
+      "Não haveria restrições especiais; qualquer dado de RH (nome, salário, médico) seria acessível a qualquer analista do workspace.",
+      "Deveria exibir dados individuais para gestão precisa; privacidade seria garantida só pelo RLS por gestor direto.",
+      "O Power BI não seria adequado para RH sensível; exigiria exclusivamente o People Analytics do Microsoft Viva."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -7329,9 +7329,9 @@ export const questions = [
     "text": "Qual é a abordagem mais eficaz para estruturar um Centro de Excelência (CoE) de Power BI em uma organização, visando maximizar a adoção, a qualidade dos dados e a governança da plataforma?",
     "options": [
       "Uma estrutura de CoE eficaz integra uma equipe core (Administrador Power BI para governança técnica, Engenheiros de Dados para datasets certificados, e Champions em cada área de negócio), processos claros (onboarding, certificação de datasets, revisão de relatórios, gestão de capacidade), recursos de autoatendimento (portal com templates, padrões de nomenclatura, guia de estilo) e métricas de sucesso (adoção, número de datasets certificados, tempo de criação de relatório, satisfação do usuário).",
-      "Centro de Excelência Power BI é um departamento de TI centralizado que cria TODOS os relatórios da organização — analistas de negócio não têm permissão para criar relatórios próprios; o CoE garante qualidade controlando a criação de conteúdo centralizadamente, e qualquer solicitação de novo relatório passa por processo formal de requisição com SLA de 30 dias úteis.",
-      "CoE de Power BI é necessário apenas em grandes organizações com mais de 1.000 usuários — pequenas e médias empresas não se beneficiam de CoE pois o overhead de governança supera os benefícios; para PMEs, a abordagem de 'cada analista cria seus próprios relatórios sem padronização' é mais ágil e adequada ao tamanho organizacional.",
-      "O papel principal do CoE é técnico — gerenciar licenças, configurar gateways, monitorar capacidade e resolver problemas técnicos; aspectos culturais como treinamento, adoção e comunidade de prática são responsabilidade do RH e não fazem parte do escopo de um CoE de dados; CoEs que tentam incluir aspectos culturais perdem foco técnico e se tornam ineficazes."
+      "Seria um departamento de TI centralizado que cria TODOS os relatórios, sem analistas de negócio criando os próprios.",
+      "Seria necessário só em organizações com 1000+ usuários; PMEs se beneficiariam mais sem padronização.",
+      "O papel seria só técnico (licenças, gateways, capacidade); aspectos culturais seriam responsabilidade do RH."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -7351,12 +7351,12 @@ export const questions = [
   },
   {
     "id": "q295_pl300",
-    "text": "Considere o seguinte trecho de código M no Power Query, projetado para implementar uma validação de schema em uma fonte de dados:\n```\n= let\n    ColunasEsperadas = {\"ID\", \"Nome\", \"Data\", \"Valor\"},\n    ColunasExistentes = Table.ColumnNames(Fonte),\n    ColunasFaltando = List.Difference( ColunasEsperadas, ColunasExistentes),\n    _ = if List.Count(ColunasFaltando) > 0 then error \"Colunas faltando: \" & Text.Combine(ColunasFaltando, \", \") else null\nin\n    Table.SelectColumns(Fonte, ColunasEsperadas)\n```\nQual é o principal objetivo e benefício desta abordagem de validação de schema no Power Query?",
+    "text": "Um código M usa List.Difference entre colunas esperadas e existentes, gerando erro se faltar coluna, antes de Table.SelectColumns. Qual o objetivo e benefício dessa validação de schema no Power Query?",
     "options": [
       "Implementar uma validação explícita do schema que verifica a existência de colunas esperadas antes das transformações, gerando um erro descritivo e personalizado caso alguma coluna essencial esteja faltando na fonte de dados.",
-      "A validação de schema no Power Query é feita automaticamente pelo passo \"Changed Type\" gerado na importação; se a fonte remover uma coluna, o Power Query detecta e gera erro na etapa de mudança de tipo, tornando validações adicionais desnecessárias.",
-      "\"Table.ColumnNames\" retorna apenas as colunas visíveis na pré-visualização do Power Query; para uma validação completa do schema, é necessário conectar diretamente à fonte via Native Query e usar \"SELECT TOP 0 * FROM tabela\" para obter todas as colunas.",
-      "A validação de schema em Power Query deve ser aplicada apenas a fontes de arquivos (CSV, Excel), pois fontes de banco de dados relacionais (SQL Server, Oracle) possuem schema rígido que raramente muda, tornando a validação explícita um overhead desnecessário."
+      "Seria feita automaticamente pelo \"Changed Type\"; remover coluna geraria erro nessa etapa, tornando validação adicional desnecessária.",
+      "Table.ColumnNames retornaria só colunas visíveis na pré-visualização; validação completa exigiria Native Query com SELECT TOP 0.",
+      "Deveria ser aplicada só a arquivos (CSV/Excel); bancos relacionais teriam schema rígido, tornando validação um overhead."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -7376,12 +7376,12 @@ export const questions = [
   },
   {
     "id": "q296_pl300",
-    "text": "Você foi encarregado de criar um relatório de compliance no Power BI que monitora prazos regulatórios e alerta sobre itens vencidos. As seguintes medidas DAX foram desenvolvidas para este propósito:\n```\nStatus Compliance =\nVAR DiasRestantes = DATEDIFF(TODAY(), MAX(Compliance[PrazoRegulatorio]), DAY)\nRETURN\n    SWITCH(\n        TRUE(),\n        DiasRestantes < 0, \"🔴 Vencido\",\n        DiasRestantes <= 7, \"🟡 Crítico\",\n        DiasRestantes <= 30, \"🟠 Atenção\",\n        \"🟢 OK\"\n    )\n\n% Conformidade =\nDIVIDE(\n    CALCULATE(COUNTROWS(Compliance), Compliance[Status] = \"Conforme\"),\n    COUNTROWS(Compliance)\n)\n\nItens Vencidos =\nCALCULATE(\n    COUNTROWS(Compliance),\n    Compliance[PrazoRegulatorio] < TODAY()\n)\n```\nConsiderando o uso dessas medidas para relatórios de compliance que exigem dados atualizados diariamente, qual das seguintes afirmações é a mais precisa sobre o comportamento e as melhores práticas no Power BI?",
+    "text": "Para compliance, foi criada:\n```\nStatus = VAR Dias=DATEDIFF(TODAY(),MAX(Compliance[Prazo]),DAY) RETURN SWITCH(TRUE(),Dias<0,\"Vencido\",Dias<=7,\"Crítico\",Dias<=30,\"Atenção\",\"OK\")\n```\nQual afirmação é mais precisa sobre essa medida com TODAY() para compliance diário?",
     "options": [
-      "As medidas DAX que utilizam TODAY() são dinâmicas, recalculando a data atual a cada consulta, o que as torna apropriadas para monitoramento de compliance diário, e alertas podem ser configurados em diversos tipos de visuais, como cartões e KPIs.",
-      "Medidas de compliance que dependem de TODAY() não são confiáveis devido à possível diferença entre a data UTC do servidor do Power BI Service e a data local, exigindo o uso de um parâmetro 'What-If' para uma 'Data de Referência' manual.",
-      "Para alertas de compliance, apenas o visual KPI oferece suporte a notificações automáticas por e-mail quando a conformidade cai abaixo de uma meta, sendo o único visual recomendado para este fim.",
-      "Colunas calculadas que utilizam TODAY() são dinâmicas e se atualizam automaticamente a cada visualização do relatório, recalculando o status 'Vencido' sem a necessidade de um refresh do conjunto de dados."
+      "Medidas com TODAY() seriam dinâmicas, recalculando a cada consulta, apropriadas para compliance diário; alertas funcionariam em Cards/KPIs.",
+      "TODAY() não seria confiável pela diferença UTC servidor vs local, exigindo parâmetro What-If de 'Data de Referência'.",
+      "Só o visual KPI suportaria notificação automática por email quando a conformidade cai abaixo da meta.",
+      "Colunas calculadas com TODAY() se atualizariam automaticamente a cada visualização, sem precisar de refresh."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -7403,10 +7403,10 @@ export const questions = [
     "id": "q297_pl300",
     "text": "Qual é a abordagem mais eficaz para implementar o acompanhamento de OKRs (Objectives and Key Results) organizacionais no Power BI, incluindo a gestão de check-ins automáticos e manuais?",
     "options": [
-      "Usar Power BI Goals/Metrics no Fabric: criar Scorecard com Objectives como itens pai e Key Results como sub-itens; conectar Key Results a medidas de datasets existentes para atualização automática; para KRs sem fonte de dados estruturada, configurar check-in manual periódico com valor e nota; definir meta (target) e prazo para cada KR; visualizar o scorecard no Teams ou SharePoint para acompanhamento da equipe; usar notificações para alertar responsáveis quando KRs estão \"At Risk\" ou \"Behind\".",
-      "OKRs no Power BI são implementados via relatório de Matriz com Objectives nas linhas, Key Results nas colunas e períodos nas colunas secundárias — não existe funcionalidade nativa de OKR no Power BI Service; criar medidas DAX para cada KR e usar formatação condicional para indicar status de progresso é a única abordagem disponível no Power BI padrão.",
-      "Power BI Goals/Metrics requer que todos os Key Results sejam conectados a datasets — KRs sem fonte de dados estruturada (ex: número de treinamentos concluídos anotado manualmente) não podem ser adicionados ao Scorecard; para OKRs mistos com dados automáticos e manuais, usar Microsoft Planner integrado ao Power BI via conector como alternativa.",
-      "Scorecards de OKR no Power BI são adequados apenas para OKRs corporativos de nível C-suite — para OKRs de equipe e individuais, o nível de detalhe do Power BI Goals é excessivo e gera overhead de administração desnecessário; para OKRs operacionais, usar Azure DevOps Boards ou Jira que têm funcionalidade de OKR nativa mais adequada para times ágeis."
+      "Goals/Metrics no Fabric: Scorecard com Objectives (pai) e Key Results (sub-itens); conectar a medidas para auto-atualização ou check-in manual;",
+      "Seria via Matriz com Objectives/Key Results, pois não existiria funcionalidade nativa de OKR; só medidas DAX + formatação condicional.",
+      "Exigiria todos os KRs conectados a datasets; KRs manuais não poderiam ser adicionados ao Scorecard.",
+      "Seria adequado só para OKRs C-suite; equipe/individual exigiria Azure DevOps Boards ou Jira."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -7428,10 +7428,10 @@ export const questions = [
     "id": "q298_pl300",
     "text": "Como implementar uma estratégia de disaster recovery para conteúdo crítico do Power BI garantindo continuidade de negócios?",
     "options": [
-      "Estratégia multicamadas: 1) Versionamento via Git integration (Deployment Pipelines + Azure DevOps) — código dos relatórios e definições de modelos versionados; 2) Backup de datasets Premium via XMLA (.abf files) armazenados em Azure Blob Storage; 3) Documentação de todos os datasets, fontes de dados e credenciais em Azure Key Vault; 4) Runbook documentado para recriação de workspaces e configurações; 5) Teste periódico de recuperação (restore de backup em ambiente de teste); 6) RTO (Recovery Time Objective) e RPO (Recovery Point Objective) definidos por criticidade de conteúdo.",
-      "O Power BI Service tem backup automático integrado com retenção de 30 dias — o administrador acessa Admin Portal > Backup & Recovery para configurar o destino Azure Storage e o schedule de backup; em caso de disaster, usar o botão \"Restore\" no Admin Portal que recria o workspace completo com todo o conteúdo a partir do backup mais recente.",
-      "Disaster Recovery para Power BI é responsabilidade exclusiva da Microsoft via SLA de disponibilidade de 99,9% — a Microsoft garante contratualmente que todos os dados e relatórios são recuperados em caso de falha de infraestrutura; organizações não precisam implementar estratégias próprias de DR pois o SLA cobre perda de dados e indisponibilidade do serviço.",
-      "A estratégia de DR mais simples para Power BI é manter uma cópia de todos os arquivos .pbix no OneDrive corporativo — ao republicar os .pbix em novos workspaces em caso de disaster, o relatório é recuperado completamente incluindo configurações de RLS, credenciais de fonte, refresh agendado e permissões de workspace sem necessidade de reconfiguração."
+      "Multicamadas: Git integration (Deployment Pipelines); backup XMLA (.abf) no Blob Storage; credenciais no Key Vault; runbook de recriação;",
+      "O Service teria backup automático com retenção de 30 dias, restaurável via botão \"Restore\" no Admin Portal.",
+      "Seria responsabilidade exclusiva da Microsoft via SLA de 99,9%, sem precisar de estratégia própria.",
+      "A estratégia mais simples seria manter .pbix no OneDrive; republicar recuperaria tudo (RLS, credenciais) sem reconfiguração."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -7454,9 +7454,9 @@ export const questions = [
     "text": "Como o Microsoft Power BI se posiciona na arquitetura moderna de dados (Modern Data Stack) e quais são suas principais integrações com ferramentas de engenharia de dados e plataformas de dados?",
     "options": [
       "O Power BI atua como a camada de consumo (BI layer) sobre o data warehouse ou lakehouse no Modern Data Stack, com integrações nativas robustas. Isso inclui conectores e links de workspace com Azure Synapse Analytics, orquestração de refresh via API com Azure Data Factory, consumo de modelos dbt que geram tabelas no warehouse, conectores nativos com Databricks (incluindo Delta Sharing) e Snowflake (com query folding), e a possibilidade de integração com ferramentas de qualidade de dados como Great Expectations. Com o Microsoft Fabric, o Power BI se integra nativamente a todos os workloads do Fabric, como Direct Lake e OneLake Shortcuts.",
-      "O Power BI é uma ferramenta autossuficiente que não requer outras ferramentas de engenharia de dados; o Power Query substitui dbt e Azure Data Factory para todas as transformações, e o Microsoft Fabric elimina a necessidade de soluções de armazenamento e processamento de terceiros como Snowflake e Databricks, tornando desnecessária qualquer ferramenta externa no Modern Data Stack.",
-      "O Power BI é incompatível com ferramentas de terceiros do Modern Data Stack, como dbt, Airbyte e Fivetran, pois estas utilizam protocolos abertos que não se integram ao ecossistema Microsoft. Para uma arquitetura Modern Data Stack com Power BI, todos os componentes devem ser produtos Microsoft (Azure Synapse, ADF, Purview), sem a mistura de ferramentas open source ou de outros fornecedores.",
-      "O Power BI, na camada de consumo do Modern Data Stack, é sempre o componente final e nunca serve como fonte de dados para outras ferramentas. Exportar dados do Power BI para outras ferramentas de análise viola as políticas de licenciamento da Microsoft e exige a aquisição de uma licença adicional de extração de dados."
+      "Seria autossuficiente, com Power Query substituindo dbt/ADF; o Fabric eliminaria a necessidade de Snowflake/Databricks.",
+      "Seria incompatível com ferramentas de terceiros (dbt, Airbyte, Fivetran), exigindo só produtos Microsoft.",
+      "Seria sempre o componente final, nunca fonte para outras ferramentas; exportar violaria licenciamento."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -7478,10 +7478,10 @@ export const questions = [
     "id": "q300_pl300",
     "text": "Como as organizações podem avaliar seu nível de maturidade em Business Intelligence (BI) utilizando o Power BI, e quais são as principais características que definem cada nível dentro de um modelo de maturidade típico?",
     "options": [
-      "Um modelo de maturidade em 5 níveis, caracterizado por: 1) Inicial — relatórios ad-hoc em Excel, dados isolados; 2) Repetível — Power BI Desktop com relatórios publicados, sem governança formal; 3) Definido — datasets certificados, CoE estabelecido, RLS implementado; 4) Gerenciado — Deployment Pipelines, Git integration, Usage Metrics monitorados; 5) Otimizado — Fabric com Direct Lake, CoE maduro, self-service governado, AI/Copilot integrado.",
-      "Maturidade de BI é medida exclusivamente pelo número de relatórios e datasets publicados no tenant — organizações com mais de 500 relatórios são consideradas maduras enquanto organizações com menos de 50 relatórios estão no nível inicial; a quantidade de conteúdo é o indicador mais objetivo de maturidade pois reflete o investimento e adoção da ferramenta ao longo do tempo.",
-      "O nível máximo de maturidade de BI só pode ser atingido com licença Microsoft Fabric F128 ou superior — organizações com plano Pro ou Premium P1 estão limitadas ao nível 3 (Definido) pois os recursos necessários para maturidade avançada como Direct Lake, Copilot e Deployment Pipelines avançados só estão disponíveis em capacidades F128+.",
-      "Avaliação de maturidade de BI é uma atividade única realizada no início do programa de dados — após atingir o nível 3 ou superior, reavaliações não são necessárias pois organizações maduras mantêm automaticamente seu nível via processos estabelecidos; reavaliações periódicas são indicadas apenas para organizações nos níveis 1 e 2 que ainda estão em processo de evolução."
+      "5 níveis: Inicial (Excel ad-hoc); Repetível (Desktop sem governança); Definido (datasets certificados, CoE, RLS); Gerenciado (Pipelines, Git, Usage Metrics);",
+      "Seria medida só pelo número de relatórios/datasets publicados; mais conteúdo significaria mais maturidade.",
+      "O nível máximo exigiria Fabric F128+; Pro/Premium P1 ficariam limitados ao nível 3.",
+      "Seria avaliação única no início do programa; níveis 3+ não precisariam de reavaliação periódica."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",

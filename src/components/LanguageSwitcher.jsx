@@ -4,8 +4,8 @@ import { LanguageContext } from '../contexts/LanguageContext';
 import { useCert } from '../contexts/CertContext';
 import { countQuestions } from '../data/questions';
 
-// Certs com tradução EN completa (>= 50 questões)
-const CERTS_WITH_EN = ['pl200'];
+// Certs com tradução EN completa (mirror do pt). As demais mostram "EN em breve".
+const CERTS_WITH_EN = ['ab900', 'az900', 'pl200'];
 
 export default function LanguageSwitcher() {
   const { language, toggleLanguage } = useContext(LanguageContext);

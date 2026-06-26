@@ -14,6 +14,7 @@ export const questions = [
     "explanation": {
       "intro": "A AutoRecuperação (AutoRecover) é um mecanismo nativo do Word que salva cópias temporárias do seu documento automaticamente em intervalos regulares.",
       "papoReto": "O AutoRecover funciona em background, independente da ação do usuário. Mesmo se o Word travar ou houver queda de energia, ao reabrir o programa você será oferecido um documento recuperado com as alterações até antes do incidente. As demais opções referem-se a sincronização na nuvem, backup do SO ou versionamento, mas não ao salvamento automático em intervalos que o Word mantém.",
+      "respostaCerta": "AutoRecuperação (AutoRecover)",
       "puloDoGato": "A pegadinha é confundir AutoRecover (salva temporários) com AutoSalvar no OneDrive (salva arquivo definitivo na nuvem) — AutoRecover é um mecanismo de segurança offline, enquanto OneDrive é sincronização online.",
       "cascasDeBanana": [
         "Controle de Versões do SharePoint: gerencia histórico de versões de um arquivo já compartilhado, mas não faz salvamento automático contínuo.",
@@ -38,6 +39,7 @@ export const questions = [
     "explanation": {
       "intro": "A configuração de local padrão de arquivo no Word permite definir um diretório onde todos os novos documentos serão salvos por padrão.",
       "papoReto": "Essa configuração está em Arquivo → Opções → Salvar, na seção \"Salvar documentos\", onde você encontra o campo 'Local padrão de arquivo'. Ao preencher esse campo com um caminho (ex.: C:\\Meus Documentos), todo novo documento criado será direcionado para lá automaticamente.",
+      "respostaCerta": "Arquivo → Opções → Salvar → Local padrão de arquivo",
       "puloDoGato": "Propriedades (Arquivo → Informações → Propriedades) é para metadados (autor, título, assunto), não para configurar diretórios. Não confunda!",
       "cascasDeBanana": [
         "Exibir → Opções de Documento: Menu do painel de exibição, não contém configurações de salvamento.",
@@ -62,6 +64,7 @@ export const questions = [
     "explanation": {
       "intro": "O formato .doc é o formato nativo do Microsoft Word 97-2003. Criado antes da mudança para XML em 2007.",
       "papoReto": "Word 97-2003 (.doc) é o único formato que garante compatibilidade total com versões antigas do Word — funcionará sem problemas em máquinas com Word XP, 2000 ou 97. O formato .docx (Word 2007+) é baseado em XML e não é retrocompatível com essas versões antigas.",
+      "respostaCerta": ".doc",
       "puloDoGato": "A pegadinha é .docx parecer a alternativa \"moderna\" correta, mas a questão exige especificamente compatibilidade com 97-2003 — aí só .doc funciona.",
       "cascasDeBanana": [
         ".docx: formato XML moderno, requer Word 2007 ou posterior para abrir nativamente.",
@@ -86,6 +89,7 @@ export const questions = [
     "explanation": {
       "intro": "Restringir Edição permite bloquear partes específicas do documento e liberar apenas certas seções para edição.",
       "papoReto": "Em Revisão → Restringir Edição, você pode definir quais seções permitem apenas preenchimento de formulários. Com proteção por senha, outras partes ficarão totalmente travadas — nem texto será editável, apenas campos de formulário serão preenchíveis. Isso é diferente de criptografia (que bloqueia toda abertura) ou assinatura (que autentica origem).",
+      "respostaCerta": "Restringir Edição com proteção por senha",
       "puloDoGato": "A questão pede 'impedir edição permitindo SÓ preenchimento de formulários' — isso é a definição exata de Restringir Edição + seção de formulário.",
       "cascasDeBanana": [
         "Proteger com Assinatura Digital: autentica quem criou, não restringe edição.",
@@ -110,6 +114,7 @@ export const questions = [
     "explanation": {
       "intro": "Criptografar com senha torna o arquivo ilegível sem a senha — é encriptação no nível do arquivo, a abertura fica bloqueada até inserir a chave correta.",
       "papoReto": "Arquivo → Informações → Proteger Documento → Criptografar com Senha abre uma janela para você digitar uma senha. Daí em diante, o arquivo fica encriptado (AES-256 por padrão) — sem a senha correta, o arquivo não abre em nenhum programa Word.",
+      "respostaCerta": "Arquivo → Informações → Proteger Documento → Criptografar com Senha",
       "puloDoGato": "Criptografar protege a ABERTURA do arquivo (senha pré-abertura); Restringir Edição (Revisão) protege PARTES do documento já aberto (senha pós-abertura). São dois mecanismos diferentes.",
       "cascasDeBanana": [
         "Revisão → Restringir Edição → Senha: restringe edição de conteúdo, não a abertura do arquivo.",
@@ -134,6 +139,7 @@ export const questions = [
     "explanation": {
       "intro": "As propriedades do documento armazenam metadados — informações sobre o documento (quem criou, quando, empresa, assunto, palavras-chave).",
       "papoReto": "Arquivo → Informações mostra um painel à direita com 'Propriedades' — abre uma caixa onde você preenche Título, Assunto, Palavras-chave, Categoria, Autor e Empresa. Esses dados são embarcados no arquivo e ajudam em buscas/organizações corporativas.",
+      "respostaCerta": "Arquivo → Informações → Propriedades",
       "puloDoGato": "Cabeçalho/Rodapé (Inserir) é conteúdo visual no documento; Propriedades é metadados invisíveis (no arquivo, não na página).",
       "cascasDeBanana": [
         "Exibir → Painel de Navegação: mostra estrutura de seções/capítulos do documento, não metadados.",
@@ -158,6 +164,7 @@ export const questions = [
     "explanation": {
       "intro": "Comparar é um recurso que analisa duas versões de um documento e destaca automaticamente todas as diferenças, como um diff visual.",
       "papoReto": "Revisão → Comparar → Comparar abre uma caixa onde você escolhe o documento original e o documento revisado. O Word então gera um novo documento com todas as diferenças marcadas em cores/barras laterais — texto adicionado, deletado, formatação alterada, tudo fica visível.",
+      "respostaCerta": "Revisão → Comparar → Comparar",
       "puloDoGato": "Lado a Lado (Exibir) coloca dois documentos na tela para você comparar visualmente; Comparar (Revisão) faz uma comparação automatizada e gera um relatório com diferenças marcadas — bem mais poderoso.",
       "cascasDeBanana": [
         "Exibir → Lado a Lado: mostra dois documentos abertos lado-a-lado na tela, mas não marca diferenças automaticamente — visual apenas.",
@@ -182,6 +189,7 @@ export const questions = [
     "explanation": {
       "intro": "Comparar e Combinar são duas operações distintas em Revisão, cada uma com um propósito específico.",
       "papoReto": "Comparar toma dois documentos e gera um terceiro mostrando diferenças. Combinar toma vários documentos (muitas vezes, cópias do mesmo arquivo editadas por diferentes revisores, cada uma com Controlar Alterações ativo) e os mescla em UM documento único com todas as alterações rastreadas lado-a-lado, permitindo aceitar/rejeitar mudanças de cada revisor. Combinar é essencial em workflows colaborativos.",
+      "respostaCerta": "Comparar mostra diferenças entre dois documentos; Combinar mescla revisões de múltiplos revisores em um único documento",
       "puloDoGato": "A pegadinha comum é confundir: Comparar é para dois documentos históricos (versão A vs B, qual é a diferença?). Combinar é para múltiplos editores (João fez v1, Maria fez v2, Pedro fez v3 — mescla tudo).",
       "cascasDeBanana": [
         "Combinar cria um PDF; Comparar gera um relatório HTML: falso — ambas geram documentos .docx nativos.",
@@ -206,6 +214,7 @@ export const questions = [
     "explanation": {
       "intro": "Quando Controlar Alterações está ativo, todas as mudanças ficam marcadas. Para aplicar todas de uma vez, usamos Aceitar Todas as Alterações.",
       "papoReto": "Revisão → Aceitar → Aceitar Todas as Alterações processa de uma só vez todas as mudanças rastreadas no documento, incorporando-as ao texto sem as marcações visuais. É diferente de aceitar uma por uma — essa ação em massa é muito mais rápida para documentos com centenas de alterações.",
+      "respostaCerta": "Revisão → Aceitar → Aceitar Todas as Alterações",
       "puloDoGato": "Aceitar (individual) vs Aceitar Todas (em massa) — ambas estão em Revisão, mas 'Todas' está no botão com seta/dropdown.",
       "cascasDeBanana": [
         "Revisão → Controlar Alterações → Finalizar: desativa o rastreamento, não aceita alterações já feitas.",
@@ -230,6 +239,7 @@ export const questions = [
     "explanation": {
       "intro": "Para evitar que usuários desativem o Controle de Alterações (e editem sem rastreamento), precisa-se uma proteção que seja impossível de contornar sem a senha.",
       "papoReto": "Revisão → Restringir Edição abre um painel onde você marca 'Pessoas podem editar apenas as seguintes seções sem senha' E marca a opção especial de 'Controlar alterações' para ficar obrigatório. Com uma senha de proteção, o usuário não conseguirá desativar o rastreamento nem editar fora das seções permitidas.",
+      "respostaCerta": "Restringir Edição com a opção \"Controlar alterações\" bloqueada por senha",
       "puloDoGato": "Simplesmente ativar Controlar Alterações não impede usuário de desativar — precisa de Restringir Edição + senha para tornar obrigatório.",
       "cascasDeBanana": [
         "Marcar Documento como Final: apenas sinaliza que é versão final; usuário consegue desabilitar a marca.",
@@ -254,6 +264,7 @@ export const questions = [
     "explanation": {
       "intro": "Um Estilo é um conjunto nomeado de formatações (fonte, tamanho, cor, espaçamento, alinhamento) que você pode salvar e aplicar de uma só vez.",
       "papoReto": "Ao invés de selecionar texto e manualmente fazer Ariel 12pt negrito com espaçamento 1,5, você cria um Estilo chamado 'Parágrafo Normal' com tudo pronto. Daí aplica em um clique — e se mudar a definição do estilo, todos os parágrafos com esse estilo atualizam automaticamente.",
+      "respostaCerta": "Um conjunto de formatações salvas que pode ser aplicado rapidamente a texto ou parágrafos",
       "puloDoGato": "Tema (Design) altera cores e efeitos de TODA a palheta do doc; Estilo é para parágrafos/caracteres específicos. Não confunda.",
       "cascasDeBanana": [
         "Um tema visual: altera a paleta de cores/fontes do documento inteiro, não é aplicável por parágrafo.",
@@ -278,6 +289,7 @@ export const questions = [
     "explanation": {
       "intro": "Normal.dotm é o modelo padrão do Word que todos os novos documentos herdam. Qualquer estilo salvo nele fica disponível globalmente.",
       "papoReto": "Para fazer um estilo aparecer em TODOS os documentos futuros, você precisa salvá-lo no arquivo modelo padrão: Normal.dotm. Abra Normal.dotm, crie o estilo lá, salve. Daí em diante, novo documento + novo estilo automático. Se só salvar em um documento .dotx, o estilo fica restrito a que usar aquele template.",
+      "respostaCerta": "Salvar o estilo no modelo Normal.dotm",
       "puloDoGato": "Não confunda: .dotx compartilhado é para UMA série de documentos que usam aquele template; Normal.dotm é para TUDO globalmente.",
       "cascasDeBanana": [
         "Salvar como .dotx e compartilhar: restringe o estilo a quem usa aquele template específico, não globalmente.",
@@ -302,6 +314,7 @@ export const questions = [
     "explanation": {
       "intro": "Gerenciar Estilos é um painel lateral que abre uma caixa de diálogo com botões de Importar/Exportar para transferir estilos entre documentos.",
       "papoReto": "Abra Inicial → Estilos → Gerenciar Estilos (ícone com 3 linhas + seta no canto inferior). No painel direito, encontre o botão de menu (3 pontos) e selecione 'Importar/Exportar Estilos'. Uma caixa de diálogo abre para você escolher os estilos a copiar e o arquivo destino.",
+      "respostaCerta": "Gerenciar Estilos → Importar/Exportar",
       "puloDoGato": "Pincel (Format Painter) copia formatação visual de texto, não estilos nomeados — são coisas diferentes.",
       "cascasDeBanana": [
         "Pincel: copia formatação visual, não estilos reutilizáveis.",
@@ -326,6 +339,7 @@ export const questions = [
     "explanation": {
       "intro": "Por padrão, estilos no Word já herdam mudanças — se editar Título 1, todos Título 1 atualizam. A opção \"Atualizar automaticamente\" existe para casos especiais.",
       "papoReto": "Na verdade, o Word atualiza estilos por padrão — modificar a definição de Título 1 propaga para todo o doc. Mas há um checkbox nas propriedades do estilo (clicar direito → Modificar) chamado 'Atualizar automaticamente', que força atualização de base (útil com estilos baseados em caracteres).",
+      "respostaCerta": "Ativar \"Atualizar automaticamente\" nas propriedades do estilo",
       "puloDoGato": "A pegadinha é que MUITOS usuários não sabem que estilos atualizam automaticamente — pensam que é coisa manual.",
       "cascasDeBanana": [
         "Localizar/Substituir: é manual, não automático.",
@@ -350,6 +364,7 @@ export const questions = [
     "explanation": {
       "intro": "A extensão .dotm = DOT (template) + M (macro-enabled) — é a extensão de um modelo que contém VBA ou macros.",
       "papoReto": ".dotm permite guardar VBA/macros dentro do modelo. Quando você cria um novo documento a partir desse .dotm, as macros vêm junto. Sem o 'm', .dotx é um modelo seguro (sem macros).",
+      "respostaCerta": ".dotm",
       "puloDoGato": "Não confunda: .docm é documento COM macros; .dotm é TEMPLATE COM macros. O 'dot' indica template, não documento.",
       "cascasDeBanana": [
         ".docm: documento (não template) com macros — herança, não modelo-base.",
@@ -374,6 +389,7 @@ export const questions = [
     "explanation": {
       "intro": "Um modelo corporativo com logotipo, estilos E macros precisa ser um .dotm salvo na pasta correta para que apareça automaticamente na galeria de modelos de todos.",
       "papoReto": "Salvar como .dotm + colocar em \\\\servidor\\pasta_modelos (atalho que IT configura em Arquivo → Opções → Locais de Arquivo → Modelos de Usuário ou StartupPath) faz o template aparecer automaticamente no painel de novos documentos de TODOS que tiverem acesso à pasta. Novos docs criados a partir dele herdam logotipo, estilos e macros.",
+      "respostaCerta": "Criar um arquivo .dotm com os elementos desejados e armazenar na pasta de modelos compartilhada da rede",
       "puloDoGato": "Tema (Design) só altera cores/fontes, não inclui macros nem logotipos. SharePoint/.docx são documentos, não templates.",
       "cascasDeBanana": [
         ".docx por email: usuários criam documentos, não templates — cada um precisa do arquivo.",
@@ -398,6 +414,7 @@ export const questions = [
     "explanation": {
       "intro": "Sumário Automático funciona identificando títulos no documento — Word procura especificamente pelos estilos Título 1, Título 2, etc.",
       "papoReto": "Para gerar Sumário (Referências → Sumário), você PRECISA ter títulos formatados com estilos de Título. Não é sobre o arquivo ser .pdf ou ter maiúscula — é estrutural. Se os títulos forem texto comum (nem que você tenha feito negrito), o Sumário não encontra nada.",
+      "respostaCerta": "Os títulos do documento devem estar formatados com estilos de Título (Título 1, Título 2, etc.)",
       "puloDoGato": "Muitos usuários fórmulam título manualmente em BOLD e acham que é 'Título' — precisa ser aplicado o Estilo 'Título 1' via galeria de estilos.",
       "cascasDeBanana": [
         "10 páginas: sumário funciona em documentos pequenos também.",
@@ -422,6 +439,7 @@ export const questions = [
     "explanation": {
       "intro": "Sumário é um 'campo' (field) dinâmico no Word — para refletir mudanças nos títulos, você precisa atualizar manualmente.",
       "papoReto": "Clique direito no sumário → Atualizar Campo abre uma caixa pedindo se quer atualizar só números de página ou TODO o sumário. Escolha 'Atualizar todo o sumário' e pronto — títulos adicionados/deletados aparecerão.",
+      "respostaCerta": "Clicar com o botão direito no sumário e selecionar \"Atualizar Campo\"",
       "puloDoGato": "Ctrl+S salva o arquivo, não atualiza campos — são dois conceitos diferentes.",
       "cascasDeBanana": [
         "Salvar (Ctrl+S): persiste arquivo, não atualiza campos.",
@@ -446,6 +464,7 @@ export const questions = [
     "explanation": {
       "intro": "A opção 'Mostrar níveis' em Sumário Personalizado controla quantos níveis de hierarquia o Word exibe no sumário.",
       "papoReto": "Referências → Sumário → (menu dropdown) → Sumário Personalizado abre uma caixa com 'Mostrar níveis' — mude de 3 para 2. Pronto: Título 1 e 2 aparecem, Título 3 fica oculto no sumário (não do documento — continua lá).",
+      "respostaCerta": "Referências → Sumário → Sumário Personalizado → definir \"Mostrar níveis\" como 2",
       "puloDoGato": "Não confunda: 'Mostrar níveis' controla QUANTOS níveis exibir. Alterar o estilo Título 3 afeta todo o documento, não só o sumário.",
       "cascasDeBanana": [
         "Localizar/Substituir: altera conteúdo do documento, não a exibição do sumário.",
@@ -470,6 +489,7 @@ export const questions = [
     "explanation": {
       "intro": "Um Tema (Design) é uma palheta coordenada de cores, fontes e efeitos que se aplica ao documento inteiro.",
       "papoReto": "Design → Temas permite escolher temas pré-definidos (ex: Ion, Office Classic, Ubuntu). Isso muda as cores de TUDO (títulos, gráficos, formas) e as fontes dos estilos (Título muda de Arial para, digamos, Calibri). É uma mudança VISUAL/ESTÉTICA, não estrutural (margens/layout permanecem iguais).",
+      "respostaCerta": "Cores, fontes e efeitos visuais do documento",
       "puloDoGato": "Tema não altera margens, cabeçalho/rodapé, impressão — isso fica igual. Tema = só cor e fonte.",
       "cascasDeBanana": [
         "Cabeçalho/rodapé: controlados por Inserir → Cabeçalho e Rodapé, não tema.",
@@ -494,6 +514,7 @@ export const questions = [
     "explanation": {
       "intro": "Rodapé (Footnote) e Fim (Endnote) são dois tipos de anotações — a diferença é ONDE aparecem na página.",
       "papoReto": "Nota de Rodapé aparece ao pé da PÁGINA atual (fim da página em que o número está). Nota de Fim aparece ao final do DOCUMENTO inteiro ou da SEÇÃO. Ambas podem usar números ou letras — não importa.",
+      "respostaCerta": "Nota de Rodapé aparece no final da página; Nota de Fim aparece no final do documento ou seção",
       "puloDoGato": "Usuários confundem porque ambas têm o mesmo nome e numeração parecida. Chave: Rodapé = pé da página, Fim = fim do doc.",
       "cascasDeBanana": [
         "Numeração diferente (números vs letras): falso — ambas podem usar qualquer formato.",
@@ -518,6 +539,7 @@ export const questions = [
     "explanation": {
       "intro": "O Word permite converter em lote TODAS as notas de rodapé para fim de uma só vez, sem perder conteúdo.",
       "papoReto": "Referências → (seta pequena no grupo Notas de Rodapé) → abre diálogo → botão 'Converter' → escolha 'Converter todas as notas de rodapé em notas de fim' → pronto. Todas as notas passam de pé-de-página para fim-de-documento automaticamente.",
+      "respostaCerta": "Referências → Notas de Rodapé (menu de diálogo) → Converter → Converter todas as notas de rodapé em notas de fim",
       "puloDoGato": "Existe conversão automática no Word — muita gente acha que não existe e deleta/reinsere manualmente (desnecessário).",
       "cascasDeBanana": [
         "Localizar/Substituir: não funciona para notas — estrutura especial.",
@@ -542,6 +564,7 @@ export const questions = [
     "explanation": {
       "intro": "APA é o padrão de citação criado pela American Psychological Association — amplamente usado em humanidades e ciências sociais (psicologia, educação, sociologia).",
       "papoReto": "APA usa formato (Autor, Ano) no texto e uma lista alfabética de Referências no fim. IEEE é para engenharia (numérico). Chicago é alternativo para história. MLA é principalmente para literatura em inglês.",
+      "respostaCerta": "APA (American Psychological Association)",
       "puloDoGato": "APA é praticamente SINÔNIMO de \"humanidades/ciências sociais\" — se a questão fala desse contexto, pense APA.",
       "cascasDeBanana": [
         "IEEE: para engenharia e tecnologia — numérico [1], [2]...",
@@ -566,6 +589,7 @@ export const questions = [
     "explanation": {
       "intro": "Após inserir citações no documento (via Inserir Citação), a bibliografia se gera automaticamente em um lugar que você escolher.",
       "papoReto": "Referências → Bibliografia (não é listas cruzadas, é a seção de Citações) → escolha um formato de estilo (APA, MLA, etc.) → pronto. O Word gera a lista de referências ordenada no local do cursor.",
+      "respostaCerta": "Referências → Bibliografia → selecionar o formato desejado",
       "puloDoGato": "Referências Cruzadas é para apontar para figuras/tabelas. Citação é para artigos/livros. Dois recursos diferentes.",
       "cascasDeBanana": [
         "Referências Cruzadas: aponta para figuras/tabelas, não faz bibliog.",
@@ -590,6 +614,7 @@ export const questions = [
     "explanation": {
       "intro": "Legenda é texto descritivo (ex: \"Figura 1: Gráfico de vendas\") automaticamente numerado pelo Word.",
       "papoReto": "Selecione a figura → Referências → Inserir Legenda → preencha o texto → escolha tipo (Figura, Tabela, Equação) → pronto. Word numera automaticamente e permite gerar um índice de figuras depois.",
+      "respostaCerta": "Referências → Inserir Legenda",
       "puloDoGato": "Caixa de Texto manual não cria número automático — se adicionar outra figura, a numeração fica manual (problema).",
       "cascasDeBanana": [
         "Caixa de Texto manual: numeração não automática — quebra facilmente.",
@@ -614,6 +639,7 @@ export const questions = [
     "explanation": {
       "intro": "Referência Cruzada insere no texto um campo dinâmico que aponta para figura/tabela/seção com número que atualiza automaticamente.",
       "papoReto": "Referências → Referência Cruzada → escolha o tipo (Figura) → escolha a legenda específica (Figura 3) → escolha formato (Número de Legenda = só \"3\") → OK. No texto aparecerá \"3\", e se a numeração de figuras mudar, isso atualiza também.",
+      "respostaCerta": "Referências → Referência Cruzada → Figura → Número de Legenda",
       "puloDoGato": "Hyperlink é estático (link clicável). Ref Cruzada é campo dinâmico que reflete mudanças de numeração — bem diferente.",
       "cascasDeBanana": [
         "Hyperlink: aponta estaticamente, não atualiza com mudanças de numeração.",
@@ -638,6 +664,7 @@ export const questions = [
     "explanation": {
       "intro": "Índice Remissivo (Index) é uma lista alfabética de palavras-chave do documento com página — diferente de Sumário que usa títulos.",
       "papoReto": "Workflow: (1) Selecione uma palavra ou termo no doc → Alt+Shift+X (Marcar Entrada) → adicione variantes se quiser → OK (com XE { } fields criados). (2) Depois, no final do doc, Referências → Inserir Índice → escolha formato → OK. Word gera a lista alfabética com páginas.",
+      "respostaCerta": "Marcar entradas com \"Marcar Entrada\" (Alt+Shift+X) e depois inserir o índice via Referências → Inserir Índice",
       "puloDoGato": "Sumário usa TÍTULOS (estrutura). Índice usa PALAVRAS MARCADAS (conteúdo). Bem diferentes.",
       "cascasDeBanana": [
         "Manual/tabela: muito trabalho, numeração de página fica errada após edições.",
@@ -662,6 +689,7 @@ export const questions = [
     "explanation": {
       "intro": "O Índice é um campo dinâmico — quando adiciona novas entradas marcadas, precisa atualizar manualmente.",
       "papoReto": "Clique direito no Índice → Atualizar Campo → escolha 'Atualizar todo o índice' → pronto. Novas entradas marcadas e mudanças de página se refletem.",
+      "respostaCerta": "Clicar com o botão direito no índice e selecionar \"Atualizar Campo\"",
       "puloDoGato": "Salvar não atualiza campos — são dois conceitos. Revisão → Atualizar Documento é para todos os campos, mais pesado.",
       "cascasDeBanana": [
         "Salvar: persiste arquivo, não atualiza campos.",
@@ -686,6 +714,7 @@ export const questions = [
     "explanation": {
       "intro": "Seletor de Data é um Controle de Conteúdo que abre um calendário para o usuário escolher uma data clicando.",
       "papoReto": "Em Desenvolvedor → Controles, há um com ícone de calendário: 'Date Picker Content Control'. Insira no formulário → usuário clica → abre calendário interativo → escolhe data → data aparece no campo.",
+      "respostaCerta": "Controle de Conteúdo de Seletor de Data",
       "puloDoGato": "Texto Simples não é interativo. Caixa de Combinação é para listas de opções. Imagem é para inserir fotos.",
       "cascasDeBanana": [
         "Texto Simples: usuário digita manualmente (sem validação de formato).",
@@ -710,6 +739,7 @@ export const questions = [
     "explanation": {
       "intro": "Guia Desenvolvedor (Developer) é a aba especial para criar formulários avançados com controles interativos.",
       "papoReto": "Se não aparecer a aba Desenvolvedor, ative em Arquivo → Opções → Personalizar Faixa de Opções → marque Desenvolvedor → OK. Depois, Desenvolvedor → grupo Controles mostra todos os controles (Texto, Data, Combo, Checkbox, etc.).",
+      "respostaCerta": "Guia Desenvolvedor → grupo Controles",
       "puloDoGato": "Inserir tem Forma/Campo, mas não controles avançados. Layout é para margens/página, não formulários.",
       "cascasDeBanana": [
         "Inserir: não tem controles avançados.",
@@ -734,6 +764,7 @@ export const questions = [
     "explanation": {
       "intro": "Depois de criar controles em um formulário, é crítico bloquear o edição para que usuários preencham APENAS os campos, não o resto.",
       "papoReto": "Revisão → Restringir Edição (ou Arquivar → Informações → Proteger Documento) → marca 'Permitir apenas este tipo de edição' → escolha 'Preenchimento de formulários' → defina senha → OK. Daí em diante, usuários só conseguem preencher os controles — não podem mudar layout/texto fixo.",
+      "respostaCerta": "Restringir Edição → Permitir apenas este tipo de edição → Preenchimento de formulários",
       "puloDoGato": "Criptografia bloqueia abertura; Marcar como Final é apenas sinalização (usuário consegue desabilitar); Restringir Edição com formulários é a proteção real.",
       "cascasDeBanana": [
         "Criptografar: bloqueia abertura toda, não só edição de conteúdo.",
@@ -758,6 +789,7 @@ export const questions = [
     "explanation": {
       "intro": "Macro é um programa gravado em VBA (Visual Basic for Applications) que automatiza tarefas repetitivas no Word.",
       "papoReto": "Exemplo: gravar uma macro que (1) aplica Estilo, (2) insere header, (3) salva — tudo em um clique depois. Macro é GRAVAÇÃO de cliques/ações, não plugin externo, não Python, não estilo.",
+      "respostaCerta": "Uma sequência de comandos gravada que pode ser executada automaticamente para realizar tarefas repetitivas",
       "puloDoGato": "Python é linguagem fora do Word. Plugin é programa externo. Macro é VBA nativo do Word.",
       "cascasDeBanana": [
         "Plugin terceiros: software externo, não integrado.",
@@ -782,6 +814,7 @@ export const questions = [
     "explanation": {
       "intro": "Guia Desenvolvedor é o hub para programação em Word — macros, controles, editor VBA, tudo lá.",
       "papoReto": "Se não aparecer Desenvolvedor, ativa-se em Arquivo → Opções → Personalizar Faixa → marca Desenvolvedor → OK. Depois, Desenvolvedor → grupo Macros → 'Gravar Macro' ou 'Visual Basic' para criar/editar.",
+      "respostaCerta": "Guia Desenvolvedor",
       "puloDoGato": "Inserir é para objetos (tabelas, imagens). Revisão é para edição (comentários, alterações). Exibir é para painéis. Desenvolvedor é PROGRAMAÇÃO.",
       "cascasDeBanana": [
         "Inserir: objetos, não macros.",
@@ -806,6 +839,7 @@ export const questions = [
     "explanation": {
       "intro": "Normal.dotm é o modelo padrão — macros lá ficam globalmente acessíveis, como estilos.",
       "papoReto": "Ao gravar macro, a caixa pergunta: 'Guardar macro em?'. Escolha 'Normal.dotm (Todos os Documentos)' → pronto, disponível em QUALQUER doc novo.",
+      "respostaCerta": "No modelo Normal.dotm (Todos os Documentos)",
       "puloDoGato": "Documento atual = só nesse arquivo. Normal.dotm = todos futuros. Bem diferente.",
       "cascasDeBanana": [
         "Documento atual: local, não global.",
@@ -830,6 +864,7 @@ export const questions = [
     "explanation": {
       "intro": "Editor do Visual Basic (VBE) é o IDE onde você edita, debugga e programa macros em VBA.",
       "papoReto": "Alt+F11 abre a janela VBE. Lá você pode adicionar condições, loops, variáveis — código puro. Ou Desenvolvedor → Visual Basic.",
+      "respostaCerta": "Editor do Visual Basic (Alt+F11)",
       "puloDoGato": "AutoCorreção é para substituições automáticas, não edição de macro. Não há 'Gerenciador de Estilos de Macro'.",
       "cascasDeBanana": [
         "AutoCorreção: substituições texto, não VBA.",
@@ -854,6 +889,7 @@ export const questions = [
     "explanation": {
       "intro": "Central de Confiabilidade é onde configura políticas de segurança de macro para toda a máquina.",
       "papoReto": "Arquivo → Opções → Central de Confiabilidade → Configurações de Macro → opção 'Desabilitar macros exceto as assinadas digitalmente' garante que SÓ macros com certificado digital válido executem.",
+      "respostaCerta": "Arquivo → Opções → Central de Confiabilidade → Configurações de Macro → Desabilitar macros exceto as assinadas digitalmente",
       "puloDoGato": "Arquivo → Informações → Proteger Documento é para criptografia/senha, não macro. Desenvolvedor não tem submenu de segurança.",
       "cascasDeBanana": [
         "Proteger Documento: para criptografia, não macro.",
@@ -878,6 +914,7 @@ export const questions = [
     "explanation": {
       "intro": "Mala Direta começa escolhendo o tipo de documento (carta, envelope, etiqueta, email, diretório).",
       "papoReto": "Correspondências → Iniciar Mala Direta → dropdown com tipos → escolha (ex: Cartas) → OK. Documento atual vira template de mala direta.",
+      "respostaCerta": "Correspondências → Iniciar Mala Direta → selecionar o tipo de documento",
       "puloDoGato": "Inserir → Campos é para adicionar campos DEPOIS. Correspondências → Iniciar é o passo 1. Bem diferente.",
       "cascasDeBanana": [
         "Inserir → Campos: passo 2+, não passo 1.",
@@ -902,6 +939,7 @@ export const questions = [
     "explanation": {
       "intro": "Mala Direta suporta 5 tipos de documentos — cada um usa o template de forma diferente.",
       "papoReto": "Cartas = documento com texto. Envelopes = só endereço. Etiquetas = múltiplas etiquetas por página. E-mails = corpo de email + destinatários. Diretórios = lista formatada (tipo catálogo).",
+      "respostaCerta": "Cartas, envelopes, etiquetas, e-mails e diretórios",
       "puloDoGato": "PDF/HTML são formatos de saída (depois de gerar), não tipos iniciais. Nem todos os tipos cobrem PDF/HTML.",
       "cascasDeBanana": [
         "PDF/HTML: formatos, não tipos de documento.",
@@ -926,6 +964,7 @@ export const questions = [
     "explanation": {
       "intro": "Mala Direta aceita múltiplas fontes de dados — qualquer que tenha colunas/linhas é válida.",
       "papoReto": "Excel (tabela com cabeçalhos), Access (tabela de banco), Outlook (contactos), CSV (arquivo texto delimitado). Correspondências → Selecionar Destinatários → escolhe fonte.",
+      "respostaCerta": "Planilhas Excel, bancos de dados Access, listas do Outlook e arquivos CSV",
       "puloDoGato": "SQL Server é possível via ODBC, mas não é opção \"nativa/comum\" como as 4 principais. SharePoint também funciona, mas não é tão direto.",
       "cascasDeBanana": [
         "Só Excel: ignora os outros 3.",
@@ -950,6 +989,7 @@ export const questions = [
     "explanation": {
       "intro": "Dentro de Mala Direta, há ferramenta própria para detectar/remover duplicatas na lista de destinatários.",
       "papoReto": "Correspondências → Editar Lista de Destinatários (abre diálogo) → botão 'Localizar Duplicatas' → Word marca duplicatas → você marca para deletar → OK.",
+      "respostaCerta": "Correspondências → Editar Lista de Destinatários → Localizar Duplicatas",
       "puloDoGato": "Dados (Excel) → Remover Duplicatas é para Excel, não Word. Comparar é para documentos, não listas.",
       "cascasDeBanana": [
         "Dados → Remover: ferramenta Excel, não Word.",
@@ -974,6 +1014,7 @@ export const questions = [
     "explanation": {
       "intro": "Campo de Mesclagem insere um placeholder no template — na hora de gerar, Word substitui pelo valor real da fonte de dados.",
       "papoReto": "Correspondências → Inserir Campo de Mesclagem (dropdown) → escolha coluna (ex: Nome) → OK. No template aparecerá <<Nome>>, depois substitui por \"João\", \"Maria\", etc.",
+      "respostaCerta": "Correspondências → Inserir Campo de Mesclagem → selecionar o campo da fonte de dados",
       "puloDoGato": "Texto Rápido é para blocos de texto pré-salvos, não campos dinâmicos de mala direta.",
       "cascasDeBanana": [
         "Inserir → Campo: genérico, não mesclagem.",
@@ -998,6 +1039,7 @@ export const questions = [
     "explanation": {
       "intro": "Se...Então...Senão é uma regra condicional em mala direta que testa um campo da fonte e executa ações diferentes.",
       "papoReto": "Correspondências → Regras (dropdown) → Se...Então...Senão → define: if Gênero = \"M\" then \"Sr.\" else \"Sra.\" → OK. Automático, sem Excel/VBA.",
+      "respostaCerta": "Correspondências → Regras → Se...Então...Senão",
       "puloDoGato": "Excel fórmula é antes de conectar Word; Regra em Word é durante a mala direta — diferença crítica.",
       "cascasDeBanana": [
         "Excel: fórmula condicionada antes da mesclagem.",
@@ -1022,6 +1064,7 @@ export const questions = [
     "explanation": {
       "intro": "Skip Record If pula um registro inteiro se uma condição for verdadeira — não gera documento para esse destinatário.",
       "papoReto": "Correspondências → Regras → Ignorar Registro Se → if Status = \"Inativo\" → pronto, registros inativos não geram documento.",
+      "respostaCerta": "Ignorar Registro Se (Skip Record If)",
       "puloDoGato": "Não confunda: \"Próximo Registro\" não existe. \"Skip\" pula REGISTRO (pula linha na fonte). Se...Então...Senão muda TEXTO.",
       "cascasDeBanana": [
         "Próximo Registro Se: não existe essa regra.",
@@ -1046,6 +1089,7 @@ export const questions = [
     "explanation": {
       "intro": "Visualizar Resultados mostra o template com dados **reais** de cada destinatário — prévia antes de finalizar.",
       "papoReto": "Correspondências → Visualizar Resultados (liga o botão) → usa setas para navegar entre registros → vê como ficará cada documento.",
+      "respostaCerta": "Correspondências → Visualizar Resultados → navegar pelos registros",
       "puloDoGato": "Imprimir visualiza, mas é a última etapa. Visualizar Resultados é pré-revisão, antes de imprimir/enviar.",
       "cascasDeBanana": [
         "Imprimir: última etapa, não pré-revisão.",
@@ -1070,6 +1114,7 @@ export const questions = [
     "explanation": {
       "intro": "Concluir e Mesclar → Enviar Email finaliza a mala direta enviando cada documento mesclado como email.",
       "papoReto": "Correspondências → Concluir e Mesclar → Enviar Mensagens de Email → escolhe campo de email → Word abre sua conta de email e envia cada documento como anexo/corpo.",
+      "respostaCerta": "Correspondências → Concluir e Mesclar → Enviar Mensagens de Email",
       "puloDoGato": "Arquivo → Compartilhar é para um doc, não mala direta. Concluir e Mesclar é mala-direta-específico.",
       "cascasDeBanana": [
         "Compartilhar: um documento, não automação.",
@@ -1094,6 +1139,7 @@ export const questions = [
     "explanation": {
       "intro": "Etiquetas em mala direta = template de etiqueta + dados da fonte Excel = múltiplas etiquetas por página, cada uma preenchida.",
       "papoReto": "Correspondências → Iniciar Mala Direta → Etiquetas → escolha tipo (Avery 5160, etc) → selecione fonte Excel → insira campos (Nome, Rua, etc) → Concluir e Mesclar → Imprimir. Pronto: 500 etiquetas prontas.",
+      "respostaCerta": "Correspondências → Iniciar Mala Direta → Etiquetas → selecionar tipo de etiqueta → conectar à fonte Excel → inserir campos → concluir e mesclar",
       "puloDoGato": "Copiar/colar é manual e sem automação. Mala direta = automático, sem erros de alinhamento.",
       "cascasDeBanana": [
         "Tabela: manual, sem mesclagem.",
@@ -1118,6 +1164,7 @@ export const questions = [
     "explanation": {
       "intro": "Campos MERGEFIELD aceitam chaves de formatação para converter números em moeda/porcentagem/etc.",
       "papoReto": "Clique direito no campo → Editar Campo → adicione chave { MERGEFIELD Valor \\# \"R$ #.##0,00\" } → OK. Número 1500 vira \"R$ 1.500,00\".",
+      "respostaCerta": "Adicionar chave de formatação numérica ao campo: { MERGEFIELD Valor \\# \"R$ #.##0,00\" }",
       "puloDoGato": "Excel formatação não traversa a mala direta — Word precisa da chave \\#. Macro é overkill.",
       "cascasDeBanana": [
         "Excel: formatação local, não passa pelo campo.",
@@ -1142,6 +1189,7 @@ export const questions = [
     "explanation": {
       "intro": "DATE é um campo que insere a data atual do sistema no documento, formatada conforme especificado.",
       "papoReto": "{ DATE \\@ \"dd/MM/yyyy\" } insere data como \"24/06/2026\". Símbolo @ (não #) formatador de data. TODAY não é sintaxe Word real.",
+      "respostaCerta": "{ DATE \\@ \"dd/MM/yyyy\" }",
       "puloDoGato": "\\@ é para DATA. \\# é para NÚMERO. Errar a chave = sintaxe inválida.",
       "cascasDeBanana": [
         "TODAY: não é comando Word real.",
@@ -1166,6 +1214,7 @@ export const questions = [
     "explanation": {
       "intro": "Seções permitem orientações/margens/estilos diferentes em regiões do mesmo documento.",
       "papoReto": "Página 1: Inserir → Quebra → Quebra de Seção (coluna/contínua) → depois layout página 2 diferente. Seções são compartimentos — cada uma configura independentemente.",
+      "respostaCerta": "Inserir Quebra de Seção e definir orientação diferente para cada seção",
       "puloDoGato": "Quebra de PÁGINA não permite orientação diferente. Quebra de SEÇÃO sim.",
       "cascasDeBanana": [
         "Layout → Orientação (todo doc): aplica a TUDO, não seções.",
@@ -1190,6 +1239,7 @@ export const questions = [
     "explanation": {
       "intro": "Cada seção pode ter numeração de página independente — basta desvincular e resetar.",
       "papoReto": "Seção 3: Inserir → Número de Página → clique direito → Formatar Números de Página → marca 'Começar em:' 1 → OK. Seção 3 agora começa página 1 (seções 1-2 seguem 1-X como eram).",
+      "respostaCerta": "Formatar Números de Página na seção 3 com \"Iniciar em: 1\" desvinculando do anterior",
       "puloDoGato": "Sem desvincular do anterior, qualquer número digitado será relativo. Desvinculação é pré-requisito.",
       "cascasDeBanana": [
         "Excluir/reinserir: deleta toda numeração, manual.",
@@ -1214,6 +1264,7 @@ export const questions = [
     "explanation": {
       "intro": "\"Estilo do parágrafo seguinte\" determina automaticamente qual estilo Word aplica ao pressionar Enter.",
       "papoReto": "Modificar Estilo (Corpo de Texto) → Estilos (coluna \"Estilo do parágrafo seguinte\") → escolha \"Corpo de Texto\" → OK. Daqui em diante, quando digitar Corpo de Texto e pressionar Enter, automático aplica Corpo de Texto novamente (não volta para Normal ou outro).",
+      "respostaCerta": "Modificar Estilo → Estilo do parágrafo seguinte → Corpo de Texto",
       "puloDoGato": "Não é atalho (atalho só acelera digitação), não é macro (automação), não é AutoCorreção (substituição de texto).",
       "cascasDeBanana": [
         "Macro: você digita manualmente, sem automação nativa.",
@@ -1238,6 +1289,7 @@ export const questions = [
     "explanation": {
       "intro": "Localizar e Substituir pode operar em nível de estilo, não só texto — substitui todos os parágrafos com um estilo por outro.",
       "papoReto": "Editar → Localizar e Substituir (Ctrl+H) → Mais → (Localizar) Formatar → Estilo → Título 2 → OK → (Substituir) Formatar → Estilo → Título 3 → OK → Substituir Tudo. Automático.",
+      "respostaCerta": "Localizar e Substituir → Mais → Formatar → Estilo → selecionar os estilos de origem e destino",
       "puloDoGato": "Modificar Título 2 herança de Título 3 muda aparência de Título 2 globalmente, não substitui o estilo. Manual é impossível em grande volume.",
       "cascasDeBanana": [
         "Modificar herança: muda Título 2 inteiro, não substitui.",
@@ -1262,6 +1314,7 @@ export const questions = [
     "explanation": {
       "intro": "Conjuntos de Estilos (Style Sets) são temas completos: cores, fontes, efeitos coordenados aplicados a Títulos, Corpo, etc.",
       "papoReto": "Design → Estilos (galeria visual) → escolhe Moderno, Clássico, Colorido, etc → pronto, documento inteiro muda de aparência. Cada estilo (Título, Corpo) atualizamudando cores/fontes de forma coordenada.",
+      "respostaCerta": "Coleções predefinidas de estilos coordenados que alteram a aparência geral do documento",
       "puloDoGato": "Não é tema (temas em Design são suplementares). Não é macro (não é VBA). Não é impressão (não afeta output só).",
       "cascasDeBanana": [
         "Macros: não são visual/coordenadas.",
@@ -1286,6 +1339,7 @@ export const questions = [
     "explanation": {
       "intro": "Normal.dotm é o modelo padrão carregado toda vez que abre Word. Excluir força o Word recriar um novo.",
       "papoReto": "Feche o Word → Localize Normal.dotm (C:\\Users\\[user]\\AppData\\Roaming\\Microsoft\\Templates\\) → Exclua → Abra Word novamente → cria Normal.dotm novo com configurações padrão.",
+      "respostaCerta": "Fechar o Word, localizar o arquivo Normal.dotm e excluí-lo; o Word criará um novo padrão na próxima abertura",
       "puloDoGato": "Opções → Restaurar Padrões não existe (genérico demais). Versão Anterior é para restaurar arquivo de backup. Reinstalar Office é overkill.",
       "cascasDeBanana": [
         "Opções → Restaurar: não existe (genérico).",
@@ -1310,6 +1364,7 @@ export const questions = [
     "explanation": {
       "intro": "TC (Table of Contents Entry) marca texto customizado como entrada de sumário sem ser um título de estilo.",
       "papoReto": "Selecione o texto → Alt+Shift+O (marca como TC) → na caixa marca \"Tabela de Conteúdos\" → OK. Depois, ao gerar o Sumário (TOC), use switch \\F no campo para incluir entradas TC junto com títulos.",
+      "respostaCerta": "Usar o campo TC para marcar entradas de sumário personalizadas e incluir o switch \\F no campo TOC",
       "puloDoGato": "Manual é perder automação. Índice é para palavras-chave, não sumário. Estilo oculto não passa no sumário automático.",
       "cascasDeBanana": [
         "Manual: perde automação, confuso ao atualizar.",
@@ -1334,6 +1389,7 @@ export const questions = [
     "explanation": {
       "intro": "Notas de Rodapé usam numeração personalizável: árabes, romanos, letras, símbolos.",
       "papoReto": "Referências → (clique no sinal da seta em Notas de Rodapé) → Formato do número → dropdown → escolhe \"i, ii, iii\" (romanos minúsculos) → OK. Automático.",
+      "respostaCerta": "Referências → menu de diálogo Notas de Rodapé → Formato do número",
       "puloDoGato": "Número de Página formata páginas, não notas. Opções → Avançado é genérico (não existe submenu de notas lá).",
       "cascasDeBanana": [
         "Número de Página: páginas, não notas.",
@@ -1358,6 +1414,7 @@ export const questions = [
     "explanation": {
       "intro": "Word oferece tipos padrão de referência (Livro, Artigo, Website) e permite criar personalizados.",
       "papoReto": "Referências → Gerenciar Fontes → Novo → escolha tipo mais próximo (ex: Livro) → preencha campos (autor, título, data) → OK. Salva na biblioteca; pode usar em outros docs.",
+      "respostaCerta": "Referências → Gerenciar Fontes → Novo → selecionar o tipo mais próximo e preencher campos personalizados",
       "puloDoGato": "Manual é perder rastreamento/automação. Zotero é externo (não integrado bem). Estilo é formatação, não armazenamento.",
       "cascasDeBanana": [
         "Manual: sem automação, difícil atualizar.",
@@ -1382,6 +1439,7 @@ export const questions = [
     "explanation": {
       "intro": "Índice de Ilustrações (LOF = List of Figures) é gerado automaticamente a partir de legendas inseridas em figuras.",
       "papoReto": "Insira Legendas em cada figura (Referências → Inserir Legenda → escolhe tipo Figura → OK). Depois, Referências → Inserir Índice de Ilustrações → OK. Automático, com números e páginas.",
+      "respostaCerta": "Referências → Inserir Índice de Ilustrações",
       "puloDoGato": "Tabela manual perde automação. Painel de Navegação mostra figuras, não gera lista.",
       "cascasDeBanana": [
         "Tabela manual: sem automação, erro-prone.",
@@ -1406,6 +1464,7 @@ export const questions = [
     "explanation": {
       "intro": "Índice Remissivo suporta hierarquia: entradas principais com subentradas aninhadas.",
       "papoReto": "Selecione texto → Alt+Shift+X → Entrada Principal: \"Gatos\" | Subentrada: \"Raças\" → OK. Resultado: Gatos aparece no índice, com \"Raças\" indentada abaixo.",
+      "respostaCerta": "Alt+Shift+X → preencher o campo Entrada principal e o campo Subentrada separados por dois-pontos",
       "puloDoGato": "Marcar duas vezes (separadamente) cria duas entradas iguais, não hierarquia. A caixa tem campos específicos para isso.",
       "cascasDeBanana": [
         "Duas marcações: cria entradas paralelas, não hierarquia.",
@@ -1430,6 +1489,7 @@ export const questions = [
     "explanation": {
       "intro": "Controles de Conteúdo Lista Suspensa armazenam opções em suas Propriedades internas (não em Excel).",
       "papoReto": "Clique no controle → Desenvolvedor → Propriedades (ou Ctrl+Shift+Alt+P) → guia Conteúdo → seção \"Itens da Lista Suspensa\" → Adicionar → digita \"Opção 1\" → OK → repete. Usuário depois seleciona entre essas opções.",
+      "respostaCerta": "Selecionar o controle → Propriedades → adicionar itens na seção Lista Suspensa",
       "puloDoGato": "Digitar no controle é input, não config. Validação de Dados é Excel, não Word. Excel é externo, cria complexidade.",
       "cascasDeBanana": [
         "Digitar no controle: input de usuário, não setup.",
@@ -1454,6 +1514,7 @@ export const questions = [
     "explanation": {
       "intro": "Macros VBA podem testar condições: se estilo = X, então faça isso; se estilo = Y, faça aquilo.",
       "papoReto": "Alt+F11 (abre VBA) → adicione IF/THEN lógica → if Selection.Style = \"Título\" then... else... → OK. Eficiente.",
+      "respostaCerta": "Editar a macro no Editor VBA adicionando lógica condicional para verificar o estilo antes de aplicar a formatação",
       "puloDoGato": "Regravar por estilo é repetitivo e frágil. Localizar/Substituir é limitado (não entende estilos facilmente).",
       "cascasDeBanana": [
         "Regravar por estilo: repetitivo, frágil.",
@@ -1478,6 +1539,7 @@ export const questions = [
     "explanation": {
       "intro": "Ignorar Registro Se é a ferramenta Word para pular linhas da fonte durante mesclagem.",
       "papoReto": "Correspondências → Regras → Ignorar Registro Se → campo Email → está em branco → OK. Registros sem email não geram documento.",
+      "respostaCerta": "Correspondências → Regras → Ignorar Registro Se → campo Email → está em branco",
       "puloDoGato": "Filtrar Excel é pré-mesclagem. Macro é pós. Regra em Word é on-the-fly durante mesclagem.",
       "cascasDeBanana": [
         "Excel: modifica a fonte, não reversível em Word.",
@@ -1502,6 +1564,7 @@ export const questions = [
     "explanation": {
       "intro": "Envelope Tamanho 10 (\"business envelope\") é padrão comercial nos EUA para mala direta corporativa.",
       "papoReto": "Correspondências → Iniciar Mala Direta → Envelopes → Tamanho 10 → conecte fonte → insira campos de endereço. Compatível com máquinas de franquia.",
+      "respostaCerta": "Envelope Tamanho 10 (4 1/8 x 9 1/2 polegadas)",
       "puloDoGato": "DL é europeu. A4 é folha, não envelope. Ofício é papel grande, não envelope padrão.",
       "cascasDeBanana": [
         "A4: papel, não envelope.",
@@ -1526,6 +1589,7 @@ export const questions = [
     "explanation": {
       "intro": "Verificar Acessibilidade é um scanner/auditor que detecta problemas para leitores de tela (imagens sem alt text, tabelas mal estruturadas, etc).",
       "papoReto": "Revisão → Verificar Acessibilidade → relata problemas → painél lateral mostra erros/avisos → clique para ir direto.",
+      "respostaCerta": "Revisão → Verificar Acessibilidade",
       "puloDoGato": "Inspecionar Documento é para metadados/comentários. Modo Leitura é para visualizar. Opções é preferences.",
       "cascasDeBanana": [
         "Inspecionar: metadados/privacidade.",
@@ -1550,6 +1614,7 @@ export const questions = [
     "explanation": {
       "intro": "Alt Text (texto alternativo) é descrição invisível que leitores de tela leem quando encontram uma imagem.",
       "papoReto": "Clique direito na imagem → Editar Texto Alternativo → descreva o conteúdo (ex: \"Gráfico mostrando crescimento de vendas 2024\") → OK. Acessível.",
+      "respostaCerta": "Texto Alternativo (Alt Text) na imagem",
       "puloDoGato": "Legenda é visual. Hiperlink é navegação. Marca d'água é visual. Alt Text é legível programaticamente.",
       "cascasDeBanana": [
         "Legenda: visual, não tela lê.",
@@ -1574,6 +1639,7 @@ export const questions = [
     "explanation": {
       "intro": "Inspecionar Documento scanner para metadados, comentários, versões, dados XML ocultos — antes de compartilhar.",
       "papoReto": "Arquivo → Informações → Verificar Problemas → Inspecionar Documento → mostra o que está oculto → você remove → compartilha limpo.",
+      "respostaCerta": "Arquivo → Informações → Verificar Problemas → Inspecionar Documento",
       "puloDoGato": "Excluir Comentários é manual (só comentários). Salvar Como não remove tudo (só alguns metadados). Inspecionar é completo.",
       "cascasDeBanana": [
         "Excluir Comentários: só comentários, incompleto.",
@@ -1598,6 +1664,7 @@ export const questions = [
     "explanation": {
       "intro": "Dados XML Personalizados = partes do arquivo .docx (que é ZIP) que armazenam metadados de suplementos/apps/vinculações.",
       "papoReto": "Quando instala suplemento ou vincula dados a um banco, Word armazena em partes XML internas (invisíveis visualmente, mas detectáveis pelo Inspecionador).",
+      "respostaCerta": "Dados armazenados em partes XML personalizadas do documento, como propriedades de suplementos ou vinculações de dados",
       "puloDoGato": "Não é imagens/hiperlinks/estilos (esses são estrutura visual). É dados de aplicação/estrutura.",
       "cascasDeBanana": [
         "Imagens: embedidas, não XML.",
@@ -1622,6 +1689,7 @@ export const questions = [
     "explanation": {
       "intro": "Verificar Compatibilidade testa qual .doc (Word 97-2003) não suportará — antes de converter/salvar.",
       "papoReto": "Arquivo → Informações → Verificar Problemas → Verificar Compatibilidade → relata recursos novos que .doc não aceita → você decide remover ou manter .docx.",
+      "respostaCerta": "Arquivo → Informações → Verificar Problemas → Verificar Compatibilidade",
       "puloDoGato": "Opções → Compatibilidade é preferência global. Salvar Como não avisa de incompatibilidade.",
       "cascasDeBanana": [
         "Opções: preferência global, não auditoria.",
@@ -1646,6 +1714,7 @@ export const questions = [
     "explanation": {
       "intro": "Recuperar Documentos Não Salvos acessa rascunhos temporários que Word mantém mesmo após fechar sem salvar.",
       "papoReto": "Arquivo → Informações → Gerenciar Documento → Recuperar Documentos Não Salvos → lista antigos (com data/hora) → clique → abre → Salvar Como.",
+      "respostaCerta": "Arquivo → Informações → Gerenciar Documento → Recuperar Documentos Não Salvos",
       "puloDoGato": "Lixeira é para arquivo deletado. OneDrive é só se foi pra cloud. Ponto de Sistema é sistema inteiro (overkill).",
       "cascasDeBanana": [
         "Lixeira: arquivo deletado, não não-salvo.",
@@ -1670,6 +1739,7 @@ export const questions = [
     "explanation": {
       "intro": "AutoRecuperação salva cópia temporária periodicamente — padrão 10 min, customizável.",
       "papoReto": "Arquivo → Opções → Salvar → checkbox \"Salvar informações de AutoRecuperação a cada X minutos\" (padrão 10) → mude para 5 se quiser mais frequência.",
+      "respostaCerta": "A cada 10 minutos; Arquivo → Opções → Salvar → Salvar informações de AutoRecuperação a cada X minutos",
       "puloDoGato": "30 min é muito espaçado. 5 min é customizável mas padrão é 10. Não pode ser desabilitado (sempre está).",
       "cascasDeBanana": [
         "30 min: padrão é 10, não 30.",
@@ -1694,6 +1764,7 @@ export const questions = [
     "explanation": {
       "intro": "Parágrafo: formatação inteira (parágrafo + espaçamento + recuos). Caractere: só texto selecionado.",
       "papoReto": "Parágrafo = Título, Corpo (afeta espaçamento/recuos). Caractere = Ênfase, Hiperlink (afeta só fonte/cor).",
+      "respostaCerta": "Estilo de Parágrafo aplica formatação a um parágrafo inteiro incluindo recuos e espaçamento; Estilo de Caractere aplica formatação apenas ao texto selecionado",
       "puloDoGato": "Ambos são permanentes. Ambos usam fontes/cores. Diferença é ESCOPO: parágrafo vs trecho.",
       "cascasDeBanana": [
         "Permanente vs Temporário: ambos persistem.",
@@ -1718,6 +1789,7 @@ export const questions = [
     "explanation": {
       "intro": "Estilos de Caractere aceitam atalhos customizáveis (Ctrl+Alt+X, etc).",
       "papoReto": "Clique direito no estilo → Modificar → Formatar → Atalho de Teclado → escolha combinação → Atribuir → OK.",
+      "respostaCerta": "Modificar o estilo → Formatar → Atalho de Teclado → atribuir combinação de teclas",
       "puloDoGato": "Alt+número é para estilos padrão, não custom. Barra de acesso rápido é para macros. Atalhos SÃO possíveis.",
       "cascasDeBanana": [
         "Alt+número: padrão, não custom.",
@@ -1742,6 +1814,7 @@ export const questions = [
     "explanation": {
       "intro": "Campo = placeholder dinâmico (data, página, autor, etc) — atualiza automático.",
       "papoReto": "Inserir → Campo → escolha (ex: DATE, NUMPAGES) → OK. Quando abre doc, campo mostra valor atual. F9 atualiza.",
+      "respostaCerta": "Um espaço reservado que insere informações dinâmicas que podem ser atualizadas automaticamente",
       "puloDoGato": "Controle é interativo. Marcador é para imagens. Cabeçalho é localização, não campo.",
       "cascasDeBanana": [
         "Controle: interação, não info dinâmica.",
@@ -1766,6 +1839,7 @@ export const questions = [
     "explanation": {
       "intro": "NUMPAGES = total de páginas do doc.",
       "papoReto": "{ NUMPAGES } = total. { PAGE } = página atual.",
+      "respostaCerta": "{ NUMPAGES }",
       "puloDoGato": "PAGE é atual, PAGES/DOCPAGES são não-reais.",
       "cascasDeBanana": [
         "PAGE: atual, não total.",
@@ -1790,6 +1864,7 @@ export const questions = [
     "explanation": {
       "intro": "{ AUTHOR } = proprietário do doc (Arquivo → Propriedades).",
       "papoReto": "{ AUTHOR } lê das propriedades internas.",
+      "respostaCerta": "{ AUTHOR }",
       "puloDoGato": "{ USERNAME } é login Windows, não autor.",
       "cascasDeBanana": [
         "USERNAME: login.",
@@ -1814,6 +1889,7 @@ export const questions = [
     "explanation": {
       "intro": "Se...Então...Senão testa campo vazio e substitui texto.",
       "papoReto": "Regras → Se...Então...Senão → if Nome is empty then \"Prezado Cliente\" else { MERGEFIELD Nome }.",
+      "respostaCerta": "Correspondências → Regras → Se...Então...Senão com condição no campo Nome",
       "puloDoGato": "Campo com padrão = campo só, sem lógica. Excel pré-mescla. Macro é pós.",
       "cascasDeBanana": [
         "Campo padrão: sem lógica.",
@@ -1838,6 +1914,7 @@ export const questions = [
     "explanation": {
       "intro": "OneDrive/SharePoint histórico = Arquivo → Informações → Histórico.",
       "papoReto": "Arquivo → Informações → Histórico de Versões → lista com data/hora/autor → clique → abre/restaura.",
+      "respostaCerta": "Arquivo → Informações → Histórico de Versões",
       "puloDoGato": "Alterações é revisões (redações). Navegação é estrutura. Salvar Como é salvamento.",
       "cascasDeBanana": [
         "Alterações: revisões, não versões.",
@@ -1862,6 +1939,7 @@ export const questions = [
     "explanation": {
       "intro": "Antes de compartilhar versão final: aceite revisões, delete comentários, inspecione.",
       "papoReto": "Revisão → Aceitar Todos → Revisão → Excluir Todos Comentários → Arquivo → Verificar Problemas → Inspecionar → Remover Tudo → Salvar.",
+      "respostaCerta": "Aceitar todas as alterações, excluir todos os comentários, executar o Inspetor de Documento e compartilhar o arquivo limpo",
       "puloDoGato": "PDF é conversão, não limpeza. Marcar Final é sinalização. Ocultar é mascarar, não remove.",
       "cascasDeBanana": [
         "PDF: conversão.",
@@ -1886,6 +1964,7 @@ export const questions = [
     "explanation": {
       "intro": "Controles = modernos (XML). Legado = antigos (simples, compatível Word 97).",
       "papoReto": "Controles: XML vinculação, propriedades avançadas. Legado: apenas dados, sem XML.",
+      "respostaCerta": "Controles de Conteúdo são mais modernos e flexíveis suportando vinculação a dados XML; Campos Legados são mais simples e compatíveis com versões antigas",
       "puloDoGato": "Ambos trabalham em .docx e .dotm. Legado suporta MENOS, não mais.",
       "cascasDeBanana": [
         "Legado mais tipos: não, menos.",
@@ -1910,6 +1989,7 @@ export const questions = [
     "explanation": {
       "intro": "Campo Legado texto pode ser restringido a número/tamanho via Propriedades.",
       "papoReto": "Duplo-clique no campo → Propriedades → Tipo: Número → Máximo: 10 dígitos → OK.",
+      "respostaCerta": "Propriedades do Campo de Texto Legado → Tipo: Número → Comprimento máximo: 10",
       "puloDoGato": "Restringir Edição é proteção doc. Controle de Conteúdo é mais moderno. Macro é externo.",
       "cascasDeBanana": [
         "Restringir: proteção doc.",
@@ -1934,6 +2014,7 @@ export const questions = [
     "explanation": {
       "intro": "Tabelas acessíveis = cabeçalho marcado + alt text.",
       "papoReto": "Clique tabela → Design → linha 1ª marca como cabeçalho. Clique tabela → clique direito → Texto Alternativo. Leitor de tela entende estrutura.",
+      "respostaCerta": "Definir a linha de cabeçalho da tabela e adicionar texto alternativo à tabela",
       "puloDoGato": "Cores/bordas são visuais. Imagem é conversão.",
       "cascasDeBanana": [
         "Adicionar bordas visíveis em todas as células: Incorreto, pois alternativa inválida para o cenário.",
@@ -1958,6 +2039,7 @@ export const questions = [
     "explanation": {
       "intro": "O verificador de acessibilidade do Word avisa quando um objeto pode confundir leitores de tela sobre a sequência de leitura.",
       "papoReto": "Ordem de Leitura Ambígua significa que um objeto flutuante (imagem, caixa de texto, forma) não está claramente posicionado na sequência lógica. Leitores de tela leem na ordem de inserção no fluxo de documento ou pela posição visual — sem marcação explícita, eles ficam confusos. Solução: clicar no objeto → clique direito → propriedades/opções avançadas → definir ordem de leitura ou converter para ancorado.",
+      "respostaCerta": "A posição do objeto em relação ao texto não está clara para leitores de tela, sendo necessário definir a ordem de leitura explicitamente",
       "puloDoGato": "Alt text descreve O QUÊ é o objeto. Ordem de leitura define ONDE e QUANDO o leitor vê. São dois problemas diferentes — alt text sozinho não resolve ordem ambígua.",
       "cascasDeBanana": [
         "O objeto tem texto alternativo duplicado: Alt text duplicado não causa aviso de 'Ordem Ambígua' — o validador avisa de duplicação de alt text, não de ordem.",
@@ -1982,6 +2064,7 @@ export const questions = [
     "explanation": {
       "intro": "Suplementos VBA (add-ins) precisam ser instalados em um local que Word reconheça na inicialização.",
       "papoReto": "A pasta STARTUP do Word é onde Word procura suplementos .dotm ao iniciar. Salvar o suplemento .dotm lá garante que carregue automaticamente sempre. Caminho típico: C:\\Users\\[User]\\AppData\\Roaming\\Microsoft\\Word\\STARTUP\\. AutoOpen em Normal.dotm só executa código em normal.dotm, não carrega suplemento externo.",
+      "respostaCerta": "Salvar o suplemento como .dotm e adicioná-lo à pasta de Inicialização do Word (STARTUP)",
       "puloDoGato": "AutoOpen é para macros dentro de um modelo. STARTUP é para carregar modelos inteiros como suplementos. Confundir os dois é erro comum.",
       "cascasDeBanana": [
         "Inserir o código VBA diretamente no Normal.dotm: Modifica o template global — funciona para um única macro, mas não é ideal para suplementos reutilizáveis/mantíveis.",
@@ -2006,6 +2089,7 @@ export const questions = [
     "explanation": {
       "intro": "Word tem vários campos de campo (field codes) — REF é o que puxa conteúdo de um Indicador (bookmark) e permite atualização automática.",
       "papoReto": "REF = Reference (referência). Quando um Indicador é nomeado e marcado no documento, { REF NomeDoIndicador } busca o conteúdo e atualiza se o conteúdo do bookmark mudar. Pressione F9 ou clicar direito → Atualizar Campo.",
+      "respostaCerta": "{ REF NomeDoIndicador }",
       "puloDoGato": "Bookmark é apenas um rótulo de posição. REF busca o conteúdo dentro desse bookmark. LINK é para links externos/OLE. DOCVARIABLE é para variáveis de documento (predefinidas pelo sistema).",
       "cascasDeBanana": [
         "{ BOOKMARK NomeDoIndicador }: BOOKMARK é o campo de DEFINIÇÃO do indicador, não de busca. Não retorna conteúdo.",
@@ -2030,6 +2114,7 @@ export const questions = [
     "explanation": {
       "intro": "Campos em Word (como PAGE, DATE, REF, MERGEFIELD) mostram valores dinâmicos que precisam ser atualizados.",
       "papoReto": "F9 é o atalho universal para atualizar campos. Ctrl+A seleciona tudo, então Ctrl+A + F9 atualiza todos os campos do documento de uma vez — muito mais rápido que clicar em cada um. Isso é essencial antes de imprimir para garantir números de página, datas e referências cruzadas corretos.",
+      "respostaCerta": "Selecionar tudo com Ctrl+A e pressionar F9 para atualizar todos os campos",
       "puloDoGato": "Salvar NÃO atualiza campos automaticamente (essa é a grande pegadinha). O usuário precisa pressionar F9 manualmente ou Ctrl+A → F9.",
       "cascasDeBanana": [
         "Clicar com o botão direito em cada campo: Funciona, mas é extremamente lento para dezenas de campos. Impraticável.",
@@ -2054,6 +2139,7 @@ export const questions = [
     "explanation": {
       "intro": "Campos de mesclagem (merge fields) aceitam modificadores de formato (format switches) para alterar a apresentação dos dados.",
       "papoReto": "O switch \\* Upper (com barra invertida e asterisco) força o campo a exibir o resultado em MAIÚSCULAS, independente do caso na fonte de dados. Syntax exata: { MERGEFIELD Nome \\* Upper }. Outros switches: \\* FirstCap (primeira letra maiúscula), \\* Lower (tudo minúsculo).",
+      "respostaCerta": "{ MERGEFIELD Nome \\* Upper }",
       "puloDoGato": "A barra invertida e asterisco (\\*) são sintaxe de switch de formatação no Word. Português tem tradução 'MAIÚSC' mas a prova usa 'Upper' (inglês técnico).",
       "cascasDeBanana": [
         "{ MERGEFIELD Nome \\* CAPS }: CAPS não é um switch válido. Não existe esse modificador no Word.",
@@ -2078,6 +2164,7 @@ export const questions = [
     "explanation": {
       "intro": "Mail merge precisa numerar cada documento gerado sequencialmente (doc 1, doc 2, doc 3, etc.).",
       "papoReto": "MERGESEQ conta quantos documentos foram gerados durante a mesclagem. Começa em 1 e incrementa a cada documento mesclado. Colocar { MERGESEQ } na página torna cada saída única e numerada.",
+      "respostaCerta": "{ MERGESEQ }",
       "puloDoGato": "MERGEREC também existe, mas retorna o número da linha na fonte de dados (pode ter gaps se há filtros). MERGESEQ = contador de documentos gerados (sempre 1, 2, 3, 4...).",
       "cascasDeBanana": [
         "{ MERGEREC }: Retorna o número do registro na lista de dados, não o número do documento. Se filtrar dados, MERGEREC pula números.",
@@ -2102,6 +2189,7 @@ export const questions = [
     "explanation": {
       "intro": "Assinatura digital criptografica vincula a identidade do signatário e o estado do documento em um momento específico.",
       "papoReto": "Assinatura digital oferece duas garantias: (1) Integridade — qualquer alteração no documento após a assinatura invalida a assinatura (detecta mudanças). (2) Autenticidade — o certificado digital do signatário comprova quem assinou (com base em PKI/autoridade certificadora). Senha criptografa o arquivo, mas não prova identidade. Proteção contra cópia é controle de permissão, não assinatura.",
+      "respostaCerta": "Que o documento não foi alterado desde que foi assinado e que a identidade do signatário foi verificada",
       "puloDoGato": "Senha = confidencialidade. Assinatura = autenticidade + integridade. Dois mecanismos de segurança diferentes.",
       "cascasDeBanana": [
         "Criptografia com senha: Protege o arquivo contra acesso, mas não prova quem o criou ou se foi alterado. Qualquer pessoa com a senha pode abrir e modificar.",
@@ -2126,6 +2214,7 @@ export const questions = [
     "explanation": {
       "intro": "Uma linha de assinatura é um espaço visual no documento onde o signatário assina — é um convite legível antes da assinatura criptográfica ser aplicada.",
       "papoReto": "A linha de assinatura exibe: (1) linha horizontal (espaço para assinar), (2) nome da pessoa esperada que assine, (3) cargo/título, (4) instruções legíveis (ex.: 'Clique para assinar' ou 'Assinado em: [data]'). Isso é UI/conteúdo legível. O hash e certificado são dados internos da assinatura — não aparecem visualmente ali.",
+      "respostaCerta": "Nome do signatário, cargo e instruções para assinar",
       "puloDoGato": "Linha de assinatura = apresentação visual para o usuário. Certificado/hash = metadados internos criptografados. A pergunta trata do que APARECE na linha, não do que está escondido.",
       "cascasDeBanana": [
         "Data e hora apenas: A linha exibe MAIS do que só data/hora — inclui nome, cargo e instruções.",
@@ -2150,6 +2239,7 @@ export const questions = [
     "explanation": {
       "intro": "O painel de Estilos mostra TODOS os estilos disponíveis do template por padrão — dezenas deles aparecem mesmo que nunca sejam usados.",
       "papoReto": "Clicar no botão '≡' (Menu) do Painel de Estilos → 'Opções' → em 'Selecionar estilos a mostrar', escolher 'Estilos em uso'. Isso filtra a lista para exibir APENAS os estilos já aplicados no documento atual. Reduz a poluição visual e facilita encontrar estilos relevantes.",
+      "respostaCerta": "Opções do Painel de Estilos → Selecionar estilos a mostrar → \"Estilos em uso\"",
       "puloDoGato": "Esse filtro é LOCAL (por documento) — não deleta estilos, só esconde. Se você aplicar um novo estilo depois, ele aparecerá na lista.",
       "cascasDeBanana": [
         "Excluir estilos via Gerenciador: Deletar estilos pode quebrar formatação se fossem usados (mesmo que você não visse). Melhor filtrar que deletar.",
@@ -2174,6 +2264,7 @@ export const questions = [
     "explanation": {
       "intro": "Word reconhece nomes especiais de macro que disparam automaticamente em eventos específicos.",
       "papoReto": "AutoOpen é o nome que Word procura quando um DOCUMENTO é aberto. Quando você abre um .docm ou documento baseado em um .dotm, Word procura por uma Sub AutoOpen() no VBA. Se existir, executa automaticamente.",
+      "respostaCerta": "AutoOpen",
       "puloDoGato": "AutoOpen = evento de ABERTURA de documento. AutoExec = evento de INICIALIZAÇÃO do Word (muito raro). AutoStart é invenção (não existe).",
       "cascasDeBanana": [
         "AutoExec: Existe, mas executa quando o Word INICIA, não quando um documento abre. É menos comum e menos útil para documentos específicos.",
@@ -2198,6 +2289,7 @@ export const questions = [
     "explanation": {
       "intro": "Word tem dois eventos automáticos diferentes para macros — um no documento, outro na aplicação.",
       "papoReto": "AutoOpen: Dispara quando você ABRE UM DOCUMENTO (qualquer .doc/.docm). Está em Normal.dotm ou no template do documento. AutoExec: Dispara quando WORD INICIA (ao abrir a aplicação). Procura por AutoExec em Normal.dotm apenas. Cronologia: Word inicia → AutoExec (se houver) → Usuário abre documento → AutoOpen (se houver).",
+      "respostaCerta": "AutoOpen executa quando um documento específico é aberto; AutoExec executa quando o próprio Word é iniciado",
       "puloDoGato": "AutoOpen = aciona a cada novo documento aberto. AutoExec = aciona UMA VEZ por sessão Word. Frequência diferentes, eventos diferentes.",
       "cascasDeBanana": [
         "AutoExec executa quando qualquer documento abre: Não — AutoExec é apenas na inicialização do Word. Qualquer documento que abre dispara AutoOpen, não AutoExec.",
@@ -2222,6 +2314,7 @@ export const questions = [
     "explanation": {
       "intro": "Índice remissivo lista termos chave com páginas; 'Veja também' = entrada de índice que referencia outro termo.",
       "papoReto": "Alt+Shift+X abre o diálogo de Entrada de Índice Remissivo. Lá você marca 'Referência cruzada' e digita o termo relacionado (ex.: 'Veja também: Formatação'). Isso cria uma entrada especial no índice que aponta para outro termo, não para uma página.",
+      "respostaCerta": "Alt+Shift+X → selecionar \"Referência cruzada\" e digitar o termo relacionado no campo",
       "puloDoGato": "Alt+Shift+X é o atalho universal para MARCAR termos para índice. Depois que todos estão marcados, você insere o índice via Referências → Índice → OK.",
       "cascasDeBanana": [
         "Referências → Referência Cruzada → Índice: Caminho errado. Referência Cruzada é para apontar para partes do documento (headings, bookmarks). Índice remissivo usa Alt+Shift+X.",
@@ -2246,6 +2339,7 @@ export const questions = [
     "explanation": {
       "intro": "Caracteres não imprimíveis (¶ parágrafo, · espaço) são úteis para debugging de formatação, mas Ctrl+Shift+8 apenas ativa na sessão atual.",
       "papoReto": "Arquivo → Opções → Exibir (em inglês: 'Display') → checkmark 'Always show formatting marks' (ou similar, conforme versão). Isso persiste entre sessões. Ctrl+Shift+8 é toggle rápido, mas reseta ao fechar/reabrir Word.",
+      "respostaCerta": "Arquivo → Opções → Exibir → marcar \"Sempre mostrar estas marcas de formatação na tela\"",
       "puloDoGato": "Precisa de Opções (não há outro lugar para \"permanentemente\" em Exibir/Layout). Opções = preferências globais do Word.",
       "cascasDeBanana": [
         "Ctrl+Shift+8 em cada sessão: Funciona TEMPORARIAMENTE, mas a pergunta pede PERMANENTEMENTE.",
@@ -2270,6 +2364,7 @@ export const questions = [
     "explanation": {
       "intro": "Atalhos de teclado são configurações que precisam ser armazenadas no template global para persistir entre documentos.",
       "papoReto": "Arquivo → Opções → Personalizar Faixa de Opções (Customize Ribbon) → em 'Keyboard Shortcuts', clique 'Customize...'. Na dialog, escolha um comando, atribua a tecla. Na base da dialog, há dropdown 'Save in:' — selecionar 'Normal.dotm' salva os atalhos no template global. Qualquer novo documento herdará esses atalhos.",
+      "respostaCerta": "Arquivo → Opções → Personalizar Faixa de Opções → Atalhos de Teclado → salvar em Normal.dotm",
       "puloDoGato": "Se salvar em 'Normal' em vez de 'Normal.dotm', atalhos aplicam apenas ao documento. Precisa de .dotm (template) para persistir.",
       "cascasDeBanana": [
         "Exibir → Macros → Atribuir Atalhos: Esse menu não existe em versões modernas (Ribbon). Pode aparecer em VBA legacy.",
@@ -2294,6 +2389,7 @@ export const questions = [
     "explanation": {
       "intro": "Mail merge tem vários tipos: Cartas (1 registro = 1 documento), Etiquetas, Diretório (múltiplos registros por página).",
       "papoReto": "Diretório cria um documento único que mostra TODOS os registros da lista em sequência (sem quebra de página automática entre registros). Perfeito para catálogos onde você quer múltiplos produtos/pessoas em tabela contínua ou lista formatada. Cartas cria 1 documento por registro.",
+      "respostaCerta": "Correspondências → Iniciar Mala Direta → Diretório",
       "puloDoGato": "Diretório = lista tudo junto. Cartas = separa por documento. Catálogo = não é termo padrão (distrator inventado).",
       "cascasDeBanana": [
         "Cartas: Cria 1 documento por registro (quebra de página entre cada). Errado para catálogo contínuo.",
@@ -2318,6 +2414,7 @@ export const questions = [
     "explanation": {
       "intro": "Sumário pode ser personalizado em apresentação — pontos/preenchimento é configuração de estilo aplicado ao gerar.",
       "papoReto": "Referências → Sumário → clicar seta no Sumário Automático → 'Sumário Personalizado' (ou 'Custom Table of Contents'). Dialog exibe opções: 'Caractere de preenchimento' dropdown (escolhe .), 'Alinhamento' radio buttons. Essas configurações aplicam ao sumário inteiro quando gerado. Regenerar sumário (direito → Atualizar Campo) mantém as configurações.",
+      "respostaCerta": "Referências → Sumário → Sumário Personalizado → definir caractere de preenchimento e alinhamento à direita",
       "puloDoGato": "Personalizar ANTES de gerar (ou ao atualizar) é automático. Formatar MANUALMENTE depois = cada regeneração perde.",
       "cascasDeBanana": [
         "Tabulações manuais: Funciona, mas quebra ao regenerar o sumário. Não é automático.",
@@ -2342,6 +2439,7 @@ export const questions = [
     "explanation": {
       "intro": "Fontes bibliográficas em Word são armazenadas em lista privada do usuário; compartilhar exige exportar para arquivo reutilizável.",
       "papoReto": "Referências → Gerenciar Fontes abre dialog com 'Master List' (todas as fontes do Word) e 'Current List' (as que você usa no documento). Há botão 'Copy' que passa de Master para Current, e 'Save As' que exporta Current para .xml. Colega importa esse .xml na sua 'Master List', então usa em qualquer documento.",
+      "respostaCerta": "Referências → Gerenciar Fontes → copiar fontes da Lista Principal para um arquivo XML exportado",
       "puloDoGato": "Sources.xml em AppData é privado ao usuário — é LEITURA, não compartilhamento. Exportar via 'Save As' gera arquivo .xml que você envia.",
       "cascasDeBanana": [
         "Copiar/colar bibliografia: Copia apenas o texto gerado (formatado), não as fontes originais — colega não consegue citar ou editar fontes.",
@@ -2366,6 +2464,7 @@ export const questions = [
     "explanation": {
       "intro": "Content Controls (controles simples) armazenam dados visualmente no documento. XML personalizadas expõem dados em estrutura processável.",
       "papoReto": "Controle de Conteúdo vinculado a XML personalizado armazena dados em partes XML dentro do documento (.docx é ZIP com XML interno). Sistemas externos podem extrair esses dados via API/código sem abrir visualmente — leem a estrutura XML. Controles simples = dados apenas visíveis no UI; hard para automação.",
+      "respostaCerta": "Permite que os dados preenchidos sejam extraídos programaticamente por sistemas externos sem abrir o documento",
       "puloDoGato": "XML personalizado = Integração com ERP/CRM. Sistema recebe .docx, processa XML, extrai dados, povoa banco de dados automaticamente.",
       "cascasDeBanana": [
         "Funcione offline: Ambos funcionam offline. Conectividade não é diferença.",
@@ -2390,6 +2489,7 @@ export const questions = [
     "explanation": {
       "intro": "Restrição granular de edição no Word permite bloquear o documento inteiro mas liberar seções específicas para usuários/grupos.",
       "papoReto": "Primeiro, inserir Seções (quebras contínuas) para dividir o documento. Depois Revisão → Restringir Edição → marca-se 'Permitir apenas edição nessas regiões' → clica em 'Exceções'. Dialog exibe lista de seções — você seleciona quais são editáveis e atribui usuário ou grupo AD específico a cada uma. Salva, distribui arquivo. Revisor A só edita Seção 1, Revisor B só Seção 3, resto bloqueado.",
+      "respostaCerta": "Revisão → Restringir Edição → Exceções → selecionar seções e atribuir grupos ou usuários específicos",
       "puloDoGato": "'Exceções' = as áreas QUE PODEM ser editadas. Tudo mais fica protegido. Precisa de senhas ou autenticação AD para que restrição seja legítima.",
       "cascasDeBanana": [
         "Senhas diferentes por seção: Não existe. Senha é global ao documento — você só pode ter 1 para desbloquear tudo.",
@@ -2414,6 +2514,7 @@ export const questions = [
     "explanation": {
       "intro": "Parágrafos com formatação manual em vez de estilos precisam ser convertidos para aplicar estilos globalmente.",
       "papoReto": "Localizar e Substituir (Ctrl+H) → clica 'Mais' → 'Formatar' → busca por 'Sem Estilo' (texto sem estilo aplicado). Depois na seção de Substituição, escolhe o estilo desejado e substitui todos. Isso detecta apenas parágrafos SEM estilo, ignorando os que já têm.",
+      "respostaCerta": "Usar Localizar e Substituir → Mais → Formatar → Sem Estilo e substituir pelo estilo desejado",
       "puloDoGato": "Ctrl+A e aplicar estilo SOBRESCREVE estilos existentes. Localizar específico 'Sem Estilo' = laser-targeted, não vai quebrar o que já está certo.",
       "cascasDeBanana": [
         "Pincel de Formatação: Aplicar 1 por 1 é impossível em centenas de parágrafos. Manual demais.",
@@ -2438,6 +2539,7 @@ export const questions = [
     "explanation": {
       "intro": "Herança de estilos permite que um novo estilo herde propriedades de outro e só adicione diferenças mínimas.",
       "papoReto": "Painel de Estilos (F11) → direito no estilo → Modificar → em 'Estilo baseado em' dropdown, seleciona o estilo pai. Agora este estilo herda TODAS as propriedades do pai (fonte, tamanho, cor, espaçamento). Você modifica apenas o que precisa (ex.: recuo à esquerda). Se o pai mudar, este novo estilo atualiza automaticamente.",
+      "respostaCerta": "Modificar o estilo → Estilo baseado em → selecionar o estilo base → adicionar apenas o recuo desejado",
       "puloDoGato": "Herança = documentação viva. Cópia estática = quebra-cabeça de manutenção. Sempre que 'deve herdar', pense 'Estilo baseado em'.",
       "cascasDeBanana": [
         "Copiar e renomear: Cria cópia congelada — não herda mais. Mudanças no pai não afetam a cópia.",
@@ -2462,6 +2564,7 @@ export const questions = [
     "explanation": {
       "intro": "Por padrão, cabeçalhos de diferentes seções são VINCULADOS — mudanças em um afetam todos.",
       "papoReto": "Duplo-clique no cabeçalho da Seção 2 → Design (Ferramentas de Cabeçalho e Rodapé) → desmarcar 'Vincular ao Anterior'. Agora Seção 2 tem cabeçalho independente. Editar cabeçalho de Seção 2 não afeta Seção 1. Você pode ter cabeçalhos totalmente diferentes por seção.",
+      "respostaCerta": "Quebrar o vínculo entre os cabeçalhos das seções clicando em \"Vincular ao Anterior\" para desativá-lo",
       "puloDoGato": "Padrão = vinculado (economiza trabalho repetitivo em docs simples). Desvinculação = controle granular para docs complexos.",
       "cascasDeBanana": [
         "Quebra de Página: Quebra de página = nova página mesma seção. Não afeta cabeçalhos. Precisa ser quebra de SEÇÃO.",
@@ -2486,6 +2589,7 @@ export const questions = [
     "explanation": {
       "intro": "Quebras de seção controlam quando um novo conteúdo força nova página e qual tipo (par, ímpar, contínua).",
       "papoReto": "Página Ímpar = conteúdo após quebra sempre começa em página ímpar (1, 3, 5...). Útil em livros/relatórios onde capítulos sempre começam do lado direito. Layout → Quebras → Quebra de Seção → Página Ímpar.",
+      "respostaCerta": "Quebra de Seção → Página Ímpar",
       "puloDoGato": "Página Par = lado esquerdo (2, 4, 6...). Próxima Página = deixa uma página em branco se necessário, mas não garante par/ímpar.",
       "cascasDeBanana": [
         "Próxima Página: Pula para página seguinte, MAS pode ser par ou ímpar — não força par/ímpar específico.",
@@ -2510,6 +2614,7 @@ export const questions = [
     "explanation": {
       "intro": "Colunas (multi-column layout) aplicam-se a SEÇÕES — para uma seção, Word cria quebras automaticamente.",
       "papoReto": "Seleciona o texto que quer em colunas → Layout → Colunas → escolhe 'Duas' (ou mais). Word detecta a seleção, cria uma seção automaticamente em volta, aplica colunas. Sem necessidade de inserir quebras manualmente — Word faz.",
+      "respostaCerta": "Selecionar o texto desejado → Layout → Colunas → Duas; o Word insere quebras de seção automaticamente",
       "puloDoGato": "Quando você seleciona, Word é inteligente: 'ah, usuário quer colunas nesse trecho específico' → cria seção e aplica.",
       "cascasDeBanana": [
         "Tabela: Simula colunas, mas sem o fluxo de texto — coluna A vai até o final, depois coluna B. Não é fluxo genuíno.",
@@ -2534,6 +2639,7 @@ export const questions = [
     "explanation": {
       "intro": "Depois de um trecho em colunas, você precisa encerrar as colunas para voltar a 1 coluna no resto do documento.",
       "papoReto": "Coloca-se o cursor no final do trecho com colunas → Layout → Quebras → Quebra de Seção Contínua. Isso cria uma nova seção após as colunas, com formatação de 1 coluna (padrão). Texto após a quebra volta ao normal. Contínua = na mesma página (não pula para nova página).",
+      "respostaCerta": "Quebra de Seção Contínua ao final do trecho de duas colunas",
       "puloDoGato": "Contínua = mesma página. Se você usar 'Próxima Página', aí pula página (desnecessário se quer fluxo).",
       "cascasDeBanana": [
         "Quebra de Coluna manual: Pula colunas (força texto para próxima coluna), não termina coluna.",
@@ -2558,6 +2664,7 @@ export const questions = [
     "explanation": {
       "intro": "Um Indicador é um ponto nomeado no documento — permite ir lá rapidamente ou referenciar em outro lugar.",
       "papoReto": "Bookmark = marca uma posição (ou intervalo de texto) e dá um nome. Depois você cria hyperlink interno para lá, ou usa em campos REF para puxar o conteúdo. Exemplo: marca cabeçalho 'Introdução' como bookmark 'IntroSection' → em outro lugar insere { REF IntroSection } → aparece o texto do bookmark, atualizado se mudar.",
+      "respostaCerta": "Um marcador de posição nomeado no documento que permite navegação rápida e referência cruzada a esse ponto",
       "puloDoGato": "Bookmark é ESTRUTURAL (posição/conteúdo nomeado), não visual (como comentário). Invisível ao leitor a não ser que você crie hyperlink.",
       "cascasDeBanana": [
         "Comentário: Comentários são anotações, visíveis em painel lateral. Bookmarks são silenciosos.",
@@ -2582,6 +2689,7 @@ export const questions = [
     "explanation": {
       "intro": "Criar um Indicador envolve seleção de texto e nomeação via menu Inserir.",
       "papoReto": "Seleciona o texto (ou apenas posição do cursor) → Inserir (aba) → Indicador (dropdown) → digita nome (ex.: 'Conclusão', sem espaços) → clica 'Adicionar'. Indicador fica invisível no documento, mas você pode agora referenciar com { REF Conclusão } ou criar hyperlink para lá.",
+      "respostaCerta": "Selecionar o texto → Inserir → Indicador → digitar o nome → Adicionar",
       "puloDoGato": "Nomes sem espaços, sem caracteres especiais. 'Conclusão' OK, 'Conclusão da Seção' não (espaços).",
       "cascasDeBanana": [
         "Referências → Marcar Entrada: Isso é para ÍNDICE remissivo (XE fields), não bookmarks.",
@@ -2606,6 +2714,7 @@ export const questions = [
     "explanation": {
       "intro": "O campo REF puxa conteúdo de um indicador (bookmark) e atualiza automaticamente se o original mudar.",
       "papoReto": "{ REF NomeDoIndicador } = reference (referência) ao bookmark. Busca o conteúdo do bookmark e exibe. Se o bookmark mudar, você pressiona F9 (atualizar campo) e o REF atualiza. HYPERLINK cria link clicável, não puxa conteúdo.",
+      "respostaCerta": "{ REF NomeDoIndicador }",
       "puloDoGato": "REF = content pulling (busca o texto). LINK/HYPERLINK = navigation (leva você lá). Diferença de propósito.",
       "cascasDeBanana": [
         "HYPERLINK: Cria link clicável, mas não exibe o conteúdo do bookmark — você precisa clicar para ir lá.",
@@ -2630,6 +2739,7 @@ export const questions = [
     "explanation": {
       "intro": "Documentos baseados em um template podem se manter sincronizados com estilos do template automaticamente.",
       "papoReto": "Aba Desenvolvedor (Developer) → Modelos de Documento (Templates) → checkbox 'Atualizar estilos do documento automaticamente a partir do modelo' (Automatically Update Document Styles). Ativa isso. Agora sempre que você abre o documento, se o .dotm foi modificado, o documento puxa os estilos atualizados. Sem necessidade de sincronização manual.",
+      "respostaCerta": "Ativar \"Atualizar estilos do documento automaticamente a partir do modelo\" nas configurações do documento via Desenvolvedor → Modelos de Documento",
       "puloDoGato": "Isso é útil em ambiente corporativo onde o template é centralizado e precisa aplicar mudanças de formatação em lote.",
       "cascasDeBanana": [
         "Reabrir e aceitar manualmente: Possível, mas manual demais. Você quer automático para 100 documentos.",
@@ -2654,6 +2764,7 @@ export const questions = [
     "explanation": {
       "intro": "VBA em Word tem objetos que representam a posição atual — Selection é o mais direto.",
       "papoReto": "Selection representa a seleção/cursor do usuário no documento. Selection.TypeText() insere texto ali. Ou: ActiveDocument.Bookmarks(\"\\Sel\") é um bookmark especial que aponta para a seleção atual. Ambas funcionam para 'inserir no ponto de inserção'.",
+      "respostaCerta": "Selection.TypeText ou ActiveDocument.Bookmarks(\"\\Sel\").Range",
       "puloDoGato": "Content = documento inteiro. Selection = ponto específico. Para 'aqui', use Selection.",
       "cascasDeBanana": [
         "Content.InsertAfter: Insere no FIM do documento, não no ponto de inserção.",
@@ -2678,6 +2789,7 @@ export const questions = [
     "explanation": {
       "intro": "Personalizar a Barra de Ferramentas de Acesso Rápido envolve selecionar macros como comandos disponíveis.",
       "papoReto": "Arquivo → Opções → Barra de Ferramentas de Acesso Rápido → dropdown 'Escolher comandos de:' → seleciona 'Macros' → lista exibe todas suas macros → seleciona a desejada → clica 'Adicionar >' → macro aparece na barra.",
+      "respostaCerta": "Arquivo → Opções → Barra de Ferramentas de Acesso Rápido → Escolher comandos de: Macros → selecionar e adicionar",
       "puloDoGato": "Macros não são 'comandos built-in' — precisa explicitamente dizer ao Word 'busque em Macros' (não em Comandos Populares).",
       "cascasDeBanana": [
         "Desenvolvedor → Macros → Atribuir: Menu não tem isso — Desenvolvedor tem Macros (para gerenciar), não atribuir.",
@@ -2702,6 +2814,7 @@ export const questions = [
     "explanation": {
       "intro": "Word pode usar uma consulta SQL (query) diretamente de um banco Access como fonte de dados para mail merge.",
       "papoReto": "Correspondências → Selecionar Destinatários → 'Usar Lista Existente' → procura o .accdb → Word detecta as tables E queries dentro → seleciona a query desejada. Word conecta direto — sem exportar para Excel ou criar macro.",
+      "respostaCerta": "Correspondências → Selecionar Destinatários → Usar Lista Existente → selecionar o arquivo .accdb → selecionar a consulta desejada",
       "puloDoGato": "Access .accdb é formato nativo suportado. SQL query dentro do Access fica acessível como 'lista' para Word.",
       "cascasDeBanana": [
         "Exportar para Excel: Funciona, mas cria arquivo intermediário — menos eficiente se dados mudam.",
@@ -2726,6 +2839,7 @@ export const questions = [
     "explanation": {
       "intro": "Números em merge fields precisam de formatação — switch \\# (hash) define padrão de exibição.",
       "papoReto": "Switch \\# define número format. \"#.##0,00\" = mil-separador (.) + dois decimais (,). # = dígito opcional, 0 = obrigatório. Exemplo: 1234.56 → \"1.234,56\" (padrão Português).",
+      "respostaCerta": "{ MERGEFIELD Valor \\# \"#.##0,00\" }",
       "puloDoGato": "\\@ é para DATA (não número). \\* é para formato geral. \\# é NÚMEROs especificamente.",
       "cascasDeBanana": [
         "\\@ \"0.00\": Switch de data, não número.",
@@ -2750,6 +2864,7 @@ export const questions = [
     "explanation": {
       "intro": "Hiperlinks de email têm uma opção dedicada no diálogo de inserção.",
       "papoReto": "Inserir → Link (ou Ctrl+K) → em vez de 'Site da Web', escolhe 'Endereço de Email' (lado esquerdo) → preenche email + assunto opcional → OK.",
+      "respostaCerta": "Inserir → Link → Endereço de Email → preencher o endereço e assunto",
       "puloDoGato": "Campo dedicado de email facilita — sem precisar digitar 'mailto:' manualmente ou usar Página Web.",
       "cascasDeBanana": [
         "Página Web + mailto: Funciona técnicamente, mas requer digitar mailto: manualmente. Caminho mais longo.",
@@ -2774,6 +2889,7 @@ export const questions = [
     "explanation": {
       "intro": "Hiperlinks em Word são campos — Ctrl+Shift+F9 desvincula TODOS os campos (hiperlinks inclusive) em uma só vez.",
       "papoReto": "Ctrl+A (seleciona tudo) → Ctrl+Shift+F9 (desvincular campos) → hiperlinks viram texto puro (azul sublinhado vira preto normal). Conteúdo mantém, formatação de hiperlink vai.",
+      "respostaCerta": "Selecionar tudo com Ctrl+A e pressionar Ctrl+Shift+F9 para desvincular todos os campos",
       "puloDoGato": "Desvincular = converte campo para valor estático. Hiperlinks não funcionam mais, mas texto fica.",
       "cascasDeBanana": [
         "Clicar direito um por um: Funciona, mas com 100 hiperlinks é impraticável.",
@@ -2798,6 +2914,7 @@ export const questions = [
     "explanation": {
       "intro": "Listas multinível precisam incluir o número do nível pai para gerar numeração hierárquica (1.1, 1.2).",
       "papoReto": "Página Inicial (Home) → Numeração dropdown → 'Definir Nova Lista Multinível' → dialog exibe níveis 1, 2, 3... → seleciona nível 2 → em 'Formato:', marca 'Incluir número do nível anterior' (ou 'Include level number from') → formato fica 'Nível 1 . Nível 2'. Resultado: 1.1, 1.2.",
+      "respostaCerta": "Definir Nova Lista Multinível com a opção \"Incluir número do nível\" para os subníveis",
       "puloDoGato": "Sem 'Incluir nível anterior', nível 2 seria apenas \"1, 2, 3\" (aparentemente igual ao nível 1).",
       "cascasDeBanana": [
         "Tab para subníveis: Tab muda de nível, mas não controla FORMAT (como números aparecem).",
@@ -2822,6 +2939,7 @@ export const questions = [
     "explanation": {
       "intro": "Listas multinível vinculadas a estilos podem 'quebrar' a sequência após edições — opção Parágrafo corrige.",
       "papoReto": "Clica no parágrafo (título) com número errado → clique direito → Parágrafo → aba Esboco (Outline) / Lista → opções 'Continuar Numeração' (prossegue sequência) ou 'Reiniciar Numeração' (volta a 1). Repete conforme necessário para cada título fora de sequência.",
+      "respostaCerta": "Clicar no título com numeração incorreta → Parágrafo → Lista → Continuar Numeração ou Reiniciar Numeração conforme necessário",
       "puloDoGato": "Word às vezes 'reseta' contadores ao deletar/inserir. Essas opções reparar sem refazer tudo.",
       "cascasDeBanana": [
         "Redigitar: Destruidor. Perde conteúdo e estilos.",
@@ -2846,6 +2964,7 @@ export const questions = [
     "explanation": {
       "intro": "O diálogo de impressão aceita sintaxe para selecionar páginas não-contíguas.",
       "papoReto": "Arquivo → Imprimir → campo 'Páginas' (Pages) → digita \"1,3,7-10\" (sem 'Páginas: ' prefixo) → Print. Sintaxe: vírgula separa itens soltos, hífen define intervalo. Imprime página 1, depois 3, depois 7–10.",
+      "respostaCerta": "Digitar \"1,3,7-10\" no campo Páginas do diálogo de impressão",
       "puloDoGato": "Espaços na sintaxe são OK: \"1, 3, 7-10\" = \"1,3,7-10\".",
       "cascasDeBanana": [
         "Impressão Personalizada: Termo vago — nenhuma opção com esse nome exato em Word moderno.",
@@ -2870,6 +2989,7 @@ export const questions = [
     "explanation": {
       "intro": "Livretos (booklet layout) imprimem 2 páginas por folha, frente-verso, em sequência para dobra e grampeamento.",
       "papoReto": "Arquivo → Imprimir → no dialog, antes de clicar Imprimir, procura 'Configurar Página' ou 'Página Setup' button → aba 'Várias Páginas' (ou 'Multiple Pages') → dropdown 'Livreto' (Booklet) → OK → Imprimir. Word automaticamente ordena páginas (1-2 juntas na primeira folha impressa, 3-4 na segunda, etc.) para dobra central.",
+      "respostaCerta": "Arquivo → Imprimir → Configurar Página → Várias Páginas → Livreto",
       "puloDoGato": "Livreto é configuração de layout/impressão, não format de arquivo. Precisa estar acessível via Imprimir (print dialog).",
       "cascasDeBanana": [
         "Propriedades da Impressora: Algumas impressoras têm opção, mas não é lugar padrão do Word.",
@@ -2894,6 +3014,7 @@ export const questions = [
     "explanation": {
       "intro": "Inserir citação é diferente de gerenciar fontes — uma é ação, outra é configuração.",
       "papoReto": "Referências → Inserir Citação (directamente) → dropdown exibe todas as fontes cadastradas → seleciona a que quer citar → insere citação no ponto de cursor. Gerenciar Fontes é para CRIAR/EDITAR/ORGANIZAR fontes.",
+      "respostaCerta": "Referências → Inserir Citação → selecionar a fonte existente na lista",
       "puloDoGato": "Gerenciar = setup. Inserir Citação = usar setup já feito. Dois menus, dois propósitos.",
       "cascasDeBanana": [
         "Gerenciar Fontes → Inserir: Menu errado — Gerenciar é para criação, não para citações rápidas.",
@@ -2918,6 +3039,7 @@ export const questions = [
     "explanation": {
       "intro": "Notas de rodapé podem reiniciar numeração por página — isso se configura no diálogo específico.",
       "papoReto": "Referências → clique no pequeno expand button/seta (↘) no grupo 'Notas de Rodapé' → dialog abre → aba 'Numeração' ou seção → choose 'Reiniciar a cada página' (Restart each page). OK. Próximas páginas: notas começam em 1 novamente.",
+      "respostaCerta": "Referências → menu de diálogo Notas de Rodapé → Numeração → Reiniciar a cada página",
       "puloDoGato": "Botão seta do grupo = abre dialog completo (não é botão 'Inserir Nota'). Dialog é o lugar de configuração global.",
       "cascasDeBanana": [
         "Inserir → Notas de Rodapé: Insere 1 nota, não configura formato.",
@@ -2942,6 +3064,7 @@ export const questions = [
     "explanation": {
       "intro": "AutoCorreção substitui automaticamente abreviações enquanto o usuário digita — configuração central em Opções.",
       "papoReto": "Arquivo → Opções → Revisão de Texto (ou Proofing) → 'Opções de AutoCorreção' button → aba 'AutoCorreção' → adiciona entrada: 'Substituir: sds' / 'Por: Sem mais para o momento, despedimo-nos cordialmente' → OK. Depois ao digitar 'sds', Word substitui automaticamente.",
+      "respostaCerta": "Arquivo → Opções → Revisão de Texto → Opções de AutoCorreção → AutoCorreção → adicionar a entrada",
       "puloDoGato": "AutoCorreção é automática (triggers ao digitar). AutoTexto é manual (Ctrl+Shift+T ou menu).",
       "cascasDeBanana": [
         "Texto Rápido: Manual (demanda). AutoCorreção: Automática (sem demanda).",
@@ -2966,6 +3089,7 @@ export const questions = [
     "explanation": {
       "intro": "AutoCorreção e AutoTexto (Texto Rápido) são dois mecanismos de expansão diferentes com propósitos distintos.",
       "papoReto": "AutoCorreção: automática, simples (texto curto → texto curto), sem demanda. Exemplo: 'sds' → 'Sem mais...'. AutoTexto/Texto Rápido: manual, complexo (blocos formatados, com imagens/tabelas), sob demanda (Ctrl+Shift+T ou menu). Exemplo: template de contrato.",
+      "respostaCerta": "AutoCorreção substitui texto enquanto o usuário digita automaticamente; AutoTexto armazena blocos de conteúdo formatado que são inseridos sob demanda",
       "puloDoGato": "AutoCorreção = speed typing (corrige enquanto digita). AutoTexto = library (armazena templates para reutilizar).",
       "cascasDeBanana": [
         "Automáticas ambas: AutoTexto é manual (demanda usuário).",
@@ -2990,6 +3114,7 @@ export const questions = [
     "explanation": {
       "intro": "Selecionar e salvar um bloco formatado como Texto Rápido permite reutilização instant nos documentos.",
       "papoReto": "Seleciona o texto/logo (com toda formatação e imagens) → Inserir → Texto Rápido → 'Salvar Seleção na Galeria de Texto Rápido' → noma entrada (ex.: 'LogoHeader') → salva. Depois em qualquer documento: Inserir → Texto Rápido → escolhe 'LogoHeader' → insere.",
+      "respostaCerta": "Inserir → Texto Rápido → Salvar Seleção na Galeria de Texto Rápido",
       "puloDoGato": "Texto Rápido preserva formatação/imagens. Template .dotx é para estrutura de documento inteiro, não blocos reutilizáveis.",
       "cascasDeBanana": [
         "Template .dotx: Para novo documento baseado em template. Não é para blocos reutilizáveis dentro de docs.",
@@ -3014,6 +3139,7 @@ export const questions = [
     "explanation": {
       "intro": "Compartilhar Texto Rápido entre equipe requer distribuição centralizada — templates corporativos são o método.",
       "papoReto": "Criar/salvar Texto Rápido entradas (Inserir → Texto Rápido → Salvar Seleção) em um modelo .dotm corporativo → armazenar o modelo em pasta de rede compartilhada (ex.: \\\\servidor\\templates\\) → distribuir o modelo para todos. Quando abrem documentos baseados nesse modelo, Texto Rápido está disponível.",
+      "respostaCerta": "Salvar as entradas no modelo corporativo .dotx ou .dotm armazenado em local de rede compartilhado e distribuir o modelo",
       "puloDoGato": "Texto Rápido é armazenado no template atual. Para compartilhar, template deve ser compartilhado.",
       "cascasDeBanana": [
         "Enviar .docx: Documento, não template — não distribuirá Texto Rápido globalmente.",
@@ -3038,6 +3164,7 @@ export const questions = [
     "explanation": {
       "intro": "Alterações rastreadas de múltiplos revisores podem ser filtradas por autor — Word oferece isso nativamente.",
       "papoReto": "Revisão → Mostrar Marcações (dropdown) → seleciona 'Revisores Específicos' → checkboxes aparecem com nomes dos revisores → desmarcar todos exceto o desejado → agora só aparecem alterações daquele revisor → Aceitar/Rejeitar as visíveis → depois repetir para próximo revisor.",
+      "respostaCerta": "Revisão → Mostrar Marcações → Revisores específicos → filtrar pelo revisor desejado → aceitar as alterações visíveis",
       "puloDoGato": "Filtro é visual (temporário) — não deleta alterações, só mostra/esconde. Reversível.",
       "cascasDeBanana": [
         "Aceitar tudo e desfazer: Impossível reverter sem rastreamento ativado novamente.",
@@ -3062,6 +3189,7 @@ export const questions = [
     "explanation": {
       "intro": "Modos de exibição no Controle de Alterações mostram diferentes perspectivas — um editorial, outro preview.",
       "papoReto": "Mostrar Marcações: vermelho riscado (deletado), azul inserido (novo). Você vê COMO foi editado (histórico visual). Sem Marcações: preview limpo — mostra resultado FINAL se todas forem aceitas. Nenhum dos dois aceita automaticamente — são vistas, não ações.",
+      "respostaCerta": "Mostrar Marcações exibe todas as inserções e exclusões rastreadas visualmente; Sem Marcações mostra como o documento ficaria se todas as alterações fossem aceitas sem removê-las",
       "puloDoGato": "Mostrar Marcações = 'que mudou'. Sem Marcações = 'como ficaria pronto'.",
       "cascasDeBanana": [
         "Aceita permanentemente: Ambos modos apenas MOSTRAM — aceitação é ação separada (botão).",
@@ -3086,6 +3214,7 @@ export const questions = [
     "explanation": {
       "intro": "Listas quebradas por texto podem retomar a sequência — Word oferece 'Continuar Numeração' para isso.",
       "papoReto": "Lista 1 (items 1-3) → parágrafo de texto → Lista 2 começa em 1 (em vez de 4). Clica no primeiro item da Lista 2 → direito → 'Continuar Numeração' → agora começa em 4. Sequência restaurada sem refazer.",
+      "respostaCerta": "Clicar com o botão direito na lista → Continuar Numeração",
       "puloDoGato": "Opção é específica para retomar — não pede qual número, Word sabe que é 'próximo da anterior'.",
       "cascasDeBanana": [
         "Manual: Impraticável em listas grandes. Quebradiço.",
@@ -3110,6 +3239,7 @@ export const questions = [
     "explanation": {
       "intro": "Tabelas longas quebram entre páginas — cabeçalho deve repetir em cada página para legibilidade.",
       "papoReto": "Seleciona a(s) linha(s) de cabeçalho (primeira(s) linha(s)) → clique direito (ou aba Design/Layout da Tabela) → 'Repetir Linhas de Cabeçalho' (Repeat Header Rows). Agora quando tabela quebra em página nova, cabeçalho aparece automaticamente no topo da próxima página.",
+      "respostaCerta": "Selecionar a linha de cabeçalho → Layout da Tabela → Repetir Linhas de Cabeçalho",
       "puloDoGato": "Funcionalidade automática (não manual). Cada quebra = cabeçalho repetido.",
       "cascasDeBanana": [
         "Cópia manual: Impraticável — se tabela cresce, você refaz manualmente?",
@@ -3134,6 +3264,7 @@ export const questions = [
     "explanation": {
       "intro": "Tabelas no Word podem ser classificadas como listas — Layout oferece ordenação.",
       "papoReto": "Seleciona tabela → Layout → Classificar → dialog: escolhe 'Coluna 2' em dropdown → Crescente/Decrescente → OK. Tabela reordena por coluna 2 alfabética/numericamente.",
+      "respostaCerta": "Selecionar a tabela → Layout → Classificar → definir a coluna 2 como critério de classificação",
       "puloDoGato": "Classificação = native em tabelas. Não precisa Excel intermediário.",
       "cascasDeBanana": [
         "Excel: Intermediário desnecessário.",
@@ -3158,6 +3289,7 @@ export const questions = [
     "explanation": {
       "intro": "Fórmulas em tabelas Word usam Layout — clique célula → Fórmula button.",
       "papoReto": "Clica célula → Layout da Tabela → Fórmula → =SUM(ABOVE) (soma acima). Funções: SUM, AVERAGE, COUNT, etc. Sintaxe ABOVE/BELOW/LEFT/RIGHT.",
+      "respostaCerta": "Layout da Tabela → Fórmula → inserir =SUM(ABOVE)",
       "puloDoGato": "Layout exclusive — não Inserir Campo.",
       "cascasDeBanana": [
         "Inserir Campo: Rota errada.",
@@ -3182,6 +3314,7 @@ export const questions = [
     "explanation": {
       "intro": "Fórmulas tabela não recalculam automaticamente — precisa F9.",
       "papoReto": "Altera valores → seleciona células com fórmulas → F9. Fórmulas atualizam. F9 = universal update campos (como em REF, DATE, etc).",
+      "respostaCerta": "Selecionar as células com fórmulas e pressionar F9 para atualizar os campos",
       "puloDoGato": "Manual, não automático.",
       "cascasDeBanana": [
         "Auto-update: Falso — F9 obrigatório.",
@@ -3206,6 +3339,7 @@ export const questions = [
     "explanation": {
       "intro": "Estilos de tabela predefinidos aplicam-se via Design (Context) tab.",
       "papoReto": "Seleciona tabela → Design → galeria de estilos → clica estilo → aplica (formatação + cores + bordas).",
+      "respostaCerta": "Selecionar a tabela → guia Design da Tabela → escolher o estilo na galeria de Estilos de Tabela",
       "puloDoGato": "Design contextual = aparece só quando tabela selected.",
       "cascasDeBanana": [
         "Página Inicial: Estilos genéricos, não tabelas.",
@@ -3230,6 +3364,7 @@ export const questions = [
     "explanation": {
       "intro": "Compartilhar estilos de tabela = template corporativo.",
       "papoReto": "Cria estilo em tabela → Design → dropdown estilos → 'New Table Style' → configura → OK → estilo agora em template atual. Salva template .dotx em rede compartilhada. Equipe abre docs baseados nele → estilo disponível.",
+      "respostaCerta": "Salvar o estilo de tabela no modelo corporativo .dotx e distribuir o modelo para a equipe",
       "puloDoGato": "Estilos são template-bound.",
       "cascasDeBanana": [
         "Export separado: Sem padrão mecanismo.",
@@ -3254,6 +3389,7 @@ export const questions = [
     "explanation": {
       "intro": "Referências cruzadas para legendas podem exibir número ou texto completo.",
       "papoReto": "Referências → Referência Cruzada → Tipo: 'Figura' → Inserir referência a: 'Texto inteiro da legenda' → OK. Exibe: \"Figura 3 – Fluxo do Processo\".",
+      "respostaCerta": "Tipo de referência: Figura → Inserir referência a: Texto inteiro da legenda",
       "puloDoGato": "'Número legenda' = só \"3\". 'Texto inteiro' = completo com contexto.",
       "cascasDeBanana": [
         "Número legenda: Só dígito.",
@@ -3278,6 +3414,7 @@ export const questions = [
     "explanation": {
       "intro": "Incorporar Excel em Word = objeto editável com duplo-clique.",
       "papoReto": "Inserir → Objeto → 'Criar do Arquivo' → escolhe .xlsx → checkbox 'Vincular ao arquivo' DESMARKED = incorpora (cópia dentro Word).",
+      "respostaCerta": "Inserir → Objeto → Criar do Arquivo → marcar \"Vincular ao arquivo\" desmarcado para incorporar",
       "puloDoGato": "Desmarked = independente. Marked = referência dinâmica ao original.",
       "cascasDeBanana": [
         "Copiar/Colar: Pode funcionar mas não é objeto reedível.",
@@ -3302,6 +3439,7 @@ export const questions = [
     "explanation": {
       "intro": "Incorporar vs Vincular = cópia vs referência.",
       "papoReto": "Incorporar: cópia dentro Word, independente, arquivo original não importa. Vincular: referência ao arquivo, atualiza se original muda, arquivo deve estar acessível.",
+      "respostaCerta": "Incorporar armazena uma cópia do objeto no documento Word; Vincular mantém uma referência ao arquivo original que reflete atualizações automaticamente",
       "puloDoGato": "Incorporar = standalone. Vincular = dinâmico.",
       "cascasDeBanana": [
         "Terminologia reversa: Falso.",
@@ -3326,6 +3464,7 @@ export const questions = [
     "explanation": {
       "intro": "Rascunho = modo minimalista para escrita longa.",
       "papoReto": "Exibir → Rascunho: oculta cabeçalhos, rodapés, margens, imagens → texto puro para foco. Ideal livros/artigos longos.",
+      "respostaCerta": "Modo de Rascunho",
       "puloDoGato": "Rascunho = edição pura. Layout = visão final.",
       "cascasDeBanana": [
         "Leitura: Lê, não escreve.",
@@ -3350,6 +3489,7 @@ export const questions = [
     "explanation": {
       "intro": "Dividir janela = ver 2 partes mesmo doc 1 janela.",
       "papoReto": "Exibir → Dividir → divide horizontalmente → scroll independente cada painel. Útil: cabeçalho em painel 1, conteúdo em painel 2.",
+      "respostaCerta": "Exibir → Dividir → dividir a janela em dois painéis do mesmo documento",
       "puloDoGato": "Dividir = 1 doc, 1 janela, 2 painéis scrolláveis. Nova Janela = 2 janelas separadas.",
       "cascasDeBanana": [
         "Nova Janela: 2 janelas (não 1).",
@@ -3374,6 +3514,7 @@ export const questions = [
     "explanation": {
       "intro": "Painel Navegação = mapa documento.",
       "papoReto": "Exibir → Painel de Navegação: lado esquerdo mostra títulos (headings) em árvore + abas para pesquisa/páginas. Clica título → pula lá. Atalho: Ctrl+F5.",
+      "respostaCerta": "Permite navegar pelo documento usando títulos, páginas e resultados de pesquisa",
       "puloDoGato": "Navegação estrutural (titles), não histórico/estilos.",
       "cascasDeBanana": [
         "Histórico: Nada a ver.",
@@ -3398,6 +3539,7 @@ export const questions = [
     "explanation": {
       "intro": "Painel Navegação permite reorganizar seções via drag-drop títulos.",
       "papoReto": "Painel Navegação → guia Títulos → arrasta 'Capítulo 3' acima de 'Capítulo 2' → reordena seção inteira (com conteúdo) visualmente.",
+      "respostaCerta": "Arrastar os títulos no Painel de Navegação → guia Títulos para reordenar as seções",
       "puloDoGato": "Drag-drop em Painel = reorganização rápida.",
       "cascasDeBanana": [
         "Outline: Também permite, mas moins visual.",
@@ -3422,6 +3564,7 @@ export const questions = [
     "explanation": {
       "intro": "Estrutura de Tópicos = modo reorg hierarquia.",
       "papoReto": "Exibir → Estrutura de Tópicos: mostra títulos em árvore, botões promote/demote (+/−), drag seções, expandir/colapsar.",
+      "respostaCerta": "Exibir → Estrutura de Tópicos",
       "puloDoGato": "Outline = manipulação hierarquia. Painel Navegação = navegação leitura.",
       "cascasDeBanana": [
         "Rascunho: Escrever, não reorg.",
@@ -3446,6 +3589,7 @@ export const questions = [
     "explanation": {
       "intro": "Documento Mestre = agrupa subdocs.",
       "papoReto": "Mestre: projeto vazio que 'puxa' subdocs (caps). Cada cap = arquivo separado. Edita caps independentemente, Mestre 'compila' numeração/índice global.",
+      "respostaCerta": "Permite dividir um documento grande em subdocumentos independentes que podem ser editados separadamente e combinados no mestre",
       "puloDoGato": "Mestre = escalabilidade livros (dividir colaboração).",
       "cascasDeBanana": [
         "Senha por cap: Não automático.",
@@ -3470,6 +3614,7 @@ export const questions = [
     "explanation": {
       "intro": "Campo STYLEREF busca número de estilo (título) perto do ponto inserção.",
       "papoReto": "{ STYLEREF \"Título 1\" \\n } = exibe número Título 1 mais próximo (acima no doc). Atalho: Ctrl+Shift+F. Útil: cabeçalhos/rodapés mostrar capítulo atual.",
+      "respostaCerta": "{ STYLEREF \"Título 1\" \\n } para exibir o número do título de nível 1 atual",
       "puloDoGato": "STYLEREF = número estilo. \\n = alterna formato (número vs nome).",
       "cascasDeBanana": [
         "SECTION: Número seção, não título.",
@@ -3494,6 +3639,7 @@ export const questions = [
     "explanation": {
       "intro": "Formulário só comentários = restricao edição.",
       "papoReto": "Revisão → Restringir Edição → checkbox 'Permitir apenas...' → dropdown 'Comentários' → OK (senha opt). Doc protegido: novo texto bloqueado, comentários OK.",
+      "respostaCerta": "Revisão → Restringir Edição → Permitir apenas este tipo de edição → Comentários",
       "puloDoGato": "Comentários = não-edição feedback.",
       "cascasDeBanana": [
         "Sem alterações: Bloqueia tudo, até comentários.",
@@ -3518,6 +3664,7 @@ export const questions = [
     "explanation": {
       "intro": "Proteção formulário com opção errada bloqueia navegação.",
       "papoReto": "Revisão → Restringir Edição: escolher 'Preenchimento de formulários' permite Tab entre controles. Se 'Sem alterações' está marcado, tudo congelado. Solução: mudar opção.",
+      "respostaCerta": "O documento está protegido com a opção errada; deve usar \"Preenchimento de formulários\" e não \"Sem alterações\"",
       "puloDoGato": "'Preenchimento' = Tab funciona. 'Sem alterações' = Tab travado.",
       "cascasDeBanana": [
         "Bloqueio individual: Cada controle tem proteção separada.",
@@ -3542,6 +3689,7 @@ export const questions = [
     "explanation": {
       "intro": "Mala direta: Editar Lista permite filtrar por condições.",
       "papoReto": "Correspondências → Editar Lista de Destinatários → Filtrar: add conditions 'Cidade = São Paulo' AND 'Compras > 1000'. Preview filtra. Retorna só registros que match.",
+      "respostaCerta": "Correspondências → Editar Lista de Destinatários → Filtrar → adicionar condições para Cidade = \"São Paulo\" E Compras > 1000",
       "puloDoGato": "Filtro em UI, não SQL backend.",
       "cascasDeBanana": [
         "SQL anterior: DB pre-filter (não nativo Word).",
@@ -3566,6 +3714,7 @@ export const questions = [
     "explanation": {
       "intro": "Compatibilidade backward = usar verificador antes de salvar.",
       "papoReto": "Arquivo → Info → Verificador de Compatibilidade: escaneia recursos 2013+ (SmartArt, efeitos, gráficos) que 2010 não suporta. Mostra lista → user remove/substitui por equivalentes 2010. Aí salva .docx seguro.",
+      "respostaCerta": "Executar o Verificador de Compatibilidade, identificar os recursos problemáticos e substituí-los por alternativas compatíveis antes de salvar no formato .docx",
       "puloDoGato": ".doc antigo perde recursos. Verificador mantém conteúdo critical.",
       "cascasDeBanana": [
         ".doc: Formato legado, perde recursos modernos.",
@@ -3590,6 +3739,7 @@ export const questions = [
     "explanation": {
       "intro": "PDF interativo = bookmarks + links clicáveis.",
       "papoReto": "Arquivo → Exportar → Criar PDF/XPS → Opções: check 'Criar marcadores usando Títulos' (gera outline PDF = clicável) + hiperlinks incluídos (default on). PDF resultado tem sumário navegável + links ativos.",
+      "respostaCerta": "Arquivo → Exportar → Criar PDF/XPS → Opções → marcar \"Criar marcadores usando: Títulos\" e garantir que hiperlinks estejam incluídos",
       "puloDoGato": "Opções exportação = controla interatividade.",
       "cascasDeBanana": [
         "Print to PDF: Rasteriza, perde links.",
@@ -3614,6 +3764,7 @@ export const questions = [
     "explanation": {
       "intro": "PDF: qualidade imagem em Opções.",
       "papoReto": "Arquivo → Exportar → Criar PDF/XPS → Opções → 'Quality' → 'Maximum' (300+ dpi). PDF resultado com imagens nítidas.",
+      "respostaCerta": "Arquivo → Exportar → Criar PDF/XPS → Opções → Qualidade de imagem → selecionar resolução maior",
       "puloDoGato": "Qualidade imagem = PDF export option.",
       "cascasDeBanana": [
         "Compactar Imagens: Word feature, não PDF.",
@@ -3638,6 +3789,7 @@ export const questions = [
     "explanation": {
       "intro": "PDF: exportar intervalo páginas.",
       "papoReto": "Arquivo → Exportar → Criar PDF/XPS → Opções → 'Pages' field → '5-10'. Exporta só páginas 5 a 10 em PDF.",
+      "respostaCerta": "Arquivo → Exportar → Criar PDF/XPS → Opções → Intervalo de páginas → Páginas: 5-10",
       "puloDoGato": "Intervalo em Opções exportação.",
       "cascasDeBanana": [
         "Painel Navegação: Não há export seleção.",
@@ -3662,6 +3814,7 @@ export const questions = [
     "explanation": {
       "intro": "Co-edição: OneDrive/SharePoint obrigatório.",
       "papoReto": "OneDrive ou SharePoint = cloud storage com versioning. Compartilha doc → users veem updates real-time quando salvam (autosave on). Rede local não suporta co-edit.",
+      "respostaCerta": "O documento deve estar salvo no OneDrive ou SharePoint e compartilhado com os colaboradores",
       "puloDoGato": "Cloud + sharing = co-edit. Rede local não.",
       "cascasDeBanana": [
         "Rede local: Não sincroniza real-time.",
@@ -3686,6 +3839,7 @@ export const questions = [
     "explanation": {
       "intro": "Co-edição: autosave controla sincronização.",
       "papoReto": "Word Desktop: Arquivo → Opções → Save → 'AutoSave' checkbox. Sem autosave, updates só via Save manual (Ctrl+S). Com autosave on, updates fluem continuous.",
+      "respostaCerta": "O colega está usando o Word Desktop sem a opção de salvamento automático ativada; alterações aparecem apenas ao salvar",
       "puloDoGato": "AutoSave = enable real-time sync.",
       "cascasDeBanana": [
         "Permissão: Teria acesso negado message.",
@@ -3710,6 +3864,7 @@ export const questions = [
     "explanation": {
       "intro": "VBA macro: loop parágrafo com condição texto.",
       "papoReto": "For Each para iterar doc.Paragraphs. InStr() busca 'IMPORTANTE' em texto. If match: aplicar .Range.Font.Bold = True.",
+      "respostaCerta": "Loop For Each com condicional If InStr para verificar o texto e aplicar Bold = True",
       "puloDoGato": "For Each universal loop. InStr() = substring search. Recursive = ineficiente.",
       "cascasDeBanana": [
         "While + Select Case: Inadequado para paragraphs.",
@@ -3734,6 +3889,7 @@ export const questions = [
     "explanation": {
       "intro": "VBA: função dialog texto input.",
       "papoReto": "InputBox(prompt, title) = exibe caixa de diálogo com campo texto + OK/Cancel. Retorna string ou empty se cancelado.",
+      "respostaCerta": "InputBox",
       "puloDoGato": "InputBox = text entry. MsgBox = message only. UserForm = custom dialog.",
       "cascasDeBanana": [
         "MsgBox: Botões yes/no/ok, não input.",
@@ -3758,6 +3914,7 @@ export const questions = [
     "explanation": {
       "intro": "Field: exibir contagem palavras documento.",
       "papoReto": "{ NUMWORDS } = Word field que automaticamente conta e exibe total de palavras. Atualiza via F9 ou print.",
+      "respostaCerta": "{ NUMWORDS }",
       "puloDoGato": "NUMWORDS = built-in Word field.",
       "cascasDeBanana": [
         "WORDCOUNT: Não existe.",
@@ -3782,6 +3939,7 @@ export const questions = [
     "explanation": {
       "intro": "Field IF: condicional em mala direta.",
       "papoReto": "{ IF { MERGEFIELD Valor } > 1000 \"Aprovado\" \"Reprovado\" } = se Valor > 1000, exibe \"Aprovado\"; senão, \"Reprovado\". Lógica condicional por record.",
+      "respostaCerta": "Exibe \"Aprovado\" se o campo Valor for maior que 1000 e \"Reprovado\" caso contrário",
       "puloDoGato": "IF field + MERGEFIELD = conditional mala direta.",
       "cascasDeBanana": [
         "Filtra registros: IF gera texto condição, não filtra.",
@@ -3806,6 +3964,7 @@ export const questions = [
     "explanation": {
       "intro": "Tema custom: salvar .thmx para reutilizar.",
       "papoReto": "Design → Themes (dropdown) → 'Save Current Theme' → escolhe nome + location → .thmx. Abre em Word/Excel/PowerPoint.",
+      "respostaCerta": "Design → Temas → Salvar Tema Atual → salvar como arquivo .thmx",
       "puloDoGato": ".thmx = formato theme Office universal.",
       "cascasDeBanana": [
         "Arquivo Opções: Não existe Theme export.",
@@ -3830,6 +3989,7 @@ export const questions = [
     "explanation": {
       "intro": "Marca d'água: watermark all pages.",
       "papoReto": "Design → Watermark dropdown → 'Custom Watermark' → 'Text watermark' → tipo 'CONFIDENCIAL' → OK. Todas páginas recebem marca.",
+      "respostaCerta": "Design → Marca D'água → Marca D'água Personalizada → Marca d'água de texto",
       "puloDoGato": "Design tab = marca d'água. Não Layout ou Inserir.",
       "cascasDeBanana": [
         "Inserir Cabeçalho: Cabeçalho, não watermark.",
@@ -3905,7 +4065,7 @@ export const questions = [
       "intro": "Questão técnica do MO-101.",
       "papoReto": "A resposta correta é 'Ctrl+H → Mais → Formatar → Fonte → Negrito no campo Localizar e Fonte → Itálico no campo Substituir'. ",
       "respostaCerta": "Ctrl+H → Mais → Formatar → Fonte → Negrito no campo Localizar e Fonte → Itálico no campo Substituir ",
-      "puloDoGato": "",
+      "puloDoGato": "O Localizar e Substituir atua sobre FORMATAÇÃO, não só texto: deixe os campos de texto vazios e aplique o formato via 'Formatar → Fonte' (Negrito em Localizar, Itálico em Substituir). Ele troca o atributo em todo o documento.",
       "cascasDeBanana": [
         "Não é possível localizar e substituir formatação no Word: Incorreto, pois alternativa inválida para o cenário.",
         "Usar Localizar e Substituir com expressões regulares para identificar negrito: Incorreto, pois alternativa inválida para o cenário.",
@@ -3930,7 +4090,7 @@ export const questions = [
       "intro": "Questão técnica do MO-101.",
       "papoReto": "A resposta correta é 'Ctrl+H → Mais → Usar caracteres especiais → ^p^p no campo Localizar e ^p no campo Substituir'. ",
       "respostaCerta": "Ctrl+H → Mais → Usar caracteres especiais → ^p^p no campo Localizar e ^p no campo Substituir ",
-      "puloDoGato": "",
+      "puloDoGato": "Marcas de parágrafo têm o código especial ^p. Para colapsar linhas em branco, procure ^p^p (duas marcas) e substitua por ^p (uma só). Repita até não restarem duplas.",
       "cascasDeBanana": [
         "Ctrl+H → Localizar: \\n\\n → Substituir: \\n com expressões regulares: Incorreto, pois alternativa inválida para o cenário.",
         "Editar → Limpar Formatação → Quebras de Parágrafo Duplas: Incorreto, pois alternativa inválida para o cenário.",
@@ -3955,7 +4115,7 @@ export const questions = [
       "intro": "Questão técnica do MO-101.",
       "papoReto": "A resposta correta é 'Ativar \"Usar caracteres curinga\" e usar a expressão micro* no campo Localizar'. ",
       "respostaCerta": "Ativar \"Usar caracteres curinga\" e usar a expressão micro* no campo Localizar ",
-      "puloDoGato": "",
+      "puloDoGato": "Com 'Usar caracteres curinga' ativado, o asterisco (*) representa qualquer sequência de caracteres. micro* localiza microsoft, microfone, micro-ondas. Sem o curinga, o * é tratado como caractere literal.",
       "cascasDeBanana": [
         "Ativar \"Palavras inteiras\" e digitar micro no campo Localizar: Incorreto, pois alternativa inválida para o cenário.",
         "Usar \"Correspondência exata de maiúsculas\" com a expressão micro: Incorreto, pois alternativa inválida para o cenário.",
@@ -4030,7 +4190,7 @@ export const questions = [
       "intro": "Questão técnica do MO-101.",
       "papoReto": "A resposta correta é 'Sugestões de refinamento de estilo, clareza, concisão, vocabulário e tom do texto'. ",
       "respostaCerta": "Sugestões de refinamento de estilo, clareza, concisão, vocabulário e tom do texto ",
-      "puloDoGato": "",
+      "puloDoGato": "O Editor (Microsoft 365) vai além de ortografia e gramática: avalia estilo, clareza, concisão, vocabulário e tom — sugestões de escrita assistidas por IA, organizadas por categoria de refinamento.",
       "cascasDeBanana": [
         "Apenas correção ortográfica aprimorada com mais idiomas: Incorreto, pois alternativa inválida para o cenário.",
         "Tradução automática integrada ao documento: Incorreto, pois alternativa inválida para o cenário.",
@@ -4055,7 +4215,7 @@ export const questions = [
       "intro": "Questão técnica do MO-101.",
       "papoReto": "A resposta correta é 'Arquivo → Opções → Revisão de Texto → configurar as categorias do Editor desativando as verificações de estilo'. ",
       "respostaCerta": "Arquivo → Opções → Revisão de Texto → configurar as categorias do Editor desativando as verificações de estilo ",
-      "puloDoGato": "",
+      "puloDoGato": "As categorias do Editor são configuráveis em Arquivo → Opções → Revisão de Texto. Desmarque as verificações de Estilo/Clareza para que ele cheque apenas gramática, sem sugestões estilísticas.",
       "cascasDeBanana": [
         "Revisão → Editor → Configurações → desativar sugestões de estilo: Incorreto, pois alternativa inválida para o cenário.",
         "Arquivo → Opções → Idioma → Editor → Somente Gramática: Incorreto, pois alternativa inválida para o cenário.",
@@ -4080,7 +4240,7 @@ export const questions = [
       "intro": "Questão técnica do MO-101.",
       "papoReto": "A resposta correta é 'Selecionar cada trecho em idioma diferente → Revisão → Idioma → Definir Idioma de Revisão de Texto → selecionar o idioma correspondente'. ",
       "respostaCerta": "Selecionar cada trecho em idioma diferente → Revisão → Idioma → Definir Idioma de Revisão de Texto → selecionar o idioma correspondente ",
-      "puloDoGato": "",
+      "puloDoGato": "A verificação ortográfica é definida POR TRECHO: selecione cada parte e use Revisão → Idioma → Definir Idioma de Revisão de Texto. Assim o Word aplica o dicionário certo a cada idioma no mesmo documento.",
       "cascasDeBanana": [
         "Configurar o idioma padrão do documento e usar dicionário bilíngue: Incorreto, pois alternativa inválida para o cenário.",
         "Desativar a verificação ortográfica nas partes em inglês: Incorreto, pois alternativa inválida para o cenário.",
@@ -4155,7 +4315,7 @@ export const questions = [
       "intro": "Questão técnica do MO-101.",
       "papoReto": "A resposta correta é 'Criar um UserForm no Editor VBA e chamar UserForm.Show no evento AutoOpen'. ",
       "respostaCerta": "Criar um UserForm no Editor VBA e chamar UserForm.Show no evento AutoOpen ",
-      "puloDoGato": "",
+      "puloDoGato": "Formulários com caixas de texto, botões e listas exigem um UserForm no Editor VBA. Para exibi-lo na abertura, chame UserForm.Show dentro do evento AutoOpen (ou Document_Open).",
       "cascasDeBanana": [
         "Usar Controles de Conteúdo com proteção de formulário: Incorreto, pois alternativa inválida para o cenário.",
         "Criar um formulário HTML vinculado ao documento Word: Incorreto, pois alternativa inválida para o cenário.",
@@ -4180,7 +4340,7 @@ export const questions = [
       "intro": "Questão técnica do MO-101.",
       "papoReto": "A resposta correta é 'Document_Close'. ",
       "respostaCerta": "Document_Close ",
-      "puloDoGato": "",
+      "puloDoGato": "O evento Document_Close dispara automaticamente ao fechar o documento — ideal para limpeza ou salvamento. Não confunda com AutoClose (macro de escopo global) nem com Document_Open.",
       "cascasDeBanana": [
         "Document_BeforeClose: Incorreto, pois alternativa inválida para o cenário.",
         "AutoClose: Incorreto, pois alternativa inválida para o cenário.",
@@ -4280,7 +4440,7 @@ export const questions = [
       "intro": "Questão técnica do MO-101.",
       "papoReto": "A resposta correta é 'Criar uma macro AutoNew no modelo que exibe um UserForm solicitando as propriedades antes de liberar a edição'. ",
       "respostaCerta": "Criar uma macro AutoNew no modelo que exibe um UserForm solicitando as propriedades antes de liberar a edição ",
-      "puloDoGato": "",
+      "puloDoGato": "A macro AutoNew roda toda vez que um novo documento é criado A PARTIR do modelo — o momento certo para exibir um UserForm que obriga o preenchimento das propriedades antes de liberar a edição.",
       "cascasDeBanana": [
         "Usar Controles de Conteúdo vinculados às propriedades do documento sem macro: Incorreto, pois alternativa inválida para o cenário.",
         "Configurar Restringir Edição até que as propriedades sejam preenchidas: Incorreto, pois alternativa inválida para o cenário.",
@@ -4330,7 +4490,7 @@ export const questions = [
       "intro": "Questão técnica do MO-101.",
       "papoReto": "A resposta correta é 'Application.FileDialog(msoFileDialogFilePicker).Show'. ",
       "respostaCerta": "Application.FileDialog(msoFileDialogFilePicker).Show ",
-      "puloDoGato": "",
+      "puloDoGato": "Para abrir o diálogo nativo de seleção de arquivo do Windows no VBA, use Application.FileDialog(msoFileDialogFilePicker) e chame .Show. O tipo msoFileDialogFilePicker é o seletor de arquivo padrão.",
       "cascasDeBanana": [
         "Shell \"explorer.exe\" para selecionar arquivo: Incorreto, pois alternativa inválida para o cenário.",
         "GetOpenFilename do objeto Application: Incorreto, pois alternativa inválida para o cenário.",
@@ -4355,7 +4515,7 @@ export const questions = [
       "intro": "Questão técnica do MO-101.",
       "papoReto": "A resposta correta é '{ FILENAME \\p }'. ",
       "respostaCerta": "{ FILENAME \\p } ",
-      "puloDoGato": "",
+      "puloDoGato": "O campo { FILENAME } exibe o nome do arquivo; o switch \\p acrescenta o caminho completo. Sem \\p, mostra só o nome. Atualize os campos com F9.",
       "cascasDeBanana": [
         "{ DOCPATH }: Incorreto, pois alternativa inválida para o cenário.",
         "{ FILEPATH }: Incorreto, pois alternativa inválida para o cenário.",
@@ -4455,7 +4615,7 @@ export const questions = [
       "intro": "Questão técnica do MO-101.",
       "papoReto": "A resposta correta é 'Selecionar o texto → Inserir → Tabela → Converter Texto em Tabela → selecionar Tabulação como separador'. ",
       "respostaCerta": "Selecionar o texto → Inserir → Tabela → Converter Texto em Tabela → selecionar Tabulação como separador ",
-      "puloDoGato": "",
+      "puloDoGato": "Inserir → Tabela → Converter Texto em Tabela detecta o separador (tabulação, vírgula, parágrafo) para definir as colunas. Com texto tabulado, escolha 'Tabulações' para alinhar cada coluna.",
       "cascasDeBanana": [
         "Copiar o texto para o Excel, formatar como tabela e colar de volta no Word: Incorreto, pois alternativa inválida para o cenário.",
         "Inserir → Tabela → Importar Texto Tabulado: Incorreto, pois alternativa inválida para o cenário.",
@@ -4480,7 +4640,7 @@ export const questions = [
       "intro": "Questão técnica do MO-101.",
       "papoReto": "A resposta correta é 'Selecionar as células → Layout da Tabela → Mesclar Células'. ",
       "respostaCerta": "Selecionar as células → Layout da Tabela → Mesclar Células ",
-      "puloDoGato": "",
+      "puloDoGato": "Para um cabeçalho que abrange várias colunas, selecione as células e use Layout da Tabela → Mesclar Células. O conteúdo vira uma única célula contínua; o inverso é 'Dividir Células'.",
       "cascasDeBanana": [
         "Selecionar as células → Design da Tabela → Mesclar: Incorreto, pois alternativa inválida para o cenário.",
         "Clicar com o botão direito → Propriedades da Tabela → Mesclar: Incorreto, pois alternativa inválida para o cenário.",
@@ -4505,7 +4665,7 @@ export const questions = [
       "intro": "Questão técnica do MO-101.",
       "papoReto": "A resposta correta é 'Correspondências → Selecionar Destinatários → Selecionar dos Contatos do Outlook'. ",
       "respostaCerta": "Correspondências → Selecionar Destinatários → Selecionar dos Contatos do Outlook ",
-      "puloDoGato": "",
+      "puloDoGato": "Na mala direta, a fonte de dados é definida em Correspondências → Selecionar Destinatários. 'Selecionar dos Contatos do Outlook' puxa a lista direto do catálogo do Outlook, sem exportar arquivo.",
       "cascasDeBanana": [
         "Correspondências → Selecionar Destinatários → Usar Lista Existente → importar .pst do Outlook: Incorreto, pois alternativa inválida para o cenário.",
         "Exportar os contatos do Outlook para CSV e usar como fonte: Incorreto, pois alternativa inválida para o cenário.",
@@ -4605,7 +4765,7 @@ export const questions = [
       "intro": "Questão técnica do MO-101.",
       "papoReto": "A resposta correta é 'ActiveDocument.Saved (retorna False se houver alterações não salvas)'. ",
       "respostaCerta": "ActiveDocument.Saved (retorna False se houver alterações não salvas) ",
-      "puloDoGato": "",
+      "puloDoGato": "A propriedade ActiveDocument.Saved retorna False quando há alterações não salvas. Teste-a antes de fechar para decidir se pergunta ao usuário. Definir Saved=True suprime o aviso de salvamento.",
       "cascasDeBanana": [
         "ActiveDocument.Modified: Incorreto, pois alternativa inválida para o cenário.",
         "ActiveDocument.IsChanged: Incorreto, pois alternativa inválida para o cenário.",
@@ -4680,7 +4840,7 @@ export const questions = [
       "intro": "Questão técnica do MO-101.",
       "papoReto": "A resposta correta é 'A opção \"Atualizar estilos do documento automaticamente\" está ativada nas configurações do modelo vinculado'. ",
       "respostaCerta": "A opção \"Atualizar estilos do documento automaticamente\" está ativada nas configurações do modelo vinculado ",
-      "puloDoGato": "",
+      "puloDoGato": "Com 'Atualizar estilos do documento automaticamente' ativado, o Word reaplica os estilos do modelo vinculado a cada abertura — por isso a formatação muda sozinha. Desative para preservar os estilos locais.",
       "cascasDeBanana": [
         "O documento está corrompido e precisa ser reparado: Incorreto, pois alternativa inválida para o cenário.",
         "O modelo Normal.dotm foi modificado e substituiu os estilos dos documentos: Incorreto, pois alternativa inválida para o cenário.",
@@ -4730,7 +4890,7 @@ export const questions = [
       "intro": "Questão técnica do MO-101.",
       "papoReto": "A resposta correta é '\\([0-9]{2}\\) [0-9]{5}-[0-9]{4} com \"Usar caracteres curinga\" ativado'. ",
       "respostaCerta": "\\([0-9]{2}\\) [0-9]{5}-[0-9]{4} com \"Usar caracteres curinga\" ativado ",
-      "puloDoGato": "",
+      "puloDoGato": "Com curingas, os parênteses literais precisam ser escapados com barra invertida \\( \\), e {n} define a quantidade exata de dígitos. O padrão \\([0-9]{2}\\) [0-9]{5}-[0-9]{4} casa exatamente (XX) XXXXX-XXXX.",
       "cascasDeBanana": [
         ": Incorreto, pois alternativa inválida para o cenário.",
         "\\d{2} \\d{5}-\\d{4} com expressões regulares: Incorreto, pois alternativa inválida para o cenário.",
@@ -4755,7 +4915,7 @@ export const questions = [
       "intro": "Questão técnica do MO-101.",
       "papoReto": "A resposta correta é 'ActiveDocument.ExportAsFixedFormat OutputFileName:=\"C:\\Pasta\\arquivo.pdf\", ExportFormat:=wdExportFormatPDF'. ",
       "respostaCerta": "ActiveDocument.ExportAsFixedFormat OutputFileName:=\"C:\\Pasta\\arquivo.pdf\", ExportFormat:=wdExportFormatPDF ",
-      "puloDoGato": "",
+      "puloDoGato": "O método ExportAsFixedFormat com ExportFormat:=wdExportFormatPDF gera o PDF sem abrir diálogos — diferente de SaveAs2. Informe OutputFileName com o caminho completo para salvar direto na pasta desejada.",
       "cascasDeBanana": [
         "ActiveDocument.SaveAs \"C:\\Pasta\\arquivo.pdf\", FileFormat:=wdFormatPDF: Incorreto, pois alternativa inválida para o cenário.",
         "Application.ExportPDF ActiveDocument, \"C:\\Pasta\\arquivo.pdf\": Incorreto, pois alternativa inválida para o cenário.",

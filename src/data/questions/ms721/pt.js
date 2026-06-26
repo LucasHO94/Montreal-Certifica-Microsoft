@@ -305,7 +305,7 @@ export const questions = [
     "options": [
       "Em qualquer implementação com mais de 5 gateways SBC para garantir roteamento eficiente por proximidade",
       "Sempre que o Operator Connect é usado em conjunto com Direct Routing no mesmo tenant",
-      "Em países onde regulamentações de telecomunicações proíbem o bypass de tarifas PSTN locais — o LBR garante que chamadas usem o gateway local baseado na localização de rede do usuário",
+      "Em países onde regulamentações de telecomunicações proíbem o bypass de tarifas PSTN locais — o LBR garante que chamadas usem o gateway local baseado na.",
       "Apenas em organizações com usuários em mais de 10 países diferentes com regulamentações distintas"
     ],
     "correctAnswer": 2,
@@ -330,7 +330,7 @@ export const questions = [
     "options": [
       "Instalar agente de detecção de localização no dispositivo do usuário com sincronização ao Azure AD",
       "Configurar QoS por sub-rede e criar regras de firewall separando tráfego por localização geográfica",
-      "Sites de rede com sub-redes mapeadas, política de roteamento baseado em localização habilitada no gateway SBC (New-CsOnlinePSTNGateway -LocationBasedRouting $true) e política LBR atribuída aos usuários",
+      "Sites de rede com sub-redes mapeadas, política de roteamento baseado em localização habilitada no gateway SBC (New-CsOnlinePSTNGateway -LocationBasedRouting.",
       "Apenas habilitar a opção LBR no Teams Admin Center e mapear endereços IP dos usuários por região"
     ],
     "correctAnswer": 2,
@@ -380,7 +380,7 @@ export const questions = [
     "options": [
       "Configurar um único AA com reconhecimento de voz multilíngue e roteamento automático por idioma detectado",
       "Criar políticas de roteamento de voz diferentes por idioma atribuídas à conta de recurso do AA",
-      "Criar dois Atendedores Automáticos aninhados — o principal oferece opção de idioma e redireciona para AAs secundários configurados com menus e saudações no respectivo idioma",
+      "Criar dois Atendedores Automáticos aninhados — o principal oferece opção de idioma e redireciona para AAs secundários configurados com menus e saudações no.",
       "Usar uma Fila de Chamada com agentes bilíngues e roteamento por habilidade de idioma configurado no SBC"
     ],
     "correctAnswer": 2,
@@ -503,7 +503,7 @@ export const questions = [
     "id": "ms721_q21",
     "text": "Qual é a diferença entre números de telefone \"de usuário\" e números \"de serviço\" no contexto do Teams Phone?",
     "options": [
-      "Números de usuário são atribuídos a pessoas individuais para chamadas 1:1; números de serviço suportam alto volume de chamadas simultâneas e são usados em Atendedores Automáticos, Filas de Chamada e pontes de Audioconferência",
+      "Números de usuário são atribuídos a pessoas individuais para chamadas 1:1; números de serviço suportam alto volume de chamadas simultâneas e são usados em.",
       "Números de usuário funcionam apenas com Calling Plan; números de serviço são exclusivos do Direct Routing",
       "Números de serviço são sempre gratuitos (toll-free); números de usuário sempre têm custo por minuto de chamada",
       "Números de serviço requerem licença E5; números de usuário funcionam com qualquer licença Teams Phone"
@@ -581,7 +581,7 @@ export const questions = [
       "Apenas chamadas internacionais para países fora do continente americano e europeu",
       "Todas as chamadas PSTN saintes independentemente do destino, calculadas por segundo de uso",
       "Chamadas de correio de voz transcritas automaticamente e gravações de reuniões armazenadas no Stream",
-      "Chamadas para destinos não incluídos no plano doméstico, números gratuitos (toll-free) de entrada para reuniões de audioconferência e chamadas que excedem os minutos mensais do plano"
+      "Chamadas para destinos não incluídos no plano doméstico, números gratuitos (toll-free) de entrada para reuniões de audioconferência e chamadas que excedem os."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
@@ -781,7 +781,7 @@ export const questions = [
       "ExpressRoute é recomendado apenas para videoconferências HD; chamadas de voz funcionam adequadamente pela internet",
       "ExpressRoute é obrigatório para Direct Routing em organizações com mais de 1.000 usuários de voz",
       "ExpressRoute é a única forma de garantir SLA de qualidade de chamadas para Teams Phone em ambientes corporativos",
-      "A Microsoft não recomenda mais o ExpressRoute como solução primária para Teams; a abordagem recomendada é otimizar a saída de internet local com split tunneling e QoS, pois a maioria do tráfego Teams já usa anycast da Microsoft"
+      "A Microsoft não recomenda mais o ExpressRoute como solução primária para Teams; a abordagem recomendada é otimizar a saída de internet local com split."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
@@ -928,7 +928,7 @@ export const questions = [
     "id": "ms721_q38",
     "text": "Um telefone IP certificado para Teams pode operar em diferentes modos. Quais são os modos de operação disponíveis nesses dispositivos?",
     "options": [
-      "Modo Teams (padrão — totalmente integrado ao Teams Phone), Modo SIP legado (para interoperabilidade com PBX existente) e Modo de Área Comum (Common Area Phone — sem conta de usuário individual)",
+      "Modo Teams (padrão — totalmente integrado ao Teams Phone), Modo SIP legado (para interoperabilidade com PBX existente) e Modo de Área Comum (Common Area.",
       "Modo Executivo, Modo Recepcionista e Modo Agente de Call Center — baseados na função do usuário",
       "Modo Wired, Modo Wi-Fi e Modo Bluetooth — baseados no tipo de conectividade física do dispositivo",
       "Modo Online, Modo Híbrido e Modo Offline — baseados na conectividade com o Microsoft 365"
@@ -954,7 +954,7 @@ export const questions = [
     "text": "Uma empresa deseja instalar telefones Teams em áreas comuns (recepção, corredores) sem associá-los a usuários específicos. Qual licença e tipo de conta são necessários?",
     "options": [
       "Licença Teams Essentials com add-on de voz atribuída a conta compartilhada do departamento",
-      "Licença Microsoft Teams Phone Common Area (licença dedicada para telefones de área comum) atribuída a uma conta de recurso de telefone de área comum sem usuário nomeado",
+      "Licença Microsoft Teams Phone Common Area (licença dedicada para telefones de área comum) atribuída a uma conta de recurso de telefone de área comum sem.",
       "Licença Teams Rooms Basic atribuída a conta de sala com número de telefone de serviço",
       "Qualquer licença Microsoft 365 Business Basic com Teams Phone atribuída a conta genérica de departamento"
     ],
@@ -1178,7 +1178,7 @@ export const questions = [
     "id": "ms721_q48",
     "text": "Durante uma investigação de problema de chamada no cliente Teams Desktop, quais tipos de logs estão disponíveis para coleta e análise?",
     "options": [
-      "Logs de depuração (debug logs), logs de mídia (media logs) e logs do Windows Event Viewer — coletados via Ctrl+Alt+Shift+1 no cliente Teams ou manualmente na pasta de logs do Teams",
+      "Logs de depuração (debug logs), logs de mídia (media logs) e logs do Windows Event Viewer — coletados via Ctrl+Alt+Shift+1 no cliente Teams ou manualmente na.",
       "Logs de chamada SIP exportados diretamente pelo cliente Teams via interface de configurações avançadas",
       "Apenas logs de eventos do Windows filtrados por fonte \"Microsoft Teams\" no Event Viewer",
       "Logs de rede capturados pelo Microsoft Network Monitor integrado ao cliente Teams Desktop"
@@ -1255,7 +1255,7 @@ export const questions = [
     "options": [
       "PowerShell com Set-CsOnlineDialInConferencingUser -ServiceNumber para atribuir número brasileiro",
       "Exchange Admin Center > Caixa de correio > Configurações de reunião > Número de discagem padrão",
-      "Teams Admin Center > Usuários > selecionar usuário > aba Conta > Audioconferência — definir número de telefone de conferência padrão para o número brasileiro disponível na ponte",
+      "Teams Admin Center > Usuários > selecionar usuário > aba Conta > Audioconferência — definir número de telefone de conferência padrão para o número brasileiro.",
       "Microsoft 365 Admin Center > Usuários > Licenças > Configurações de audioconferência por região"
     ],
     "correctAnswer": 2,
@@ -1281,7 +1281,7 @@ export const questions = [
       "Para gravar a reunião via telefone PSTN sem precisar usar o aplicativo Teams",
       "Para autenticar o organizador ao acessar relatórios de presença via discagem PSTN pós-reunião",
       "Para silenciar ou remover participantes PSTN que entraram pelo número de discagem gratuita",
-      "Para iniciar a reunião discando pelo telefone quando a opção \"Os chamadores devem aguardar antes de entrar\" está ativada — o PIN autentica o organizador e libera os participantes do lobby telefônico"
+      "Para iniciar a reunião discando pelo telefone quando a opção \"Os chamadores devem aguardar antes de entrar\" está ativada — o PIN autentica o organizador e."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
@@ -1353,7 +1353,7 @@ export const questions = [
     "id": "ms721_q55",
     "text": "Um engenheiro configura um Town Hall no Microsoft Teams para 5.000 funcionários. Quais são os papéis disponíveis e suas responsabilidades em um Town Hall?",
     "options": [
-      "Organizador (configura e gerencia o evento), Co-organizador (auxilia na gestão), Apresentador (apresenta conteúdo com controles de mídia) e Participante (assiste em modo somente visualização com Q&A)",
+      "Organizador (configura e gerencia o evento), Co-organizador (auxilia na gestão), Apresentador (apresenta conteúdo com controles de mídia) e Participante.",
       "Admin (configura), Producer (gerencia transmissão), Presenter (apresenta) e Attendee (participa ativamente)",
       "Host (controle total), Moderador (gerencia Q&A), Speaker (apresenta) e Viewer (assiste sem interação)",
       "Owner (cria e deleta), Manager (edita configurações), Contributor (compartilha tela) e Guest (somente leitura)"
@@ -1480,7 +1480,7 @@ export const questions = [
     "options": [
       "Todas as funcionalidades do Teams continuam operando normalmente, incluindo chat, reuniões e chamadas internas",
       "Apenas chamadas de emergência funcionam via SBA; chamadas PSTN normais requerem conectividade plena",
-      "Chamadas PSTN de saída e entrada via SBC local continuam funcionando através do SBA; chamadas Teams-to-Teams internas falham pois requerem conectividade com o serviço Teams na nuvem",
+      "Chamadas PSTN de saída e entrada via SBC local continuam funcionando através do SBA; chamadas Teams-to-Teams internas falham pois requerem conectividade com.",
       "O SBA mantém chamadas PSTN e Teams internas, mas bloqueia chamadas para convidados externos"
     ],
     "correctAnswer": 2,
@@ -1580,7 +1580,7 @@ export const questions = [
     "options": [
       "Apenas configurar o número 911 como destino na rota de voz padrão do Direct Routing sem configurações adicionais",
       "Registrar todos os usuários com endereço da sede e configurar um único número de emergência centralizado",
-      "Políticas de chamada de emergência (Emergency Calling Policy), endereços de rede registrados (Civic Addresses) mapeados a sub-redes no Teams Admin Center e roteamento de emergência para PSAP local via SBC ou Calling Plan",
+      "Políticas de chamada de emergência (Emergency Calling Policy), endereços de rede registrados (Civic Addresses) mapeados a sub-redes no Teams Admin Center e.",
       "Implementar Azure Maps com geolocalização GPS de dispositivos para detecção automática de localização de emergência"
     ],
     "correctAnswer": 2,
@@ -1631,7 +1631,7 @@ export const questions = [
       "Apenas para relatórios de uso por localização no Microsoft 365 Admin Center e Teams Admin Center",
       "Somente para provisionamento automático de dispositivos Teams por localização física de rede",
       "Exclusivamente para configuração de QoS automático por sub-rede sem necessidade de switches gerenciados",
-      "Location-Based Routing (LBR), políticas de emergência baseadas em localização, relatórios de qualidade de chamadas por site no CQD e Otimização de Mídia Local (LMO)"
+      "Location-Based Routing (LBR), políticas de emergência baseadas em localização, relatórios de qualidade de chamadas por site no CQD e Otimização de Mídia."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
@@ -1979,7 +1979,7 @@ export const questions = [
     "text": "Uma instituição financeira precisa implementar gravação de conformidade (Compliance Recording) para todas as chamadas e reuniões de traders no Teams. Como essa solução funciona tecnicamente?",
     "options": [
       "O SBC de Direct Routing intercepta e grava todas as chamadas PSTN, enquanto Teams captura reuniões internas separadamente",
-      "Parceiros certificados Microsoft implementam um bot de gravação via Teams Recording API (Graph API) que é automaticamente adicionado a chamadas e reuniões dos usuários cobertos pela política, sem possibilidade de desativação pelo usuário",
+      "Parceiros certificados Microsoft implementam um bot de gravação via Teams Recording API (Graph API) que é automaticamente.",
       "O administrador ativa gravação automática na política de reunião e as gravações são enviadas ao Microsoft Purview automaticamente",
       "Microsoft Purview Communication Compliance grava chamadas automaticamente quando palavras-chave sensíveis são detectadas"
     ],
@@ -2053,7 +2053,7 @@ export const questions = [
     "id": "ms721_q83",
     "text": "O que é o Modo de Coordenação (Coordinated Meetings Mode) no Microsoft Teams Rooms e qual problema ele resolve em ambientes com múltiplos dispositivos na mesma sala?",
     "options": [
-      "Permite que um MTR e um Teams Display (ou outro dispositivo Teams) na mesma sala sejam coordenados — o MTR gerencia áudio/vídeo da sala enquanto o display pessoal do usuário serve como controle, evitando eco e feedback de áudio duplicado",
+      "Permite que um MTR e um Teams Display (ou outro dispositivo Teams) na mesma sala sejam coordenados — o MTR gerencia áudio/vídeo da sala enquanto o display.",
       "Sincroniza automaticamente múltiplos sistemas Teams Rooms em salas adjacentes para reuniões em espaços combinados",
       "Coordena a agenda de múltiplas salas de reunião para otimizar a utilização do espaço físico automaticamente",
       "Permite que dois MTRs em salas diferentes se conectem diretamente sem passar pela nuvem Microsoft 365"
@@ -2156,7 +2156,7 @@ export const questions = [
       "O CQD mantém dados por 6 meses; exportação disponível apenas via suporte Microsoft mediante solicitação formal",
       "Dados ilimitados no CQD sem necessidade de exportação; a retenção automática é gerenciada pela Microsoft sem limite",
       "O CQD mantém dados por 30 dias apenas; para histórico maior é necessário licença Microsoft 365 E5 com Purview",
-      "O CQD mantém dados por até 12 meses; para preservação de longo prazo, os dados podem ser exportados via CQD Power BI connector ou Microsoft Graph API para armazenamento externo no Azure Data Lake ou Power BI Dataflows"
+      "O CQD mantém dados por até 12 meses; para preservação de longo prazo, os dados podem ser exportados via CQD Power BI connector ou Microsoft Graph API para."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
@@ -2279,7 +2279,7 @@ export const questions = [
     "text": "Uma organização usa proxy com inspeção TLS (SSL inspection) em toda a rede corporativa. Qual é o impacto dessa configuração no Microsoft Teams e qual a recomendação Microsoft?",
     "options": [
       "Inspeção TLS é totalmente compatível com Teams desde que o certificado do proxy seja confiável pelo sistema operacional",
-      "Inspeção TLS pode causar falhas de autenticação, degradação de qualidade de mídia e problemas de conectividade Teams — a Microsoft recomenda criar exceções (bypass) para todos os endpoints do Microsoft 365/Teams na inspeção TLS",
+      "Inspeção TLS pode causar falhas de autenticação, degradação de qualidade de mídia e problemas de conectividade Teams — a Microsoft recomenda criar exceções.",
       "Inspeção TLS melhora a segurança do Teams sem impacto de desempenho pois o Teams usa certificados pinned",
       "Teams detecta automaticamente a inspeção TLS e usa protocolo HTTP alternativo para contornar o problema"
     ],
@@ -2306,7 +2306,7 @@ export const questions = [
       "Servidores TURN em Azure datacenters regionais na porta UDP 50000-50059 exclusivamente",
       "Servidores TURN em 52.120.0.0/14 na porta TCP 5061 com fallback para HTTPS na porta 443",
       "Servidores TURN proprietários da Microsoft em IPs não publicados, acessíveis apenas via cliente Teams autenticado",
-      "Servidores TURN da Microsoft em 13.107.64.0/18 e outros ranges Microsoft 365, portas UDP 3478 e TCP 443 como fallback — definidos na documentação oficial de URLs e IPs do Microsoft 365"
+      "Servidores TURN da Microsoft em 13.107.64.0/18 e outros ranges Microsoft 365, portas UDP 3478 e TCP 443 como fallback — definidos na documentação oficial de."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
@@ -2480,7 +2480,7 @@ export const questions = [
     "options": [
       "Configuração global de reunião no Teams Admin Center habilitando gravação automática para todo o tenant",
       "Power Automate com gatilho de início de reunião que aciona gravação via Microsoft Graph API",
-      "Política de reunião atribuída ao grupo — habilitar \"Gravar automaticamente\" (Auto-record meetings) para que todas as reuniões iniciadas por esses usuários sejam gravadas automaticamente no OneDrive/SharePoint",
+      "Política de reunião atribuída ao grupo — habilitar \"Gravar automaticamente\" (Auto-record meetings) para que todas as reuniões iniciadas por esses usuários.",
       "Política de conformidade de gravação com bot de gravação automática via parceiro certificado Microsoft"
     ],
     "correctAnswer": 2,
@@ -2503,7 +2503,7 @@ export const questions = [
     "id": "ms721_q101",
     "text": "Um engenheiro projeta uma solução de Direct Routing com alta disponibilidade para uma organização com 3.000 usuários de voz. Como a redundância de SBC deve ser configurada no Teams Phone?",
     "options": [
-      "Configurar múltiplos SBCs no mesmo Voice Route com prioridade e peso diferentes (Priority e Weight no New-CsOnlineVoiceRoute) — o Teams tenta o SBC de maior prioridade primeiro e faz failover automático para o próximo em caso de falha",
+      "Configurar múltiplos SBCs no mesmo Voice Route com prioridade e peso diferentes (Priority e Weight no New-CsOnlineVoiceRoute) — o Teams tenta o SBC de maior.",
       "Usar dois tenants Microsoft 365 separados com Direct Routing independente e failover manual entre tenants",
       "Configurar Azure Load Balancer na frente dos SBCs com health probes SIP para distribuição automática de chamadas",
       "Implantar dois SBCs idênticos em modo ativo-ativo com balanceamento de carga DNS round-robin apontando para o mesmo FQDN"
@@ -2603,7 +2603,7 @@ export const questions = [
     "id": "ms721_q105",
     "text": "O que é o Shared Calling (Chamada Compartilhada) no Microsoft Teams Phone e qual problema ele resolve em termos de licenciamento?",
     "options": [
-      "Shared Calling permite que múltiplos usuários compartilhem um único número de telefone e política de voz sem necessidade de licença Teams Phone individual — ideal para trabalhadores que raramente fazem chamadas PSTN, reduzindo custos de licenciamento",
+      "Shared Calling permite que múltiplos usuários compartilhem um único número de telefone e política de voz sem necessidade de licença Teams Phone individual —.",
       "Shared Calling é o modo de delegação onde assistentes compartilham o número do executivo sem licença adicional",
       "Shared Calling é o recurso de filas de chamada onde múltiplos agentes recebem chamadas no mesmo número",
       "Shared Calling permite que usuários sem Teams Phone façam chamadas via ramal compartilhado do Teams Rooms da sala"
@@ -2703,7 +2703,7 @@ export const questions = [
     "id": "ms721_q109",
     "text": "Um engenheiro precisa capturar e analisar pacotes de rede durante uma chamada Teams com problemas de qualidade para identificar perda de pacotes RTP. Qual abordagem deve ser utilizada?",
     "options": [
-      "Captura de pacotes com Wireshark no endpoint do usuário ou switch de rede, filtrando tráfego UDP nas portas Teams (50000-50059) e analisando sequência RTP para identificar gaps de pacotes e jitter",
+      "Captura de pacotes com Wireshark no endpoint do usuário ou switch de rede, filtrando tráfego UDP nas portas Teams (50000-50059) e analisando sequência RTP.",
       "Instalar o Microsoft Network Monitor no servidor e capturar tráfego de todos os usuários simultaneamente",
       "Executar traceroute para os IPs Microsoft 365 e analisar latência por hop para identificar o ponto de perda",
       "Usar o Teams Admin Center > Call Analytics para visualizar pacotes perdidos em tempo real durante a chamada"
@@ -2828,7 +2828,7 @@ export const questions = [
     "id": "ms721_q114",
     "text": "Após uma chamada Teams, os usuários podem avaliar a qualidade. Como o administrador pode analisar essas avaliações de forma agregada e correlacioná-las com dados técnicos?",
     "options": [
-      "No CQD, a dimensão \"UserFeedbackRatingMax\" captura avaliações de usuários (Rate My Call) que podem ser correlacionadas com métricas técnicas de qualidade para identificar discrepâncias entre percepção e dados objetivos",
+      "No CQD, a dimensão \"UserFeedbackRatingMax\" captura avaliações de usuários (Rate My Call) que podem ser correlacionadas com métricas técnicas de qualidade.",
       "Microsoft Forms coleta automaticamente avaliações pós-chamada e gera relatório no Teams Admin Center",
       "Viva Insights agrega avaliações de qualidade de reuniões e as correlaciona com métricas de produtividade do usuário",
       "Power BI com conector Dynamics 365 Customer Service integra avaliações de chamadas com tickets de suporte correlacionados"
@@ -2856,7 +2856,7 @@ export const questions = [
       "Problema de MTU na rede cabeada upstream do AP causando fragmentação de pacotes UDP do Teams",
       "Configuração de proxy automático (PAC file) interferindo com resolução DNS dos endpoints Teams no Wi-Fi",
       "Versão desatualizada do driver Wi-Fi no dispositivo causando incompatibilidade com protocolo DTLS do Teams",
-      "Interferência de canal Wi-Fi, roaming inadequado entre APs, capacidade insuficiente do AP e power management do adaptador — diagnosticar com analisador de espectro Wi-Fi, verificar SNR, taxa de retransmissão e separar SSID de voz em banda 5GHz com QoS WMM habilitado"
+      "Interferência de canal Wi-Fi, roaming inadequado entre APs, capacidade insuficiente do AP e power management do adaptador — diagnosticar com analisador de."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
@@ -2929,7 +2929,7 @@ export const questions = [
     "text": "Uma empresa precisa manter seu PBX Cisco legado funcionando em paralelo com o Teams Phone durante uma migração gradual. Como a interoperabilidade entre o PBX Cisco e o Teams pode ser configurada?",
     "options": [
       "Configurar federação SIP direta entre o PBX Cisco e o Teams usando protocolo SIP padrão sem SBC intermediário",
-      "Usar um SBC como gateway de interoperabilidade entre o PBX Cisco (via SIP trunk ou ISDN) e o Teams Phone via Direct Routing — o SBC transcodifica protocolos e roteia chamadas entre os dois sistemas durante a coexistência",
+      "Usar um SBC como gateway de interoperabilidade entre o PBX Cisco (via SIP trunk ou ISDN) e o Teams Phone via Direct Routing — o SBC transcodifica protocolos.",
       "Instalar o cliente Teams nos ramais Cisco para que funcionem como endpoints Teams nativos sem modificações",
       "Usar o Microsoft Teams Connector para Cisco disponível na Teams App Store para integração plug-and-play"
     ],
@@ -3028,7 +3028,7 @@ export const questions = [
     "id": "ms721_q122",
     "text": "Um administrador recebe reclamações de que participantes que ligam por telefone para reuniões Teams não ouvem músicas de espera enquanto aguardam o início. Como corrigir isso?",
     "options": [
-      "Teams Admin Center > Reuniões > Pontes de conferência > Editar configurações da ponte — habilitar \"Tocar música para participantes em espera antes do início da reunião\"",
+      "Teams Admin Center > Reuniões > Pontes de conferência > Editar configurações da ponte — habilitar \"Tocar música para participantes em espera antes do início.",
       "Habilitar música em espera na política de reunião individual dos organizadores que usam audioconferência",
       "Configurar política de chamada com música em espera habilitada e aplicar à conta de recurso da ponte de conferência",
       "Criar Atendedor Automático com música de espera na frente da ponte de conferência para gerenciar participantes em espera"
@@ -3080,7 +3080,7 @@ export const questions = [
     "options": [
       "Configurar Power Automate flow que envia comando de ingresso automático ao MTR 5 minutos antes de cada reunião",
       "Habilitar \"Ingresso antecipado automático\" na política de reunião do organizador para todas as salas da organização",
-      "No arquivo SkypeSettings.xml ou via Teams Admin Center > configurações de dispositivo — habilitar ingresso automático em reuniões (AutoAccept) e configurar o tempo de antecipação (BeforeMeetingDuration) para 5 minutos",
+      "No arquivo SkypeSettings.xml ou via Teams Admin Center > configurações de dispositivo — habilitar ingresso automático em reuniões (AutoAccept) e configurar o.",
       "Criar regra de calendário no Exchange Online que aciona o MTR automaticamente baseado no horário da reunião"
     ],
     "correctAnswer": 2,
@@ -3103,7 +3103,7 @@ export const questions = [
     "id": "ms721_q125",
     "text": "Uma organização deseja exibir no Teams Panel a ocupação real da sala em tempo real, mostrando se há pessoas presentes mesmo sem reunião agendada. Qual tecnologia viabiliza isso?",
     "options": [
-      "Sensores de presença/ocupação certificados integrados ao Teams Rooms via API de sensor de espaço do Microsoft Places — detectam presença física e atualizam o status da sala em tempo real no Teams Panel e no sistema de reservas",
+      "Sensores de presença/ocupação certificados integrados ao Teams Rooms via API de sensor de espaço do Microsoft Places — detectam presença física e atualizam o.",
       "Câmera do Teams Rooms com detecção de movimento configurada para sinalizar ocupação automaticamente",
       "Sensor de CO2 conectado ao Azure IoT Hub com integração via Power Automate ao Teams Panel",
       "Sistema de controle de acesso por crachá integrado ao Exchange Online para rastrear entrada e saída da sala"
@@ -3228,7 +3228,7 @@ export const questions = [
     "id": "ms721_q130",
     "text": "No CQD, a dimensão \"Connectivity Ice\" mostra valores como \"Direct\", \"Relay\" e \"Failed\". O que cada valor indica sobre a conectividade de mídia?",
     "options": [
-      "Direct = mídia flui diretamente entre endpoints sem relay (ideal); Relay = mídia passa pelos servidores TURN da Microsoft (indica NAT restritivo ou firewall bloqueando UDP direto); Failed = não foi possível estabelecer conectividade de mídia (chamada falhou)",
+      "Direct = mídia flui diretamente entre endpoints sem relay (ideal); Relay = mídia passa pelos servidores TURN da Microsoft (indica NAT restritivo ou firewall.",
       "Direct = usuário na mesma sub-rede; Relay = usuário em sub-rede diferente; Failed = usuário desconectado",
       "Direct = chamada interna sem PSTN; Relay = chamada via Direct Routing; Failed = chamada PSTN com erro SIP",
       "Direct = conexão cabeada; Relay = conexão Wi-Fi; Failed = sem conectividade de rede detectada"
@@ -3280,7 +3280,7 @@ export const questions = [
     "options": [
       "Monitores interativos de grande formato com Teams Rooms integrado para salas de treinamento e auditórios",
       "Dispositivos portáteis para uso pessoal em home office com suporte completo ao Microsoft Teams Rooms",
-      "Dispositivos all-in-one compactos com câmera, microfone e alto-falante integrados numa única unidade montável em parede ou mesa — ideais para salas pequenas (huddle rooms) de 2 a 5 pessoas com custo e complexidade de instalação reduzidos",
+      "Dispositivos all-in-one compactos com câmera, microfone e alto-falante integrados numa única unidade montável em parede ou mesa — ideais para salas pequenas.",
       "Sistemas modulares de alta performance para salas grandes de conferência com até 20 participantes presenciais"
     ],
     "correctAnswer": 2,
@@ -3306,7 +3306,7 @@ export const questions = [
       "Configurar no Teams Admin Center um limite de retenção de gravações de 60 dias nas configurações globais de chamada",
       "Definir cota de armazenamento de 60 dias no OneDrive que automaticamente elimina arquivos mais antigos por FIFO",
       "Criar Power Automate flow que verifica e exclui gravações mais antigas que 60 dias no OneDrive dos usuários",
-      "Habilitar gravação de chamadas na política de chamada; configurar política de retenção no Microsoft Purview aplicada ao OneDrive/SharePoint com exclusão automática após 60 dias para o tipo de conteúdo de gravações do Teams"
+      "Habilitar gravação de chamadas na política de chamada; configurar política de retenção no Microsoft Purview aplicada ao OneDrive/SharePoint com exclusão."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
@@ -3378,7 +3378,7 @@ export const questions = [
     "id": "ms721_q136",
     "text": "Uma organização deseja integrar dados do CQD com seu SIEM corporativo (Azure Sentinel/Microsoft Sentinel) para correlacionar problemas de qualidade com eventos de segurança de rede. Como essa integração pode ser realizada?",
     "options": [
-      "Exportar dados do CQD via CQD Power BI connector ou Microsoft Graph API, processar via Azure Data Factory ou Power Automate e ingerir no Microsoft Sentinel via workspace Log Analytics com conector de dados customizado",
+      "Exportar dados do CQD via CQD Power BI connector ou Microsoft Graph API, processar via Azure Data Factory ou Power Automate e ingerir no Microsoft Sentinel.",
       "Configurar Diagnostic Settings no Teams Admin Center para enviar logs do CQD diretamente ao Log Analytics",
       "Instalar o agente Log Analytics no SBC para capturar métricas de qualidade SIP diretamente no Sentinel",
       "O CQD possui conector nativo para Microsoft Sentinel disponível na galeria de conectores do Sentinel"
@@ -3478,7 +3478,7 @@ export const questions = [
     "id": "ms721_q140",
     "text": "Um engenheiro precisa limitar o bitrate de vídeo em reuniões para usuários em filiais com largura de banda WAN restrita, sem afetar usuários da sede. Como implementar isso de forma granular?",
     "options": [
-      "Criar política de reunião personalizada com \"Media bit rate (Kbs)\" reduzido (ex.: 500 Kbps) e atribuir apenas aos usuários das filiais afetadas via Grant-CsTeamsMeetingPolicy ou atribuição em grupo no Teams Admin Center",
+      "Criar política de reunião personalizada com \"Media bit rate (Kbs)\" reduzido (ex.: 500 Kbps) e atribuir apenas aos usuários das filiais afetadas via.",
       "Configurar QoS no roteador da filial para limitar banda de portas Teams sem necessidade de política específica",
       "Criar sub-rede separada para usuários da filial e aplicar política de rede com limitação de banda no Teams Admin Center",
       "Habilitar modo de economia de dados no cliente Teams Desktop de cada usuário da filial individualmente"
@@ -3605,7 +3605,7 @@ export const questions = [
     "options": [
       "Microsoft Intune > Dispositivos > Exportar relatório de hardware com filtro por aplicativo Microsoft Teams",
       "Microsoft 365 Admin Center > Relatórios > Dispositivos registrados com filtro por aplicativo Teams instalado",
-      "Teams Admin Center > Dispositivos > selecionar categoria de dispositivo > Exportar (ícone de download) — gera arquivo CSV com todos os dados de inventário de dispositivos daquela categoria",
+      "Teams Admin Center > Dispositivos > selecionar categoria de dispositivo > Exportar (ícone de download) — gera arquivo CSV com todos os dados de inventário de.",
       "PowerShell com Get-CsTeamsDevice exportando para CSV com todos os atributos de dispositivos Teams"
     ],
     "correctAnswer": 2,
@@ -3704,7 +3704,7 @@ export const questions = [
     "text": "Uma organização deseja implementar um contact center avançado com roteamento inteligente por habilidade, análise de sentimento em tempo real e integração com CRM, usando Microsoft Teams como plataforma de comunicação. Qual é a abordagem recomendada?",
     "options": [
       "Usar Filas de Chamada nativas do Teams com roteamento round-robin e integrar manualmente ao CRM via Power Automate",
-      "Implementar solução de Contact Center como Serviço (CCaaS) de parceiro certificado Microsoft via Teams extensibility APIs (Graph API, Azure Communication Services) — parceiros como Genesys, NICE, Avaya integram nativamente ao Teams mantendo a experiência unificada",
+      "Implementar solução de Contact Center como Serviço (CCaaS) de parceiro certificado Microsoft via Teams.",
       "Configurar múltiplos Atendedores Automáticos aninhados com lógica de roteamento por habilidade via DTMF",
       "Implementar Azure Communication Services diretamente como contact center sem parceiro adicional, usando SDK do Teams"
     ],
@@ -3728,9 +3728,9 @@ export const questions = [
     "id": "ms721_q150",
     "text": "Um engenheiro é solicitado a revisar a arquitetura de voz Teams de uma organização que reporta problemas frequentes de qualidade. O diagrama mostra: usuários → proxy corporativo → internet → Microsoft 365. Qual é o principal problema arquitetural e como corrigir?",
     "options": [
-      "Falta de ExpressRoute entre a organização e o Microsoft 365 — implementar ExpressRoute resolve problemas de qualidade de voz",
+      "Falta de ExpressRoute entre a organização e o Microsoft 365 — implementar ExpressRoute.",
       "Ausência de servidor DNS local causando resolução lenta de FQDNs do Teams — implementar DNS caching resolve",
-      "Todo tráfego Teams passando pelo proxy corporativo é o problema — proxies introduzem latência adicional e podem inspecionar/bloquear tráfego UDP; correção: implementar saída de internet local com bypass de proxy para endpoints Teams (categoria Optimize dos IPs/URLs Microsoft 365) com split tunneling se VPN for usada",
+      "Todo tráfego Teams passando pelo proxy corporativo é o problema — proxies introduzem latência adicional e podem.",
       "Falta de QoS configurado nos dispositivos de usuário — implementar DSCP marking nos endpoints resolve todos os problemas"
     ],
     "correctAnswer": 2,
@@ -3806,7 +3806,7 @@ export const questions = [
       "É uma expressão inválida — o lookahead negativo não é suportado em padrões de Voice Route do Teams",
       "Corresponde a números que começam com \"+\" seguido de qualquer dígito exceto 5 — bloqueia números com dígito 5",
       "Corresponde apenas a números que começam exatamente com \"+55\" — roteia apenas chamadas para o Brasil",
-      "Corresponde a qualquer número no formato E.164 que começa com \"+\" mas NÃO é seguido por \"55\" (código do Brasil) — efetivamente roteia todas as chamadas internacionais exceto para o Brasil por essa rota"
+      "Corresponde a qualquer número no formato E.164 que começa com \"+\" mas NÃO é seguido por \"55\" (código do Brasil) — efetivamente roteia todas as chamadas."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
@@ -3828,7 +3828,7 @@ export const questions = [
     "id": "ms721_q154",
     "text": "Um Atendedor Automático do Teams é configurado com a opção \"Pesquisa de Diretório\" habilitada. O que essa funcionalidade permite aos chamadores externos?",
     "options": [
-      "Permite que chamadores externos discam pelo nome (Dial by Name) ou pelo ramal (Dial by Extension) para localizar e ser conectado diretamente a um usuário interno da organização sem navegar pelos menus do AA",
+      "Permite que chamadores externos discam pelo nome (Dial by Name) ou pelo ramal (Dial by Extension) para localizar e ser conectado diretamente a um usuário.",
       "Permite que administradores pesquisem usuários no diretório via interface do AA para configurar destinos de roteamento",
       "Permite que o AA pesquise automaticamente o histórico de chamadas para identificar chamadores frequentes e roteá-los preferencialmente",
       "Sincroniza o diretório do AA com o Active Directory local para atualização automática de nomes de funcionários"
@@ -3855,7 +3855,7 @@ export const questions = [
     "options": [
       "Criar política de privacidade no Microsoft Purview bloqueando divulgação de nomes de executivos em AAs",
       "Configurar barreiras de informação entre executivos e usuários externos impedindo localização via diretório do AA",
-      "Criar um escopo de inclusão/exclusão no AA — configurar \"Excluir\" usuários específicos ou grupos do Azure AD da pesquisa de diretório nas configurações de escopo do Atendedor Automático",
+      "Criar um escopo de inclusão/exclusão no AA — configurar \"Excluir\" usuários específicos ou grupos do Azure AD da pesquisa de diretório nas configurações de.",
       "Remover o atributo DisplayName dos usuários no Azure AD para que não apareçam na pesquisa do AA"
     ],
     "correctAnswer": 2,
@@ -3930,7 +3930,7 @@ export const questions = [
     "options": [
       "MTR Windows usa autenticação Kerberos com o Active Directory local para acesso ao Microsoft 365 via ADFS",
       "MTR Windows usa token de dispositivo Azure AD gerado durante o Azure AD Join obrigatório do dispositivo",
-      "MTR Windows autentica com a conta de recurso via Modern Authentication (OAuth 2.0) — suporta autenticação com senha da conta de recurso ou certificado de dispositivo; para maior segurança, pode usar autenticação baseada em certificado eliminando necessidade de senha",
+      "MTR Windows autentica com a conta de recurso via Modern Authentication (OAuth 2.0) — suporta autenticação com senha da conta de recurso ou certificado de.",
       "MTR Windows requer conta de usuário com MFA habilitado; autenticação sem MFA não é suportada em dispositivos de sala"
     ],
     "correctAnswer": 2,
@@ -3981,7 +3981,7 @@ export const questions = [
       "Sistema de câmera que foca automaticamente no apresentador frontal da sala ignorando outros participantes presenciais",
       "Modo de exibição que projeta legendas em tempo real na parede frontal da sala para participantes presenciais",
       "Funcionalidade que reserva automaticamente os assentos da frente da sala para participantes que chegarem primeiro",
-      "Layout de exibição que posiciona vídeos dos participantes remotos na parte inferior da tela (linha do olhar) com conteúdo acima — cria sensação de presença mais natural e igualitária entre participantes presenciais e remotos em salas com display panorâmico"
+      "Layout de exibição que posiciona vídeos dos participantes remotos na parte inferior da tela (linha do olhar) com conteúdo acima — cria sensação de presença."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
@@ -4104,7 +4104,7 @@ export const questions = [
     "text": "Para que o Direct Routing funcione corretamente, quais portas específicas devem estar abertas no firewall entre o SBC e a infraestrutura Microsoft 365?",
     "options": [
       "Porta 5060 UDP para SIP não criptografado e 16384-32767 UDP para mídia RTP — configuração padrão SIP legado",
-      "SIP TLS: porta 5061 TCP (SBC ↔ Microsoft SIP Proxy); Mídia RTP/SRTP: portas UDP 3478-3481 (para servidores de relay) e 49152-53247 UDP (mídia direta entre SBC e cliente Teams); HTTPS 443 para sinalização adicional",
+      "SIP TLS: porta 5061 TCP (SBC ↔ Microsoft SIP Proxy); Mídia RTP/SRTP: portas UDP 3478-3481 (para servidores de relay) e 49152-53247 UDP (mídia direta entre.",
       "Apenas porta 443 TCP bidirecional — o Teams encapsula todo tráfego SIP e mídia em HTTPS para simplicidade de firewall",
       "Portas 50000-50059 UDP para mídia e 5061 TCP para SIP — mesmas portas dos clientes Teams Desktop"
     ],
@@ -4156,7 +4156,7 @@ export const questions = [
       "Implementar Azure Cost Management com budget alerts configurados especificamente para serviços Teams Phone",
       "Configurar limite de minutos por usuário via PowerShell com Set-CsCallingPlanLegacyPolicy -MaxMinutes",
       "Usar Microsoft Sentinel com regra analítica detectando padrões de chamadas anômalos via log de auditoria",
-      "Configurar alertas de gastos de Créditos de Comunicação no Microsoft 365 Admin Center, aplicar política de chamada desativando chamadas internacionais para usuários que não necessitam, usar relatórios PSTN no Teams Admin Center para monitoramento de uso e anomalias"
+      "Configurar alertas de gastos de Créditos de Comunicação no Microsoft 365 Admin Center, aplicar política de chamada desativando chamadas internacionais para."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
@@ -4179,7 +4179,7 @@ export const questions = [
     "text": "Um administrador deseja que todos os usuários de um departamento exibam o número principal da empresa (ex.: +55 11 3000-0000) como identificação de chamador ao invés de seus números individuais. Como configurar isso?",
     "options": [
       "Criar regra de normalização no Dial Plan que converte números individuais para o número principal na saída",
-      "Configurar política de identidade de chamador (Calling ID Policy) com o número de serviço da empresa como CallerID de saída e atribuir a política aos usuários do departamento via Grant-CsCallingLineIdentity",
+      "Configurar política de identidade de chamador (Calling ID Policy) com o número de serviço da empresa como CallerID de saída e atribuir a política aos.",
       "Configurar o Atendedor Automático para substituir o CallerID de saída de todos os usuários do departamento",
       "Alterar o número de telefone de cada usuário para o número principal da empresa no Teams Admin Center"
     ],
@@ -4205,7 +4205,7 @@ export const questions = [
     "options": [
       "Criar listas de bloqueio de números no SBC de Direct Routing filtrando chamadas indesejadas antes de chegar ao Teams",
       "Implementar política de conformidade no Purview que detecta padrões de chamada de spam automaticamente",
-      "Ativar \"Filtro de chamadas com spam\" (Spam Filtering) na política de chamada que usa inteligência da Microsoft para identificar e bloquear chamadas de spam automaticamente; complementar com configuração de \"Bloquear chamadas de entradas sem ID de chamador\"",
+      "Ativar \"Filtro de chamadas com spam\" (Spam Filtering) na política de chamada que usa inteligência da Microsoft para identificar e bloquear chamadas de spam.",
       "Configurar Azure Communication Services com filtro de spam aplicado antes do Direct Routing"
     ],
     "correctAnswer": 2,
@@ -4278,7 +4278,7 @@ export const questions = [
     "id": "ms721_q172",
     "text": "Um administrador precisa identificar reuniões que falharam ao iniciar nos últimos 7 dias — reuniões agendadas onde nenhum participante conseguiu ingressar. Qual abordagem fornece essa visibilidade?",
     "options": [
-      "Consultar log de auditoria unificado no Microsoft Purview com filtro de atividades de reunião Teams e verificar eventos de \"MeetingParticipantDetail\" sem registros de ingresso; complementar com relatório de uso de reuniões no Teams Admin Center",
+      "Consultar log de auditoria unificado no Microsoft Purview com filtro de atividades de reunião Teams e verificar eventos de \"MeetingParticipantDetail\" sem.",
       "Per-user Call Analytics do organizador mostra todas as reuniões falhas com código de erro específico",
       "CQD com filtro de Poor Stream Rate de 100% identifica reuniões completamente falhas nos últimos 7 dias",
       "Teams Admin Center > Relatórios > Reuniões falhas — relatório dedicado com filtro de período de 7 dias"
@@ -4478,7 +4478,7 @@ export const questions = [
     "id": "ms721_q180",
     "text": "Um site apresenta 3% de perda de pacotes em chamadas Teams, muito acima do limite recomendado de 1%. Quais são os impactos na qualidade de voz e as abordagens de correção?",
     "options": [
-      "Impacto: voz cortada, palavras truncadas, degradação severa de inteligibilidade — correções: verificar cabo de rede com erros (usar show interfaces no switch), substituir equipamentos defeituosos, implementar QoS para priorizar tráfego de voz, verificar duplex mismatch e eliminar colisões na rede",
+      "Impacto: voz cortada, palavras truncadas, degradação severa de inteligibilidade — correções: verificar cabo de rede com erros (usar show interfaces no.",
       "Aumentar a largura de banda do link WAN resolve automaticamente a perda de pacotes por reduzir congestionamento",
       "Perda de pacotes é sempre causada por problema no ISP — contatar a operadora de internet para investigação resolve o problema",
       "3% de perda é imperceptível para voz humana — Teams usa FEC (Forward Error Correction) para corrigir 100% das perdas automaticamente"
@@ -4530,8 +4530,8 @@ export const questions = [
     "options": [
       "Editar o template de convite de reunião no Outlook para incluir manualmente o número brasileiro em todos os convites futuros",
       "Teams Admin Center > Reuniões > Pontes de conferência > configurar o número brasileiro como padrão da ponte; depois atualizar configurações de audioconferência dos usuários via PowerShell (Set-CsOnlineDialInConferencingUser) para apontar para o número brasileiro",
-      "Alterar configurações de idioma e região do tenant para Brasil no Microsoft 365 Admin Center automaticamente altera o número de conferência",
-      "Configurar um Atendedor Automático com número brasileiro que redireciona todas as chamadas para a ponte de conferência padrão"
+      "Alterar configurações de idioma e região do tenant para Brasil no Microsoft 365 Admin Center automaticamente.",
+      "Configurar um Atendedor Automático com número brasileiro que redireciona todas as chamadas."
     ],
     "correctAnswer": 1,
     "difficulty": "intermediario",
@@ -4581,7 +4581,7 @@ export const questions = [
       "Codec de áudio incompatível impedindo decodificação de áudio de entrada — atualizar firmware resolve",
       "Política de chamada bloqueando recebimento de áudio de chamadas externas aplicada incorretamente ao dispositivo",
       "Problema de rede bloqueando stream de áudio de entrada — verificar firewall para portas UDP de recepção de mídia",
-      "Volume do alto-falante zerado ou mudo no telefone, problema no alto-falante físico do dispositivo ou configuração de áudio incorreta no perfil do dispositivo — verificar controles de volume físicos, testar com fone de ouvido e verificar configuração de perfil de áudio no Teams Admin Center"
+      "Volume do alto-falante zerado ou mudo no telefone, problema no alto-falante físico do dispositivo ou configuração de áudio incorreta no perfil do dispositivo."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
@@ -4679,7 +4679,7 @@ export const questions = [
     "text": "Uma empresa de marketing realiza webinars no Teams e deseja sincronizar automaticamente dados de registrantes (nome, e-mail, empresa) com seu CRM Salesforce. Qual abordagem Microsoft é recomendada?",
     "options": [
       "Exportar lista de registrantes manualmente do Teams em CSV e importar no Salesforce semanalmente via Data Loader",
-      "Usar Power Automate com conector do Microsoft Teams Webinar (via Graph API de eventos) e conector do Salesforce para sincronizar registrantes automaticamente após cada registro ou ao final do webinar",
+      "Usar Power Automate com conector do Microsoft Teams Webinar (via Graph API de eventos) e conector do Salesforce para.",
       "Microsoft Teams possui integração nativa com Salesforce que sincroniza automaticamente sem necessidade de configuração adicional",
       "Usar Microsoft Dynamics 365 como intermediário obrigatório — integração direta Teams Webinar → Salesforce não é suportada"
     ],
@@ -4805,7 +4805,7 @@ export const questions = [
     "options": [
       "Remover a licença de Calling Plan do usuário para impedir encaminhamento para números externos automaticamente",
       "Usar política de conformidade de comunicação para detectar e bloquear chamadas encaminhadas para externos em tempo real",
-      "Configurar política de chamada com \"Encaminhamento de chamada e toque simultâneo para números externos\" desativado e atribuir aos usuários que não devem ter essa permissão — usuários ainda podem encaminhar para outros usuários Teams internos",
+      "Configurar política de chamada com \"Encaminhamento de chamada e toque simultâneo para números externos\" desativado e atribuir.",
       "Configurar regra de firewall bloqueando chamadas de saída iniciadas por encaminhamento automático no SBC"
     ],
     "correctAnswer": 2,
@@ -4879,7 +4879,7 @@ export const questions = [
     "text": "Um supervisor de call center precisa de relatório em tempo real mostrando quais agentes estão disponíveis, em chamada ou ausentes na fila de chamada do Teams. Qual recurso fornece essa visibilidade?",
     "options": [
       "Power BI com conector nativo de filas de chamada Teams mostrando dashboard em tempo real sem configuração adicional",
-      "O aplicativo de Supervisão de Fila de Chamada (Call Queue Real-time Analytics) no Teams Admin Center ou via parceiro CCaaS integrado — mostra status de agentes em tempo real, chamadas ativas e métricas de fila; relatórios históricos disponíveis no Teams Admin Center > Análise e relatórios",
+      "O aplicativo de Supervisão de Fila de Chamada (Call Queue Real-time Analytics) no Teams Admin Center ou via parceiro CCaaS integrado — mostra status de.",
       "Microsoft Viva Insights fornece relatório de disponibilidade de agentes de fila de chamada em tempo real",
       "CQD com filtro de fila de chamada específica mostra agentes disponíveis e em chamada em tempo real"
     ],
@@ -5031,7 +5031,7 @@ export const questions = [
       "Transferir a chamada atual antes de atender a nova — não é possível ter duas chamadas ativas ao mesmo tempo",
       "A segunda chamada é automaticamente direcionada ao correio de voz sem opção de intervenção do usuário",
       "Apenas rejeitar a segunda chamada — Teams Phone não suporta múltiplas chamadas simultâneas para o mesmo usuário",
-      "Colocar a chamada atual em espera e atender a nova chamada, rejeitar a nova chamada, ou usar a função de mesclar chamadas para criar uma conferência de 3 vias entre todos os participantes"
+      "Colocar a chamada atual em espera e atender a nova chamada, rejeitar a nova chamada, ou usar a função de mesclar chamadas para criar uma conferência de 3."
     ],
     "correctAnswer": 3,
     "difficulty": "iniciante",
@@ -5081,7 +5081,7 @@ export const questions = [
       "Latência alta afeta apenas videoconferências — chamadas de voz funcionam perfeitamente com até 500ms de latência RTT",
       "Implementar ExpressRoute resolve automaticamente o problema de latência para qualquer filial independentemente da localização",
       "180ms é abaixo do limite de 200ms — nenhuma ação necessária pois a qualidade está dentro dos parâmetros aceitáveis",
-      "Latência de 180ms causa atraso perceptível na conversa (eco e sobreposição de fala), degradando experiência de voz — mitigação: implementar saída de internet local na filial para reduzir latência, evitar backhaul ao datacenter central e verificar se há congestionamento no link WAN"
+      "Latência de 180ms causa atraso perceptível na conversa (eco e sobreposição de fala), degradando experiência de voz — mitigação: implementar saída de internet."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
@@ -5130,7 +5130,7 @@ export const questions = [
     "options": [
       "IntelliFrame é o sistema de gerenciamento centralizado de câmeras IP da Microsoft para salas de reunião corporativas",
       "IntelliFrame adiciona moldura (frame) personalizada com logo corporativo ao redor do vídeo da câmera da sala",
-      "IntelliFrame usa IA para capturar uma visão panorâmica da sala e criar enquadramentos individuais virtuais de cada participante presencial — participantes remotos veem cada pessoa da sala em seu próprio quadro de vídeo individual, tornando a experiência mais equitativa entre presenciais e remotos",
+      "IntelliFrame usa IA para capturar uma visão panorâmica da sala e criar enquadramentos individuais virtuais de cada participante presencial — participantes.",
       "IntelliFrame é o modo de enquadramento automático que zoom no apresentador ignorando os demais participantes da sala"
     ],
     "correctAnswer": 2,
@@ -5228,7 +5228,7 @@ export const questions = [
     "id": "ms721_q210",
     "text": "Um engenheiro configura uma reunião Teams para um processo seletivo onde candidatos externos devem aguardar individualmente antes de serem admitidos um a um pelo entrevistador. Qual configuração de lobby garante esse comportamento?",
     "options": [
-      "Política de reunião com \"Quem pode ignorar o lobby\" configurado como \"Somente organizadores e co-organizadores\" e desativar ingresso simultâneo — o organizador admite manualmente cada participante do lobby um de cada vez conforme necessário",
+      "Política de reunião com \"Quem pode ignorar o lobby\" configurado como \"Somente organizadores e co-organizadores\" e.",
       "Configurar Atendedor Automático como pré-sala que autentica candidatos antes de transferir para a reunião principal",
       "Criar uma reunião separada para cada candidato com link único e senha individual para controle de acesso",
       "Usar o recurso de Salas Simultâneas com uma sala por candidato e admiti-los sequencialmente da sala de espera"
@@ -5256,7 +5256,7 @@ export const questions = [
       "Certificados dos dispositivos expiraram na data da atualização de rede — renovação via Intune é necessária",
       "Licenças dos usuários expiraram simultaneamente após atualização de billing — renovar licenças resolve os 15 dispositivos",
       "Firmware desatualizado nos 15 telefones causando incompatibilidade com nova versão do Teams — atualizar firmware resolve",
-      "Mudança de VLAN, sub-rede ou configuração de DHCP após atualização de rede impedindo que dispositivos obtenham conectividade ou se autentiquem — verificar configuração de rede dos switches para portas onde os telefones estão conectados, confirmar VLAN de voz e DHCP corretos e reiniciar dispositivos remotamente pelo Teams Admin Center"
+      "Mudança de VLAN, sub-rede ou configuração de DHCP após atualização de rede impedindo que dispositivos obtenham conectividade ou se autentiquem — verificar."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
@@ -5330,7 +5330,7 @@ export const questions = [
     "options": [
       "Configurar dois tenants Microsoft 365 separados com Direct Routing independente e DNS geo-redundante",
       "Criar dois Dial Plans separados — um para SP e um para RJ — e alternar manualmente entre eles em caso de falha",
-      "Criar uma Voice Route com dois gateways (SBC-SP e SBC-RJ) com prioridades diferentes na mesma rota — Teams tenta SBC-SP primeiro (Priority 1) e falha automaticamente para SBC-RJ (Priority 2) se SP estiver indisponível; monitorar status via Health Dashboard",
+      "Criar uma Voice Route com dois gateways (SBC-SP e SBC-RJ) com prioridades diferentes na mesma rota — Teams tenta SBC-SP primeiro (Priority 1) e falha.",
       "Usar Azure Traffic Manager com perfil de failover apontando para os dois SBCs com health probes automáticos"
     ],
     "correctAnswer": 2,
@@ -5378,7 +5378,7 @@ export const questions = [
     "id": "ms721_q216",
     "text": "Para implementar QoS no Teams, o administrador pode configurar marcação DSCP de duas formas principais. Quais são elas e qual é a diferença?",
     "options": [
-      "1) Via política de grupo (GPO) / Intune — configura QoS no sistema operacional Windows para que o cliente Teams marque pacotes com DSCP antes de enviar à rede (mais confiável, aplicado no endpoint); 2) Via switches/roteadores gerenciados — reclassificam pacotes baseados em porta/IP independentemente do endpoint (mais robusto mas requer infraestrutura gerenciada)",
+      "1) Via política de grupo (GPO) / Intune — configura QoS no sistema operacional Windows para que o cliente Teams marque pacotes com DSCP antes de enviar à.",
       "1) Via Azure Policy aplicada ao tenant Microsoft 365; 2) Via configuração de firewall de próxima geração com perfil Teams",
       "1) Via cliente Teams Desktop com configuração manual por usuário; 2) Via Microsoft Defender com perfil de rede Teams habilitado",
       "1) Via Teams Admin Center com política de QoS global; 2) Via configuração do SBC para marcar pacotes de mídia — ambas aplicadas no servidor"
@@ -5430,8 +5430,8 @@ export const questions = [
     "options": [
       "Criar três policies no Teams Admin Center > Voz > Correio de Voz com interface gráfica sem necessidade de PowerShell",
       "Usar Exchange Online com regras de caixa de correio diferentes por grupo para gerenciar comportamento de correio de voz",
-      "Criar três Online Voicemail Policies com configurações específicas para cada grupo via New-CsOnlineVoicemailPolicy e atribuir via Grant-CsOnlineVoicemailPolicy; para suporte, desativar correio de voz na política e configurar política de chamada com encaminhamento para fila de chamada em vez de voicemail",
-      "Configurar três Atendedores Automáticos separados com lógica diferente de tratamento de chamadas não atendidas por grupo"
+      "Criar três Online Voicemail Policies com configurações específicas para cada grupo via.",
+      "Configurar três Atendedores Automáticos separados com lógica diferente de tratamento de."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -5454,8 +5454,8 @@ export const questions = [
     "text": "Um engenheiro precisa recomendar headsets certificados Teams para dois perfis: desenvolvedores em ambiente de open office barulhento e executivos em escritório privativo. Qual categoria de certificação é mais adequada para cada perfil?",
     "options": [
       "Ambos os perfis devem usar o mesmo modelo — diferenciação por ambiente não é critério de certificação Teams",
-      "Executivos devem usar speakerphone de mesa — headsets não são recomendados para escritórios privativos por questões de ergonomia",
-      "Open office barulhento: headset com certificação \"Open Office\" ou superior com cancelamento de ruído ativo (ANC) robusto e supressão de ruído de microfone avançada; executivo em escritório privativo: headset \"Professional\" ou \"Business\" com qualidade de áudio premium, conforto para uso prolongado e integração com botões Teams",
+      "Executivos devem usar speakerphone de mesa — headsets não são recomendados para escritórios.",
+      "Open office barulhento: headset com certificação \"Open Office\" ou superior com cancelamento de ruído ativo (ANC) robusto e.",
       "Desenvolvedores em open office não precisam de headset certificado — qualquer fone USB funciona em ambiente barulhento"
     ],
     "correctAnswer": 2,
@@ -5506,7 +5506,7 @@ export const questions = [
       "O operador é o número PSTN principal da empresa que o AA usa como identificação de chamador de saída",
       "O operador é um agente especial que monitora todas as chamadas do AA em tempo real para garantia de qualidade",
       "O operador é o administrador que gerencia o AA e recebe notificações automáticas sobre erros de configuração",
-      "O operador é um destino de fallback configurado no AA — chamadores podem pressionar \"0\" a qualquer momento nos menus para ser transferidos diretamente ao operador (usuário Teams, fila de chamada ou número externo) sem precisar navegar pelos menus completos"
+      "O operador é um destino de fallback configurado no AA — chamadores podem pressionar \"0\" a qualquer momento nos menus para ser transferidos diretamente ao."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
@@ -5553,10 +5553,10 @@ export const questions = [
     "id": "ms721_q223",
     "text": "Um administrador verifica que não há números de discagem locais do Brasil disponíveis na ponte de Audioconferência Microsoft padrão. Qual é a alternativa para fornecer números de discagem locais brasileiros para reuniões Teams?",
     "options": [
-      "Implementar Direct Routing configurando um número de serviço local brasileiro no SBC como número de discagem para audioconferência (conferência PSTN via Direct Routing); ou adquirir números de serviço do Brasil via operadora parceira Operator Connect se disponível",
+      "Implementar Direct Routing configurando um número de serviço local brasileiro no SBC como número de discagem para.",
       "Usar apenas números internacionais (toll) ou gratuitos (toll-free) americanos — não há alternativa para números locais brasileiros",
       "A Microsoft garante contratualmente números locais para todos os países do mundo incluindo Brasil na Audioconferência padrão",
-      "Configurar Power Automate que intercepta convites de reunião e substitui automaticamente o número de conferência por número brasileiro"
+      "Configurar Power Automate que intercepta convites de reunião e substitui automaticamente o número de."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -5729,7 +5729,7 @@ export const questions = [
     "text": "Uma organização do setor jurídico precisa garantir que gravações de todas as reuniões Teams sejam retidas por 7 anos e não possam ser excluídas por usuários finais durante esse período. Qual combinação de configurações implementa isso?",
     "options": [
       "Configurar backup automático de gravações para Azure Blob Storage com política de retenção de 7 anos no Azure",
-      "Habilitar gravação automática na política de reunião + configurar política de retenção no Microsoft Purview aplicada ao SharePoint/OneDrive com retenção de 7 anos e ação de preservação (bloqueio de exclusão) + aplicar Preservation Lock para tornar a política imutável durante o período legal",
+      "Habilitar gravação automática na política de reunião + configurar política de retenção no Microsoft Purview aplicada ao.",
       "Instruir usuários a não excluir gravações e auditar exclusões via log de auditoria do Purview mensalmente",
       "Criar grupo de segurança \"Gravações Protegidas\" no SharePoint com permissões somente leitura para usuários finais"
     ],
@@ -5755,8 +5755,8 @@ export const questions = [
     "options": [
       "Usar Microsoft Sentinel com regra analítica que detecta chamadas 911 nos logs de auditoria e alerta a equipe de segurança",
       "Configurar Atendedor Automático especial para número 911 que conferencia automaticamente com a central de segurança interna",
-      "Configurar política de chamada de emergência com \"Modo de notificação de emergência\" habilitado — especificar número ou grupo Teams que recebe chamada de conferência ou notificação de chat em tempo real quando chamada de emergência é feita, incluindo informação de localização do chamador baseada na topologia de rede",
-      "Configurar Power Automate com gatilho de chamada de emergência que envia push notification para app de segurança corporativa"
+      "Configurar política de chamada de emergência com \"Modo de notificação de emergência\" habilitado — especificar número ou.",
+      "Configurar Power Automate com gatilho de chamada de emergência que envia push notification."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -5778,7 +5778,7 @@ export const questions = [
     "id": "ms721_q232",
     "text": "O que é o Microsoft Azure Peering Service no contexto do Microsoft Teams e como ele beneficia organizações com múltiplos sites?",
     "options": [
-      "Azure Peering Service melhora a conectividade com a rede Microsoft usando roteamento preferencial (telemetria de prefixo) — tráfego Teams é roteado pelo ponto de peering Microsoft mais próximo com menor latência, especialmente beneficioso para ISPs parceiros que implementam o serviço para seus clientes corporativos",
+      "Azure Peering Service melhora a conectividade com a rede Microsoft usando roteamento preferencial (telemetria de prefixo) — tráfego Teams é roteado pelo.",
       "Azure Peering Service é um CDN da Microsoft que faz cache de conteúdo Teams nas bordas da internet para reduzir latência",
       "Azure Peering Service é o serviço de DNS da Microsoft que resolve FQDNs do Teams para IPs mais próximos geograficamente",
       "Azure Peering Service é um substituto do ExpressRoute que fornece conectividade dedicada privada ao Microsoft 365 sem custo adicional"
@@ -5828,7 +5828,7 @@ export const questions = [
     "id": "ms721_q234",
     "text": "Após configurar Dynamic Emergency Calling no Teams Phone, como o engenheiro pode validar que a localização está sendo transmitida corretamente sem fazer uma chamada 911 real?",
     "options": [
-      "Microsoft fornece número de teste de emergência (933 nos EUA) que toca em serviço de teste e reproduz a localização detectada pelo sistema — permite validar endereço cívico transmitido sem acionar serviços de emergência reais; complementar verificando topologia de rede e mapeamento de sub-rede no Teams Admin Center",
+      "Microsoft fornece número de teste de emergência (933 nos EUA) que toca em serviço de teste e reproduz a localização detectada pelo sistema — permite validar.",
       "Fazer chamada 911 em horário comercial informando previamente ao PSAP que é teste — único método válido de validação",
       "Usar Per-user Call Analytics para ver localização transmitida na última chamada de emergência do usuário de teste",
       "Verificar o log de auditoria do Purview após tentativa de chamada de emergência para ver localização registrada"
@@ -5931,7 +5931,7 @@ export const questions = [
       "Criar tenant Microsoft 365 separado por região geográfica com Direct Routing independente em cada tenant",
       "Usar apenas um Voice Route global com todos os SBCs e deixar o Teams selecionar automaticamente o SBC mais próximo por latência",
       "Usar Azure Traffic Manager para rotear chamadas PSTN para o SBC regional com menor latência automaticamente",
-      "Criar Voice Routing Policies regionais com PSTN Usages específicos para cada região e SBCs correspondentes — atribuir a política regional correta aos usuários de cada região; complementar com topologia de rede mapeando sub-redes regionais para suportar LBR quando regulatoriamente necessário"
+      "Criar Voice Routing Policies regionais com PSTN Usages específicos para cada região e SBCs correspondentes — atribuir a."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
@@ -5954,7 +5954,7 @@ export const questions = [
     "text": "O CQD mostra que streams ruins estão concentrados em usuários com um tipo específico de dispositivo. Como filtrar e analisar dados do CQD por tipo de endpoint para identificar o dispositivo problemático?",
     "options": [
       "Microsoft Intune com relatório de dispositivos e cruzamento manual com tickets de suporte abertos pelos usuários afetados",
-      "Per-user Call Analytics individual de cada usuário com problema para verificar dispositivo usado — sem possibilidade de análise agregada por tipo de dispositivo",
+      "Per-user Call Analytics individual de cada usuário com problema para verificar dispositivo usado — sem possibilidade de análise.",
       "No CQD usar dimensões de endpoint: \"First/Second Client Device Name\" para nome do dispositivo de áudio, \"First/Second OS\" para sistema operacional, \"First/Second Client Version\" para versão do cliente Teams — cruzar com Poor Stream Rate para identificar qual dispositivo/versão concentra problemas e recomendar atualização ou substituição",
       "Exportar lista de usuários com streams ruins do CQD e verificar manualmente no Azure AD qual dispositivo cada um usa"
     ],
@@ -6004,7 +6004,7 @@ export const questions = [
     "text": "Uma empresa multinacional precisa gerenciar números de telefone Teams Phone em múltiplos países. Quais considerações regulatórias e operacionais o engenheiro deve abordar?",
     "options": [
       "Números de telefone Microsoft funcionam globalmente sem restrições — uma única conta pode ter números de qualquer país sem documentação adicional",
-      "A Microsoft gerencia todas as regulamentações locais automaticamente — o cliente não precisa se preocupar com conformidade regulatória de telecomunicações",
+      "A Microsoft gerencia todas as regulamentações locais automaticamente — o cliente não precisa se preocupar com conformidade.",
       "Usar apenas números americanos para toda a empresa multinacional — funcionam internacionalmente sem restrições regulatórias",
       "Cada país tem regulamentações próprias de telecomunicações (ex.: necessidade de endereço local, documentação de pessoa jurídica local, restrições de portabilidade) — verificar disponibilidade de Calling Plan/Operator Connect por país; para países sem essas opções usar Direct Routing com operadora local; considerar requisitos de emergência locais (E911 equivalente por país)"
     ],
@@ -6054,7 +6054,7 @@ export const questions = [
     "text": "Um administrador quer que participantes de reuniões não possam promover outros participantes a apresentadores durante reuniões, mantendo controle exclusivo com o organizador. Qual configuração de política de reunião implementa isso?",
     "options": [
       "Habilitar modo de conformidade de reunião no Teams Premium que bloqueia alterações de função durante a reunião",
-      "Política de reunião — configurar \"Quem pode apresentar\" como \"Somente organizadores\" ou \"Pessoas específicas\" e desativar a permissão de participantes promoverem outros a apresentadores nas configurações de funções de reunião da política",
+      "Política de reunião — configurar \"Quem pode apresentar\" como \"Somente organizadores\" ou \"Pessoas específicas\" e.",
       "Configurar rótulo de sensibilidade \"Confidencial\" que automaticamente restringe promoção de participantes a apresentadores",
       "Configurar política de acesso condicional que valida funções de reunião em tempo real via Azure AD"
     ],
@@ -6079,9 +6079,9 @@ export const questions = [
     "text": "Um usuário Teams Phone reporta que ao fazer chamadas para números móveis específicos no Brasil, a chamada conecta mas o áudio tem qualidade muito ruim (robótico, cortado). Chamadas para fixos funcionam bem. Como diagnosticar esse problema específico?",
     "options": [
       "Problema de cobertura 4G/5G do destinatário — qualidade de chamada em redes móveis é responsabilidade da operadora destino",
-      "Versão desatualizada do cliente Teams do usuário chamador — atualizar para versão mais recente resolve problemas de codec móvel",
+      "Versão desatualizada do cliente Teams do usuário chamador — atualizar para versão mais recente.",
       "Firewall corporativo bloqueando codecs específicos usados em chamadas para móveis — abrir portas adicionais resolve",
-      "Verificar codec negociado para chamadas móveis vs. fixos no Per-user Call Analytics (possível transcodificação ineficiente no SBC), verificar se o SBC tem configuração específica para troncos móveis vs. fixos, analisar logs SIP do SBC para ver se há re-INVITE com mudança de codec e verificar com a operadora se há problema na interconexão com redes móveis específicas"
+      "Verificar codec negociado para chamadas móveis vs. fixos no Per-user Call Analytics (possível."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
@@ -6103,7 +6103,7 @@ export const questions = [
     "id": "ms721_q245",
     "text": "Um engenheiro recém-contratado precisa estabelecer um baseline de qualidade de chamadas Teams da organização antes de iniciar melhorias. Qual processo deve ser seguido para criar esse baseline?",
     "options": [
-      "Coletar dados do CQD dos últimos 30-90 dias por modalidade (Teams, PSTN, conferência), calcular Poor Stream Rate baseline por site/departamento/tipo de dispositivo, documentar top 10 problemas identificados, registrar métricas atuais de jitter/latência/perda de pacotes por site e criar dashboard Power BI com snapshot do estado atual como referência para comparação futura",
+      "Coletar dados do CQD dos últimos 30-90 dias por modalidade (Teams, PSTN, conferência), calcular Poor Stream Rate baseline por site/departamento/tipo de.",
       "Solicitar ao suporte Microsoft relatório de qualidade histórica da organização — Microsoft mantém esse baseline automaticamente",
       "Apenas documentar tickets de suporte abertos no mês atual — indicador suficiente para baseline de qualidade",
       "Executar Network Assessment Tool por 1 dia e usar os resultados como baseline definitivo — dados de 24h são suficientes"
@@ -6179,8 +6179,8 @@ export const questions = [
     "text": "Um administrador identifica no relatório PSTN do Teams chamadas internacionais de alto custo para destinos incomuns que nenhum usuário reconhece ter feito. O que provavelmente ocorreu e como mitigar?",
     "options": [
       "Problema de faturamento Microsoft — chamadas fantasmas são erros de billing que devem ser contestados via ticket de suporte",
-      "Possível fraude de telecomunicações (IRSF — International Revenue Share Fraud ou TDoS) via comprometimento de conta Teams ou configuração inadequada do SBC — mitigação: desativar chamadas internacionais para usuários que não necessitam via política de chamada, implementar alertas de anomalia de uso PSTN, revisar contas comprometidas no Entra ID Protection e verificar regras de roteamento do SBC para chamadas não autorizadas",
-      "Usuários esqueceram de registrar chamadas internacionais no sistema — implementar política de declaração obrigatória de chamadas resolve",
+      "Possível fraude de telecomunicações (IRSF — International Revenue Share Fraud ou TDoS) via comprometimento de conta Teams ou.",
+      "Usuários esqueceram de registrar chamadas internacionais no sistema — implementar política de declaração.",
       "Bug no relatório PSTN do Teams Admin Center que duplica entradas — exportar dados e verificar manualmente as duplicatas"
     ],
     "correctAnswer": 1,

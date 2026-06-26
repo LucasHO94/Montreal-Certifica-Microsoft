@@ -1081,7 +1081,7 @@ export const questions = [
       "Instalar o conector do Power Apps via Azure Marketplace separadamente",
       "Habilitar o Power Apps no Portal do Azure com licença Premium obrigatória",
       "Criar um canal dedicado de Power Platform antes de ativar a integração",
-      "A integração do Power Apps está disponível nativamente no Teams; o administrador deve garantir que a política de permissão de aplicativos permite aplicativos Microsoft"
+      "A integração do Power Apps está disponível nativamente no Teams; o administrador deve garantir que a política de permissão de aplicativos permite aplicativos."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
@@ -4903,7 +4903,7 @@ export const questions = [
     "id": "ms700_q197",
     "text": "Uma organização usa Audioconferência no Teams e deseja que participantes de países sem número de discagem incluído no plano possam ligar gratuitamente para reuniões. Qual recurso deve ser configurado?",
     "options": [
-      "Créditos de Comunicação (Communication Credits) configurados no Microsoft 365 Admin Center para cobrir chamadas de discagem gratuita (toll-free) e países não incluídos no plano",
+      "Créditos de Comunicação (Communication Credits) configurados no Microsoft 365 Admin Center para cobrir chamadas de discagem gratuita (toll-free) e países não.",
       "Plano de Chamada Internacional adicionado à licença de Audioconferência existente",
       "Direct Routing com SBC internacional para absorver custos de discagem global",
       "Operator Connect com cobertura global automática sem configuração adicional"
@@ -5229,7 +5229,7 @@ export const questions = [
     "text": "Um administrador configura a política de reunião com \"Quem pode ignorar o lobby\" definido como \"Apenas eu\". Qual é o impacto dessa configuração para reuniões agendadas pelos usuários cobertos por essa política?",
     "options": [
       "Apenas usuários externos aguardam no lobby; membros internos entram diretamente",
-      "Apenas o organizador da reunião entra diretamente; todos os outros participantes — incluindo membros internos e co-organizadores — aguardam no lobby para admissão manual",
+      "Apenas o organizador da reunião entra diretamente; todos os outros participantes — incluindo membros internos e co-organizadores — aguardam no lobby para.",
       "Todos os participantes entram diretamente, pois co-organizadores herdam permissões do organizador",
       "A configuração bloqueia completamente o acesso de convidados à reunião"
     ],
@@ -5503,7 +5503,7 @@ export const questions = [
     "id": "ms700_q221",
     "text": "Uma equipe de TI deseja receber alertas de tickets do ServiceNow diretamente em um canal do Teams e poder atualizar o status do ticket sem sair do Teams. Qual abordagem é mais recomendada?",
     "options": [
-      "Instalar o aplicativo oficial do ServiceNow da Teams App Store ou usar o conector do ServiceNow com Incoming Webhook para notificações e cartões adaptáveis para ações",
+      "Instalar o aplicativo oficial do ServiceNow da Teams App Store ou usar o conector do ServiceNow com Incoming Webhook para notificações e cartões adaptáveis.",
       "Criar um fluxo no Power Automate com conector ServiceNow e envio de mensagens ao Teams",
       "Configurar e-mail para canal do Teams com encaminhamento de notificações do ServiceNow",
       "Usar a API do Microsoft Graph para criar um bot customizado que consulta tickets do ServiceNow"
@@ -5603,7 +5603,7 @@ export const questions = [
     "id": "ms700_q225",
     "text": "No Call Quality Dashboard (CQD) do Teams, o que significa uma chamada classificada como \"Poor\" (ruim)?",
     "options": [
-      "Uma chamada onde uma ou mais métricas de qualidade de mídia (jitter, perda de pacote, latência) excedem os limites definidos pela Microsoft para qualidade aceitável",
+      "Uma chamada onde uma ou mais métricas de qualidade de mídia (jitter, perda de pacote, latência) excedem os limites definidos pela Microsoft para qualidade.",
       "Uma chamada que foi encerrada antes de 30 segundos de duração pelo usuário",
       "Uma chamada onde o usuário explicitamente classificou a qualidade como ruim no feedback pós-chamada",
       "Uma chamada PSTN que falhou antes de ser atendida pelo destinatário"
@@ -5903,7 +5903,7 @@ export const questions = [
     "id": "ms700_q237",
     "text": "Um administrador deseja configurar uma saudação personalizada de correio de voz para um usuário específico do Teams que está de férias, sem acesso ao dispositivo do usuário. Como isso pode ser feito?",
     "options": [
-      "O administrador pode configurar a saudação de correio de voz via PowerShell usando Set-CsOnlineVoicemailUserSettings ou o usuário pode configurar pelo Outlook Web App nas configurações de voz",
+      "O administrador pode configurar a saudação de correio de voz via PowerShell usando Set-CsOnlineVoicemailUserSettings ou o usuário pode configurar pelo.",
       "Acessar o Teams Admin Center > Usuários > Voz > Saudação de correio de voz personalizada",
       "Criar um Atendedor Automático temporário com a saudação de férias redirecionando para o correio de voz",
       "Configurar encaminhamento de chamadas no Exchange Online com mensagem de ausência integrada ao correio de voz"
@@ -5929,7 +5929,7 @@ export const questions = [
     "text": "Um administrador deseja que o Microsoft Teams detecte automaticamente quando um usuário entra em uma sala de reunião com Teams Rooms e sugira ingressar na reunião agendada naquela sala. Qual recurso habilita essa experiência?",
     "options": [
       "Reserva inteligente de sala via Teams Panel com reconhecimento facial do usuário",
-      "Detecção de proximidade (Proximity Detection) — o Teams no dispositivo móvel ou laptop detecta o dispositivo Teams Rooms via Bluetooth e oferece ingresso com um toque",
+      "Detecção de proximidade (Proximity Detection) — o Teams no dispositivo móvel ou laptop detecta o dispositivo Teams Rooms via Bluetooth e oferece ingresso com.",
       "Integração do Teams com Azure Maps para geolocalização de salas por GPS",
       "Microsoft Mesh com sensores IoT na sala detectando presença de dispositivos cadastrados"
     ],
@@ -6055,7 +6055,7 @@ export const questions = [
     "options": [
       "Política de retenção no Purview aplicada aos logs de auditoria do Teams Admin Center",
       "Azure Monitor Log Analytics com retenção configurada para 3.650 dias para dados do Teams",
-      "Auditoria Premium (Audit Premium) no Microsoft Purview — permite retenção de logs de auditoria por até 10 anos com licença de retenção de log de auditoria de 10 anos",
+      "Auditoria Premium (Audit Premium) no Microsoft Purview — permite retenção de logs de auditoria por até 10 anos com licença de retenção de log de auditoria de.",
       "Microsoft Sentinel com arquivo de dados de longo prazo habilitado para logs do Microsoft 365"
     ],
     "correctAnswer": 2,
@@ -6129,7 +6129,7 @@ export const questions = [
     "text": "Uma organização deseja integrar o Microsoft Teams com seu sistema de CRM Salesforce para que notificações de oportunidades sejam enviadas automaticamente para canais relevantes. Qual é a abordagem mais recomendada?",
     "options": [
       "Configurar um Incoming Webhook no canal e programar o Salesforce para enviar payloads JSON ao endpoint",
-      "Usar o aplicativo oficial do Salesforce disponível na Teams App Store ou configurar Power Automate com conector do Salesforce e ação de envio de mensagem ao Teams",
+      "Usar o aplicativo oficial do Salesforce disponível na Teams App Store ou configurar Power Automate com conector do Salesforce e ação de envio de mensagem ao.",
       "Usar o Microsoft Graph API com permissões de envio de mensagem integradas ao Salesforce via OAuth",
       "Criar um bot personalizado no Azure Bot Service que consulta o Salesforce e posta no Teams via polling"
     ],
@@ -6503,7 +6503,7 @@ export const questions = [
     "id": "ms700_q261",
     "text": "Um administrador deseja que arquivos maliciosos sejam detectados e bloqueados antes de serem acessados por usuários em canais do Teams, mesmo que já tenham sido carregados. Qual recurso Microsoft oferece essa proteção?",
     "options": [
-      "Microsoft Defender for Office 365 com Safe Attachments configurado para SharePoint, OneDrive e Microsoft Teams — detecta e bloqueia arquivos maliciosos pós-upload",
+      "Microsoft Defender for Office 365 com Safe Attachments configurado para SharePoint, OneDrive e Microsoft Teams — detecta e bloqueia arquivos maliciosos.",
       "Microsoft Defender Antivirus com varredura em tempo real de arquivos do SharePoint associado ao Teams",
       "Microsoft Purview DLP com detecção de conteúdo executável em arquivos do Teams",
       "Azure Defender for Storage com análise de malware em bibliotecas do SharePoint do Teams"
@@ -6603,7 +6603,7 @@ export const questions = [
     "id": "ms700_q265",
     "text": "Em um ambiente híbrido onde alguns usuários estão no escritório com Teams Rooms e outros participam remotamente, qual conjunto de práticas garante a melhor experiência de reunião para todos?",
     "options": [
-      "Uso de câmera inteligente com enquadramento automático, microfone de sala certificado, conteúdo compartilhado via HDMI ingest e modo de reunião híbrida do Teams Rooms",
+      "Uso de câmera inteligente com enquadramento automático, microfone de sala certificado, conteúdo compartilhado via HDMI ingest e modo de reunião híbrida do.",
       "Todos os participantes presenciais devem usar headsets individuais conectados aos seus laptops, ignorando o sistema de sala",
       "Desativar câmera e microfone da sala e usar apenas os dispositivos individuais dos participantes presenciais",
       "Configurar a reunião como evento ao vivo para suportar participantes híbridos com qualidade garantida"
@@ -6655,7 +6655,7 @@ export const questions = [
     "options": [
       "Azure OpenAI Service com API de chat integrada via Incoming Webhook ao Teams",
       "Microsoft Bot Framework SDK com conector do SharePoint e publicação no Teams App Store",
-      "Microsoft Copilot Studio (anteriormente Power Virtual Agents) — permite criar agentes de IA com bases de conhecimento personalizadas e publicar diretamente no Microsoft Teams",
+      "Microsoft Copilot Studio (anteriormente Power Virtual Agents) — permite criar agentes de IA com bases de conhecimento personalizadas e publicar diretamente.",
       "Microsoft Copilot for Microsoft 365 com fonte de dados do SharePoint configurada pelo administrador"
     ],
     "correctAnswer": 2,
@@ -6703,7 +6703,7 @@ export const questions = [
     "id": "ms700_q269",
     "text": "Após um webinar realizado no Microsoft Teams, o organizador deseja analisar dados de registro, comparecimento e engajamento dos participantes. Onde essas informações estão disponíveis?",
     "options": [
-      "Relatório de presença e engajamento do webinar disponível no Teams após o evento, acessível pelo organizador via opção \"Ver relatório de presença\" nas configurações do evento",
+      "Relatório de presença e engajamento do webinar disponível no Teams após o evento, acessível pelo organizador via opção \"Ver relatório de presença\" nas.",
       "Teams Admin Center > Análise e relatórios > Relatórios de webinar com métricas de engajamento",
       "Microsoft Forms > Respostas do formulário de registro com dados de presença cruzados",
       "Power BI com conector de eventos Teams para análise de comparecimento e engajamento"
@@ -6855,7 +6855,7 @@ export const questions = [
     "options": [
       "Safe Links e Safe Attachments para Teams — disponíveis exclusivamente no Plano 2",
       "Proteção contra malware em arquivos do Teams e políticas anti-phishing — exclusivas do Plano 2",
-      "Investigação e resposta automatizadas (AIR), simulação de ataques de phishing (Attack Simulator) e Threat Explorer para análise avançada de ameaças que afetam o Teams",
+      "Investigação e resposta automatizadas (AIR), simulação de ataques de phishing (Attack Simulator) e Threat Explorer para análise avançada de ameaças que.",
       "Relatórios de segurança de e-mail e Teams com exportação para SIEM — exclusivos do Plano 2"
     ],
     "correctAnswer": 2,
@@ -6981,7 +6981,7 @@ export const questions = [
       "Configurar federação SIP entre Teams e Zoom/Google Meet via Direct Routing com SBC compatível",
       "Habilitar acesso externo no Teams Admin Center selecionando Zoom e Google Meet como plataformas federadas",
       "Usar o Microsoft Teams Rooms com modo de interoperabilidade nativa para Zoom e Google Meet via CVI",
-      "Usuários podem participar de reuniões Zoom e Google Meet via navegador ou aplicativo dessas plataformas — não há interoperabilidade nativa de protocolo entre Teams e Zoom/Google Meet"
+      "Usuários podem participar de reuniões Zoom e Google Meet via navegador ou aplicativo dessas plataformas — não há interoperabilidade nativa de protocolo entre."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
@@ -7103,7 +7103,7 @@ export const questions = [
     "id": "ms700_q285",
     "text": "Um organizador de reunião do Teams percebe que o número de discagem exibido no convite de reunião é de outro país, não do Brasil. Como o administrador pode definir o número de discagem padrão correto para os usuários brasileiros?",
     "options": [
-      "Configurar o número de telefone de conferência padrão da ponte de audioconferência do usuário para o número brasileiro nas configurações de audioconferência do usuário no Teams Admin Center ou PowerShell",
+      "Configurar o número de telefone de conferência padrão da ponte de audioconferência do usuário para o número brasileiro nas configurações de audioconferência.",
       "Alterar as configurações regionais do tenant para Brasil no Microsoft 365 Admin Center",
       "Criar um Atendedor Automático com número brasileiro que redireciona para a ponte de conferência",
       "Solicitar à Microsoft a adição de um número brasileiro à ponte de conferência via ticket de suporte"
@@ -7155,7 +7155,7 @@ export const questions = [
     "options": [
       "Azure Network Watcher com testes de conectividade agendados para endpoints do Microsoft 365",
       "Microsoft Teams Network Assessment Tool executado diariamente em estações representativas de cada escritório",
-      "Microsoft 365 Admin Center > Integridade > Conectividade de rede — exibe testes de conectividade por localização com pontuação e recomendações de melhoria para Teams e outros serviços",
+      "Microsoft 365 Admin Center > Integridade > Conectividade de rede — exibe testes de conectividade por localização com pontuação e recomendações de melhoria.",
       "Call Quality Dashboard com relatório de tendência de rede por site físico ao longo do tempo"
     ],
     "correctAnswer": 2,
@@ -7229,7 +7229,7 @@ export const questions = [
     "text": "Uma organização implementa uma arquitetura Zero Trust e deseja aplicar seus princípios ao Microsoft Teams. Quais controles são fundamentais nessa abordagem para o Teams?",
     "options": [
       "Bloquear todo acesso externo ao Teams e exigir VPN corporativa para qualquer acesso ao serviço",
-      "Verificar explicitamente (MFA + acesso condicional), usar acesso de privilégio mínimo (RBAC + PIM) e assumir violação (monitoramento contínuo via Defender + Sentinel + auditoria Purview)",
+      "Verificar explicitamente (MFA + acesso condicional), usar acesso de privilégio mínimo (RBAC + PIM) e assumir violação (monitoramento contínuo via Defender +.",
       "Criptografar todas as comunicações E2EE, desativar gravações e restringir aplicativos de terceiros",
       "Implementar barreiras de informação entre todos os departamentos e desativar acesso de convidados globalmente"
     ],
@@ -7281,7 +7281,7 @@ export const questions = [
       "A reunião é automaticamente criptografada E2EE e restrita apenas a membros internos sem possibilidade de convidados",
       "Transcrição é obrigatória e armazenada no Purview com retenção de 7 anos automaticamente",
       "O link de reunião é de uso único e expira após o término, impedindo gravações não autorizadas",
-      "Gravação pode ser bloqueada, marca d'água ativada, cópia de chat desabilitada e lobby configurado automaticamente conforme as configurações definidas no rótulo de sensibilidade"
+      "Gravação pode ser bloqueada, marca d'água ativada, cópia de chat desabilitada e lobby configurado automaticamente conforme as configurações definidas no."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
@@ -7381,7 +7381,7 @@ export const questions = [
       "Criar regra de alerta no Teams Admin Center para eventos de DLP com envio de e-mail ao administrador",
       "Configurar Microsoft Sentinel com playbook de alerta acionado por eventos DLP do Purview",
       "Habilitar notificações de conformidade no Microsoft 365 Admin Center > Integridade > Alertas de conformidade",
-      "Configurar alertas de política DLP no Microsoft Purview — definir limites de acionamento e destinatários de alerta nas configurações da política DLP aplicada ao Teams"
+      "Configurar alertas de política DLP no Microsoft Purview — definir limites de acionamento e destinatários de alerta nas configurações da política DLP aplicada."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",

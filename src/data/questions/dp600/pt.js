@@ -2204,7 +2204,7 @@ export const questions = [
     "text": "Como um Service Principal é usado para automação de tarefas no Microsoft Fabric?",
     "options": [
       "Um Service Principal substitui contas de usuário individuais e recebe automaticamente permissões Admin em todos os workspaces do tenant.",
-      "Um Service Principal (identidade de aplicativo do Azure AD) pode ser adicionado a workspaces com funções específicas e usado para autenticar chamadas à API REST do Fabric, automatizando refresh, deploy e outras operações sem credenciais de usuário.",
+      "Um Service Principal (identidade de aplicativo do Azure AD) pode ser adicionado a workspaces com funções específicas e usado para autenticar chamadas à API.",
       "Um Service Principal é usado exclusivamente para configurar gateways de dados on-premises para conexões seguras.",
       "Um Service Principal é uma conta de serviço criada no Microsoft Fabric Admin Portal que gerencia a capacidade Fabric."
     ],
@@ -2229,7 +2229,7 @@ export const questions = [
     "text": "Qual é a diferença entre a seção \"Tables\" e a seção \"Files\" de um Lakehouse no Microsoft Fabric?",
     "options": [
       "\"Tables\" é acessível via SQL Analytics Endpoint e \"Files\" é acessível apenas via Azure Storage Explorer.",
-      "\"Tables\" contém tabelas Delta gerenciadas com schema enforcement e suporte a SQL; \"Files\" é uma área de armazenamento de arquivos brutos (zona landing) em qualquer formato, sem schema imposto.",
+      "\"Tables\" contém tabelas Delta gerenciadas com schema enforcement e suporte a SQL; \"Files\" é uma área de armazenamento de arquivos brutos (zona landing) em.",
       "\"Tables\" é somente leitura e \"Files\" permite leitura e escrita via notebooks e pipelines.",
       "\"Tables\" armazena dados estruturados em formato CSV e \"Files\" armazena dados em formato Delta Parquet."
     ],
@@ -2328,7 +2328,7 @@ export const questions = [
     "id": "dp600_q94",
     "text": "O que acontece quando há um conflito entre as alterações feitas no workspace Fabric e as alterações feitas diretamente no repositório Git?",
     "options": [
-      "O Fabric indica o conflito no painel de controle de versão; o usuário deve escolher manualmente entre \"Update from Git\" (sobrescrever workspace com Git) ou \"Commit to Git\" (sobrescrever Git com workspace), pois não há merge automático.",
+      "O Fabric indica o conflito no painel de controle de versão; o usuário deve escolher manualmente entre \"Update from Git\" (sobrescrever workspace com Git) ou.",
       "O workspace sempre prevalece sobre o Git; um commit automático é feito com as alterações do workspace.",
       "O Fabric cria automaticamente um branch de merge e resolve o conflito combinando as alterações de ambas as fontes.",
       "O repositório Git sempre prevalece sobre o workspace; as alterações locais são descartadas automaticamente."
@@ -2405,7 +2405,7 @@ export const questions = [
     "options": [
       "Para executar queries DAX e KQL diretamente via HTTP, substituindo o XMLA endpoint em cenários de baixa latência.",
       "Para configurar RLS e OLS dinamicamente em modelos semânticos sem precisar publicar uma nova versão do modelo.",
-      "Para disparar refreshes de modelos semânticos, criar e gerenciar workspaces, implantar itens via pipelines de CI/CD e monitorar execuções de jobs programaticamente, sem usar a interface gráfica.",
+      "Para disparar refreshes de modelos semânticos, criar e gerenciar workspaces, implantar itens via pipelines de CI/CD e monitorar execuções de jobs.",
       "Para migrar dados entre tenants Fabric de diferentes regiões de forma segura e criptografada."
     ],
     "correctAnswer": 2,
@@ -2705,7 +2705,7 @@ export const questions = [
     "options": [
       "É obrigatória para usar funções de inteligência de tempo como TOTALYTD e SAMEPERIODLASTYEAR corretamente.",
       "Permite que o motor VertiPaq comprima os dados das colunas hierárquicas de forma mais eficiente.",
-      "Facilita a navegação drill-down nos relatórios, agrupando logicamente colunas relacionadas (ex: Ano > Trimestre > Mês > Dia) sem que o usuário precise selecionar colunas individualmente.",
+      "Facilita a navegação drill-down nos relatórios, agrupando logicamente colunas relacionadas (ex: Ano > Trimestre > Mês > Dia) sem que o usuário precise.",
       "Melhora o desempenho de consultas DAX ao pré-calcular agregações para cada nível da hierarquia durante o refresh."
     ],
     "correctAnswer": 2,
@@ -2728,7 +2728,7 @@ export const questions = [
     "id": "dp600_q110",
     "text": "Em um Data Pipeline do Fabric, ao copiar dados de uma fonte REST API para um Lakehouse, qual formato de destino é recomendado para compatibilidade com tabelas Delta?",
     "options": [
-      "Salvar os dados na seção \"Files\" do Lakehouse em formato JSON ou Parquet e depois usar um Notebook ou SQL para converter e registrar como tabela Delta na seção \"Tables\".",
+      "Salvar os dados na seção \"Files\" do Lakehouse em formato JSON ou Parquet e depois usar um Notebook ou SQL para converter e registrar como tabela Delta na.",
       "Usar o formato Delta diretamente na atividade Copy Data, que converte automaticamente qualquer fonte para Delta Parquet.",
       "Usar o formato Avro, que é o formato nativo de ingestão do Lakehouse e é convertido para Delta automaticamente.",
       "Usar o formato CSV comprimido (.gz) diretamente na seção \"Tables\", pois o Lakehouse converte automaticamente para Delta."
@@ -2753,7 +2753,7 @@ export const questions = [
     "id": "dp600_q111",
     "text": "Como você reverte um workspace Fabric para um estado anterior usando a integração Git?",
     "options": [
-      "No painel de Source Control do workspace, selecionar o commit desejado no histórico do repositório Git e usar \"Update workspace\" para restaurar o estado dos itens para aquela versão.",
+      "No painel de Source Control do workspace, selecionar o commit desejado no histórico do repositório Git e usar \"Update workspace\" para restaurar o estado dos.",
       "Usando o botão \"Undo Last Deployment\" no Deployment Pipeline, que restaura automaticamente o último estado estável.",
       "Executando `git revert` no repositório e aguardando a sincronização automática do Fabric com o novo estado do branch.",
       "Criando um novo workspace a partir do branch anterior e substituindo manualmente os itens no workspace de produção."
@@ -2779,7 +2779,7 @@ export const questions = [
     "text": "Você percebe que uma tabela Delta no Lakehouse acumulou milhares de arquivos pequenos após semanas de cargas incrementais. Qual é a sequência correta de manutenção?",
     "options": [
       "Executar `ANALYZE TABLE` para recalcular estatísticas e depois `COMPACT` para consolidar os arquivos automaticamente.",
-      "Executar `OPTIMIZE nome_tabela` para compactar arquivos pequenos e, opcionalmente, aplicar `ZORDER BY (coluna_filtro)` para colocar dados correlacionados juntos; depois executar `VACUUM` para remover arquivos obsoletos.",
+      "Executar `OPTIMIZE nome_tabela` para compactar arquivos pequenos e, opcionalmente, aplicar `ZORDER BY (coluna_filtro)` para colocar dados correlacionados.",
       "Executar `VACUUM` primeiro para liberar espaço e depois `OPTIMIZE` para reorganizar os arquivos restantes.",
       "Recriar a tabela Delta com `CREATE TABLE AS SELECT` e excluir a tabela original para eliminar os arquivos fragmentados."
     ],
@@ -3101,27 +3101,27 @@ export const questions = [
   },
   {
     "id": "dp600_q125",
-    "text": "No Warehouse do Fabric, qual query calcula a diferença de vendas entre o mês atual e o mês anterior usando funções de janela T-SQL?",
+    "text": "No Warehouse do Microsoft Fabric, você precisa calcular, para cada mês, a diferença entre as vendas do mês atual e as vendas do mês anterior. Qual query T-SQL com função de janela resolve corretamente esse requisito?",
     "options": [
-      "`SELECT mes, vendas, vendas",
-      "`SELECT mes, vendas, DIFF(vendas, 1) OVER (PARTITION BY mes) AS diferenca FROM dbo.vendas_mensais`",
-      "`SELECT mes, vendas, vendas",
-      "`SELECT mes, vendas, vendas"
+      "`SELECT mes, vendas, DIFF(vendas, 1) OVER (ORDER BY mes) AS diferenca FROM dbo.vendas_mensais`",
+      "`SELECT mes, vendas, vendas - LAG(vendas, 1, 0) OVER (ORDER BY mes) AS diferenca FROM dbo.vendas_mensais`",
+      "`SELECT mes, vendas, vendas - LEAD(vendas, 1, 0) OVER (ORDER BY mes) AS diferenca FROM dbo.vendas_mensais`",
+      "`SELECT mes, vendas, SUM(vendas) OVER (ORDER BY mes ROWS BETWEEN 1 PRECEDING AND CURRENT ROW) AS diferenca FROM dbo.vendas_mensais`"
     ],
-    "correctAnswer": 0,
+    "correctAnswer": 1,
     "difficulty": "avancado",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "Questão 125 cobre Warehouse/T-SQL, um tópico importante do DP-600.",
-      "papoReto": "Analise o cenário apresentado: No Warehouse do Fabric, qual query calcula a diferença de vendas entre o mês atual e o mês anterior ... Considere qual opção melhor atende o requisito técnico descrito.",
-      "respostaCerta": "A opção correta reflete o conceito ou prática Warehouse/T-SQL adequada para o cenário.",
-      "puloDoGato": "Em questões Warehouse/T-SQL, procure pela solução que resolve exatamente o requisito, não aproximações.",
+      "intro": "Esta questão avalia o uso de funções de janela analíticas do T-SQL no Fabric Warehouse, especificamente LAG() para comparar linhas com a linha anterior na sequência.",
+      "papoReto": "Para pegar o valor do mês ANTERIOR, a função é LAG(). Ela olha para trás na janela ordenada por mes e devolve o valor da linha N posições atrás. O terceiro parâmetro (0) é o default quando não existe linha anterior — ou seja, no primeiro mês, a diferença aparece como 0 em vez de NULL. Simples assim.",
+      "respostaCerta": "`SELECT mes, vendas, vendas - LAG(vendas, 1, 0) OVER (ORDER BY mes) AS diferenca FROM dbo.vendas_mensais`",
+      "puloDoGato": "LAG olha para TRÁS (linha anterior), LEAD olha para FRENTE (linha seguinte). Para diferença mês atual − mês anterior, LAG é a escolha. DIFF não existe no T-SQL padrão.",
       "cascasDeBanana": [
-        "Opção alternativa 1: abordagem válida mas não resolve o cenário específico.",
-        "Opção alternativa 2: conceito relacionado em contexto errado.",
-        "Opção alternativa 3: armadilha comum ou confusão frequente entre conceitos."
+        "DIFF(vendas, 1): função inexistente no T-SQL padrão e no Fabric Warehouse — nenhum DBMS relacional mainstream implementa DIFF() como função de janela nativa.",
+        "LEAD() no lugar de LAG(): LEAD retorna o valor da linha SEGUINTE na sequência, calculando a diferença inversa (mês seguinte − atual), não o que a questão pede.",
+        "SUM() OVER ROWS BETWEEN 1 PRECEDING AND CURRENT ROW: soma as duas linhas consecutivas em vez de calcular a diferença; resulta no total acumulado do par, não na variação."
       ],
-      "dicaOuro": "Warehouse = T-SQL padrão com suporte completo a DDL/DML."
+      "dicaOuro": "LAG(col, offset, default) e LEAD(col, offset, default) são funções de janela do SQL:2003, ambas disponíveis no T-SQL do Fabric Warehouse. LAG = passado, LEAD = futuro."
     }
   },
   {
@@ -3231,7 +3231,7 @@ export const questions = [
       "O modo Dual habilita a atualização automática das dimensões a cada 15 minutos sem necessidade de refresh manual.",
       "O modo Dual é obrigatório para tabelas de dimensão em modelos que usam Direct Lake, pois Import não é compatível com esse modo.",
       "O modo Dual reduz o tamanho do modelo semântico ao não armazenar os dados de dimensão em memória, usando apenas cache temporário.",
-      "O modo Dual permite que a tabela funcione como Import ao ser combinada com tabelas Import (desempenho máximo) e como DirectQuery ao ser combinada com tabelas DirectQuery, eliminando a necessidade de cross-source joins desnecessários."
+      "O modo Dual permite que a tabela funcione como Import ao ser combinada com tabelas Import (desempenho máximo) e como DirectQuery ao ser combinada com tabelas."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
@@ -3328,7 +3328,7 @@ export const questions = [
     "id": "dp600_q134",
     "text": "Para que serve a função DAX `CROSSFILTER()` e quando ela é necessária?",
     "options": [
-      "Modifica a direção de filtragem de um relacionamento dentro de uma expressão CALCULATE, permitindo ativar filtragem bidirecional ou desativar um relacionamento pontualmente sem alterar a configuração permanente do modelo.",
+      "Modifica a direção de filtragem de um relacionamento dentro de uma expressão CALCULATE, permitindo ativar filtragem bidirecional ou desativar um.",
       "Aplica um filtro cruzado entre todos os visuais de uma página de relatório, sincronizando seleções automaticamente.",
       "Substitui o CROSSJOIN ao calcular produtos cartesianos de tabelas dentro de expressões de tabela DAX.",
       "Cria um relacionamento temporário entre duas tabelas não relacionadas no modelo para uso exclusivo dentro de uma medida DAX."
@@ -3353,7 +3353,7 @@ export const questions = [
     "id": "dp600_q135",
     "text": "Como um modelo semântico no modo Direct Lake acessa os dados do OneLake sem importá-los para memória?",
     "options": [
-      "O motor Direct Lake carrega os segmentos de coluna (column segments) dos arquivos Delta Parquet do OneLake diretamente no buffer de memória do motor analítico sob demanda, sem passar por uma query SQL intermediária.",
+      "O motor Direct Lake carrega os segmentos de coluna (column segments) dos arquivos Delta Parquet do OneLake diretamente no buffer de memória do motor.",
       "O motor Direct Lake importa automaticamente apenas as colunas usadas nos visuais ativos, descartando o restante após cada sessão.",
       "O motor Direct Lake usa o SQL Analytics Endpoint do Lakehouse como intermediário para todas as consultas DAX geradas pelo modelo.",
       "O motor Direct Lake cria uma conexão ODBC permanente com o OneLake e transmite os dados por streaming conforme as queries DAX são executadas."
@@ -3479,7 +3479,7 @@ export const questions = [
     "text": "O que é a Workspace Identity no Microsoft Fabric e qual é seu caso de uso principal?",
     "options": [
       "A identidade visual do workspace, incluindo tema, ícone e descrição, usada para personalizar a experiência dos usuários no portal Fabric.",
-      "Uma identidade gerenciada associada ao workspace que permite que itens do Fabric (como pipelines e notebooks) acessem recursos externos do Azure de forma segura sem credenciais de usuário armazenadas.",
+      "Uma identidade gerenciada associada ao workspace que permite que itens do Fabric (como pipelines e notebooks) acessem recursos externos do Azure de forma.",
       "Uma conta de serviço criada automaticamente no Azure AD para representar o workspace em integrações com Microsoft Teams.",
       "O alias único do workspace usado na URL de acesso e nas APIs REST para identificar o workspace no tenant."
     ],
@@ -3531,7 +3531,7 @@ export const questions = [
       "Aplica formatação condicional a uma medida com base nos valores de uma tabela de configuração externa ao contexto de filtro.",
       "Cria uma hierarquia de tratamento de erros DAX que redireciona o cálculo para colunas alternativas quando a principal retorna BLANK.",
       "Trata valores nulos em uma tabela substituindo-os pelos valores correspondentes das colunas especificadas de outra tabela.",
-      "Aplica os valores de uma tabela como filtro em colunas especificadas de outra tabela, simulando um relacionamento virtual entre tabelas não diretamente relacionadas no modelo."
+      "Aplica os valores de uma tabela como filtro em colunas especificadas de outra tabela, simulando um relacionamento virtual entre tabelas não diretamente."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
@@ -3606,7 +3606,7 @@ export const questions = [
       "Usando variáveis de ambiente do workspace configuradas no Admin Portal que o notebook lê automaticamente via `os.environ`.",
       "Usando a função `spark.conf.get(\"pipeline.parameter.nome\")` para acessar parâmetros passados pelo pipeline em tempo de execução.",
       "Criando um arquivo de configuração JSON na seção Files do Lakehouse que o notebook lê no início da execução.",
-      "Usando a célula de parâmetros do notebook (marcada com a tag \"parameters\" no Fabric), que permite sobrescrever variáveis com valores passados pela atividade \"Notebook\" do Data Pipeline via campo \"Base parameters\"."
+      "Usando a célula de parâmetros do notebook (marcada com a tag \"parameters\" no Fabric), que permite sobrescrever variáveis com valores passados pela atividade."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
@@ -3656,7 +3656,7 @@ export const questions = [
       "`STRING_CONCAT(coluna1, coluna2, separator=' - ')`",
       "`JOIN(coluna1, ' - ', coluna2)`",
       "`MERGE(coluna1, ' - ', coluna2)`",
-      "`CONCAT(coluna1, '"
+      "`CONCAT(coluna1, ' - ', coluna2)`"
     ],
     "correctAnswer": 3,
     "difficulty": "iniciante",
@@ -3664,7 +3664,7 @@ export const questions = [
     "explanation": {
       "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
       "papoReto": "Em T-SQL, `CONCAT()` concatena múltiplas colunas ou strings. Syntax: `CONCAT(col1, ' - ', col2)`. Diferente de `+` (retorna NULL se qualquer operando é NULL), CONCAT trata NULLs implicitamente como strings vazias. Isso torna CONCAT mais robusto para dados com gaps.",
-      "respostaCerta": "`CONCAT(coluna1, ' — implementa corretamente o requisito técnico para este cenário de iniciante.",
+      "respostaCerta": "`CONCAT(coluna1, ' - ', coluna2)` — concatena as colunas com o separador, tratando valores NULL como string vazia.",
       "puloDoGato": "Concatenar em T-SQL = CONCAT(). Se vê STRING_AGG, é agregação (group_concat), não concatenação simples.",
       "cascasDeBanana": [
         "STRING_CONCAT com separator=: T-SQL não tem esse parâmetro em STRING_CONCAT(). STRING_CONCAT() simplesmente concatena lista de valores; separador exige `CONCAT(col1, separador, col2)`.",
@@ -3706,22 +3706,22 @@ export const questions = [
       "Configurando a propriedade \"Retry Policy\" da atividade com \"On Failure Action\" apontando para a atividade de notificação.",
       "Usando um bloco try-catch T-SQL dentro de uma atividade Script que captura exceções e chama a procedure de notificação.",
       "Criando um trigger de evento no workspace que detecta falhas de pipeline e dispara automaticamente um fluxo do Power Automate.",
-      "Conectando as atividades com o path \"On Failure\" (seta vermelha), que direciona o fluxo para a atividade de notificação apenas quando a atividade anterior falha, permitindo lógica de erro independente do fluxo principal."
+      "Conectando as atividades com o path \"On Failure\" (seta vermelha), que direciona o fluxo para a atividade de notificação apenas quando a atividade anterior."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "No contexto do DP-600, manter a solução analítica exige entender indexação e performance. Índices em Warehouse aceleram queries ao criar estruturas de busca rápida em colunas específicas. Em T-SQL Warehouse, você cria índices via `CREATE INDEX nome ON tabela(coluna)` — isso reduz tempo de scan de tabela inteira para busca focada.",
-      "respostaCerta": "Conectando as atividades com o path \"On Failure\" (seta vermelha), que direciona o fluxo para a atividade de notificação apenas quando a atividade anterior falha, permitindo lógica de erro independente do fluxo principal. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Query lenta em Warehouse? Procure índices em colunas WHERE/JOIN. Índice = busca rápida, sem índice = table scan completo.",
+      "intro": "Pipelines do Fabric tratam falhas via paths condicionais entre atividades, não via lógica de código.",
+      "papoReto": "O path \"On Failure\" é uma conexão condicional entre atividades: a seta vermelha só dispara o fluxo para a atividade seguinte quando a atividade de origem termina com erro. Isso permite plugar uma atividade de notificação (Web, Office 365 Outlook, Teams) exclusivamente no caminho de erro, sem misturar essa lógica com o fluxo de sucesso.",
+      "respostaCerta": "Conectando via path \"On Failure\" (seta vermelha) — a notificação dispara somente quando a atividade anterior falha.",
+      "puloDoGato": "Cada atividade pode ter até 4 paths de saída: On Success, On Failure, On Completion, On Skip. Use o path certo em vez de simular isso com try-catch ou triggers externos.",
       "cascasDeBanana": [
-        "Opção anterior: abordagem superficialmente relacionada ao conceito, mas não resolve o cenário específico de indexação.",
-        "Opção alternativa: conceito relacionado, mas aplicado em contexto incorreto ou para objetivo diferente.",
-        "Terceira opção: confusão frequente com conceito similar; é uma armadilha comum que testa discriminação entre índices, partições e hints."
+        "\"Retry Policy\" com \"On Failure Action\": Retry Policy só controla quantas vezes a atividade tenta de novo antes de falhar definitivamente; não existe propriedade \"On Failure Action\" dentro dela para apontar para outra atividade.",
+        "Bloco try-catch T-SQL: roda isolado dentro da atividade Script e não tem visibilidade do pipeline para disparar outra atividade.",
+        "Trigger de evento + Power Automate: cria dependência externa desnecessária; o Fabric já resolve isso nativamente com paths condicionais no próprio pipeline."
       ],
-      "dicaOuro": "Warehouse indexing: índices em colunas de filtro reduzem scans. Clustered = ordem primária; non-clustered = estrutura de lookup."
+      "dicaOuro": "Seta verde = On Success; seta vermelha = On Failure. Conecte a notificação na seta vermelha e pronto."
     }
   },
   {
@@ -3737,16 +3737,16 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Implementar e gerenciar modelo semântico",
     "explanation": {
-      "intro": "No contexto do DP-600, implementar e gerenciar modelo semântico exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "RLS (Row-Level Security) no Fabric filtra linhas baseado na identidade do usuário. Você define DAX filters nas tabelas (ex: `[Sales].[Region] = USERNAME()`). Quando um usuário acessa o relatório, o DAX engine aplica filtro automaticamente — ele vê apenas linhas que correspondem à sua identidade. Sem RLS, todos veriam todos os dados.",
-      "respostaCerta": "`FORMAT([Medida], \"R$ #,##0.00\")` ou usando Dynamic Format String com `\"R$ #,##0.00\"` na propriedade de formato da medida. — implementa corretamente o requisito técnico para este cenário de iniciante.",
-      "puloDoGato": "RLS = filtro DAX por linha baseado em usuário. Se vê `ROLE` e `permission` é OLS/column security, não RLS.",
+      "intro": "Power BI/Fabric não tem um tipo de dado \"moeda brasileira\" nativo — formatação de moeda é sempre uma string de máscara aplicada sobre o número.",
+      "papoReto": "FORMAT() aplica uma máscara de formatação a um valor numérico, e a string personalizada \"R$ #,##0.00\" define símbolo (R$), separador de milhar (#,##0) e duas casas decimais. Em modelos modernos, a mesma máscara pode ser aplicada direto na propriedade de formato da medida via Dynamic Format String, sem precisar de FORMAT() na DAX.",
+      "respostaCerta": "FORMAT([Medida], \"R$ #,##0.00\") ou Dynamic Format String equivalente na propriedade de formato da medida.",
+      "puloDoGato": "\"Currency\" sozinho como string de formato não existe em DAX — sempre defina a máscara explícita de dígitos e símbolo.",
       "cascasDeBanana": [
-        "OLS (Object-Level Security): OLS bloqueia objetos inteiros (tabelas/colunas); RLS bloqueia linhas dentro de tabelas.",
-        "DLP (Data Loss Prevention): DLP é política de endpoint que impede export não-autorizado; não filtra dados em modelo.",
-        "Column-level security via role: roles controlam acesso a colunas (quem vê column X); RLS controla quais linhas aparecem."
+        "FORMAT(..., \"Currency\"): \"Currency\" não é uma string de formato válida em DAX; o engine não reconhece esse nome de moeda.",
+        "CURRENCY(...): não existe função CURRENCY() em DAX.",
+        "TEXT(..., \"R$0,00\"): TEXT() é sintaxe do Power Query M, não do DAX — usar TEXT() numa medida DAX gera erro."
       ],
-      "dicaOuro": "RLS: cada usuário vê subset diferente de linhas (mesmo relatório, dados filtrados). Implementado via DAX filters na tabela."
+      "dicaOuro": "Em DAX, formato de moeda = FORMAT() com máscara literal de símbolo + dígitos, nunca um nome de moeda pronto."
     }
   },
   {
@@ -3762,16 +3762,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "DirectQuery no Fabric executa queries no source em tempo real ao invés de cachear dados localmente. Vantagem: dados sempre atualizados, sem custo de memória no Fabric. Desvantagem: latência de network, menor performance em cálculos complexos (DAX routed para source). Use DirectQuery quando: source é enorme (100GB+) ou dados mudam muito frequentemente (real-time), e latência é aceitável.",
-      "respostaCerta": "Tabelas gerenciadas têm seus dados controlados pelo Lakehouse (criadas na seção Tables); tabelas externas referenciam dados em caminhos externos ao Lakehouse, onde o Fabric gerencia apenas os metadados, não os arquivos físicos. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "'Dados em tempo real' + 'source enorme' = DirectQuery. Se source é Lakehouse, Direct Lake (não DirectQuery).",
+      "intro": "A distinção managed/externa no Lakehouse é sobre quem controla o ciclo de vida dos arquivos físicos, não sobre schema ou recursos do Delta.",
+      "papoReto": "Tabelas managed (gerenciadas) são criadas na seção Tables do Lakehouse e o Fabric controla totalmente os arquivos Delta por trás — ao deletar a tabela, os dados físicos também são removidos. Tabelas externas apenas registram metadados apontando para dados que vivem fora do Lakehouse; o Fabric não é dono dos arquivos.",
+      "respostaCerta": "Managed = dados controlados pelo Lakehouse (seção Tables); externa = referencia caminho externo, Fabric gerencia só os metadados.",
+      "puloDoGato": "Pergunta-chave: \"se eu deletar a tabela, o arquivo físico desaparece?\" Managed = sim. Externa = não, só perde a referência.",
       "cascasDeBanana": [
-        "Import: copia dados para Power BI, excelente performance, mas custo de memória. Para dados estáticos ou agregados.",
-        "Dual: combina Import + DirectQuery. Alguns fatos são cached (Import), outros em tempo real (DirectQuery). Menos comum, complexo.",
-        "Direct Lake: acessa Fabric native storage (Delta Lake) sem copy. Padrão moderno no Fabric; melhor que DirectQuery se source é Lakehouse."
+        "Schema fixo vs schema on read: ambos os tipos podem usar Delta com schema definido; essa distinção não é o critério managed/externa.",
+        "ACID/time travel vs somente leitura: tabelas externas Delta continuam suportando ACID e time travel normalmente.",
+        "SQL Analytics Endpoint vs apenas PySpark: ambos os tipos ficam visíveis no SQL Analytics Endpoint quando são Delta."
       ],
-      "dicaOuro": "DirectQuery = query live ao source. Direct Lake = query live ao Fabric Delta (mais rápido). Import = cached (mais rápido mas stale)."
+      "dicaOuro": "Managed = Fabric é \"dono\" do arquivo. Externa/shortcut = Fabric só aponta para ele."
     }
   },
   {
@@ -3787,16 +3787,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Implementar e gerenciar modelo semântico",
     "explanation": {
-      "intro": "No contexto do DP-600, implementar e gerenciar modelo semântico exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "KQL (Kusto Query Language) é linguagem especializada para queries em KQL Databases do Fabric/Microsoft Sentinel. Syntax é declarativo (tipo SQL, mas otimizado para telemetria): `database | where condition | summarize metric by dimension`. KQL é mais eficiente que SQL para time-series e log analytics porque entende naturalmente timestamps, agregações de série temporal (time buckets), e detecção de anomalias.",
-      "respostaCerta": "Usando `USERELATIONSHIP(coluna1, coluna2)` dentro de uma função CALCULATE para ativar pontualmente o relacionamento inativo, necessário quando há múltiplos relacionamentos entre as mesmas tabelas (ex: data de pedido e data de entrega). — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Logs de aplicação, telemetria, séries de tempo? KQL é a linguagem. Dados estruturados em tabelas? SQL ou T-SQL.",
+      "intro": "Relacionamentos inativos existem para resolver ambiguidade quando há múltiplos caminhos de relacionamento entre duas tabelas no modelo.",
+      "papoReto": "Quando duas tabelas têm mais de um relacionamento possível (ex: Data de Pedido e Data de Entrega ligando à dimensão Calendário), o motor só mantém um ativo por vez — os demais ficam inativos por padrão. USERELATIONSHIP(coluna1, coluna2), usada dentro de CALCULATE, ativa pontualmente o relacionamento inativo só para aquele cálculo, sem alterar o modelo permanentemente.",
+      "respostaCerta": "USERELATIONSHIP(coluna1, coluna2) dentro de CALCULATE — ativa o relacionamento inativo apenas para aquela medida específica.",
+      "puloDoGato": "USERELATIONSHIP nunca aparece sozinho — só faz sentido dentro de CALCULATE, porque é ali que o contexto de filtro é modificado.",
       "cascasDeBanana": [
-        "SQL padrão: SQL é relacional, ótimo para estruturado; KQL é otimizado para semi-estruturado e logs.",
-        "T-SQL: T-SQL é dialeto Microsoft de SQL; KQL é linguagem separada do Kusto, não compatível com T-SQL.",
-        "PySpark/Scala: linguagens de programação; KQL é query language, não general purpose."
+        "Ativação automática pelo motor quando o ativo não retorna resultado: o motor DAX nunca troca de relacionamento sozinho; ele segue o que está ativo, salvo uso explícito de USERELATIONSHIP.",
+        "ACTIVATERELATIONSHIP fora de CALCULATE tornando-o permanente: essa função não existe em DAX; ativação de relacionamento é sempre pontual e dentro de CALCULATE.",
+        "Exclusivo para M:N com bidirecional: relacionamentos inativos aparecem em qualquer cardinalidade quando há caminhos múltiplos, não só em M:N bidirecional."
       ],
-      "dicaOuro": "KQL = telemetry query language (Kusto). SQL/T-SQL = relational. KQL mais rápido para logs; SQL/T-SQL para data warehouse."
+      "dicaOuro": "Múltiplos caminhos entre tabelas = só um ativo, resto inativo. USERELATIONSHIP dentro de CALCULATE liga o inativo pontualmente."
     }
   },
   {
@@ -3812,16 +3812,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Datamarts no Fabric são modelo semântico pré-configurado com criação automática de relacionamentos baseado em chave primária/externa. Diferente de criar modelo semântico manually (arrastar tabelas, definir relações), Datamart infere automaticamente schema e relacionamentos — mais rápido para cenários padrão. Use Datamart quando esquema é relativamente simples e você quer productivity; use modelo semântico quando precisa de granularidade em relacionamentos ou transformações DAX complexas.",
-      "respostaCerta": "Usando `%pip install nome_biblioteca` em uma célula do notebook para instalação na sessão atual, ou configurando bibliotecas no nível do workspace via Environment para persistência entre sessões. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Schema simples, chaves primárias/estrangeiras explícitas? Datamart infere relacionamentos automaticamente. Schema complexo? Modelo semântico manual.",
+      "intro": "Notebooks do Fabric rodam num kernel Spark/Python isolado por sessão, então bibliotecas de terceiros precisam ser instaladas explicitamente.",
+      "papoReto": "O comando %pip install nome_biblioteca, executado numa célula, instala o pacote PyPI direto na sessão atual do notebook — o caminho mais rápido para teste pontual. Para reutilização entre notebooks e sessões, a prática recomendada é configurar a biblioteca no Environment do workspace, que fica disponível a qualquer notebook anexado a ele.",
+      "respostaCerta": "%pip install na célula (sessão atual) ou biblioteca configurada no Environment do workspace (reutilizável entre sessões).",
+      "puloDoGato": "%pip resolve o \"agora\"; Environment resolve o \"sempre\" — pense em qual escopo a biblioteca precisa.",
       "cascasDeBanana": [
-        "Datamart = modelo automático com inferência; modelo semântico = design manual com controle total.",
-        "Datamart requer dados estruturados; modelo semântico pode combinar Import, DirectQuery, Direct Lake.",
-        "Datamart é para analistas; modelo semântico é para designers de BI."
+        "Upload de .whl + spark.addFile: spark.addFile distribui um arquivo para os nós do cluster, mas não instala/importa a biblioteca Python automaticamente.",
+        "Admin Portal → \"Spark Libraries\" nas configs de capacity: esse caminho não existe; bibliotecas Python são geridas via Environment, não na capacity.",
+        "Editar requirements.txt no Git: o Fabric não lê automaticamente um requirements.txt do repositório para instalar pacotes."
       ],
-      "dicaOuro": "Datamart = automated semantic model (fast, simple). Semantic model = manual design (control, complexity)."
+      "dicaOuro": "Instalação pontual = %pip install na célula. Instalação reutilizável = biblioteca custom no Environment do workspace."
     }
   },
   {
@@ -3837,16 +3837,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Manter a solução analítica",
     "explanation": {
-      "intro": "No contexto do DP-600, manter a solução analítica exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Em um Notebook Fabric, `spark.sql()` executa SQL contra Delta Lake (tabelas nas /Tables do Lakehouse). Você passa string SQL e Spark retorna DataFrame com resultados. Exemplo: `df = spark.sql('SELECT * FROM myTable WHERE year=2024')` — isso query a tabela Delta e retorna um PySpark DataFrame que você pode depois processar em Python.",
-      "respostaCerta": "Um item do Fabric que define bibliotecas Python, configurações Spark e recursos de computação reutilizáveis, garantindo consistência de ambiente entre notebooks e jobs Spark do workspace sem reinstalação manual. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Notebook quer executar SQL contra Delta? `spark.sql('SELECT ...')` retorna DataFrame processável em Python.",
+      "intro": "Environment é o item do Fabric que padroniza o ambiente de execução de notebooks, evitando inconsistência entre sessões e usuários.",
+      "papoReto": "Um Environment define, num único item reutilizável, as bibliotecas Python, a versão do runtime Spark, propriedades de configuração e recursos de computação. Ao anexar um notebook a um Environment, todos que o usam compartilham exatamente as mesmas dependências — resolvendo o problema de execuções inconsistentes entre membros do time.",
+      "respostaCerta": "Item que define bibliotecas, configs Spark e recursos de computação reutilizáveis, garantindo consistência entre notebooks.",
+      "puloDoGato": "Se a dúvida é \"por que esse notebook funciona pra mim e não pro colega\", a resposta é Environment — ele padroniza a sessão Spark.",
       "cascasDeBanana": [
-        "spark.read: lê arquivos (CSV, Parquet) ou tabelas Delta, retorna DataFrame. Sem SQL query — é leitura direta.",
-        "spark.sql vs spark.read: spark.sql executa SQL; spark.read é Python API. Ambas retornam DataFrame.",
-        "sqlContext: API legada. spark.sql é moderna."
+        "Perfil de segurança/visibilidade de itens: isso é sobre permissões de workspace, sem relação com runtime Spark.",
+        "Isolamento dev/teste/produção dentro do workspace: Environment não separa estágios de deployment — isso é função do Deployment Pipeline.",
+        "Tema visual de relatórios Power BI: tema é configuração de relatório/app, sem relação com Environment de notebook."
       ],
-      "dicaOuro": "spark.sql() = SQL execution. spark.read = file/table read. Ambos retornam DataFrame para transformação Python."
+      "dicaOuro": "Environment = \"receita\" do ambiente Spark (libs + config + compute) que o notebook usa."
     }
   },
   {
@@ -3862,16 +3862,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "A função DAX `SUMMARIZE()` cria uma tabela de resumo com grupos (GROUP BY implícito) e colunas de agregação opcionais. Syntax: `SUMMARIZE(table, col1, col2, ..., 'name', aggregation)`. Útil em medidas avançadas quando você precisa transformar dados em grupos antes de aplicar lógica adicional. Diferente de `GROUPBY()` (que permite cálculos em cada grupo inline), `SUMMARIZE()` primeiro cria a tabela de resumo.",
-      "respostaCerta": "Contexto de linha ocorre em iterações (colunas calculadas, funções X) e avalia expressões linha por linha; contexto de filtro é criado por slicers, filtros de relatório e CALCULATE, determinando quais linhas são visíveis para medidas. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Precisa resumir tabela por grupos (GROUP BY) antes de aplicar lógica? SUMMARIZE(). Caso simples de agregação? GROUPBY().",
+      "intro": "A confusão entre row context e filter context é uma das mais clássicas do DAX — eles coexistem e se comportam de formas distintas.",
+      "papoReto": "Row context existe durante uma iteração linha a linha — toda vez que uma função itera uma tabela (colunas calculadas, ou funções X como SUMX, FILTER), o motor \"sabe\" em qual linha está. Filter context é o conjunto de filtros que vem de fora (slicers, filtros de visual, CALCULATE) e restringe quais linhas são consideradas no cálculo de uma medida.",
+      "respostaCerta": "Row context surge em iterações (colunas calculadas, funções X) avaliando linha a linha; filter context vem de slicers/filtros/CALCULATE.",
+      "puloDoGato": "Toda função que itera tabela (nome termina em X, tipo SUMX/FILTER) cria row context. Filter context já existe antes do cálculo rodar, vindo de fora.",
       "cascasDeBanana": [
-        "ADDCOLUMNS: adiciona colunas calculadas a uma tabela existente, não sumariza.",
-        "GROUPBY: agrupa e permite cálculos inline em cada grupo. Menos flexível que SUMMARIZE.",
-        "CALCULATETABLE: retorna tabela com contexto de filtro aplicado; não faz GROUP BY automaticamente."
+        "Distinção eliminada pelo CALCULATE moderno: nunca foi eliminada; CALCULATE é justamente a função que converte row context em filter context (context transition).",
+        "Row context só em medidas, filter context só em colunas calculadas: é o oposto do padrão típico — colunas calculadas usam muito row context.",
+        "Row context vem de slicers, filter context de SUMX: as definições estão trocadas."
       ],
-      "dicaOuro": "SUMMARIZE() = cria tabela de resumo com aggregations. GROUP BY explícito em DAX. Use em medidas complexas."
+      "dicaOuro": "\"X\" no nome da função (SUMX, FILTER) = pensa em row context. Slicer/filtro de visual = pensa em filter context."
     }
   },
   {
@@ -3881,22 +3881,22 @@ export const questions = [
       "Usando uma atividade \"Script\" com T-SQL condicional que retorna um flag e redireciona o pipeline via trigger externo.",
       "Usando a atividade \"Switch\", que avalia múltiplas condições e executa o bloco correspondente ao primeiro valor verdadeiro.",
       "Usando os paths \"On Success\" e \"On Failure\" em conjunto para simular lógica if/else baseada no status de execução.",
-      "Usando a atividade \"If Condition\", que avalia uma expressão dinâmica e direciona o fluxo para atividades do bloco \"True\" ou \"False\" conforme o resultado da condição."
+      "Usando a atividade \"If Condition\", que avalia uma expressão dinâmica e direciona o fluxo para atividades do bloco \"True\" ou \"False\" conforme o resultado da."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Quando uma medida referencia múltiplas colunas de data no mesmo contexto de filtro (ex: tabela Fatos com DateOrder e DateShip), ambas criam relacionamento com a dimensão de data. USERELATIONSHIP() ativa um relacionamento específico (inativo) para aquela medida. Syntax: `CALCULATE(aggregation, USERELATIONSHIP(coluna_inativa, dim_coluna))`. Isso permite a mesma fact table ter dois contextos de data diferentes em medidas diferentes.",
-      "respostaCerta": "Usando a atividade \"If Condition\", que avalia uma expressão dinâmica e direciona o fluxo para atividades do bloco \"True\" ou \"False\" conforme o resultado da condição. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Multiple date columns numa fact table? USERELATIONSHIP() dentro de CALCULATE() para ativar a relação correta.",
+      "intro": "O Data Pipeline tem uma atividade dedicada para ramificação condicional, sem precisar simular if/else com paths de sucesso/falha.",
+      "papoReto": "A atividade \"If Condition\" avalia uma expressão dinâmica (ex: baseada em variável ou saída de atividade anterior) e direciona a execução para um bloco \"True\" ou para o bloco \"False\", de forma equivalente a um if/else de linguagem de programação, mas nativo do pipeline.",
+      "respostaCerta": "A atividade \"If Condition\" avalia uma expressão e direciona para o bloco True ou False conforme o resultado.",
+      "puloDoGato": "\"Switch\" decide entre várias opções (igual ao switch/case); \"If Condition\" decide entre duas (igual ao if/else). Não confunda os dois.",
       "cascasDeBanana": [
-        "ACTIVATERELATIONSHIP: função não existe. USERELATIONSHIP ativa relação inativa apenas para aquela medida, não globalmente.",
-        "BIDIRECTIONAL: configuração de relacionamento que ativa filtros bidirecionais, não a mesma coisa que USERELATIONSHIP.",
-        "CROSSFILTER: controla direção de filtro; USERELATIONSHIP ativa/usa relação específica."
+        "Script T-SQL + trigger externo: redirecionar o pipeline via trigger externo é desnecessário — existe atividade nativa para ramificação.",
+        "On Success/On Failure simulando if/else: esses paths só reagem ao status de execução (sucesso ou erro), não a uma condição de negócio arbitrária.",
+        "Switch como primeiro valor verdadeiro: Switch resolve múltiplas condições (mais de 2 ramos), não é a atividade indicada para uma decisão binária dinâmica."
       ],
-      "dicaOuro": "USERELATIONSHIP() = temporary activation (one measure only). ACTIVATERELATIONSHIP seria permanent — but doesn't exist. Use USERELATIONSHIP."
+      "dicaOuro": "Decisão binária dinâmica = If Condition. Decisão entre vários valores possíveis = Switch."
     }
   },
   {
@@ -3912,16 +3912,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Implementar e gerenciar modelo semântico",
     "explanation": {
-      "intro": "No contexto do DP-600, implementar e gerenciar modelo semântico exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Quando dados em Fabric sofrem DELETE/UPDATE via Spark ou Warehouse, a versão anterior é retida no histórico do Delta Lake (vacuum recolhe versões antigas). Se você faz query antes de DELETE, vê dados originais; após DELETE, vê dados filtrados. ZORDER (otimização Delta) reordena dados para agrupar linhas similares, melhorando compression e velocity de leitura — útil para colunas frequentes em filtros.",
-      "respostaCerta": "Permite edição avançada de modelos semânticos com recursos como Best Practice Analyzer, edição em lote de propriedades, gerenciamento de Calculation Groups, C# scripts e deploy via linha de comando, muito além do que o Power BI Desktop oferece. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "DELETE em Delta deixa rastro no histórico. VACUUM limpa versões antigas. ZORDER otimiza leitura de filtros.",
+      "intro": "O Tabular Editor 3, conectado via XMLA Endpoint, é a ferramenta de produtividade para quem administra modelos semânticos em escala no Fabric.",
+      "papoReto": "Ele permite edição avançada de metadados do modelo com recursos como Best Practice Analyzer (detecta más práticas automaticamente), edição em lote de propriedades de várias medidas/colunas ao mesmo tempo, gerenciamento de Calculation Groups, scripts C# e deploy via linha de comando — produtividade muito além do que o Power BI Desktop oferece clicando item a item.",
+      "respostaCerta": "Edição avançada com Best Practice Analyzer, edição em lote de propriedades, Calculation Groups, C# scripts e deploy via CLI.",
+      "puloDoGato": "Tabular Editor edita metadados (estrutura do modelo); DAX Studio analisa performance de queries. São complementares, não substitutos.",
       "cascasDeBanana": [
-        "VACUUM remove histórico imediatamente: VACUUM remove apenas versões antigas (default 30 dias), não dados atuais.",
-        "DELTA LAKE LOG: arquivo interno de histórico; não é para query direto pelo usuário.",
-        "Cópia de backup: Fabric Lakehouse tem versionamento automático; backup manual é redundante."
+        "RLS/OLS com sync automático ao Azure AD: o Tabular Editor edita roles e expressões de RLS/OLS, mas não sincroniza automaticamente usuários com o Azure AD.",
+        "Criar visuais personalizados de relatório: ele trabalha no modelo semântico (camada de dados), não cria visuais — isso é função do Power BI Desktop/Report.",
+        "Substituir o DAX Studio para profiling: DAX Studio continua sendo a ferramenta de referência para profiling de performance de query."
       ],
-      "dicaOuro": "Delta Lake = MVCC (multi-version concurrency). Histórico retenido até VACUUM. ZORDER = índice por proximidade."
+      "dicaOuro": "Tabular Editor = \"editor avançado\" do modelo (estrutura). DAX Studio = \"raio-x\" de performance de query."
     }
   },
   {
@@ -3937,16 +3937,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Um Shortcut em Lakehouse referencia dados em outro workspace/Lakehouse sem cópia (referência, não clone). Você criava Shortcut via UI, aponta para /Tables ou /Files de outra locação. Internamente, OneLake mapeia o caminho — quando você faz query via shortcut, Fabric resolve para o local original. Isso economiza storage (sem duplication) mas deixa você dependente do workspace original estar disponível.",
-      "respostaCerta": "Os Data Pipelines do Fabric são baseados na mesma tecnologia do Azure Data Factory, compartilhando conectores, atividades e conceitos; porém são gerenciados dentro do Fabric sem necessidade de um recurso ADF separado no Azure. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Dados em outro workspace precisam ser consultados? Shortcut = referência sem cópia. Novo Lakehouse, mesmo dados.",
+      "intro": "Entender a relação entre ADF e Data Pipelines do Fabric ajuda a aproveitar conhecimento e até pipelines já existentes.",
+      "papoReto": "Os Data Pipelines do Fabric são construídos sobre a mesma base tecnológica do Azure Data Factory — mesmos tipos de atividades, conectores e conceitos de orquestração — mas são geridos dentro do workspace do Fabric, com integração nativa a Lakehouse, Warehouse e outros itens, sem precisar de um recurso ADF separado no Azure.",
+      "respostaCerta": "Data Pipelines do Fabric compartilham tecnologia/conectores/conceitos com o ADF, mas são gerenciados nativamente no workspace Fabric.",
+      "puloDoGato": "Pense no Data Pipeline do Fabric como \"ADF embutido no workspace\" — mesma engine, gestão diferente.",
       "cascasDeBanana": [
-        "Hard copy: seria copiar dados fisicamente — não é shortcut, é duplicação.",
-        "Symbolic link de OS: shortcut é nível Fabric, não filesystem. Fabric gerencia resolução.",
-        "Replicação: replica copia e mantém sincronização; shortcut é apenas referência sem sync."
+        "Completamente independentes, sem compatibilidade: errado — a base de atividades e conectores é deliberadamente compartilhada entre ADF e Fabric.",
+        "ADF como único meio de ingestão externa: Data Pipelines do Fabric também se conectam diretamente a fontes externas; ADF não é pré-requisito.",
+        "Data Pipelines substituem o ADF totalmente, sem compatibilidade: o ADF continua existindo como serviço Azure separado e pode ser usado em conjunto."
       ],
-      "dicaOuro": "Shortcut = Fabric pointer (no copy). Symbolic link analogy. Zero storage overhead; dependency no source workspace."
+      "dicaOuro": "Mesma \"engine\" do ADF, casa nova: dentro do workspace Fabric."
     }
   },
   {
@@ -3962,16 +3962,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Manter a solução analítica",
     "explanation": {
-      "intro": "No contexto do DP-600, manter a solução analítica exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Incremental Refresh em Power BI refresh apenas dados novos/modificados baseado em parâmetros (RangeStart, RangeEnd). Você define qual coluna (ex: timestamp) determina 'novo' e qual período é 'incremental' (ex: últimos 30 dias). Apenas dados onde timestamp > RangeStart são fetched — histórico não é tocado. Isso reduz volume de dados refetched, économia de tempo e custo.",
-      "respostaCerta": "Impede que dados do tenant Fabric sejam enviados para destinos externos não autorizados, controlando quais tenants Azure AD e domínios externos podem receber dados via conectores, pipelines e notebooks. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Refresh lento em modelo grande? Incremental refresh: fetch apenas últimos 30 dias, não história inteira.",
+      "intro": "A proteção contra exfiltração de dados é um controle de segurança de tenant pensado para evitar vazamento de dados para fora da organização.",
+      "papoReto": "O Data Exfiltration Protection (DEP) é uma política em nível de tenant que restringe quais tenants do Azure AD e quais domínios externos podem receber dados enviados via conectores, pipelines e notebooks do Fabric. O administrador define uma lista de destinos permitidos; qualquer tentativa de enviar dados fora dessa lista é bloqueada, mesmo que o usuário tenha acesso aos dados em si.",
+      "respostaCerta": "Impede envio de dados do tenant para destinos externos não autorizados, controlando tenants Azure AD e domínios permitidos via conectores/pipelines/notebooks.",
+      "puloDoGato": "DEP não controla quem pode VER os dados (isso é RLS/OLS) — controla para ONDE os dados podem SAIR do tenant.",
       "cascasDeBanana": [
-        "Full refresh: atualiza tudo — ineficiente para grandes datasets.",
-        "Scheduled refresh: apenas agenda quando rodar, não quanto de dados fetch.",
-        "Query folding: otimização de Dataflow; incremental refresh é estratégia de modelo semântico."
+        "Monitora/bloqueia downloads via DLP: DLP (Microsoft Purview) atua sobre exportação de arquivos/relatórios; DEP atua sobre destinos de saída via conectores e código, não é a mesma política.",
+        "Criptografia automática com chaves no Key Vault: DEP não criptografa dados exportados; ele controla destinos permitidos, não criptografia.",
+        "Restringe a dispositivos registrados no Intune: gestão de dispositivos é Conditional Access/Intune, sem relação com DEP, que trata de destinos de dados."
       ],
-      "dicaOuro": "Incremental Refresh = RangeStart/RangeEnd parameters. Fetch apenas delta. Crítico para grandes modelos."
+      "dicaOuro": "DEP = lista de permissão de \"para onde os dados do tenant podem ir\"."
     }
   },
   {
@@ -3979,7 +3979,7 @@ export const questions = [
     "text": "Em um Notebook Fabric com PySpark, o que é o \"lazy evaluation\" e como ele impacta a execução de transformações?",
     "options": [
       "O Spark executa apenas as colunas referenciadas nas transformações, ignorando colunas não utilizadas no DataFrame original.",
-      "As transformações PySpark (map, filter, join etc.) não são executadas imediatamente; o Spark constrói um plano de execução (DAG) e só processa os dados quando uma ação (count, show, write) é chamada, permitindo otimizações automáticas do plano.",
+      "As transformações PySpark (map, filter, join etc.) não são executadas imediatamente; o Spark constrói um plano de execução (DAG) e só processa os dados.",
       "O Spark carrega os dados de forma incremental em blocos menores para evitar sobrecarga de memória durante transformações complexas.",
       "O Spark adia a execução de notebooks agendados para horários de baixa utilização da capacity automaticamente."
     ],
@@ -3987,16 +3987,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Em DAX, `SUMMARIZECOLUMNS()` combina GROUP BY + CALCULATE() em uma única função. Retorna tabela com colunas de grupo e agregações calculadas. Diferente de `SUMMARIZE()` (que cria tabela e depois você adiciona agregações), `SUMMARIZECOLUMNS()` calcula tudo de uma vez, aplicando contextos de filtro corretamente. Use quando precisa agregação complexa respeitando relationships e filter context.",
-      "respostaCerta": "As transformações PySpark (map, filter, join etc.) não são executadas imediatamente; o Spark constrói um plano de execução (DAG) e só processa os dados quando uma ação (count, show, write) é chamada, permitindo otimizações automáticas do plano. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Agregação complexa com relationships? SUMMARIZECOLUMNS(). Caso simples? GROUPBY() ou SUMMARIZE().",
+      "intro": "Lazy evaluation é o modelo de execução do Spark que separa \"descrever a transformação\" de \"efetivamente processar os dados\".",
+      "papoReto": "Chamadas como map, filter e join não disparam processamento imediato — o Spark apenas registra essas operações num plano lógico (DAG). Só quando uma ação é chamada (count, show, write, collect) o Spark otimiza esse plano (Catalyst optimizer) e executa de fato, lendo e processando os dados.",
+      "respostaCerta": "Transformações não executam de imediato; o Spark monta um DAG e só processa quando uma ação é chamada, permitindo otimizar o plano.",
+      "puloDoGato": "Se o notebook \"trava\" só na hora do .show() ou .write(), é porque a lazy evaluation guardou tudo para aquele momento — normal, não é bug.",
       "cascasDeBanana": [
-        "SUMMARIZE: primeiro cria tabela de resumo, depois agregações — menos eficiente.",
-        "ADDCOLUMNS: adiciona colunas a tabela existente; não faz GROUP BY.",
-        "SUMMARIZECOLUMNS vs GROUPBY: SUMMARIZECOLUMNS respeita relationships; GROUPBY é mais direto mas menos flexível."
+        "Executa só colunas referenciadas, ignorando outras: isso é column pruning, uma otimização do plano, não a definição de lazy evaluation.",
+        "Carrega dados incrementalmente em blocos menores: isso descreve particionamento/streaming, não o conceito de avaliação tardia das transformações.",
+        "Adia execução de notebooks agendados para horário de baixa utilização: isso seria agendamento de jobs, sem relação com o modelo de execução interno do Spark."
       ],
-      "dicaOuro": "SUMMARIZECOLUMNS = GROUP BY + CALCULATE in one. Respects relationships and context."
+      "dicaOuro": "Transformação = \"receita escrita\". Ação = \"começa a cozinhar\". Spark só processa quando alguém pede o resultado."
     }
   },
   {
@@ -4012,23 +4012,23 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Implementar e gerenciar modelo semântico",
     "explanation": {
-      "intro": "No contexto do DP-600, implementar e gerenciar modelo semântico exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Power BI Embedded é licensing model onde você (independente software vendor) embeça relatórios do Power BI em sua aplicação e vende para clientes. Capacidade é paga por você (capacity units), não pelo cliente. Ideal para SaaS: seu app é customer-facing, você gerencia Power BI backend. Diferente de Premium (Direct), onde o cliente paga diretamente por capacidade.",
-      "respostaCerta": "Remove todos os filtros da tabela especificada, exceto os filtros aplicados às colunas listadas, que são preservados no contexto de filtro. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "SaaS independente vendendo BI para clientes? Power BI Embedded (você paga capacity). Cliente próprio? Premium.",
+      "intro": "ALLEXCEPT é usada quando você quer remover quase todos os filtros de uma tabela, preservando apenas alguns.",
+      "papoReto": "ALLEXCEPT(Tabela, Tabela[Coluna1], Tabela[Coluna2]) remove todos os filtros aplicados à tabela especificada, EXCETO os filtros que estão sobre as colunas listadas — esses continuam valendo no contexto de filtro resultante. É equivalente a usar ALL() na tabela e depois reaplicar manualmente o filtro só das colunas que você quer manter.",
+      "respostaCerta": "Remove todos os filtros da tabela, exceto os das colunas listadas, que são preservados no contexto de filtro.",
+      "puloDoGato": "ALLEXCEPT = \"limpa tudo, mas guarda essas colunas\" — o oposto de listar manualmente todas as colunas que quer remover.",
       "cascasDeBanana": [
-        "Power BI Premium (Direct): cliente paga Microsoft por capacidade (SkuCapacity). Você consome o que contrata.",
-        "Power BI Free/Pro: licensing por usuário, não capacity. Não permite embedar para clientes não-Power BI.",
-        "Fabric Capacity: é o sucessor — você rented capacidade no Fabric."
+        "Remove filtros de todas as tabelas do modelo: ALLEXCEPT atua só na tabela especificada como primeiro argumento, não no modelo inteiro.",
+        "Retorna linhas exceto as que correspondem aos valores: essa é descrição de filtro de exclusão de linhas, não de remoção de contexto de filtro.",
+        "Remove apenas os filtros das colunas especificadas, preservando os outros: é a lógica inversa da real — ALLEXCEPT preserva as colunas listadas e remove o resto."
       ],
-      "dicaOuro": "Embedded = ISV licensing (você paga, customers usa). Premium = end-user licensing (customer pays). Different models."
+      "dicaOuro": "ALL() remove tudo. ALLEXCEPT() remove tudo, menos o que você listar."
     }
   },
   {
     "id": "dp600_q162",
     "text": "O que é uma Fabric Capacity e como ela afeta o desempenho dos workloads no Microsoft Fabric?",
     "options": [
-      "É a unidade de computação do Fabric (medida em CUs",
+      "É a unidade de computação do Fabric, medida em CUs (Capacity Units); pipelines, notebooks, refreshes e queries consomem CUs dessa capacidade compartilhada.",
       "É o número máximo de workspaces que podem ser criados em um tenant Fabric baseado no plano de licenciamento.",
       "É a configuração de retenção de dados que determina por quanto tempo os arquivos Delta são mantidos no OneLake.",
       "É o espaço de armazenamento dedicado no OneLake para um tenant, com limites de GB por SKU contratado."
@@ -4037,23 +4037,23 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Quando você publica relatório Power BI e atribui roles (Admin, Member, Viewer) em um Workspace, cada role tem permissões diferentes: Admin gerencia workspace e segurança; Member cria/edita conteúdo; Viewer consome apenas. Essas permissões controlam quem pode acessar artefatos — mas isso é workspace-level security, não row-level (RLS filtra linhas dentro de relatório).",
-      "respostaCerta": "É a unidade de computação do Fabric (medida em CUs — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Roles em Workspace = Admin/Member/Viewer. Controla acesso a artefatos. RLS = filtra linhas em modelo.",
+      "intro": "Fabric Capacity é a unidade central de cobrança e desempenho de todo o Fabric — todo workload roda \"dentro\" de uma capacity.",
+      "papoReto": "A capacity é a unidade de computação do Fabric, medida em CUs (Capacity Units). Cada SKU (F2, F4, F64...) define quantos CUs estão disponíveis; pipelines, notebooks, refreshes de modelo e queries de Warehouse/Power BI consomem CUs dessa capacidade compartilhada. Se a capacity satura, novos jobs entram em fila (throttling) ou ficam mais lentos.",
+      "respostaCerta": "É a unidade de computação do Fabric, medida em CUs — todos os workloads do tenant consomem dessa capacidade compartilhada.",
+      "puloDoGato": "Workload lento ou enfileirado? Primeiro suspeito é a capacity saturada — confira o Capacity Metrics App, não o código.",
       "cascasDeBanana": [
-        "RLS: filtra linhas dentro do modelo; roles filtram acesso a artifacts/workspace.",
-        "OLS: Object-Level Security filtra colunas/tabelas; roles controlam workspace.",
-        "DLP: Data Loss Prevention policy bloqueia exports; não relacionado a roles."
+        "Número máximo de workspaces por tenant: workspaces não são limitados pela capacity em si; capacity mede poder de processamento, não quantidade de workspaces.",
+        "Retenção de dados Delta no OneLake: retenção de arquivos Delta é configurada por VACUUM/lifecycle, não pela capacity.",
+        "Espaço de armazenamento dedicado no OneLake: storage do OneLake é cobrado separadamente do compute da capacity, que mede CUs, não GB."
       ],
-      "dicaOuro": "Workspace Roles = artifact access control. RLS = row filter control. Different layers of security."
+      "dicaOuro": "Capacity = CUs (poder de processamento). Storage do OneLake é cobrado à parte."
     }
   },
   {
     "id": "dp600_q163",
     "text": "Como você integra o Microsoft Fabric com Azure DevOps para um pipeline de CI/CD completo?",
     "options": [
-      "Conectando o workspace ao Azure DevOps via Git integration, usando a API REST do Fabric em pipelines YAML do Azure DevOps para deploy automático entre ambientes, combinado com Deployment Pipelines do Fabric para promoção controlada de itens.",
+      "Conectando o workspace ao Azure DevOps via Git integration, usando a API REST do Fabric em pipelines YAML do Azure DevOps para deploy automático entre.",
       "Exportando os itens do Fabric como arquivos .pbix e usando o task \"Power BI Actions\" do Azure DevOps Marketplace para deploy automatizado.",
       "Criando um Logic App no Azure que monitora commits no repositório e dispara refreshes dos modelos semânticos automaticamente.",
       "Usando o conector nativo do Azure DevOps no Fabric que sincroniza automaticamente branches com estágios do Deployment Pipeline sem configuração adicional."
@@ -4062,16 +4062,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Manter a solução analítica",
     "explanation": {
-      "intro": "No contexto do DP-600, manter a solução analítica exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Query Folding em Power Query otimiza ingestão: quando você faz transformações (filter, select columns), Power Query tenta 'fold' essas operações para a source (SQL, Warehouse, etc.) ao invés de puxar tudo e transformar localmente. Internamente, Power Query gera SQL nativo e manda pro source — source faz o trabalho, não Power Query. Isso economiza bandwidth e tempo.",
-      "respostaCerta": "Conectando o workspace ao Azure DevOps via Git integration, usando a API REST do Fabric em pipelines YAML do Azure DevOps para deploy automático entre ambientes, combinado com Deployment Pipelines do Fabric para promoção controlada de itens. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Power Query com filters/selects? Se vê 'foldable' na UI, Power Query folding =SQL nativo ao source.",
+      "intro": "Um pipeline de CI/CD completo no Fabric combina integração com Git e promoção controlada entre ambientes.",
+      "papoReto": "Você conecta o workspace ao Azure DevOps via Git integration (sincronizando itens do Fabric como arquivos versionados); a partir daí, pipelines YAML do Azure DevOps podem chamar a API REST do Fabric para automatizar deploys. Para promoção entre ambientes (dev → test → prod) de forma controlada, usa-se em conjunto os Deployment Pipelines nativos do Fabric.",
+      "respostaCerta": "Git integration + API REST do Fabric em pipelines YAML do Azure DevOps, combinado com Deployment Pipelines do Fabric para promoção entre ambientes.",
+      "puloDoGato": "Git integration versiona o código/itens; Deployment Pipelines promove entre estágios. CI/CD completo usa os dois juntos.",
       "cascasDeBanana": [
-        "Push-down: é o conceito, mas 'Query Folding' é termo Power Query.",
-        "Lazy evaluation: não é folding — é adiamento de cálculo até que seja necessário.",
-        "ETL vs ELT: Query Folding é exemplo de ELT (Extract, Load, Transform at source) — diferente de ETL (transform depois de extract)."
+        "Exportar .pbix + task \"Power BI Actions\": não cobre os demais itens do Fabric (notebooks, pipelines, Lakehouse) e não é o padrão de CI/CD recomendado.",
+        "Logic App monitorando commits para disparar refresh: resolve só o refresh de modelo, não o deploy de itens entre ambientes.",
+        "Conector nativo que sincroniza branches automaticamente sem configuração: não existe esse conector automático; a integração exige configuração explícita."
       ],
-      "dicaOuro": "Query Folding = push transformations to source. Efficient ELT pattern."
+      "dicaOuro": "Git integration versiona; Deployment Pipeline promove. CI/CD Fabric = os dois trabalhando juntos."
     }
   },
   {
@@ -4087,16 +4087,16 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "DAX Context Transition ocorre quando você coloca uma medida (que opera em contexto agregado) dentro de uma expressão que opera em row context. O DAX engine converte row context para filter context, permitindo a medida calcular corretamente. Exemplo: numa calculated column `[Profit Ratio] = [Total Profit] / [Total Sales]` — a medida `[Total Profit]` normalmente agrupa em contexto agregado, mas aqui transita para filter context (1 row = 1 filter).",
-      "respostaCerta": "`df.show(5)` para saída em texto ou `display(df.limit(5))` para saída visual formatada na interface do notebook Fabric. — implementa corretamente o requisito técnico para este cenário de iniciante.",
-      "puloDoGato": "Medida em calculated column precisa transitar row → filter context. CALCULATE() força transition explícita.",
+      "intro": "Validar dados rapidamente num notebook PySpark é uma tarefa do dia a dia em engenharia de dados no Fabric.",
+      "papoReto": "df.show(5) imprime as 5 primeiras linhas em formato de texto no console de saída; display(df.limit(5)) usa o recurso visual do notebook Fabric, renderizando uma tabela formatada e interativa. Ambos são válidos — a escolha depende de querer uma visualização rápida em texto ou uma tabela navegável.",
+      "respostaCerta": "df.show(5) para saída em texto, ou display(df.limit(5)) para saída visual formatada na interface do notebook.",
+      "puloDoGato": "display() é recurso específico do notebook Fabric; show() é método nativo do PySpark DataFrame e funciona em qualquer ambiente Spark.",
       "cascasDeBanana": [
-        "Filter context: contexto inicial quando report é filtrado. Context transition ocorre ao chamar medida em row context.",
-        "Implicit vs explicit conversion: context transition pode ser implícita (faz automaticamente) ou explícita (via CALCULATE).",
-        "Row context sem medida: se você referencia coluna (não medida) em calculated column, não há transition — é direto row context."
+        "print(df.head(5)): head() em PySpark retorna uma lista de objetos Row, não um DataFrame formatado — print mostra uma representação bruta pouco legível.",
+        "spark.show(df, rows=5): não existe esse método no SparkSession; show() é método do DataFrame, não do objeto spark.",
+        "df.preview(5): não existe o método preview() na API do PySpark DataFrame."
       ],
-      "dicaOuro": "Context Transition = conversion row context → filter context. Automatic quando medida é chamada em row context."
+      "dicaOuro": "show() = texto simples, qualquer Spark. display() = tabela visual, exclusivo de notebooks tipo Fabric."
     }
   },
   {
@@ -4112,16 +4112,16 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Implementar e gerenciar modelo semântico",
     "explanation": {
-      "intro": "No contexto do DP-600, implementar e gerenciar modelo semântico exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Em Data Pipeline, a atividade 'Script' executa Python ou Scala Spark code. Você define células inline ou referencia um Notebook já existente. A atividade Script é mais lightweight que 'Notebook activity' (não cria/modifica notebook, apenas executa code) — ideal para transformações rápidas ou validações durante pipeline execution.",
-      "respostaCerta": "Um pacote de distribuição que agrupa relatórios e dashboards de um workspace para publicação a usuários finais, oferecendo uma experiência navegável e controlada sem expor o workspace diretamente. — implementa corretamente o requisito técnico para este cenário de iniciante.",
-      "puloDoGato": "Pipeline precisa executar Python rápido? Script activity (inline code). Muitas linhas? Referencia Notebook.",
+      "intro": "O Power BI App resolve o problema de distribuir conteúdo de BI sem expor a estrutura interna do workspace de desenvolvimento.",
+      "papoReto": "Um App agrupa relatórios e dashboards selecionados de um workspace numa experiência de navegação organizada (com seções, descrição, ícone), publicada para usuários finais. Quem acessa o App não vê o workspace de origem nem os itens de desenvolvimento — só o conteúdo curado incluído no App.",
+      "respostaCerta": "Pacote de distribuição que agrupa relatórios/dashboards do workspace numa experiência navegável e controlada para usuários finais.",
+      "puloDoGato": "Workspace = onde se constrói. App = o que se entrega ao usuário final. Nunca dê acesso direto ao workspace para consumidores finais.",
       "cascasDeBanana": [
-        "Notebook activity: referencia existing notebook, executa toda ela, permite parameters.",
-        "Script activity: código inline, sem notebook overhead. Mais rápido para código curto.",
-        "Copy activity: move dados de source para destino; Script é transformação, não cópia."
+        "Conector de API REST para apps externos: consumir dados via API é outro recurso (API do modelo semântico); App é sobre distribuição de relatórios para pessoas.",
+        "Template de relatório no marketplace: templates prontos são outro recurso do Fabric; App não é um template, é uma forma de publicar conteúdo já criado.",
+        "Aplicativo móvel nativo para acesso offline: o app mobile do Power BI é universal e não tem relação com o conceito de \"App\" de workspace."
       ],
-      "dicaOuro": "Script activity = inline Spark code in pipeline. Lightweight, fast for simple transforms."
+      "dicaOuro": "App = \"vitrine\" curada do workspace, sem expor a bagunça de desenvolvimento por trás."
     }
   },
   {
@@ -4137,16 +4137,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Em Fabric, o Warehouse é engine SQL relacional (T-SQL) que permite Stored Procedures (SP). Você define SP via `CREATE PROCEDURE nome AS BEGIN ... END`, depois chama `EXEC nome`. SPs encapsulam lógica (loops, condicionals, cálculos) sem precisar de código client. Útil para transformações complexas ou batch jobs executáveis via Data Pipeline.",
-      "respostaCerta": "`project`, como em `Tabela | project coluna1, coluna2, coluna3` — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Lógica SQL complexa com loops? Stored Procedure em Warehouse. Simples SELECT? Use View.",
+      "intro": "Em KQL, cada operador de tabela tem uma função específica — confundir project com extend é um erro comum de quem vem do SQL.",
+      "papoReto": "O operador project seleciona e/ou cria colunas, descartando as que não foram listadas — é o equivalente direto do SELECT do SQL. A sintaxe é Tabela | project coluna1, coluna2, coluna3, podendo inclusive renomear ou calcular colunas na mesma cláusula.",
+      "respostaCerta": "project, como em Tabela | project coluna1, coluna2, coluna3 — seleciona exatamente essas colunas, descartando as demais.",
+      "puloDoGato": "project = troca o conjunto de colunas (como SELECT). extend = adiciona coluna nova sem remover as existentes.",
       "cascasDeBanana": [
-        "User-Defined Functions (UDFs): functions são escalares ou table-valued; SPs são blocos executáveis com control flow.",
-        "Views: views são SELECT encapsulado; SPs permitem INSERT/UPDATE/DELETE + control flow.",
-        "Triggers: auto-executam em ação de tabela; SPs são explicitamente chamadas."
+        "pick: não existe operador pick em KQL.",
+        "select: KQL não usa a palavra select como operador de tabela; embora pareça natural para quem vem de SQL, a sintaxe correta é project.",
+        "extend: adiciona uma coluna calculada mantendo todas as existentes; não remove colunas, então não é equivalente ao SELECT."
       ],
-      "dicaOuro": "Stored Procedures = T-SQL blocks with control flow. Encapsulate complex logic for reuse/scheduling."
+      "dicaOuro": "KQL: project = troca colunas (SELECT). extend = adiciona coluna (sem remover nada)."
     }
   },
   {
@@ -4154,7 +4154,7 @@ export const questions = [
     "text": "Em um Data Pipeline do Fabric, qual atividade permite iterar sobre uma lista de itens e executar um conjunto de atividades para cada elemento?",
     "options": [
       "A atividade \"Until\", que repete um bloco de atividades até que uma condição de parada seja satisfeita.",
-      "A atividade \"ForEach\", que recebe uma coleção de itens (ex: lista de tabelas via expressão dinâmica) e executa o bloco interno de atividades para cada elemento, com opção de execução sequencial ou paralela.",
+      "A atividade \"ForEach\", que recebe uma coleção de itens (ex: lista de tabelas via expressão dinâmica) e executa o bloco interno de atividades para cada.",
       "A atividade \"Execute Pipeline\", que chama um pipeline filho passando parâmetros diferentes a cada chamada manual.",
       "A atividade \"Lookup\" combinada com \"Switch\", que recupera uma lista e redireciona o fluxo para cada branch correspondente."
     ],
@@ -4162,16 +4162,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Benchmark na ferramenta de Capacity Metrics do Fabric mostra CPU/Memory/Duration de uma operação ou query. Você pode identificar queries lentas ou operações que consomem muitos recursos. Internamente, Fabric coleta métricas de cada execução e as expõe via admin API ou portal — permitem otimizações de índices, query rewriting, ou alocação de capacidade.",
-      "respostaCerta": "A atividade \"ForEach\", que recebe uma coleção de itens (ex: lista de tabelas via expressão dinâmica) e executa o bloco interno de atividades para cada elemento, com opção de execução sequencial ou paralela. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Query lenta? Check Capacity Metrics para CPU/Duration. Identify resource bottleneck.",
+      "intro": "Iterar sobre uma coleção dentro de um Data Pipeline exige uma atividade de controle de fluxo dedicada a loops.",
+      "papoReto": "A atividade ForEach recebe uma coleção (por exemplo, uma lista de nomes de tabelas vinda de uma expressão dinâmica ou de um Lookup anterior) e executa o bloco de atividades interno uma vez para cada item da coleção, podendo rodar sequencialmente ou em paralelo (definindo um grau de paralelismo).",
+      "respostaCerta": "A atividade \"ForEach\" executa o bloco de atividades interno para cada elemento de uma coleção, sequencial ou paralelamente.",
+      "puloDoGato": "Precisa repetir um bloco \"para cada item de uma lista\"? ForEach. Precisa repetir \"até uma condição parar\"? Until — são atividades diferentes.",
       "cascasDeBanana": [
-        "Query Plan: mostra passos de execução (join order, scans); Capacity Metrics mostra recursos consumidos (CPU, memory).",
-        "DMVs (Dynamic Management Views): query SQL Server diagnostic; Capacity Metrics é Fabric-specific.",
-        "Profiling: análise de código; benchmarking é medição de performance."
+        "Until: repete até uma condição de parada ser satisfeita; não itera sobre uma coleção de itens — é lógica de \"enquanto/até\", não de \"para cada\".",
+        "Execute Pipeline: chama um pipeline filho configurado individualmente a cada chamada; não itera automaticamente sobre uma coleção.",
+        "Lookup + Switch: Lookup recupera dados, Switch decide entre ramos fixos — essa combinação não itera dinamicamente sobre uma lista de tamanho variável."
       ],
-      "dicaOuro": "Capacity Metrics = resource consumption visibility (CPU, Memory, Duration). Use for optimization."
+      "dicaOuro": "ForEach = \"repete para cada item da lista\" (loop clássico). Until = \"repete até a condição ser true\"."
     }
   },
   {
@@ -4187,16 +4187,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Implementar e gerenciar modelo semântico",
     "explanation": {
-      "intro": "No contexto do DP-600, implementar e gerenciar modelo semântico exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Em Notebooks, a Magic Command `%%sql` execute SQL direto contra Delta Lake tabelas (ou via SQL Analytics Endpoint). Você escreve SQL dentro uma célula, Spark converte para DataFrame internamente, você acessa resultado em Python. Útil para queries uma-off ou exploração de dados sem escrever `spark.sql()` explicitamente.",
-      "respostaCerta": "Retorna TRUE quando a coluna especificada está ativa no contexto de agrupamento atual de uma matriz ou tabela, permitindo criar medidas que se comportam diferente em cada nível da hierarquia (ex: mostrar percentual apenas no nível de detalhe). — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Notebook quer executar SQL rápido? `%%sql` magic command (syntax magic) vs `spark.sql()` (explicit call).",
+      "intro": "ISINSCOPE é usada em medidas que precisam se comportar diferente dependendo do nível de uma hierarquia exibido numa matriz/tabela.",
+      "papoReto": "ISINSCOPE(coluna) retorna TRUE quando a coluna especificada está ativa no nível de agrupamento atual — quando a linha/coluna do visual está sendo detalhada por aquela coluna da hierarquia. Isso permite escrever uma medida que calcula de um jeito no nível \"Ano\" e de outro jeito no nível \"Mês\", por exemplo.",
+      "respostaCerta": "Retorna TRUE quando a coluna está ativa no contexto de agrupamento atual, permitindo medidas que mudam de comportamento por nível de hierarquia.",
+      "puloDoGato": "Toda vez que uma medida precisa \"saber em que nível da hierarquia está\" numa matriz, ISINSCOPE é a função certa.",
       "cascasDeBanana": [
-        "%%pyspark: default, executa Python code.",
-        "%%scala: executa Scala code (menos comum em Fabric).",
-        "Magic vs spark.sql: `%%sql` é syntactic sugar; `spark.sql()` é explicit API."
+        "Visível no visual considerando paginação/rolagem: ISINSCOPE não tem relação com renderização visual ou paginação — é sobre o nível lógico de agrupamento do contexto de filtro.",
+        "Coluna faz parte do modelo semântico atual: verificar se uma coluna pertence ao modelo é outra necessidade (validação de modelo), não o que ISINSCOPE testa.",
+        "Coluna dentro do escopo de filtragem atual (algum filtro aplicado): ISINSCOPE não testa \"existe algum filtro\" genérico — testa se aquela coluna é o nível de agrupamento ativo na hierarquia."
       ],
-      "dicaOuro": "Magic commands = shortcuts in Notebooks. %%sql, %%pyspark, %%scala. Convenience, not necessary."
+      "dicaOuro": "ISINSCOPE = \"em que nível da hierarquia a linha/coluna do visual está agora?\""
     }
   },
   {
@@ -4212,16 +4212,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Quando você faz Batch Copy em Data Pipeline (Copy activity com source e destination), a atividade copia dados em paralelo (mini-batches) se supported. Para Lakehouse, você pode configurar partitioning para paralelizar — dados são divididos por coluna, cada partition copia em thread separada. Isso acelera cópia de grandes volumes.",
-      "respostaCerta": "Usando notação de três partes `[nome_lakehouse].[dbo].[nome_tabela]` diretamente na query T-SQL do Warehouse, pois o Fabric permite cross-database queries dentro do mesmo workspace sem configuração adicional. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Copiar TB de dados? Configure partitioning em Copy activity para paralelizar.",
+      "intro": "O Fabric permite consultas entre itens diferentes do mesmo workspace sem servidor vinculado ou exportação manual.",
+      "papoReto": "Dentro do mesmo workspace, o Warehouse consegue consultar diretamente o SQL Analytics Endpoint do Lakehouse usando notação de três partes — [nome_lakehouse].[dbo].[nome_tabela] — porque o Fabric trata os dois itens como bancos acessíveis na mesma sessão de query, sem precisar de Linked Server ou configuração extra.",
+      "respostaCerta": "Notação de três partes [lakehouse].[dbo].[tabela] direto na query T-SQL — cross-database query nativa dentro do mesmo workspace.",
+      "puloDoGato": "Cross-database query no Fabric não precisa de Linked Server (isso é coisa de SQL Server tradicional) — é nativo dentro do workspace.",
       "cascasDeBanana": [
-        "Streaming copy: contínuo, ideal para real-time. Batch é discrete, com start/stop.",
-        "Incremental copy: reuse checkpoint; batch é fresh copy (ou filtered).",
-        "Parallelism vs partitioning: ambos aceleram; parallelism é threads, partitioning é divisão de dados."
+        "OPENROWSET com string ABFSS: usado para acessar arquivos externos em storage genérico, não é o caminho padrão para consultar um Lakehouse do mesmo workspace via T-SQL.",
+        "Linked Server: conceito de SQL Server on-premises/Azure SQL; o Fabric Warehouse não usa nem precisa dessa configuração para itens do mesmo workspace.",
+        "Exportar CSV + BULK INSERT: workaround manual e desnecessário, já que o cross-database query nativo elimina a necessidade de mover os dados."
       ],
-      "dicaOuro": "Batch Copy with partitioning = parallel data transfer. Accelerates large volume copies."
+      "dicaOuro": "Mesmo workspace = notação de 3 partes funciona direto, sem Linked Server."
     }
   },
   {
@@ -4237,16 +4237,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Manter a solução analítica",
     "explanation": {
-      "intro": "No contexto do DP-600, manter a solução analítica exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Lakehouse SQL Analytics Endpoint é API read-only que expõe /Tables como tabelas SQL consultáveis. Você escreve T-SQL queries, Fabric traduz para Spark SQL e executa contra Delta Lake. O endpoint é performance-tuned para SQL (não Spark API). Ideal para analistas SQL puros que querem evitar Python/Spark.",
-      "respostaCerta": "Usuários convidados podem ser adicionados a workspaces com funções específicas ou receber acesso a Apps e itens individuais, desde que a configuração de tenant \"Allow guest users to access Microsoft Fabric\" esteja habilitada pelo administrador. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "SQL Analyst querequer Lakehouse data? SQL Analytics Endpoint = T-SQL queries against Delta Lake tables.",
+      "intro": "Acesso de usuários convidados (guest) do Azure AD ao Fabric depende de uma configuração de tenant, não é automático nem proibido por padrão.",
+      "papoReto": "Convidados podem ser adicionados a workspaces com uma função específica (Admin/Member/Contributor/Viewer) ou receber acesso direto a Apps e itens individuais — mas isso só funciona se o administrador do tenant tiver habilitado a configuração \"Allow guest users to access Microsoft Fabric\". Sem essa configuração ligada, convidados são bloqueados independentemente de qualquer convite individual.",
+      "respostaCerta": "Convidados podem ter função em workspace ou acesso a Apps/itens individuais, desde que a configuração de tenant para convidados esteja habilitada.",
+      "puloDoGato": "Antes de debugar permissão de convidado item por item, confirme se a configuração de tenant para guest users está habilitada — sem ela, nada mais funciona.",
       "cascasDeBanana": [
-        "Spark SQL: programmatic API em Notebooks; SQL Endpoint é UI/API SQL.",
-        "Warehouse SQL: relational puro; Lakehouse SQL é read-only Delta Lake via SQL.",
-        "Data Lake query: genérico; SQL Analytics Endpoint é Fabric-specific."
+        "Acesso automático a todos os workspaces públicos: não existe esse acesso automático; convidados sempre precisam ser adicionados explicitamente a um workspace ou item.",
+        "Convidados não podem acessar de forma alguma: é falso — o Fabric suporta acesso de convidados quando a configuração de tenant permite.",
+        "Apenas via \"Publish to Web\" anônimo: isso é publicação pública sem autenticação, um cenário diferente do acesso controlado de convidados autenticados."
       ],
-      "dicaOuro": "SQL Analytics Endpoint = SQL interface to Delta Lake. Read-only. No data copy."
+      "dicaOuro": "Guest access = config de tenant ligada + atribuição explícita de função/item."
     }
   },
   {
@@ -4262,16 +4262,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Em Dataflow Gen2, a opção 'Refresh Schedule' permite agendar quando o dataflow executa (diariamente, semanalmente, etc.). Você define frequência e hora — Fabric automaticamente executa em background. Internamente, scheduler Fabric enfileira o job e executa quando está programado.",
-      "respostaCerta": "`spark.read.format(\"delta\").option(\"versionAsOf\", 5).load(\"Tables/nome_tabela\")` para versão específica, ou `.option(\"timestampAsOf\", \"2024-01-15\")` para versão por data. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Dataflow executar todas as noites? Configure Refresh Schedule.",
+      "intro": "Consultar uma versão histórica de uma tabela Delta é possível porque o Delta Lake mantém um log transacional com todas as versões anteriores.",
+      "papoReto": "O leitor do Spark aceita as opções versionAsOf (número da versão) ou timestampAsOf (data/hora) na chamada spark.read.format(\"delta\")...load(), retornando o snapshot da tabela exatamente como ela estava naquele ponto no tempo, sem precisar reprocessar nada manualmente.",
+      "respostaCerta": "spark.read.format(\"delta\").option(\"versionAsOf\", 5) ou .option(\"timestampAsOf\", \"2024-01-15\") para consultar uma versão anterior.",
+      "puloDoGato": "Time travel em Delta é sempre via opção no read — não existe método dedicado tipo .version() ou .history().load() para isso.",
       "cascasDeBanana": [
-        "Manual refresh: você clica Refresh botão; scheduled é automático.",
-        "Refresh triggered by another item: dependency-based (espera outro item terminar); scheduled é time-based.",
-        "Real-time: contínuo; scheduled é discrete intervals."
+        "VERSION AS OF / TIMESTAMP AS OF dentro do spark.sql: essa sintaxe combinada numa única string não é a forma correta e amplamente suportada no PySpark; o padrão é via opção no read.",
+        "spark.read.delta(...).version(5): não existe esse método encadeado .version() na API do PySpark.",
+        "DeltaTable.forName(...).history(5).load(): history() retorna o histórico de operações (metadados), não os dados da tabela numa versão específica, e não tem .load() encadeado assim."
       ],
-      "dicaOuro": "Refresh Schedule = automated time-based execution. Set frequency/time, Fabric handles."
+      "dicaOuro": "Time travel Delta = option(\"versionAsOf\", N) ou option(\"timestampAsOf\", \"data\") no read."
     }
   },
   {
@@ -4287,16 +4287,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Implementar e gerenciar modelo semântico",
     "explanation": {
-      "intro": "No contexto do DP-600, implementar e gerenciar modelo semântico exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Em Power BI, Bookmarks capture estado visual do relatório (filters, selections, página, zoom). Você clica Bookmark button, captura. Depois, quando clica bookmark novamente, report volta exatamente aquele estado. Bookmarks são úteis para narrativas (ex: 'Click to see executive summary' bookmark). Internamente, bookmarks salvam state como JSON no arquivo .pbix.",
-      "respostaCerta": "Para cada coluna da tabela de agregação, deve-se definir o tipo de sumarização (Sum, Count, Min, Max, GroupBy) e a coluna de detalhe correspondente na tabela de fatos, para que o motor saiba quando usar a agregação. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Relatório precisa capturar 'favorite views'? Bookmarks = saved states.",
+      "intro": "Tabelas de agregação aceleram consultas pré-calculando resumos, mas o modelo precisa saber exatamente quando usar cada agregação.",
+      "papoReto": "Para cada coluna da tabela de agregação, você define o tipo de sumarização (Sum, Count, Min, Max, GroupBy) e associa essa coluna à coluna de detalhe correspondente na tabela de fatos. É esse mapeamento que permite ao motor decidir automaticamente se a medida pode ser respondida pela agregação ou precisa ir até o detalhe.",
+      "respostaCerta": "Tipo de sumarização (Sum/Count/Min/Max/GroupBy) + coluna de detalhe correspondente na tabela de fatos, para cada coluna da agregação.",
+      "puloDoGato": "Sem o mapeamento \"coluna agregada → coluna de detalhe\", o motor não tem como saber que a agregação substitui a tabela de fatos naquela consulta.",
       "cascasDeBanana": [
-        "Drill-through: navigate para página diferente com filtro; bookmark é snapshot de estado.",
-        "Spotlight: foca um visual; bookmark é estado inteiro do relatório.",
-        "Animation: transição visual; bookmark é snapshot."
+        "Expressão DAX + threshold de linhas: tabelas de agregação não usam uma expressão DAX livre por coluna; a sumarização é um tipo pré-definido (Sum, Count etc.).",
+        "Apenas modo de armazenamento + relacionamento, com inferência automática: o motor não infere sumarizações automaticamente — é obrigatório mapear cada coluna.",
+        "Nome da partição + janela de tempo: isso descreve partições de tabela, conceito diferente do mapeamento de sumarização da agregação."
       ],
-      "dicaOuro": "Bookmarks = saved report states. Useful for narratives/tours."
+      "dicaOuro": "Tabela de agregação = mapa explícito \"coluna resumida → tipo de soma → coluna detalhada\"."
     }
   },
   {
@@ -4312,16 +4312,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Em Fabric, as Permissions controlam o acesso: você pode dar Admin/Member/Viewer role para usuários/grupos a level de Workspace. Essas permissões controlam quem vê artifacts (Lakehouse, modelo, relatório). A segurança é then enforced: se usuário não tem Member role, não pode editar; se não tem Viewer, não pode acessar. Permissions é workspace-level; RLS é modelo-level (filtra linhas).",
-      "respostaCerta": "`WITH receita_categoria AS (SELECT categoria, SUM(receita) AS total FROM dbo.vendas GROUP BY categoria) SELECT * FROM receita_categoria WHERE total > 100000` — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Usuário não pode ver Lakehouse? Check Workspace Permissions (Admin/Member/Viewer role).",
+      "intro": "CTEs em T-SQL organizam uma consulta em etapas nomeadas, facilitando aplicar um filtro sobre um resultado já agregado.",
+      "papoReto": "A sintaxe WITH nome_cte AS (subquery) define a CTE; depois disso, você faz um SELECT normal a partir dela, podendo aplicar WHERE sobre as colunas já calculadas (como a soma agregada), porque a CTE já foi resolvida antes dessa segunda consulta.",
+      "respostaCerta": "WITH receita_categoria AS (SELECT categoria, SUM(receita) AS total FROM dbo.vendas GROUP BY categoria) SELECT * FROM receita_categoria WHERE total > 100000.",
+      "puloDoGato": "Depois de agregar com GROUP BY, filtrar pelo total agregado no mesmo SELECT exige HAVING; numa CTE separada, o filtro seguinte já é um WHERE comum.",
       "cascasDeBanana": [
-        "RLS: filtra linhas; Permissions filtra acesso a artifacts.",
-        "Data Loss Prevention: política de endpoint; Permissions é controle de acesso.",
-        "Sensitivity Labels: metadados; Permissions é controle executável."
+        "HAVING total > 100000 num único SELECT com GROUP BY: produz o mesmo resultado, mas não usa CTE (WITH) como a pergunta pede explicitamente.",
+        "CREATE TEMP TABLE + segundo SELECT: cria uma tabela física temporária, mais pesado e diferente da sintaxe de CTE.",
+        "WITH (SELECT ...) AS nome WHERE ...: sintaxe inválida — uma CTE precisa de um SELECT independente depois do fechamento do parêntese, não um WHERE direto após o nome."
       ],
-      "dicaOuro": "Permissions = artifact access control by role. RLS = row-level data filtering."
+      "dicaOuro": "CTE = WITH nome AS (subquery), seguido de um SELECT independente que filtra o resultado já agregado."
     }
   },
   {
@@ -4329,7 +4329,7 @@ export const questions = [
     "text": "O que acontece com os dados de um Lakehouse se um workspace do Microsoft Fabric for excluído acidentalmente?",
     "options": [
       "Os dados ficam retidos no OneLake indefinidamente mesmo após a exclusão do workspace, podendo ser acessados via Azure Storage Explorer.",
-      "O workspace fica em estado \"deleted\" por um período de retenção (geralmente 90 dias) durante o qual um administrador do Fabric pode restaurá-lo com todos os itens e dados do OneLake via Admin Portal.",
+      "O workspace fica em estado \"deleted\" por um período de retenção (geralmente 90 dias) durante o qual um administrador do Fabric pode restaurá-lo com todos os.",
       "Os dados são excluídos permanentemente e imediatamente; não há período de retenção para workspaces no Fabric.",
       "O Fabric cria automaticamente um backup do workspace nas últimas 24 horas antes da exclusão, restaurável apenas via suporte Microsoft."
     ],
@@ -4337,16 +4337,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Manter a solução analítica",
     "explanation": {
-      "intro": "No contexto do DP-600, manter a solução analítica exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Columnstore index em Warehouse agrupa dados por coluna (não por linha como b-tree tradicional). Quando você query apenas poucas colunas, columnstore lê só elas — economiza I/O. Também comprime bem (similar values agrupadas). Use columnstore para OLAP (analytical, wide scans); use row-store (non-clustered b-tree) para OLTP (narrow, transactional).",
-      "respostaCerta": "O workspace fica em estado \"deleted\" por um período de retenção (geralmente 90 dias) durante o qual um administrador do Fabric pode restaurá-lo com todos os itens e dados do OneLake via Admin Portal. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Warehouse com queries analyticals (SELECT 5 columns from 100)? Columnstore index.",
+      "intro": "O Fabric tem uma rede de segurança contra exclusão acidental de workspace, parecida com a \"lixeira\" de outros serviços Microsoft 365.",
+      "papoReto": "Quando um workspace é excluído, ele entra num estado \"deleted\" e fica retido por um período (geralmente 90 dias). Durante essa janela, um administrador do Fabric pode restaurá-lo pelo Admin Portal, recuperando todos os itens e os dados do OneLake associados — só depois desse período a exclusão se torna definitiva.",
+      "respostaCerta": "Workspace fica em estado \"deleted\" por um período de retenção (~90 dias); admin do Fabric pode restaurá-lo com todos os itens/dados via Admin Portal.",
+      "puloDoGato": "Excluiu workspace por engano? Veja primeiro se ainda está dentro da janela de retenção restaurável pelo Admin Portal, antes de pensar em backup manual.",
       "cascasDeBanana": [
-        "Clustered index: ordena tabela inteira; columnstore é reorganização por coluna.",
-        "Non-clustered index: cria estrutura separada; columnstore é alteração de armazenamento físico.",
-        "Partitioning: divide tabela por ranges; columnstore é compressão de formato."
+        "Dados ficam retidos indefinidamente, acessíveis via Storage Explorer: não há acesso direto via Storage Explorer a workspace excluído; a recuperação é via Admin Portal e tem prazo, não é indefinida.",
+        "Exclusão permanente e imediata, sem retenção: existe período de retenção — a exclusão não é instantaneamente irreversível.",
+        "Backup automático de 24h restaurável só via suporte Microsoft: a restauração é feita pelo próprio admin do Fabric no Admin Portal, dentro da janela de retenção, sem precisar de chamado de suporte."
       ],
-      "dicaOuro": "Columnstore = compress by column. Efficient for analytical queries. Use in Warehouse OLAP."
+      "dicaOuro": "Workspace excluído = estado \"deleted\" reversível por ~90 dias via Admin Portal, não exclusão instantânea."
     }
   },
   {
@@ -4362,16 +4362,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Um Semantic Model no Fabric pode ter modo Mixed: alguns fatos em Import (memória), outros em Direct Lake (OneLake live). Quando medida agrega ambos, Fabric executa cada parte em seu modo (Import aggregation em memória, Direct Lake via OneLake), depois combina resultados. Useful for grandes datasets (Direct Lake) que precisam de alguns aggregates pré-calculados (Import).",
-      "respostaCerta": "Usando `spark.readStream` com o conector Eventstream como fonte e `df.writeStream.format(\"delta\").outputMode(\"append\").option(\"checkpointLocation\", \"...\").start(\"Tables/nome\")` para escrita contínua com controle de checkpoint. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Modelo grande com alguns aggregates? Mixed Mode: Direct Lake + Import.",
+      "intro": "Streaming verdadeiro em PySpark usa uma API própria (Structured Streaming), diferente da leitura batch comum.",
+      "papoReto": "spark.readStream configura o DataFrame para ler continuamente do Eventstream como fonte; df.writeStream.format(\"delta\").outputMode(\"append\").option(\"checkpointLocation\", \"...\").start(\"Tables/nome\") inicia a escrita contínua na tabela Delta, usando um checkpoint para garantir processamento exatamente-uma-vez e recuperável em caso de falha.",
+      "respostaCerta": "spark.readStream (fonte Eventstream) + df.writeStream.format(\"delta\").outputMode(\"append\").option(\"checkpointLocation\", ...).start(...) para escrita contínua com checkpoint.",
+      "puloDoGato": "Sempre que houver streaming real em PySpark, procure readStream/writeStream e checkpointLocation — sem checkpoint não há streaming Delta confiável.",
       "cascasDeBanana": [
-        "Dual mode: diferente de Mixed — Dual combina Import + DirectQuery, não Import + Direct Lake.",
-        "Composite Model: combina tabelas multiplamente relacionadas; Mixed Mode é sobre Import/Direct Lake.",
-        "Fallback: Direct Lake pode fallback para DirectQuery se query não é supported; Mixed é intenção."
+        "DeltaTable.streamFrom(...).writeTo(...).streaming().start(): essa API encadeada não existe no PySpark/Delta Lake.",
+        "spark.read.stream(...) e df.write.delta(..., mode=\"streaming\"): a sintaxe correta é readStream (não read.stream), e \"streaming\" não é um modo válido de write — streaming é uma API separada (writeStream).",
+        "Dataflow Gen2 com modo \"Streaming\": ferramenta low-code orientada a batch/refresh agendado, não a forma de implementar streaming PySpark com Eventstream descrita."
       ],
-      "dicaOuro": "Mixed Mode = Import + Direct Lake in one model. Execute each in its mode, combine results."
+      "dicaOuro": "Streaming real em PySpark = readStream + writeStream + checkpointLocation, sempre os três juntos."
     }
   },
   {
@@ -4387,16 +4387,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Implementar e gerenciar modelo semântico",
     "explanation": {
-      "intro": "No contexto do DP-600, implementar e gerenciar modelo semântico exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Em um modelo semântico com Bi-directional relationships, filtros fluem em ambas direções: se você filtra DimDate via Date[Year], Fatos filtra automaticamente AND Fatos filtra DimDate. Isso simplifica medidas (menos CALCULATE() necessário), mas pode causar ciclos se não configurado cuidadosamente. Use Bi-directional apenas quando ambas tabelas precisam filtrar uma a outra.",
-      "respostaCerta": "Retorna o nome de uma coluna ou medida como string, útil para criar medidas dinâmicas que referenciam seus próprios nomes sem hardcode, facilitando manutenção em renomeações. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Filtros precisam fluir dos dois lados? Bi-directional. Ciclos potenciais? Revise schema.",
+      "intro": "NAMEOF resolve o problema clássico de hardcodar nomes de coluna/medida como texto dentro de uma fórmula DAX.",
+      "papoReto": "NAMEOF(objeto) retorna o nome do objeto referenciado (coluna ou medida) como uma string, de forma dinâmica. Isso permite construir medidas que exibem seus próprios nomes ou nomes de colunas referenciadas sem digitar o texto manualmente — se o objeto for renomeado depois, o NAMEOF acompanha a mudança automaticamente.",
+      "respostaCerta": "Retorna o nome de uma coluna ou medida como string, evitando hardcode e facilitando manutenção em renomeações.",
+      "puloDoGato": "Toda vez que uma medida exibe dinamicamente \"o nome de tal coluna/medida\" sem string literal fixa, é NAMEOF em ação.",
       "cascasDeBanana": [
-        "One-to-many: direção padrão do filtro; não é mesma coisa que Bi-directional.",
-        "Cross-filter direction: direção do filtro em uma relação; Bi-directional é ambas direções.",
-        "Circular relationship: ciclo de relações; Bi-directional é configuração de uma relação."
+        "Nome da tabela de origem de uma coluna: NAMEOF retorna o nome do próprio objeto (coluna/medida), não da tabela de origem dele.",
+        "Nome do usuário autenticado: isso é o que USERPRINCIPALNAME() faz; NAMEOF não tem relação com identidade de usuário.",
+        "Nome do papel RLS ativo: seria função relacionada a segurança dinâmica (USERNAME/CUSTOMDATA), não o propósito de NAMEOF."
       ],
-      "dicaOuro": "Bi-directional relationship = two-way filter flow (rare, risky). Single direction (default) is safer."
+      "dicaOuro": "NAMEOF = \"qual é o nome desse objeto, como texto?\" — sem digitar o nome na mão."
     }
   },
   {
@@ -4412,16 +4412,16 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Fabric Capacity mede recursos em FCUs (Fabric Capacity Units) — contrata X FCUs/mês, pool compartilhado entre todos itens (Lakehouse, Warehouse, modelos, pipelines). Cada operação consome FCU baseado em CPU/memory/duração. Monitor via Capacity Metrics para ver consumo e planejar alocação.",
-      "respostaCerta": "Um aplicativo Windows que monta o OneLake como uma unidade local no Windows Explorer, permitindo arrastar e soltar arquivos, copiar e gerenciar dados do Fabric diretamente pelo sistema de arquivos sem usar o portal web. — implementa corretamente o requisito técnico para este cenário de iniciante.",
-      "puloDoGato": "Fabric Capacity = shared resource pool. Todos itens consomem dela. Monitor via Capacity Metrics.",
+      "intro": "O OneLake File Explorer leva a experiência de \"unidade de rede mapeada\" do Windows para dentro do Fabric.",
+      "papoReto": "É um aplicativo Windows que monta o OneLake como uma unidade local no Windows Explorer — depois de instalado, engenheiros de dados podem arrastar e soltar arquivos, copiar pastas e gerenciar dados do Fabric direto pelo sistema de arquivos, sem abrir o portal web para operações simples.",
+      "respostaCerta": "Aplicativo Windows que monta o OneLake como unidade local, permitindo gerenciar arquivos do Fabric direto pelo Explorer, sem o portal web.",
+      "puloDoGato": "Se a tarefa é \"arrastar um arquivo do meu PC para o Lakehouse\", a ferramenta certa é o OneLake File Explorer, não o portal web.",
       "cascasDeBanana": [
-        "Premium Capacity (Power BI): legacy Power BI licensing; Fabric Capacity é modelo novo com FCUs.",
-        "Workspace vs Capacity: Workspace é container lógico; Capacity é alocação física.",
-        "Throttling: quando capacity saturado, queries desaceleram; Slots/FCUs reservam recursos."
+        "Painel de navegação dentro do portal do Fabric: descreve a navegação web nativa do portal, diferente do app que monta uma unidade local no Windows.",
+        "Extensão do VS Code: o OneLake File Explorer não é uma extensão de editor de código; é o app que monta a unidade no Windows Explorer.",
+        "Ferramenta CLI de sincronização com ADLS Gen2: o OneLake File Explorer não é uma CLI; é uma interface gráfica integrada ao Windows Explorer."
       ],
-      "dicaOuro": "FCUs (Fabric Capacity Units) = Fabric pricing model. All workloads share pool. Allocate based on patterns."
+      "dicaOuro": "OneLake File Explorer = \"mapear unidade de rede\" do OneLake no Windows Explorer."
     }
   },
   {
@@ -4437,16 +4437,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Manter a solução analítica",
     "explanation": {
-      "intro": "No contexto do DP-600, manter a solução analítica exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Em Warehouse, Transaction Isolation Levels controlam visibilidade entre transactions concorrentes. READ COMMITTED (default): não vê dirty reads. SNAPSHOT: vê versão consistente ao início da transaction. SERIALIZABLE: mais restritivo, order total. Escolha balance entre consistency e concorrência — READ COMMITTED para maioria dos casos.",
-      "respostaCerta": "Via Microsoft Purview Audit (anteriormente Microsoft 365 Compliance Center) ou via API de Auditoria do Office 365, que registra eventos como acesso a relatórios, exportações, alterações de permissão e execuções de pipelines. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Transactions concorrentes? READ COMMITTED = default balance. Higher levels = more consistency, less concurrency.",
+      "intro": "Rastrear atividades de usuários no Fabric depende da mesma infraestrutura de auditoria usada em todo o Microsoft 365.",
+      "papoReto": "Os eventos de atividade do Fabric (acesso a relatórios, exportações, alterações de permissão, execuções de pipelines) são registrados e acessados via Microsoft Purview Audit (anteriormente Microsoft 365 Compliance Center), ou programaticamente via API de Auditoria do Office 365 — a mesma plataforma central de auditoria usada por SharePoint, Exchange e Teams.",
+      "respostaCerta": "Via Microsoft Purview Audit (ou API de Auditoria do Office 365), que registra eventos como acesso a relatórios e alterações de permissão.",
+      "puloDoGato": "Auditoria de atividade de usuário no Fabric não tem log dedicado isolado — ela cai na mesma plataforma central do Microsoft 365 (Purview Audit).",
       "cascasDeBanana": [
-        "Locking: mecanismo de controle; Isolation é visibilidade de dados.",
-        "Deadlock: mutual blocking; Isolation Level afeta probability.",
-        "Pessimistic vs Optimistic: READ COMMITTED é otimista; SERIALIZABLE é pessimista."
+        "OneLake Catalog: é um catálogo de descoberta de dados/itens, não um log de auditoria de atividades de usuários.",
+        "Monitor Hub do Fabric: centraliza o monitoramento de execuções de itens (pipelines, refreshes), não é a ferramenta de auditoria de compliance de usuário.",
+        "Azure Monitor com Log Analytics: usado para métricas operacionais e logs de diagnóstico de recursos Azure; a auditoria de atividade de usuário passa pelo Purview Audit."
       ],
-      "dicaOuro": "Isolation Levels: READ COMMITTED (good) > SNAPSHOT (version consistency) > SERIALIZABLE (strict)."
+      "dicaOuro": "Auditoria de atividade de usuário = Microsoft Purview Audit (M365), não uma ferramenta interna isolada do Fabric."
     }
   },
   {
@@ -4462,16 +4462,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Em Spark, `applyInPandas()` UDF executa função Python customizada em chunks de DataFrame. Spark passa pandas DataFrame, função processa, retorna pandas DataFrame — Spark paraleliza aplicação em partições. Útil para lógica que Spark SQL não suporta (ML, custom aggregations, complex transformations).",
-      "respostaCerta": "Executa uma query (SQL ou outra) em uma fonte de dados e retorna o resultado como variável para uso em atividades subsequentes, como obter a data da última carga para uso em filtros incrementais. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Custom lógica que Spark SQL não pode fazer? applyInPandas() — Python function on batches.",
+      "intro": "A atividade Lookup serve para buscar um valor numa fonte de dados e injetar esse valor no fluxo do pipeline.",
+      "papoReto": "Lookup executa uma query (SQL ou outra, conforme o conector) contra uma fonte de dados e retorna o resultado como variável utilizável por atividades subsequentes — um caso clássico é obter a data da última carga bem-sucedida para usá-la como filtro de carga incremental na próxima atividade.",
+      "respostaCerta": "Executa uma query e retorna o resultado como variável para uso em atividades subsequentes, como a data da última carga para filtros incrementais.",
+      "puloDoGato": "Precisa \"buscar um valor antes de continuar o pipeline\"? Lookup. Precisa \"repetir algo para cada item de uma lista\"? ForEach.",
       "cascasDeBanana": [
-        "applyInPandas vs UDF (Scala): ambos custom, mas applyInPandas é pandas-batches, UDF é escalar.",
-        "Pandas vs PySpark native: Pandas conveniente para lógica complexa; PySpark mais rápido.",
-        "Vectorized execution: applyInPandas otimizado para pandas operations em batches."
+        "Busca full-text em arquivos do OneLake: não é a função de Lookup; ele executa queries contra fontes de dados, não faz busca textual em arquivos.",
+        "Conecta a Key Vault para recuperar credenciais: isso é tratado via Linked Service com Key Vault integrado, não pela atividade Lookup.",
+        "Valida existência de item no workspace antes de atividades dependentes: não é o propósito de Lookup, que trabalha com fontes de dados via query, não com metadados de itens Fabric."
       ],
-      "dicaOuro": "applyInPandas() = pandas-based UDF. Executed in batches per partition. Flexible for complex logic."
+      "dicaOuro": "Lookup = \"pego um valor de uma fonte e uso depois no pipeline\" (ex: data da última carga)."
     }
   },
   {
@@ -4487,16 +4487,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Implementar e gerenciar modelo semântico",
     "explanation": {
-      "intro": "No contexto do DP-600, implementar e gerenciar modelo semântico exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Quando você exporta relatório Power BI (PBIX file), contém: definições modelo semântico (tabelas, medidas, relationships), queries M (data sources), layouts report (pages, visuals). Se modelo Direct Lake/DirectQuery, dados NÃO são salvos (metadata apenas). Por isso Embedded é comum — backend controla updates, clients consomem via Embedded API.",
-      "respostaCerta": "Desabilitar cross-filtering entre visuais específicos via \"Edit Interactions\", usar \"Apply all slicers\" button para aplicar múltiplos filtros de uma vez, e configurar \"Reduce number of queries sent\" nas opções do relatório. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "PBIX file = model definition. Dados se Import; metadata-only se Direct Lake/DirectQuery.",
+      "intro": "Interações de visual no Power BI podem gerar muitas queries redundantes ao modelo semântico se não forem ajustadas.",
+      "papoReto": "Desabilitar cross-filtering entre visuais que não precisam reagir entre si (via \"Edit Interactions\") evita queries desnecessárias disparadas por cada clique; o botão \"Apply all slicers\" agrupa múltiplos filtros de slicer numa única chamada em vez de uma por slicer; e \"Reduce number of queries sent\" consolida requisições redundantes de visuais.",
+      "respostaCerta": "Desabilitar cross-filtering específico + \"Apply all slicers\" + \"Reduce number of queries sent\" nas opções do relatório.",
+      "puloDoGato": "Cada interação de visual é uma potencial query ao modelo. Reduzir interações desnecessárias reduz a carga no modelo.",
       "cascasDeBanana": [
-        "Backup vs Export: Backup copia dataset inteiro; Export é PBIX com metadata.",
-        "Publish vs Export: Publish para Power BI service; Export é arquivo local.",
-        "Data inclusion: Import = dados included, Direct Lake/DirectQuery = metadata-only."
+        "\"Performance Mode\" agrupando queries numa única chamada: não existe esse recurso com esse comportamento no Power BI.",
+        "Cache de relatório no Fabric Service servindo resultados pré-calculados: não existe esse recurso configurável dessa forma para relatórios.",
+        "\"Static Dashboard\" renderizando como imagens sem queries: não é um modo de configuração padrão do Power BI Service para reduzir queries de relatório interativo."
       ],
-      "dicaOuro": "Export PBIX: includes data if Import, metadata-only if Direct Lake/DirectQuery."
+      "dicaOuro": "Menos interação automática entre visuais = menos queries. Ajuste Edit Interactions, Apply Slicers e Reduce Queries."
     }
   },
   {
@@ -4512,16 +4512,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Quando medidas num visual têm contextos diferentes (ex: [2023 Sales] vs [2024 Sales]), use CALCULATE() com filter override para cada. Fabric avalia cada medida em seu context, depois combina visualmente. Permite side-by-side período comparison num visual.",
-      "respostaCerta": "Usando o comando KQL `.alter table nome_tabela policy retention softdelete = 30d` para definir o período de retenção, após o qual os dados são automaticamente removidos da tabela. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Comparar períodos num visual? CALCULATE(measure, year_filter) para cada período.",
+      "intro": "Tabelas KQL em Eventhouse têm política de retenção própria, configurável via comando KQL dedicado, separada da retenção de arquivos Delta/OneLake.",
+      "papoReto": "O comando .alter table nome_tabela policy retention softdelete = 30d define, na própria tabela KQL, por quanto tempo os dados ficam disponíveis antes de serem automaticamente removidos (soft delete) — um controle declarativo, executado uma vez, que o motor do Eventhouse aplica continuamente.",
+      "respostaCerta": ".alter table nome_tabela policy retention softdelete = 30d — define o período de retenção; após ele, os dados são removidos automaticamente.",
+      "puloDoGato": "Retenção em tabela KQL não é feita por DELETE manual nem por pipeline agendado — é uma policy declarada uma vez via comando .alter.",
       "cascasDeBanana": [
-        "Slicers: filtram page inteira; CALCULATE override é per-measure.",
-        "Drill-down: navega hierarquia; CALCULATE é contexto específico.",
-        "Relative dates: filtros dinâmicos; CALCULATE é manual."
+        "Data Pipeline com DELETE FROM periódico: funcionaria tecnicamente, mas exige manutenção manual de job e não é o mecanismo nativo de retenção do Eventhouse.",
+        "Política de lifecycle no OneLake arquivando dados KQL: tabelas KQL não usam lifecycle policy do OneLake como arquivos Delta; a retenção é via comando KQL na própria tabela.",
+        "Opção \"Data Retention\" no portal aplicando a todas as tabelas de uma vez: a retenção é configurável por tabela via comando KQL, não por uma opção única que afeta todas simultaneamente."
       ],
-      "dicaOuro": "CALCULATE() override = different filter contexts per measure (side-by-side comparison)."
+      "dicaOuro": "Retenção de tabela KQL = .alter table ... policy retention softdelete = Xd, declarado na própria tabela."
     }
   },
   {
@@ -4529,7 +4529,7 @@ export const questions = [
     "text": "Como você faz backup de um modelo semântico no Microsoft Fabric usando o XMLA Endpoint?",
     "options": [
       "Usando a API REST do Fabric com o endpoint `/semanticmodels/{id}/export` que gera um arquivo .bak compatível com SQL Server.",
-      "Usando o comando XMLA `{ \"backup\": { \"database\": \"nome_modelo\", \"file\": \"caminho.abf\", \"allowOverwrite\": true } }` via SSMS ou Tabular Editor conectado ao XMLA Endpoint, gerando um arquivo .abf restaurável.",
+      "Usando o comando XMLA `{ \"backup\": { \"database\": \"nome_modelo\", \"file\": \"caminho.abf\", \"allowOverwrite\": true } }` via SSMS ou Tabular Editor conectado ao.",
       "Exportando o modelo como arquivo .pbix pelo Power BI Service, que inclui o modelo semântico e os dados em modo Import.",
       "Criando um snapshot do workspace via Admin Portal que captura todos os itens incluindo o modelo semântico em formato binário."
     ],
@@ -4537,16 +4537,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Manter a solução analítica",
     "explanation": {
-      "intro": "No contexto do DP-600, manter a solução analítica exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Dataflow scheduled refresh: extrai dados daily/hourly, limpa, carrega Warehouse. Configure Refresh Schedule, Dataflow executa automaticamente. Cada execução tem log (success/failure) monitável — permite detecção rápida data quality issues ou source failures.",
-      "respostaCerta": "Usando o comando XMLA `{ \"backup\": { \"database\": \"nome_modelo\", \"file\": \"caminho.abf\", \"allowOverwrite\": true } }` via SSMS ou Tabular Editor conectado ao XMLA Endpoint, gerando um arquivo .abf restaurável. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "ETL diário? Dataflow scheduled = automatic execution + monitoring.",
+      "intro": "Modelos semânticos hospedados no Fabric podem ser copiados/restaurados via XMLA Endpoint, usando o mesmo mecanismo de backup do Analysis Services tabular.",
+      "papoReto": "Conectando uma ferramenta como SSMS ou Tabular Editor ao XMLA Endpoint do workspace, você executa o comando de backup XMLA (especificando database, arquivo de destino .abf e allowOverwrite), gerando um arquivo .abf restaurável depois — o mesmo formato usado para backup de modelos tabulares Analysis Services.",
+      "respostaCerta": "Comando XMLA de backup via SSMS/Tabular Editor conectado ao XMLA Endpoint, gerando um arquivo .abf restaurável.",
+      "puloDoGato": "XMLA Endpoint trata o modelo semântico como um banco Analysis Services tabular — por isso os comandos de backup/restore geram .abf, não .bak.",
       "cascasDeBanana": [
-        "Manual refresh: você clica Refresh button — não automático.",
-        "Data Pipeline scheduled: orquestração visual diferente; Dataflow é transformação específica.",
-        "Real-time: contínuo vs scheduled (discrete)."
+        "API REST do Fabric gerando .bak: não existe esse endpoint de exportação no Fabric; .bak é formato de banco relacional SQL Server, não de modelo tabular.",
+        "Exportar .pbix pelo Power BI Service: captura o relatório e, conforme o modo de armazenamento, o modelo — mas não é um backup via XMLA Endpoint nem gera o mesmo arquivo restaurável.",
+        "Snapshot do workspace via Admin Portal: não existe esse recurso de snapshot binário de todos os itens via Admin Portal."
       ],
-      "dicaOuro": "Dataflow Refresh Schedule = automate ETL. Monitor via activity logs for failures."
+      "dicaOuro": "Backup de modelo semântico via XMLA = mesmo fluxo de backup de Analysis Services tabular, gerando .abf."
     }
   },
   {
@@ -4556,22 +4556,22 @@ export const questions = [
       "`deltaTable.alias(\"dest\").merge(df_fonte.alias(\"src\"), \"dest.id = src.id\").whenMatchedDelete(condition=\"src.ativo = false\").whenMatchedUpdateAll(condition=\"src.ativo = true\").whenNotMatchedInsertAll().execute()`",
       "`deltaTable.merge(df_fonte, \"id\").delete(condition=\"ativo = false\").update().insert().run()`",
       "`df_fonte.filter(\"ativo = false\").write.format(\"delta\").mode(\"delete_matching\").save(\"Tables/destino\")`",
-      "`spark.sql(\"MERGE INTO destino USING fonte ON id WHEN MATCHED AND ativo = false THEN DELETE WHEN MATCHED THEN UPDATE SET * WHEN NOT MATCHED THEN INSERT *\")`— sintaxe válida em SQL mas não via API PySpark do DeltaTable."
+      "`spark.sql(\"MERGE INTO destino USING fonte ON id WHEN MATCHED AND ativo = false THEN DELETE WHEN MATCHED THEN UPDATE SET * WHEN NOT MATCHED THEN INSERT *\")`—."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "KQL Database: otimizado ingestão/queries dados semi-estruturados (JSON logs, telemetria). Engine columnar comprime e indexes timestamp automaticamente. Ingesta rápida (1M+ rows/sec), queries históricas via KQL — ideal observabilidade e detecção anomalias logs.",
-      "respostaCerta": "`deltaTable.alias(\"dest\").merge(df_fonte.alias(\"src\"), \"dest.id = src.id\").whenMatchedDelete(condition=\"src.ativo = false\").whenMatchedUpdateAll(condition=\"src.ativo = true\").whenNotMatchedInsertAll().execute()` — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Logs, telemetria, observabilidade? KQL Database is standard.",
+      "intro": "A API MERGE do Delta Lake no PySpark permite combinar update, insert e delete condicionais numa única operação atômica.",
+      "papoReto": "Encadeando whenMatchedDelete(condition=...) antes de whenMatchedUpdateAll(condition=...) e whenNotMatchedInsertAll(), você instrui o MERGE a deletar os registros que casaram e estão marcados como inativos, atualizar os que casaram e continuam ativos, e inserir os que não existiam — tudo numa única transação Delta.",
+      "respostaCerta": "deltaTable.merge(...).whenMatchedDelete(condition=...).whenMatchedUpdateAll(condition=...).whenNotMatchedInsertAll().execute().",
+      "puloDoGato": "No MERGE do Delta, cada cláusula when... pode ter sua própria condition — isso permite combinar delete condicional com update condicional no mesmo merge.",
       "cascasDeBanana": [
-        "Warehouse: OLAP relacional; KQL é time-series telemetry.",
-        "Lakehouse: Delta/Parquet storage; KQL é query engine (not file-based).",
-        "Structured vs semi-structured: KQL schema flexível; Warehouse schema fixo."
+        ".merge(df_fonte, \"id\").delete(...).update().insert().run(): essa API simplificada não existe na biblioteca delta-spark; os métodos corretos são whenMatchedDelete/whenMatchedUpdateAll/whenNotMatchedInsertAll.",
+        "write.format(\"delta\").mode(\"delete_matching\"): não existe esse modo na API de escrita do Spark; delete condicional exige a API MERGE, não um mode de write.",
+        "spark.sql com MERGE INTO via string: essa sintaxe SQL é válida via spark.sql(), mas a pergunta busca a forma correta via API programática do objeto DeltaTable."
       ],
-      "dicaOuro": "KQL Database = time-series telemetry engine (schema-flexible, fast ingest, Kusto query)."
+      "dicaOuro": "MERGE Delta = .merge(...).whenMatchedDelete(cond).whenMatchedUpdateAll(cond).whenNotMatchedInsertAll().execute()."
     }
   },
   {
@@ -4581,22 +4581,22 @@ export const questions = [
       "Retorna o valor da medida com offset de 1 linha na tabela física, independente da ordenação aplicada no visual.",
       "Desloca o contexto de filtro 1 mês para o futuro, retornando os valores do próximo mês em relação ao selecionado.",
       "Remove o primeiro mês da seleção atual e recalcula a medida para os meses restantes.",
-      "Retorna os valores da linha anterior na sequência ordenada de meses, permitindo cálculos de variação período a período sem necessidade de funções de inteligência de tempo tradicionais como DATEADD."
+      "Retorna os valores da linha anterior na sequência ordenada de meses, permitindo cálculos de variação período a período sem necessidade de funções de."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
     "domain": "Implementar e gerenciar modelo semântico",
     "explanation": {
-      "intro": "No contexto do DP-600, implementar e gerenciar modelo semântico exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Calculated Column: coluna que Fabric calcula para cada row durante refresh (não real-time via DAX formula). Exemplo: `[Total] = [Quantity] * [Price]`. Durante refresh, DAX avalia por row, armazena resultado memória. Diferente medida (query-time), calculated column é pré-calculada.",
-      "respostaCerta": "Retorna os valores da linha anterior na sequência ordenada de meses, permitindo cálculos de variação período a período sem necessidade de funções de inteligência de tempo tradicionais como DATEADD. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Coluna calculada per-row durante refresh? Calculated Column. Durante query? Measure.",
+      "intro": "OFFSET é a função moderna de DAX para comparar uma linha com a linha anterior/seguinte numa sequência ordenada, sem usar funções de inteligência de tempo.",
+      "papoReto": "OFFSET(-1, ALLSELECTED(Calendário[Mês]), ORDERBY(Calendário[Mês])) pega a sequência de meses selecionados, ordena por mês, e para cada linha retorna o valor da medida na posição \"1 linha antes\" daquela posição na sequência ordenada — exatamente o que se precisa para calcular variação mês a mês sem depender de DATEADD ou PREVIOUSMONTH.",
+      "respostaCerta": "Retorna os valores da linha anterior na sequência ordenada de meses, permitindo variação período a período sem funções de inteligência de tempo tradicionais.",
+      "puloDoGato": "OFFSET funciona sobre qualquer sequência ordenada (não só datas) — por isso é mais genérico que DATEADD, que é específico de calendário.",
       "cascasDeBanana": [
-        "Measure: calcula durante query; Calculated Column durante refresh.",
-        "Calculated table: tabela inteira via DAX; Calculated Column é coluna.",
-        "Dynamic calculation: não existe — Calculated Column precisa refresh para atualizar."
+        "Offset de 1 linha na tabela física, ignorando ordenação do visual: errado — OFFSET respeita explicitamente o ORDERBY informado, não a ordem física da tabela.",
+        "Desloca o contexto 1 mês para o futuro: o argumento -1 desloca para trás (anterior); +1 deslocaria para o futuro.",
+        "Remove o primeiro mês da seleção e recalcula os restantes: OFFSET não remove itens da seleção; reposiciona o cálculo relativo à sequência ordenada."
       ],
-      "dicaOuro": "Calculated Column = DAX per-row at refresh. Stored in model (pre-calculated)."
+      "dicaOuro": "OFFSET(-1, ...) = \"valor da linha anterior na ordem definida\". Sinal negativo = passado; positivo = futuro."
     }
   },
   {
@@ -4612,16 +4612,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Deployment Pipeline: alterações em Dev → Deploy copia apenas delta para Test (não full history). Fabric rastreia versões — Deploy incremental. Conflitos destino (coluna existe)? Compare UI permite decide overwrite/skip.",
-      "respostaCerta": "`DATEDIFF(day, data_inicio, data_fim)` que retorna o número inteiro de dias entre as duas datas. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Deploy altera apenas mudanças (delta). Compare mostra o quê.",
+      "intro": "Calcular diferença de dias entre datas em T-SQL tem uma função dedicada, nativa do dialeto Microsoft.",
+      "papoReto": "DATEDIFF(day, data_inicio, data_fim) conta o número de \"fronteiras de dia\" cruzadas entre as duas datas, retornando um inteiro — é a função T-SQL padrão para esse cálculo, suportada também no Warehouse do Fabric.",
+      "respostaCerta": "DATEDIFF(day, data_inicio, data_fim), que retorna o número inteiro de dias entre as duas datas.",
+      "puloDoGato": "Em T-SQL, sempre DATEDIFF(unidade, inicio, fim) — a ordem dos argumentos importa: início primeiro, fim depois.",
       "cascasDeBanana": [
-        "Full copy: copiar tudo; Deploy é incremental delta.",
-        "Merge: reconcile branches; Deploy é overwrite stage.",
-        "Backup: recomendado antes Deploy, não automático."
+        "DATESUBTRACT: não existe essa função em T-SQL.",
+        "DATE_DIFF com aspas simples e essa ordem de argumentos: é sintaxe de outros dialetos SQL (como BigQuery), não T-SQL do Warehouse Fabric.",
+        "(data_fim - data_inicio): subtração direta entre colunas de data não é garantida como inteiro de dias em todos os tipos; DATEDIFF é a forma explícita e confiável."
       ],
-      "dicaOuro": "Deployment Pipeline = incremental promotion with change tracking and conflict resolution."
+      "dicaOuro": "T-SQL para diferença de datas = sempre DATEDIFF(unidade, início, fim)."
     }
   },
   {
@@ -4637,16 +4637,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Manter a solução analítica",
     "explanation": {
-      "intro": "No contexto do DP-600, manter a solução analítica exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Table Alias em T-SQL: renomeação curta para legibilidade/ambiguidade. Ex: `SELECT a.ID FROM dbo.Orders a JOIN dbo.Customers b...`. Aliases não têm overhead — purely syntactic. Use em queries multi-table.",
-      "respostaCerta": "Usuários do workspace veem todos os itens e podem interagir conforme sua função (Viewer, Contributor etc.); usuários do App veem apenas o conteúdo publicado no App com a navegação definida pelo publicador, sem acesso direto aos itens do workspace. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Query multi-table? Use aliases (a, b, c) for brevity.",
+      "intro": "A diferença entre acessar via workspace ou via App é sobre o que a pessoa vê e como navega, não sobre um recurso ter mais \"poder\" que o outro.",
+      "papoReto": "Usuários adicionados ao workspace veem todos os itens e interagem conforme a função atribuída (Viewer, Contributor etc.) — a visão de quem desenvolve. Usuários que acessam só via Power BI App veem apenas o conteúdo publicado, organizado pela navegação que o publicador definiu, sem visibilidade dos itens internos do workspace.",
+      "respostaCerta": "Usuários do workspace veem todos os itens conforme sua função; usuários do App veem só o conteúdo publicado, sem acesso direto aos itens.",
+      "puloDoGato": "Workspace = bastidor de quem constrói. App = vitrine controlada para quem consome. Nunca dê acesso de workspace a quem só deveria consumir.",
       "cascasDeBanana": [
-        "CTE: nomeia subquery inteira, não tabela.",
-        "View: objeto permanente; Alias é temporary (query-scope).",
-        "Schema qualification: `dbo.Orders` é qual nome; Alias é apelido."
+        "Usuários do App têm permissão de exportar; usuários do workspace precisam de permissão explícita: essa relação não existe assim — exportação é controlada por configurações de tenant e função, não dessa forma diferenciada.",
+        "Usuários do workspace podem editar; usuários do App só visualizam mas têm acesso aos dados brutos: usuários de App não têm acesso a dados brutos do modelo — só consomem o relatório publicado.",
+        "Não há diferença funcional, App é só interface alternativa: há diferença real de escopo — App restringe à navegação curada, workspace expõe tudo conforme a função."
       ],
-      "dicaOuro": "Table Alias = shorthand (no performance impact, improves readability)."
+      "dicaOuro": "Workspace = acesso aos itens conforme função. App = acesso só ao que foi publicado, sem ver o resto."
     }
   },
   {
@@ -4662,16 +4662,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Premium Auto-Refresh: modelo Import atualiza automaticamente sem schedule — Fabric detecta source changes, inicia refresh. Ideal dados frequentes mas não-previsíveis. Internamente, Fabric monitora data source, triggers refresh em mudança.",
-      "respostaCerta": "Criando parâmetros Power Query M via \"Manage Parameters\" no editor, que podem ser referenciados em filtros, caminhos de fonte e transformações, e sobrescritos por um Data Pipeline via atividade Dataflow com parâmetros dinâmicos. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Dados frequente/imprevisível? Premium Auto-Refresh = change-detection + automatic refresh.",
+      "intro": "Parâmetros em Dataflow Gen2 são definidos em Power Query M, o mesmo motor de transformação do Power BI Desktop, e podem ser controlados externamente por um pipeline.",
+      "papoReto": "Você cria parâmetros via \"Manage Parameters\" no editor do Dataflow Gen2, referenciando-os em filtros, caminhos de fonte e transformações; depois, uma atividade Dataflow dentro de um Data Pipeline pode sobrescrever esses parâmetros dinamicamente a cada execução, tornando o mesmo Dataflow reutilizável para diferentes contextos.",
+      "respostaCerta": "Parâmetros Power Query M via \"Manage Parameters\", referenciados em filtros/fontes/transformações e sobrescritos por um Data Pipeline via atividade Dataflow.",
+      "puloDoGato": "Quer um Dataflow genérico, reaproveitável com valores diferentes a cada execução? Defina parâmetros M e deixe o Pipeline sobrescrevê-los.",
       "cascasDeBanana": [
-        "Scheduled Refresh: time-based; Auto-Refresh é change-triggered.",
-        "Incremental Refresh: fetch delta; Auto-Refresh é detection + full refresh.",
-        "Real-time: contínuo; Auto-Refresh é discrete (on change)."
+        "Tabela de parâmetros no Lakehouse lida na primeira etapa: não é o mecanismo nativo de parametrização do Dataflow Gen2; parâmetros M são definidos no próprio editor.",
+        "Variáveis de workspace injetadas automaticamente: não existe esse recurso de injeção automática em Dataflow Gen2.",
+        "Função M Parameter.Value(\"nome\") lendo de um JSON em Files: essa função não existe na linguagem M dessa forma; parâmetros M vêm de Manage Parameters."
       ],
-      "dicaOuro": "Premium Auto-Refresh = change-triggered refresh (not time-based)."
+      "dicaOuro": "Dataflow Gen2 reutilizável = parâmetros M (Manage Parameters) + Pipeline sobrescrevendo valores a cada chamada."
     }
   },
   {
@@ -4687,16 +4687,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Implementar e gerenciar modelo semântico",
     "explanation": {
-      "intro": "No contexto do DP-600, implementar e gerenciar modelo semântico exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Web Activity em Data Pipeline: chama HTTP endpoint (REST API) e captura resposta. Define URL, method (GET/POST), headers, body. Resposta armazenado variável pipeline que atividades subsequentes usam. Útil API calls como part ETL (fetch config, trigger ação externa).",
-      "respostaCerta": "Retorna os valores da linha na posição 1 (primeira posição) da tabela de produtos ordenada por Receita Total decrescente, ou seja, o produto com maior receita no contexto de filtro atual. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Pipeline chamar REST API? Web Activity = HTTP request + capture response.",
+      "intro": "INDEX é a função DAX que retorna uma linha específica de uma sequência ordenada por posição, útil para encontrar o \"top 1\" ou qualquer posição arbitrária.",
+      "papoReto": "INDEX(1, ALLSELECTED(Produto[Nome]), ORDERBY([Receita Total], DESC)) ordena os produtos selecionados por Receita Total decrescente e retorna os valores da linha na posição 1 dessa sequência ordenada — ou seja, o produto com a maior receita.",
+      "respostaCerta": "Retorna os valores da linha na posição 1 da tabela ordenada por Receita Total decrescente — o produto com maior receita.",
+      "puloDoGato": "INDEX = \"me dê a linha na posição N depois de ordenar assim\" — diferente de RANKX, que calcula um número de posição em vez de retornar a linha.",
       "cascasDeBanana": [
-        "Copy Activity: move dados; Web Activity é API call.",
-        "Script Activity: executa code; Web Activity é HTTP request.",
-        "Webhook: callback mechanism; Web Activity é outbound."
+        "Retorna o índice numérico do produto, como número de linha: INDEX retorna os valores da linha naquela posição, não um número; quem calcula posição é RANKX.",
+        "Cria um índice de pesquisa para otimizar consultas: INDEX não é mecanismo de indexação/performance; é função de cálculo que retorna uma linha por posição.",
+        "Retorna a primeira linha na ordem física, ignorando a ordenação por receita: é o oposto — INDEX respeita explicitamente o ORDERBY informado, não a ordem física."
       ],
-      "dicaOuro": "Web Activity = HTTP request in Data Pipeline (API integration, webhooks, external triggers)."
+      "dicaOuro": "INDEX(N, tabela, ORDERBY(...)) = \"linha na posição N depois de ordenar\". Retorna valores, não um número."
     }
   },
   {
@@ -4705,23 +4705,23 @@ export const questions = [
     "options": [
       "Usando a atividade ForEach com uma lista de números de página hardcoded e chamando a API individualmente para cada página.",
       "Configurando um trigger de evento que dispara o pipeline novamente para cada página retornada pela API até receber resposta vazia.",
-      "Configurando o conector REST como fonte com as opções de paginação (ex: `AbsoluteUrl`, `QueryParameters` ou `ResponseBody` como regra de paginação) que automaticamente itera pelas páginas até não haver mais dados.",
+      "Configurando o conector REST como fonte com as opções de paginação (ex: `AbsoluteUrl`, `QueryParameters` ou `ResponseBody` como regra de paginação) que.",
       "Usando um Notebook PySpark com a biblioteca `requests` para consumir a API paginada e salvar no Lakehouse, pois o conector REST nativo não suporta paginação."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Spark Streaming em Notebook: processa data continuamente em mini-batches a partir source (Event Hub, Kafka, arquivo stream). Define DataFrame com `.readStream`, aplica transformações, `.writeStream` para sink (Lakehouse). Streaming para real-time (alertas, live dashboards). Diferente batch (discrete), streaming é contínuo.",
-      "respostaCerta": "Configurando o conector REST como fonte com as opções de paginação (ex: `AbsoluteUrl`, `QueryParameters` ou `ResponseBody` como regra de paginação) que automaticamente itera pelas páginas até não haver mais dados. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Dados chegar continuamente (Event Hub, Kafka)? Spark Streaming.",
+      "intro": "A atividade Copy Data tem suporte nativo a paginação de APIs REST, sem precisar de loops manuais.",
+      "papoReto": "Ao configurar o conector REST como fonte, você define regras de paginação (AbsoluteUrl, QueryParameters ou ResponseBody, dependendo de como a API expõe o \"próximo link\" ou token de página) — a atividade itera automaticamente pelas páginas, fazendo as chamadas sucessivas até a API parar de retornar dados.",
+      "respostaCerta": "Conector REST como fonte com regras de paginação (AbsoluteUrl/QueryParameters/ResponseBody) que itera automaticamente até não haver mais dados.",
+      "puloDoGato": "Paginação de REST é configuração do próprio conector, não um loop construído manualmente com ForEach.",
       "cascasDeBanana": [
-        "Batch processing: discrete runs; Streaming é contínuo.",
-        "Micro-batching: batches pequenas; Full streaming é event-by-event.",
-        "Event processing: event-at-a-time; Micro-batching é grupos pequenos."
+        "ForEach com lista de páginas hardcoded: só funciona se o número exato de páginas já é conhecido; não lida com paginação dinâmica como o conector nativo faz.",
+        "Trigger de evento disparando o pipeline de novo por página: gambiarra desnecessária; a paginação nativa resolve isso numa única execução de atividade.",
+        "Notebook PySpark com requests porque o conector não suporta paginação: premissa falsa — o conector REST nativo do Fabric suporta paginação configurável."
       ],
-      "dicaOuro": "Spark Streaming = micro-batch continuous processing (real-time, Event Hub/Kafka)."
+      "dicaOuro": "Paginação REST = configurar a regra de paginação no próprio conector Copy Data, não construir loop manual."
     }
   },
   {
@@ -4737,16 +4737,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Manter a solução analítica",
     "explanation": {
-      "intro": "No contexto do DP-600, manter a solução analítica exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "DAX ALLEXCEPT(table, col1, col2): remove todos filtros EXCEPT colunas especificadas. Útil medidas que precisam contexto coluna específica mas ignorar outros filtros. Ex: `[Total All Region] = CALCULATE([Total], ALLEXCEPT(DimDate, DimDate[Year]))` — mantém Year filter, remove Region/Product.",
-      "respostaCerta": "Os dados no OneLake são preservados; apenas os workloads computacionais (execução de pipelines, notebooks, refreshes) ficam indisponíveis; ao retomar a capacity, tudo volta ao estado anterior. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Medida ignorar alguns filtros mas manter outros? ALLEXCEPT(table, keep_cols).",
+      "intro": "Pausar uma Fabric Capacity é uma forma de economizar custos sem perder dados, pois compute e storage são desacoplados.",
+      "papoReto": "Quando a capacity é pausada, os dados no OneLake continuam intactos — só os workloads computacionais (execução de pipelines, notebooks, refreshes de modelo) ficam indisponíveis enquanto não há capacity ativa para processá-los. Ao retomar a capacity, tudo volta a funcionar normalmente, sem necessidade de restauração.",
+      "respostaCerta": "Dados no OneLake são preservados; só os workloads computacionais ficam indisponíveis; retomar a capacity restaura tudo ao estado anterior.",
+      "puloDoGato": "Pausar capacity = \"desligar o processamento\", não \"apagar os dados\". Storage (OneLake) e compute (capacity) são desacoplados.",
       "cascasDeBanana": [
-        "ALL: remove todos; ALLEXCEPT é seletivo.",
-        "CALCULATE: aplica filtros; ALLEXCEPT remove (inverso).",
-        "VALUES: retorna distinct; ALLEXCEPT é contexto function."
+        "Dados arquivados em Blob Storage frio com restauração manual: não existe esse mecanismo — os dados permanecem no OneLake sem precisar de restauração.",
+        "Workspaces em somente leitura permitindo visualizar relatórios: com a capacity pausada, workloads computacionais ficam indisponíveis, então itens dependentes de processamento também não funcionam.",
+        "Exclusão de dados após 7 dias pausada: não existe essa política de exclusão automática por pausa de capacity."
       ],
-      "dicaOuro": "ALLEXCEPT() = remove all filters except specified columns (selective context)."
+      "dicaOuro": "Capacity pausada = compute parado, storage (OneLake) intacto. Retomar = tudo volta, sem restauração."
     }
   },
   {
@@ -4762,16 +4762,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Implicit Measure: Power BI cria automaticamente ao arrastar coluna numérica → visual (assume SUM agregação default). Você pode editar (rightclick → Summarization) para AVG, COUNT, etc. Implicit são convenientes para exploração rápida, não reutilizáveis (não field list) — use Explicit Measures para reuse.",
-      "respostaCerta": "Para datasets pequenos (que cabem na memória do driver), prototipagem rápida, uso de bibliotecas Python específicas não disponíveis em PySpark, ou quando a simplicidade da API pandas é preferível para transformações simples. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Coluna dragged vira SUM automaticamente? Implicit. Create Explicit se precisa reutilizar.",
+      "intro": "A escolha entre pandas e PySpark num notebook do Fabric depende do tamanho dos dados e da finalidade da transformação, não é uma questão absoluta de \"qual é melhor\".",
+      "papoReto": "pandas é mais apropriado para datasets pequenos que cabem confortavelmente na memória do driver, para prototipagem rápida, quando você precisa de uma biblioteca Python sem equivalente em PySpark, ou quando a simplicidade da API pandas resolve melhor uma transformação simples sem o overhead de distribuir o processamento.",
+      "respostaCerta": "Datasets pequenos (cabem na memória do driver), prototipagem rápida, bibliotecas Python específicas, ou simplicidade para transformações simples.",
+      "puloDoGato": "Pergunta-chave: \"isso cabe confortavelmente na memória de uma única máquina?\" Se sim, pandas é opção válida; se não, PySpark é necessário.",
       "cascasDeBanana": [
-        "Explicit Measure: criada manual, reutilizável.",
-        "Calculated Column: pré-calculada per-row; Implicit é agregação durante query.",
-        "Default Summarization: comportamento ao drag column; Implicit é resultado."
+        "Tabelas com mais de 1 milhão de linhas, pandas com otimizações superiores: o oposto é verdade — PySpark escala para grandes volumes via processamento distribuído; pandas roda numa única máquina.",
+        "Sempre que vier de Excel/CSV, porque PySpark não suporta esses formatos: falso — PySpark lê CSV nativamente e também lê Excel com bibliotecas adequadas.",
+        "Dados em streaming, porque pandas integra melhor com Eventstream: pandas não tem suporte nativo a streaming; é o PySpark Structured Streaming que trata isso no Fabric."
       ],
-      "dicaOuro": "Implicit Measure = auto-created aggregation (SUM default, not reusable). Use Explicit for reuse."
+      "dicaOuro": "pandas = cabe na memória de uma máquina. PySpark = precisa distribuir entre várias."
     }
   },
   {
@@ -4781,22 +4781,22 @@ export const questions = [
       "Os parâmetros `RefreshFrom` e `RefreshTo` do tipo Date, configurados nas propriedades avançadas do modelo semântico no Fabric Service.",
       "Os parâmetros `IncrementalStart` e `IncrementalEnd` do tipo Text, que recebem datas em formato ISO 8601 para filtragem.",
       "Os parâmetros `PartitionKey` e `PartitionWindow`, que definem a coluna de particionamento e o intervalo em horas ou dias.",
-      "Os parâmetros `RangeStart` e `RangeEnd` do tipo Date/Time, que definem a janela de dados incremental e são reconhecidos automaticamente pelo motor de refresh para criar partições."
+      "Os parâmetros `RangeStart` e `RangeEnd` do tipo Date/Time, que definem a janela de dados incremental e são reconhecidos automaticamente pelo motor de refresh."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
     "domain": "Implementar e gerenciar modelo semântico",
     "explanation": {
-      "intro": "No contexto do DP-600, implementar e gerenciar modelo semântico exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Polybase em Warehouse: query dados em Lakehouse (Delta/Parquet) via T-SQL. Cria External Data Source (OneLake) + External Table (schema mapping). Queries combinam Warehouse (relacional) com Lakehouse (semi-structured) numa statement — híbrido sem data copy.",
-      "respostaCerta": "Os parâmetros `RangeStart` e `RangeEnd` do tipo Date/Time, que definem a janela de dados incremental e são reconhecidos automaticamente pelo motor de refresh para criar partições. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Warehouse query Lakehouse data? Polybase (External Data Source + External Table).",
+      "intro": "Incremental Refresh exige dois parâmetros específicos no Power Query para que o motor do Fabric saiba qual é a janela de dados a atualizar.",
+      "papoReto": "Você cria os parâmetros RangeStart e RangeEnd, ambos do tipo Date/Time, no Power Query. O motor de refresh reconhece esses nomes especificamente e os usa para gerar partições automaticamente, conforme a política de incremental refresh configurada (ex.: manter últimos 5 anos, atualizar últimos 10 dias).",
+      "respostaCerta": "RangeStart e RangeEnd do tipo Date/Time, que definem a janela de dados incremental e são reconhecidos automaticamente pelo motor de refresh.",
+      "puloDoGato": "Os nomes RangeStart/RangeEnd não são sugestão de boa prática — são obrigatórios e literais; o motor procura exatamente esses nomes.",
       "cascasDeBanana": [
-        "Linked Service: conexão external system; Polybase é query mechanism.",
-        "Shortcut: referência Fabric-to-Fabric; Polybase é Warehouse → Lakehouse específico.",
-        "OPENROWSET: ad-hoc query; Polybase é structured external table."
+        "RefreshFrom/RefreshTo nas propriedades avançadas do modelo: não são os parâmetros reais usados; o mecanismo exige RangeStart/RangeEnd no próprio Power Query.",
+        "IncrementalStart/IncrementalEnd do tipo Text com ISO 8601: nome e tipo errados — o motor exige Date/Time com os nomes exatos RangeStart/RangeEnd.",
+        "PartitionKey/PartitionWindow: esses nomes não existem no mecanismo; partições são geradas automaticamente a partir de RangeStart/RangeEnd."
       ],
-      "dicaOuro": "Polybase = query external data from Warehouse using T-SQL (Lakehouse integration)."
+      "dicaOuro": "Incremental Refresh = sempre RangeStart e RangeEnd (Date/Time), nomes exatos exigidos pelo motor."
     }
   },
   {
@@ -4812,16 +4812,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Measure vs Calculated Column: Measure calcula durante query (dinâmico), Calculated Column durante refresh (estático). Use Measure para agregações (SUM, AVG) dependentes filtro. Use Calculated Column para valores derivados per-row não-dinamicamente filtrados.",
-      "respostaCerta": "`extend`, como em `Tabela | extend nova_coluna = coluna1 + coluna2`, que acrescenta a coluna calculada mantendo todas as outras. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Agregação varia por filtro? Measure. Valor derivado estático per-row? Calculated Column.",
+      "intro": "Adicionar uma coluna calculada sem descartar as existentes em KQL é o papel específico de um operador, diferente de project.",
+      "papoReto": "extend, usado como Tabela | extend nova_coluna = coluna1 + coluna2, calcula e acrescenta a nova coluna ao resultado, mantendo todas as colunas originais da tabela — ao contrário de project, que reduz o conjunto de colunas ao que for explicitamente listado.",
+      "respostaCerta": "extend, como em Tabela | extend nova_coluna = coluna1 + coluna2, que acrescenta a coluna calculada mantendo todas as outras.",
+      "puloDoGato": "extend = \"adiciona, mantém o resto\". project = \"escolhe, descarta o resto\". São operações opostas em intenção.",
       "cascasDeBanana": [
-        "Ambos DAX, contexto diferente (query vs refresh).",
-        "Performance: Calculated Columns consomem memória; Measures são query-time.",
-        "Reusability: Measures reutilizáveis múltiplos visuals; Calculated Columns por-tabela."
+        "project-keep: ainda é da família \"project\" (seleção de colunas), não o operador dedicado a adicionar coluna calculada preservando todas as demais.",
+        "compute: não existe esse operador em KQL.",
+        "add-column: não existe esse operador em KQL; o nome correto é extend."
       ],
-      "dicaOuro": "Measure = query-time dynamic aggregation. Calculated Column = refresh-time per-row static."
+      "dicaOuro": "Quer adicionar coluna sem perder as outras? extend. Quer escolher/reduzir colunas? project."
     }
   },
   {
@@ -4829,7 +4829,7 @@ export const questions = [
     "text": "Como você implementa Row-Level Security nativamente em um Warehouse do Microsoft Fabric via T-SQL?",
     "options": [
       "Configurando RLS no modelo semântico conectado ao Warehouse, que automaticamente propaga os filtros para o SQL Analytics Endpoint.",
-      "Criando uma função de predicado inline (TVF) que filtra linhas com base no usuário, uma security policy com `CREATE SECURITY POLICY` que associa o predicado à tabela, e ativando com `WITH (STATE = ON)`.",
+      "Criando uma função de predicado inline (TVF) que filtra linhas com base no usuário, uma security policy com `CREATE SECURITY POLICY` que associa o predicado.",
       "Criando roles T-SQL com `CREATE ROLE` e associando filtros de linha via `GRANT SELECT WHERE` com cláusula de filtragem por usuário.",
       "Usando a propriedade `ROW FILTER` na instrução `CREATE TABLE` para definir a expressão de filtragem por usuário."
     ],
@@ -4837,16 +4837,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Manter a solução analítica",
     "explanation": {
-      "intro": "No contexto do DP-600, manter a solução analítica exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "`mssparkutils` em Notebooks: Fabric-specific utilities. `mssparkutils.fs` para file operations, `mssparkutils.notebook` para notebook control (run, exit). Ex: `mssparkutils.notebook.run('AnotherNotebook', 60)` executa outro notebook com timeout 60s — orchestration sem Data Pipeline.",
-      "respostaCerta": "Criando uma função de predicado inline (TVF) que filtra linhas com base no usuário, uma security policy com `CREATE SECURITY POLICY` que associa o predicado à tabela, e ativando com `WITH (STATE = ON)`. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Notebook chamar outro? mssparkutils.notebook.run(). Fabric files? mssparkutils.fs.",
+      "intro": "O Warehouse do Fabric implementa Row-Level Security usando o mesmo mecanismo nativo de Security Policy do SQL Server/Azure SQL, não uma sintaxe própria do Fabric.",
+      "papoReto": "Você cria uma função de predicado inline (table-valued function) que recebe um valor e retorna se a linha deve ser visível para o usuário atual, associa essa função a uma tabela via CREATE SECURITY POLICY, e ativa a política com WITH (STATE = ON) — o padrão de RLS nativo via T-SQL, herdado do SQL Server.",
+      "respostaCerta": "Função de predicado inline (TVF) + CREATE SECURITY POLICY associando o predicado à tabela + WITH (STATE = ON) para ativar.",
+      "puloDoGato": "RLS nativo em T-SQL sempre segue o trio: função de predicado + CREATE SECURITY POLICY + STATE = ON, herdado de SQL Server/Azure SQL.",
       "cascasDeBanana": [
-        "pyspark: data processing; mssparkutils é Fabric integration.",
-        "os module: filesystem Python nativo; mssparkutils.fs é Fabric-aware (OneLake).",
-        "Subprocess: executa programas; mssparkutils.notebook é Fabric-specific."
+        "RLS configurado no modelo semântico propagando para o SQL Analytics Endpoint: RLS do modelo (DAX) é mecanismo separado, aplicado no Power BI/modelo, e não propaga automaticamente para T-SQL.",
+        "CREATE ROLE + GRANT SELECT WHERE: essa sintaxe de GRANT com cláusula WHERE não existe em T-SQL; controle por linha exige Security Policy, não GRANT.",
+        "Propriedade ROW FILTER em CREATE TABLE: não existe essa propriedade na sintaxe de CREATE TABLE do T-SQL/Warehouse."
       ],
-      "dicaOuro": "mssparkutils = Fabric integration library (fs, notebook, credentials)."
+      "dicaOuro": "RLS nativo em Warehouse T-SQL = predicado inline + CREATE SECURITY POLICY + STATE = ON."
     }
   },
   {
@@ -4862,16 +4862,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "DAX NONBLANK(table): retorna table removendo rows onde coluna é BLANK. Útil SUMMARIZE ou funções que podem retornar blanks. Ex: `SUMMARIZE(...) EXCEPT (NONBLANK(...))` — compara resumos, remove blank rows. Performance impact minimal — filtragem simples.",
-      "respostaCerta": "`df.write.format(\"delta\").partitionBy(\"ano\", \"mes\").mode(\"overwrite\").saveAsTable(\"nome_tabela\")` ou `.save(\"Tables/nome_tabela\")` — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Tabela com blanks? NONBLANK() para remover blank rows.",
+      "intro": "Particionar uma tabela Delta por colunas específicas é uma opção nativa do escritor do Spark, usada para acelerar leituras futuras filtradas por essas colunas.",
+      "papoReto": "df.write.format(\"delta\").partitionBy(\"ano\", \"mes\").mode(\"overwrite\").saveAsTable(\"nome_tabela\") (ou .save(\"Tables/nome_tabela\")) instrui o Spark a gravar os dados em subpastas físicas separadas por combinação de ano/mês — consultas futuras filtradas por essas colunas leem só as partições relevantes, sem escanear a tabela inteira.",
+      "respostaCerta": "df.write.format(\"delta\").partitionBy(\"ano\", \"mes\").mode(\"overwrite\").saveAsTable(...) ou .save(\"Tables/nome_tabela\").",
+      "puloDoGato": "Em PySpark, particionamento físico é sempre via .partitionBy(...) encadeado ao write, nunca um parâmetro dentro de option() com nome livre.",
       "cascasDeBanana": [
-        "BLANK vs NULL: ambos 'vazio'; NONBLANK é DAX function.",
-        "COALESCE: substitui BLANK; NONBLANK apenas remove.",
-        "Filter context: NONBLANK é tabela function, não contexto."
+        "INSERT INTO ... PARTITION BY (...) via spark.sql: essa sintaxe dentro de um INSERT não é a forma padrão de particionar uma escrita Delta no PySpark.",
+        "df.write.delta(..., partitions=[...]): não existe esse método .delta() encadeado com parâmetro partitions na API do PySpark.",
+        "option(\"partition.columns\", \"ano,mes\"): não existe essa opção nomeada; particionamento é sempre via .partitionBy(coluna1, coluna2)."
       ],
-      "dicaOuro": "NONBLANK() = filter out blank rows (simple filtering)."
+      "dicaOuro": "Particionar escrita Delta = sempre .partitionBy(\"col1\", \"col2\") encadeado ao .write, nunca uma option avulsa."
     }
   },
   {
@@ -4887,16 +4887,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Implementar e gerenciar modelo semântico",
     "explanation": {
-      "intro": "No contexto do DP-600, implementar e gerenciar modelo semântico exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Data Pipeline Triggers: Schedule (time-based), Tumbling Window (recorrente intervals), Event-based (arquivo, dataset refresh). Configure ao criar/editar pipeline. Internamente, Fabric scheduler ou event handler dispara automaticamente.",
-      "respostaCerta": "Define uma janela que começa na primeira linha absoluta (posição 1 ABS) e termina na linha atual (posição 0 REL), criando uma janela acumulativa do início ao mês atual — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Pipeline daily 2AM? Schedule Trigger. On arquivo? Event-based.",
+      "intro": "WINDOW é a função DAX mais flexível para definir uma janela de linhas dentro de uma sequência ordenada, podendo combinar referências absolutas e relativas.",
+      "papoReto": "WINDOW(1, ABS, 0, REL, ...) define uma janela que começa na primeira linha absoluta da sequência (posição 1, contada do início, modo ABS) e termina na posição atual (0 linhas de distância da linha avaliada, modo REL) — isso cria, para cada mês, uma janela acumulada do primeiro mês selecionado até o mês atual.",
+      "respostaCerta": "Define uma janela que começa na primeira linha absoluta (1 ABS) e termina na linha atual (0 REL), criando uma janela acumulativa do início ao mês atual.",
+      "puloDoGato": "ABS = posição contada a partir do início/fim da sequência. REL = posição relativa à linha avaliada. Combinar os dois cria janelas acumulativas.",
       "cascasDeBanana": [
-        "Manual trigger: você clica Run; Trigger é automático.",
-        "Dependency: pipeline espera outro; Trigger é início automático.",
-        "Timeout: limite duração; Trigger é início mecanismo."
+        "Janela de 1 mês relativo ao mês atual, igual ao slicer: não é isso que a combinação faz; o início é fixo na primeira posição (ABS), não relativo ao mês atual.",
+        "Janela de 1 linha antes e 0 depois, só o mês anterior: descreve mais um OFFSET ou WINDOW com REL/REL, não a combinação ABS/REL que ancora o início na primeira linha.",
+        "Partição de 1 elemento absoluto para média móvel de janela fixa: WINDOW aqui não cria janela de tamanho fixo — ela cresce, pois o fim é relativo (REL) à posição avaliada."
       ],
-      "dicaOuro": "Triggers = Schedule, Tumbling Window, Event-based automatic execution."
+      "dicaOuro": "WINDOW(1, ABS, 0, REL, ...) = começa fixo no início (ABS), termina seguindo a linha atual (REL) → janela acumulativa."
     }
   },
   {
@@ -4912,16 +4912,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Drill-through em Power BI Report: click valor → direcionado página detalhada com filtro. Configure na página destino — define quais columns/valores trigger drill. Internamente, valores passam URL parâmetros, página filtra baseado neles.",
-      "respostaCerta": "Filtragem de eventos, projeção de campos (selecionar colunas), agregações temporais por janela (tumbling/hopping/session windows), união de streams e enriquecimento com dados de referência via lookup. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Click valor → página detalhada filtrada? Drill-through configuration.",
+      "intro": "O Eventstream permite aplicar várias transformações em tempo real antes mesmo dos dados chegarem ao destino — um conjunto mais amplo que apenas filtro simples.",
+      "papoReto": "Dentro do Eventstream você aplica filtragem de eventos, projeção de campos (selecionar colunas), agregações temporais usando janelas de tempo (tumbling, hopping, session windows), une múltiplos streams e enriquece eventos com dados de referência via lookup — tudo antes de chegar ao Eventhouse ou Lakehouse.",
+      "respostaCerta": "Filtragem, projeção de campos, agregações por janela temporal (tumbling/hopping/session), união de streams e enriquecimento via lookup.",
+      "puloDoGato": "Eventstream não é \"só filtro\" — já processa agregações de janela de tempo e enriquecimento antes do destino, reduzindo trabalho posterior.",
       "cascasDeBanana": [
-        "Bookmark: captura visual state; Drill-through é navegação filtrada.",
-        "Drill-down: navega hierarquia (Year → Month → Day); Drill-through é página diferente.",
-        "Slicers: filtram visual atual; Drill-through é navegação."
+        "Apenas filtragem simples e projeção, agregações só no destino: subestima as capacidades do Eventstream, que já suporta agregações temporais nativamente.",
+        "Transformações completas equivalentes ao Dataflow Gen2 (joins complexos, pivoting): superestima — Eventstream foca em transformações de streaming, não cobre todo o escopo de um Dataflow Gen2 batch.",
+        "Apenas conversão de formato de serialização: subestima bastante; conversão de formato não é nem o foco principal das transformações de Eventstream."
       ],
-      "dicaOuro": "Drill-through = click navigation with filtered context transfer to detail page."
+      "dicaOuro": "Eventstream faz mais que filtro: agrega por janela de tempo, enriquece via lookup e une streams antes do destino."
     }
   },
   {
@@ -4937,16 +4937,16 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Manter a solução analítica",
     "explanation": {
-      "intro": "No contexto do DP-600, manter a solução analítica exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Composite Model: tabelas Import + DirectQuery. Medida combina dados? Fabric executa separadamente (Import memória, DirectQuery source), combina. Pode resultar inconsistência se timestamps/aggregations diferem — planejamento cuidado. Use quando dados enormes precisam some pré-aggregates.",
-      "respostaCerta": "É uma capacity gratuita de 60 dias que oferece acesso a todos os workloads Fabric com recursos limitados (equivalente a F64), sem SLA de produção, e expira automaticamente ao final do período sem renovação automática. — implementa corretamente o requisito técnico para este cenário de iniciante.",
-      "puloDoGato": "Modelo grande + pré-aggregates? Composite Model (Import + DirectQuery).",
+      "intro": "A Trial Capacity é a forma da Microsoft deixar você testar o Fabric completo antes de decidir por uma capacity paga.",
+      "papoReto": "Ela é gratuita por 60 dias, dá acesso a todos os workloads do Fabric com recursos equivalentes a uma capacity F64, mas sem SLA de produção — não recomendada para cargas críticas. Ao final dos 60 dias, expira automaticamente, sem renovação automática; é preciso migrar para uma capacity paga para continuar.",
+      "respostaCerta": "Capacity gratuita de 60 dias, recursos equivalentes a F64, sem SLA de produção, expira automaticamente sem renovação.",
+      "puloDoGato": "Trial Capacity tem prazo fixo de 60 dias e sem SLA — não é opção válida para produção, mesmo que os recursos pareçam suficientes.",
       "cascasDeBanana": [
-        "Mixed Mode: Import + Direct Lake; Composite é Import + DirectQuery.",
-        "Direct Lake: Fabric nativo, sem DirectQuery; Composite exige DirectQuery.",
-        "Chained calculations: medida chama outra; Composite é mode mixing."
+        "Permanentemente gratuita para até 10 usuários: não existe essa versão permanente; a Trial é temporária e por tempo limitado.",
+        "Exclusiva para parceiros certificados, sem restrição de tempo: errado — a Trial é aberta a qualquer tenant elegível e tem prazo definido de 60 dias.",
+        "Assinatura de baixo custo equivalente ao F2, renovável indefinidamente: a Trial é gratuita, com recursos maiores (F64), e não é renovável indefinidamente."
       ],
-      "dicaOuro": "Composite Model = Import + DirectQuery in one model (aggregation consistency critical)."
+      "dicaOuro": "Trial Capacity = 60 dias, grátis, recursos de F64, sem SLA, expira sem renovação automática."
     }
   },
   {
@@ -4962,16 +4962,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "CTE (Common Table Expression) em T-SQL: `WITH nome AS (SELECT ...)` define subquery reutilizável. CTEs melhoram readability (vs nested) e permitam recursão. Ex: `WITH OrderedSales AS (SELECT ...) SELECT * FROM OrderedSales WHERE ...`. Internamente, CTE compilado once, depois referenciado.",
-      "respostaCerta": "Configurando as propriedades Spark no Environment do workspace ou diretamente no notebook com `%%configure -f {\"conf\": {\"spark.executor.memory\": \"8g\", \"spark.executor.cores\": \"4\"}}` antes de iniciar a sessão. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Query com múltiplas subqueries? CTE (WITH) para clarity e reuse.",
+      "intro": "Ajustar a memória do executor Spark é uma configuração de nível de sessão, feita antes da execução, não algo alterável dinamicamente em runtime dentro do código.",
+      "papoReto": "A forma correta é configurar as propriedades Spark (como spark.executor.memory) no item Environment do workspace, ou usar o comando mágico %%configure no início do notebook, passando um JSON com a configuração desejada — isso reinicia a sessão Spark com os novos parâmetros antes de qualquer processamento.",
+      "respostaCerta": "Configurar propriedades Spark no Environment do workspace, ou via %%configure no notebook, definindo spark.executor.memory.",
+      "puloDoGato": "Memória de executor Spark não se ajusta \"no meio da execução\" com uma chamada de runtime — é configuração de sessão, definida antes do processamento começar.",
       "cascasDeBanana": [
-        "Subquery: inline sem nome; CTE é nomeado reutilizável.",
-        "View: objeto permanente; CTE é temporary (query-scope).",
-        "Recursive: CTE pode auto-referência (hierarchies); subquery não."
+        "repartition(1000) antes das transformações: redistribui dados entre mais partições, o que pode evitar partições muito grandes, mas não aumenta a memória disponível por executor.",
+        "setLocalProperty(\"executor.memory\", \"8g\") em runtime: esse método controla metadados de job (como descrição), não configuração de recursos do cluster.",
+        "Aumentar a capacity Fabric no portal Azure distribuindo mais memória automaticamente: dá mais CUs no total, mas não ajusta automaticamente a memória por executor da sessão Spark."
       ],
-      "dicaOuro": "CTE (WITH) = named temporary query (readability, recursion, better than nested)."
+      "dicaOuro": "Memória por executor Spark = configuração de sessão (Environment ou %%configure), nunca um ajuste em runtime."
     }
   },
   {
@@ -4987,16 +4987,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Implementar e gerenciar modelo semântico",
     "explanation": {
-      "intro": "No contexto do DP-600, implementar e gerenciar modelo semântico exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Shortcut em Lakehouse: referência cruzada workspaces. Vai Files/Tables, 'New Shortcut', seleciona workspace/Lakehouse destino, aponta para /Files ou /Tables. Query shortcut como tabela local — Fabric resolve internamente. Zero armazenamento cost (referência, não cópia).",
-      "respostaCerta": "O motor executa as partes Import em memória e as partes Direct Lake via acesso ao OneLake separadamente, combinando os resultados; se necessário, o Direct Lake pode realizar fallback para DirectQuery para completar o cálculo. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Workspace A precisa dados Workspace B? Create Shortcut A → B.",
+      "intro": "Composite Models que misturam Direct Lake e Import permitem ao Fabric combinar dados de modos de armazenamento diferentes numa única medida.",
+      "papoReto": "Quando uma medida agrega dados de tabelas Import e Direct Lake, o motor executa cada parte no seu próprio modo — a parte Import é processada em memória, a parte Direct Lake é acessada diretamente no OneLake — e combina os resultados parciais. Se uma consulta Direct Lake não puder ser atendida diretamente, ele pode fazer fallback para DirectQuery automaticamente.",
+      "respostaCerta": "O motor executa as partes Import em memória e as partes Direct Lake via OneLake separadamente, combinando os resultados (com possível fallback para DirectQuery).",
+      "puloDoGato": "Composite Model não força tudo para um único modo — cada tabela processa no seu modo nativo, e o motor combina os resultados parciais ao final.",
       "cascasDeBanana": [
-        "Hard copy: cópia física; Shortcut é referência.",
-        "Cross-workspace copy: export/import; Shortcut é native reference.",
-        "Replication: sync contínua; Shortcut é static pointer."
+        "Usa exclusivamente Direct Lake, ignorando Import: errado — ambos os modos são usados, cada um para suas tabelas.",
+        "Erro de validação porque os dois modos não podem coexistir: falso — Composite Models foram desenhados justamente para essa coexistência.",
+        "Converte automaticamente tudo para Import antes de processar: não existe essa conversão automática; cada tabela mantém seu modo configurado."
       ],
-      "dicaOuro": "Shortcut = cross-workspace reference without data copy (zero storage overhead)."
+      "dicaOuro": "Composite Model = cada tabela no seu modo (Import em memória, Direct Lake via OneLake), motor combina os resultados."
     }
   },
   {
@@ -5012,23 +5012,23 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "`GENERATE()` executa INNER JOIN lógico: mantém apenas linhas externas que têm correspondência no resultado interno. Se resultado interno é vazio, a linha externa é descartada. `GENERATEALL()` executa LEFT OUTER JOIN: mantém todas linhas externas mesmo se resultado interno é vazio (preenchendo com BLANK). Escolha depende se você quer filtar (GENERATE) ou manter tudo (GENERATEALL).",
-      "respostaCerta": "`GENERATE()` executa um INNER JOIN entre a tabela externa e o resultado da expressão interna, excluindo linhas onde o resultado interno é vazio; `GENERATEALL()` executa um LEFT OUTER JOIN, mantendo todas as linhas externas mesmo quando o resultado interno está vazio. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "GENERATE = INNER JOIN (filtra linhas vazias). GENERATEALL = LEFT JOIN (mantém tudo). Escolha por comportamento desejado.",
+      "intro": "GENERATE e GENERATEALL combinam uma tabela externa com o resultado de uma expressão de tabela avaliada por linha, mas diferem em como tratam resultados vazios.",
+      "papoReto": "GENERATE() funciona como um INNER JOIN lógico — para cada linha da tabela externa, avalia a expressão interna e só mantém a linha externa se o resultado interno não for vazio. GENERATEALL() funciona como um LEFT OUTER JOIN — mantém a linha externa mesmo quando o resultado interno é vazio, preenchendo com BLANK.",
+      "respostaCerta": "GENERATE() = INNER JOIN (descarta linhas externas sem correspondência interna); GENERATEALL() = LEFT OUTER JOIN (mantém todas).",
+      "puloDoGato": "GENERATE filtra quando o lado interno está vazio; GENERATEALL preserva tudo, preenchendo com BLANK quando necessário.",
       "cascasDeBanana": [
-        "Números vs séries: GENERATE não cria sequências numéricas — cria tabelas de produto cartesiano.",
-        "Paralelo vs sequencial: nenhum dos dois é paralelo — ambos processam sequencialmente linha-a-linha.",
-        "Alias vs função real: GENERATEALL não é alias — são two distinct funções com comportamento diferente."
+        "Cria sequências numéricas vs combinações entre tabelas: nenhuma das duas gera sequência numérica; ambas combinam linha externa com expressão de tabela interna.",
+        "Processa sequencial vs paralelo usando núcleos: não tem relação com paralelismo; a diferença real é manter ou descartar linhas sem correspondência.",
+        "São idênticas, GENERATEALL é alias legado: são funções com comportamentos distintos (INNER vs LEFT JOIN), não sinônimos."
       ],
-      "dicaOuro": "GENERATE vs GENERATEALL = diferença é NULL/BLANK handling. INNER vs LEFT JOIN analogy."
+      "dicaOuro": "GENERATE = INNER JOIN (filtra vazio). GENERATEALL = LEFT JOIN (mantém tudo, com BLANK)."
     }
   },
   {
     "id": "dp600_q202",
     "text": "Como você usa variáveis em um Data Pipeline do Fabric para armazenar e reutilizar valores intermediários durante a execução?",
     "options": [
-      "Definindo variáveis na seção \"Variables\" do pipeline, usando a atividade \"Set Variable\" para atribuir valores (incluindo resultados de atividades anteriores via expressões dinâmicas `@activity('nome').output`) e referenciando com `@variables('nome')`.",
+      "Definindo variáveis na seção \"Variables\" do pipeline, usando a atividade \"Set Variable\" para atribuir valores (incluindo resultados de atividades anteriores.",
       "Usando a atividade \"Cache\" do pipeline, que armazena resultados intermediários em memória acessíveis por atividades subsequentes.",
       "Criando uma tabela temporária no Warehouse com `CREATE TABLE #variaveis` e usando atividades Script para ler e gravar valores.",
       "Usando parâmetros de pipeline com `@pipeline().parameters.nome`, que permitem leitura e escrita durante a execução."
@@ -5037,16 +5037,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Variáveis em Data Pipeline são definidas na seção 'Variables' e atribuídas via 'Set Variable' activity. Você passa valores (constantes ou outputs de atividades anteriores via `@activity('name').output`) e as referencia com `@variables('varName')` em steps subsequentes. Tipicamente usado para passar valores entre atividades (ex: count de linhas para log, file path dinâmico).",
-      "respostaCerta": "Definindo variáveis na seção \"Variables\" do pipeline, usando a atividade \"Set Variable\" para atribuir valores (incluindo resultados de atividades anteriores via expressões dinâmicas `@activity('nome').output`) e referenciando com `@variables('nome')`. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Pipeline precisa passar valores entre atividades? Variables (Set Variable activity + @variables()).",
+      "intro": "Variáveis num Data Pipeline existem para guardar valores intermediários durante a execução e reutilizá-los em atividades posteriores.",
+      "papoReto": "Você declara variáveis na seção \"Variables\" do pipeline; a atividade \"Set Variable\" atribui um valor a elas — podendo ser fixo ou o resultado de uma atividade anterior via expressão dinâmica como @activity('nome').output; depois, qualquer atividade subsequente referencia o valor com @variables('nome').",
+      "respostaCerta": "Variáveis na seção \"Variables\" + atividade \"Set Variable\" (incluindo @activity().output) + referência via @variables('nome').",
+      "puloDoGato": "Parâmetros de pipeline são definidos antes da execução (input fixo); variáveis mudam durante a execução via Set Variable.",
       "cascasDeBanana": [
-        "Pipeline Parameters: são inputs do pipeline, não variables. Parameters são configuração, variables são estado runtime.",
-        "Cache activity: armazena dataset em memória, não escalares — não é mecanismo de variable.",
-        "Stored procedures com temp tables: são SQL-level, não pipeline-level."
+        "Atividade \"Cache\" armazenando resultados em memória: não existe essa atividade no Fabric Data Pipeline para esse propósito.",
+        "Tabela temporária no Warehouse com Script: funcionaria como workaround SQL, mas não é o mecanismo nativo de variável do pipeline.",
+        "Parâmetros de pipeline com leitura e escrita durante a execução: parâmetros são somente leitura durante a execução; quem é atribuído durante a execução é a variável, via Set Variable."
       ],
-      "dicaOuro": "Pipeline Variables = runtime state via Set Variable activity. Parameters = inputs. Variables = intermediates."
+      "dicaOuro": "Variables = estado mutável durante a execução (Set Variable). Parameters = entrada fixa definida antes de começar."
     }
   },
   {
@@ -5062,16 +5062,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Manter a solução analítica",
     "explanation": {
-      "intro": "No contexto do DP-600, manter a solução analítica exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Object-Level Security (OLS) no Fabric bloqueia objetos inteiros (tabelas ou colunas) para usuários sem permissão — eles não veem no field list. RLS filtra linhas. Você configura OLS na modelagem (Admin Portal), define roles + object permissions. Quando usuário sem permissão acessa relatório, objeto simplesmente não aparece (diferente de RLS que mostra objeto mas filtra dados).",
-      "respostaCerta": "Usando o Tabular Editor ou XMLA, definindo a propriedade `MetadataPermission` da tabela como `None` para a role específica, tornando a tabela completamente invisível para usuários dessa role. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Usuário não vê tabela inteira? OLS bloqueia objeto. Vê tabela mas not todas linhas? RLS.",
+      "intro": "Bloquear uma tabela inteira (não só linhas) exige um mecanismo diferente do RLS — é o Object-Level Security.",
+      "papoReto": "Usando o Tabular Editor ou conectando via XMLA, você define a propriedade MetadataPermission da tabela como None para uma role específica. Isso torna a tabela completamente invisível para usuários daquela role — eles nem veem o objeto no field list, diferente do RLS, que mostra a tabela mas filtra as linhas.",
+      "respostaCerta": "Tabular Editor/XMLA, definindo MetadataPermission da tabela como None para a role, tornando-a invisível para essa role.",
+      "puloDoGato": "Usuário não pode ver a tabela de forma alguma? OLS (MetadataPermission). Usuário vê a tabela mas com linhas filtradas? RLS.",
       "cascasDeBanana": [
-        "Row-Level Security: filtra linhas via DAX; OLS bloqueia objeto todo.",
-        "Column-level security: é tipo de OLS para colunas específicas.",
-        "Sensitivity Labels: metadados informativos; OLS é enforced hiding."
+        "Remover a tabela do modelo + view SQL excluindo dados: solução manual e frágil, não é o mecanismo nativo de OLS do modelo semântico.",
+        "Role RLS com filtro FALSE(): oculta todas as LINHAS (a tabela continua visível no field list, só sem dados) — não é a mesma coisa que ocultar o objeto inteiro.",
+        "DENY SELECT via T-SQL propagando ao modelo: não existe essa propagação automática do SQL Analytics Endpoint para o modelo semântico."
       ],
-      "dicaOuro": "OLS = object-level blocking (users don't see it). RLS = row-level filtering (users see object, filtered data)."
+      "dicaOuro": "OLS = tabela some do field list (MetadataPermission = None). RLS = tabela aparece, linhas filtradas."
     }
   },
   {
@@ -5087,16 +5087,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Quando você atualiza dados em Lakehouse via Spark (INSERT/UPDATE), Delta Lake valida schema — nova coluna precisa corresponder ao tipo existente ou schema evolution deve estar habilitada. Se esquema não corresponde, operação falha. ABORT ocorre quando a validação falha. Para permitir evolução, use `.option('mergeSchema', 'true')` no writer.",
-      "respostaCerta": "`null_count = df.filter(col(\"coluna_obrigatoria\").isNull()).count(); assert null_count == 0, f\"Erro: {null_count} valores nulos encontrados\"` — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Escrever dados com schema novo? mergeSchema=true. Sem isso, schema mismatch causa ABORT.",
+      "intro": "Validar qualidade de dados antes de gravar no Lakehouse é uma verificação explícita feita em código Python/PySpark, não algo automático do schema.",
+      "papoReto": "A abordagem correta é contar quantas linhas têm a coluna obrigatória nula (df.filter(col(...).isNull()).count()) e usar um assert para interromper a execução com mensagem clara se esse número não for zero — isso impede que dados inválidos sigam para a gravação.",
+      "respostaCerta": "null_count = df.filter(col(\"coluna_obrigatoria\").isNull()).count(); assert null_count == 0, mensagem de erro.",
+      "puloDoGato": "Validação de qualidade em notebook = contar problema explicitamente + assert/raise, não depender de constraint de schema.",
       "cascasDeBanana": [
-        "Type casting: conversão dentro da coluna existente — diferente de schema evolution.",
-        "Truncate and reload: descarta dados; schema evolution adiciona/modifica colunas.",
-        "Partition evolution: adiciona partitions — não é schema evolution."
+        "df.schema[...].nullable = False: não valida dados existentes — é apenas metadado de schema do DataFrame, não detecta valores nulos já presentes.",
+        "ALTER TABLE ... ADD CONSTRAINT CHECK: o Delta Lake no Fabric não impõe CHECK constraints dessa forma para validação durante a escrita do notebook.",
+        "df.na.drop(subset=[...]) antes de gravar: remove silenciosamente as linhas com nulo em vez de validar e alertar — é correção silenciosa, não validação."
       ],
-      "dicaOuro": "Delta Lake Schema Evolution = .option('mergeSchema', 'true'). Permite adicionar colunas."
+      "dicaOuro": "Validar nulos antes de gravar = contar (.filter(...).count()) + assert explícito, nunca silenciar com na.drop()."
     }
   },
   {
@@ -5112,16 +5112,16 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Implementar e gerenciar modelo semântico",
     "explanation": {
-      "intro": "No contexto do DP-600, implementar e gerenciar modelo semântico exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Um Threshold em Data Pipeline é limite configurável (ex: tolerância de erro). Se operação excede threshold (ex: 1000 rows falham), pipeline pode abortar ou continuar baseado em configuração. Você define via Try/Catch activities ou error handling policy. Útil para validação de qualidade — se dados muito ruins, interrompe antes de estragar downstream.",
-      "respostaCerta": "Retorna o primeiro valor não-BLANK (não nulo) entre as expressões avaliadas em ordem, equivalente a uma série de `IF(ISBLANK(expr1), IF(ISBLANK(expr2), expr3, expr2), expr1)`. — implementa corretamente o requisito técnico para este cenário de iniciante.",
-      "puloDoGato": "Pipeline validar dados? Threshold check: se failed rows > X, abortar.",
+      "intro": "COALESCE resolve o cenário clássico de \"se esse valor for vazio, tente o próximo\" em DAX, de forma mais legível que ISBLANK encadeado.",
+      "papoReto": "COALESCE(expressão1, expressão2, expressão3) avalia as expressões em ordem e retorna a primeira que não for BLANK — equivalente a uma cadeia de IF(ISBLANK(expr1), IF(ISBLANK(expr2), expr3, expr2), expr1), só que mais legível e direta.",
+      "respostaCerta": "Retorna o primeiro valor não-BLANK entre as expressões avaliadas em ordem, equivalente a uma cadeia de IF(ISBLANK(...), ...).",
+      "puloDoGato": "COALESCE não calcula nada matematicamente — só escolhe o primeiro valor \"presente\" entre várias opções, na ordem em que aparecem.",
       "cascasDeBanana": [
-        "Timeout: limite de duração da atividade, não limite de erro count.",
-        "Monitoring: observação de métricas; threshold é condição executável.",
-        "Alert: notificação de problema; threshold é validação antes de continuar."
+        "Calcula a média dos valores não nulos: COALESCE não faz cálculo de agregação como média; ele apenas seleciona um valor.",
+        "Combina tabelas verticalmente: essa é descrição de UNION; COALESCE trabalha com expressões escalares, não tabelas.",
+        "Retorna o maior valor não nulo (tipo MAX): COALESCE não compara magnitude; retorna o primeiro não-BLANK na ordem dos argumentos, independente do valor."
       ],
-      "dicaOuro": "Threshold = configurable limit (errors, rows, etc). Abort or continue based on policy."
+      "dicaOuro": "COALESCE = \"primeiro valor que não é vazio, na ordem que eu escrevi\". Não é média, não é máximo."
     }
   },
   {
@@ -5137,16 +5137,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Em modelagem Fabric, Attribute Relationships em hierarquias permitem relacionar attributes (ano→trimestre→mês). Quando bem definidos, DAX pode otimizar queries (sabe que mês sempre dentro trimestre, não precisa verificar ambiguidade). Configuração via 'Attribute Relationships' no Model View. Útil para séries temporais complexas.",
-      "respostaCerta": "`GET https://api.fabric.microsoft.com/v1/workspaces/{workspaceId}/items` que retorna uma lista paginada de todos os itens com tipo, ID e nome. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Hierarquia com múltiplos levels (Year-Quarter-Month)? Attribute Relationships para otimização.",
+      "intro": "A API REST do Fabric tem um endpoint dedicado e moderno para listar itens de um workspace, diferente da API legada do Power BI.",
+      "papoReto": "GET https://api.fabric.microsoft.com/v1/workspaces/{workspaceId}/items retorna uma lista paginada de todos os itens do workspace (Lakehouses, Warehouses, modelos semânticos, relatórios, notebooks etc.), cada um com tipo, ID e nome — o endpoint correto e atual da API REST do Fabric para esse propósito.",
+      "respostaCerta": "GET https://api.fabric.microsoft.com/v1/workspaces/{workspaceId}/items, retornando lista paginada de itens com tipo, ID e nome.",
+      "puloDoGato": "A API do Fabric usa o domínio api.fabric.microsoft.com/v1 — não confunda com a API legada do Power BI (api.powerbi.com), que cobre só datasets/relatórios.",
       "cascasDeBanana": [
-        "Relationships de tabela: relacionam colunas entre tabelas diferentes; attribute é within tabela.",
-        "Hierarchies: ordena levels visually; attribute relationship é otimização lógica.",
-        "Parent-child relationships: mecanismo diferente para dados hierárquicos."
+        "api.powerbi.com/.../datasets: é a API legada do Power BI, que lista apenas datasets, não todos os tipos de item do Fabric.",
+        ".../workspaces/{id}/contents: esse caminho/endpoint não existe na API REST do Fabric.",
+        "management.azure.com/fabric/...: o Fabric não expõe esse endpoint de listagem via Azure Resource Manager; a API correta é api.fabric.microsoft.com."
       ],
-      "dicaOuro": "Attribute Relationships = optimize hierarchies by defining level relationships within dimension table."
+      "dicaOuro": "Listar itens de workspace = GET api.fabric.microsoft.com/v1/workspaces/{id}/items, não a API legada do Power BI."
     }
   },
   {
@@ -5162,16 +5162,16 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Manter a solução analítica",
     "explanation": {
-      "intro": "No contexto do DP-600, manter a solução analítica exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Em Notebooks Fabric, quando você cria DataFrame via `.createDataFrame()` ou `.read`, você pode aplicar transformações encadeadas (map, filter, groupBy, etc.). Cada transformação retorna novo DataFrame — isso é lazy evaluation. Operações não executam até você chamar `.collect()` ou escrever para sink. Isso permite otimizações (Catalyst optimizer).",
-      "respostaCerta": "Nas configurações do pipeline, habilitando notificações por e-mail na seção \"Notifications\" para eventos de falha, sucesso ou conclusão, ou usando a atividade \"Office 365 Outlook\" no path \"On Failure\" para envio programático. — implementa corretamente o requisito técnico para este cenário de iniciante.",
-      "puloDoGato": "Transformações de DataFrame construídas até `.collect()`. Lazy = otimizáveis.",
+      "intro": "Alertar sobre falha de pipeline pode ser feito nativamente dentro do próprio Fabric, sem depender obrigatoriamente de serviços externos do Azure.",
+      "papoReto": "Nas configurações do pipeline, a seção \"Notifications\" permite habilitar e-mails automáticos para eventos de falha, sucesso ou conclusão; alternativamente, a atividade \"Office 365 Outlook\" conectada ao path \"On Failure\" envia um e-mail programático com mais controle sobre o conteúdo da notificação.",
+      "respostaCerta": "Notificações por e-mail na seção \"Notifications\" do pipeline, ou atividade \"Office 365 Outlook\" no path \"On Failure\".",
+      "puloDoGato": "Antes de configurar Azure Monitor ou Event Grid para alertas de pipeline, veja se a seção \"Notifications\" nativa já resolve.",
       "cascasDeBanana": [
-        "Eager evaluation: execute imediatamente; Spark Lazy é padrão.",
-        "RDD vs DataFrame: RDD é genérico; DataFrame é otimizado com lazy evaluation.",
-        "Collect: força execução — cuidado em large datasets (traz para driver)."
+        "Azure Monitor Alert Rule via Log Analytics: funcionaria, mas exige configuração externa; não é o caminho mais direto disponível nativamente no pipeline.",
+        "Microsoft Purview para políticas de alerta de qualidade de dados: Purview foca em governança/compliance, não em alertas de execução/falha de pipeline.",
+        "Webhook no Azure Event Grid: solução possível para integrações externas, mas não é o mecanismo nativo e mais simples já embutido no pipeline."
       ],
-      "dicaOuro": "Spark Lazy Evaluation = transformations queued until action (collect, write). Enables Catalyst optimization."
+      "dicaOuro": "Alerta de falha mais direto = seção \"Notifications\" do próprio pipeline, ou atividade Outlook no path On Failure."
     }
   },
   {
@@ -5187,16 +5187,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Um Measure Hide é opção para ocultar medida do field list mas mantê-la consultável via DAX. Você marca 'Hide in reporting clients' na definição de medida. Útil para medidas helpers (usadas por outras medidas internamente) ou experimentos. Usuários não veem, mas DAX pode referenciar.",
-      "respostaCerta": "Usando `CREATE TABLE #tabela_temp (...)` ou `SELECT ... INTO #tabela_temp FROM ...` — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Medida helper usada internamente? Hide in reporting clients.",
+      "intro": "Tabelas temporárias no Warehouse do Fabric seguem a mesma convenção de nomenclatura do T-SQL tradicional, usando o prefixo #.",
+      "papoReto": "CREATE TABLE #tabela_temp (...) ou SELECT ... INTO #tabela_temp FROM ... cria uma tabela visível apenas dentro da sessão atual — o # é a marca que o motor T-SQL reconhece para tratar o objeto como temporário, sem precisar de uma palavra-chave especial como TEMPORARY ou STAGING.",
+      "respostaCerta": "CREATE TABLE #tabela_temp (...) ou SELECT ... INTO #tabela_temp FROM ..., usando o prefixo # de tabela temporária do T-SQL.",
+      "puloDoGato": "T-SQL usa # para tabela temporária — não existe sintaxe TEMPORARY TABLE nem STAGING TABLE nesse dialeto; é sempre o prefixo #.",
       "cascasDeBanana": [
-        "Column hide: oculta coluna de field list; measure hide é medida específica.",
-        "Table hide: bloqueia tabela inteira; measure hide é granular.",
-        "RLS/OLS: segurança; measure hide é UI convenience."
+        "DECLARE @tabela TABLE (...): cria uma variável de tabela, com escopo ainda mais restrito (dentro do batch) e comportamento diferente de uma tabela #.",
+        "CREATE STAGING TABLE: não existe essa palavra-chave STAGING em T-SQL.",
+        "CREATE TEMPORARY TABLE: essa sintaxe é de outros dialetos SQL (como MySQL), não do T-SQL do Warehouse Fabric."
       ],
-      "dicaOuro": "Measure Hide = suppress from field list, keep accessible to DAX (helper measures)."
+      "dicaOuro": "Tabela temporária em T-SQL = sempre prefixo # no nome (CREATE TABLE #nome ou SELECT INTO #nome)."
     }
   },
   {
@@ -5206,22 +5206,22 @@ export const questions = [
       "Uma funcionalidade que cria automaticamente hierarquias de data e geografia com base nas colunas detectadas no modelo.",
       "Um processo automático de compactação VertiPaq que reorganiza as tabelas Import para minimizar o uso de memória baseado nos padrões de uso.",
       "Um recurso que agrega automaticamente medidas DAX similares em uma única medida otimizada durante o processo de publicação do modelo.",
-      "Um recurso de IA que analisa os padrões de consulta do modelo semântico e cria automaticamente tabelas de agregação em cache para acelerar as queries mais frequentes em modelos DirectQuery, sem configuração manual."
+      "Um recurso de IA que analisa os padrões de consulta do modelo semântico e cria automaticamente tabelas de agregação em cache para acelerar as queries mais."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
     "domain": "Implementar e gerenciar modelo semântico",
     "explanation": {
-      "intro": "No contexto do DP-600, implementar e gerenciar modelo semântico exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Em Spark Notebooks, SparkSQL é componente que permite T-SQL-like syntax contra DataFrames via `spark.sql()`. Você registra DataFrame como temporary view (`df.createOrReplaceTempView('name')`), depois queries com SQL. SparkSQL suporta SELECT/JOIN/GROUP BY/etc — mais acessível que DataFrame API para analistas SQL.",
-      "respostaCerta": "Um recurso de IA que analisa os padrões de consulta do modelo semântico e cria automaticamente tabelas de agregação em cache para acelerar as queries mais frequentes em modelos DirectQuery, sem configuração manual. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Analista SQL em Notebook? spark.sql('SELECT ...') contra registered views.",
+      "intro": "Auto Aggregations é um recurso de IA do Fabric/Power BI Premium pensado especificamente para acelerar modelos DirectQuery sem trabalho manual de modelagem.",
+      "papoReto": "O recurso analisa os padrões reais de consulta enviados ao modelo semântico e, com base neles, cria automaticamente tabelas de agregação em cache (geralmente em Import) para responder as queries mais frequentes muito mais rápido — sem que o modelador precise configurar manualmente uma tabela de agregação, algo que tradicionalmente exigia trabalho explícito.",
+      "respostaCerta": "Recurso de IA que analisa padrões de consulta e cria automaticamente tabelas de agregação em cache para acelerar queries frequentes em DirectQuery, sem configuração manual.",
+      "puloDoGato": "Auto Aggregations automatiza exatamente o trabalho manual de criar e mapear uma tabela de agregação — ele \"aprende\" com o uso real do modelo.",
       "cascasDeBanana": [
-        "DataFrame API: PySpark programmatic; SparkSQL é declarativo SQL.",
-        "Hive: SQL engine antigo; SparkSQL é moderno e integrado ao Spark.",
-        "T-SQL: SQL Server dialect; SparkSQL é Apache Spark implementação de SQL."
+        "Cria hierarquias automáticas de data/geografia: é outro recurso (detecção automática de hierarquia), sem relação com agregações de performance.",
+        "Compactação VertiPaq reorganizando tabelas Import: descreve otimização de armazenamento/compressão do motor, não criação de tabelas de agregação por padrão de consulta.",
+        "Agrega medidas DAX similares numa única medida durante publicação: não existe esse comportamento; Auto Aggregations cria tabelas de dados agregadas, não medidas combinadas."
       ],
-      "dicaOuro": "SparkSQL = SQL interface to Spark DataFrames. Temporary views + SQL queries."
+      "dicaOuro": "Auto Aggregations = IA cria tabela de agregação sozinha, observando o padrão real de consultas DirectQuery."
     }
   },
   {
@@ -5237,16 +5237,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Quando você configurar Workspace Identity no Fabric, permite que itens (Pipelines, Notebooks) autentiquem contra Azure resources usando Managed Identity em vez de credenciais armazenadas. Você configura via Admin Portal: Workspace Settings → Workspace Identity. Depois, Notebooks podem usar `mssparkutils.credentials` para acessar credenciais automaticamente.",
-      "respostaCerta": "`join` é um join completo entre duas tabelas de tamanhos similares com múltiplas variantes (inner, outer etc.); `lookup` é otimizado para enriquecer uma tabela de fatos grande com valores de uma tabela de dimensão pequena, sendo mais eficiente nesse cenário específico. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Pipeline/Notebook acessar Data Lake sem credenciais hardcoded? Workspace Identity.",
+      "intro": "join e lookup em KQL resolvem o mesmo problema geral (combinar tabelas), mas são otimizados para cenários de tamanho diferentes.",
+      "papoReto": "join é o operador completo, com várias variantes (inner, outer, leftsemi etc.), pensado para combinar tabelas de tamanhos similares. lookup é especializado em enriquecer uma tabela de fatos grande com valores de uma tabela de dimensão pequena — o motor otimiza esse cenário específico para ser mais eficiente que um join genérico.",
+      "respostaCerta": "join cobre combinações gerais entre tabelas similares; lookup é otimizado para enriquecer fato grande com dimensão pequena, mais eficiente nesse cenário.",
+      "puloDoGato": "Tem uma tabela de fatos enorme e uma dimensão pequena para enriquecer? lookup é mais eficiente que join nesse caso.",
       "cascasDeBanana": [
-        "Service Principal: AD-level identity — similar mas diferente de workspace identity (Fabric-specific).",
-        "Shared credentials: armazenar passwords — menos seguro que identity.",
-        "Access keys/tokens: mantenha em Key Vault; workspace identity evita armazenamento local."
+        "join suporta múltiplas chaves, lookup só uma: não é essa a distinção real; a diferença chave é o cenário de otimização (tamanhos das tabelas).",
+        "join só dentro do mesmo KQL Database, lookup cruza databases: ambos operadores trabalham dentro do escopo normal de queries KQL; não é essa a diferença documentada.",
+        "join é síncrono e bloqueia, lookup é assíncrono com resultados parciais: KQL não funciona com essa semântica de assincronia parcial para esses operadores."
       ],
-      "dicaOuro": "Workspace Identity = Fabric-managed identity for items. Zero-trust, no credential storage."
+      "dicaOuro": "Fato grande + dimensão pequena = lookup (otimizado). Tabelas de tamanho parecido = join."
     }
   },
   {
@@ -5262,16 +5262,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Em Lakehouse, Archive Zone é opcional tier armazenamento para dados históricos/infrequently accessed. Fabric oferece Archive option ao configurar Lakehouse. Arquive reduz custo armazenagem mas aumenta latência leitura (trade-off). Use para dados que precisam estar disponíveis mas são acessados raramente.",
-      "respostaCerta": "Usando blocos `try/except` para capturar exceções, criando um DataFrame com os detalhes do erro e gravando com `spark.createDataFrame([log_row]).write.format(\"delta\").mode(\"append\").saveAsTable(\"log_erros\")`. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Dados históricos raramente acessados? Archive tier reduce custo.",
+      "intro": "Registrar erros numa tabela de log do Lakehouse é uma prática comum de observabilidade dentro de notebooks PySpark, implementada com tratamento de exceção padrão de Python.",
+      "papoReto": "Você envolve a lógica arriscada num bloco try/except; ao capturar a exceção, monta os detalhes do erro num DataFrame e grava com spark.createDataFrame([log_row]).write.format(\"delta\").mode(\"append\").saveAsTable(\"log_erros\") — assim cada falha fica registrada na própria tabela Delta de log, consultável depois.",
+      "respostaCerta": "try/except capturando a exceção + DataFrame com detalhes do erro gravado via write.format(\"delta\").mode(\"append\").saveAsTable(\"log_erros\").",
+      "puloDoGato": "Não existe configuração mágica do Spark que registre erros automaticamente numa tabela — o log é sempre construído explicitamente com try/except.",
       "cascasDeBanana": [
-        "Hot storage: acesso rápido, custo alto; Archive é custo baixo, acesso lento.",
-        "Tier between Hot/Cold: Archive é tipo de cold storage.",
-        "Backup: separado; Archive é tier de acesso."
+        "spark.conf.set(\"spark.sql.error.logging\", ...): essa configuração não existe no Spark; não há redirecionamento automático de erros dessa forma.",
+        "dbutils.notebook.exit(...) gravando automaticamente no log do workspace: exit() encerra o notebook com uma string de retorno; não grava nada numa tabela de log.",
+        "setCheckpointDir(...) registrando erros e falhas: checkpoint é mecanismo de tolerância a falhas do Spark para RDDs/streaming, não um log de erros de aplicação."
       ],
-      "dicaOuro": "Archive Zone = infrequent access storage tier (cost optimization, latency trade-off)."
+      "dicaOuro": "Log de erro no Lakehouse = sempre try/except manual + escrita explícita num DataFrame de log."
     }
   },
   {
@@ -5287,16 +5287,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Manter a solução analítica",
     "explanation": {
-      "intro": "No contexto do DP-600, manter a solução analítica exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Nos Lakehouse Files, você pode criar Folders para organizar arquivos logicamente. Quando você carrega dados via Notebook ou Pipeline, você especifica caminho (`/Files/folder/subfolder/file.csv`). Fabric cria estrutura sob OneLake — internamente, isso é namespace, não hierarquia física real.",
-      "respostaCerta": "Read (leitura básica), Build (criar conteúdo baseado no modelo como relatórios), Write (editar o modelo) e Reshare (compartilhar com outros usuários). — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "Organizar arquivos? Create Folders in Files zone.",
+      "intro": "Compartilhar um modelo semântico individualmente no Fabric usa um conjunto de permissões granulares, diferente das funções de workspace.",
+      "papoReto": "Ao compartilhar um item individualmente, você concede Read (consumir/visualizar o modelo), Build (criar relatórios baseados nele), Write (editar a definição do modelo) e Reshare (permitir que o destinatário compartilhe esse acesso com outras pessoas) — permissões independentes e combináveis.",
+      "respostaCerta": "Read (leitura básica), Build (criar conteúdo baseado no modelo), Write (editar o modelo) e Reshare (compartilhar com outros).",
+      "puloDoGato": "Não confunda permissões de compartilhamento de item individual (Read/Build/Write/Reshare) com funções de workspace (Admin/Member/Viewer) — são sistemas diferentes.",
       "cascasDeBanana": [
-        "Partitioning: organiza dados por coluna; folders são UI-level organization.",
-        "Delta table path: pode estar em folder; folders são containers.",
-        "Shortcuts: podem apontar para folders."
+        "View, Edit, Admin e Delete: esses nomes não correspondem às permissões reais de compartilhamento de item no Fabric.",
+        "Viewer, Contributor, Member e Admin: são as funções (roles) de workspace, não as permissões granulares de compartilhamento individual.",
+        "ReadOnly, ReadWrite, FullControl e NoAccess: esses nomes não existem no modelo de permissões do Fabric."
       ],
-      "dicaOuro": "Lakehouse Folders = logical organization of files (namespace, not physical hierarchy)."
+      "dicaOuro": "Compartilhamento individual de modelo = Read, Build, Write, Reshare — diferente das roles de workspace."
     }
   },
   {
@@ -5312,16 +5312,16 @@ export const questions = [
     "difficulty": "intermediario",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Em Spark, uma Partition é divisão de DataFrame/tabela por coluna valores. Quando você queries, Spark processa cada partition em paralelo. You configure via `.repartition(coluna)` ou `.partitionBy()` ao escrever. Partitionamento bem feito acelera queries que filtram por coluna de partição (Spark skips partitions não relevantes).",
-      "respostaCerta": "Não de forma enforçada; o Fabric Warehouse suporta declaração de PRIMARY KEY e UNIQUE como constraints NOT ENFORCED, usadas apenas como dicas para o otimizador de consultas, sem validação automática de integridade. — implementa corretamente o requisito técnico para este cenário de intermediario.",
-      "puloDoGato": "DataFrame grande com filtros por coluna? Particionamento acelera.",
+      "intro": "O Warehouse do Fabric permite declarar constraints de integridade, mas com uma limitação importante que difere do SQL Server tradicional.",
+      "papoReto": "O Fabric Warehouse suporta declarar PRIMARY KEY e UNIQUE, mas apenas como constraints NOT ENFORCED — usadas pelo otimizador de consultas como dica sobre a estrutura dos dados (para melhorar planos de execução), sem que o motor valide automaticamente se os dados respeitam essas regras durante INSERT/UPDATE.",
+      "respostaCerta": "Não de forma enforçada; suporta PRIMARY KEY e UNIQUE como NOT ENFORCED, usadas como dicas ao otimizador, sem validação automática.",
+      "puloDoGato": "Declarar PRIMARY KEY no Fabric Warehouse não garante unicidade automaticamente — a aplicação/pipeline precisa garantir que os dados respeitem a regra.",
       "cascasDeBanana": [
-        "Shuffle: reorganiza dados; partitionamento é pré-configurado.",
-        "Bucketing: similar a partitioning mas para tabelas, não DataFrames.",
-        "Sorting: ordenação; partitionamento é divisão lógica."
+        "Suporta PK e FK enforçadas como SQL Server tradicional: errado — é exatamente a diferença chave; no Fabric Warehouse essas constraints são NOT ENFORCED.",
+        "Não suporta nenhum tipo de constraint: também errado — PRIMARY KEY e UNIQUE podem ser declaradas, só não são validadas automaticamente.",
+        "Suporta apenas PK enforçada, FK nunca validada: PRIMARY KEY também não é enforçada; ambas (PK e UNIQUE) são NOT ENFORCED, não há uma validada e outra não."
       ],
-      "dicaOuro": "Partitioning = divide data by column for parallel processing and query optimization."
+      "dicaOuro": "Fabric Warehouse = constraints declaráveis (PK/UNIQUE) mas NOT ENFORCED — dica ao otimizador, não validação de dados."
     }
   },
   {
@@ -5337,16 +5337,16 @@ export const questions = [
     "difficulty": "avancado",
     "domain": "Implementar e gerenciar modelo semântico",
     "explanation": {
-      "intro": "No contexto do DP-600, implementar e gerenciar modelo semântico exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Em Data Pipeline, o Try/Catch error handling permite que você capture falhas de atividade e tome ação (log, retry, skip). Você coloca atividades em Try, define ações em Catch. Útil para pipelines que precisam de resiliência (ex: se API falha, log e continua em vez de abort).",
-      "respostaCerta": "Define quais colunas e linhas são exibidas quando o usuário faz drill-through ou clica em \"Show as table\" em um visual, personalizando os dados de detalhe retornados ao invés do comportamento padrão. — implementa corretamente o requisito técnico para este cenário de avancado.",
-      "puloDoGato": "Pipeline precisa resilência a falhas? Try/Catch + Catch activities.",
+      "intro": "DETAILROWS controla o que aparece quando alguém pede para \"ver o detalhe\" por trás de uma medida agregada num visual.",
+      "papoReto": "A expressão DETAILROWS, definida numa medida, especifica quais colunas e linhas serão exibidas quando o usuário faz drill-through para uma página de detalhe ou usa \"Show as table\" — em vez do comportamento padrão (todas as colunas da tabela de fatos relacionada), você personaliza exatamente o que aparece.",
+      "respostaCerta": "Define quais colunas e linhas aparecem no drill-through/\"Show as table\" de um visual, personalizando os dados de detalhe.",
+      "puloDoGato": "DETAILROWS só entra em ação quando o usuário pede explicitamente o \"detalhe por trás do número\" — não afeta o valor da medida, só a experiência de drill-through.",
       "cascasDeBanana": [
-        "Retry policy: built-in retry; Try/Catch é manual handling.",
-        "Timeout: limite de duração; Try/Catch é error handling.",
-        "Alerts: notificações pós-execução; Try/Catch é durante."
+        "Retorna número de linhas que contribuem para a medida: é descrição de uma contagem (como COUNTROWS), não de DETAILROWS, que define o conteúdo de detalhe, não uma contagem.",
+        "Expressão alternativa quando a medida retorna BLANK: seria papel de COALESCE/IF, não de DETAILROWS, que não trata valores vazios.",
+        "Colunas de detalhe no tooltip ao passar o mouse: tooltips são configurados na formatação do visual, não pela expressão DETAILROWS da medida."
       ],
-      "dicaOuro": "Try/Catch = error handling in Data Pipeline (capture failures and act)."
+      "dicaOuro": "DETAILROWS = \"o que aparece quando alguém clica para ver o detalhe atrás dessa medida\"."
     }
   },
   {
@@ -5362,16 +5362,16 @@ export const questions = [
     "difficulty": "iniciante",
     "domain": "Preparar e servir dados",
     "explanation": {
-      "intro": "No contexto do DP-600, preparar e servir dados exige escolhas técnicas precisas alinhadas com best practices do Fabric.",
-      "papoReto": "Em Power BI, um Slot é alocação de capacidade Premium que você pode usar para datasets. Você aloca Slots no Admin Portal — cada Slot é capacidade reservada. Datasets podem usar um ou múltiplos Slots. Útil quando você tem datasets que compete por recursos; Slots garantem capacidade.",
-      "respostaCerta": "Converte automaticamente o arquivo (CSV, Parquet, JSON etc.) em uma tabela Delta gerenciada na seção Tables do Lakehouse, tornando-a acessível via SQL Analytics Endpoint e notebooks. — implementa corretamente o requisito técnico para este cenário de iniciante.",
-      "puloDoGato": "Datasets compete por Premium Capacity? Use Slots para reservar.",
+      "intro": "O Fabric oferece um caminho rápido para transformar um arquivo cru em uma tabela consultável, sem passar por notebook ou pipeline.",
+      "papoReto": "A opção \"Load to Table\", disponível ao clicar com o botão direito num arquivo dentro da seção Files do Lakehouse, converte automaticamente o arquivo (CSV, Parquet, JSON etc.) numa tabela Delta gerenciada na seção Tables — a partir daí, a tabela fica acessível via SQL Analytics Endpoint e via notebooks, como qualquer outra tabela do Lakehouse.",
+      "respostaCerta": "Converte o arquivo em uma tabela Delta gerenciada na seção Tables, acessível via SQL Analytics Endpoint e notebooks.",
+      "puloDoGato": "\"Load to Table\" é o caminho de um clique para sair de \"arquivo cru em Files\" e chegar em \"tabela Delta consultável em Tables\", sem escrever código.",
       "cascasDeBanana": [
-        "Capacity: pool total de recursos; Slot é alocação dentro capacidade.",
-        "Autoscale: aumenta capacidade dinamicamente; Slot é reserva estática.",
-        "Throttling: reduz performance; Slots evitam throttling por reservation."
+        "Copia o arquivo para Tables mantendo o formato original sem converter: o objetivo é exatamente converter para Delta, não preservar o formato original.",
+        "Cria um Dataflow Gen2 com agendamento diário: não é isso que a opção faz; é uma conversão pontual e imediata, não um item agendado.",
+        "Publica como tabela externa referenciada no modelo semântico padrão: \"Load to Table\" não interage com o modelo semântico; só converte o arquivo em tabela Delta dentro do próprio Lakehouse."
       ],
-      "dicaOuro": "Power BI Slots = reserved capacity allocation (conflicts avoidance)."
+      "dicaOuro": "\"Load to Table\" = converter arquivo cru (Files) em tabela Delta gerenciada (Tables), de um clique."
     }
   },
   {
@@ -5656,7 +5656,7 @@ export const questions = [
       "Usando a notação de três partes `lakehouse.schema.tabela` diretamente nas queries SQL sem necessidade de habilitação prévia.",
       "Criando subpastas na seção Tables do Lakehouse; cada subpasta é automaticamente reconhecida como um schema separado.",
       "Schemas múltiplos não são suportados em Lakehouses; apenas Warehouses do Fabric suportam múltiplos schemas nativamente.",
-      "Habilitando a opção \"Lakehouse Schemas\" nas configurações do Lakehouse, que permite criar schemas adicionais via `CREATE SCHEMA nome` no SQL Analytics Endpoint para organizar tabelas em namespaces separados."
+      "Habilitando a opção \"Lakehouse Schemas\" nas configurações do Lakehouse, que permite criar schemas adicionais via `CREATE SCHEMA nome` no SQL Analytics."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
@@ -6030,7 +6030,7 @@ export const questions = [
     "options": [
       "O Query Diagnostics, disponível no Power Query Editor, que mede o tempo de carregamento de cada etapa de transformação.",
       "O DAX Studio, ferramenta externa que deve ser conectada ao modelo para análise de desempenho de visuais.",
-      "O Performance Analyzer, acessível via menu View, que registra o tempo de renderização, query DAX e outros eventos para cada visual durante a interação com o relatório.",
+      "O Performance Analyzer, acessível via menu View, que registra o tempo de renderização, query DAX e outros eventos para cada visual durante a interação com o.",
       "O Fabric Monitor Hub, que centraliza métricas de desempenho de todos os itens do workspace incluindo relatórios."
     ],
     "correctAnswer": 2,
@@ -6153,7 +6153,7 @@ export const questions = [
     "id": "dp600_q247",
     "text": "Em KQL, para que serve o operador `mv-expand`?",
     "options": [
-      "Expande arrays ou dynamic objects em múltiplas linhas, uma por elemento do array, permitindo analisar dados semi-estruturados como JSON com arrays aninhados em tabelas KQL do Eventhouse.",
+      "Expande arrays ou dynamic objects em múltiplas linhas, uma por elemento do array, permitindo analisar dados semi-estruturados como JSON com arrays aninhados.",
       "Expande uma query KQL para exibir o plano de execução detalhado com estimativas de custo por operador.",
       "Executa uma query KQL em múltiplos KQL Databases simultaneamente e combina os resultados em uma única saída.",
       "Expande colunas de texto delimitadas por vírgula em colunas separadas, similar ao `split_to_table` do SQL."
@@ -6180,7 +6180,7 @@ export const questions = [
     "options": [
       "Gitflow com branches permanentes de feature, develop, release e hotfix, com o Fabric sincronizando automaticamente cada branch com um workspace dedicado.",
       "Feature branching onde cada desenvolvedor trabalha em um branch de feature conectado a um workspace de desenvolvimento individual, com PRs (pull requests) para o branch principal (main/dev) revisados antes de merge, e Deployment Pipelines para promoção para test e production.",
-      "Trunk-based development onde todos os desenvolvedores commitam diretamente no branch main do repositório com o workspace de produção sincronizado em tempo real.",
+      "Trunk-based development onde todos os desenvolvedores commitam diretamente no branch main do repositório com o workspace de.",
       "Um único branch compartilhado por workspace onde cada desenvolvedor cria subpastas no repositório para isolar suas alterações sem conflitos de merge."
     ],
     "correctAnswer": 1,
@@ -6229,7 +6229,7 @@ export const questions = [
     "text": "Qual conjunto de funções DAX é usado para trabalhar com hierarquias pai-filho em tabelas relacionais (como organogramas ou contas contábeis)?",
     "options": [
       "As funções TREE (`TREEPATH()`, `TREENODE()`, `TREELEVEL()`) específicas para hierarquias auto-referenciadas em modelos DAX.",
-      "As funções PATH (`PATH()`, `PATHITEM()`, `PATHLENGTH()`, `PATHCONTAINS()`) que constroem e navegam strings delimitadas representando o caminho hierárquico de cada nó até a raiz.",
+      "As funções PATH (`PATH()`, `PATHITEM()`, `PATHLENGTH()`, `PATHCONTAINS()`) que constroem e navegam strings delimitadas representando o caminho hierárquico de.",
       "As funções HIERARCHY (`HIERARCHYPATH()`, `HIERARCHYITEM()`) que são versões otimizadas para modelos semânticos com hierarquias explícitas.",
       "As funções PARENT (`PARENT()`, `PARENTID()`, `PARENTPATH()`) que navegam diretamente nas relações pai-filho do modelo semântico."
     ],
@@ -6430,7 +6430,7 @@ export const questions = [
     "options": [
       "Em `SUMMARIZECOLUMNS()` onde `ORDERBY()` define a ordenação do resultado e `PARTITIONBY()` define os grupos de agregação.",
       "Em `CALCULATE()` onde `ORDERBY()` define a prioridade de avaliação dos filtros e `PARTITIONBY()` isola contextos de filtro.",
-      "Nas funções de janela DAX como `WINDOW()`, `OFFSET()`, `INDEX()` e `RANK()`, que recebem `ORDERBY()` para definir ordenação e `PARTITIONBY()` para definir agrupamentos dentro da janela.",
+      "Nas funções de janela DAX como `WINDOW()`, `OFFSET()`, `INDEX()` e `RANK()`, que recebem `ORDERBY()` para definir ordenação e `PARTITIONBY()` para definir.",
       "Em `TOPN()` onde `ORDERBY()` especifica a coluna de classificação e `PARTITIONBY()` aplica o ranking por partição de dados."
     ],
     "correctAnswer": 2,
@@ -6529,7 +6529,7 @@ export const questions = [
     "text": "Quando é preferível usar `APPROXIMATEDISTINCTCOUNT()` em vez de `DISTINCTCOUNT()` em uma medida DAX?",
     "options": [
       "Quando o modelo semântico está em modo Import e a contagem exata causaria timeout de refresh por exceder o limite de memória VertiPaq.",
-      "Quando a coluna tem altíssima cardinalidade (dezenas de milhões de valores únicos) e uma margem de erro de ~2% é aceitável em troca de desempenho significativamente superior, especialmente em modelos DirectQuery ou Direct Lake.",
+      "Quando a coluna tem altíssima cardinalidade (dezenas de milhões de valores únicos) e uma margem de erro de ~2% é aceitável em troca de desempenho.",
       "Quando a coluna contém valores nulos que precisam ser incluídos na contagem, pois DISTINCTCOUNT ignora nulos automaticamente.",
       "Sempre que o relatório é acessado por mais de 100 usuários simultâneos para reduzir a carga no modelo semântico."
     ],
@@ -6631,7 +6631,7 @@ export const questions = [
       "Permitem que o modelo semântico suporte mais de 1 bilhão de linhas nas dimensões combinando armazenamento em memória e disco.",
       "São necessárias para habilitar a filtragem bidirecional entre tabelas de fatos e dimensões em modelos compostos, o que não é suportado com Import puro.",
       "Garantem que as dimensões sejam atualizadas em tempo real junto com as tabelas de fatos DirectQuery sem necessidade de refresh agendado.",
-      "Evitam cross-source joins entre tabelas Import e DirectQuery, permitindo que o motor use a cópia em cache (Import) quando necessário e a fonte direta (DirectQuery) em outros contextos, sem degradar o desempenho com joins entre engines diferentes."
+      "Evitam cross-source joins entre tabelas Import e DirectQuery, permitindo que o motor use a cópia em cache (Import) quando necessário e a fonte direta."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
@@ -6903,7 +6903,7 @@ export const questions = [
     "id": "dp600_q277",
     "text": "Por que a criação de estatísticas de coluna é importante no Warehouse do Fabric e como você as cria manualmente?",
     "options": [
-      "Estatísticas ajudam o otimizador de consultas a gerar planos de execução eficientes; podem ser criadas com `CREATE STATISTICS nome ON tabela(coluna)` ou via `UPDATE STATISTICS tabela` para atualizar as existentes.",
+      "Estatísticas ajudam o otimizador de consultas a gerar planos de execução eficientes; podem ser criadas com `CREATE STATISTICS nome ON tabela(coluna)` ou via.",
       "Estatísticas no Fabric Warehouse são criadas e atualizadas automaticamente pelo motor sem necessidade de intervenção manual.",
       "Estatísticas de coluna são configuradas no modelo semântico via propriedade \"Column Statistics\" e propagadas para o Warehouse automaticamente.",
       "Estatísticas são necessárias apenas para tabelas com mais de 100 milhões de linhas; tabelas menores são otimizadas por varredura completa."
@@ -7028,7 +7028,7 @@ export const questions = [
     "id": "dp600_q282",
     "text": "Em um modelo semântico com relacionamento many-to-many entre Vendas e Produtos via tabela ponte, qual configuração de CROSSFILTER é recomendada para evitar dupla contagem em medidas?",
     "options": [
-      "Configurar filtragem bidirecional (both) entre todas as tabelas do modelo para garantir que slicers em qualquer tabela filtrem todas as demais corretamente.",
+      "Configurar filtragem bidirecional (both) entre todas as tabelas do modelo para garantir que slicers em qualquer tabela.",
       "Desabilitar o relacionamento M:N e usar medidas DAX com TREATAS para simular o join apenas quando necessário em medidas específicas.",
       "Usar o modo Direct Lake que resolve automaticamente relacionamentos M:N sem necessidade de tabela ponte ou configuração de CROSSFILTER.",
       "Configurar a direção de filtragem como unidirecional (single) da dimensão para a fatos, garantindo que filtros aplicados na dimensão filtrem a tabela de fatos corretamente sem propagar filtros em sentido contrário que causariam dupla contagem."
@@ -7055,7 +7055,7 @@ export const questions = [
     "options": [
       "Duplicando o pipeline e removendo manualmente as atividades já concluídas antes de reexecutar o pipeline modificado.",
       "Usando a funcionalidade \"Rerun from failed activity\" disponível no Monitor Hub após a falha, que reexecuta o pipeline a partir da atividade com falha preservando os resultados das atividades anteriores bem-sucedidas.",
-      "Implementando uma tabela de controle no Warehouse que registra o status de cada atividade e usando atividades \"If Condition\" no pipeline para pular atividades já concluídas.",
+      "Implementando uma tabela de controle no Warehouse que registra o status de cada atividade e usando atividades \"If Condition\" no pipeline para pular.",
       "Usando a propriedade \"Skip on Success\" em cada atividade que verifica automaticamente se o resultado já existe antes de reexecutar."
     ],
     "correctAnswer": 1,
@@ -7105,7 +7105,7 @@ export const questions = [
     "options": [
       "Configurar um mutex distribuído via Azure Redis Cache que os notebooks adquirem antes de escrever e liberam após a conclusão.",
       "Criar uma tabela de staging separada para cada notebook e usar um pipeline mestre que consolida as stagings na tabela final sequencialmente.",
-      "Usar `df.write.format(\"delta\").mode(\"append\").option(\"txnVersion\", unique_id)` para garantir que cada escrita tenha um ID de transação único e não conflite.",
+      "Usar `df.write.format(\"delta\").mode(\"append\").option(\"txnVersion\", unique_id)` para garantir que cada escrita tenha um ID de.",
       "O Delta Lake usa controle de concorrência otimista com detecção de conflitos; para evitar erros, deve-se usar operações MERGE em vez de overwrite, ou implementar particionamento que garanta que cada notebook escreva em partições diferentes sem sobreposição."
     ],
     "correctAnswer": 3,
@@ -7130,7 +7130,7 @@ export const questions = [
     "options": [
       "`GROUPBY()` é usado exclusivamente em queries DAX externas via XMLA; `SUMMARIZE()` é a única opção disponível em medidas e colunas calculadas.",
       "`GROUPBY()` é sempre preferível ao `SUMMARIZE()` pois executa no contexto de linha, sendo mais eficiente para agregações em tabelas grandes.",
-      "`GROUPBY()` suporta agrupamento por colunas de tabelas não relacionadas; `SUMMARIZE()` exige que todas as colunas de agrupamento venham de tabelas com relacionamento no modelo.",
+      "`GROUPBY()` suporta agrupamento por colunas de tabelas não relacionadas; `SUMMARIZE()` exige que todas as colunas de agrupamento venham de tabelas com.",
       "`GROUPBY()` é mais adequado quando se precisa usar funções de agregação de contexto de linha como `CURRENTGROUP()` combinadas com iteradores X (SUMX, AVERAGEX) sobre os grupos; `SUMMARIZE()` não suporta diretamente essas funções de grupo."
     ],
     "correctAnswer": 3,
@@ -7155,7 +7155,7 @@ export const questions = [
     "options": [
       "Acessando o Azure Monitor e consultando a tabela `QueryStoreRuntimeStats` do Warehouse para histórico de planos de execução.",
       "Conectando o SQL Server Management Studio (SSMS) ao SQL Analytics Endpoint e usando \"Include Actual Execution Plan\" (Ctrl+M).",
-      "Usando `EXPLAIN` antes da query ou habilitando o Query Insights do Fabric Warehouse, que exibe o plano de execução distribuído e métricas de custo por operador para otimização.",
+      "Usando `EXPLAIN` antes da query ou habilitando o Query Insights do Fabric Warehouse, que exibe o plano de execução distribuído e métricas de custo por.",
       "Usando `SET STATISTICS IO, TIME ON` antes da query, que exibe métricas de I/O e tempo de execução por operação no Fabric Warehouse."
     ],
     "correctAnswer": 2,
@@ -7478,7 +7478,7 @@ export const questions = [
     "id": "dp600_q300",
     "text": "Você precisa construir um pipeline incremental que processe apenas as linhas inseridas, atualizadas ou deletadas em uma tabela Delta do Lakehouse desde a última execução. Qual recurso do Delta Lake deve ser habilitado e como você lê apenas as alterações em PySpark?",
     "options": [
-      "Usar `DESCRIBE HISTORY nome_tabela` para identificar as versões novas e reprocessar a tabela completa filtrando por `_commit_timestamp` maior que a última execução.",
+      "Usar `DESCRIBE HISTORY nome_tabela` para identificar as versões novas e reprocessar a tabela completa filtrando por.",
       "Habilitar o Change Data Feed (CDF) com `ALTER TABLE nome SET TBLPROPERTIES ('delta.enableChangeDataFeed' = 'true')` e ler as alterações com `spark.read.format(\"delta\").option(\"readChangeFeed\", \"true\").option(\"startingVersion\", ultima_versao).table(\"nome_tabela\")`",
       "Usar `spark.read.format(\"delta\").option(\"versionAsOf\", ultima_versao).table(\"nome_tabela\")`",
       "Habilitar o Incremental Refresh nas propriedades do Lakehouse no portal Fabric, que automaticamente expõe as alterações Delta como stream consumível via `spark.readStream`."

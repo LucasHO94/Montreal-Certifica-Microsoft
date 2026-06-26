@@ -10,6 +10,42 @@ import { useIsMontrealPremium } from '../hooks/useIsMontrealPremium';
 import { generateCertificate } from '../utils/certificate';
 import { useReview } from '../hooks/useReview';
 
+// ---- Embaralhamento determinístico de opções por questão ----
+// Evita o viés de posição (ex.: resposta correta quase sempre na 1ª opção em algumas certs).
+// Determinístico por `id`: a mesma questão produz SEMPRE a mesma ordem, em qualquer carga/dispositivo,
+// preservando a validade dos índices de respostas salvas (modo estudo livre). cascasDeBanana e
+// respostaCerta são baseadas em conteúdo (não em posição), permanecendo válidas após o shuffle.
+const _xmur3 = (str) => {
+  let h = 1779033703 ^ str.length;
+  for (let i = 0; i < str.length; i++) {
+    h = Math.imul(h ^ str.charCodeAt(i), 3432918353);
+    h = (h << 13) | (h >>> 19);
+  }
+  h = Math.imul(h ^ (h >>> 16), 2246822507);
+  h = Math.imul(h ^ (h >>> 13), 3266489909);
+  return (h ^= h >>> 16) >>> 0;
+};
+const _mulberry32 = (a) => () => {
+  a |= 0; a = (a + 0x6D2B79F5) | 0;
+  let t = Math.imul(a ^ (a >>> 15), 1 | a);
+  t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+};
+// Opções que referenciam letras/posições ("Ambas as opções A e C") não podem ser embaralhadas.
+const _LETTER_REF = /\bop(?:ç|c)(?:ões|ao)?\s+[A-D]\s+e\s+[A-D]\b|alternativas?\s+[A-D]\s+e\s+[A-D]\b/i;
+const withShuffledOptions = (q) => {
+  if (!q || !Array.isArray(q.options) || q.options.length < 2) return q;
+  if (typeof q.correctAnswer !== 'number') return q;
+  if (q.options.some(o => typeof o === 'string' && _LETTER_REF.test(o))) return q;
+  const rand = _mulberry32(_xmur3(String(q.id)));
+  const idx = q.options.map((_, i) => i);
+  for (let i = idx.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [idx[i], idx[j]] = [idx[j], idx[i]];
+  }
+  return { ...q, options: idx.map(i => q.options[i]), correctAnswer: idx.indexOf(q.correctAnswer) };
+};
+
 export default function Simulator({ session }) {
   const { certId, type } = useParams();
   const navigate = useNavigate();
@@ -109,7 +145,7 @@ export default function Simulator({ session }) {
         }
       }
 
-      setQuestions(selectedQuestions);
+      setQuestions(selectedQuestions.map(withShuffledOptions));
       setLoading(false);
     };
 

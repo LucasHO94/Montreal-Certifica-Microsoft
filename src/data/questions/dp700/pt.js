@@ -30,7 +30,7 @@ export const questions = [
     "options": [
       "Aumenta automaticamente o número de executores Spark durante picos de processamento para garantir SLA de tempo de execução configurado pelo administrador.",
       "Permite que múltiplos usuários editem o mesmo notebook simultaneamente sem conflitos de versão, similar ao Google Docs para código.",
-      "Permite que múltiplos notebooks compartilhem a mesma sessão Spark ativa, reduzindo o tempo de inicialização de sessão e o consumo de CUs ao evitar a criação de sessões individuais para cada notebook executado em paralelo.",
+      "Permite que múltiplos notebooks compartilhem a mesma sessão Spark ativa, reduzindo o tempo de inicialização de sessão e o consumo de CUs ao evitar a criação.",
       "Habilita a execução de notebooks em múltiplas capacities Fabric simultaneamente para distribuir a carga entre regiões geográficas."
     ],
     "correctAnswer": 2,
@@ -54,7 +54,7 @@ export const questions = [
     "text": "Quais configurações de OneLake podem ser ajustadas nas configurações de workspace do Microsoft Fabric?",
     "options": [
       "Gerenciamento de chaves de criptografia CMK (Customer Managed Keys) para cada workspace individualmente nas configurações de OneLake.",
-      "Habilitação de OneLake integration para Eventhouses (espelhamento Delta), configuração de caching de Shortcuts e definição de regiões de armazenamento para novos itens criados no workspace.",
+      "Habilitação de OneLake integration para Eventhouses (espelhamento Delta), configuração de caching de Shortcuts e definição de regiões de armazenamento para.",
       "Definição da capacidade máxima de armazenamento em GB e configuração de políticas de retenção automática de arquivos antigos.",
       "Configuração de replicação geográfica automática entre regiões Azure para alta disponibilidade dos dados do workspace."
     ],
@@ -131,7 +131,7 @@ export const questions = [
       "Projetos baseados em SQL que definem objetos de banco de dados (tabelas, views, stored procedures) como scripts T-SQL versionados no Git, permitindo desenvolvimento declarativo com comparação de schema, publicação via deploy e integração com CI/CD pipelines.",
       "Templates de projeto que criam automaticamente a estrutura de um Warehouse com tabelas de fatos e dimensões baseados em um schema relacional importado.",
       "Projetos de gerenciamento de banco de dados que fazem backup automático e versionamento dos dados das tabelas Delta no repositório Git do workspace.",
-      "Coleções de notebooks organizados por projeto que compartilham variáveis de ambiente e são executados em sequência definida pelo diagrama de dependências."
+      "Coleções de notebooks organizados por projeto que compartilham variáveis de ambiente e são executados em sequência definida."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -154,7 +154,7 @@ export const questions = [
     "text": "Como um Deployment Pipeline do Fabric é configurado para um fluxo de engenharia de dados com três ambientes (Dev, Test, Prod)?",
     "options": [
       "Configurando três capacities Fabric separadas (uma por ambiente) e usando Shortcuts cross-capacity para compartilhar dados entre os ambientes.",
-      "Criando três branches Git (dev, test, prod) e configurando o Fabric para sincronizar automaticamente cada branch com o workspace correspondente sem necessidade de Deployment Pipeline.",
+      "Criando três branches Git (dev, test, prod) e configurando o Fabric para sincronizar automaticamente cada branch com o workspace correspondente sem.",
       "Criando um Deployment Pipeline com três estágios, associando um workspace a cada estágio, configurando Deployment Rules para substituir strings de conexão e parâmetros específicos por ambiente, e definindo as permissões de quem pode implantar em cada estágio.",
       "Usando Azure DevOps com tasks específicas do Fabric que fazem deploy automaticamente baseado em pull requests aprovados para cada branch de ambiente."
     ],
@@ -229,7 +229,7 @@ export const questions = [
     "text": "O que é o Workspace Logging no Microsoft Fabric e como um engenheiro de dados o configura?",
     "options": [
       "Um recurso que envia logs de operações do workspace (execuções de notebooks, pipelines, acessos a dados) para um Lakehouse ou Eventhouse designado, habilitado nas configurações de workspace em \"Workspace diagnostics settings\" com seleção das categorias de log desejadas.",
-      "Um painel de monitoramento integrado ao workspace que exibe em tempo real os logs de todas as execuções dos últimos 30 dias sem necessidade de configuração adicional.",
+      "Um painel de monitoramento integrado ao workspace que exibe em tempo real os logs de todas as execuções dos últimos 30 dias sem necessidade de configuração.",
       "Uma integração automática com o Azure Monitor que envia todos os logs do workspace para um Log Analytics Workspace configurado no Admin Portal do Fabric.",
       "Uma função do Monitor Hub que consolida logs de múltiplos workspaces em um repositório central gerenciado pelo administrador do tenant Fabric."
     ],
@@ -254,8 +254,8 @@ export const questions = [
     "text": "Como você implementa controle de acesso em nível de arquivo/pasta dentro de um Lakehouse no Microsoft Fabric para um cenário onde times diferentes devem acessar partições diferentes dos dados?",
     "options": [
       "Usando ACLs do OneLake (POSIX-style, baseadas em ADLS Gen2) configuradas via Azure Storage Explorer, SDK do Azure ou Azure CLI para definir permissões de leitura/escrita em pastas específicas dentro do Lakehouse para grupos do Entra ID correspondentes.",
-      "Particionando os dados em Lakehouses separados, um por time, e usando Shortcuts para consolidar os dados em um Lakehouse de leitura compartilhada somente leitura.",
-      "Usando Sensitivity Labels do Purview aplicadas a pastas específicas que restringem automaticamente o acesso por grupo de usuários configurado na política.",
+      "Particionando os dados em Lakehouses separados, um por time, e usando Shortcuts para consolidar os dados em um Lakehouse de.",
+      "Usando Sensitivity Labels do Purview aplicadas a pastas específicas que restringem automaticamente o acesso por grupo de.",
       "Criando funções RLS no SQL Analytics Endpoint do Lakehouse que filtram automaticamente os dados baseado no grupo de segurança do usuário autenticado."
     ],
     "correctAnswer": 0,
@@ -356,7 +356,7 @@ export const questions = [
       "Full load é executada manualmente; incremental load é sempre agendada automaticamente pelo Fabric baseado no volume de novos dados detectados.",
       "Full load usa Data Pipelines; incremental load usa exclusivamente notebooks PySpark com Delta Lake para garantir consistência transacional.",
       "Full load processa dados em lote; incremental load processa dados em streaming em tempo real com latência de milissegundos.",
-      "Full load trunca e recarrega todos os dados da fonte a cada execução; incremental load processa apenas os registros novos ou modificados desde a última execução, usando um watermark (timestamp, ID sequencial ou CDC) para identificar as alterações."
+      "Full load trunca e recarrega todos os dados da fonte a cada execução; incremental load processa apenas os registros novos ou modificados desde a última."
     ],
     "correctAnswer": 3,
     "difficulty": "iniciante",
@@ -379,7 +379,7 @@ export const questions = [
     "text": "Como você implementa um padrão de carga incremental com watermark em um Data Pipeline do Fabric?",
     "options": [
       "Usando a atividade \"Delta Load\" disponível no Data Pipeline que compara automaticamente a fonte e o destino e copia apenas as diferenças.",
-      "Configurando a propriedade \"Incremental Load\" na atividade Copy Data que automaticamente detecta e carrega apenas registros novos sem necessidade de tabela de controle.",
+      "Configurando a propriedade \"Incremental Load\" na atividade Copy Data que automaticamente detecta e carrega apenas registros novos sem necessidade de tabela.",
       "Habilitando o Change Data Capture no pipeline via propriedade \"CDC Mode\" que monitora automaticamente alterações na fonte e as aplica no destino.",
       "Usando uma atividade Lookup para recuperar o último watermark de uma tabela de controle, filtrando a fonte com o watermark na atividade Copy Data, carregando os novos dados no destino e atualizando o watermark na tabela de controle com uma atividade Stored Procedure ou Script."
     ],
@@ -404,9 +404,9 @@ export const questions = [
     "text": "Ao preparar dados para carga em um modelo dimensional (star schema) em um Lakehouse do Fabric, qual é a sequência correta de transformações?",
     "options": [
       "Implementar o modelo dimensional diretamente na camada Bronze usando notebooks PySpark, pois a transformação antecipada reduz o custo de processamento nas etapas subsequentes.",
-      "Carregar dados brutos diretamente na camada Gold, criar o modelo dimensional no Power BI Desktop e publicar o modelo semântico no Fabric para uso pelos analistas.",
+      "Carregar dados brutos diretamente na camada Gold, criar o modelo dimensional no Power BI Desktop e publicar o modelo semântico no Fabric para uso pelos.",
       "Limpar e padronizar dados na camada Silver, criar surrogate keys para dimensões, implementar SCD (Slowly Changing Dimensions) conforme necessário, construir tabelas de fatos com foreign keys para as dimensões e carregar na camada Gold otimizada para consulta.",
-      "Criar primeiro a tabela de fatos com todos os atributos desnormalizados e depois gerar as dimensões extraindo colunas únicas de cada atributo via CTAS no Warehouse."
+      "Criar primeiro a tabela de fatos com todos os atributos desnormalizados e depois gerar as dimensões extraindo colunas únicas de cada atributo via CTAS no."
     ],
     "correctAnswer": 2,
     "difficulty": "intermediario",
@@ -431,7 +431,7 @@ export const questions = [
       "Azure Stream Analytics conectado via Shortcut ao OneLake que processa os dados IoT e grava diretamente nas tabelas Delta do Lakehouse.",
       "Data Pipeline com trigger baseado em evento que processa micro-batches de 1 minuto da fila IoT Hub e carrega no Lakehouse via atividade Copy Data.",
       "Dataflow Gen2 em modo streaming configurado com o conector IoT Hub como fonte e o Lakehouse como destino com latência configurável.",
-      "Eventstream para capturar e rotear os eventos da fonte (IoT Hub, Event Hubs) → Eventhouse para análise em tempo real via KQL → Lakehouse para persistência histórica em Delta via Structured Streaming em notebooks ou destino direto do Eventstream."
+      "Eventstream para capturar e rotear os eventos da fonte (IoT Hub, Event Hubs) → Eventhouse para análise em tempo real via KQL → Lakehouse para persistência."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
@@ -454,8 +454,8 @@ export const questions = [
     "text": "Um engenheiro precisa armazenar dados de log em formato semi-estruturado (JSON) com necessidade de consultas SQL ad-hoc por analistas e processamento Spark para ML. Qual data store do Fabric é mais adequado?",
     "options": [
       "Eventhouse com KQL Database, pois é otimizado para dados semi-estruturados de log com ingestão rápida e consultas KQL de alta performance.",
-      "Warehouse, pois suporta T-SQL nativo com OPENJSON para processar dados JSON e tem melhor desempenho para consultas analíticas dos analistas.",
-      "SQL Database do Fabric, pois combina suporte a JSON via colunas nvarchar com processamento transacional ACID necessário para dados de log em alta velocidade.",
+      "Warehouse, pois suporta T-SQL nativo com OPENJSON para processar dados JSON e tem melhor desempenho para.",
+      "SQL Database do Fabric, pois combina suporte a JSON via colunas nvarchar com processamento transacional ACID necessário para.",
       "Lakehouse, que suporta armazenamento de arquivos JSON na seção Files, processamento via notebooks PySpark para ML, e exposição via SQL Analytics Endpoint para consultas SQL pelos analistas."
     ],
     "correctAnswer": 3,
@@ -904,9 +904,9 @@ export const questions = [
     "text": "Um Data Pipeline falhou com erro \"The specified path does not exist\" ao tentar ler arquivos de um Lakehouse. Qual é a abordagem correta para identificar e resolver o problema?",
     "options": [
       "Verificar no Monitor Hub os detalhes do erro com o caminho exato tentado, validar se o arquivo existe no Lakehouse via OneLake File Explorer ou notebook, corrigir o caminho na atividade Copy Data ou implementar a atividade \"Get Metadata\" para verificar existência antes da cópia.",
-      "Recriar o Lakehouse e reimplantar o pipeline, pois erros de caminho indicam corrupção de metadados no OneLake que não pode ser corrigida sem recriar o item.",
+      "Recriar o Lakehouse e reimplantar o pipeline, pois erros de caminho indicam corrupção de metadados no OneLake que não pode.",
       "Reiniciar a capacity Fabric para limpar o cache de metadados do OneLake que pode estar desatualizado e causando o erro de caminho não encontrado.",
-      "Verificar as permissões do Service Principal usado pelo pipeline, pois erro de caminho não encontrado geralmente indica falta de permissão ReadAll no Lakehouse."
+      "Verificar as permissões do Service Principal usado pelo pipeline, pois erro de caminho não encontrado geralmente indica falta de."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -954,8 +954,8 @@ export const questions = [
     "text": "Um Notebook Fabric está demorando muito para processar uma join entre duas tabelas Delta grandes. Qual técnica de otimização PySpark é mais eficaz quando uma das tabelas é pequena (< 100 MB)?",
     "options": [
       "Usar Broadcast Join com `df_grande.join(broadcast(df_pequena), \"chave\")`",
-      "Usar `df_grande.repartition(200, \"chave\").join(df_pequena.repartition(200, \"chave\"), \"chave\")` para garantir que os dados de mesma chave estejam na mesma partição.",
-      "Converter ambas as tabelas para formato Parquet sem particionamento antes do join, pois Delta Lake adiciona overhead de leitura do transaction log que impacta joins.",
+      "Usar `df_grande.repartition(200, \"chave\").join(df_pequena.repartition(200, \"chave\"), \"chave\")` para garantir que os dados de mesma chave estejam na mesma.",
+      "Converter ambas as tabelas para formato Parquet sem particionamento antes do join, pois Delta Lake adiciona overhead de leitura do transaction log que.",
       "Habilitar o Adaptive Query Execution (AQE) com `spark.conf.set(\"spark.sql.adaptive.enabled\", \"true\")` que automaticamente escolhe a estratégia de join mais eficiente."
     ],
     "correctAnswer": 0,
@@ -1004,9 +1004,9 @@ export const questions = [
     "text": "Um Warehouse do Fabric está com queries de relatório lentas envolvendo múltiplos JOINs. Quais ações melhoram o desempenho?",
     "options": [
       "Criar estatísticas de coluna nas colunas de JOIN e filtro com `CREATE STATISTICS`, usar CTAS para criar tabelas de agregação pré-calculadas, analisar o plano de execução via Query Insights e verificar a distribuição de dados para evitar skew.",
-      "Converter o Warehouse para um Lakehouse e usar o SQL Analytics Endpoint, que tem desempenho superior para queries com múltiplos JOINs por usar Spark como motor de execução.",
+      "Converter o Warehouse para um Lakehouse e usar o SQL Analytics Endpoint, que tem desempenho superior para queries com múltiplos JOINs por usar Spark como.",
       "Criar índices clusterizados nas colunas de JOIN usando `CREATE CLUSTERED INDEX`",
-      "Aumentar o número de nós do Warehouse nas configurações de capacity, pois queries lentas com JOINs indicam insuficiência de recursos computacionais dedicados ao item."
+      "Aumentar o número de nós do Warehouse nas configurações de capacity, pois queries lentas com JOINs indicam insuficiência de recursos computacionais dedicados."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -1028,8 +1028,8 @@ export const questions = [
     "id": "dp700_q42",
     "text": "Qual é a diferença entre os padrões ETL (Extract-Transform-Load) e ELT (Extract-Load-Transform) e qual é mais comum no Microsoft Fabric?",
     "options": [
-      "São sinônimos modernos; a distinção foi eliminada com plataformas cloud como o Fabric que executam transformação e carga simultaneamente em um único passo.",
-      "ETL transforma dados antes de carregar no destino (processamento externo); ELT carrega dados brutos primeiro e transforma no destino usando o poder computacional da plataforma; no Fabric, ELT é mais comum pois aproveita Spark e SQL nativos do Lakehouse/Warehouse.",
+      "São sinônimos modernos; a distinção foi eliminada com plataformas cloud como o Fabric que executam transformação e carga.",
+      "ETL transforma dados antes de carregar no destino (processamento externo); ELT carrega dados brutos primeiro e transforma no destino usando o poder.",
       "ETL usa Data Pipelines; ELT usa exclusivamente Notebooks PySpark; o Fabric suporta apenas ELT por design da arquitetura Medallion.",
       "ETL é mais adequado para dados em batch; ELT é exclusivo para dados de streaming; o Fabric usa automaticamente o padrão correto baseado no tipo de fonte."
     ],
@@ -1055,7 +1055,7 @@ export const questions = [
     "options": [
       "Configurando partições separadas por região no Delta Lake e usando ACLs do OneLake para restringir acesso de cada analista à pasta de sua região.",
       "Criando uma security policy T-SQL com predicado inline usando `SESSION_CONTEXT()` ou `SYSTEM_USER`, ou usando views filtradas por `SUSER_SNAME()` combinadas com uma tabela de mapeamento usuário-região, concedendo acesso apenas às views.",
-      "Usando Sensitivity Labels do Purview com política de acesso condicional que filtra automaticamente as linhas baseado no atributo de departamento do token Azure AD.",
+      "Usando Sensitivity Labels do Purview com política de acesso condicional que filtra automaticamente as linhas baseado no atributo de departamento do token.",
       "Criando um modelo semântico com RLS DAX sobre o SQL Analytics Endpoint e obrigando todos os analistas a acessar apenas via Power BI."
     ],
     "correctAnswer": 1,
@@ -1130,7 +1130,7 @@ export const questions = [
     "options": [
       "Conectando o path \"On Failure\" de volta para a mesma atividade Copy Data, criando um loop de retry controlado por uma variável de contador.",
       "Configurando um trigger de evento no workspace que detecta falhas do pipeline e o reexecuta automaticamente com os mesmos parâmetros.",
-      "Configurando as propriedades \"Retry\" (número de tentativas) e \"Retry interval\" (tempo de espera entre tentativas) diretamente nas propriedades da atividade Copy Data, sem necessidade de lógica adicional no pipeline.",
+      "Configurando as propriedades \"Retry\" (número de tentativas) e \"Retry interval\" (tempo de espera entre tentativas) diretamente.",
       "Usando a atividade \"Until\" que envolve o Copy Data e tenta novamente enquanto uma variável de erro não for nula, com limite máximo de iterações configurável."
     ],
     "correctAnswer": 2,
@@ -1155,7 +1155,7 @@ export const questions = [
     "options": [
       "Consultando as tabelas de log geradas no Lakehouse de destino via SQL Analytics Endpoint ou PySpark, filtrando por `ItemId` ou `ItemName` do Lakehouse alvo e `Timestamp` das últimas 24 horas e agrupando por `UserId`.",
       "Usando o Microsoft Purview Audit Log API com filtro por `workload = \"Lakehouse\"` e intervalo de tempo das últimas 24 horas para obter os acessos.",
-      "Consultando a tabela `sys.dm_exec_sessions` no SQL Analytics Endpoint do Lakehouse monitorado que registra automaticamente todas as sessões de acesso.",
+      "Consultando a tabela `sys.dm_exec_sessions` no SQL Analytics Endpoint do Lakehouse monitorado que registra.",
       "Acessando o Monitor Hub e filtrando por tipo de item \"Lakehouse\" e período de tempo, que exibe automaticamente os logs de acesso por usuário."
     ],
     "correctAnswer": 0,
@@ -1229,7 +1229,7 @@ export const questions = [
     "text": "Qual é a diferença entre os níveis de endorsement \"Promoted\" e \"Certified\" para itens do Microsoft Fabric?\n## LOTE 2 — Questões 51 a 100 | DP-700",
     "options": [
       "São equivalentes em nível de confiança; a diferença é apenas visual",
-      "\"Promoted\" é configurado no Admin Portal pelo administrador do tenant; \"Certified\" é atribuído automaticamente pelo Microsoft Purview após validação de qualidade de dados.",
+      "\"Promoted\" é configurado no Admin Portal pelo administrador do tenant; \"Certified\" é atribuído automaticamente pelo Microsoft Purview após validação de.",
       "\"Promoted\" pode ser aplicado por qualquer membro do workspace para indicar que o item está pronto para uso; \"Certified\" requer permissão especial concedida pelo administrador do tenant e indica validação formal por um processo de governança organizacional.",
       "\"Promoted\" aplica-se apenas a relatórios e dashboards; \"Certified\" aplica-se apenas a modelos semânticos e Lakehouses como fontes de dados confiáveis."
     ],
@@ -1280,7 +1280,7 @@ export const questions = [
     "options": [
       "Usar `df.repartition(500)` para distribuir melhor os dados entre executores, processar em chunks com `df.filter()` por partição temporal, usar `persist(StorageLevel.DISK_ONLY)` para spill controlado, e otimizar transformações para evitar shuffles desnecessários.",
       "Usar `df.coalesce(1)` para consolidar todos os dados em um único executor que tem acesso a toda a memória disponível do nó driver.",
-      "Desabilitar o lazy evaluation com `spark.conf.set(\"spark.sql.lazy.evaluation\", \"false\")` para que o Spark aloque memória previamente e evite o erro em tempo de execução.",
+      "Desabilitar o lazy evaluation com `spark.conf.set(\"spark.sql.lazy.evaluation\", \"false\")` para que o Spark aloque memória previamente e evite o erro em tempo.",
       "Converter o DataFrame para pandas com `df.toPandas()` antes do processamento, pois pandas tem gerenciamento de memória superior ao PySpark para grandes volumes."
     ],
     "correctAnswer": 0,
@@ -1353,9 +1353,9 @@ export const questions = [
     "id": "dp700_q55",
     "text": "Por que é recomendado definir o schema explicitamente ao ler arquivos CSV em PySpark no Fabric em vez de usar `inferSchema=True`?",
     "options": [
-      "`inferSchema=True` usa sempre o tipo String para todas as colunas por segurança; a inferência real de tipos requer bibliotecas externas não disponíveis no Fabric.",
-      "`inferSchema=True` funciona apenas para arquivos com menos de 1 milhão de linhas; arquivos maiores requerem schema explícito para evitar timeout durante a inferência.",
-      "`inferSchema=True` não é suportado no runtime Spark do Fabric; é necessário sempre definir o schema explicitamente usando `StructType` para evitar erros de execução.",
+      "`inferSchema=True` usa sempre o tipo String para todas as colunas por segurança; a inferência real de tipos requer bibliotecas externas não disponíveis no.",
+      "`inferSchema=True` funciona apenas para arquivos com menos de 1 milhão de linhas; arquivos maiores requerem schema explícito para evitar timeout durante a.",
+      "`inferSchema=True` não é suportado no runtime Spark do Fabric; é necessário sempre definir o schema explicitamente usando.",
       "`inferSchema=True` requer uma passagem extra pelos dados para inferir os tipos, aumentando o tempo de leitura; schemas inferidos podem ser incorretos (ex: IDs numéricos lidos como inteiros quando deveriam ser strings); schema explícito é mais eficiente e confiável em produção."
     ],
     "correctAnswer": 3,
@@ -1428,10 +1428,10 @@ export const questions = [
     "id": "dp700_q58",
     "text": "Como você restringe o acesso de um grupo de usuários a uma tabela específica no SQL Analytics Endpoint de um Lakehouse no Fabric?",
     "options": [
-      "Criando uma sensitivity label de nível Confidential na tabela, que automaticamente restringe o acesso via SQL a usuários sem licença Microsoft 365 E5 Compliance.",
+      "Criando uma sensitivity label de nível Confidential na tabela, que automaticamente restringe o acesso via SQL a usuários sem licença Microsoft 365 E5.",
       "Configurando OLS (Object-Level Security) no modelo semântico Power BI conectado ao Lakehouse, que propaga automaticamente a restrição para o SQL Analytics Endpoint.",
       "Usando `DENY SELECT ON [dbo].[tabela_restrita] TO [grupo_usuarios]` via T-SQL no SQL Analytics Endpoint, ou criando views que expõem apenas as tabelas permitidas e concedendo `GRANT SELECT` apenas nas views.",
-      "Usando ACLs do OneLake para restringir acesso aos arquivos Delta da tabela, que automaticamente bloqueia o acesso via SQL Analytics Endpoint para usuários não autorizados."
+      "Usando ACLs do OneLake para restringir acesso aos arquivos Delta da tabela, que automaticamente bloqueia o acesso via SQL Analytics Endpoint para usuários."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -1453,7 +1453,7 @@ export const questions = [
     "id": "dp700_q59",
     "text": "Em uma arquitetura Medallion implementada em um Lakehouse do Fabric, quais transformações são tipicamente aplicadas na camada Silver?",
     "options": [
-      "Aplicação de criptografia em colunas sensíveis, compressão de dados históricos e arquivamento de registros com mais de 2 anos para redução de custos de armazenamento.",
+      "Aplicação de criptografia em colunas sensíveis, compressão de dados históricos e arquivamento de registros com mais de 2.",
       "Limpeza e padronização de dados (remoção de duplicatas, tratamento de nulos, normalização de formatos), validação de schema, enriquecimento básico com dados de referência e conversão para formato Delta com tipos de dados corretos.",
       "Recepção de dados brutos das fontes originais sem qualquer transformação, mantendo o formato e estrutura originais como fonte da verdade histórica.",
       "Criação de agregações e métricas de negócio, construção do modelo dimensional (star schema) e otimização para consumo por ferramentas de BI e analistas."
@@ -1479,9 +1479,9 @@ export const questions = [
     "text": "Em um Eventhouse do Fabric, como você monitora a taxa de ingestão de dados em tempo real para verificar se os eventos estão chegando conforme esperado?",
     "options": [
       "Usando o Monitor Hub do Fabric filtrado por tipo \"Eventhouse\" que exibe métricas de ingestão em tempo real para todos os KQL Databases do workspace.",
-      "Acessando o Azure Event Hubs no portal Azure e verificando as métricas de \"Incoming Messages\" que mostram os eventos recebidos antes da ingestão no Eventhouse.",
+      "Acessando o Azure Event Hubs no portal Azure e verificando as métricas de \"Incoming Messages\" que mostram os eventos recebidos.",
       "Usando o comando KQL `.show ingestion failures` para verificar falhas, `Telemetria | summarize count() by bin(ingestion_time(), 1m)` para ver a taxa por minuto, e o painel de métricas do Eventhouse no portal Fabric que exibe throughput de ingestão.",
-      "Consultando a tabela `system.ingestion_monitoring` no KQL Database que registra automaticamente todas as operações de ingestão com timestamps e volumes."
+      "Consultando a tabela `system.ingestion_monitoring` no KQL Database que registra automaticamente todas as operações de."
     ],
     "correctAnswer": 2,
     "difficulty": "intermediario",
@@ -1503,9 +1503,9 @@ export const questions = [
     "id": "dp700_q61",
     "text": "Como você implementa um padrão de pipeline no Fabric onde a lista de tabelas a processar é lida dinamicamente de uma tabela de configuração no Lakehouse?",
     "options": [
-      "Criando um Notebook com PySpark que lê a configuração e chama a API REST do Fabric para disparar pipelines individuais para cada tabela via `mssparkutils.notebook.run()`.",
+      "Criando um Notebook com PySpark que lê a configuração e chama a API REST do Fabric para disparar pipelines individuais para.",
       "Atividade Web chama uma API REST que retorna a lista de tabelas em JSON → atividade ForEach processa o JSON com expressão `@json(activity('Web').output.content)`.",
-      "Atividade Script lê a tabela de configuração e cria variáveis de pipeline → atividade Switch redireciona para branches individuais para cada tabela configurada.",
+      "Atividade Script lê a tabela de configuração e cria variáveis de pipeline → atividade Switch redireciona para branches.",
       "Atividade Lookup lê a tabela de configuração retornando a lista de tabelas → atividade ForEach itera sobre `@activity('Lookup').output.value` → dentro do ForEach, atividade Copy Data usa `@item().nome_tabela` dinamicamente como parâmetro de source e sink."
     ],
     "correctAnswer": 3,
@@ -1528,9 +1528,9 @@ export const questions = [
     "id": "dp700_q62",
     "text": "Como Database Projects do Fabric se integram com Azure DevOps para um fluxo de CI/CD de engenharia de dados?",
     "options": [
-      "A integração é automática; qualquer commit no repositório Git do workspace é imediatamente aplicado no Warehouse de produção sem necessidade de pipeline CI/CD adicional.",
+      "A integração é automática; qualquer commit no repositório Git do workspace é imediatamente aplicado no Warehouse de produção sem necessidade de pipeline.",
       "O projeto SQL é versionado no Azure Repos como scripts T-SQL; um pipeline YAML do Azure DevOps compila o projeto (dacpac), executa testes de integração e publica as mudanças de schema no Warehouse de destino via SqlPackage ou extensão Fabric do DevOps.",
-      "Database Projects usam apenas pipelines do Fabric (não Azure DevOps); a publicação é feita via Deployment Pipeline do Fabric com regras de substituição de connection strings.",
+      "Database Projects usam apenas pipelines do Fabric (não Azure DevOps); a publicação é feita via Deployment Pipeline do Fabric com regras de substituição de.",
       "O Database Project é exportado como arquivo .bacpac mensalmente e importado manualmente no Warehouse de produção pelo DBA responsável pela governança de schema."
     ],
     "correctAnswer": 1,
@@ -1553,9 +1553,9 @@ export const questions = [
     "id": "dp700_q63",
     "text": "Um job de Structured Streaming no Fabric está com latência crescente ao longo do tempo. Qual é a causa mais provável e como diagnosticar?",
     "options": [
-      "Fragmentação dos arquivos checkpoint que cresce indefinidamente; limpar o diretório de checkpoint e reiniciar o stream do início para resolver a latência crescente.",
+      "Fragmentação dos arquivos checkpoint que cresce indefinidamente; limpar o diretório de checkpoint e reiniciar o stream do.",
       "Memory leak no driver Spark causado por acumulação de variáveis Python não liberadas; reiniciar a sessão periodicamente e usar `del variavel; gc.collect()` após cada micro-batch.",
-      "Acúmulo de dados não processados (backlog) por throughput insuficiente; diagnosticar via Spark UI na aba \"Structured Streaming\" verificando métricas de \"inputRowsPerSecond\" vs \"processedRowsPerSecond\" e ajustar `trigger(processingTime)` ou aumentar o paralelismo.",
+      "Acúmulo de dados não processados (backlog) por throughput insuficiente; diagnosticar via Spark UI na aba \"Structured Streaming\" verificando métricas de.",
       "Conflito de transações Delta Lake entre o stream de escrita e queries de leitura concorrentes; usar `option(\"txnAppId\", uuid)` para isolar as transações do stream."
     ],
     "correctAnswer": 2,
@@ -1604,7 +1604,7 @@ export const questions = [
     "text": "Como Sensitivity Labels do Microsoft Purview são aplicadas a itens do Microsoft Fabric por um engenheiro de dados?",
     "options": [
       "Via Power BI Desktop na propriedade \"Information Protection\" do relatório ou modelo, que propaga automaticamente para todos os itens relacionados no Fabric.",
-      "Apenas via Microsoft Purview Compliance Portal pelo administrador de conformidade; engenheiros de dados não têm permissão para aplicar ou alterar sensitivity labels.",
+      "Apenas via Microsoft Purview Compliance Portal pelo administrador de conformidade; engenheiros de dados não têm permissão para aplicar ou alterar sensitivity.",
       "Via interface do Fabric (botão de sensitivity label no item), via API REST do Fabric programaticamente, ou via políticas de auto-labeling do Purview que aplicam labels automaticamente baseado em classificação de conteúdo detectada nos dados.",
       "Via configurações de workspace no Admin Portal do Fabric, onde o administrador define qual label é aplicada a todos os itens do workspace automaticamente."
     ],
@@ -1704,8 +1704,8 @@ export const questions = [
     "text": "Em um KQL Database do Eventhouse, como você configura uma política de ingestão em batch para otimizar o custo de ingestão de dados que chegam em alto volume mas não requerem latência de segundos?",
     "options": [
       "Usando `.alter table NomeTabela policy ingestionbatching @'{\"MaximumBatchingTimeSpan\":\"00:05:00\",\"MaximumNumberOfItems\":10000,\"MaximumRawDataSizeMB\":1024}'` para agrupar registros antes da ingestão e reduzir o overhead de transações individuais.",
-      "Configurando `spark.conf.set(\"eventhouse.batching.enabled\", \"true\")` no notebook PySpark que envia dados para o Eventhouse via Structured Streaming.",
-      "Usando `.set-or-replace NomeTabela <| query` que automaticamente agrupa os dados em batch de 5 minutos antes de confirmar a transação de ingestão.",
+      "Configurando `spark.conf.set(\"eventhouse.batching.enabled\", \"true\")` no notebook PySpark que envia dados para o.",
+      "Usando `.set-or-replace NomeTabela <| query` que automaticamente agrupa os dados em batch de 5 minutos antes de.",
       "Habilitando a opção \"Batch Ingestion Mode\" nas configurações do Eventstream antes de rotear os dados para o Eventhouse como destino."
     ],
     "correctAnswer": 0,
@@ -1755,7 +1755,7 @@ export const questions = [
     "options": [
       "Configurar retry com backoff exponencial na atividade Web usando as propriedades de retry, adicionar uma atividade \"Wait\" com duração dinâmica baseada no cabeçalho `Retry-After` da resposta 429, e considerar implementar circuit breaker com atividade \"If Condition\" para pausar após N falhas consecutivas.",
       "Criar um Service Principal dedicado para o pipeline com tier de API mais alto, pois erros 429 indicam que a cota da conta de serviço foi excedida.",
-      "Aumentar o timeout da atividade Web de 30 segundos para 300 segundos, pois o erro 429 indica que a API está demorando mais que o timeout configurado para responder.",
+      "Aumentar o timeout da atividade Web de 30 segundos para 300 segundos, pois o erro 429 indica que a API está demorando mais que o timeout configurado para.",
       "Substituir a atividade Web por uma atividade Copy Data com o conector REST, que tem tratamento automático de rate limiting com retry inteligente embutido."
     ],
     "correctAnswer": 0,
@@ -1778,7 +1778,7 @@ export const questions = [
     "id": "dp700_q72",
     "text": "Em um Notebook Fabric, quando é apropriado usar uma UDF (User Defined Function) Python e qual é seu impacto de performance?",
     "options": [
-      "UDFs Python são adequadas para lógica complexa não disponível em funções Spark nativas; têm impacto de performance pois quebram a otimização Catalyst e serializam dados entre JVM e Python por linha; preferir funções nativas do Spark ou Pandas UDFs (vectorized) quando possível.",
+      "UDFs Python são adequadas para lógica complexa não disponível em funções Spark nativas; têm impacto de performance pois quebram a otimização Catalyst e.",
       "UDFs Python têm melhor performance que funções Spark nativas pois executam diretamente no Python sem overhead de tradução para bytecode JVM.",
       "UDFs são sempre executadas no nó driver sem paralelismo, independente do número de executores; devem ser usadas apenas para transformações de dados com menos de 1 milhão de linhas.",
       "UDFs no Fabric Spark são compiladas JIT automaticamente pelo runtime, eliminando o overhead de serialização presente em versões anteriores do PySpark."
@@ -1806,7 +1806,7 @@ export const questions = [
       "O Fabric cancela automaticamente todos os jobs em execução e bloqueia novas submissões até que a utilização caia abaixo de 80% por 5 minutos consecutivos.",
       "O Fabric aplica throttling (limitação de recursos) enfileirando ou atrasando operações interativas e em background; operações críticas têm prioridade; o Capacity Metrics App mostra o período de smoothing e o impacto do throttling por tipo de workload.",
       "O Fabric escala automaticamente para uma capacity maior quando a utilização excede 100% por mais de 1 minuto, cobrando o custo adicional automaticamente.",
-      "Apenas workloads de baixa prioridade são cancelados; jobs críticos como refreshes de modelos semânticos têm garantia de execução independente da utilização da capacity."
+      "Apenas workloads de baixa prioridade são cancelados; jobs críticos como refreshes de modelos semânticos têm garantia de."
     ],
     "correctAnswer": 1,
     "difficulty": "intermediario",
@@ -1831,7 +1831,7 @@ export const questions = [
       "Mirroring replica continuamente as alterações em near real-time via CDC sem necessidade de desenvolver lógica de pipeline; Data Pipeline oferece mais controle sobre transformações, agendamento e orquestração mas requer desenvolvimento e manutenção da lógica de extração incremental.",
       "Mirroring suporta apenas fontes Azure; Data Pipeline suporta fontes on-premises e multicloud; para SQL Server on-premises é obrigatório usar Data Pipeline com gateway.",
       "Mirroring é mais caro que Data Pipeline pois consome CUs continuamente; Data Pipeline é mais econômico pois só consume CUs durante a execução agendada.",
-      "Mirroring cria uma cópia exata somente leitura da fonte no Fabric; Data Pipeline permite transformações mas não garante consistência transacional dos dados copiados."
+      "Mirroring cria uma cópia exata somente leitura da fonte no Fabric; Data Pipeline permite transformações mas não garante consistência transacional dos dados."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -1903,7 +1903,7 @@ export const questions = [
     "id": "dp700_q77",
     "text": "Qual é a vantagem de usar um Environment no Fabric em vez de instalar bibliotecas com `%pip install` diretamente no notebook?",
     "options": [
-      "`%pip install` não está disponível em notebooks de produção no Fabric; a única forma de instalar bibliotecas é via Environment configurado pelo administrador do workspace.",
+      "`%pip install` não está disponível em notebooks de produção no Fabric; a única forma de instalar bibliotecas é via Environment configurado pelo administrador.",
       "Environments permitem instalar bibliotecas Java (.jar) e Scala além de Python, enquanto `%pip install` suporta apenas pacotes Python do PyPI.",
       "Environments são mais rápidos pois as bibliotecas são pré-compiladas para o runtime Spark do Fabric, enquanto `%pip install` compila as bibliotecas em tempo de execução.",
       "Um Environment persiste as bibliotecas e configurações Spark entre sessões e notebooks do workspace, evita reinstalação a cada sessão, garante consistência de versões entre todos os notebooks e pode ser reutilizado por múltiplos notebooks sem duplicação de configuração."
@@ -1954,7 +1954,7 @@ export const questions = [
     "text": "Em um Deployment Pipeline do Fabric com estágios Dev→Test→Prod, como você configura uma Deployment Rule para que o Lakehouse de destino seja diferente em cada ambiente?",
     "options": [
       "Editando manualmente as connection strings nos itens do workspace de produção após cada deploy, pois Deployment Rules não suportam mapeamento de Lakehouses entre ambientes.",
-      "Nas configurações do estágio de destino no Deployment Pipeline, criando uma regra do tipo \"Lakehouse Rule\" que substitui o Lakehouse de origem pelo Lakehouse de destino correspondente ao ambiente, mapeando o ID do item fonte para o ID do item destino.",
+      "Nas configurações do estágio de destino no Deployment Pipeline, criando uma regra do tipo \"Lakehouse Rule\" que substitui o Lakehouse de origem pelo Lakehouse.",
       "Criando arquivos de configuração `.env` no repositório Git para cada branch de ambiente que o Fabric lê automaticamente durante a sincronização.",
       "Usando parâmetros de pipeline que referenciam variáveis de ambiente definidas nas configurações de workspace, que são automaticamente substituídas durante o deploy."
     ],
@@ -2003,10 +2003,10 @@ export const questions = [
     "id": "dp700_q81",
     "text": "Um engenheiro precisa decidir a estratégia de particionamento para uma tabela Delta de 500 GB com queries predominantemente filtradas por \"ano\" e \"regiao\". Qual é a abordagem correta?",
     "options": [
-      "Particionar por ambas as colunas usando `partitionBy(\"ano\", \"regiao\")`, criando uma estrutura hierárquica que otimiza queries com filtros em ambas as colunas simultaneamente.",
-      "Não particionar a tabela e usar apenas Z-ORDER BY nas duas colunas, pois particionamento em tabelas Delta acima de 100 GB sempre degrada o desempenho de escrita.",
-      "Particionar por \"ano\" (baixa cardinalidade, bom para partition pruning) e aplicar Z-ORDER BY \"regiao\" dentro de cada partição (alta cardinalidade relativa), evitando particionar por \"regiao\" diretamente pois geraria muitas partições pequenas prejudicando o desempenho.",
-      "Particionar por \"regiao\" com maior cardinalidade para garantir que cada partição seja pequena o suficiente para ser processada por um único executor Spark."
+      "Particionar por ambas as colunas usando `partitionBy(\"ano\", \"regiao\")`, criando uma estrutura hierárquica que otimiza queries.",
+      "Não particionar a tabela e usar apenas Z-ORDER BY nas duas colunas, pois particionamento em tabelas Delta acima de 100 GB.",
+      "Particionar por \"ano\" (baixa cardinalidade, bom para partition pruning) e aplicar Z-ORDER BY \"regiao\" dentro de cada partição.",
+      "Particionar por \"regiao\" com maior cardinalidade para garantir que cada partição seja pequena o suficiente para ser."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -2154,8 +2154,8 @@ export const questions = [
     "text": "O que é o Adaptive Query Execution (AQE) no Spark e como ele é habilitado no Fabric para melhorar automaticamente o desempenho de queries?",
     "options": [
       "AQE otimiza apenas queries SQL; transformações PySpark com DataFrames não se beneficiam do AQE independente da configuração habilitada.",
-      "AQE deve ser desabilitado em produção no Fabric pois a reotimização em tempo de execução consome CUs adicionais que podem causar throttling inesperado.",
-      "AQE é uma funcionalidade exclusiva do Azure Databricks não disponível no Fabric Spark; alternativas são Z-Ordering e Broadcast Join para otimização de queries no Fabric.",
+      "AQE deve ser desabilitado em produção no Fabric pois a reotimização em tempo de execução consome CUs adicionais que.",
+      "AQE é uma funcionalidade exclusiva do Azure Databricks não disponível no Fabric Spark; alternativas são Z-Ordering e Broadcast Join para otimização de.",
       "AQE reotimiza o plano de execução em tempo de execução usando estatísticas reais das stages concluídas (como tamanho de partições e skew de dados), podendo ajustar automaticamente joins, coalescer partições pequenas e tratar skew; habilitado com `spark.conf.set(\"spark.sql.adaptive.enabled\", \"true\")` — ativado por padrão no Fabric Runtime 1.2+."
     ],
     "correctAnswer": 3,
@@ -2206,7 +2206,7 @@ export const questions = [
       "Aumentar o limite de colunas da tabela Delta com `ALTER TABLE nome SET TBLPROPERTIES ('delta.columnMapping.mode' = 'name', 'delta.minReaderVersion' = '2')` antes de tentar o append.",
       "O schema do DataFrame de entrada tem colunas novas ou tipos diferentes da tabela Delta; resolver com `.option(\"mergeSchema\", \"true\")` para adicionar novas colunas automaticamente, ou com `.option(\"overwriteSchema\", \"true\")` para substituir completamente — este último apaga dados existentes se combinado com `mode(\"overwrite\")`.",
       "Converter a tabela Delta para formato Parquet sem schema enforcement usando `spark.conf.set(\"spark.sql.parquet.enableVectorizedReader\", \"false\")` para aceitar qualquer schema.",
-      "A tabela Delta está corrompida e precisa ser recriada; executar `RESTORE TABLE nome TO VERSION AS OF 0` para voltar ao estado inicial e reprocessar todos os dados."
+      "A tabela Delta está corrompida e precisa ser recriada; executar `RESTORE TABLE nome TO VERSION AS OF 0` para voltar ao estado."
     ],
     "correctAnswer": 1,
     "difficulty": "avancado",
@@ -2279,8 +2279,8 @@ export const questions = [
     "text": "Como você configura alertas automáticos para notificar a equipe quando um refresh de modelo semântico falha no Microsoft Fabric?",
     "options": [
       "Nas configurações do modelo semântico no Fabric Service, habilitando notificações de refresh com e-mails para os contatos configurados em caso de falha, ou usando a API REST do Fabric para monitorar status de refresh e integrar com sistemas externos via Power Automate.",
-      "Criando uma Azure Monitor Alert Rule que detecta eventos de falha de refresh via métricas do Log Analytics Workspace automaticamente associado ao Fabric.",
-      "Usando o Microsoft Purview para criar políticas de alerta de qualidade de dados que detectam quando um modelo semântico não é atualizado no prazo esperado.",
+      "Criando uma Azure Monitor Alert Rule que detecta eventos de falha de refresh via métricas do Log Analytics Workspace.",
+      "Usando o Microsoft Purview para criar políticas de alerta de qualidade de dados que detectam quando um modelo semântico não.",
       "Configurando um webhook no Azure Event Grid que captura eventos de falha de refresh do Fabric e dispara notificações via Azure Communication Services."
     ],
     "correctAnswer": 0,
@@ -2328,7 +2328,7 @@ export const questions = [
     "id": "dp700_q94",
     "text": "Qual é a diferença entre parâmetros e variáveis em um Data Pipeline do Fabric?",
     "options": [
-      "Parâmetros suportam apenas tipos primitivos (string, int, bool); variáveis suportam tipos complexos como arrays e objetos JSON para armazenamento de resultados intermediários.",
+      "Parâmetros suportam apenas tipos primitivos (string, int, bool); variáveis suportam tipos complexos como arrays e objetos JSON para armazenamento de.",
       "São equivalentes em funcionalidade; parâmetros são usados por convenção para valores externos e variáveis para valores internos, sem diferença técnica real de comportamento.",
       "Parâmetros são persistidos entre execuções do pipeline; variáveis são reinicializadas a cada execução, perdendo o valor da execução anterior.",
       "Parâmetros são valores de entrada definidos externamente ao pipeline (passados no trigger ou chamada), imutáveis durante a execução; variáveis são valores internos mutáveis que podem ser modificados por atividades \"Set Variable\" ao longo da execução do pipeline."
@@ -2354,7 +2354,7 @@ export const questions = [
     "text": "Em um Notebook Fabric com PySpark, como você usa o cache de forma estratégica para melhorar o desempenho de um DataFrame que é referenciado múltiplas vezes?",
     "options": [
       "Usando `df.cache()` ou `df.persist(StorageLevel.MEMORY_AND_DISK)` após a transformação inicial e antes de múltiplas ações sobre o mesmo DataFrame, forçando a materialização com `df.count()` e liberando com `df.unpersist()` quando não for mais necessário.",
-      "O Spark cacheia automaticamente DataFrames referenciados mais de uma vez; não é necessária intervenção manual pois o Catalyst optimizer detecta e aplica cache automaticamente.",
+      "O Spark cacheia automaticamente DataFrames referenciados mais de uma vez; não é necessária intervenção manual pois o Catalyst optimizer detecta e aplica.",
       "Usando `df.checkpoint()` que armazena o DataFrame no diretório de checkpoint do HDFS, eliminando o plano de execução e melhorando o desempenho de DataFrames com lineage muito longa.",
       "Usando `spark.catalog.cacheTable(\"nome_tabela\")` que cacheia a tabela Delta subjacente em memória, beneficiando todos os DataFrames que leem dessa tabela no workspace."
     ],
@@ -2378,7 +2378,7 @@ export const questions = [
     "id": "dp700_q96",
     "text": "Como você adiciona uma constraint de CHECK em uma tabela Delta no Lakehouse do Fabric para garantir que valores de uma coluna \"quantidade\" sejam sempre positivos?",
     "options": [
-      "Criando uma coluna calculada `quantidade_validada = CASE WHEN quantidade > 0 THEN quantidade ELSE NULL END` que filtra automaticamente valores inválidos na leitura.",
+      "Criando uma coluna calculada `quantidade_validada = CASE WHEN quantidade > 0 THEN quantidade ELSE NULL END` que filtra automaticamente valores inválidos na.",
       "`spark.sql(\"ALTER TABLE nome_tabela MODIFY COLUMN quantidade INT NOT NULL CHECK (quantidade > 0)\")`",
       "`spark.sql(\"ALTER TABLE nome_tabela ADD CONSTRAINT qtd_positiva CHECK (quantidade > 0)\")`",
       "Usando `df.filter(col(\"quantidade\") > 0).write.format(\"delta\").mode(\"append\").save(\"Tables/nome_tabela\")`"
@@ -2406,7 +2406,7 @@ export const questions = [
       "Acessando o Azure DevOps e filtrando os logs de pipeline pelo status de falha no repositório Git associado ao workspace Fabric.",
       "Executando uma query T-SQL no Warehouse do workspace: `SELECT * FROM sys.pipeline_runs WHERE status = 'Failed' AND start_time >= DATEADD(hour, -48, GETDATE())`.",
       "Consultando a tabela `fabric.monitor.pipeline_history` no SQL Analytics Endpoint do Lakehouse de logging configurado para o workspace.",
-      "No Monitor Hub, aplicando filtros de \"Status = Failed\", \"Item type = Data pipeline\", \"Time range = Last 48 hours\" e selecionando o workspace desejado no filtro de workspace, visualizando as execuções com detalhes de erro."
+      "No Monitor Hub, aplicando filtros de \"Status = Failed\", \"Item type = Data pipeline\", \"Time range = Last 48 hours\" e selecionando o workspace desejado no."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
@@ -2478,10 +2478,10 @@ export const questions = [
     "id": "dp700_q100",
     "text": "Como uma Workspace Identity (Managed Identity do workspace Fabric) é usada para autenticar acesso seguro a um Azure Key Vault sem armazenar credenciais no pipeline?\n## LOTE 3 — Questões 101 a 150 | DP-700",
     "options": [
-      "Configurando um Service Principal no Azure AD, armazenando seu client secret no Key Vault e usando a atividade Lookup para recuperar a credencial antes de cada operação autenticada.",
+      "Configurando um Service Principal no Azure AD, armazenando seu client secret no Key Vault e usando a atividade Lookup para.",
       "Concedendo à Workspace Identity a role \"Key Vault Secrets User\" no Key Vault via Azure RBAC, e usando a atividade Web no pipeline com autenticação \"Managed Identity\" para chamar a API do Key Vault e recuperar segredos sem expor credenciais hardcoded.",
       "Habilitando a opção \"Use Workspace Identity\" nas configurações de conexão do pipeline, que automaticamente injeta o token da Managed Identity em todas as chamadas HTTP do pipeline.",
-      "Criando uma conexão do tipo \"Azure Key Vault\" no Data Pipeline que autentica automaticamente via certificado digital do workspace sem necessidade de configuração de RBAC."
+      "Criando uma conexão do tipo \"Azure Key Vault\" no Data Pipeline que autentica automaticamente via certificado digital do workspace sem necessidade de."
     ],
     "correctAnswer": 1,
     "difficulty": "avancado",
@@ -2530,7 +2530,7 @@ export const questions = [
     "options": [
       "Execuções muito frequentes de OPTIMIZE consomem CUs desnecessariamente para reescrever arquivos que ainda não estão suficientemente fragmentados; o recomendado é executar periodicamente (diariamente ou semanalmente) após cargas que geram muitos arquivos pequenos.",
       "Execuções frequentes de OPTIMIZE corrompem o transaction log Delta por exceder o limite de 1000 entradas por tabela, exigindo rebuild completo da tabela.",
-      "OPTIMIZE pode ser executado com qualquer frequência sem impacto negativo, pois o Delta Lake detecta automaticamente se a compactação é necessária e pula a operação se não houver fragmentação.",
+      "OPTIMIZE pode ser executado com qualquer frequência sem impacto negativo, pois o Delta Lake detecta automaticamente se a compactação é necessária e pula a.",
       "Execuções frequentes de OPTIMIZE aumentam o número de versões no time travel desnecessariamente, crescendo o transaction log e degradando o desempenho de leitura da tabela."
     ],
     "correctAnswer": 0,
@@ -2553,10 +2553,10 @@ export const questions = [
     "id": "dp700_q103",
     "text": "Em um Data Pipeline do Fabric, como você implementa lógica para redirecionar registros com erros de validação para uma tabela de quarentena enquanto registros válidos são carregados na tabela principal?",
     "options": [
-      "Usando a atividade \"Data Quality\" do pipeline que automaticamente detecta e redireciona registros inválidos baseado em regras de qualidade configuradas no catálogo do Purview.",
-      "Usando a atividade \"Conditional Split\" do Data Pipeline que divide o fluxo de dados em múltiplas saídas baseado em expressões de filtro aplicadas linha a linha.",
+      "Usando a atividade \"Data Quality\" do pipeline que automaticamente detecta e redireciona registros inválidos baseado em.",
+      "Usando a atividade \"Conditional Split\" do Data Pipeline que divide o fluxo de dados em múltiplas saídas baseado em expressões de.",
       "Usando um Notebook PySpark que aplica validações, separa o DataFrame em `df_validos` e `df_invalidos`, escrevendo cada um em suas respectivas tabelas Delta; ou usando a propriedade \"Fault tolerance\" da atividade Copy Data que salva linhas incompatíveis em um arquivo de log de erros.",
-      "Configurando duas atividades Copy Data em paralelo com filtros opostos: uma com `WHERE validacao = 1` para a tabela principal e outra com `WHERE validacao = 0` para quarentena."
+      "Configurando duas atividades Copy Data em paralelo com filtros opostos: uma com `WHERE validacao = 1` para a tabela principal."
     ],
     "correctAnswer": 2,
     "difficulty": "intermediario",
@@ -2653,7 +2653,7 @@ export const questions = [
     "id": "dp700_q107",
     "text": "No Warehouse do Fabric, qual tipo de dado você deve usar para armazenar identificadores únicos gerados automaticamente (UUIDs) de forma eficiente?",
     "options": [
-      "`NVARCHAR(50)` para garantir compatibilidade internacional com UUIDs que podem conter caracteres especiais em implementações não-padrão de sistemas legados.",
+      "`NVARCHAR(50)` para garantir compatibilidade internacional com UUIDs que podem conter caracteres especiais em implementações.",
       "`UNIQUEIDENTIFIER` para armazenar GUIDs/UUIDs nativamente, ou `VARCHAR(36)` para compatibilidade com sistemas externos; `UNIQUEIDENTIFIER` ocupa 16 bytes fixos e tem funções nativas como `NEWID()` para geração automática.",
       "`BIGINT IDENTITY(1,1)` que gera automaticamente IDs sequenciais únicos com melhor desempenho de join que UUIDs aleatórios no Fabric Warehouse.",
       "`BINARY(16)` que armazena os 16 bytes do UUID sem overhead de formatação string, com melhor desempenho de armazenamento que `UNIQUEIDENTIFIER`."
@@ -2728,10 +2728,10 @@ export const questions = [
     "id": "dp700_q110",
     "text": "Em um workspace Fabric com Git integration, dois desenvolvedores modificam o mesmo notebook simultaneamente em branches diferentes. Como o conflito é resolvido ao fazer merge?",
     "options": [
-      "O Fabric bloqueia automaticamente edição de notebooks quando detecta que outro usuário está editando o mesmo arquivo em um branch diferente, evitando conflitos.",
-      "Conflitos em notebooks Fabric não podem ser resolvidos via Git; é necessário usar a funcionalidade \"Compare versions\" do Fabric que faz merge visual célula por célula.",
+      "O Fabric bloqueia automaticamente edição de notebooks quando detecta que outro usuário está editando o mesmo arquivo em um branch.",
+      "Conflitos em notebooks Fabric não podem ser resolvidos via Git; é necessário usar a funcionalidade \"Compare versions\" do.",
       "O conflito é resolvido no repositório Git (Azure DevOps ou GitHub) via PR (Pull Request); como notebooks são arquivos JSON/código, ferramentas de merge do Git podem resolver conflitos de texto; conflitos de células específicas requerem resolução manual escolhendo qual versão manter.",
-      "O Fabric resolve automaticamente conflitos de notebooks usando a versão mais recente (last-write-wins) quando os dois branches são sincronizados com o workspace."
+      "O Fabric resolve automaticamente conflitos de notebooks usando a versão mais recente (last-write-wins) quando os dois."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -2753,10 +2753,10 @@ export const questions = [
     "id": "dp700_q111",
     "text": "Em um Dataflow Gen2 do Fabric, o que é a área de Staging e como ela afeta o comportamento das transformações?",
     "options": [
-      "A área de Staging é um buffer de memória do Power Query que armazena os resultados intermediários de cada etapa de transformação para exibição no editor visual.",
-      "A área de Staging é uma tabela temporária no Warehouse do workspace onde os dados aguardam validação de qualidade antes de serem carregados no destino final configurado.",
+      "A área de Staging é um buffer de memória do Power Query que armazena os resultados intermediários de cada etapa de transformação.",
+      "A área de Staging é uma tabela temporária no Warehouse do workspace onde os dados aguardam validação de qualidade antes de serem carregados no destino final.",
       "A área de Staging é um Lakehouse intermediário onde os dados são materializados durante o processamento do Dataflow Gen2, permitindo que transformações complexas sejam executadas pelo motor Spark do Fabric em vez de na fonte, habilitando Query Folding parcial e melhorando o desempenho de transformações encadeadas.",
-      "A área de Staging é um armazenamento externo no Azure Blob Storage onde o Dataflow Gen2 salva checkpoints para garantir recuperação em caso de falha durante o processamento."
+      "A área de Staging é um armazenamento externo no Azure Blob Storage onde o Dataflow Gen2 salva checkpoints para garantir recuperação em caso de falha durante."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -2805,7 +2805,7 @@ export const questions = [
     "options": [
       "Suporta transações explícitas apenas para stored procedures; operações T-SQL avulsas são sempre executadas em auto-commit independente de BEGIN TRANSACTION.",
       "Não; o Fabric Warehouse usa apenas auto-commit por design de arquitetura cloud; transações explícitas requerem uso do SQL Database do Fabric que oferece ACID completo.",
-      "Suporta apenas transações de leitura (BEGIN TRANSACTION READ ONLY); operações de escrita são sempre auto-committed para garantir consistência do armazenamento colunar.",
+      "Suporta apenas transações de leitura (BEGIN TRANSACTION READ ONLY); operações de escrita são sempre auto-committed para garantir consistência do.",
       "Sim, suporta transações explícitas T-SQL; limitações incluem: não suporte a transações distribuídas entre múltiplos Warehouses, timeout de transação configurável e ausência de SAVEPOINTS"
     ],
     "correctAnswer": 3,
@@ -2855,7 +2855,7 @@ export const questions = [
     "options": [
       "Autenticação via Organizational Account (delegated) para acessos interativos ou via Service Principal (account key ou SAS token) para automações, com preferência por Workspace Identity (Managed Identity) quando disponível para evitar gerenciamento de credenciais.",
       "Apenas Account Key é suportado para Shortcuts de ADLS Gen2; outros métodos de autenticação requerem criar uma conexão separada via Data Pipeline.",
-      "Autenticação anônima via SAS token público é o único método suportado para Shortcuts de fontes externas ao tenant Fabric por restrições de segurança cross-tenant.",
+      "Autenticação anônima via SAS token público é o único método suportado para Shortcuts de fontes externas ao tenant Fabric por restrições de segurança.",
       "Service Principal com certificado X.509 é o único método aprovado para produção; autenticação por account key é bloqueada automaticamente pelo Admin Portal do Fabric."
     ],
     "correctAnswer": 0,
@@ -2878,9 +2878,9 @@ export const questions = [
     "id": "dp700_q116",
     "text": "Um Data Pipeline falha com \"Unable to connect to the on-premises data gateway\" ao tentar acessar um SQL Server local. Quais são as etapas de diagnóstico?\n**117 | DP-700 | Ingest and Transform |",
     "options": [
-      "Reiniciar o workspace Fabric e recriar a conexão de dados, pois erros de gateway geralmente são causados por cache de credenciais expirado no serviço do Fabric.",
+      "Reiniciar o workspace Fabric e recriar a conexão de dados, pois erros de gateway geralmente são causados por cache de credenciais.",
       "Verificar se o serviço do gateway está ativo na máquina on-premises, confirmar que as credenciais de conexão estão corretas, validar regras de firewall permitindo comunicação do gateway com o SQL Server, e verificar no Admin Portal do Fabric se o gateway está online e saudável.",
-      "Verificar as configurações de proxy HTTP do workspace Fabric no Admin Portal, pois erros de gateway on-premises são causados por bloqueio de proxy na comunicação cloud-to-on-premises.",
+      "Verificar as configurações de proxy HTTP do workspace Fabric no Admin Portal, pois erros de gateway on-premises são causados por bloqueio de proxy na.",
       "Migrar os dados do SQL Server on-premises para o Azure SQL Database antes de reexecutar o pipeline, pois o gateway on-premises não é suportado em workspaces com capacity F64 ou superior."
     ],
     "correctAnswer": 1,
@@ -2904,9 +2904,9 @@ export const questions = [
     "text": "Em um Lakehouse do Fabric, quando você deve armazenar dados na seção \"Files\" em vez de \"Tables\"?",
     "options": [
       "Sempre que os dados excedem 1 TB, pois a seção Tables tem limite de tamanho por tabela e arquivos grandes devem ser armazenados na seção Files sem restrição.",
-      "Quando os dados precisam ser acessados por múltiplos workspaces via Shortcuts, pois apenas arquivos na seção Files podem ser referenciados por Shortcuts de outros Lakehouses.",
+      "Quando os dados precisam ser acessados por múltiplos workspaces via Shortcuts, pois apenas arquivos na seção Files podem ser referenciados por Shortcuts de.",
       "Na seção Files quando os dados são brutos/semi-estruturados (JSON, XML, imagens, CSV sem schema definido), servem como zona de landing temporária antes de transformação, ou quando o acesso via SQL não é necessário e os dados são consumidos apenas por notebooks PySpark.",
-      "Quando os dados precisam de controle de versão, pois arquivos na seção Files são automaticamente versionados pelo OneLake enquanto tabelas Delta não suportam time travel no Fabric."
+      "Quando os dados precisam de controle de versão, pois arquivos na seção Files são automaticamente versionados pelo OneLake enquanto tabelas Delta não suportam."
     ],
     "correctAnswer": 2,
     "difficulty": "iniciante",
@@ -2928,9 +2928,9 @@ export const questions = [
     "id": "dp700_q118",
     "text": "O que é o processo de \"framing\" no modo Direct Lake de um modelo semântico do Fabric e qual é seu impacto para engenheiros de dados?",
     "options": [
-      "Framing é o processo pelo qual o Direct Lake cria um snapshot consistente dos arquivos Delta para garantir que uma query veja um estado coerente dos dados; ocorre automaticamente quando dados são atualizados no Lakehouse e pode ser disparado manualmente via `XMLA refresh` para garantir que o modelo veja os dados mais recentes.",
-      "Framing é a criação automática de tabelas de agregação pelo Direct Lake baseado nos padrões de query observados nos primeiros 30 dias de uso do modelo semântico.",
-      "Framing é o processo de particionamento automático dos arquivos Delta pelo Direct Lake para otimizar o carregamento de colunas individuais em memória sob demanda.",
+      "Framing é o processo pelo qual o Direct Lake cria um snapshot consistente dos arquivos Delta para garantir que uma query.",
+      "Framing é a criação automática de tabelas de agregação pelo Direct Lake baseado nos padrões de query observados nos primeiros 30 dias de uso do modelo.",
+      "Framing é o processo de particionamento automático dos arquivos Delta pelo Direct Lake para otimizar o carregamento de colunas individuais em memória sob.",
       "Framing é o processo de compressão VertiPaq aplicado aos dados Delta ao serem carregados em memória pelo Direct Lake, transformando o formato colunar Parquet em formato otimizado para DAX."
     ],
     "correctAnswer": 0,
@@ -2954,7 +2954,7 @@ export const questions = [
     "text": "O Fabric Warehouse suporta objetos SEQUENCE para geração de valores sequenciais? Como você gera surrogate keys sem SEQUENCE?",
     "options": [
       "O Fabric Warehouse usa `AUTO_INCREMENT` em vez de `SEQUENCE` ou `IDENTITY`; a sintaxe é `CREATE TABLE tabela (id INT AUTO_INCREMENT PRIMARY KEY)`.",
-      "Sequences são desnecessárias no Fabric Warehouse pois o Delta Lake gera automaticamente IDs únicos para cada linha inserida via metadados do transaction log.",
+      "Sequences são desnecessárias no Fabric Warehouse pois o Delta Lake gera automaticamente IDs únicos para cada linha inserida.",
       "O Fabric Warehouse não suporta objetos SEQUENCE; alternativas são usar `IDENTITY(1,1)` em colunas de tabela para auto-incremento, `ROW_NUMBER() OVER (ORDER BY coluna)` em queries CTAS para gerar surrogate keys, ou gerar GUIDs com `NEWID()`.",
       "Sim, suporta `CREATE SEQUENCE nome START WITH 1 INCREMENT BY 1`; é o método recomendado para gerar surrogate keys em tabelas de dimensão no Warehouse."
     ],
@@ -2978,10 +2978,10 @@ export const questions = [
     "id": "dp700_q120",
     "text": "Como você implementa um sistema de alertas para notificar a equipe de engenharia quando um pipeline Fabric não executa dentro da janela de tempo esperada?",
     "options": [
-      "Configurando Azure Monitor Metric Alerts que monitoram automaticamente o tempo de execução de pipelines Fabric e disparam alertas quando excedem o SLA configurado.",
+      "Configurando Azure Monitor Metric Alerts que monitoram automaticamente o tempo de execução de pipelines Fabric e.",
       "Combinando Workspace Logging (enviando logs para um Lakehouse), um notebook de monitoramento agendado que consulta os logs e verifica execuções atrasadas, e Power Automate ou API REST para disparar notificações Teams/e-mail quando a condição de atraso é detectada.",
-      "Usando o recurso \"SLA Monitoring\" integrado ao Monitor Hub do Fabric que permite definir janelas de tempo esperadas para cada pipeline e gera alertas automáticos.",
-      "Criando uma Logic App no Azure que monitora a fila de mensagens do Fabric Service Bus e dispara alertas quando não recebe a mensagem de conclusão do pipeline no prazo."
+      "Usando o recurso \"SLA Monitoring\" integrado ao Monitor Hub do Fabric que permite definir janelas de tempo esperadas para cada pipeline e gera alertas.",
+      "Criando uma Logic App no Azure que monitora a fila de mensagens do Fabric Service Bus e dispara alertas quando não recebe a."
     ],
     "correctAnswer": 1,
     "difficulty": "intermediario",
@@ -3003,7 +3003,7 @@ export const questions = [
     "id": "dp700_q121",
     "text": "Em PySpark no Fabric, quais operações são \"eager\" (executadas imediatamente) e quais são \"lazy\" (adiadas até uma ação)?",
     "options": [
-      "Apenas operações de escrita (`write()`, `save()`) são eager; todas as demais operações incluindo `count()` e `show()` são lazy e podem ser otimizadas pelo Catalyst.",
+      "Apenas operações de escrita (`write()`, `save()`) são eager; todas as demais operações incluindo `count()` e `show()` são lazy e podem ser otimizadas pelo.",
       "Transformações como `filter()`, `select()`, `join()`, `groupBy()`, `withColumn()` são lazy (apenas constroem o plano); ações como `count()`, `show()`, `collect()`, `write()`, `save()` são eager e disparam a execução do plano completo.",
       "No Fabric, todas as operações PySpark são eager por padrão para melhorar a previsibilidade de uso de recursos; o lazy evaluation deve ser habilitado explicitamente.",
       "Operações com shuffle (join, groupBy, repartition) são sempre eager pois requerem materialização imediata dos dados para redistribuição entre executores."
@@ -3030,8 +3030,8 @@ export const questions = [
     "options": [
       "Fabric SQL Database é exclusivo para workloads de machine learning via SQL; Fabric Warehouse é para BI e relatórios; ambos compartilham o mesmo motor de armazenamento Delta Lake.",
       "Fabric Warehouse é otimizado para workloads analíticos com armazenamento colunar e T-SQL para grandes volumes; Fabric SQL Database é um banco relacional OLTP com suporte a transações ACID completas, ideal para aplicações transacionais que também precisam integrar com o ecossistema Fabric.",
-      "São o mesmo produto com nomes diferentes; Fabric SQL Database é o nome técnico e Fabric Warehouse é o nome de marketing para o mesmo serviço de banco de dados analítico.",
-      "Fabric Warehouse suporta T-SQL completo incluindo triggers e foreign keys enforçadas; Fabric SQL Database usa apenas dialeto SQL simplificado sem suporte a objetos programáticos avançados."
+      "São o mesmo produto com nomes diferentes; Fabric SQL Database é o nome técnico e Fabric Warehouse é o nome de marketing para o mesmo serviço de banco de.",
+      "Fabric Warehouse suporta T-SQL completo incluindo triggers e foreign keys enforçadas; Fabric SQL Database usa apenas dialeto SQL simplificado sem suporte a."
     ],
     "correctAnswer": 1,
     "difficulty": "intermediario",
@@ -3053,10 +3053,10 @@ export const questions = [
     "id": "dp700_q123",
     "text": "Em um Notebook Fabric de produção, como você implementa um padrão de tratamento de erros robusto que registra falhas, envia alertas e permite reprocessamento?",
     "options": [
-      "Usando `spark.sparkContext.setCheckpointDir()` que automaticamente captura e registra todos os erros de execução do notebook em uma tabela de log do workspace.",
+      "Usando `spark.sparkContext.setCheckpointDir()` que automaticamente captura e registra todos os erros de execução do notebook em.",
       "Usando blocos `try/except` com logging estruturado em uma tabela Delta de auditoria, `mssparkutils.notebook.exit()` com código de status para sinalizar sucesso/falha ao pipeline orquestrador, e integração com Power Automate via webhook para notificações em caso de exceção crítica.",
-      "Configurando `spark.conf.set(\"spark.sql.error.handling\", \"log_and_continue\")` que registra erros automaticamente e continua a execução sem interromper o notebook.",
-      "Usando `dbutils.fs.put(\"Files/errors/log.txt\", str(error), True)` para gravar erros em arquivo texto e um pipeline separado que verifica periodicamente a existência do arquivo de erro."
+      "Configurando `spark.conf.set(\"spark.sql.error.handling\", \"log_and_continue\")` que registra erros automaticamente e continua a execução sem interromper o.",
+      "Usando `dbutils.fs.put(\"Files/errors/log.txt\", str(error), True)` para gravar erros em arquivo texto e um pipeline separado."
     ],
     "correctAnswer": 1,
     "difficulty": "avancado",
@@ -3078,10 +3078,10 @@ export const questions = [
     "id": "dp700_q124",
     "text": "O Fabric Warehouse cria estatísticas automaticamente? Quando é necessário criar estatísticas manuais?",
     "options": [
-      "O Fabric Warehouse não cria estatísticas automaticamente; todas as estatísticas devem ser criadas manualmente pelo engenheiro para garantir planos de execução eficientes.",
+      "O Fabric Warehouse não cria estatísticas automaticamente; todas as estatísticas devem ser criadas manualmente pelo engenheiro para garantir planos de.",
       "Estatísticas são gerenciadas pelo Delta Lake subjacente e não podem ser configuradas manualmente no Fabric Warehouse; o motor usa sempre as estatísticas de arquivo Parquet.",
       "O Fabric Warehouse cria estatísticas automáticas para colunas usadas em predicados de filtro e join durante a execução de queries; estatísticas manuais via `CREATE STATISTICS` são necessárias para colunas com distribuição de dados muito desigual onde as estatísticas automáticas não capturam bem a seletividade real.",
-      "Estatísticas automáticas são criadas apenas para colunas do tipo INT e BIGINT; colunas de texto e data requerem `CREATE STATISTICS` manual para que o otimizador gere planos eficientes."
+      "Estatísticas automáticas são criadas apenas para colunas do tipo INT e BIGINT; colunas de texto e data requerem `CREATE STATISTICS` manual para que o."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -3103,9 +3103,9 @@ export const questions = [
     "id": "dp700_q125",
     "text": "No Eventstream do Fabric, como você combina dados de múltiplas fontes de streaming (Azure Event Hub e Azure IoT Hub) em um único fluxo antes de rotear para o destino?",
     "options": [
-      "Adicionando múltiplas fontes ao mesmo Eventstream e usando o operador \"Union\" disponível no canvas do Eventstream para combinar os fluxos em um único stream unificado antes de aplicar transformações e rotear para o destino.",
-      "Usando um notebook PySpark com `spark.readStream` de múltiplas fontes e `union()` para combinar os DataFrames de streaming antes de escrever no destino único.",
-      "Criando dois Eventstreams separados (um por fonte) e um terceiro Eventstream que os consome como fontes via conector \"Eventstream-to-Eventstream\" nativo do Fabric.",
+      "Adicionando múltiplas fontes ao mesmo Eventstream e usando o operador \"Union\" disponível no canvas do Eventstream para.",
+      "Usando um notebook PySpark com `spark.readStream` de múltiplas fontes e `union()` para combinar os DataFrames de streaming.",
+      "Criando dois Eventstreams separados (um por fonte) e um terceiro Eventstream que os consome como fontes via conector \"Eventstream-to-Eventstream\" nativo do.",
       "Configurando o Azure Event Grid para rotear eventos do IoT Hub para o mesmo Event Hub usado como fonte do Eventstream, consolidando as fontes antes do Fabric."
     ],
     "correctAnswer": 0,
@@ -3128,7 +3128,7 @@ export const questions = [
     "id": "dp700_q126",
     "text": "O que é o mecanismo de \"smoothing\" de capacity no Microsoft Fabric e como ele afeta o planejamento de workloads de engenharia de dados?",
     "options": [
-      "Smoothing é um algoritmo de compressão de dados que reduz o consumo de CUs durante a ingestão de dados de streaming ao agrupar eventos similares antes do processamento.",
+      "Smoothing é um algoritmo de compressão de dados que reduz o consumo de CUs durante a ingestão de dados de streaming ao agrupar eventos similares antes do.",
       "Smoothing distribui o consumo de CUs de operações em background (como pipelines e refreshes) ao longo de 24 horas em vez de cobrar o pico instantâneo, permitindo que workloads intensos ocasionais não causem throttling imediato; operações interativas não têm smoothing e consomem CUs imediatamente.",
       "Smoothing aumenta automaticamente a capacity quando a utilização excede 80% por mais de 5 minutos, distribuindo o custo do scale-up ao longo do mês de cobrança.",
       "Smoothing aplica média móvel de 1 hora no consumo de CUs exibido no Capacity Metrics App para suavizar picos visuais sem impacto no consumo real cobrado."
@@ -3153,10 +3153,10 @@ export const questions = [
     "id": "dp700_q127",
     "text": "Em um Data Pipeline do Fabric, como você configura a atividade Copy Data para executar um script SQL de pré-processamento na fonte antes da cópia e um script de pós-processamento no destino após a carga?",
     "options": [
-      "Configurando triggers de pipeline: um trigger de \"Before\" que executa o script de pré-processamento e um trigger de \"After\" que executa o script de pós-processamento.",
-      "Usando as propriedades \"Before copy\" e \"After copy\" da atividade Copy Data que aceitam scripts T-SQL executados na fonte e no destino respectivamente.",
+      "Configurando triggers de pipeline: um trigger de \"Before\" que executa o script de pré-processamento e um trigger de \"After\" que executa o script de.",
+      "Usando as propriedades \"Before copy\" e \"After copy\" da atividade Copy Data que aceitam scripts T-SQL executados na.",
       "Adicionando atividades Script separadas antes e depois da atividade Copy Data no pipeline, conectadas pelos paths \"On Success\" para garantir a ordem de execução.",
-      "Usando as propriedades \"Pre-copy script\" no sink (destino) para executar SQL antes da carga (ex: truncar tabela staging) e \"Post-copy script\" para executar após (ex: chamar stored procedure de merge); no source, usar \"Additional columns\" ou query SQL parametrizada para pré-filtrar."
+      "Usando as propriedades \"Pre-copy script\" no sink (destino) para executar SQL antes da carga (ex: truncar tabela staging) e."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
@@ -3254,9 +3254,9 @@ export const questions = [
     "text": "Qual é a vantagem de usar Pandas UDFs (vetorizadas) em vez de Python UDFs tradicionais em PySpark no Fabric?",
     "options": [
       "Pandas UDFs processam dados em chunks de Series/DataFrame pandas usando Apache Arrow para serialização, eliminando a serialização linha por linha das UDFs Python tradicionais; resultam em performance até 100x superior para funções que operam sobre arrays de dados.",
-      "Pandas UDFs são equivalentes às UDFs Python em termos de performance; a vantagem é apenas sintática permitindo usar bibliotecas pandas que não têm equivalente PySpark.",
+      "Pandas UDFs são equivalentes às UDFs Python em termos de performance; a vantagem é apenas sintática permitindo usar bibliotecas pandas que não têm.",
       "Pandas UDFs são compiladas para bytecode JVM automaticamente pelo runtime do Fabric, eliminando completamente o overhead de comunicação Python-JVM.",
-      "Pandas UDFs executam no driver Spark sem distribuição entre executores, garantindo consistência de resultados para funções que dependem de estado global do processo Python."
+      "Pandas UDFs executam no driver Spark sem distribuição entre executores, garantindo consistência de resultados para funções que dependem de estado global do."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -3278,9 +3278,9 @@ export const questions = [
     "id": "dp700_q132",
     "text": "Como você reduz o custo de CUs de um Data Pipeline que executa 48 vezes por dia mas na maioria das execuções não encontra dados novos para processar?",
     "options": [
-      "Reduzindo a frequência de execução do trigger para 4 vezes por dia, aceitando latência maior na detecção de novos dados em troca de menor custo operacional.",
-      "Implementando um padrão de detecção prévia com atividade Lookup que verifica se há novos dados (ex: conta registros com timestamp recente) e usa atividade \"If Condition\" para pular o processamento quando não há dados, reduzindo o tempo de execução e consumo de CUs das execuções vazias.",
-      "Habilitando a opção \"Skip empty runs\" nas configurações avançadas do pipeline que automaticamente detecta e pula execuções sem dados novos sem consumir CUs.",
+      "Reduzindo a frequência de execução do trigger para 4 vezes por dia, aceitando latência maior na detecção de novos dados em.",
+      "Implementando um padrão de detecção prévia com atividade Lookup que verifica se há novos dados (ex: conta registros com timestamp recente) e usa atividade.",
+      "Habilitando a opção \"Skip empty runs\" nas configurações avançadas do pipeline que automaticamente detecta e pula execuções.",
       "Substituindo o Schedule Trigger por um Storage Event Trigger que só dispara o pipeline quando novos arquivos chegam ao OneLake, eliminando execuções desnecessárias."
     ],
     "correctAnswer": 1,
@@ -3353,7 +3353,7 @@ export const questions = [
     "id": "dp700_q135",
     "text": "O que é um Real-Time Dashboard no Microsoft Fabric e como ele se integra com dados de streaming do Eventhouse?",
     "options": [
-      "Um painel de monitoramento operacional integrado ao Monitor Hub que exibe métricas de performance dos itens Fabric em tempo real sem necessidade de configuração.",
+      "Um painel de monitoramento operacional integrado ao Monitor Hub que exibe métricas de performance dos itens Fabric em tempo real sem necessidade de.",
       "Um dashboard Power BI especial com conexão push que recebe eventos do Eventstream diretamente via API, atualizando visuais em tempo real sem passar pelo Eventhouse.",
       "Um dashboard de visualização que consulta dados do KQL Database do Eventhouse com refresh automático configurável (segundos a minutos), exibindo métricas em tempo real sem necessidade de modelo semântico intermediário, usando queries KQL diretamente como fonte de dados dos tiles.",
       "Uma extensão do Power BI Desktop que permite criar relatórios com conexão streaming ao Eventhouse, exportados como arquivo .pbix para publicação no Fabric."
@@ -3381,7 +3381,7 @@ export const questions = [
       "\"Service principals can use Fabric APIs\" e opcionalmente \"Service principals can access read-only admin APIs\"; também pode ser necessário \"Allow service principals to create and use profiles\" dependendo do cenário de automação implementado.",
       "Apenas \"Enable Fabric for the entire organization\" precisa estar habilitado; Service Principals têm acesso automático às APIs quando o Fabric está habilitado no tenant.",
       "\"Allow OAuth 2.0 authentication\" e \"Enable API access for external applications\" nas configurações de segurança avançada do Admin Portal do Fabric.",
-      "Não há configurações de tenant necessárias; basta adicionar o Service Principal ao workspace com função Member para que tenha acesso completo às APIs do Fabric."
+      "Não há configurações de tenant necessárias; basta adicionar o Service Principal ao workspace com função Member para que tenha."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -3403,9 +3403,9 @@ export const questions = [
     "id": "dp700_q137",
     "text": "Os Mapping Data Flows do Azure Data Factory estão disponíveis nos Data Pipelines do Microsoft Fabric? Qual é a alternativa recomendada?",
     "options": [
-      "Mapping Data Flows do ADF não estão disponíveis nos pipelines do Fabric; as alternativas recomendadas são Dataflow Gen2 para transformações visuais baseadas em Power Query, ou notebooks PySpark para transformações mais complexas com Spark.",
+      "Mapping Data Flows do ADF não estão disponíveis nos pipelines do Fabric; as alternativas recomendadas são Dataflow Gen2 para transformações visuais baseadas.",
       "Mapping Data Flows estão disponíveis apenas em workspaces com capacity F128 ou superior; capacities menores devem usar Dataflow Gen2 como alternativa.",
-      "Sim, Mapping Data Flows estão disponíveis nos pipelines Fabric via atividade \"Data Flow\" que é idêntica à do Azure Data Factory com os mesmos conectores e transformações.",
+      "Sim, Mapping Data Flows estão disponíveis nos pipelines Fabric via atividade \"Data Flow\" que é idêntica à do Azure Data Factory com os mesmos conectores e.",
       "Mapping Data Flows foram descontinuados no ADF e substituídos pelos Dataflow Gen2 do Fabric, que oferecem as mesmas funcionalidades com melhor integração ao ecossistema Fabric."
     ],
     "correctAnswer": 0,
@@ -3429,9 +3429,9 @@ export const questions = [
     "text": "Qual é o tamanho ideal de arquivo para tabelas Delta no Lakehouse do Fabric e como você garante que os arquivos sejam criados nesse tamanho durante a ingestão?",
     "options": [
       "Arquivos Delta devem ter exatamente 512 MB cada; arquivos menores ou maiores causam degradação de performance no SQL Analytics Endpoint do Lakehouse.",
-      "O tamanho ideal é entre 128 MB e 1 GB por arquivo para equilibrar paralelismo de leitura e overhead de listagem de arquivos; controlar com `spark.conf.set(\"spark.sql.files.maxPartitionBytes\", \"134217728\")` e `df.repartition(n)` antes de escrever para gerar arquivos do tamanho desejado.",
+      "O tamanho ideal é entre 128 MB e 1 GB por arquivo para equilibrar paralelismo de leitura e overhead de listagem de.",
       "O Fabric determina automaticamente o tamanho ideal de arquivo baseado na capacity contratada; engenheiros de dados não devem intervir nessa configuração para evitar degradação de performance.",
-      "O tamanho de arquivo não impacta o desempenho de leitura no Fabric pois o OneLake usa compressão adaptativa que normaliza arquivos de qualquer tamanho durante a leitura."
+      "O tamanho de arquivo não impacta o desempenho de leitura no Fabric pois o OneLake usa compressão adaptativa que normaliza arquivos de qualquer tamanho."
     ],
     "correctAnswer": 1,
     "difficulty": "avancado",
@@ -3481,7 +3481,7 @@ export const questions = [
       "O erro indica que o arquivo de checkpoint do Spark está corrompido; resolver limpando o diretório `Files/checkpoints` e reiniciando o notebook.",
       "O erro é causado por concurrent writes de outro notebook no mesmo arquivo Delta; usar `delta.enableConcurrentReads=true` para resolver conflitos de acesso simultâneo.",
       "Causas possíveis: usuário ou identidade do notebook não tem permissão Write no Lakehouse (verificar item-level permissions), ACLs do OneLake restringem acesso à pasta específica, ou o Lakehouse está em modo somente leitura (verificar se é um Shortcut somente leitura); resolver ajustando permissões do item ou ACLs via Storage Explorer.",
-      "O erro indica que a cota de armazenamento do workspace foi atingida; verificar no Admin Portal o uso de OneLake e solicitar aumento de cota ao administrador do tenant."
+      "O erro indica que a cota de armazenamento do workspace foi atingida; verificar no Admin Portal o uso de OneLake e solicitar aumento de cota ao administrador."
     ],
     "correctAnswer": 2,
     "difficulty": "intermediario",
@@ -3503,10 +3503,10 @@ export const questions = [
     "id": "dp700_q141",
     "text": "Como você otimiza uma operação MERGE INTO em um Warehouse do Fabric que processa 10 milhões de linhas e está demorando excessivamente?\n**142 | DP-700 | Monitor and Optimize |",
     "options": [
-      "Habilitar o modo \"Fast MERGE\" com `SET MERGE_FAST_MODE = ON` antes da operação, que usa processamento paralelo otimizado para grandes volumes no Fabric Warehouse.",
+      "Habilitar o modo \"Fast MERGE\" com `SET MERGE_FAST_MODE = ON` antes da operação, que usa processamento paralelo otimizado para grandes volumes no Fabric.",
       "Pré-filtrar a tabela fonte para incluir apenas o delta de alterações, criar estatísticas nas colunas de join antes do MERGE, usar CTAS para criar uma tabela staging intermediária com apenas as chaves afetadas, e dividir o MERGE em batches menores por range de chave para reduzir o tamanho de cada transação.",
       "Usar `MERGE HINT (LOOP JOIN)` para forçar o uso de Loop Join em vez de Hash Join, que tem melhor desempenho para tabelas com muitos registros correspondentes.",
-      "Substituir o MERGE por operações separadas de DELETE seguido de INSERT que têm melhor desempenho individual que a operação combinada MERGE no armazenamento colunar."
+      "Substituir o MERGE por operações separadas de DELETE seguido de INSERT que têm melhor desempenho individual que a operação combinada MERGE no armazenamento."
     ],
     "correctAnswer": 1,
     "difficulty": "avancado",
@@ -3528,10 +3528,10 @@ export const questions = [
     "id": "dp700_q142",
     "text": "Em um Notebook Fabric, como você configura o Spark para otimizar o processamento de uma operação de join com skew severo em uma coluna de chave estrangeira com alta concentração em poucos valores?",
     "options": [
-      "Usando `df.hint(\"skew\", \"coluna_chave\")` que instrui o Catalyst optimizer a ignorar o skew e usar Full Outer Join para garantir que todos os registros sejam processados uniformemente.",
+      "Usando `df.hint(\"skew\", \"coluna_chave\")` que instrui o Catalyst optimizer a ignorar o skew e usar Full Outer Join para.",
       "Reparticionando o DataFrame pela coluna de join com `df.repartition(1000, \"coluna_chave\")` antes do join, garantindo que valores repetidos fiquem na mesma partição para processamento otimizado.",
       "Habilitando `spark.conf.set(\"spark.sql.adaptive.skewJoin.enabled\", \"true\")` e `spark.conf.set(\"spark.sql.adaptive.skewJoin.skewedPartitionFactor\", \"5\")` para que o AQE detecte e divida automaticamente partições com skew, combinado com salt key para distribuir valores concentrados.",
-      "Configurando `spark.conf.set(\"spark.sql.shuffle.partitions\", \"10000\")` para criar partições suficientemente pequenas que diluam automaticamente o efeito do skew entre mais executores."
+      "Configurando `spark.conf.set(\"spark.sql.shuffle.partitions\", \"10000\")` para criar partições suficientemente pequenas que."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -3556,7 +3556,7 @@ export const questions = [
       "Um trigger que monitora janelas de arquivos no OneLake e dispara o pipeline quando o tamanho total dos arquivos na pasta excede um threshold configurável em MB.",
       "Um trigger que executa o pipeline repetidamente dentro de uma janela de tempo configurada, parando automaticamente quando todos os dados da janela foram processados.",
       "Um trigger baseado em eventos de streaming que agrupa eventos em janelas temporais de tamanho fixo antes de disparar o pipeline de processamento batch.",
-      "Um trigger que divide o tempo em janelas não sobrepostas de tamanho fixo, garantindo que cada janela seja processada exatamente uma vez mesmo em caso de reexecução; ideal para processamento de dados históricos (backfill) e cargas que devem cobrir períodos específicos sem gaps ou overlaps."
+      "Um trigger que divide o tempo em janelas não sobrepostas de tamanho fixo, garantindo que cada janela seja processada exatamente uma vez mesmo em caso de."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
@@ -3580,7 +3580,7 @@ export const questions = [
     "options": [
       "Tabelas no formato do Azure Monitor Schema com colunas `TimeGenerated`, `Category`, `OperationName` e `Properties` (JSON); análise via Kusto queries no Eventhouse conectado ao Log Analytics Workspace.",
       "Arquivos JSON individuais por execução armazenados na seção Files do Lakehouse de destino; análise requer um Dataflow Gen2 para consolidar os arquivos em tabela estruturada antes da consulta.",
-      "Uma única tabela `workspace_audit_log` com todas as operações consolidadas; análise via KQL no Eventhouse ao qual o workspace de logging está automaticamente conectado.",
+      "Uma única tabela `workspace_audit_log` com todas as operações consolidadas; análise via KQL no Eventhouse ao qual o workspace de logging está automaticamente.",
       "Tabelas como `lakehouses`, `warehouses`, `notebooks`, `pipelines` com colunas de `OperationName`, `UserId`, `ItemId`, `Timestamp` e `Status`; análise via SQL Analytics Endpoint ou PySpark com queries de agrupamento por usuário, item e período para identificar padrões de acesso, operações mais frequentes e usuários mais ativos."
     ],
     "correctAnswer": 3,
@@ -3629,9 +3629,9 @@ export const questions = [
     "text": "Queries no SQL Analytics Endpoint de um Lakehouse com 50 tabelas Delta estão lentas. Quais fatores podem causar isso e como otimizar?",
     "options": [
       "Causas: muitos arquivos pequenos (executar OPTIMIZE nas tabelas problemáticas), falta de particionamento adequado, tabelas não registradas no metastore (verificar se as tabelas aparecem no endpoint), e queries sem pushdown de filtros; otimizar com OPTIMIZE/ZORDER nas colunas de filtro mais usadas.",
-      "Habilitar o modo \"Performance Mode\" do SQL Analytics Endpoint nas configurações do Lakehouse que usa cache em memória para as queries mais frequentes automaticamente.",
+      "Habilitar o modo \"Performance Mode\" do SQL Analytics Endpoint nas configurações do Lakehouse que usa cache em memória para as queries mais frequentes.",
       "O SQL Analytics Endpoint tem limite de 50 tabelas simultâneas; mover tabelas excedentes para um Warehouse dedicado para recuperar o desempenho.",
-      "Criar índices columnstore no SQL Analytics Endpoint com `CREATE COLUMNSTORE INDEX` nas colunas mais consultadas para melhorar o desempenho das queries analíticas."
+      "Criar índices columnstore no SQL Analytics Endpoint com `CREATE COLUMNSTORE INDEX` nas colunas mais consultadas para melhorar o desempenho das queries."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -3653,9 +3653,9 @@ export const questions = [
     "id": "dp700_q147",
     "text": "Em um pipeline de ingestão do Fabric, novos campos são adicionados periodicamente ao schema da fonte JSON. Como você implementa schema evolution automática na tabela Delta de destino?",
     "options": [
-      "Usando `spark.conf.set(\"spark.sql.schema.evolution\", \"auto\")` que habilita detecção automática de mudanças de schema em fontes JSON e atualiza o destino Delta sem intervenção.",
+      "Usando `spark.conf.set(\"spark.sql.schema.evolution\", \"auto\")` que habilita detecção automática de mudanças de schema em.",
       "Configurando `spark.conf.set(\"spark.databricks.delta.schema.autoMerge.enabled\", \"true\")` na sessão Spark antes da escrita, ou usando `.option(\"mergeSchema\", \"true\")` no writer; novas colunas são adicionadas automaticamente e colunas removidas mantêm valor NULL nos registros anteriores.",
-      "Criando um job de comparação de schema agendado que executa `ALTER TABLE ADD COLUMN` para cada nova coluna detectada antes da ingestão principal do dia.",
+      "Criando um job de comparação de schema agendado que executa `ALTER TABLE ADD COLUMN` para cada nova coluna detectada.",
       "Usando o modo `overwriteSchema=true` em todas as escritas que automaticamente atualiza o schema sem adicionar novas colunas para registros históricos."
     ],
     "correctAnswer": 1,
@@ -3679,9 +3679,9 @@ export const questions = [
     "text": "Como você monitora a latência de ponta a ponta (end-to-end) de um pipeline de Real-Time Intelligence no Fabric, desde a chegada do evento até a disponibilidade no dashboard?",
     "options": [
       "Comparando o timestamp do evento na fonte (ingestion_time do Event Hub) com o timestamp de disponibilidade no KQL Database usando `.show table NomeTabela ingestion statistics`, e monitorando o atraso de refresh do Real-Time Dashboard via métricas de query.",
-      "Acessando o painel \"Latency Metrics\" do Eventstream que exibe automaticamente a latência end-to-end desde a fonte até cada destino configurado em tempo real.",
-      "Usando o Azure Monitor com métricas de latência do Event Hub e do Eventhouse que são automaticamente correlacionadas no Log Analytics para calcular a latência end-to-end.",
-      "Inserindo timestamps personalizados em cada estágio do pipeline via atividade Script e consultando a diferença no Monitor Hub do Fabric para cálculo de latência."
+      "Acessando o painel \"Latency Metrics\" do Eventstream que exibe automaticamente a latência end-to-end desde a fonte até cada.",
+      "Usando o Azure Monitor com métricas de latência do Event Hub e do Eventhouse que são automaticamente correlacionadas no Log Analytics para calcular a.",
+      "Inserindo timestamps personalizados em cada estágio do pipeline via atividade Script e consultando a diferença no Monitor."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -3803,10 +3803,10 @@ export const questions = [
     "id": "dp700_q153",
     "text": "O Fabric Warehouse suporta particionamento de tabelas nativamente via T-SQL? Qual é a estratégia recomendada para gerenciar grandes volumes de dados históricos?",
     "options": [
-      "Sim, via `ALTER TABLE tabela ADD PARTITION (ano=2024)` que cria partições dinâmicas gerenciadas automaticamente pelo motor de armazenamento colunar do Warehouse.",
+      "Sim, via `ALTER TABLE tabela ADD PARTITION (ano=2024)` que cria partições dinâmicas gerenciadas automaticamente pelo motor de armazenamento colunar do.",
       "Particionamento é automático no Fabric Warehouse baseado na distribuição de dados detectada pelo otimizador; engenheiros não precisam configurar partições manualmente.",
       "O Fabric Warehouse não suporta particionamento nativo de tabelas via `CREATE PARTITION FUNCTION/SCHEME`; a estratégia recomendada é usar tabelas separadas por período (ex: `vendas_2024`, `vendas_2025`) com views unificadoras, ou usar o Lakehouse com Delta particionado e acessar via SQL Analytics Endpoint.",
-      "Sim, suporta particionamento com `CREATE TABLE tabela PARTITION BY RANGE (data_coluna) (PARTITION p2024 VALUES LESS THAN ('2025-01-01'))` igual ao Azure Synapse Analytics."
+      "Sim, suporta particionamento com `CREATE TABLE tabela PARTITION BY RANGE (data_coluna) (PARTITION p2024 VALUES LESS THAN ('2025-01-01'))` igual ao Azure."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -3853,7 +3853,7 @@ export const questions = [
     "id": "dp700_q155",
     "text": "Em um Notebook Fabric, como você converte um DataFrame PySpark para pandas para usar uma biblioteca de ML que não suporta Spark, e quais são os riscos dessa abordagem?",
     "options": [
-      "Não há risco na conversão; o Fabric gerencia automaticamente a memória do driver durante `toPandas()` usando paginação transparente para evitar OutOfMemoryError.",
+      "Não há risco na conversão; o Fabric gerencia automaticamente a memória do driver durante `toPandas()` usando paginação transparente para evitar.",
       "`df_pandas = pandas_api.DataFrame(df)` usando a Pandas API on Spark que mantém a execução distribuída sem coletar dados no driver, eliminando o risco de memória.",
       "`df_pandas = df.collect().toDataFrame()`",
       "`df_pandas = df.toPandas()`"
@@ -3878,7 +3878,7 @@ export const questions = [
     "id": "dp700_q156",
     "text": "No Monitor Hub do Fabric, ao investigar uma execução de pipeline com falha, quais informações de diagnóstico estão disponíveis no drill-down de uma atividade com erro?",
     "options": [
-      "Input e output de cada atividade são ocultados por padrão por segurança; é necessário habilitar \"Activity logging\" nas configurações avançadas do workspace para ver esses detalhes.",
+      "Input e output de cada atividade são ocultados por padrão por segurança; é necessário habilitar \"Activity logging\" nas configurações avançadas do workspace.",
       "Apenas métricas de performance (duração, linhas processadas, bytes transferidos); informações de erro requerem habilitação prévia de \"Diagnostic logging\" nas configurações do pipeline.",
       "Apenas status e mensagem de erro resumida; detalhes completos de stack trace requerem acesso ao Azure Monitor Log Analytics configurado para o workspace.",
       "Nome da atividade, tipo, status, horário de início/fim, duração, mensagem de erro detalhada com stack trace, input e output da atividade (incluindo parâmetros utilizados), e link para os logs do Spark se a atividade envolver processamento Spark."
@@ -3904,8 +3904,8 @@ export const questions = [
     "text": "No Fabric, como você executa uma query que combina dados de um Warehouse e de um Lakehouse no mesmo workspace usando T-SQL?",
     "options": [
       "Criando um Linked Server no Warehouse apontando para o SQL Analytics Endpoint do Lakehouse e usando `OPENQUERY(linked_server, 'SELECT...')` para acessar as tabelas do Lakehouse.",
-      "Cross-database queries entre Warehouse e Lakehouse não são suportadas; é necessário criar um Shortcut do Lakehouse dentro do Warehouse para acessar os dados via T-SQL.",
-      "Exportando os dados do Lakehouse para um arquivo Parquet no OneLake e usando `OPENROWSET` no Warehouse para ler o arquivo Parquet como tabela externa temporária.",
+      "Cross-database queries entre Warehouse e Lakehouse não são suportadas; é necessário criar um Shortcut do Lakehouse dentro do Warehouse para acessar os dados.",
+      "Exportando os dados do Lakehouse para um arquivo Parquet no OneLake e usando `OPENROWSET` no Warehouse para ler o arquivo Parquet como tabela externa.",
       "Usando notação de três partes `[nome_lakehouse].[dbo].[nome_tabela]` diretamente na query do Warehouse"
     ],
     "correctAnswer": 3,
@@ -3929,8 +3929,8 @@ export const questions = [
     "text": "Como você otimiza o throughput de processamento de um Eventstream do Fabric que está processando 100.000 eventos por segundo com latência crescente?",
     "options": [
       "Aumentar o buffer do Eventstream com `eventstream.conf.set(\"buffer.size\", \"10GB\")` para absorver os picos de volume sem impactar a latência de processamento.",
-      "Verificar se o processador do Eventstream está com recursos suficientes de capacity, simplificar as transformações aplicadas no canvas (remover operações desnecessárias), aumentar o paralelismo do destino (ex: múltiplas partições no Eventhouse), e considerar dividir o Eventstream em múltiplos streams paralelos por partição da fonte.",
-      "Habilitar o modo \"High Throughput\" do Eventstream nas configurações avançadas que automaticamente escala os recursos de processamento baseado no volume detectado.",
+      "Verificar se o processador do Eventstream está com recursos suficientes de capacity, simplificar as transformações aplicadas no canvas (remover operações.",
+      "Habilitar o modo \"High Throughput\" do Eventstream nas configurações avançadas que automaticamente escala os recursos de processamento baseado no volume.",
       "Substituir o Eventstream por um notebook PySpark com Structured Streaming que tem melhor throughput para volumes acima de 50.000 eventos por segundo."
     ],
     "correctAnswer": 1,
@@ -3978,7 +3978,7 @@ export const questions = [
     "id": "dp700_q160",
     "text": "Em um KQL Database do Fabric, você tenta ingerir um arquivo CSV mas recebe erro de incompatibilidade de schema. Como você resolve sem modificar os dados originais?",
     "options": [
-      "Usando `.ingest into table NomeTabela (...) with (format='csv', ignoreSchema=true)` que ignora incompatibilidades e ingere os dados no tipo de dado padrão string para todas as colunas.",
+      "Usando `.ingest into table NomeTabela (...) with (format='csv', ignoreSchema=true)` que ignora incompatibilidades e ingere.",
       "Convertendo o CSV para formato JSON antes da ingestão usando um notebook Python, pois o formato JSON é mais flexível com schema no KQL Database do Fabric.",
       "Usando `.ingest into table NomeTabela (...) with (format='csv', ingestionMappingReference='mapeamento_csv')` com um mapeamento de ingestão criado via `.create ingestion mapping` que define como colunas do CSV mapeiam para colunas da tabela, resolvendo incompatibilidades de nome e tipo.",
       "Recriando a tabela KQL com o schema exato do arquivo CSV usando `.drop table` e `.create table` com as colunas do CSV, adaptando o schema da tabela à fonte."
@@ -4028,9 +4028,9 @@ export const questions = [
     "id": "dp700_q162",
     "text": "O que é Query Pushdown no contexto do SQL Analytics Endpoint do Lakehouse e como ele melhora o desempenho?",
     "options": [
-      "Query Pushdown é um mecanismo que cacheia resultados de queries frequentes no buffer pool do SQL Analytics Endpoint para servir respostas sem reprocessar os arquivos Delta.",
+      "Query Pushdown é um mecanismo que cacheia resultados de queries frequentes no buffer pool do SQL Analytics Endpoint para servir respostas sem reprocessar os.",
       "Query Pushdown envia a query SQL do usuário diretamente para a fonte de dados original (ex: Azure SQL Database) via Shortcut, sem processar dados no Lakehouse, reduzindo a latência para fontes externas.",
-      "Query Pushdown transfere o processamento de predicados de filtro, projeções de coluna e agregações diretamente para o motor de leitura dos arquivos Delta Parquet (usando column pruning e predicate pushdown), evitando que dados desnecessários sejam carregados em memória antes da filtragem.",
+      "Query Pushdown transfere o processamento de predicados de filtro, projeções de coluna e agregações diretamente para o motor de leitura dos arquivos Delta.",
       "Query Pushdown divide automaticamente queries complexas em sub-queries que são executadas em paralelo por múltiplos executores Spark, aumentando o throughput de processamento."
     ],
     "correctAnswer": 2,
@@ -4056,7 +4056,7 @@ export const questions = [
       "Usando a atividade \"Data Quality\" disponível no Data Pipeline que aplica automaticamente regras de qualidade configuradas no Microsoft Purview Data Catalog.",
       "Usando uma atividade Notebook após a ingestão que executa checks de qualidade (contagem de registros, verificação de nulos, validação de ranges), retornando sucesso/falha via `mssparkutils.notebook.exit()`; atividade If Condition verifica o resultado e decide entre carregar em produção ou redirecionar para quarentena.",
       "Usando a atividade Lookup para contar registros na staging e comparar com a tabela de destino; se a diferença exceder 10%, o pipeline envia alerta e para automaticamente.",
-      "Configurando \"Schema Validation\" na atividade Copy Data que verifica automaticamente se os dados de entrada correspondem ao schema da tabela de destino antes da carga."
+      "Configurando \"Schema Validation\" na atividade Copy Data que verifica automaticamente se os dados de entrada correspondem ao schema da tabela de destino antes."
     ],
     "correctAnswer": 1,
     "difficulty": "intermediario",
@@ -4078,9 +4078,9 @@ export const questions = [
     "id": "dp700_q164",
     "text": "Como você atribui e rastreia o custo de CUs por projeto ou equipe em uma capacity Fabric compartilhada por múltiplos times de engenharia de dados?",
     "options": [
-      "Criando uma capacity Fabric separada por equipe para isolamento completo de custos; compartilhamento de capacity não permite rastreamento granular por projeto ou equipe.",
+      "Criando uma capacity Fabric separada por equipe para isolamento completo de custos; compartilhamento de capacity não permite rastreamento granular por.",
       "Usando tags de recurso Azure no portal Azure para marcar operações do Fabric por equipe, que são automaticamente associadas ao custo no Azure Cost Management.",
-      "Habilitando \"Cost Allocation\" nas configurações avançadas de cada workspace que gera automaticamente relatórios de custo por item e usuário no Admin Portal do Fabric.",
+      "Habilitando \"Cost Allocation\" nas configurações avançadas de cada workspace que gera automaticamente relatórios de custo por item e usuário no Admin Portal.",
       "Organizando workspaces por projeto/equipe e usando o Capacity Metrics App para filtrar o consumo por workspace, combinado com Domains para agrupamento lógico por área de negócio; exportando métricas para um Lakehouse centralizado para criação de relatórios de chargeback personalizados."
     ],
     "correctAnswer": 3,
@@ -4103,8 +4103,8 @@ export const questions = [
     "id": "dp700_q165",
     "text": "Como o MLflow é integrado ao Microsoft Fabric para rastreamento de experimentos de machine learning em notebooks?",
     "options": [
-      "MLflow não está disponível nativamente no Fabric; requer instalação via `%pip install mlflow` e configuração de um servidor MLflow Tracking no Azure Container Instances.",
-      "O Fabric usa o Azure Machine Learning como backend para MLflow; é necessário criar um Azure ML Workspace e conectá-lo ao workspace Fabric antes de usar `mlflow.log_metric()`.",
+      "MLflow não está disponível nativamente no Fabric; requer instalação via `%pip install mlflow` e configuração de um servidor MLflow Tracking no Azure.",
+      "O Fabric usa o Azure Machine Learning como backend para MLflow; é necessário criar um Azure ML Workspace e conectá-lo ao workspace Fabric antes de usar.",
       "O Fabric inclui MLflow pré-instalado nos notebooks; usando `import mlflow; mlflow.set_experiment(\"nome_experimento\"); mlflow.start_run()` para registrar métricas, parâmetros e artefatos que são automaticamente armazenados no workspace Fabric sem configuração de servidor MLflow externo.",
       "MLflow no Fabric funciona apenas com modelos scikit-learn e PyTorch; modelos PySpark MLlib requerem o Synapse ML tracking server para registro de experimentos."
     ],
@@ -4128,10 +4128,10 @@ export const questions = [
     "id": "dp700_q166",
     "text": "Um pipeline Fabric falha com `ConcurrentAppendException` ao tentar fazer append em uma tabela Delta que outro processo está escrevendo simultaneamente. Como você resolve?",
     "options": [
-      "Usar `df.write.format(\"delta\").mode(\"overwrite\").option(\"txnAppId\", uuid).save()` com ID de transação único que resolve conflitos automaticamente via two-phase commit.",
+      "Usar `df.write.format(\"delta\").mode(\"overwrite\").option(\"txnAppId\", uuid).save()` com ID de transação único que resolve conflitos automaticamente via.",
       "Habilitar `SERIALIZABLE` isolation level na tabela Delta com `ALTER TABLE nome SET TBLPROPERTIES ('delta.isolationLevel' = 'Serializable')` que bloqueia escritas concorrentes e garante acesso exclusivo.",
       "O Delta Lake usa controle de concorrência otimista; configurar `spark.conf.set(\"spark.databricks.delta.retryWriteConflict.enabled\", \"true\")` para retry automático, ou redesenhar o pipeline para que escritas simultâneas ocorram em partições diferentes (evitando conflito), ou serializar as escritas usando orquestração sequencial no pipeline pai.",
-      "Converter a tabela Delta para formato Parquet sem transaction log, eliminando o mecanismo de controle de concorrência que causa o conflito entre escritores paralelos."
+      "Converter a tabela Delta para formato Parquet sem transaction log, eliminando o mecanismo de controle de concorrência que."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -4153,10 +4153,10 @@ export const questions = [
     "id": "dp700_q167",
     "text": "Em um Data Pipeline do Fabric, como você processa um arquivo JSON com estrutura aninhada (arrays de objetos) e carrega os dados achatados em uma tabela do Lakehouse?",
     "options": [
-      "Usando a atividade Copy Data com o conector JSON configurado com \"Flatten hierarchy\" habilitado que automaticamente achata estruturas aninhadas até 5 níveis de profundidade.",
+      "Usando a atividade Copy Data com o conector JSON configurado com \"Flatten hierarchy\" habilitado que automaticamente achata.",
       "Usando um Notebook PySpark com `spark.read.option(\"multiLine\", \"true\").json(\"Files/dados.json\")` para ler o JSON, `explode()` para expandir arrays aninhados, `select()` com notação de ponto para achatar campos aninhados, e `write.format(\"delta\").save(\"Tables/destino\")` para persistir.",
-      "Usando um Dataflow Gen2 com a transformação \"Expand Record\" do Power Query que expande objetos JSON aninhados em colunas separadas sem necessidade de código PySpark.",
-      "Usando a atividade Script com `OPENJSON` no Warehouse que processa o arquivo JSON diretamente do OneLake e insere os dados achatados na tabela de destino via T-SQL."
+      "Usando um Dataflow Gen2 com a transformação \"Expand Record\" do Power Query que expande objetos JSON aninhados em colunas separadas sem necessidade de código.",
+      "Usando a atividade Script com `OPENJSON` no Warehouse que processa o arquivo JSON diretamente do OneLake e insere os dados."
     ],
     "correctAnswer": 1,
     "difficulty": "intermediario",
@@ -4178,9 +4178,9 @@ export const questions = [
     "id": "dp700_q168",
     "text": "Quando é necessário executar um refresh explícito de um modelo semântico Direct Lake após atualizar dados no Lakehouse?",
     "options": [
-      "Nunca é necessário refresh explícito; o Direct Lake detecta automaticamente qualquer alteração nos arquivos Delta em até 30 segundos e atualiza o framing sem intervenção.",
+      "Nunca é necessário refresh explícito; o Direct Lake detecta automaticamente qualquer alteração nos arquivos Delta em até 30 segundos e atualiza o framing sem.",
       "Um refresh explícito é necessário quando se quer garantir que o framing (snapshot) do Direct Lake seja atualizado imediatamente após a carga; sem refresh explícito, o Direct Lake usa o framing anterior até que o próximo acesso detecte novos arquivos Delta; para garantia de consistência em relatórios críticos, disparar refresh via API REST após cada carga.",
-      "Refresh explícito é sempre obrigatório após qualquer escrita no Lakehouse; sem ele, o Direct Lake continua servindo dados da versão anterior indefinidamente até o próximo refresh agendado.",
+      "Refresh explícito é sempre obrigatório após qualquer escrita no Lakehouse; sem ele, o Direct Lake continua servindo dados da versão anterior indefinidamente.",
       "Refresh explícito é necessário apenas quando o número de arquivos Delta na tabela excede 1000; abaixo desse limite o Direct Lake atualiza automaticamente o framing em tempo real."
     ],
     "correctAnswer": 1,
@@ -4206,7 +4206,7 @@ export const questions = [
       "Índices são criados automaticamente pelo Fabric Warehouse baseado nos padrões de query observados no Query Insights; índices manuais são ignorados pelo otimizador.",
       "Suporta `CREATE CLUSTERED COLUMNSTORE INDEX`, `CREATE NONCLUSTERED INDEX` e `CREATE HASH INDEX`",
       "O Fabric Warehouse usa armazenamento colunar (similar a clustered columnstore) por padrão para todas as tabelas; suporta estatísticas de coluna via `CREATE STATISTICS` para auxiliar o otimizador; índices B-Tree tradicionais como no SQL Server não são suportados pois o modelo de armazenamento é fundamentalmente diferente.",
-      "Suporta apenas `CREATE UNIQUE INDEX` para enforcement de unicidade em colunas de chave; outros tipos de índice são gerenciados automaticamente pelo motor de armazenamento colunar."
+      "Suporta apenas `CREATE UNIQUE INDEX` para enforcement de unicidade em colunas de chave; outros tipos de índice são gerenciados automaticamente pelo motor de."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -4229,8 +4229,8 @@ export const questions = [
     "text": "Como você analisa o transaction log de uma tabela Delta no Lakehouse do Fabric para entender o histórico de operações e diagnosticar problemas de performance?",
     "options": [
       "Lendo diretamente os arquivos JSON do `_delta_log` com `spark.read.json(\"Tables/nome_tabela/_delta_log/*.json\")` para análise de baixo nível das entradas do log de transações.",
-      "Consultando a view `sys.delta_transaction_log` no SQL Analytics Endpoint do Lakehouse que expõe o histórico de operações de todas as tabelas em formato tabular.",
-      "Usando `mssparkutils.fs.ls(\"Tables/nome_tabela/_delta_log/\")` para listar os arquivos de checkpoint e calcular manualmente o número de operações desde o último checkpoint.",
+      "Consultando a view `sys.delta_transaction_log` no SQL Analytics Endpoint do Lakehouse que expõe o histórico de operações de todas.",
+      "Usando `mssparkutils.fs.ls(\"Tables/nome_tabela/_delta_log/\")` para listar os arquivos de checkpoint e calcular manualmente o número de operações desde o.",
       "Usando `spark.sql(\"DESCRIBE HISTORY nome_tabela\")` que retorna todas as versões com operação (WRITE, MERGE, DELETE, OPTIMIZE), timestamp, usuário, métricas de linhas afetadas e parâmetros da operação; ou `DeltaTable.forName(spark, \"nome_tabela\").history()` via API PySpark."
     ],
     "correctAnswer": 3,
@@ -4253,10 +4253,10 @@ export const questions = [
     "id": "dp700_q171",
     "text": "Em um Notebook Fabric, como você consome dados de uma API REST autenticada com OAuth 2.0 usando a Workspace Identity?",
     "options": [
-      "Usando `requests.get(url, auth=HTTPBasicAuth(client_id, client_secret))` com o Client ID e Secret do Service Principal armazenados em variáveis de ambiente do notebook.",
-      "Usando `mssparkutils.credentials.getSecret(\"keyvault_uri\", \"nome_segredo\")` para recuperar o API key do Key Vault e passando como header `X-API-Key` nas requisições HTTP.",
+      "Usando `requests.get(url, auth=HTTPBasicAuth(client_id, client_secret))` com o Client ID e Secret do Service Principal.",
+      "Usando `mssparkutils.credentials.getSecret(\"keyvault_uri\", \"nome_segredo\")` para recuperar o API key do Key Vault e passando como header `X-API-Key` nas.",
       "Usando `mssparkutils.credentials.getToken(\"recurso_api\")` para obter o token OAuth da Workspace Identity sem expor credenciais, e `requests.get(url, headers={\"Authorization\": f\"Bearer {token}\"})` para chamar a API com autenticação gerenciada automaticamente pelo Fabric.",
-      "Configurando `spark.conf.set(\"spark.rest.oauth.token\", mssparkutils.credentials.getToken())` que injeta automaticamente o token em todas as chamadas HTTP feitas pelo notebook."
+      "Configurando `spark.conf.set(\"spark.rest.oauth.token\", mssparkutils.credentials.getToken())` que injeta automaticamente o token em todas as chamadas HTTP."
     ],
     "correctAnswer": 2,
     "difficulty": "intermediario",
@@ -4279,8 +4279,8 @@ export const questions = [
     "text": "Como você implementa uma política de retenção automática de dados em um KQL Database do Eventhouse para deletar automaticamente eventos com mais de 90 dias?",
     "options": [
       "Usando `.create or alter table NomeTabela (timestamp:datetime, ...) with (ttl=timespan(90.00:00:00))` que define TTL por linha na criação da tabela KQL.",
-      "Criando um Data Pipeline agendado diariamente que executa `.drop table NomeTabela_antiga` e recria a tabela com apenas os últimos 90 dias de dados via query KQL.",
-      "Configurando `ALTER TABLE NomeTabela SET (retention_period = 90)` via T-SQL no SQL Analytics Endpoint do Eventhouse que propaga a política para o KQL Database subjacente.",
+      "Criando um Data Pipeline agendado diariamente que executa `.drop table NomeTabela_antiga` e recria a tabela com apenas os últimos 90 dias de dados via query.",
+      "Configurando `ALTER TABLE NomeTabela SET (retention_period = 90)` via T-SQL no SQL Analytics Endpoint do Eventhouse que propaga a política para o KQL.",
       "`.alter table NomeTabela policy retention softdelete = 90d recoverability = disabled`"
     ],
     "correctAnswer": 3,
@@ -4303,9 +4303,9 @@ export const questions = [
     "id": "dp700_q173",
     "text": "Em um Data Pipeline do Fabric copiando dados de múltiplas tabelas SQL para um Lakehouse, como você implementa transformações de tipo de dado durante a cópia sem usar um notebook separado?",
     "options": [
-      "Usando a atividade \"Script\" após o Copy Data que executa `ALTER TABLE tabela ALTER COLUMN coluna TYPE novo_tipo` para converter os tipos após a carga inicial no Lakehouse.",
-      "Usando a atividade \"Type Conversion\" disponível no Data Pipeline entre o source e o sink que aplica mapeamentos de tipo configurados visualmente no canvas do pipeline.",
-      "Configurando o schema do destino Lakehouse com os tipos corretos; o Fabric Warehouse automaticamente converte os tipos durante a cópia para corresponder ao schema de destino.",
+      "Usando a atividade \"Script\" após o Copy Data que executa `ALTER TABLE tabela ALTER COLUMN coluna TYPE novo_tipo` para converter.",
+      "Usando a atividade \"Type Conversion\" disponível no Data Pipeline entre o source e o sink que aplica mapeamentos de tipo.",
+      "Configurando o schema do destino Lakehouse com os tipos corretos; o Fabric Warehouse automaticamente converte os tipos durante a cópia para corresponder ao.",
       "Usando a funcionalidade \"Column Mapping\" na atividade Copy Data com expressões de conversão de tipo, ou configurando uma \"Source Query\" com CAST/CONVERT na query SQL de origem para transformar os tipos durante a extração antes de carregar no Lakehouse."
     ],
     "correctAnswer": 3,
@@ -4328,9 +4328,9 @@ export const questions = [
     "id": "dp700_q174",
     "text": "Um Data Pipeline falha com \"Authentication failed\" ao acessar um Azure Data Lake Storage Gen2 via Shortcut no Lakehouse. Quais são as causas mais comuns e como investigar?",
     "options": [
-      "O erro é causado por firewall do ADLS Gen2 bloqueando conexões do Fabric; adicionar os IPs do Fabric à lista de permitidos nas configurações de rede do storage account.",
+      "O erro é causado por firewall do ADLS Gen2 bloqueando conexões do Fabric; adicionar os IPs do Fabric à lista de permitidos nas configurações de rede do.",
       "O erro indica que o arquivo no ADLS Gen2 está criptografado com CMK (Customer Managed Key) expirada; renovar a chave no Azure Key Vault e aguardar propagação de 15 minutos.",
-      "O erro indica que a subscrição Azure do ADLS Gen2 está em tenant diferente do Fabric; cross-tenant Shortcuts requerem configuração de peering de tenant aprovado pelo administrador global.",
+      "O erro indica que a subscrição Azure do ADLS Gen2 está em tenant diferente do Fabric; cross-tenant Shortcuts requerem configuração de peering de tenant.",
       "Causas: credenciais da conexão do Shortcut expiradas (SAS token ou Account Key rotacionado), Service Principal sem permissão adequada no ADLS Gen2 (Storage Blob Data Reader no mínimo), ou Managed Identity do workspace sem RBAC no storage; investigar nas configurações do Shortcut e nos logs de autenticação do Azure AD."
     ],
     "correctAnswer": 3,
@@ -4354,8 +4354,8 @@ export const questions = [
     "text": "Em um Lakehouse de produção do Fabric com tabelas Delta que recebem atualizações frequentes, qual é a estratégia recomendada para execução do VACUUM sem comprometer o time travel?",
     "options": [
       "Executar VACUUM diariamente com retenção de 0 horas para maximizar a liberação de espaço; time travel pode ser substituído por backups externos se necessário para auditoria.",
-      "Executar VACUUM apenas em tabelas com mais de 1 TB de dados; tabelas menores não acumulam arquivos suficientes para justificar o overhead de CUs do VACUUM no Fabric.",
-      "Nunca executar VACUUM em tabelas de produção; o Delta Lake gerencia automaticamente o espaço descartando arquivos obsoletos via garbage collection interno sem intervenção manual.",
+      "Executar VACUUM apenas em tabelas com mais de 1 TB de dados; tabelas menores não acumulam arquivos suficientes para justificar.",
+      "Nunca executar VACUUM em tabelas de produção; o Delta Lake gerencia automaticamente o espaço descartando arquivos obsoletos via garbage collection interno.",
       "Manter o período de retenção padrão de 7 dias (168 horas) para preservar versões de time travel necessárias para auditoria e reprocessamento; executar VACUUM semanalmente após confirmar que não há queries de time travel em andamento; aumentar a retenção com `delta.logRetentionDuration` se auditorias exigem histórico mais longo."
     ],
     "correctAnswer": 3,
@@ -4379,8 +4379,8 @@ export const questions = [
     "text": "Em um Data Pipeline do Fabric copiando dados de uma fonte SQL para um Lakehouse em modo append, como o \"Write batch size\" no sink afeta o desempenho e como você o configura?",
     "options": [
       "Write batch size é ignorado pelo Fabric quando o destino é um Lakehouse; o Delta Lake sempre acumula todos os dados na memória antes de fazer um único commit transacional.",
-      "Write batch size deve sempre ser configurado como 0 (automático) pois o Fabric determina o tamanho ideal dinamicamente baseado na memória disponível e na velocidade da fonte.",
-      "Write batch size afeta apenas o número de conexões simultâneas ao sink; valores maiores criam mais conexões paralelas melhorando o throughput independente do tamanho dos dados.",
+      "Write batch size deve sempre ser configurado como 0 (automático) pois o Fabric determina o tamanho ideal dinamicamente baseado na memória disponível e na.",
+      "Write batch size afeta apenas o número de conexões simultâneas ao sink; valores maiores criam mais conexões paralelas melhorando o throughput independente do.",
       "Write batch size define quantas linhas são acumuladas antes de cada commit no Lakehouse; valores muito pequenos geram muitos arquivos Delta pequenos (fragmentação); valores muito grandes podem causar timeout de transação; recomendado entre 100.000 e 1.000.000 linhas por batch dependendo do tamanho das linhas e da latência aceitável."
     ],
     "correctAnswer": 3,
@@ -4403,8 +4403,8 @@ export const questions = [
     "id": "dp700_q177",
     "text": "Em um processo ETL no Warehouse do Fabric, como você usa tabelas temporárias para staging intermediário e quais são suas limitações?",
     "options": [
-      "Tabelas temporárias no Fabric Warehouse persistem por 24 horas após a sessão terminar, permitindo seu uso como staging entre execuções de pipeline agendadas a cada hora.",
-      "Tabelas temporárias são compartilhadas entre todas as sessões do Warehouse; usar prefixos únicos como `#staging_jobid` para evitar conflitos entre execuções paralelas de pipelines.",
+      "Tabelas temporárias no Fabric Warehouse persistem por 24 horas após a sessão terminar, permitindo seu uso como staging entre execuções de pipeline agendadas.",
+      "Tabelas temporárias são compartilhadas entre todas as sessões do Warehouse; usar prefixos únicos como `#staging_jobid` para evitar conflitos entre execuções.",
       "Criando `#tabela_temp` com `CREATE TABLE #staging (...)` ou `SELECT INTO #staging FROM ...`; limitação principal: tabelas temporárias são locais à sessão e não persistem entre execuções; para staging entre pipelines diferentes, usar tabelas permanentes com prefixo de convenção e truncar no início de cada execução.",
       "O Fabric Warehouse não suporta tabelas temporárias com `#`; a alternativa é usar `CREATE TABLE` no schema `tempdb` que é automaticamente limpo após cada sessão."
     ],
@@ -4429,9 +4429,9 @@ export const questions = [
     "text": "Como você usa a API REST do Microsoft Fabric para construir um dashboard de monitoramento personalizado que exibe o status de todos os pipelines de um workspace?",
     "options": [
       "Usando a API do Azure Monitor `GET https://management.azure.com/subscriptions/{subId}/resources?$filter=resourceType eq 'Microsoft.Fabric/pipelines'` que expõe métricas de execução de todos os pipelines do tenant.",
-      "Chamando `GET https://api.fabric.microsoft.com/v1/workspaces/{workspaceId}/items?type=DataPipeline` para listar pipelines e `GET https://api.fabric.microsoft.com/v1/workspaces/{workspaceId}/items/{pipelineId}/jobs/instances` para obter histórico de execuções; consolidando os resultados em um Lakehouse e construindo relatório Power BI sobre os dados coletados.",
-      "Consultando a tabela `fabric.monitoring.pipeline_runs` disponível no SQL Analytics Endpoint de qualquer Lakehouse do workspace que agrega automaticamente as execuções de todos os pipelines.",
-      "Usando a API Power BI REST `GET https://api.powerbi.com/v1.0/myorg/groups/{workspaceId}/dataflows` que lista e monitora todos os itens de engenharia de dados incluindo pipelines do Fabric."
+      "Chamando `GET https://api.fabric.microsoft.com/v1/workspaces/{workspaceId}/items?type=DataPipeline` para listar pipelines e.",
+      "Consultando a tabela `fabric.monitoring.pipeline_runs` disponível no SQL Analytics Endpoint de qualquer Lakehouse do workspace que agrega automaticamente as.",
+      "Usando a API Power BI REST `GET https://api.powerbi.com/v1.0/myorg/groups/{workspaceId}/dataflows` que lista e monitora todos."
     ],
     "correctAnswer": 1,
     "difficulty": "avancado",
@@ -4453,9 +4453,9 @@ export const questions = [
     "id": "dp700_q179",
     "text": "Em um Notebook Fabric, como você verifica se existem registros que violam uma constraint CHECK em uma tabela Delta antes de aplicar a constraint para evitar falha na criação?",
     "options": [
-      "Usando `DeltaTable.forName(spark, \"nome_tabela\").validateConstraint(\"condicao\")` que verifica automaticamente os dados existentes antes de aplicar a constraint.",
-      "Executando `DBCC CHECKCONSTRAINTS ('nome_tabela')` no SQL Analytics Endpoint que valida todas as constraints pendentes e retorna registros violadores em formato tabular.",
-      "Executando `ALTER TABLE nome_tabela ADD CONSTRAINT nome CHECK (condicao) WITH NOCHECK` que adiciona a constraint sem validar registros existentes, similar ao SQL Server.",
+      "Usando `DeltaTable.forName(spark, \"nome_tabela\").validateConstraint(\"condicao\")` que verifica automaticamente os dados existentes.",
+      "Executando `DBCC CHECKCONSTRAINTS ('nome_tabela')` no SQL Analytics Endpoint que valida todas as constraints pendentes e.",
+      "Executando `ALTER TABLE nome_tabela ADD CONSTRAINT nome CHECK (condicao) WITH NOCHECK` que adiciona a constraint.",
       "`violacoes = spark.sql(\"SELECT COUNT(*) as total FROM nome_tabela WHERE NOT (condicao_constraint)\").collect()[0][\"total\"]; assert violacoes == 0, f\"{violacoes} registros violam a constraint\"`"
     ],
     "correctAnswer": 3,
@@ -4481,7 +4481,7 @@ export const questions = [
       "Usando `mssparkutils.notebook.runMultiple([{\"path\": \"NotebookB\", \"args\": {\"grupo\": g}} for g in grupos], parallelism=5)` que executa múltiplos notebooks em paralelo com controle de concorrência máxima, retornando resultados quando todos concluem.",
       "Usando `ThreadPoolExecutor` do Python com `executor.map(processar_grupo, grupos)` que cria threads Python paralelas",
       "Criando múltiplas sessões Spark com `SparkSession.builder.getOrCreate()` em threads separadas",
-      "Usando `spark.sparkContext.parallelize(grupos).foreach(lambda g: processar_grupo(g))` que distribui o processamento de grupos entre executores Spark automaticamente."
+      "Usando `spark.sparkContext.parallelize(grupos).foreach(lambda g: processar_grupo(g))` que distribui o processamento de grupos entre executores Spark."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -4503,10 +4503,10 @@ export const questions = [
     "id": "dp700_q181",
     "text": "Em um KQL Database do Fabric, como você acessa dados armazenados em um arquivo Parquet no OneLake sem ingerir os dados na tabela KQL?",
     "options": [
-      "Usando `.create external table NomeTabela (colunas) kind=adl connection='abfss://path' partition by (data:datetime)` para criar tabela externa persistente no KQL Database.",
+      "Usando `.create external table NomeTabela (colunas) kind=adl connection='abfss://path' partition by (data:datetime)` para criar.",
       "Criando um Shortcut no KQL Database apontando para o arquivo Parquet no OneLake, que automaticamente expõe o arquivo como tabela KQL consultável via query.",
       "Usando `externaldata` com a função KQL: `externaldata(colunas) ['https://onelake.dfs.fabric.microsoft.com/path/arquivo.parquet'] with (format='parquet')`",
-      "Usando `Parquet::read('https://onelake.dfs.fabric.microsoft.com/path/arquivo.parquet')` que é uma função KQL nativa para leitura de arquivos Parquet sem ingestão."
+      "Usando `Parquet::read('https://onelake.dfs.fabric.microsoft.com/path/arquivo.parquet')` que é uma função KQL nativa para leitura de arquivos Parquet sem."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -4530,8 +4530,8 @@ export const questions = [
     "options": [
       "Convertendo tabelas Delta para formato CSV que ocupa significativamente menos espaço que o formato Parquet colunar usado pelo Delta Lake no OneLake.",
       "Verificando o consumo de armazenamento no Admin Portal do Fabric por workspace, identificando as tabelas Delta com maior volume via `DESCRIBE DETAIL` e `spark.sql(\"SHOW TABLES\")`, executando VACUUM para remover arquivos obsoletos, arquivando dados históricos e deletando itens não utilizados como tabelas temporárias de desenvolvimento.",
-      "Aumentando a cota de armazenamento do OneLake no Azure Portal navegando até o recurso Fabric e ajustando o slider de \"Storage Quota\" nas configurações avançadas.",
-      "Habilitando a compressão automática do OneLake nas configurações do workspace que reduz automaticamente o tamanho dos arquivos Delta em até 70% sem alterar o conteúdo dos dados."
+      "Aumentando a cota de armazenamento do OneLake no Azure Portal navegando até o recurso Fabric e ajustando o slider de \"Storage Quota\" nas configurações.",
+      "Habilitando a compressão automática do OneLake nas configurações do workspace que reduz automaticamente o tamanho dos arquivos."
     ],
     "correctAnswer": 1,
     "difficulty": "intermediario",
@@ -4553,10 +4553,10 @@ export const questions = [
     "id": "dp700_q183",
     "text": "Em um Data Pipeline do Fabric, como você implementa um padrão fan-out/fan-in onde múltiplas atividades paralelas devem todas concluir antes de uma atividade de consolidação ser executada?",
     "options": [
-      "Usando múltiplas atividades em paralelo (sem dependência entre elas) todas conectadas ao path \"On Success\" de uma atividade de consolidação subsequente; o pipeline automaticamente aguarda a conclusão de todas as atividades predecessoras antes de executar a consolidação.",
-      "Usando a atividade \"Barrier\" disponível no Data Pipeline que sincroniza múltiplos fluxos paralelos antes de permitir a continuação do pipeline principal.",
-      "Usando `mssparkutils.notebook.runMultiple()` dentro de uma atividade Notebook que gerencia a sincronização das atividades paralelas e sinaliza a conclusão ao pipeline pai.",
-      "Criando variáveis de controle que cada atividade paralela atualiza ao concluir e uma atividade Until que aguarda até que todas as variáveis indiquem conclusão."
+      "Usando múltiplas atividades em paralelo (sem dependência entre elas) todas conectadas ao path \"On Success\" de uma.",
+      "Usando a atividade \"Barrier\" disponível no Data Pipeline que sincroniza múltiplos fluxos paralelos antes de permitir a.",
+      "Usando `mssparkutils.notebook.runMultiple()` dentro de uma atividade Notebook que gerencia a sincronização das atividades.",
+      "Criando variáveis de controle que cada atividade paralela atualiza ao concluir e uma atividade Until que aguarda até que todas."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -4630,7 +4630,7 @@ export const questions = [
     "options": [
       "Purview escaneia automaticamente metadados de Lakehouses, Warehouses e Eventhouses do Fabric, catalogando tabelas e colunas no Data Map; engenheiros usam o catálogo para descobrir dados existentes, verificar lineage end-to-end, classificar dados sensíveis automaticamente e entender o impacto de alterações em objetos upstream.",
       "Purview substitui o Monitor Hub do Fabric para monitoramento de execuções de pipelines e notebooks, oferecendo dashboard unificado com métricas de performance e histórico de execuções.",
-      "Purview é usado exclusivamente para conformidade legal (LGPD/GDPR) e não oferece funcionalidades de catalogação ou descoberta de dados relevantes para engenheiros de dados do dia a dia.",
+      "Purview é usado exclusivamente para conformidade legal (LGPD/GDPR) e não oferece funcionalidades de catalogação ou descoberta de dados relevantes para.",
       "Purview gerencia automaticamente as permissões de acesso a Lakehouses e Warehouses do Fabric, sincronizando grupos do Entra ID com as funções de workspace sem intervenção manual."
     ],
     "correctAnswer": 0,
@@ -4680,7 +4680,7 @@ export const questions = [
     "options": [
       "O Fabric Warehouse usa um sistema de fila de queries com priorização baseada no tipo de operação; queries interativas têm prioridade sobre jobs em background; sob alta carga de capacity, queries são enfileiradas e aguardam disponibilidade de CUs; o administrador pode monitorar a fila via Query Insights e Capacity Metrics App.",
       "O Fabric Warehouse escala automaticamente para múltiplos nós quando detecta concorrência alta, distribuindo as queries entre nós adicionais sem impacto na latência observada pelo usuário.",
-      "O Fabric Warehouse limita automaticamente a 10 queries concorrentes por workspace; queries adicionais recebem erro imediato e devem ser resubmetidas pelo cliente.",
+      "O Fabric Warehouse limita automaticamente a 10 queries concorrentes por workspace; queries adicionais recebem erro imediato e devem ser resubmetidas pelo.",
       "O Fabric Warehouse usa Resource Governor para alocar percentuais fixos de CPU e memória por usuário; usuários que excedem sua cota têm queries automaticamente canceladas."
     ],
     "correctAnswer": 0,
@@ -4706,7 +4706,7 @@ export const questions = [
       "Usando variáveis de sistema do Fabric definidas como `@{system.runId}`, `@{system.pipelineName}` e `@{system.startTime}` disponíveis no contexto de execução de cada pipeline.",
       "Usando `mssparkutils.env.getRunId()` dentro de uma atividade Notebook que retorna o ID da execução do pipeline pai que disparou o notebook.",
       "Usando funções de sistema como `@pipeline().RunId` para o ID de execução único, `@pipeline().Pipeline` para o nome do pipeline, `@pipeline().parameters.nome` para parâmetros, e `@utcNow()` para o timestamp atual",
-      "Executando uma atividade Lookup inicial que consulta a tabela `sys.pipeline_runs` do Warehouse e recupera os metadados da execução atual via `WHERE run_id = @@SPID`."
+      "Executando uma atividade Lookup inicial que consulta a tabela `sys.pipeline_runs` do Warehouse e recupera os metadados da."
     ],
     "correctAnswer": 2,
     "difficulty": "intermediario",
@@ -4728,10 +4728,10 @@ export const questions = [
     "id": "dp700_q190",
     "text": "O que é o recurso de Auto-Optimization no Lakehouse do Microsoft Fabric e como ele beneficia engenheiros de dados?",
     "options": [
-      "Auto-Optimization monitora continuamente as queries SQL no Analytics Endpoint e cria automaticamente views materializadas para as queries mais frequentes acima de 100 execuções diárias.",
-      "Auto-Optimization inclui Auto Compaction (compacta automaticamente arquivos pequenos após operações de escrita) e Optimized Write (ajusta o número de arquivos gerados para tamanho ideal durante a escrita); habilitado via `spark.conf.set(\"spark.microsoft.delta.optimizeWrite.enabled\", \"true\")` — reduz a necessidade de executar OPTIMIZE manualmente.",
-      "Auto-Optimization é um recurso que detecta automaticamente as colunas de join mais usadas e aplica Z-Ordering nas tabelas Delta sem necessidade de comando OPTIMIZE manual.",
-      "Auto-Optimization é o mecanismo de escalonamento automático da capacity Fabric que aumenta os CUs disponíveis quando detecta sobrecarga de operações de escrita em tabelas Delta."
+      "Auto-Optimization monitora continuamente as queries SQL no Analytics Endpoint e cria automaticamente views materializadas para as queries mais frequentes.",
+      "Auto-Optimization inclui Auto Compaction (compacta automaticamente arquivos pequenos após operações de escrita) e Optimized Write (ajusta o número de.",
+      "Auto-Optimization é um recurso que detecta automaticamente as colunas de join mais usadas e aplica Z-Ordering nas tabelas.",
+      "Auto-Optimization é o mecanismo de escalonamento automático da capacity Fabric que aumenta os CUs disponíveis quando detecta sobrecarga de operações de."
     ],
     "correctAnswer": 1,
     "difficulty": "avancado",
@@ -4756,7 +4756,7 @@ export const questions = [
       "Usando prefixos de nomenclatura como `stg_tabela`, `trn_tabela` e `prd_tabela` no schema padrão `dbo`, pois o Fabric Warehouse não suporta múltiplos schemas além do dbo.",
       "Criando schemas separados via `CREATE SCHEMA staging; CREATE SCHEMA transform; CREATE SCHEMA prod;` e organizando tabelas, views e procedures em cada schema conforme sua função, usando notação `schema.objeto` nas queries para referenciar objetos entre schemas.",
       "Criando um Lakehouse separado para staging, um Warehouse para transformação e outro Warehouse para produção, usando Shortcuts para conectar os dados entre as camadas.",
-      "Criando um Warehouse separado para cada camada (staging, transform, prod) e usando cross-database queries para mover dados entre os Warehouses de forma controlada."
+      "Criando um Warehouse separado para cada camada (staging, transform, prod) e usando cross-database queries para mover dados entre os Warehouses de forma."
     ],
     "correctAnswer": 1,
     "difficulty": "intermediario",
@@ -4780,8 +4780,8 @@ export const questions = [
     "options": [
       "Consultando as tabelas de log geradas no KQL Database (ex: `FabricOperationLogs | where OperationName == \"NotebookRun\" | summarize count() by bin(TimeGenerated, 1h), Status | render timechart`) para visualizar padrões de execução e detectar anomalias ao longo do tempo.",
       "Acessando as views `sys.diagnostic_logs` e `sys.operation_history` disponíveis no KQL Database que consolidam todos os logs de workspace automaticamente.",
-      "Executando `.show diagnostic logs | where workspace == 'nome_workspace'` que é o comando KQL nativo para consultar logs de diagnóstico do Fabric armazenados no Eventhouse.",
-      "Usando `SELECT OperationName, COUNT(*) FROM FabricOperationLogs GROUP BY OperationName` via T-SQL no SQL Analytics Endpoint do Eventhouse que expõe os logs de diagnóstico."
+      "Executando `.show diagnostic logs | where workspace == 'nome_workspace'` que é o comando KQL nativo para consultar logs de.",
+      "Usando `SELECT OperationName, COUNT(*) FROM FabricOperationLogs GROUP BY OperationName` via T-SQL no SQL Analytics Endpoint do Eventhouse que expõe os logs."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -4830,8 +4830,8 @@ export const questions = [
     "options": [
       "O ForEach suporta até 50 iterações paralelas configuráveis via \"Batch count\"; para proteger a fonte de dados, configurar o paralelismo baseado na capacidade da fonte (ex: 5-10 para bancos OLTP, maior para fontes cloud escaláveis), monitorando erros de throttling como indicativo de sobrecarga.",
       "O ForEach sempre executa sequencialmente para garantir ordem de processamento; para paralelismo real é necessário usar múltiplas atividades Execute Pipeline em paralelo no canvas.",
-      "O ForEach não tem limite de paralelismo documentado; o Fabric aloca dinamicamente os recursos necessários baseado no número de itens na coleção e na capacity disponível.",
-      "O paralelismo máximo do ForEach é 10 iterações simultâneas; para maior paralelismo é necessário dividir a coleção em sub-grupos e usar múltiplas atividades ForEach em paralelo."
+      "O ForEach não tem limite de paralelismo documentado; o Fabric aloca dinamicamente os recursos necessários baseado no número de.",
+      "O paralelismo máximo do ForEach é 10 iterações simultâneas; para maior paralelismo é necessário dividir a coleção em sub-grupos e usar múltiplas atividades."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -4853,10 +4853,10 @@ export const questions = [
     "id": "dp700_q195",
     "text": "Como você implementa validação de qualidade de dados baseada em expectativas (expectations) em um Notebook Fabric para datasets críticos antes da carga em produção?",
     "options": [
-      "Configurando regras de qualidade no Microsoft Purview Data Catalog que automaticamente valida os dados durante a ingestão no Lakehouse via integration nativa com notebooks.",
-      "Usando `mssparkutils.data.validate(df, rules_file=\"Files/rules.json\")` que é a ferramenta nativa de validação de qualidade de dados do Fabric integrada ao OneLake.",
+      "Configurando regras de qualidade no Microsoft Purview Data Catalog que automaticamente valida os dados durante a ingestão no.",
+      "Usando `mssparkutils.data.validate(df, rules_file=\"Files/rules.json\")` que é a ferramenta nativa de validação de qualidade.",
       "Instalando `%pip install great-expectations` no notebook, definindo um `ExpectationSuite` com regras como `expect_column_values_to_not_be_null`, `expect_column_values_to_be_between` e `expect_column_to_exist`, executando a validação com `validator.validate()` e interrompendo a carga se o resultado contiver failures críticos.",
-      "Usando `spark.sql(\"ANALYZE TABLE nome_tabela COMPUTE STATISTICS FOR ALL COLUMNS VALIDATE\")` que executa validações de qualidade baseadas nas estatísticas de coluna da tabela Delta."
+      "Usando `spark.sql(\"ANALYZE TABLE nome_tabela COMPUTE STATISTICS FOR ALL COLUMNS VALIDATE\")` que executa validações de."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -4878,8 +4878,8 @@ export const questions = [
     "id": "dp700_q196",
     "text": "Em um KQL Database do Eventhouse, como você verifica o status de saúde geral do database e identifica possíveis problemas de configuração?",
     "options": [
-      "Acessando o Azure Diagnostics no portal Azure e consultando logs do tipo `AzureActivity` filtrados pelo recurso Eventhouse para identificar erros de configuração.",
-      "Usando `mssparkutils.eventhouse.healthCheck(\"nome_eventhouse\")` que retorna um relatório completo de saúde do KQL Database incluindo métricas de ingestão e queries.",
+      "Acessando o Azure Diagnostics no portal Azure e consultando logs do tipo `AzureActivity` filtrados pelo recurso Eventhouse para identificar erros de.",
+      "Usando `mssparkutils.eventhouse.healthCheck(\"nome_eventhouse\")` que retorna um relatório completo de saúde do KQL Database.",
       "Usando comandos de administração como `.show database NomeDatabase`, `.show tables details`, `.show cluster`, `.show diagnostics` e verificando métricas no painel de administração do Eventhouse no portal Fabric para identificar problemas de ingestão, retenção ou performance.",
       "Executando `DBCC CHECKDB('NomeDatabase')` via SQL Analytics Endpoint do Eventhouse que verifica a integridade de todas as tabelas e índices do KQL Database."
     ],
@@ -4904,8 +4904,8 @@ export const questions = [
     "text": "Como você configura um Data Pipeline do Fabric para enviar uma notificação ao Microsoft Teams quando uma carga de dados é concluída com sucesso?",
     "options": [
       "Usando a atividade \"Send Email\" do pipeline que suporta notificações para canais Teams via endereço de e-mail do canal, sem necessidade de configurar Webhooks externos.",
-      "Usando a atividade \"Web\" no path \"On Success\" da última atividade do pipeline, configurando um POST para o Incoming Webhook URL do canal Teams com corpo JSON contendo a mensagem de notificação e métricas da execução como `@{activity('CopyData').output.rowsRead}`.",
-      "Configurando a atividade \"Teams Notification\" disponível no catálogo de atividades do Data Pipeline que conecta nativamente ao Teams sem necessidade de Webhook.",
+      "Usando a atividade \"Web\" no path \"On Success\" da última atividade do pipeline, configurando um POST para o Incoming Webhook URL do canal Teams com corpo JSON.",
+      "Configurando a atividade \"Teams Notification\" disponível no catálogo de atividades do Data Pipeline que conecta nativamente ao.",
       "Criando um trigger de conclusão no Pipeline que automaticamente posta no canal Teams configurado nas propriedades de notificação do workspace Fabric."
     ],
     "correctAnswer": 1,
@@ -4929,9 +4929,9 @@ export const questions = [
     "text": "Em um Notebook Fabric processando múltiplos DataFrames grandes sequencialmente, como você gerencia eficientemente a memória para evitar OutOfMemoryError ao longo da execução?",
     "options": [
       "Configurando `spark.conf.set(\"spark.memory.fraction\", \"0.9\")` para alocar 90% da memória JVM ao Spark, reduzindo o espaço reservado para overhead do sistema operacional.",
-      "Convertendo todos os DataFrames para formato Arrow com `df.toArrow()` que usa compressão superior ao PySpark nativo e reduz o consumo de memória em até 80%.",
+      "Convertendo todos os DataFrames para formato Arrow com `df.toArrow()` que usa compressão superior ao PySpark nativo e reduz o.",
       "Usando `df.unpersist()` após uso de DataFrames cacheados, `del df_intermediario` seguido de `spark.catalog.clearCache()` para liberar referências e cache, quebrando processamentos grandes em batches menores com filtros temporais, e monitorando o uso de memória via Spark UI durante a execução.",
-      "Usando `spark.sparkContext.setSystemProperty(\"spark.executor.memory\", \"32g\")` em tempo de execução para aumentar dinamicamente a memória dos executores sem reiniciar a sessão."
+      "Usando `spark.sparkContext.setSystemProperty(\"spark.executor.memory\", \"32g\")` em tempo de execução para aumentar."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -4956,7 +4956,7 @@ export const questions = [
       "Criando uma View parametrizada no Warehouse que usa `CASE WHEN` para cada valor possível na tabela de configuração, gerada automaticamente pelo Fabric na publicação.",
       "`DECLARE @colunas NVARCHAR(MAX) = (SELECT STRING_AGG(QUOTENAME(valor), ',') FROM config_colunas); DECLARE @sql NVARCHAR(MAX) = N'SELECT * FROM (SELECT chave, valor, metrica FROM dados) src PIVOT (SUM(metrica) FOR valor IN (' + @colunas + ')) pvt'; EXEC sp_executesql @sql`",
       "`SELECT PIVOT_DYNAMIC(dados, groupBy='chave', pivotCol='valor', aggFunc='SUM', valueCol='metrica') FROM config_colunas`",
-      "Usando um Notebook PySpark com `df.groupBy(\"chave\").pivot(\"valor\").sum(\"metrica\")` que tem suporte nativo a pivot dinâmico e escreve o resultado no Warehouse via `synapsesql`."
+      "Usando um Notebook PySpark com `df.groupBy(\"chave\").pivot(\"valor\").sum(\"metrica\")` que tem suporte nativo a pivot dinâmico e."
     ],
     "correctAnswer": 1,
     "difficulty": "avancado",
@@ -4978,10 +4978,10 @@ export const questions = [
     "id": "dp700_q200",
     "text": "Uma empresa precisa implementar uma solução de engenharia de dados no Fabric que ingere 50 fontes heterogêneas (SQL Server on-premises, APIs REST, arquivos S3, streaming IoT), processa 10 TB diários com SLA de 4 horas, e serve dados para 200 analistas e modelos de ML. Qual arquitetura é mais adequada?\n## LOTE 5 — Questões 201 a 250 | DP-700",
     "options": [
-      "Eventhouse como único data store para todas as fontes (batch e streaming) com KQL como interface universal para analistas e modelos ML → Shortcuts para acesso externo → sem necessidade de Lakehouse ou Warehouse separados.",
-      "Azure Data Factory para todas as ingestões → Azure Synapse Analytics para processamento → Azure SQL Database para analistas → Power BI Premium para relatórios; migração gradual para Fabric em 18 meses após estabilização da plataforma.",
-      "Gateway on-premises para SQL Server + Shortcuts para S3 + Eventstream para IoT → Lakehouse Bronze (landing zone) → Pipelines + Notebooks PySpark para transformação Silver/Gold com Delta Lake → Warehouse para analistas SQL + SQL Analytics Endpoint para queries ad-hoc + MLflow no Fabric para modelos ML → Deployment Pipelines para governança dev/test/prod + Workspace Logging + Capacity Metrics para monitoramento.",
-      "Um único Warehouse para todas as fontes e transformações → modelo semântico Direct Lake único para analistas e ML → Eventstream apenas para IoT com destino direto ao Warehouse sem Lakehouse intermediário."
+      "Eventhouse como único data store para todas as fontes (batch e streaming) com KQL como.",
+      "Azure Data Factory para todas as ingestões → Azure Synapse Analytics para.",
+      "Gateway on-premises para SQL Server + Shortcuts para S3 + Eventstream para IoT →.",
+      "Um único Warehouse para todas as fontes e transformações → modelo semântico Direct."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -5005,7 +5005,7 @@ export const questions = [
     "options": [
       "A versão do Spark Runtime é determinada automaticamente pelo tipo de workload; notebooks de ML usam Spark 3.5 e notebooks de engenharia usam Spark 3.3 sem possibilidade de configuração manual.",
       "Há apenas um runtime disponível no Fabric (Spark 3.3); versões mais recentes do Spark requerem uso do Azure Databricks integrado ao workspace via Shortcut.",
-      "O Fabric usa sempre a versão mais recente do Spark automaticamente; não é possível fixar uma versão de runtime para garantir compatibilidade de código entre atualizações.",
+      "O Fabric usa sempre a versão mais recente do Spark automaticamente; não é possível fixar uma versão de runtime para garantir.",
       "O Fabric oferece múltiplos runtimes (ex: Runtime 1.1 com Spark 3.3, Runtime 1.2 com Spark 3.4, Runtime 1.3 com Spark 3.5); cada runtime inclui versões específicas de Python, Delta Lake, MLflow e bibliotecas pré-instaladas; runtimes mais recentes oferecem melhor performance e suporte a funcionalidades mais novas do Delta Lake."
     ],
     "correctAnswer": 3,
@@ -5079,8 +5079,8 @@ export const questions = [
     "text": "Em um Data Pipeline do Fabric, como você copia arquivos binários (PDFs, imagens) de um Azure Blob Storage para a seção Files de um Lakehouse preservando a estrutura de pastas?",
     "options": [
       "Arquivos binários não podem ser copiados para a seção Files de um Lakehouse via Data Pipeline; apenas formatos estruturados (CSV, Parquet, Delta) são suportados como destino no Lakehouse.",
-      "Usando a atividade Copy Data com dataset de origem do tipo \"Binary\" no Azure Blob Storage e dataset de destino do tipo \"Binary\" no Lakehouse (seção Files), habilitando \"Preserve hierarchy\" nas configurações de cópia para manter a estrutura de pastas original.",
-      "Usando a atividade \"File Transfer\" do pipeline que suporta cópia de qualquer tipo de arquivo com preservação automática de metadados e estrutura de diretórios.",
+      "Usando a atividade Copy Data com dataset de origem do tipo \"Binary\" no Azure Blob Storage e dataset de destino do tipo.",
+      "Usando a atividade \"File Transfer\" do pipeline que suporta cópia de qualquer tipo de arquivo com preservação automática de.",
       "Usando um Shortcut no Lakehouse apontando para o Azure Blob Storage e depois copiando via notebook com `mssparkutils.fs.cp(\"origem\", \"destino\", recurse=True)` para preservar a hierarquia."
     ],
     "correctAnswer": 1,
@@ -5103,7 +5103,7 @@ export const questions = [
     "id": "dp700_q205",
     "text": "O que é o mecanismo de \"burst\" (pico) da capacity Fabric e como ele deve ser considerado no planejamento de cargas de trabalho intensas?",
     "options": [
-      "Burst só está disponível em SKUs F64 ou superior; capacities menores têm consumo estritamente limitado ao SKU contratado sem possibilidade de ultrapassar o limite.",
+      "Burst só está disponível em SKUs F64 ou superior; capacities menores têm consumo estritamente limitado ao SKU contratado sem possibilidade de ultrapassar o.",
       "Burst é um mecanismo de escalonamento automático que adiciona CUs permanentemente à capacity quando o uso excede 90% por mais de 30 minutos; o custo adicional é cobrado automaticamente na fatura Azure.",
       "Burst permite que workloads utilizem temporariamente mais CUs do que o limite contratado do SKU; o consumo extra é \"emprestado\" de períodos futuros e deve ser \"pago\" reduzindo a disponibilidade nos períodos seguintes; workloads em background têm smoothing de 24h mas operações interativas consomem instantaneamente sem burst estendido.",
       "Burst é desabilitado por padrão e deve ser habilitado pelo administrador do tenant para cada capacity; sem burst habilitado, queries são canceladas quando a capacity atinge 100% de utilização."
@@ -5129,8 +5129,8 @@ export const questions = [
     "text": "Em PySpark no Fabric, como você implementa deduplicação durante um MERGE em uma tabela Delta usando uma janela de tempo para manter apenas o registro mais recente por chave?",
     "options": [
       "Usando `df.dropDuplicates([\"id\"]).write.format(\"delta\").mode(\"overwrite\").option(\"replaceWhere\", \"id IN (SELECT id FROM df)\")` que substitui apenas os registros duplicados.",
-      "Adicionando `WHEN MATCHED AND src.updated_at > dest.updated_at THEN UPDATE SET *` na condição do MERGE que automaticamente mantém o registro mais recente sem pré-deduplicação do DataFrame fonte.",
-      "Configurando `spark.conf.set(\"delta.merge.deduplication.enabled\", \"true\")` que ativa deduplicação automática por chave primária durante operações MERGE no Delta Lake.",
+      "Adicionando `WHEN MATCHED AND src.updated_at > dest.updated_at THEN UPDATE SET *` na condição do MERGE que automaticamente.",
+      "Configurando `spark.conf.set(\"delta.merge.deduplication.enabled\", \"true\")` que ativa deduplicação automática por chave primária durante operações MERGE no.",
       "Primeiro deduplica o DataFrame de fonte: `df_dedup = df.withColumn(\"rn\", row_number().over(Window.partitionBy(\"id\").orderBy(col(\"updated_at\").desc()))).filter(col(\"rn\")==1).drop(\"rn\")`; depois executa o MERGE com `whenMatchedUpdateAll().whenNotMatchedInsertAll()` usando o DataFrame deduplicado como fonte."
     ],
     "correctAnswer": 3,
@@ -5180,8 +5180,8 @@ export const questions = [
     "options": [
       "Uma Update Policy é uma transformação KQL que é executada automaticamente quando dados são ingeridos em uma tabela de origem, aplicando a query definida e inserindo os resultados transformados em uma tabela de destino; criada com `.alter table DestinationTable policy update @'[{\"IsEnabled\":true,\"Source\":\"SourceTable\",\"Query\":\"query KQL\"}]'`.",
       "Uma Update Policy define a frequência de atualização automática de Materialized Views no KQL Database, controlando quando o motor recalcula as agregações pré-computadas.",
-      "Uma Update Policy é uma regra de atualização incremental que sincroniza automaticamente uma tabela KQL com uma fonte externa (Lakehouse ou Warehouse) quando novos dados são detectados.",
-      "Uma Update Policy é uma constraint de validação que verifica se os dados ingeridos atendem critérios específicos antes de confirmar a inserção na tabela KQL de destino."
+      "Uma Update Policy é uma regra de atualização incremental que sincroniza automaticamente uma tabela KQL com uma fonte externa (Lakehouse ou Warehouse) quando.",
+      "Uma Update Policy é uma constraint de validação que verifica se os dados ingeridos atendem critérios específicos antes de confirmar a inserção na tabela KQL."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5204,7 +5204,7 @@ export const questions = [
     "text": "Um Notebook Fabric está sendo encerrado automaticamente após 90 minutos mesmo com processamento em andamento. Como você resolve esse problema?",
     "options": [
       "Habilitando o modo \"Long Running Jobs\" no Admin Portal do Fabric que aumenta automaticamente o timeout para 24 horas para todos os notebooks do workspace.",
-      "Adicionando `spark.conf.set(\"spark.sessionTimeout\", \"0\")` para desabilitar o timeout da sessão Spark e permitir execuções ilimitadas independente da duração.",
+      "Adicionando `spark.conf.set(\"spark.sessionTimeout\", \"0\")` para desabilitar o timeout da sessão Spark e permitir execuções.",
       "Configurando o timeout da sessão Spark nas configurações do workspace (Session timeout) para um valor maior, ou otimizando o código para processar em batches menores que completam dentro do timeout; também verificar se o notebook está usando High Concurrency mode que tem configurações de timeout diferentes.",
       "Dividindo o notebook em múltiplos notebooks encadeados via `mssparkutils.notebook.run()` que redefinem o contador de timeout a cada chamada, contornando o limite de 90 minutos."
     ],
@@ -5230,7 +5230,7 @@ export const questions = [
     "options": [
       "Colunas calculadas automaticamente baseadas em expressões sobre outras colunas da tabela; criadas com `spark.sql(\"CREATE TABLE tabela (data DATE, ano INT GENERATED ALWAYS AS (YEAR(data)), mes INT GENERATED ALWAYS AS (MONTH(data))) USING DELTA\")`",
       "Generated Columns são colunas calculadas em tempo de leitura que não ocupam espaço de armazenamento; criadas com `ALTER TABLE tabela ADD COLUMN nome AS expressao VIRTUAL` no SQL Analytics Endpoint.",
-      "Generated Columns são equivalentes a colunas calculadas do Power BI criadas diretamente no nível de armazenamento Delta para evitar cálculos repetidos no modelo semântico.",
+      "Generated Columns são equivalentes a colunas calculadas do Power BI criadas diretamente no nível de armazenamento Delta para evitar cálculos repetidos no.",
       "Generated Columns são colunas criadas automaticamente pelo Delta Lake ao detectar padrões de acesso frequentes, como extrações de partes de data que podem acelerar queries de filtro."
     ],
     "correctAnswer": 0,
@@ -5330,8 +5330,8 @@ export const questions = [
     "options": [
       "Usando múltiplas atividades Lookup em paralelo, cada uma com um filtro diferente, e combinando os resultados via atividade \"Union\" disponível no catálogo de atividades do pipeline.",
       "Desabilitando a opção \"First row only\" nas configurações da atividade Lookup, que retorna todas as linhas da query como um array em `@activity('Lookup').output.value`; iterável pela atividade ForEach com `@item()` referenciando cada elemento do array.",
-      "Substituindo a atividade Lookup por uma atividade Script que executa a query e armazena o resultado em uma variável de pipeline do tipo Array para uso nas atividades seguintes.",
-      "Configurando \"Return all rows = true\" na propriedade avançada da atividade Lookup que alterna o comportamento para retornar o resultado completo como dataset."
+      "Substituindo a atividade Lookup por uma atividade Script que executa a query e armazena o resultado em uma variável de pipeline do tipo Array para uso nas.",
+      "Configurando \"Return all rows = true\" na propriedade avançada da atividade Lookup que alterna o comportamento para retornar o."
     ],
     "correctAnswer": 1,
     "difficulty": "intermediario",
@@ -5353,10 +5353,10 @@ export const questions = [
     "id": "dp700_q215",
     "text": "Quais são as melhores práticas de escrita de queries KQL no Fabric para maximizar o desempenho em tabelas com bilhões de registros?",
     "options": [
-      "Criar índices explícitos em colunas de alta cardinalidade com `.create index on table NomeTabela (coluna)` antes de executar queries com filtros nessas colunas.",
+      "Criar índices explícitos em colunas de alta cardinalidade com `.create index on table NomeTabela (coluna)` antes de executar.",
       "Aplicar filtros temporais primeiro com `where timestamp > ago(Xd)` (aproveitando o índice temporal nativo), usar `project` para selecionar apenas colunas necessárias, evitar `count()` sem filtros, usar `summarize` antes de `join` para reduzir cardinalidade, e preferir `has` sobre `contains` para busca em strings.",
       "Usar sempre `take 1000000` no início da query para limitar o escaneamento da tabela a 1 milhão de registros antes de aplicar filtros e agregações subsequentes.",
-      "Usar `hint.num_partitions=1` para forçar execução single-thread em queries complexas, evitando overhead de coordenação entre partições que degrada performance em tabelas grandes."
+      "Usar `hint.num_partitions=1` para forçar execução single-thread em queries complexas, evitando overhead de coordenação entre partições que degrada."
     ],
     "correctAnswer": 1,
     "difficulty": "avancado",
@@ -5404,8 +5404,8 @@ export const questions = [
     "text": "Como um engenheiro de dados usa o Impact Analysis no Fabric antes de modificar um Lakehouse que é fonte de múltiplos modelos semânticos e pipelines?",
     "options": [
       "Acessando o Impact Analysis via configurações do Lakehouse ou do item no workspace, visualizando todos os itens downstream dependentes (modelos semânticos, pipelines, notebooks, relatórios), identificando o impacto potencial da mudança e comunicando os responsáveis pelos itens afetados antes de executar a alteração.",
-      "Verificando o repositório Git do workspace onde as dependências entre itens são automaticamente documentadas como comentários nos arquivos de definição dos itens downstream.",
-      "Usando o Purview Lineage Graph que automaticamente calcula o impacto de alterações em qualquer item do Fabric e envia notificações por e-mail aos proprietários afetados.",
+      "Verificando o repositório Git do workspace onde as dependências entre itens são automaticamente documentadas como comentários nos arquivos de definição dos.",
+      "Usando o Purview Lineage Graph que automaticamente calcula o impacto de alterações em qualquer item do Fabric e envia notificações por e-mail aos.",
       "Executando uma query no SQL Analytics Endpoint do Lakehouse: `SELECT * FROM sys.object_dependencies WHERE source_object = 'nome_lakehouse'` que retorna todos os objetos dependentes."
     ],
     "correctAnswer": 0,
@@ -5453,8 +5453,8 @@ export const questions = [
     "id": "dp700_q219",
     "text": "Um Dataflow Gen2 no Fabric falha com \"Expression.Error: The column 'coluna_x' does not exist\". Como você diagnostica e resolve o problema?",
     "options": [
-      "Executar o Dataflow Gen2 em modo debug que automaticamente identifica e corrige referências a colunas inexistentes substituindo por NULL para colunas não encontradas.",
-      "Verificar se a fonte de dados mudou de schema adicionando uma etapa de \"Detect Schema Changes\" no início do Dataflow que atualiza automaticamente as referências de coluna.",
+      "Executar o Dataflow Gen2 em modo debug que automaticamente identifica e corrige referências a colunas inexistentes substituindo por NULL para colunas não.",
+      "Verificar se a fonte de dados mudou de schema adicionando uma etapa de \"Detect Schema Changes\" no início do Dataflow que atualiza automaticamente as.",
       "Recriar o Dataflow Gen2 do zero pois erros de coluna inexistente indicam corrupção da definição do dataflow que não pode ser corrigida via editor visual.",
       "Abrir o editor do Dataflow Gen2 e navegar para a etapa que referencia 'coluna_x', verificar se a coluna foi removida ou renomeada em uma etapa anterior do pipeline de transformação Power Query, corrigir a referência ou adicionar tratamento de erro com `try` no M para colunas opcionais."
     ],
@@ -5503,10 +5503,10 @@ export const questions = [
     "id": "dp700_q221",
     "text": "Como você configura alertas proativos para notificar administradores quando a utilização da capacity Fabric excede 80% por mais de 30 minutos?",
     "options": [
-      "Exportando métricas do Capacity Metrics App para um Lakehouse via pipeline agendado, criando um notebook de monitoramento que verifica o threshold e dispara notificação via Power Automate ou Teams Webhook quando a condição é detectada; ou usando Azure Monitor com métricas exportadas do Fabric.",
-      "Configurando \"Capacity Alerts\" no Admin Portal do Fabric seção \"Capacity Settings\" onde é possível definir threshold de utilização e endereços de e-mail para notificação automática.",
-      "Criando uma Azure Monitor Alert Rule que monitora a métrica \"CapacityUtilization\" do recurso Fabric e dispara alertas via Action Group configurado com e-mail e SMS.",
-      "Usando o Microsoft Purview para criar uma política de monitoramento de capacity que envia relatórios de utilização diários e alertas em tempo real quando thresholds são excedidos."
+      "Exportando métricas do Capacity Metrics App para um Lakehouse via pipeline agendado, criando um notebook de monitoramento que verifica o threshold e dispara.",
+      "Configurando \"Capacity Alerts\" no Admin Portal do Fabric seção \"Capacity Settings\" onde é possível definir threshold de.",
+      "Criando uma Azure Monitor Alert Rule que monitora a métrica \"CapacityUtilization\" do recurso Fabric e dispara alertas via.",
+      "Usando o Microsoft Purview para criar uma política de monitoramento de capacity que envia relatórios de utilização diários e alertas em tempo real quando."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -5553,8 +5553,8 @@ export const questions = [
     "id": "dp700_q223",
     "text": "O que é o Trusted Workspace Access no Microsoft Fabric e como ele elimina a necessidade de credenciais explícitas para acessar Azure Storage Accounts protegidos por firewall?",
     "options": [
-      "Trusted Workspace Access é uma configuração de tenant que permite que workspaces de parceiros externos acessem dados do tenant principal sem necessidade de guest accounts no Azure AD.",
-      "Trusted Workspace Access permite que workspaces Fabric acessem Azure Storage Accounts com firewall habilitado usando a identidade gerenciada do workspace (Workspace Identity), configurando o storage account para confiar em workspaces Fabric específicos via \"Resource Instance Rules\" sem expor a conta publicamente.",
+      "Trusted Workspace Access é uma configuração de tenant que permite que workspaces de parceiros externos acessem dados do.",
+      "Trusted Workspace Access permite que workspaces Fabric acessem Azure Storage Accounts com firewall habilitado usando a identidade gerenciada do workspace.",
       "Trusted Workspace Access cria um peering de rede VNet entre o workspace Fabric e o Azure Storage Account, eliminando a necessidade de configurar Private Endpoints individualmente.",
       "Trusted Workspace Access é um recurso que permite que usuários acessem o Fabric sem autenticação MFA quando conectados à rede corporativa, confiando automaticamente no dispositivo gerenciado pelo Intune."
     ],
@@ -5604,8 +5604,8 @@ export const questions = [
     "text": "Como o Copilot no Microsoft Fabric auxilia engenheiros de dados especificamente em tarefas de ingestão e transformação de dados?",
     "options": [
       "O Copilot executa automaticamente otimizações de performance em notebooks existentes, reescrevendo o código PySpark para usar funções nativas mais eficientes sem intervenção manual do engenheiro.",
-      "O Copilot está disponível apenas para criação de relatórios Power BI; funcionalidades de engenharia de dados como notebooks e pipelines requerem o plano Copilot for Azure separado.",
-      "O Copilot substitui completamente o Monitor Hub, analisando automaticamente logs de execução e resolvendo erros de pipeline sem necessidade de intervenção humana.",
+      "O Copilot está disponível apenas para criação de relatórios Power BI; funcionalidades de engenharia de dados como notebooks e pipelines requerem o plano.",
+      "O Copilot substitui completamente o Monitor Hub, analisando automaticamente logs de execução e resolvendo erros de pipeline sem necessidade de intervenção.",
       "Gera código PySpark para transformações a partir de descrições em linguagem natural, sugere queries KQL e T-SQL para análise de dados, explica erros de código com sugestões de correção, auxilia na criação de Data Pipelines descrevendo o fluxo desejado e documenta notebooks automaticamente."
     ],
     "correctAnswer": 3,
@@ -5629,7 +5629,7 @@ export const questions = [
     "text": "No Fabric Warehouse, como você usa OPENROWSET para consultar arquivos Parquet armazenados no OneLake sem criar uma tabela externa permanente?",
     "options": [
       "`SELECT * FROM OPENROWSET('Microsoft.Fabric.OneLake', 'workspace/lakehouse/Files/dados.parquet', 'SELECT * FROM Parquet') AS r`",
-      "OPENROWSET não está disponível no Fabric Warehouse; para acessar arquivos Parquet do OneLake via SQL é necessário criar uma tabela externa com CREATE EXTERNAL TABLE.",
+      "OPENROWSET não está disponível no Fabric Warehouse; para acessar arquivos Parquet do OneLake via SQL é necessário criar uma tabela externa com CREATE.",
       "`SELECT * FROM PARQUET_FILE('https://onelake.dfs.fabric.microsoft.com/path/dados.parquet') AS r`",
       "`SELECT * FROM OPENROWSET(BULK 'https://onelake.dfs.fabric.microsoft.com/workspace/lakehouse.Lakehouse/Files/dados.parquet', FORMAT = 'PARQUET') AS r`"
     ],
@@ -5653,10 +5653,10 @@ export const questions = [
     "id": "dp700_q227",
     "text": "Como você extrai métricas detalhadas de execução de uma atividade Copy Data (como rows copied, throughput em MB/s e duration) para logging em uma tabela de auditoria no Fabric?",
     "options": [
-      "Usando a atividade \"Log Metrics\" disponível no catálogo de atividades do Data Pipeline que persiste automaticamente as métricas da atividade anterior em um destino configurável.",
+      "Usando a atividade \"Log Metrics\" disponível no catálogo de atividades do Data Pipeline que persiste automaticamente as.",
       "Usando a expressão `@activity('CopyActivity').output` após a conclusão da atividade, que retorna um objeto JSON com `rowsRead`, `rowsCopied`, `throughput`, `copyDuration` e outros metadados; salvando via atividade Script ou Stored Procedure em uma tabela de auditoria no Warehouse ou Lakehouse.",
-      "Habilitando \"Activity Metrics Logging\" nas configurações avançadas do pipeline que automaticamente salva as métricas em uma tabela `pipeline_metrics` no Lakehouse padrão do workspace.",
-      "Consultando a view `sys.copy_activity_stats` no Warehouse após cada execução que registra automaticamente as métricas de todas as atividades Copy Data executadas no workspace."
+      "Habilitando \"Activity Metrics Logging\" nas configurações avançadas do pipeline que automaticamente salva as métricas em uma tabela `pipeline_metrics` no.",
+      "Consultando a view `sys.copy_activity_stats` no Warehouse após cada execução que registra automaticamente as métricas de todas as atividades Copy Data."
     ],
     "correctAnswer": 1,
     "difficulty": "intermediario",
@@ -5679,7 +5679,7 @@ export const questions = [
     "text": "Como o Microsoft Fabric suporta o conceito de Feature Store para machine learning e como engenheiros de dados podem implementar um usando Lakehouses?",
     "options": [
       "Features devem ser armazenadas exclusivamente no Fabric Warehouse com stored procedures para cálculo on-demand; armazenar features em Delta Lake no Lakehouse não garante consistência entre treinamento e inferência.",
-      "Feature Stores no Fabric requerem integração com Azure Machine Learning Feature Store; o Fabric sozinho não suporta gestão de features para ML sem o serviço AML externo.",
+      "Feature Stores no Fabric requerem integração com Azure Machine Learning Feature Store; o Fabric sozinho não suporta gestão de features para ML sem o serviço.",
       "O Fabric tem um item dedicado \"Feature Store\" no workspace que gerencia automaticamente o versionamento, serving e monitoramento de features para projetos de ML sem necessidade de configuração manual.",
       "Usando um Lakehouse como feature store, criando tabelas Delta Gold com features calculadas e versionadas, registrando features com MLflow no Fabric para rastreabilidade, e disponibilizando via SQL Analytics Endpoint para treinamento e via API/notebook para inferência em tempo real."
     ],
@@ -5703,9 +5703,9 @@ export const questions = [
     "id": "dp700_q229",
     "text": "Um gateway de dados on-premises no Fabric está com status \"Degraded\" intermitentemente, causando falhas em pipelines que acessam SQL Server local. Qual é a abordagem sistemática de diagnóstico?",
     "options": [
-      "Reinstalar o gateway de dados on-premises no servidor e reconfigurar todas as conexões, pois status \"Degraded\" indica corrupção da instalação que só é resolvida com reinstalação completa.",
+      "Reinstalar o gateway de dados on-premises no servidor e reconfigurar todas as conexões, pois status \"Degraded\" indica corrupção da instalação que só é.",
       "Verificar logs do gateway no servidor on-premises (Event Viewer e logs do serviço do gateway), confirmar conectividade de rede entre o servidor gateway e o SQL Server, verificar uso de CPU/memória do servidor gateway durante as falhas, validar se há atualizações pendentes do gateway, e verificar se múltiplos pipelines estão sobrecarregando o gateway simultaneamente.",
-      "Verificar no Admin Portal do Fabric se o gateway tem licença válida, pois status \"Degraded\" frequentemente indica expiração de licença do gateway de dados on-premises.",
+      "Verificar no Admin Portal do Fabric se o gateway tem licença válida, pois status \"Degraded\" frequentemente indica expiração de licença do gateway de dados.",
       "Migrar todas as conexões on-premises para um Azure SQL Database via replicação, eliminando a dependência do gateway que é uma fonte de instabilidade por design."
     ],
     "correctAnswer": 1,
@@ -5729,7 +5729,7 @@ export const questions = [
     "text": "O que é uma Clustering Policy em um KQL Database do Fabric e como ela melhora o desempenho de queries?",
     "options": [
       "Clustering Policy configura o algoritmo de compressão usado pelo Eventhouse para armazenar os dados da tabela KQL; opções incluem LZ4, ZSTD e Snappy com diferentes tradeoffs de velocidade/tamanho.",
-      "Clustering Policy é sinônimo de Partitioning Policy no KQL Database; ambos definem como os dados são divididos entre partições para isolamento de workloads concorrentes.",
+      "Clustering Policy é sinônimo de Partitioning Policy no KQL Database; ambos definem como os dados são divididos entre partições para isolamento de workloads.",
       "Uma Clustering Policy define colunas pelo qual os dados de uma tabela KQL são organizados fisicamente nos extents (shards), similar ao Z-Ordering do Delta Lake; configurada com `.alter table NomeTabela policy clustering @'{\"AttributesForClustering\": [{\"ColumnName\": \"coluna\", \"Kind\": \"Hash\"}]}'` para melhorar queries com filtros nessas colunas.",
       "Clustering Policy define o número de shards (extents) em que a tabela KQL é dividida para processamento paralelo; mais shards significa maior paralelismo mas também maior overhead de coordenação."
     ],
@@ -5753,10 +5753,10 @@ export const questions = [
     "id": "dp700_q231",
     "text": "Quais são as limitações de performance ao usar Pandas API on Spark (pyspark.pandas) em um Notebook Fabric comparado ao PySpark nativo?",
     "options": [
-      "Pandas API on Spark tem limitação de 2 GB de dados por DataFrame; volumes maiores requerem PySpark nativo com particionamento explícito para processamento distribuído eficiente.",
+      "Pandas API on Spark tem limitação de 2 GB de dados por DataFrame; volumes maiores requerem PySpark nativo com particionamento explícito para processamento.",
       "Operações que não podem ser paralelizadas geram conversões implícitas para pandas (collected to driver), causando overhead; algumas operações Pandas API on Spark são mais lentas que PySpark equivalente por conversões internas; verificar com `pyspark.pandas.config.set_option(\"compute.ops_on_diff_frames\", True)` se necessário.",
-      "Pandas API on Spark não suporta execução distribuída; todo o processamento ocorre no nó driver tornando-o equivalente ao pandas puro sem benefício do cluster Spark.",
-      "Pandas API on Spark tem sempre performance superior ao PySpark nativo pois usa Arrow para serialização vetorizada que é mais eficiente que o formato Row do PySpark tradicional."
+      "Pandas API on Spark não suporta execução distribuída; todo o processamento ocorre no nó driver tornando-o equivalente ao pandas.",
+      "Pandas API on Spark tem sempre performance superior ao PySpark nativo pois usa Arrow para serialização vetorizada que é mais eficiente que o formato Row do."
     ],
     "correctAnswer": 1,
     "difficulty": "avancado",
@@ -5780,8 +5780,8 @@ export const questions = [
     "options": [
       "Usando atividade Until com condição de parada `@equals(variables('next_cursor'), '')`, dentro do loop uma atividade Web chama a API com o cursor atual, atividade Set Variable atualiza o cursor com `@activity('Web').output.next_cursor`, e atividade Copy Data ou Append acumula os dados; o loop para quando o cursor está vazio.",
       "Usando um Notebook PySpark com `requests.get()` em loop que implementa a paginação via cursor, acumula os resultados em um DataFrame e salva no Lakehouse ao final; mais flexível que pipeline para APIs complexas.",
-      "Configurando a opção \"Pagination Rules\" na atividade Copy Data com o conector REST, definindo `AbsoluteUrl` ou `QueryParameters` como tipo de paginação com expressão de extração do cursor do response body.",
-      "Criando múltiplas atividades Web em paralelo com números de página hardcoded baseados na contagem total retornada pela primeira chamada dividida pelo page_size configurado."
+      "Configurando a opção \"Pagination Rules\" na atividade Copy Data com o conector REST, definindo `AbsoluteUrl` ou `QueryParameters` como tipo de paginação com.",
+      "Criando múltiplas atividades Web em paralelo com números de página hardcoded baseados na contagem total retornada pela primeira chamada dividida pelo."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5803,9 +5803,9 @@ export const questions = [
     "id": "dp700_q233",
     "text": "Como você implementa monitoramento de SLA para pipelines de engenharia de dados no Fabric garantindo que cargas críticas completem dentro da janela de tempo acordada?",
     "options": [
-      "Usando Azure Monitor com Metric Alerts configurados para a métrica \"PipelineExecutionDuration\" do recurso Fabric que dispara alertas quando excede o threshold de SLA definido.",
+      "Usando Azure Monitor com Metric Alerts configurados para a métrica \"PipelineExecutionDuration\" do recurso Fabric que dispara alertas quando excede o.",
       "Integrando o Fabric com Azure DevOps Work Items para criação automática de bugs quando pipelines violam SLA, rastreando o histórico de violações no backlog do time de engenharia.",
-      "Configurando \"SLA Settings\" no Monitor Hub do Fabric que permite definir janelas de tempo esperadas para cada pipeline e gera alertas automáticos quando o SLA é violado.",
+      "Configurando \"SLA Settings\" no Monitor Hub do Fabric que permite definir janelas de tempo esperadas para cada pipeline e.",
       "Registrando timestamps de início e fim de cada execução via Workspace Logging ou tabela de auditoria custom, criando um modelo semântico sobre esses dados, construindo um relatório Power BI com alertas Data-Driven configurados que notificam quando o tempo de execução excede o SLA ou quando uma execução esperada não ocorreu."
     ],
     "correctAnswer": 3,
@@ -5829,8 +5829,8 @@ export const questions = [
     "text": "O que é o Row Tracking no Delta Lake do Fabric e como ele facilita operações de CDC downstream?",
     "options": [
       "Row Tracking adiciona uma coluna `_row_number` sequencial imutável a cada linha durante a ingestão inicial, usada como surrogate key natural para joins e lookups em pipelines downstream.",
-      "Row Tracking adiciona um identificador único estável por linha (`_metadata.row_id`) que persiste mesmo após operações de UPDATE que reescrevem a linha em novo arquivo Parquet; habilitado com `delta.enableRowTracking=true` nas propriedades da tabela; facilita CDC downstream ao identificar unicamente linhas sem depender apenas de chaves de negócio.",
-      "Row Tracking é sinônimo de Change Data Feed (CDF) no Delta Lake; ambos rastreiam alterações de linhas mas Row Tracking persiste os IDs históricos enquanto CDF mantém apenas as últimas alterações.",
+      "Row Tracking adiciona um identificador único estável por linha (`_metadata.row_id`) que persiste mesmo após operações de UPDATE que reescrevem a linha em.",
+      "Row Tracking é sinônimo de Change Data Feed (CDF) no Delta Lake; ambos rastreiam alterações de linhas mas Row Tracking persiste os IDs históricos enquanto.",
       "Row Tracking é uma funcionalidade exclusiva do Azure Databricks Delta Lake que não está disponível no Microsoft Fabric; a alternativa no Fabric é usar `IDENTITY(1,1)` em colunas surrogate key para rastreamento de linhas."
     ],
     "correctAnswer": 1,
@@ -5854,9 +5854,9 @@ export const questions = [
     "text": "Como você implementa uma estratégia de materialização de dados no Fabric Warehouse para suportar queries analíticas de alto desempenho sobre dados históricos de 5 anos?",
     "options": [
       "Criando tabelas de agregação via CTAS por período (diário, mensal, anual) atualizadas por pipelines incrementais, usando views unificadoras que combinam agregações pré-calculadas para períodos antigos com dados detalhados recentes, e configurando estatísticas nas colunas de join e filtro mais usadas.",
-      "Criando índices clusterizados por data em todas as tabelas históricas usando `CREATE CLUSTERED INDEX idx_data ON tabela(data_coluna)` que organiza fisicamente os dados para acesso sequencial eficiente.",
-      "Particionando todas as tabelas por ano com `CREATE PARTITION FUNCTION` e transferindo partições antigas para armazenamento frio automaticamente após 2 anos via política de lifecycle configurada no Warehouse.",
-      "Habilitando o modo \"Historical Optimization\" no Warehouse que automaticamente comprime e materializa dados com mais de 1 ano em formato de leitura otimizado sem necessidade de configuração manual."
+      "Criando índices clusterizados por data em todas as tabelas históricas usando `CREATE CLUSTERED INDEX idx_data ON tabela(data_coluna)` que organiza.",
+      "Particionando todas as tabelas por ano com `CREATE PARTITION FUNCTION` e transferindo partições antigas para armazenamento.",
+      "Habilitando o modo \"Historical Optimization\" no Warehouse que automaticamente comprime e materializa dados com mais de 1 ano."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -5903,10 +5903,10 @@ export const questions = [
     "id": "dp700_q237",
     "text": "Como você usa funções analíticas KQL no Eventhouse do Fabric para detectar anomalias em séries temporais de dados de telemetria?",
     "options": [
-      "Usando `anomaly_detection(table=Telemetria, column=valor, time_column=timestamp, sensitivity=high)` que é a função KQL nativa de alto nível para detecção de anomalias em séries temporais.",
-      "Usando `detect_anomaly(valor, threshold=3)` diretamente em uma query `summarize` que aplica automaticamente detecção de outliers baseada em desvio padrão por grupo temporal.",
-      "Criando uma Materialized View com `series_stats()` que calcula automaticamente médias e desvios e marca linhas anomalas com flag booleano acessível via query SQL no endpoint.",
-      "Usando `series_decompose_anomalies()` ou `series_outliers()` em conjunto com `make-series` para criar a série temporal e detectar pontos anômalos: `Telemetria | make-series avg_valor=avg(valor) on timestamp step 1h | extend anomalias=series_decompose_anomalies(avg_valor) | mvexpand timestamp, avg_valor, anomalias | where anomalias != 0`"
+      "Usando `anomaly_detection(table=Telemetria, column=valor, time_column=timestamp, sensitivity=high)` que é a função KQL nativa de alto nível para detecção de.",
+      "Usando `detect_anomaly(valor, threshold=3)` diretamente em uma query `summarize` que aplica automaticamente detecção de.",
+      "Criando uma Materialized View com `series_stats()` que calcula automaticamente médias e desvios e marca linhas anomalas com.",
+      "Usando `series_decompose_anomalies()` ou `series_outliers()` em conjunto com `make-series` para criar a série temporal e detectar pontos anômalos:."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
@@ -5928,9 +5928,9 @@ export const questions = [
     "id": "dp700_q238",
     "text": "Como você implementa SCD Tipo 2 (Slowly Changing Dimension Type 2) no Fabric Warehouse para preservar histórico completo de alterações em uma dimensão de clientes?",
     "options": [
-      "Usando `ALTER TABLE dim_clientes ADD SYSTEM_TIME VERSIONING` que habilita temporal tables no Fabric Warehouse com histórico automático de todas as alterações sem necessidade de lógica MERGE customizada.",
+      "Usando `ALTER TABLE dim_clientes ADD SYSTEM_TIME VERSIONING` que habilita temporal tables no Fabric Warehouse com histórico.",
       "`MERGE INTO dim_clientes AS dest USING staging_clientes AS src ON dest.cliente_id = src.cliente_id AND dest.data_fim IS NULL WHEN MATCHED AND (dest.nome != src.nome OR dest.endereco != src.endereco) THEN UPDATE SET dest.data_fim = GETDATE(), dest.ativo = 0 WHEN NOT MATCHED THEN INSERT (cliente_id, nome, endereco, data_inicio, data_fim, ativo) VALUES (src.cliente_id, src.nome, src.endereco, GETDATE(), NULL, 1)` seguido de INSERT para novos registros históricos dos clientes modificados.",
-      "Criando uma tabela de histórico separada `dim_clientes_historico` e usando triggers no Warehouse para copiar registros automaticamente antes de cada UPDATE na dimensão principal.",
+      "Criando uma tabela de histórico separada `dim_clientes_historico` e usando triggers no Warehouse para copiar registros automaticamente antes de cada UPDATE.",
       "Usando `UPDATE dim_clientes SET nome = src.nome, endereco = src.endereco WHERE cliente_id = src.cliente_id` que atualiza o registro existente sem preservar o histórico"
     ],
     "correctAnswer": 1,
@@ -5953,10 +5953,10 @@ export const questions = [
     "id": "dp700_q239",
     "text": "Em um Notebook Fabric, como você usa o Vectorized Reader do Delta Lake para maximizar a performance de leitura de tabelas Delta em consultas SQL?",
     "options": [
-      "Usando `df = spark.read.option(\"vectorized\", \"true\").format(\"delta\").load(\"Tables/nome\")` para ativar a leitura vetorizada para um DataFrame específico sem alterar as configurações globais da sessão.",
+      "Usando `df = spark.read.option(\"vectorized\", \"true\").format(\"delta\").load(\"Tables/nome\")` para ativar a leitura vetorizada para um DataFrame específico sem.",
       "Convertendo todas as colunas para tipos fixed-width (INT, BIGINT, FLOAT) antes de salvar no Delta Lake, pois apenas colunas de tamanho fixo se beneficiam da leitura vetorizada no Fabric.",
       "Habilitando explicitamente com `spark.conf.set(\"spark.sql.delta.vectorizedReader.enabled\", \"true\")` e `spark.conf.set(\"spark.sql.delta.vectorizedReader.batchSize\", \"4096\")` para ativar leitura vetorizada em tabelas Delta.",
-      "O Vectorized Reader está habilitado por padrão no Fabric Runtime para leitura de arquivos Parquet em formato colunar com operações SIMD; verificar com `spark.conf.get(\"spark.sql.parquet.enableVectorizedReader\")` que deve retornar \"true\"; garantir que colunas são do tipo primitivo (int, double, string) pois tipos complexos desabilitam a vetorização automaticamente."
+      "O Vectorized Reader está habilitado por padrão no Fabric Runtime para leitura de arquivos Parquet em formato colunar com."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
@@ -5978,7 +5978,7 @@ export const questions = [
     "id": "dp700_q240",
     "text": "Como você configura uma Partitioning Policy em um KQL Database do Fabric para melhorar queries que filtram por uma coluna de alta cardinalidade como `tenant_id`?",
     "options": [
-      "Partitioning Policy em KQL Database é apenas para particionamento por tempo (datetime); particionamento por colunas de alta cardinalidade como tenant_id requer Clustering Policy com Kind=\"Hash\".",
+      "Partitioning Policy em KQL Database é apenas para particionamento por tempo (datetime); particionamento por colunas de alta cardinalidade como tenant_id.",
       "`.create table NomeTabela (tenant_id:string, ...) with (partitionBy=tenant_id, numPartitions=256)`",
       "`.alter table NomeTabela policy partitioning @'{\"PartitionKeys\": [{\"ColumnName\": \"tenant_id\", \"Kind\": \"Hash\", \"Properties\": {\"Function\": \"XxHash64\", \"MaxPartitionCount\": 256, \"Seed\": 1}}]}'`",
       "`ALTER TABLE NomeTabela PARTITION BY HASH(tenant_id) PARTITIONS 256`"
@@ -6004,9 +6004,9 @@ export const questions = [
     "text": "Em um Data Pipeline do Fabric com 10 atividades em sequência, como você configura para que atividades de cleanup sempre executem mesmo quando atividades anteriores falham?",
     "options": [
       "Conectando as atividades de cleanup com o path \"On Completion\" (que dispara em caso de sucesso, falha ou cancelamento), garantindo que a limpeza sempre ocorra independente do resultado das atividades anteriores do pipeline.",
-      "Configurando as atividades de cleanup com a propriedade \"Always Execute = true\" nas configurações avançadas da atividade que as executa independente do status do pipeline.",
-      "Criando um pipeline separado de cleanup com trigger baseado em evento que detecta a conclusão do pipeline principal (com qualquer status) e executa automaticamente a limpeza.",
-      "Usando a atividade \"Finally\" disponível no catálogo de atividades do Data Pipeline que sempre é executada ao final do pipeline independente de erros, similar ao bloco finally do Python."
+      "Configurando as atividades de cleanup com a propriedade \"Always Execute = true\" nas configurações avançadas da atividade.",
+      "Criando um pipeline separado de cleanup com trigger baseado em evento que detecta a conclusão do pipeline principal (com qualquer status) e executa.",
+      "Usando a atividade \"Finally\" disponível no catálogo de atividades do Data Pipeline que sempre é executada ao final do."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -6054,8 +6054,8 @@ export const questions = [
     "text": "Como você monitora a saúde de tabelas Delta críticas em um Lakehouse do Fabric verificando fragmentação, tamanho e versões disponíveis para time travel?",
     "options": [
       "Combinando `DESCRIBE DETAIL tabela` (tamanho, número de arquivos, particionamento), `DESCRIBE HISTORY tabela` (versões disponíveis, operações recentes), e `spark.sql(\"SELECT * FROM delta.`Tables/tabela`._delta_log\")` para análise do log; criando um notebook de health check agendado que registra métricas em tabela de monitoramento.",
-      "Usando a atividade \"Delta Health Check\" disponível no Data Pipeline que executa automaticamente diagnóstico completo de tabelas Delta e gera relatório no Monitor Hub.",
-      "Consultando a view `sys.delta_table_health` no SQL Analytics Endpoint do Lakehouse que consolida métricas de todas as tabelas Delta com indicadores de fragmentação e recomendações de OPTIMIZE.",
+      "Usando a atividade \"Delta Health Check\" disponível no Data Pipeline que executa automaticamente diagnóstico completo de.",
+      "Consultando a view `sys.delta_table_health` no SQL Analytics Endpoint do Lakehouse que consolida métricas de todas as tabelas Delta com indicadores de.",
       "Usando `mssparkutils.delta.healthReport(\"nome_tabela\")` que gera relatório detalhado de saúde da tabela incluindo score de fragmentação, retenção e estimativa de economia do VACUUM."
     ],
     "correctAnswer": 0,
@@ -6103,10 +6103,10 @@ export const questions = [
     "id": "dp700_q245",
     "text": "Como você usa o Query Insights do Fabric Warehouse para identificar regressões de performance entre duas semanas consecutivas e priorizar otimizações?",
     "options": [
-      "Usando `sys.dm_exec_query_stats` com filtro `creation_time` para comparar planos de execução entre semanas e identificar automaticamente queries com planos regredidos.",
-      "Acessando o painel \"Performance Insights\" do Fabric Warehouse no portal Azure que exibe automaticamente comparações de performance semana a semana com destaque para regressões.",
+      "Usando `sys.dm_exec_query_stats` com filtro `creation_time` para comparar planos de execução entre semanas e identificar.",
+      "Acessando o painel \"Performance Insights\" do Fabric Warehouse no portal Azure que exibe automaticamente comparações de performance semana a semana com.",
       "Comparando `queryinsights.exec_requests_history` entre as duas semanas agrupando por `query_hash` ou texto normalizado, calculando a diferença de `avg_elapsed_time_ms` e `execution_count`, identificando queries com maior aumento absoluto e relativo de tempo; priorizando aquelas com maior impacto total (tempo_médio × execuções).",
-      "Habilitando o \"Query Store\" no Fabric Warehouse com `ALTER DATABASE SET QUERY_STORE ON` que rastreia automaticamente regressões de plano e gera relatórios comparativos semanais."
+      "Habilitando o \"Query Store\" no Fabric Warehouse com `ALTER DATABASE SET QUERY_STORE ON` que rastreia automaticamente regressões de plano e gera relatórios."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -6129,7 +6129,7 @@ export const questions = [
     "text": "O que são Deletion Vectors no Delta Lake do Fabric e qual é o benefício para operações de DELETE e UPDATE?",
     "options": [
       "Deletion Vectors são arquivos de bitmap que marcam linhas como deletadas sem reescrever os arquivos Parquet originais; habilitados com `delta.enableDeletionVectors=true`; benefício: DELETE e UPDATE single-row ficam muito mais rápidos pois não requerem reescrita de arquivos grandes — apenas o vetor de deleção é atualizado; a compactação real ocorre no próximo OPTIMIZE.",
-      "Deletion Vectors são vetores de features calculados automaticamente pelo Delta Lake durante operações de DELETE para uso em modelos de ML que detectam padrões de deleção nos dados.",
+      "Deletion Vectors são vetores de features calculados automaticamente pelo Delta Lake durante operações de DELETE para uso em modelos de ML que detectam.",
       "Deletion Vectors são logs comprimidos de todas as operações de deleção mantidos separadamente do transaction log principal, permitindo auditoria detalhada de quais linhas foram deletadas e por quem.",
       "Deletion Vectors são índices secundários criados automaticamente pelo Delta Lake para colunas de chave primária, acelerando operações de DELETE e UPDATE por chave sem reescrever partições inteiras."
     ],
@@ -6155,8 +6155,8 @@ export const questions = [
     "options": [
       "`POST https://management.azure.com/subscriptions/{subId}/resourceGroups/{rg}/providers/Microsoft.Fabric/workspaces/{workspaceId}/lakehouses` usando a API do Azure Resource Manager para criação de itens Fabric.",
       "`POST https://api.fabric.microsoft.com/v1/workspaces/{workspaceId}/items` com body `{\"displayName\": \"NomeLakehouse\", \"type\": \"Lakehouse\"}` usando autenticação Bearer token do Azure AD; após criação, configurar propriedades adicionais via `PATCH /workspaces/{workspaceId}/items/{itemId}` conforme necessário.",
-      "Usando o PowerShell module `Az.Fabric` com cmdlet `New-AzFabricLakehouse -WorkspaceId {id} -Name \"NomeLakehouse\"` que é o método oficial recomendado para criação de itens Fabric via automação.",
-      "`PUT https://api.fabric.microsoft.com/v1/workspaces/{workspaceId}/lakehouses` com body JSON contendo a definição completa do Lakehouse incluindo schema inicial e configurações de particionamento."
+      "Usando o PowerShell module `Az.Fabric` com cmdlet `New-AzFabricLakehouse -WorkspaceId {id} -Name \"NomeLakehouse\"` que é o método oficial recomendado para.",
+      "`PUT https://api.fabric.microsoft.com/v1/workspaces/{workspaceId}/lakehouses` com body JSON contendo a definição completa do Lakehouse incluindo schema."
     ],
     "correctAnswer": 1,
     "difficulty": "avancado",
@@ -6229,8 +6229,8 @@ export const questions = [
     "text": "Como você implementa um pipeline Fabric completo usando CDC (Change Data Capture) de um SQL Server on-premises para sincronização near real-time com um Lakehouse?\n## LOTE 6 — Questões 251 a 300 | DP-700",
     "options": [
       "Usar Azure Database Migration Service para sincronização contínua CDC do SQL Server on-premises para o Fabric, eliminando necessidade de desenvolvimento de pipeline customizado.",
-      "Instalar o Fabric CDC Agent no servidor SQL Server que envia automaticamente as alterações para o Eventstream do Fabric via protocolo AMQP sem necessidade de gateway ou pipeline.",
-      "Configurar CDC no SQL Server nas tabelas fonte; Data Pipeline com trigger agendado a cada 15 minutos que usa atividade Copy Data com \"Enable CDC\" lendo as tabelas `cdc.fn_cdc_get_all_changes_*` com LSN watermark armazenado em tabela de controle; carregando net changes no Lakehouse Bronze; notebook PySpark aplicando MERGE na Silver.",
+      "Instalar o Fabric CDC Agent no servidor SQL Server que envia automaticamente as alterações para o Eventstream do Fabric via.",
+      "Configurar CDC no SQL Server nas tabelas fonte; Data Pipeline com trigger agendado a cada 15 minutos que usa atividade Copy.",
       "Configurar Mirroring do SQL Server on-premises no Fabric que replica automaticamente via CDC sem necessidade de pipeline; Mirroring suporta SQL Server on-premises com gateway de dados."
     ],
     "correctAnswer": 2,
@@ -6253,9 +6253,9 @@ export const questions = [
     "id": "dp700_q251",
     "text": "Como políticas de Acesso Condicional do Azure AD afetam o acesso de engenheiros de dados ao Microsoft Fabric e como configurá-las adequadamente?",
     "options": [
-      "Acesso Condicional aplica-se apenas ao portal web do Fabric; acessos via API REST, notebooks e pipelines são isentos de políticas de acesso condicional por design de segurança do Azure.",
+      "Acesso Condicional aplica-se apenas ao portal web do Fabric; acessos via API REST, notebooks e pipelines são isentos de políticas de acesso condicional por.",
       "Políticas de Acesso Condicional aplicam-se ao acesso ao Fabric Service e suas APIs; podem exigir MFA, dispositivo gerenciado (Compliant Device) ou localização específica; para automações com Service Principal, as políticas devem excluir os SPs ou configurar trusted locations para os IPs dos servidores de automação.",
-      "Acesso Condicional não se aplica ao Microsoft Fabric; as políticas de acesso são controladas exclusivamente pelo Admin Portal do Fabric através de configurações de tenant e workspace.",
+      "Acesso Condicional não se aplica ao Microsoft Fabric; as políticas de acesso são controladas exclusivamente pelo Admin Portal do Fabric através de.",
       "Políticas de Acesso Condicional bloqueiam automaticamente Service Principals de acessar o Fabric; automações devem usar Account Key de storage ao invés de autenticação Azure AD para contornar as restrições."
     ],
     "correctAnswer": 1,
@@ -6303,7 +6303,7 @@ export const questions = [
     "id": "dp700_q253",
     "text": "Quais estratégias de otimização são específicas para a camada Gold de um Lakehouse no Fabric, considerando que ela é a camada de consumo direto por modelos semânticos e analistas?",
     "options": [
-      "Habilitar modo Direct Lake em todas as tabelas Gold automaticamente via configuração do workspace que elimina a necessidade de refresh de modelos semânticos para dados sempre atualizados.",
+      "Habilitar modo Direct Lake em todas as tabelas Gold automaticamente via configuração do workspace que elimina a necessidade de refresh de modelos semânticos.",
       "Implementar tabelas de agregação pré-calculadas por dimensão temporal, aplicar OPTIMIZE com ZORDER BY nas colunas de filtro mais usadas, garantir particionamento por data para queries de período, criar views SQL para encapsular lógica de negócio complexa, e habilitar Auto-Optimization para manter a camada Gold sempre compactada após cargas incrementais.",
       "Criar índices B-Tree em todas as colunas de chave primária das tabelas Gold para otimizar JOINs no SQL Analytics Endpoint; índices são obrigatórios para performance aceitável na camada de consumo.",
       "Converter todas as tabelas Gold para formato CSV para compatibilidade máxima com ferramentas externas; o overhead do Delta Lake é desnecessário na camada de consumo final."
@@ -6328,10 +6328,10 @@ export const questions = [
     "id": "dp700_q254",
     "text": "Em um Data Pipeline do Fabric com 20 atividades, como você implementa um padrão robusto de tratamento de erros que captura detalhes do erro, registra em tabela de auditoria e notifica a equipe via Teams?",
     "options": [
-      "Para cada atividade crítica, conectar o path \"On Failure\" a um sub-pipeline de error handling que: 1) recebe o nome da atividade e mensagem via parâmetros, 2) usa atividade Script para inserir em tabela de auditoria com `@activity('falha').error.message`, 3) usa atividade Web para POST no Teams Webhook com detalhes formatados, 4) propaga a falha com \"Fail activity\" para sinalizar o pipeline como falho.",
-      "Configurando um Azure Monitor Alert que detecta falhas do pipeline e dispara um Logic App para registrar em banco de dados e notificar via Teams, sem necessidade de lógica de error handling dentro do próprio pipeline.",
-      "Envolvendo todo o pipeline em um bloco try-catch via atividade \"Error Handler\" disponível no catálogo do Data Pipeline que captura qualquer falha e executa o conjunto de atividades de tratamento configuradas.",
-      "Usando a propriedade \"Global Error Handler\" do pipeline nas configurações avançadas que define um pipeline filho executado automaticamente em qualquer falha, recebendo o contexto de erro como parâmetro padrão."
+      "Para cada atividade crítica, conectar o path \"On Failure\" a um sub-pipeline de error handling que: 1) recebe o nome da.",
+      "Configurando um Azure Monitor Alert que detecta falhas do pipeline e dispara um Logic App para registrar em banco.",
+      "Envolvendo todo o pipeline em um bloco try-catch via atividade \"Error Handler\" disponível no catálogo do Data Pipeline que.",
+      "Usando a propriedade \"Global Error Handler\" do pipeline nas configurações avançadas que define um pipeline filho executado."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -6378,9 +6378,9 @@ export const questions = [
     "id": "dp700_q256",
     "text": "Como você implementa um notebook de manutenção automática no Fabric que executa OPTIMIZE e VACUUM apenas nas tabelas Delta que realmente precisam, baseado em métricas de fragmentação?",
     "options": [
-      "Usando `mssparkutils.delta.autoOptimize(lakehouse=\"nome\", threshold_files=100)` que implementa a lógica de manutenção seletiva automaticamente baseada nas métricas de fragmentação do OneLake.",
-      "Criando uma stored procedure no SQL Analytics Endpoint que consulta `sys.delta_table_stats` e executa `OPTIMIZE` via `sp_executesql` para tabelas fragmentadas acima do threshold configurado.",
-      "Habilitando \"Auto Maintenance\" nas configurações do Lakehouse no portal Fabric que automaticamente executa OPTIMIZE e VACUUM nas tabelas com mais de 100 arquivos diariamente sem necessidade de notebook.",
+      "Usando `mssparkutils.delta.autoOptimize(lakehouse=\"nome\", threshold_files=100)` que implementa a lógica de manutenção.",
+      "Criando uma stored procedure no SQL Analytics Endpoint que consulta `sys.delta_table_stats` e executa `OPTIMIZE` via `sp_executesql` para tabelas.",
+      "Habilitando \"Auto Maintenance\" nas configurações do Lakehouse no portal Fabric que automaticamente executa OPTIMIZE e.",
       "`tabelas = spark.sql(\"SHOW TABLES IN lakehouse_db\").collect(); for t in tabelas: detail = spark.sql(f\"DESCRIBE DETAIL {t.tableName}\").collect()[0]; num_files = detail.numFiles; if num_files > 100: spark.sql(f\"OPTIMIZE {t.tableName}\"); spark.sql(f\"VACUUM {t.tableName} RETAIN 168 HOURS\")` — executando manutenção seletiva baseada no número de arquivos."
     ],
     "correctAnswer": 3,
@@ -6479,9 +6479,9 @@ export const questions = [
     "text": "Como você implementa um framework de qualidade de dados reutilizável em PySpark no Fabric que valida múltiplas regras e gera relatório de conformidade?",
     "options": [
       "Configurando regras de qualidade no Microsoft Purview Data Catalog e ativando a integração automática com notebooks via `mssparkutils.purview.validateDataframe(df, \"nome_dataset\")`.",
-      "Usando a biblioteca `deequ` da AWS que foi portada para o Microsoft Fabric e oferece validação declarativa de qualidade de dados com integração nativa ao Delta Lake do Fabric.",
+      "Usando a biblioteca `deequ` da AWS que foi portada para o Microsoft Fabric e oferece validação declarativa de qualidade de.",
       "Criando uma classe Python com métodos para cada tipo de validação (`check_nulls`, `check_ranges`, `check_uniqueness`, `check_referential_integrity`), cada método retornando DataFrame com violações; acumulando resultados em lista e gerando relatório consolidado via `reduce(DataFrame.union, resultados)` salvo como tabela Delta de qualidade.",
-      "Usando o módulo `pyspark.sql.quality` que contém funções nativas de validação de qualidade de dados integradas ao runtime Spark do Fabric com suporte a regras declarativas em JSON."
+      "Usando o módulo `pyspark.sql.quality` que contém funções nativas de validação de qualidade de dados integradas ao runtime."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -6503,9 +6503,9 @@ export const questions = [
     "id": "dp700_q261",
     "text": "Como você automatiza completamente o ciclo de deployment de um projeto de engenharia de dados no Fabric usando Azure DevOps, do commit ao ambiente de produção?",
     "options": [
-      "Usando GitHub Actions com o action `microsoft/fabric-deploy@v1` que gerencia automaticamente o ciclo completo de CI/CD para projetos Fabric sem necessidade de scripts customizados.",
+      "Usando GitHub Actions com o action `microsoft/fabric-deploy@v1` que gerencia automaticamente o ciclo completo de CI/CD para.",
       "Configurando webhooks no repositório Git do workspace que automaticamente disparam o Deployment Pipeline quando commits são feitos no branch main, sem necessidade de Azure DevOps separado.",
-      "Usando o Azure DevOps Fabric Extension disponível no Marketplace que automatiza todo o ciclo de deployment com tasks pré-configuradas para sync de workspace, promoção de Deployment Pipeline e validação de itens.",
+      "Usando o Azure DevOps Fabric Extension disponível no Marketplace que automatiza todo o ciclo de deployment com tasks.",
       "Pipeline YAML no Azure DevOps: 1) trigger em merge para main; 2) stage Build: validar notebooks via `nbformat`, lint T-SQL, executar testes unitários; 3) stage Deploy Dev: API REST Fabric para update do workspace Dev via Git sync; 4) stage Deploy Test: chamar API de Deployment Pipeline para promover Dev→Test; 5) stage Deploy Prod: aprovação manual + chamar API de Deployment Pipeline para promover Test→Prod."
     ],
     "correctAnswer": 3,
@@ -6556,7 +6556,7 @@ export const questions = [
       "Workloads de Dev/Test podem impactar a performance de Prod por consumo de CUs na capacity compartilhada; mitigar usando Capacity Metrics para monitorar consumo por workspace, configurando janelas de execução (ex: jobs de Dev apenas fora do horário comercial), considerando capacity separada para Prod em cenários críticos, e usando Deployment Pipelines para promoção controlada.",
       "Múltiplos workspaces na mesma capacity são completamente isolados com recursos dedicados por workspace; não há risco de impacto entre Dev/Test e Prod quando todos estão na mesma capacity Fabric.",
       "Workspaces em capacities diferentes não podem compartilhar dados via Shortcuts ou Deployment Pipelines; toda a arquitetura multi-ambiente deve obrigatoriamente usar a mesma capacity para funcionar corretamente.",
-      "A melhor prática é ter todos os workspaces em capacities separadas por ambiente; compartilhar capacity entre Dev/Test/Prod viola as diretrizes de arquitetura do Microsoft Fabric para ambientes corporativos."
+      "A melhor prática é ter todos os workspaces em capacities separadas por ambiente; compartilhar capacity entre Dev/Test/Prod viola as diretrizes de arquitetura."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -6604,7 +6604,7 @@ export const questions = [
     "text": "Como você implementa observabilidade end-to-end em uma arquitetura Fabric complexa com múltiplos pipelines, notebooks e Eventstreams interdependentes?",
     "options": [
       "Habilitando Azure Application Insights para o workspace Fabric que automaticamente rastreia todas as execuções de pipeline, notebook e Eventstream com correlation IDs sem configuração adicional.",
-      "Implementando Azure OpenTelemetry SDK nos notebooks e pipelines que envia traces automaticamente para o Azure Monitor com correlation IDs nativos do protocolo OpenTelemetry.",
+      "Implementando Azure OpenTelemetry SDK nos notebooks e pipelines que envia traces automaticamente para o Azure Monitor com correlation IDs nativos do.",
       "Usando o Monitor Hub do Fabric como única fonte de verdade para observabilidade end-to-end; ele consolida automaticamente todos os eventos de todos os itens do workspace sem necessidade de instrumentação adicional.",
       "Implementando correlation IDs únicos por execução lógica propagados entre todos os componentes via parâmetros de pipeline e variáveis de notebook; registrando eventos de início/fim/erro em tabela Delta centralizada de observabilidade; criando dashboard Power BI com lineage de execução, SLA tracking e anomaly detection sobre os logs consolidados."
     ],
@@ -6656,7 +6656,7 @@ export const questions = [
       "Verificar métricas do Eventstream no portal Fabric (backlog crescente, throughput de entrada vs saída), analisar se as transformações aplicadas no canvas são computacionalmente custosas, verificar se o destino (Eventhouse) está com latência de ingestão alta via `.show ingestion failures`, e considerar simplificar transformações ou aumentar o paralelismo do destino reduzindo o tamanho dos batches de ingestão.",
       "Reiniciar o Eventstream via botão \"Reset\" no portal Fabric que limpa o backlog acumulado e reprocessa todos os eventos desde o início da fonte configurada.",
       "Converter o Eventstream para um notebook PySpark com Structured Streaming que tem melhor throughput e menor latência para volumes acima de 50.000 eventos por segundo.",
-      "Aumentar a retenção do Azure Event Hubs fonte de 1 dia para 7 dias, pois latência crescente indica que o Eventstream está reprocessando eventos históricos ao invés de processar em tempo real."
+      "Aumentar a retenção do Azure Event Hubs fonte de 1 dia para 7 dias, pois latência crescente indica que o Eventstream está."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -6703,8 +6703,8 @@ export const questions = [
     "id": "dp700_q269",
     "text": "Quais são as principais estratégias de otimização de custo para uma equipe de engenharia de dados usando Microsoft Fabric em escala corporativa?",
     "options": [
-      "Pausar capacities em horários de baixo uso (noite/fim de semana via Azure Automation), usar smoothing de operações em background agendando jobs pesados fora do horário de pico interativo, implementar OPTIMIZE/VACUUM para reduzir storage, remover itens e dados não utilizados, monitorar continuamente com Capacity Metrics App e rightsize o SKU baseado em uso real.",
-      "Migrar todos os workloads para Azure Databricks que tem modelo de pricing por spot instances mais econômico para cargas de trabalho batch comparado ao modelo de CUs fixos do Fabric.",
+      "Pausar capacities em horários de baixo uso (noite/fim de semana via Azure Automation), usar smoothing de operações em background agendando jobs pesados fora.",
+      "Migrar todos os workloads para Azure Databricks que tem modelo de pricing por spot instances mais econômico para cargas de trabalho batch comparado ao modelo.",
       "Converter todos os Lakehouses para Warehouses que têm modelo de pricing mais econômico para armazenamento analítico; Lakehouses têm custo premium por usar Delta Lake como formato nativo.",
       "Limitar o número de usuários com acesso ao Fabric, pois o custo é calculado por usuário ativo simultaneamente; menos usuários acessando resulta em menor consumo de CUs e custo total."
     ],
@@ -6729,7 +6729,7 @@ export const questions = [
     "text": "Em um Notebook Fabric, como você implementa orquestração de um pipeline de dados complexo com dependências condicionais usando `mssparkutils.notebook.runMultiple()`?",
     "options": [
       "Criando um arquivo YAML de DAG compatível com Apache Airflow e usando `mssparkutils.workflow.submitDAG(\"dag.yaml\")` que é o orquestrador nativo de notebooks do Microsoft Fabric.",
-      "Usando `spark.sparkContext.submitJob([notebook_a, notebook_b], resultHandler=None, partitions=[0])` que submete notebooks como jobs Spark com dependências gerenciadas pelo Spark DAGScheduler.",
+      "Usando `spark.sparkContext.submitJob([notebook_a, notebook_b], resultHandler=None, partitions=[0])` que submete notebooks como jobs Spark com dependências.",
       "Usando `asyncio.gather(*[mssparkutils.notebook.runAsync(nb) for nb in notebooks_paralelos])` para execução assíncrona paralela, seguido de chamadas sequenciais para notebooks dependentes após o `await`.",
       "`dag = {\"notebook_a\": {\"timeout\": 1800, \"retry\": 2}, \"notebook_b\": {\"depends_on\": [\"notebook_a\"], \"timeout\": 3600}, \"notebook_c\": {\"depends_on\": [\"notebook_a\"], \"timeout\": 1800}, \"notebook_d\": {\"depends_on\": [\"notebook_b\", \"notebook_c\"], \"timeout\": 900}}; mssparkutils.notebook.runMultiple(dag)` — o DAG define dependências explícitas e paralelismo automático onde possível."
     ],
@@ -6753,10 +6753,10 @@ export const questions = [
     "id": "dp700_q271",
     "text": "Como você implementa telemetria customizada em Data Pipelines do Fabric para rastrear métricas de negócio específicas (como registros processados por categoria) além das métricas padrão do Monitor Hub?",
     "options": [
-      "Configurando \"Custom Metrics\" nas propriedades avançadas de cada atividade do pipeline que automaticamente registra métricas adicionais no Monitor Hub além das métricas padrão de duração e status.",
-      "Usando Azure Application Insights SDK dentro de atividades Script do pipeline que envia eventos customizados via `track_event()` para o workspace de Application Insights configurado no tenant.",
-      "Usando atividades Script ou Stored Procedure após cada etapa crítica para inserir métricas customizadas em tabela Delta de telemetria com campos como `pipeline_run_id = @pipeline().RunId`, `metrica_nome`, `metrica_valor` e `timestamp`; consultável via SQL Analytics Endpoint para dashboards de operações customizados.",
-      "Habilitando \"Extended Telemetry\" nas configurações do workspace Fabric que registra automaticamente todas as métricas de execução em uma tabela `workspace_telemetry` no Lakehouse padrão do workspace."
+      "Configurando \"Custom Metrics\" nas propriedades avançadas de cada atividade do pipeline que automaticamente registra métricas.",
+      "Usando Azure Application Insights SDK dentro de atividades Script do pipeline que envia eventos customizados via.",
+      "Usando atividades Script ou Stored Procedure após cada etapa crítica para inserir métricas customizadas em tabela Delta de telemetria com campos como.",
+      "Habilitando \"Extended Telemetry\" nas configurações do workspace Fabric que registra automaticamente todas as."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -6780,7 +6780,7 @@ export const questions = [
     "options": [
       "`WITH cohorts AS (SELECT cliente_id, MIN(DATE_TRUNC('month', data_compra)) AS cohort_mes FROM compras GROUP BY cliente_id), retencao AS (SELECT c.cohort_mes, DATEDIFF(month, c.cohort_mes, DATE_TRUNC('month', cp.data_compra)) AS mes_relativo, COUNT(DISTINCT cp.cliente_id) AS clientes FROM compras cp JOIN cohorts c ON cp.cliente_id = c.cliente_id GROUP BY c.cohort_mes, mes_relativo) SELECT cohort_mes, mes_relativo, clientes, clientes * 100.0 / FIRST_VALUE(clientes) OVER (PARTITION BY cohort_mes ORDER BY mes_relativo) AS taxa_retencao FROM retencao ORDER BY cohort_mes, mes_relativo`",
       "Criando uma stored procedure com cursor que itera sobre cada mês de cohort e calcula a retenção individualmente, inserindo em tabela resultado linha por linha para cada combinação cohort/mes_relativo.",
-      "Usando `PIVOT (COUNT(cliente_id) FOR mes_relativo IN ([0],[1],[2],[3],[4],[5]))` diretamente sobre a tabela de compras sem CTE intermediária para cálculo de cohort dinâmico.",
+      "Usando `PIVOT (COUNT(cliente_id) FOR mes_relativo IN ([0],[1],[2],[3],[4],[5]))` diretamente sobre a tabela de compras sem CTE intermediária para cálculo de.",
       "Usando `CROSS APPLY (SELECT COUNT(*) FROM compras WHERE cliente_id = c.cliente_id AND DATEDIFF(month, cohort_mes, data_compra) = n.mes) AS retencao(clientes)` com tabela de números gerada por `GENERATE_SERIES(0,12,1)`."
     ],
     "correctAnswer": 0,
@@ -6855,8 +6855,8 @@ export const questions = [
     "options": [
       "O erro ocorre quando dois processos simultâneos tentam modificar a mesma tabela Delta ao mesmo tempo sem particionamento adequado; resolver redesenhando o pipeline para serializar escritas na mesma tabela, usando partições diferentes para escritas paralelas, ou habilitando `spark.conf.set(\"spark.databricks.delta.retryWriteConflict.enabled\", \"true\")` para retry automático com backoff.",
       "O erro indica que a tabela atingiu o limite máximo de 10.000 arquivos por diretório do OneLake; executar OPTIMIZE para compactar arquivos e reduzir abaixo do limite antes de tentar o MERGE novamente.",
-      "O erro é causado por versão incompatível do Delta Lake entre notebooks; verificar se todos os notebooks usam o mesmo runtime Spark e atualizar os que usam versões antigas do Delta Lake via Environment do workspace.",
-      "O erro indica corrupção do transaction log Delta; resolver executando `FSCK REPAIR TABLE nome_tabela` que verifica e corrige automaticamente inconsistências nos arquivos de log."
+      "O erro é causado por versão incompatível do Delta Lake entre notebooks; verificar se todos os notebooks usam o mesmo runtime Spark e atualizar os que usam.",
+      "O erro indica corrupção do transaction log Delta; resolver executando `FSCK REPAIR TABLE nome_tabela` que verifica e corrige."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -6905,8 +6905,8 @@ export const questions = [
     "options": [
       "Zero Trust no contexto do Fabric significa usar exclusivamente Sensitive Labels do nível mais alto (Highly Confidential) em todos os itens e dados, independente da classificação real dos dados.",
       "Aplicar least privilege em permissões de workspace e itens (sem Admin desnecessário), usar Managed Identities em vez de credenciais hardcoded, habilitar Conditional Access para acesso ao Fabric, configurar Private Endpoints para fontes de dados críticas, implementar Workspace Logging para auditoria contínua, e aplicar Sensitivity Labels em dados classificados com políticas de DLP.",
-      "Zero Trust no Fabric requer apenas habilitar MFA para todos os usuários; as demais configurações de segurança são opcionais e relevantes apenas para organizações em setores regulados como financeiro e saúde.",
-      "Zero Trust é implementado exclusivamente via Azure Firewall e Network Security Groups que bloqueiam todo o tráfego não explicitamente permitido para os endpoints do Fabric; configurações dentro do Fabric não fazem parte do modelo Zero Trust."
+      "Zero Trust no Fabric requer apenas habilitar MFA para todos os usuários; as demais configurações de segurança são opcionais e relevantes apenas para.",
+      "Zero Trust é implementado exclusivamente via Azure Firewall e Network Security Groups que bloqueiam todo o tráfego não."
     ],
     "correctAnswer": 1,
     "difficulty": "avancado",
@@ -6956,7 +6956,7 @@ export const questions = [
       "Usando `df.describe().toPandas()` no início de cada execução de produção para garantir que os dados estão dentro dos limites esperados; o overhead é desprezível mesmo para DataFrames de 100 GB.",
       "Desabilitando completamente o profiling em produção e executando análises de qualidade apenas em ambiente de desenvolvimento; profiling em produção sempre impacta negativamente o SLA de processamento.",
       "Executando profiling em amostras representativas com `df.sample(0.1)` em vez do dataset completo, armazenando o resultado do profiling como artefato Delta separado para análise posterior, e condicionando a execução do profiling a uma variável de configuração (`ENABLE_PROFILING=true`) para evitar overhead em execuções normais de produção.",
-      "Usando profiling assíncrono com `threading.Thread(target=profile_data, args=(df,)).start()` que executa o profiling em paralelo com o processamento principal sem impactar o tempo total de execução."
+      "Usando profiling assíncrono com `threading.Thread(target=profile_data, args=(df,)).start()` que executa o profiling em paralelo com o processamento principal."
     ],
     "correctAnswer": 2,
     "difficulty": "intermediario",
@@ -6980,8 +6980,8 @@ export const questions = [
     "options": [
       "Usando MERGE INTO na tabela de destino baseado na chave de negócio (garantindo upsert em vez de insert cego), ou usando `replaceWhere` no modo overwrite para substituir apenas as partições afetadas pela execução, ou implementando deduplicação via `dropDuplicates()` antes do append combinado com constraint CHECK na tabela Delta.",
       "Truncando a tabela de destino no início de cada execução com atividade Script antes do Copy Data; truncate + insert garante que a tabela sempre reflita o estado atual da fonte sem duplicatas.",
-      "Usando o modo \"Idempotent\" disponível na atividade Copy Data do pipeline que automaticamente verifica duplicatas antes de cada inserção usando hash MD5 de todas as colunas.",
-      "Adicionando timestamp de carga como coluna e filtrando por `WHERE data_carga < @data_atual` antes de cada INSERT que ignora automaticamente registros já carregados em execuções anteriores."
+      "Usando o modo \"Idempotent\" disponível na atividade Copy Data do pipeline que automaticamente verifica duplicatas antes de cada inserção usando hash MD5 de.",
+      "Adicionando timestamp de carga como coluna e filtrando por `WHERE data_carga < @data_atual` antes de cada INSERT que ignora automaticamente registros já."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -7003,7 +7003,7 @@ export const questions = [
     "id": "dp700_q281",
     "text": "Como você constrói um dashboard de governança de dados no Fabric que consolida métricas de qualidade, linhagem e utilização de dados de toda a organização?",
     "options": [
-      "Exportando todos os logs do Azure Monitor para o Power BI via conector nativo de Log Analytics que gera automaticamente dashboards de governança com as métricas do Fabric organizadas por workspace e usuário.",
+      "Exportando todos os logs do Azure Monitor para o Power BI via conector nativo de Log Analytics que gera automaticamente dashboards de governança com as.",
       "Contratando o Microsoft Purview como solução standalone de governança que inclui dashboard pré-configurado com todas as métricas necessárias, sem necessidade de desenvolvimento customizado no Fabric.",
       "Combinando dados do Workspace Logging (acessos e operações), Capacity Metrics (utilização por workspace), logs de qualidade das tabelas de auditoria dos pipelines, e metadados do Purview via API em um Lakehouse centralizado de governança; construindo modelo semântico Power BI sobre esse Lakehouse com relatório executivo de KPIs de governança.",
       "Usando o dashboard de governança nativo do Microsoft Fabric Admin Portal que consolida automaticamente todas as métricas de qualidade, linhagem e utilização de todos os workspaces do tenant sem configuração adicional."
@@ -7053,10 +7053,10 @@ export const questions = [
     "id": "dp700_q283",
     "text": "Uma empresa quer migrar de Azure Synapse Analytics para Microsoft Fabric. Quais são os principais mapeamentos de componentes e considerações de migração para engenheiros de dados?",
     "options": [
-      "Fabric não suporta cargas de trabalho do tipo SQL Pool Dedicado; empresas com Synapse Dedicated SQL Pool devem migrar para Azure SQL Database Hyperscale que tem melhor compatibilidade de arquitetura com o Fabric.",
-      "Synapse Analytics é completamente substituído pelo Fabric sem necessidade de migração; a Microsoft migra automaticamente todos os recursos Synapse para Fabric quando o tenant habilita o Microsoft Fabric no Admin Portal.",
+      "Fabric não suporta cargas de trabalho do tipo SQL Pool Dedicado; empresas com Synapse Dedicated SQL Pool devem migrar para.",
+      "Synapse Analytics é completamente substituído pelo Fabric sem necessidade de migração; a Microsoft migra automaticamente todos os recursos Synapse para.",
       "Synapse Spark Pools → Fabric Notebooks/Lakehouses (Delta Lake nativo); Synapse SQL Pools (Dedicated) → Fabric Warehouse; Synapse SQL Serverless → Fabric SQL Analytics Endpoint; Synapse Pipelines → Fabric Data Pipelines (mesma tecnologia ADF); Synapse Link → Fabric Mirroring; considerações: retestar performance, adaptar scripts para Fabric Runtime, migrar linked services para conexões Fabric.",
-      "A migração de Synapse para Fabric requer reescrever todo o código PySpark pois o Fabric usa uma versão proprietária do Spark incompatível com o Synapse Spark; apenas T-SQL pode ser reutilizado sem modificações."
+      "A migração de Synapse para Fabric requer reescrever todo o código PySpark pois o Fabric usa uma versão proprietária do Spark."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -7078,10 +7078,10 @@ export const questions = [
     "id": "dp700_q284",
     "text": "Um banco de dados transacional Oracle on-premises com 200 tabelas precisa ser migrado para um Lakehouse no Fabric com processamento diário incremental, qualidade de dados garantida e disponibilidade para analistas SQL e modelos ML. Descreva a arquitetura completa.",
     "options": [
-      "Instalar Azure Data Migration Service que migra automaticamente as 200 tabelas Oracle para Fabric Warehouse com mapeamento de tipos automático e pipeline incremental pré-configurado sem necessidade de desenvolvimento customizado.",
-      "Usar Mirroring do Oracle on-premises para o Fabric que replica em near real-time todas as alterações CDC sem necessidade de gateway ou pipeline; configurar modelo semântico Direct Lake para analistas e exportar Delta para ML.",
-      "Gateway on-premises → Data Pipeline com ForEach paralelo (lendo watermark de tabela de controle por tabela) → Bronze Lakehouse (Delta raw); Notebooks PySpark Bronze→Silver (deduplicação, validação, padronização por domínio); Notebooks Silver→Gold (agregações, star schema); SQL Analytics Endpoint para analistas; MLflow + notebooks para features ML; Deployment Pipelines para gov Dev→Prod; Workspace Logging + Capacity Metrics para monitoramento.",
-      "Usar um único Dataflow Gen2 com as 200 tabelas Oracle como fontes, configurando transformações Power Query para cada tabela e carregando diretamente no Warehouse; mais simples que a abordagem com notebooks e mais fácil de manter para equipes sem experiência em PySpark."
+      "Instalar Azure Data Migration Service que migra automaticamente as 200 tabelas Oracle para.",
+      "Usar Mirroring do Oracle on-premises para o Fabric que replica em near real-time todas as alterações CDC sem.",
+      "Gateway on-premises → Data Pipeline com ForEach paralelo (lendo watermark de tabela de controle por tabela).",
+      "Usar um único Dataflow Gen2 com as 200 tabelas Oracle como fontes, configurando transformações Power Query para cada."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -7131,7 +7131,7 @@ export const questions = [
       "`DeltaTable.forName(spark, \"tabela\").update(condition=col(\"id\").isin(ids_deletar), set={\"ativo\": \"false\", \"data_exclusao\": \"current_timestamp()\", \"usuario_exclusao\": f\"'{usuario}'\"})`",
       "`spark.sql(f\"DELETE FROM tabela WHERE id IN ({','.join(ids_deletar)}) AND ativo = true\")`",
       "`df_deletar.write.format(\"delta\").mode(\"overwrite\").option(\"replaceWhere\", f\"id IN ({ids_deletar})\").saveAsTable(\"tabela\")`",
-      "Usando `DeltaTable.forName(spark, \"tabela\").delete(col(\"id\").isin(ids_deletar))` e dependendo do time travel para recuperar registros excluídos quando necessário; abordagem válida mas não implementa soft delete que permite queries regulares incluindo registros históricos."
+      "Usando `DeltaTable.forName(spark, \"tabela\").delete(col(\"id\").isin(ids_deletar))` e dependendo do time travel para recuperar registros excluídos quando."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -7153,10 +7153,10 @@ export const questions = [
     "id": "dp700_q287",
     "text": "Quais são os indicadores de maturidade de uma prática de engenharia de dados no Microsoft Fabric e como evoluir de nível básico para avançado?",
     "options": [
-      "Maturidade é determinada pelo SKU da capacity Fabric contratada; organizações com F128 ou superior são automaticamente classificadas como maduras pois têm recursos suficientes para implementar todas as práticas avançadas de engenharia de dados.",
+      "Maturidade é determinada pelo SKU da capacity Fabric contratada; organizações com F128 ou superior são automaticamente classificadas como maduras pois têm.",
       "O único indicador de maturidade relevante é o tempo de processamento dos pipelines; equipes que processam dados em menos de 1 hora são consideradas avançadas; equipes com SLA de 4+ horas precisam evoluir para práticas mais maduras de engenharia.",
       "Nível básico: pipelines manuais, sem testes, sem versionamento; Intermediário: Git integration, Deployment Pipelines, qualidade de dados básica, monitoramento via Monitor Hub; Avançado: CI/CD automatizado, testes unitários e de integração, observabilidade end-to-end com correlation IDs, SLA monitoring, capacity optimization contínua, framework de qualidade de dados automatizado e governança via Purview.",
-      "Maturidade no Fabric é medida pelo número de itens no workspace; equipes com mais de 100 Lakehouses e 50 pipelines são consideradas maduras enquanto equipes menores são classificadas como básicas independente das práticas adotadas."
+      "Maturidade no Fabric é medida pelo número de itens no workspace; equipes com mais de 100 Lakehouses e 50 pipelines são consideradas maduras enquanto equipes."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -7179,7 +7179,7 @@ export const questions = [
     "text": "Em um Data Pipeline do Fabric, como você constrói dinamicamente uma query SQL de extração que varia o conjunto de colunas baseado em uma tabela de mapeamento de metadados no Lakehouse?",
     "options": [
       "Usando uma atividade Script no Warehouse que lê a tabela de metadados e executa `sp_executesql` com a query dinâmica construída em T-SQL, retornando o resultado diretamente para o destino do pipeline.",
-      "Usando a opção \"Dynamic Schema\" na atividade Copy Data que lê automaticamente a tabela de metadados do Lakehouse configurado como \"schema source\" e aplica o mapeamento de colunas sem necessidade de lógica adicional.",
+      "Usando a opção \"Dynamic Schema\" na atividade Copy Data que lê automaticamente a tabela de metadados do Lakehouse configurado.",
       "Usando atividade Lookup para ler a tabela de metadados retornando a lista de colunas, atividade Set Variable para construir a string SQL com `@join(activity('Lookup').output.value, ',', 'coluna')`, e atividade Copy Data com a query dinâmica `@concat('SELECT ', variables('colunas_sql'), ' FROM tabela_fonte WHERE data >= ''', formatDateTime(utcNow(), 'yyyy-MM-dd'), '''')`.",
       "Criando um Dataflow Gen2 que lê a tabela de metadados e usa a função M `Table.SelectColumns(fonte, List.Select(colunas_meta, each _ <> null))` para selecionar dinamicamente as colunas configuradas."
     ],
@@ -7204,7 +7204,7 @@ export const questions = [
     "text": "Um pipeline Fabric falha em produção mas não em desenvolvimento com os mesmos dados. Após análise, você descobre que o pipeline de produção tem permissões diferentes. Como você resolve sistematicamente?",
     "options": [
       "Conceder permissões Admin ao Service Principal de produção para eliminar diferenças de permissão entre ambientes; o princípio de least privilege pode ser aplicado gradualmente após a estabilização do pipeline.",
-      "Usar credenciais de usuário interativo em produção em vez de Service Principal para garantir que as permissões sejam idênticas ao ambiente de desenvolvimento onde o pipeline funciona corretamente.",
+      "Usar credenciais de usuário interativo em produção em vez de Service Principal para garantir que as permissões sejam idênticas.",
       "Recriar o pipeline de produção manualmente replicando exatamente a configuração do desenvolvimento, sem usar Deployment Pipeline, para garantir que não haja diferenças introduzidas pelo processo de promoção automática.",
       "Documentar as diferenças de permissão entre os ambientes (Service Principal vs usuário interativo, permissões de Lakehouse/Warehouse, acesso a Key Vault, configurações de gateway), replicar exatamente as condições de produção em um ambiente de staging, e usar Deployment Rules no Deployment Pipeline para garantir que configurações específicas de ambiente sejam aplicadas corretamente na promoção."
     ],
@@ -7228,9 +7228,9 @@ export const questions = [
     "id": "dp700_q290",
     "text": "Como você integra um pipeline de treinamento de modelo ML no Fabric com o pipeline de ingestão de dados para garantir que o modelo seja retreinado automaticamente quando novos dados chegam?",
     "options": [
-      "Criando um trigger de evento no workspace que monitora alterações no Lakehouse e automaticamente executa o notebook de treinamento para qualquer modificação em tabelas do Lakehouse Gold.",
-      "Configurando um MLflow Autolog trigger no workspace Fabric que automaticamente inicia retreinamento quando detecta novos dados no Lakehouse sem necessidade de pipeline orquestrador.",
-      "Usando Azure Machine Learning Pipelines integradas ao Fabric via Shortcut que gerenciam automaticamente o ciclo de retreinamento baseado em drift de dados detectado pelo Azure ML Monitor.",
+      "Criando um trigger de evento no workspace que monitora alterações no Lakehouse e automaticamente executa o notebook de.",
+      "Configurando um MLflow Autolog trigger no workspace Fabric que automaticamente inicia retreinamento quando detecta novos.",
+      "Usando Azure Machine Learning Pipelines integradas ao Fabric via Shortcut que gerenciam automaticamente o ciclo de retreinamento baseado em drift de dados.",
       "Criando um Data Pipeline orquestrador que: 1) executa o notebook de ingestão e transformação de dados; 2) verifica o volume de novos dados com atividade Lookup; 3) usa atividade If Condition para decidir se retreinamento é necessário (ex: >10.000 novos registros); 4) executa notebook de treinamento via atividade Notebook; 5) registra o novo modelo via MLflow; 6) notifica a equipe com métricas comparativas do novo modelo."
     ],
     "correctAnswer": 3,
@@ -7254,9 +7254,9 @@ export const questions = [
     "text": "Como você cria um \"Health Score\" de engenharia de dados no Fabric que consolida múltiplas métricas em um único indicador de saúde do ambiente de dados?",
     "options": [
       "Definindo métricas ponderadas (ex: taxa de sucesso de pipelines 30%, SLA compliance 25%, qualidade de dados 20%, utilização de capacity 15%, tempo médio de resolução de incidentes 10%), calculando cada métrica via queries sobre logs e tabelas de auditoria, normalizando para 0-100 e agregando com pesos no modelo semântico Power BI para exibição em scorecard executivo.",
-      "Configurando o Microsoft Purview Health Management que monitora continuamente o ambiente Fabric e gera um score de saúde baseado em conformidade com políticas de governança definidas no catálogo.",
+      "Configurando o Microsoft Purview Health Management que monitora continuamente o ambiente Fabric e gera um score de.",
       "Usando o Fabric Advisor disponível no portal Azure que analisa o ambiente Fabric e gera recomendações pontuadas para melhorar a saúde geral, similar ao Azure Advisor para outros serviços Azure.",
-      "Usando o \"Data Health Score\" integrado ao Admin Portal do Fabric que calcula automaticamente um score de 0-100 baseado nas métricas de todos os workspaces do tenant sem necessidade de desenvolvimento customizado."
+      "Usando o \"Data Health Score\" integrado ao Admin Portal do Fabric que calcula automaticamente um score de 0-100 baseado nas."
     ],
     "correctAnswer": 0,
     "difficulty": "avancado",
@@ -7303,8 +7303,8 @@ export const questions = [
     "id": "dp700_q293",
     "text": "Como você implementa uma estratégia de gerenciamento de capacity Fabric para uma organização com workloads críticos de negócio que não podem ser impactados por jobs de engenharia pesados?",
     "options": [
-      "Limitando o número de notebooks e pipelines que podem executar simultaneamente via \"Concurrent Jobs Limit\" nas configurações do workspace para garantir recursos sempre disponíveis para workloads críticos.",
-      "Habilitando \"Priority Queuing\" nas configurações avançadas da capacity que automaticamente prioriza queries interativas sobre jobs de engenharia sem necessidade de separação física de capacities.",
+      "Limitando o número de notebooks e pipelines que podem executar simultaneamente via \"Concurrent Jobs Limit\" nas.",
+      "Habilitando \"Priority Queuing\" nas configurações avançadas da capacity que automaticamente prioriza queries.",
       "Usando capacities separadas para workloads críticos (relatórios interativos) e engenharia (pipelines pesados), configurando janelas de execução para jobs de engenharia fora do horário de pico, monitorando via Capacity Metrics App com alertas proativos, e implementando throttling controls agendando OPTIMIZE/VACUUM em horários de baixa utilização.",
       "Usando Resource Governor no Fabric Warehouse para alocar 80% dos recursos de capacity para relatórios interativos e 20% para pipelines de engenharia, com ajuste dinâmico baseado na carga observada."
     ],
@@ -7331,7 +7331,7 @@ export const questions = [
       "Implementar Lambda Architecture no Fabric requer Azure Databricks para o Batch Layer (Spark histórico) e Fabric apenas para o Speed Layer (Eventstream); o Fabric sozinho não suporta os requisitos de processamento histórico em escala da Lambda Architecture.",
       "Lambda Architecture no Fabric usa um único Warehouse para ambas as camadas; tabelas de fatos recebem dados em streaming via MERGE incremental e histórico via bulk load, com views que não distinguem a origem dos dados para os consumidores finais.",
       "Batch Layer: Data Pipelines + Notebooks PySpark processando histórico completo no Lakehouse (Bronze→Silver→Gold); Speed Layer: Eventstream + Eventhouse para dados de streaming em tempo real; Serving Layer: SQL Analytics Endpoint e modelos semânticos que combinam dados Gold do Lakehouse com dados recentes do Eventhouse via KQL cross-query ou views unificadoras.",
-      "Lambda Architecture está obsoleta no Fabric; usar exclusivamente Kappa Architecture (streaming only) com Eventstream processando todos os dados em tempo real e Lakehouse apenas para persistência histórica, eliminando a complexidade de manter dois pipelines separados."
+      "Lambda Architecture está obsoleta no Fabric; usar exclusivamente Kappa Architecture (streaming only) com Eventstream processando todos os dados em tempo real."
     ],
     "correctAnswer": 2,
     "difficulty": "avancado",
@@ -7355,7 +7355,7 @@ export const questions = [
     "options": [
       "VACUUM deve ser executado com `RETAIN 0 HOURS` para máxima economia de armazenamento, removendo imediatamente todos os arquivos não usados pela versão atual; o time travel pode ser desabilitado em produção para reduzir custos.",
       "O Fabric executa OPTIMIZE e VACUUM automaticamente em background para todas as tabelas Delta do Lakehouse, sem necessidade de agendamento manual; a execução manual pode causar conflitos com a manutenção automática.",
-      "Executar `OPTIMIZE nometabela ZORDER BY (colunamaisfiltrada)` periodicamente para compactar arquivos pequenos em arquivos maiores e reorganizar fisicamente os dados pela coluna de filtro mais usada; executar `VACUUM nometabela RETAIN 168 HOURS` para remover arquivos obsoletos não referenciados pelo transaction log, preservando 7 dias de histórico para time travel. Agendar ambos via Data Pipeline fora do horário de pico.",
+      "Executar `OPTIMIZE nometabela ZORDER BY (colunamaisfiltrada)` periodicamente para compactar arquivos pequenos em arquivos maiores e reorganizar fisicamente.",
       "Executar `OPTIMIZE` a cada execução de carga incremental garante que nunca haja arquivos pequenos; o overhead é desprezível e não impacta o tempo total do pipeline mesmo em tabelas com bilhões de registros."
     ],
     "correctAnswer": 2,
@@ -7378,10 +7378,10 @@ export const questions = [
     "id": "dp700_q296",
     "text": "No Microsoft Fabric, como você configura um Eventstream para rotear eventos de um único Event Hub para múltiplos destinos simultaneamente — Eventhouse para análise em tempo real e Lakehouse para persistência histórica?",
     "options": [
-      "No editor do Eventstream, após adicionar o Event Hub como fonte, adicionar dois destinos distintos: um destino KQL Database (Eventhouse) configurando a tabela de destino e o mapeamento de campos, e um destino Lakehouse configurando a tabela Delta de destino; o Eventstream roteia os eventos para ambos em paralelo sem duplicar o consumo da fonte.",
+      "No editor do Eventstream, após adicionar o Event Hub como fonte, adicionar dois destinos distintos: um destino KQL.",
       "É necessário criar dois Eventstreams separados, cada um consumindo o mesmo Event Hub com consumer groups diferentes; um Eventstream suporta apenas um destino de saída por definição de design.",
       "Usar uma atividade Fork no editor do Eventstream que divide o fluxo em dois branches paralelos, cada um com transformações e destinos independentes; sem a atividade Fork, o roteamento para múltiplos destinos não é possível.",
-      "Configurar o Eventhouse como destino primário e usar uma Update Policy KQL para copiar os dados ingeridos automaticamente para o Lakehouse via Shortcut; múltiplos destinos nativos no Eventstream estão disponíveis apenas em SKUs F64 ou superior."
+      "Configurar o Eventhouse como destino primário e usar uma Update Policy KQL para copiar os dados ingeridos automaticamente."
     ],
     "correctAnswer": 0,
     "difficulty": "intermediario",
@@ -7404,7 +7404,7 @@ export const questions = [
     "text": "O que são Managed Private Endpoints no Microsoft Fabric e como eles diferem de Private Endpoints tradicionais do Azure para acesso seguro a fontes de dados?",
     "options": [
       "Managed Private Endpoints estão disponíveis apenas para conexões com Azure SQL Database e Azure Storage; para Key Vault e Cosmos DB é necessário configurar Private Endpoints tradicionais via Azure Portal.",
-      "Managed Private Endpoints são equivalentes a Private Endpoints tradicionais do Azure, criados automaticamente pelo Fabric ao configurar conexões com fontes protegidas; a única diferença é que a cobrança é incluída no custo da capacity Fabric em vez de cobrada separadamente no Azure.",
+      "Managed Private Endpoints são equivalentes a Private Endpoints tradicionais do Azure, criados automaticamente pelo Fabric ao configurar conexões com fontes.",
       "Managed Private Endpoints substituem completamente a necessidade de gateways de dados on-premises; ao habilitá-los no workspace, todos os conectores passam automaticamente a usar conexão privada sem configuração adicional por conector.",
       "Managed Private Endpoints são endpoints privados gerenciados pelo Fabric que permitem que itens do workspace (notebooks, pipelines, dataflows) acessem fontes de dados protegidas por firewall ou VNet de forma segura, sem expor dados à internet pública; diferem dos tradicionais pois são criados e gerenciados dentro do contexto do Fabric, sem necessidade de configurar VNet injection ou infraestrutura de rede adicional pelo administrador."
     ],

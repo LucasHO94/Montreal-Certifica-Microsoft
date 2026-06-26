@@ -929,7 +929,7 @@ export const questions = [
     "text": "Qual a diferença entre a lixeira de um site SharePoint e uma política de retenção aplicada a esse conteúdo?",
     "options": [
       "São exatamente a mesma coisa",
-      "A lixeira é voltada a recuperação a curto prazo; a retenção controla quanto tempo o conteúdo deve ser mantido,",
+      "A lixeira é voltada a recuperação a curto prazo; a retenção controla quanto tempo o conteúdo deve ser mantido.",
       "Ambas removem dados permanentemente",
       "A retenção só muda o idioma"
     ],
@@ -1828,7 +1828,7 @@ export const questions = [
     "text": "Qual a diferença conceitual e prática entre o SharePoint Online e o OneDrive for Business no que tange ao compartilhamento de arquivos?",
     "options": [
       "O OneDrive é local e offline, enquanto o SharePoint funciona apenas online.",
-      "O OneDrive é destinado a arquivos individuais de trabalho pessoal de cada usuário, enquanto o SharePoint é voltado para colaboração corporativa e sites de equipe.",
+      "O OneDrive é destinado a arquivos individuais de trabalho pessoal de cada usuário, enquanto o SharePoint é voltado para colaboração corporativa e sites de.",
       "O SharePoint é gratuito e o OneDrive exige licenças adicionais pagas.",
       "O OneDrive só funciona em dispositivos móveis e o SharePoint no desktop."
     ],
@@ -2980,7 +2980,7 @@ export const questions = [
       "Processo de inserção de duas senhas idênticas ao salvar um documento Word comum.",
       "Algoritmo de compressão de arquivos que reduz o tamanho do anexo do e-mail pela metade.",
       "Conexão VPN de redundância dupla de cabos de fibra óptica de operadoras locais.",
-      "Um método de criptografia onde duas chaves são usadas para proteger o arquivo: uma mantida de forma segura pela Microsoft na nuvem e outra sob o controle exclusivo e físico do cliente localmente."
+      "Um método de criptografia onde duas chaves são usadas para proteger o arquivo: uma mantida de forma segura pela Microsoft na nuvem e outra sob o controle."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
@@ -3228,7 +3228,7 @@ export const questions = [
     "text": "Sua empresa deseja evitar o compartilhamento inadequado de dados confidenciais por meio do Microsoft Teams. Como as políticas de DLP protegem mensagens de chat e conversas em canais em tempo real?",
     "options": [
       "O chat do Teams é desativado permanentemente para toda a empresa sempre que alguém digitar a palavra 'senha'.",
-      "As mensagens são verificadas em tempo real; se dados sensíveis forem detectados, a mensagem é bloqueada e substituída por um aviso de segurança para os destinatários.",
+      "As mensagens são verificadas em tempo real; se dados sensíveis forem detectados, a mensagem é bloqueada e substituída por um aviso de segurança para os.",
       "A IA do Teams altera o texto incorreto automaticamente para piadas inofensivas.",
       "O Teams grava o áudio do microfone do usuário para validar conversas faladas de forma contínua."
     ],
@@ -3254,7 +3254,7 @@ export const questions = [
     "options": [
       "Garantir que os usuários digitem a senha exata de login do Windows.",
       "Fazer a correspondência matemática de hashes de vírus na nuvem do Defender.",
-      "Detectar informações confidenciais carregando um banco de dados estruturado modelo (ex: lista exata de CPFs e nomes de todos os seus clientes reais) para evitar falsos positivos.",
+      "Detectar informações confidenciais carregando um banco de dados estruturado modelo (ex: lista exata de CPFs e nomes de todos os seus clientes reais) para.",
       "Validar se os arquivos do Office possuem o mesmo tamanho físico de disco."
     ],
     "correctAnswer": 2,
@@ -3854,7 +3854,7 @@ export const questions = [
     "options": [
       "O Exchange apaga e-mails novos recebidos de forma silenciosa sem notificar ninguém.",
       "O sistema remove arquivos de outros usuários da empresa de forma aleatória para abrir espaço.",
-      "O recebimento de novos e-mails é bloqueado devido à falta de espaço físico, exigindo a expansão de armazenamento ou uso de caixas de arquivamento (Archive Mailbox).",
+      "O recebimento de novos e-mails é bloqueado devido à falta de espaço físico, exigindo a expansão de armazenamento ou uso de caixas de arquivamento (Archive.",
       "A conta do usuário é excluída de forma irreversível e definitiva na hora."
     ],
     "correctAnswer": 2,
@@ -4080,7 +4080,7 @@ export const questions = [
       "Ação física de conectar um cabo de aterramento de energia nos servidores físicos locais.",
       "Configurar políticas de Smart Lockout no Entra ID para bloquear contas hackers.",
       "Algoritmo de compressão de arquivos que reduz o tamanho de planilhas no OneDrive.",
-      "Processo de buscar informações corporativas relevantes às quais o usuário tem acesso legal para enriquecer o prompt com dados confiáveis antes de gerar a resposta de IA."
+      "Processo de buscar informações corporativas relevantes às quais o usuário tem acesso legal para enriquecer o prompt com dados confiáveis antes de gerar a."
     ],
     "correctAnswer": 3,
     "difficulty": "avancado",
@@ -4554,7 +4554,7 @@ export const questions = [
     "options": [
       "Eliminar arquivos corrompidos de bancos de dados locais.",
       "Bloquear e-mails falsificados no Exchange Protection.",
-      "Ensinar o robô a isolar e converter dados falados variáveis em formatos de dados limpos do sistema (como datas ou números de telefone) independente de como foram digitados pelo usuário.",
+      "Ensinar o robô a isolar e converter dados falados variáveis em formatos de dados limpos do sistema (como datas ou números de telefone) independente de como.",
       "Mudar o layout do canal do Microsoft Teams dos estagiários."
     ],
     "correctAnswer": 2,
@@ -4580,7 +4580,7 @@ export const questions = [
       "Fazer o bot ligar de forma física automática para o telefone móvel do chefe do setor.",
       "Enviar um e-mail de alerta em formato .ZIP criptografado para o suporte técnico local.",
       "A IA do bot é desativada permanentemente e o computador do usuário é reiniciado.",
-      "Configurar o nó de desvio 'Transferência para agente de chat ao vivo' (Transfer to Live Agent) apontando para um sistema integrado de Helpdesk (como Omnichannel for Customer Service)."
+      "Configurar o nó de desvio 'Transferência para agente de chat ao vivo' (Transfer to Live Agent) apontando para um."
     ],
     "correctAnswer": 3,
     "difficulty": "intermediario",
@@ -5380,7 +5380,7 @@ export const questions = [
       "Bloquear computadores locais fisicamente com trancas mecânicas de segurança.",
       "Comprar mais armazenamento de dados para planilhas no OneDrive.",
       "Desinstalar patches de segurança do Windows 11 local.",
-      "Utilizar aprendizado de máquina para analisar comportamentos suspeitos (como logins de locais impossíveis no mesmo dia) e forçar redefinição de senhas de contas comprometidas."
+      "Utilizar aprendizado de máquina para analisar comportamentos suspeitos (como logins de locais impossíveis no mesmo dia) e forçar redefinição de senhas de."
     ],
     "difficulty": "avancado",
     "domain": "Identidade e Acesso",
@@ -5502,7 +5502,7 @@ export const questions = [
   {
     "text": "Qual o papel do serviço 'Microsoft Entra Verified ID' (Identificação Verificada) no ecossistema de gerenciamento de identidades descentralizadas?",
     "options": [
-      "Permitir que usuários e organizações comprovem de forma criptográfica credenciais digitais (como diplomas ou cargo de funcionário) usando padrões abertos sem intermediários.",
+      "Permitir que usuários e organizações comprovem de forma criptográfica credenciais digitais (como diplomas ou cargo de funcionário) usando padrões abertos sem.",
       "Verificar se o cabo de internet físico está conectado corretamente na placa local.",
       "Realizar auditorias físicas de hardware locais nas instalações da empresa.",
       "Desativar a proteção de MFA de todos os usuários convidados por segurança."
@@ -5654,7 +5654,7 @@ export const questions = [
     "options": [
       "Mapear o endereço residencial de todos os funcionários em um mapa visual do SharePoint.",
       "Criar um provedor de internet local alternativo na nuvem corporativa.",
-      "Cadastrar as faixas de IPs públicos dos escritórios físicos da empresa para que o Acesso Condicional possa liberar ou restringir logins com base na origem física da conexão.",
+      "Cadastrar as faixas de IPs públicos dos escritórios físicos da empresa para que o Acesso Condicional possa liberar ou restringir logins com base na origem.",
       "Bloquear e-mails recebidos do Exchange Protection."
     ],
     "difficulty": "intermediario",
@@ -5702,7 +5702,7 @@ export const questions = [
   {
     "text": "Qual das seguintes alternativas representa o conceito de 'Identidade Híbrida' no contexto de infraestrutura de rede corporativa?",
     "options": [
-      "Um modelo onde os colaboradores utilizam a mesma conta de login para acessar recursos locais do servidor físico corporativo e serviços do Microsoft 365 na nuvem.",
+      "Um modelo onde os colaboradores utilizam a mesma conta de login para acessar recursos locais do servidor físico corporativo e serviços do Microsoft 365 na.",
       "Uma conta de usuário que é compartilhada por dois funcionários ao mesmo tempo.",
       "O uso de redes locais que alternam a internet por Wi-Fi e cabos físicos simultaneamente.",
       "Um tipo de licença de cobrança mista de faturamento mensal."
@@ -5780,7 +5780,7 @@ export const questions = [
       "Ao desativar os logins de todos os colaboradores de nível técnico por segurança.",
       "Ao criptografar fisicamente todas as placas-mãe dos servidores locais.",
       "Ao forçar o uso de logins compartilhados entre os técnicos de TI.",
-      "Ao remover privilégios ativos permanentes de administradores seniores e convertê-los em 'qualificados' a ativar cargos apenas em janelas temporárias de trabalho autorizadas."
+      "Ao remover privilégios ativos permanentes de administradores seniores e convertê-los em 'qualificados' a ativar cargos apenas em janelas temporárias de."
     ],
     "difficulty": "avancado",
     "domain": "Identidade e Acesso",
@@ -6002,7 +6002,7 @@ export const questions = [
   {
     "text": "Qual a finalidade principal de configurar 'Termos de Uso' (Terms of Use) integrados às políticas de Acesso Condicional do Microsoft Entra ID?",
     "options": [
-      "Exigir que fornecedores terceiros ou novos funcionários aceitem formalmente um acordo de confidencialidade legal na tela antes de ter acesso aos sistemas corporativos.",
+      "Exigir que fornecedores terceiros ou novos funcionários aceitem formalmente um acordo de confidencialidade legal na tela antes de ter acesso aos sistemas.",
       "Traduzir automaticamente os contratos de compras do faturamento financeiro.",
       "Impedir o uso de monitores locais de marcas de concorrentes da Microsoft.",
       "Deletar arquivos temporários locais das estações de trabalho físicas."
@@ -6900,7 +6900,7 @@ export const questions = [
     "correctAnswer": 3
   },
   {
-    "text": "Sua empresa deseja garantir que o acesso dos técnicos seniores a relatórios de faturamento corporativo no M365 seja permitido apenas se eles estiverem logados na rede física da matriz. Qual o prazo limite de carência que a Microsoft concede aos dados confidenciais do tenant caso uma assinatura comercial expire por falta de pagamento antes do faturamento?",
+    "text": "Sua empresa deseja garantir que o acesso dos técnicos seniores a relatórios de faturamento corporativo no M365 seja permitido apenas se eles estiverem logados na rede física da matriz. Qual o prazo limite de carência que a Microsoft concede aos dados confidenciais do tenant caso uma assinatura comercial expire por falta de pagamento antes do.",
     "options": [
       "Geralmente de 90 dias (período de carência lógica onde os dados permanecem salvos antes da exclusão definitiva)",
       "Geralmente de 24 horas úteis locais",

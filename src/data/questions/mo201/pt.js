@@ -180,7 +180,7 @@ export const questions = [
     "options": [
       "Inserir → Nome → Definir → digitar o nome e o intervalo",
       "Fórmulas → Gerenciador de Nomes → Novo → digitar o nome e definir o intervalo",
-      "Ambas as opções A e C estão corretas",
+      "Página Inicial → Estilos → Gerenciar Nomes → digitar o nome do intervalo",
       "Selecionar o intervalo → clicar na Caixa de Nome → digitar o nome e pressionar Enter"
     ],
     "correctAnswer": 3,
@@ -194,7 +194,7 @@ export const questions = [
       "cascasDeBanana": [
         "Inserir → Nome → Definir → digitar o nome e o intervalo: Incorreto, pois alternativa inválida.",
         "Fórmulas → Gerenciador de Nomes → Novo → digitar o nome e definir o intervalo: Incorreto, pois alternativa inválida.",
-        "Ambas as opções A e C estão corretas: Incorreto, pois alternativa inválida."
+        "Página Inicial → Estilos → Gerenciar Nomes: Incorreto — não existe gerenciamento de nomes no grupo Estilos; nomes definidos ficam em Fórmulas → Gerenciador de Nomes."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Nomes Definidos, associe mentalmente a funcionalidade correta 'Selecionar o intervalo → clicar na Caixa de Nome → digitar o nome e pressionar Enter'."
     }
@@ -1153,7 +1153,7 @@ export const questions = [
     "id": "mo201_q47",
     "text": "Um usuário deseja adicionar rótulos de dados que exibam o percentual de cada fatia em um gráfico de pizza. Como deve proceder?",
     "options": [
-      "Ambas as opções A e B estão corretas",
+      "Selecionar o gráfico → Inserir → Caixa de Texto → digitar o percentual de cada fatia manualmente",
       "Clicar com o botão direito nos rótulos de dados → Formatar Rótulos de Dados → marcar Percentual",
       "Clicar no gráfico → Design do Gráfico → Adicionar Elemento → Rótulos de Dados → Percentual",
       "Selecionar a série → Formatar → Rótulos → Mostrar como Percentual"
@@ -1169,7 +1169,7 @@ export const questions = [
       "cascasDeBanana": [
         "Clicar no gráfico → Design do Gráfico → Adicionar Elemento → Rótulos de Dados → Percentual: Incorreto, pois alternativa inválida.",
         "Selecionar a série → Formatar → Rótulos → Mostrar como Percentual: Incorreto, pois alternativa inválida.",
-        "Ambas as opções A e B estão corretas: Incorreto, pois alternativa inválida."
+        "Inserir Caixa de Texto e digitar o percentual manualmente: Incorreto — rótulos manuais não recalculam quando os dados mudam; use Formatar Rótulos de Dados → marcar Percentual."
       ],
       "dicaOuro": "Dica de prova: Ao lidar com Formatação de Gráficos, associe mentalmente a funcionalidade correta 'Clicar com o botão direito nos rótulos de dados → Formatar Rótulos de Dados → marcar Percentual'."
     }
