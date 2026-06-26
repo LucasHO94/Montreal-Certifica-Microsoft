@@ -36,3 +36,6 @@ modelos_base_quest/
 *.njsproj
 *.sln
 *.sw?
+
+# Claude Code worktrees/artefatos locais
+.claude/
