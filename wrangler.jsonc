@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "montreal-certifica-microsoft",
+  "name": "certificams",
   "compatibility_date": "2026-06-16",
   "observability": {
     "enabled": true
