@@ -1,7 +1,7 @@
 {
   // Worker oficial: certificams.montreal-663.workers.dev (conta montreal)
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "certificams",
+  "name": "montreal-certifica-microsoft",
   "compatibility_date": "2026-06-16",
   "observability": {
     "enabled": true
