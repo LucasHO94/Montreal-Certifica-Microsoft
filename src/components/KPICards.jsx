@@ -41,9 +41,9 @@ const KPICards = ({ rawHistory, dailyGoal = 10 }) => {
     'text-red-500';
 
   const rateLabel =
-    stats.globalRate >= 70 ? 'Aprovação garantida!' :
-    stats.globalRate >= 50 ? 'Em progresso' :
-    'Foque na revisão';
+    stats.globalRate >= 70 ? t('kpi_rate_great') :
+    stats.globalRate >= 50 ? t('kpi_rate_ok') :
+    t('kpi_rate_low');
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
@@ -61,7 +61,7 @@ const KPICards = ({ rawHistory, dailyGoal = 10 }) => {
           {stats.totalAnswered.toLocaleString(language === 'pt' ? 'pt-BR' : 'en-US')}
         </p>
         <p className="text-xs font-bold text-slate-400">
-          <span className="text-emerald-600 font-black">{stats.totalCorrect}</span> corretas
+          <span className="text-emerald-600 font-black">{stats.totalCorrect}</span> {t('kpi_correct')}
         </p>
       </div>
 
@@ -104,7 +104,7 @@ const KPICards = ({ rawHistory, dailyGoal = 10 }) => {
           />
         </div>
         <p className="text-xs font-bold text-slate-400 mt-1">
-          {dailyDone ? '🎯 Meta batida hoje!' : `${Math.max(dailyGoal - stats.todayAnswered, 0)} restantes`}
+          {dailyDone ? t('kpi_daily_done') : `${Math.max(dailyGoal - stats.todayAnswered, 0)} ${t('kpi_remaining')}`}
         </p>
       </div>
 

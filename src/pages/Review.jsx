@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Layers, ArrowLeft, CheckCircle2 } from 'lucide-react';
 import { useReview } from '../hooks/useReview';
 import { getQuestions } from '../data/questions';
 import { getCert } from '../data/certifications';
+import { LanguageContext } from '../contexts/LanguageContext';
 import FlashcardMode from '../components/FlashcardMode';
 
 export default function Review({ session }) {
   const navigate = useNavigate();
   const { certId } = useParams();
+  const { language } = useContext(LanguageContext);
   const certConfig = getCert(certId);
   const { queue, loading, processReview, refreshQueue } = useReview(session, certId);
   const [reviewQuestions, setReviewQuestions] = useState([]);
@@ -17,13 +19,16 @@ export default function Review({ session }) {
 
   useEffect(() => {
     if (queue.length > 0) {
-      const allQ = getQuestions(certId, 'pt');
-      const mapped = queue.map(q => allQ.find(qd => qd.id === q.question_id)).filter(Boolean);
+      const allQ = getQuestions(certId, language);
+      const allQPt = getQuestions(certId, 'pt');
+      const mapped = queue
+        .map(q => allQ.find(qd => qd.id === q.question_id) || allQPt.find(qd => qd.id === q.question_id))
+        .filter(Boolean);
       setReviewQuestions(mapped);
     } else {
       setReviewQuestions([]);
     }
-  }, [queue, certId]);
+  }, [queue, certId, language]);
 
   if (loading) {
     return (

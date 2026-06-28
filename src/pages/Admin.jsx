@@ -82,7 +82,7 @@ export default function Admin({ session }) {
 
       // 2. Buscar histórico para calcular melhores notas
       const { data: history, error: hError } = await supabase
-        .from('az900_simulator_history')
+        .from('montreal_simulator_history')
         .select('user_id, score');
 
       if (hError) throw hError;
@@ -100,7 +100,7 @@ export default function Admin({ session }) {
       setUsers(userList);
       setStats({
         total: userList.length,
-        premium: userList.filter(u => u.az900_is_premium).length
+        premium: userList.filter(u => u.montreal_is_premium).length
       });
     } catch (err) {
       console.error("Erro no Admin:", err);
@@ -112,13 +112,13 @@ export default function Admin({ session }) {
   const togglePremium = async (userId, currentStatus) => {
     const { error } = await supabase
       .from('profiles')
-      .update({ az900_is_premium: !currentStatus })
+      .update({ montreal_is_premium: !currentStatus })
       .eq('id', userId);
 
     if (error) {
       alert(t('profile_error'));
     } else {
-      setUsers(prev => prev.map(u => u.id === userId ? { ...u, az900_is_premium: !currentStatus } : u));
+      setUsers(prev => prev.map(u => u.id === userId ? { ...u, montreal_is_premium: !currentStatus } : u));
       setStats(prev => ({ ...prev, premium: prev.premium + (!currentStatus ? 1 : -1) }));
     }
   };
@@ -132,7 +132,7 @@ export default function Admin({ session }) {
     try {
       // 1. Remover Histórico (Foreign Key)
       const { error: hError } = await supabase
-        .from('az900_simulator_history')
+        .from('montreal_simulator_history')
         .delete()
         .eq('user_id', userId);
         
@@ -150,7 +150,7 @@ export default function Admin({ session }) {
       setUsers(prev => prev.filter(u => u.id !== userId));
       setStats(prev => ({ 
         total: prev.total - 1, 
-        premium: users.find(u => u.id === userId)?.az900_is_premium ? prev.premium - 1 : prev.premium 
+        premium: users.find(u => u.id === userId)?.montreal_is_premium ? prev.premium - 1 : prev.premium
       }));
     } catch (err) {
       console.error("Erro ao excluir usuário:", err);
@@ -251,14 +251,14 @@ export default function Admin({ session }) {
                       <td className="px-8 py-6 text-lg font-black text-blue-600">{user.bestScore}%</td>
                       <td className="px-8 py-6 text-center space-x-2">
                         <button 
-                          onClick={() => togglePremium(user.id, user.az900_is_premium)}
+                          onClick={() => togglePremium(user.id, user.montreal_is_premium)}
                           className={`px-4 py-2 rounded-xl font-bold text-xs transition-all ${
-                            user.az900_is_premium 
-                            ? 'bg-red-50 text-red-600' 
+                            user.montreal_is_premium
+                            ? 'bg-red-50 text-red-600'
                             : 'bg-blue-600 text-white'
                           }`}
                         >
-                          {user.az900_is_premium ? t('remove_pro') : t('make_premium')}
+                          {user.montreal_is_premium ? t('remove_pro') : t('make_premium')}
                         </button>
                         <button 
                           onClick={() => deleteUser(user.id, user.email)}

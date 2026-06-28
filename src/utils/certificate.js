@@ -1,6 +1,14 @@
 import { jsPDF } from "jspdf";
 
-export const generateCertificate = (userName, score, date) => {
+export const generateCertificate = (userName, score, date, cert = null) => {
+  // cert = objeto certConfig (de certifications.js). Mantém compatibilidade
+  // com chamadas antigas via fallbacks genéricos.
+  const certName = cert?.name || 'Microsoft';
+  const certFullName = cert?.fullName || '';
+  const domainsLine = (cert?.domains?.length)
+    ? cert.domains.map(d => d.name).join(' • ')
+    : '';
+
   const doc = new jsPDF({
     orientation: "landscape",
     unit: "mm",
@@ -27,7 +35,7 @@ export const generateCertificate = (userName, score, date) => {
 
   doc.setFontSize(14);
   doc.setFont("helvetica", "normal");
-  doc.text("Concedido pela Plataforma AZ-900 Premium SaaS", pageWidth / 2, 50, { align: "center" });
+  doc.text("Concedido pela Plataforma Montreal — Certificações Microsoft", pageWidth / 2, 50, { align: "center" });
 
   // Corpo
   doc.setFontSize(18);
@@ -49,10 +57,12 @@ export const generateCertificate = (userName, score, date) => {
 
   doc.setFont("helvetica", "normal");
   doc.setFontSize(14);
-  doc.text("demonstrando proficiência nos domínios oficiais da certificação Microsoft AZ-900:", pageWidth / 2, 145, { align: "center" });
+  doc.text(`demonstrando proficiência nos domínios oficiais da certificação Microsoft ${certName}${certFullName ? ` (${certFullName})` : ''}:`, pageWidth / 2, 145, { align: "center" });
 
-  doc.setFontSize(11);
-  doc.text("Conceitos de Nuvem • Arquitetura do Azure • Serviços do Azure • Gerenciamento & Governança", pageWidth / 2, 155, { align: "center" });
+  if (domainsLine) {
+    doc.setFontSize(11);
+    doc.text(domainsLine, pageWidth / 2, 155, { align: "center", maxWidth: pageWidth - 40 });
+  }
 
   // Rodapé
   doc.setFontSize(12);
@@ -65,7 +75,7 @@ export const generateCertificate = (userName, score, date) => {
   doc.setTextColor(255, 255, 255);
   doc.setFontSize(8);
   doc.text("VERIFICADO", pageWidth - 50, pageHeight - 42, { align: "center" });
-  doc.text("AZ-900", pageWidth - 50, pageHeight - 38, { align: "center" });
+  doc.text(certName.toUpperCase(), pageWidth - 50, pageHeight - 38, { align: "center" });
   doc.text("PREMIUM", pageWidth - 50, pageHeight - 34, { align: "center" });
 
   // Assinatura
@@ -75,5 +85,5 @@ export const generateCertificate = (userName, score, date) => {
   doc.setFontSize(10);
   doc.text("Diretoria de Educação Tecnológica", pageWidth / 2, pageHeight - 30, { align: "center" });
 
-  doc.save(`Certificado_AZ900_${userName.replace(/\s/g, "_")}.pdf`);
+  doc.save(`Certificado_${certName.replace(/[^a-zA-Z0-9]/g, "")}_${userName.replace(/\s/g, "_")}.pdf`);
 };

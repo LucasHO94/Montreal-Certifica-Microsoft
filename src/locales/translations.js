@@ -27,6 +27,7 @@ export const translations = {
     kpi_rate_low: "Foque na revisão",
     kpi_daily_done: "🎯 Meta batida hoje!",
     kpi_remaining: "restantes",
+    kpi_correct: "corretas",
 
     // Topic progress
     topic_progress_title: "Progresso por Domínio",
@@ -65,7 +66,7 @@ export const translations = {
     premium_required: "É necessário assinatura ativa",
     advanced_sim: "Simulado Avançado (Prova Real)",
     most_chosen: "Mais Escolhido",
-    advanced_desc: "Cronômetro rígido de 100 minutos. A prova trará proporções oficiais: 30% Conceitos de Nuvem, 40% Arquitetura e Serviços do Azure, 30% Gerenciamento e Governança — exatamente como na certificação Microsoft AZ-900.",
+    advanced_desc: "Cronômetro rígido. A prova respeita as proporções oficiais de domínios da certificação — exatamente como no exame real da Microsoft.",
     start_real_exam: "Simular Prova Real Agora",
     
     study_mode: "Modo Estudo Permanente (Geral)",
@@ -96,11 +97,12 @@ export const translations = {
     no_radar_data: "Faça um simulado para gerar seu mapa de competências.",
     waiting_competitors: "Aguardando competidores...",
     performance_az900: "Desempenho AZ-900",
+    performance_history: "Desempenho",
     consulting_db: "Consultando banco de dados...",
     no_simulations: "Nenhum simulado finalizado ainda.",
     journey_starts_today: "Sua jornada começa hoje.",
     achievements_gallery: "Sua Galeria de Conquistas",
-    official_certificates: "Certificados oficiais de proficiência AZ-900",
+    official_certificates: "Certificados oficiais de proficiência",
     specialist_cert: "Certificado de Especialista",
     performance: "de Aproveitamento",
     locked_freemium: "Bloqueado Freemium",
@@ -108,7 +110,7 @@ export const translations = {
     // Novas traduções do Dashboard Top
     student_panel: "Painel do Aluno",
     expert_panel: "Painel do Especialista Microsoft",
-    expert_desc: "Central de comando para alta performance em exames Microsoft AZ-900. Seus dados e evolução em tempo real.",
+    expert_desc: "Central de comando para alta performance em exames de certificação Microsoft. Seus dados e evolução em tempo real.",
     active_subscription: "Assinatura Premium Ativa",
     free_plan: "Plano Gratuito",
     simulator_center: "Central de Simulados",
@@ -358,7 +360,7 @@ export const translations = {
     no_certs_title: "Nenhum certificado disponível",
     no_certs_desc: "Para conquistar seu certificado, você precisa atingir pelo menos 80% de acerto no Simulado Avançado (Modo Prova Real).",
     start_real_now: "Iniciar Prova Real Agora",
-    certified_platform: "PLATAFORMA CERTIFICADA AZ-900 PREMIUM",
+    certified_platform: "PLATAFORMA MONTREAL — CERTIFICAÇÕES MICROSOFT",
     
     // Support Modal
     contact_us_title: "Fale Conosco",
@@ -422,6 +424,7 @@ export const translations = {
     kpi_rate_low: "Focus on review",
     kpi_daily_done: "🎯 Daily goal complete!",
     kpi_remaining: "remaining",
+    kpi_correct: "correct",
 
     // Topic progress
     topic_progress_title: "Domain Progress",
@@ -460,7 +463,7 @@ export const translations = {
     premium_required: "Active subscription required",
     advanced_sim: "Advanced Simulator (Real Exam)",
     most_chosen: "Most Chosen",
-    advanced_desc: "Strict 100-minute countdown timer. This exam mirrors the official AZ-900 Skills Measured proportions: 30% Cloud Concepts, 40% Azure Architecture & Services, 30% Management & Governance.",
+    advanced_desc: "Strict countdown timer. This exam mirrors the official Skills Measured domain proportions of the certification — exactly like the real Microsoft exam.",
     start_real_exam: "Start Real Exam Now",
 
     study_mode: "Permanent Study Mode (General)",
@@ -491,11 +494,12 @@ export const translations = {
     no_radar_data: "Take a simulator to generate your competence map.",
     waiting_competitors: "Waiting for competitors...",
     performance_az900: "AZ-900 Performance",
+    performance_history: "Performance",
     consulting_db: "Querying database...",
     no_simulations: "No simulations finished yet.",
     journey_starts_today: "Your journey starts today.",
     achievements_gallery: "Your Achievements Gallery",
-    official_certificates: "Official AZ-900 Proficiency Certificates",
+    official_certificates: "Official Proficiency Certificates",
     specialist_cert: "Specialist Certificate",
     performance: "Performance",
     locked_freemium: "Locked Freemium",
@@ -503,7 +507,7 @@ export const translations = {
     // Novas traduções do Dashboard Top
     student_panel: "Student Panel",
     expert_panel: "Microsoft Expert Dashboard",
-    expert_desc: "Command center for high performance in Microsoft AZ-900 exams. Your data and progress in real-time.",
+    expert_desc: "Command center for high performance in Microsoft certification exams. Your data and progress in real-time.",
     active_subscription: "Active Premium Subscription",
     free_plan: "Free Plan",
     simulator_center: "Simulator Center",
@@ -753,7 +757,7 @@ export const translations = {
     no_certs_title: "No certificates available",
     no_certs_desc: "To earn your certificate, you must achieve at least 80% accuracy in the Advanced Simulator (Real Exam Mode).",
     start_real_now: "Start Real Exam Now",
-    certified_platform: "CERTIFIED AZ-900 PREMIUM PLATFORM",
+    certified_platform: "MONTREAL PLATFORM — MICROSOFT CERTIFICATIONS",
 
     // Support Modal
     contact_us_title: "Contact Us",

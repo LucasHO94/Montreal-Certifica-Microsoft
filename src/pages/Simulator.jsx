@@ -9,6 +9,7 @@ import { isAdminEmail } from '../lib/auth';
 import { useIsMontrealPremium } from '../hooks/useIsMontrealPremium';
 import { generateCertificate } from '../utils/certificate';
 import { useReview } from '../hooks/useReview';
+import FlashcardMode from '../components/FlashcardMode';
 
 // ---- Embaralhamento determinístico de opções por questão ----
 // Evita o viés de posição (ex.: resposta correta quase sempre na 1ª opção em algumas certs).
@@ -107,6 +108,42 @@ export default function Simulator({ session }) {
 
       // 2 minutos (120 segundos) por questão como padrão
       const TIME_PER_QUESTION = 120;
+
+      // Revisão de um simulado JÁ FINALIZADO: reconstrói as questões e respostas
+      // salvas e abre direto a tela de correção (mesma do fim do simulado).
+      if (type === 'review') {
+        const historyId = searchParams.get('historyId');
+        if (!historyId) { navigate(`/cert/${certId}/dashboard`); return; }
+
+        const { data: record, error: recError } = await supabase
+          .from('montreal_simulator_history')
+          .select('*')
+          .eq('id', historyId)
+          .eq('user_id', session.user.id)
+          .single();
+
+        if (recError || !record) {
+          console.error('Erro ao carregar simulado para revisão:', recError);
+          navigate(`/cert/${certId}/dashboard`);
+          return;
+        }
+
+        const savedIds = Array.isArray(record.question_ids) ? record.question_ids : [];
+        const byId = {};
+        sourceQuestions.forEach(q => { byId[q.id] = q; });
+        // withShuffledOptions é determinístico por id → reproduz a MESMA ordem de
+        // opções de quando o simulado foi feito, mantendo válidos os índices salvos.
+        const reconstructed = savedIds.map(id => byId[id]).filter(Boolean).map(withShuffledOptions);
+
+        setQuestions(reconstructed);
+        setProgress(record.answers || {});
+        setFinalScore(record.score || 0);
+        setTimeLeft(null);
+        setSimuladorFinalizado(true);
+        setIsReviewing(true);
+        setLoading(false);
+        return;
+      }
 
       if (type === 'exam') {
         // Prova Real: 50 questões, 100 minutos (2 min/questão), auto-finaliza ao vencer tempo
@@ -262,6 +299,10 @@ export default function Simulator({ session }) {
     // Bloqueia trocar resposta após confirmar
     setIsAnswerLocked(true);
 
+    // Alimenta a fila de Repetição Espaçada (Revisão Inteligente):
+    // toda questão errada entra na fila para retornar nos próximos dias.
+    if (!isCorrect) addToQueue(currentQuestion.id);
+
     // No modo Prova Real, avançamos direto sem mostrar a explicação
     if (mode === 'exam' || type === 'exam') {
         if (currentQuestionIndex < questions.length - 1) {
@@ -389,6 +430,33 @@ export default function Simulator({ session }) {
             <div className="animate-spin rounded-full h-12 w-12 border-4 border-blue-600 border-t-transparent"></div>
             <p className="font-black text-slate-400 animate-pulse uppercase tracking-[0.2em] text-xs">{t('loading_sim')}</p>
         </div>
+    );
+  }
+
+  // Modo Flashcards: cartões de virar (memorização ativa), fora da UI de quiz.
+  // "Errei" alimenta a fila de Revisão Inteligente (repetição espaçada).
+  if (type === 'flashcard') {
+    return (
+      <div className="h-screen flex flex-col bg-slate-900">
+        <div className="flex items-center justify-between px-4 h-16 bg-[#080A1F] border-b border-[#1A2444] shrink-0">
+          <button
+            onClick={() => navigate(`/cert/${certId}/dashboard`)}
+            className="flex items-center gap-2 text-slate-300 hover:text-white font-bold text-sm transition-colors"
+          >
+            <ChevronLeft size={18} /> {t('back')}
+          </button>
+          <span className="text-slate-400 text-xs font-black uppercase tracking-widest">
+            {certConfig?.name} • Flashcards
+          </span>
+          <div className="w-16" />
+        </div>
+        <FlashcardMode
+          questions={questions}
+          session={session}
+          onFinish={() => navigate(`/cert/${certId}/dashboard`)}
+          onAnswer={async (qid, isCorrect) => { if (!isCorrect) await addToQueue(qid); }}
+        />
+      </div>
     );
   }
 
@@ -545,7 +613,7 @@ export default function Simulator({ session }) {
                         
                         {finalScore >= 80 && mode === 'exam' && (
                             <button 
-                                onClick={() => generateCertificate(profile?.full_name || userEmail.split('@')[0], finalScore, new Date().toLocaleDateString())}
+                                onClick={() => generateCertificate(profile?.full_name || userEmail.split('@')[0], finalScore, new Date().toLocaleDateString(), certConfig)}
                                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black rounded-2xl hover:scale-105 transition-all shadow-xl flex items-center gap-2 text-sm"
                             >
                                 <Trophy size={18} /> {t('download_cert')}

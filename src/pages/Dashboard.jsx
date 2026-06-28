@@ -179,40 +179,26 @@ export default function Dashboard({ session }) {
   const fetchRanking = async () => {
     setLoadingRanking(true);
     try {
-        // Busca perfis e tenta cruzar com pontos
-        const { data: profilesData, error: pError } = await supabase
-            .from('profiles')
-            .select('id, nickname, full_name');
-        
-        if (pError) throw pError;
+        // O ranking global é calculado no banco via RPC SECURITY DEFINER.
+        // A RLS de montreal_simulator_history restringe o SELECT às linhas do
+        // próprio usuário, então uma agregação no cliente nunca seria global.
+        // A função devolve apenas dados públicos e agregados.
+        const { data, error } = await supabase.rpc('montreal_global_ranking', {
+            p_cert_id: certId, // ranking específico desta certificação
+            p_limit: 5
+        });
 
-        const { data: historyData, error: hError } = await supabase
-            .from('montreal_simulator_history')
-            .select('user_id, correct_answers, score');
-        
-        if (hError) throw hError;
+        if (error) throw error;
 
-        // Agregador de Pontos Otimizado (O(N+M))
-        const historyMap = (historyData || []).reduce((acc, curr) => {
-            if (!acc[curr.user_id]) acc[curr.user_id] = [];
-            acc[curr.user_id].push(curr);
-            return acc;
-        }, {});
-
-        const userRanking = (profilesData || []).map(p => {
-            const userStats = historyMap[p.id] || [];
-            const totalPoints = userStats.reduce((acc, curr) => acc + curr.correct_answers, 0);
-            const bestScore = userStats.length > 0 ? Math.max(...userStats.map(h => h.score)) : 0;
-            return {
-                name: p.nickname || p.full_name || t('anonymous_user', 'Usuário Anônimo'),
-                total_correct: totalPoints,
-                best_score: bestScore
-            };
-        }).sort((a, b) => b.total_correct - a.total_correct).slice(0, 5);
+        const userRanking = (data || []).map(r => ({
+            name: r.name || t('anonymous_user', 'Usuário Anônimo'),
+            total_correct: Number(r.total_correct) || 0,
+            best_score: Number(r.best_score) || 0
+        }));
 
         setRanking(userRanking);
     } catch (err) {
-        console.error("Erro ao carregar ranking (pode ser coluna ausente):", err);
+        console.error("Erro ao carregar ranking:", err);
         setRanking([]); // Garante que a UI não quebre
     } finally {
         setLoadingRanking(false);
@@ -243,7 +229,7 @@ export default function Dashboard({ session }) {
       }
     };
     checkAndCreateProfile();
-  }, [session?.user?.id]);
+  }, [session?.user?.id, certId]);
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
@@ -508,7 +494,7 @@ export default function Dashboard({ session }) {
                             </button>
                             {selectedHistoryItem.score >= 80 && (
                                 <button 
-                                    onClick={() => generateCertificate(profile?.full_name || userEmail.split('@')[0], selectedHistoryItem.score, selectedHistoryItem.date)}
+                                    onClick={() => generateCertificate(profile?.full_name || userEmail.split('@')[0], selectedHistoryItem.score, selectedHistoryItem.date, certConfig)}
                                     className="flex-1 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black rounded-2xl hover:scale-[1.02] transition-all shadow-xl flex items-center justify-center gap-2"
                                 >
                                     <Award size={18} /> {t('download_cert', 'Certificado')}
@@ -842,7 +828,7 @@ export default function Dashboard({ session }) {
 
           <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm sticky top-24">
             <h2 className="font-black text-xl text-slate-800 mb-6 pb-4 border-b border-slate-100 flex items-center gap-2">
-              <TrendingUp className="text-blue-600" size={24} /> {t('performance_az900')}
+              <TrendingUp className="text-blue-600" size={24} /> {t('performance_history')} {certConfig?.name || ''}
             </h2>
 
             {loadingHistory ? (
@@ -934,7 +920,7 @@ export default function Dashboard({ session }) {
                                         </div>
                                     </div>
                                     <button 
-                                        onClick={() => generateCertificate(profile?.nickname || profile?.full_name || userEmail.split('@')[0], cert.score, cert.date)}
+                                        onClick={() => generateCertificate(profile?.nickname || profile?.full_name || userEmail.split('@')[0], cert.score, cert.date, certConfig)}
                                         className="w-full sm:w-auto px-6 py-3 bg-slate-900 hover:bg-blue-600 text-white font-black rounded-xl text-xs flex items-center justify-center gap-2 transition-all shadow-lg shadow-slate-200"
                                     >
                                         <TrendingUp size={16} /> {t('download_pdf')}

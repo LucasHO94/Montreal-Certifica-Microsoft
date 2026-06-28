@@ -54,18 +54,19 @@ export default function Profile({ session }) {
 
       // 2. Buscar Histórico para Estatísticas
       const { data: history, error: hError } = await supabase
-        .from('az900_simulator_history')
+        .from('montreal_simulator_history')
         .select('*')
         .eq('user_id', session.user.id);
-      
+
       if (hError) throw hError;
 
       if (history && history.length > 0) {
         const total = history.length;
         const best = Math.max(...history.map(h => h.score));
         const avg = Math.round(history.reduce((acc, curr) => acc + curr.score, 0) / total);
-        const correct = history.reduce((acc, curr) => acc + curr.correct_answers, 0);
-        const totalQ = history.reduce((acc, curr) => acc + curr.total_questions, 0);
+        const correct = history.reduce((acc, curr) => acc + (curr.correct_answers || 0), 0);
+        // A tabela não tem coluna total_questions; derivamos do tamanho de question_ids.
+        const totalQ = history.reduce((acc, curr) => acc + (Array.isArray(curr.question_ids) ? curr.question_ids.length : 0), 0);
 
         setStats({
           totalSimulados: total,
@@ -166,7 +167,7 @@ export default function Profile({ session }) {
                 <p className="text-slate-400 font-bold text-xs mb-6 truncate">{userEmail}</p>
 
                 <div className="flex justify-center gap-2 mb-8">
-                    {profile?.az900_is_premium ? (
+                    {profile?.montreal_is_premium ? (
                         <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-[10px] font-black shadow-sm flex items-center gap-1">
                             <Star size={10} fill="currentColor" /> {t('premium_exclusive').toUpperCase()}
                         </span>
